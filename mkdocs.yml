@@ -1,0 +1,54 @@
+# Site name
+site_name: SITE NAME
+site_description: "SITE DESCRIPTION:" 
+
+# Navigation menu
+nav:
+  - Welcome: index.md
+
+# Theme
+theme:
+    feaures:
+      - tabs
+    name: material
+    icon:
+      logo: material/cloud
+    static_templates:
+      - 404.html
+
+# Extensions
+markdown_extensions:
+  - markdown.extensions.admonition
+  - markdown.extensions.attr_list
+  - markdown.extensions.codehilite:
+      guess_lang: false
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+      clickable_checkbox: false
+  - pymdownx.tilde
+
+plugins:
+  - search
