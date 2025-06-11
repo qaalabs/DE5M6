@@ -1,10 +1,40 @@
 # Site name
-site_name: SITE NAME
-site_description: "SITE DESCRIPTION:" 
+site_name: DE5-M6 ~ Data Operations
 
 # Navigation menu
 nav:
-  - Welcome: index.md
+  - Overview: index.md
+
+  - Day 1 - Monitoring & Performance:
+    - Introduction: day1/introduction.md
+    - Lab 1 - Ingest Data: labs/04-ingest-pipeline.md
+    - Lab 2 - Monitor Activity: labs/18-monitor-hub.md
+    - Lab 3 - Monitor Data Warehouse: labs/06c-monitor-data-warehouse.md
+    - Activity - Performance Baselines: day1/performance-baselines.md
+    - Wrap-up: day1/wrap-up.md
+
+  - Day 2 - Incident Response:
+    - Introduction: day2/introduction.md
+    - Lab 1 - Pipeline Failures: labs/04-ingest-pipeline-failures.md
+    - Lab 2 - Setup Triggers: labs/11-data-activator.md
+    - Activity - Incident response: day2/incident-response.md
+    - Wrap-up: day2/wrap-up.md
+
+  - Day 3 - Quality & Governance:
+    - Introduction: day3/introduction.md
+    - Lab 1 - Medallion Architecture: labs/03b-medallion-lakehouse.md
+    - Lab 2 - Security Data Access: labs/19-secure-data-access.md
+    - Activity - Governance Scenarios: day3/governance-scenarios.md
+    - Wrap-up: day3/wrap-up.md
+
+  - Day 4 - Improvement & Value:
+    - Introduction: day4/introduction.md
+    - Lab 1 - Operational Deployment: labs/21-implement-cicd.md
+    - Activity - Technology Assessment: day4/technology-assessment.md
+    - Activity - Value Presentation: day4/value-presentation.md
+    - Wrap-up: day4/wrap-up.md
+
+  - Resources: resources.md
 
 # Theme
 theme:
@@ -12,7 +42,7 @@ theme:
       - tabs
     name: material
     icon:
-      logo: material/cloud
+      logo: material/database
     static_templates:
       - 404.html
 
