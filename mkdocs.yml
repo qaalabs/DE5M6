@@ -12,7 +12,8 @@ nav:
     - Lab 1 - Ingest Data: labs/04-ingest-pipeline.md
     - Lab 2 - Monitor Activity: labs/18-monitor-hub.md
     - Lab 3 - Monitor Data Warehouse: labs/06c-monitor-data-warehouse.md
-    - Activity - Performance Baselines: day1/performance-baselines.md
+    - Cloud Monitoring Comparison: day1/cloud-monitoring-comparison.md
+    - Monitoring Strategy Creation: day1/monitoring-strategy.md
     - Wrap-up: day1/wrap-up.md
 
   - Day 2 - Incident Response:
