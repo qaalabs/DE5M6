@@ -7,35 +7,31 @@ nav:
   - Overview: index.md
 
   - Day 1 - Monitoring & Performance:
-    - Introduction: day1/introduction.md
     - Foundation & Purpose: day1/foundation-purpose.md
     - Lab 1 - Ingest Data: labs/04-ingest-pipeline.md
     - Lab 2 - Monitor Activity: labs/18-monitor-hub.md
     - Lab 3 - Monitor Data Warehouse: labs/06c-monitor-data-warehouse.md
     - Cloud Monitoring Comparison: day1/cloud-monitoring-comparison.md
     - Monitoring Strategy Creation: day1/monitoring-strategy.md
-    - Wrap-up: day1/wrap-up.md
 
-  - Day 2 - Incident Response:
-    - Introduction: day2/introduction.md
-    - Lab 1 - Pipeline Failures: labs/04-ingest-pipeline-failures.md
-    - Lab 2 - Setup Triggers: labs/11-data-activator.md
-    - Activity - Incident response: day2/incident-response.md
-    - Wrap-up: day2/wrap-up.md
+ - Day 2 - Incident Response:
+    - Welcome & Context Setting: day2/welcome-context.md
+    - Breaking Things 101: day2/breaking-things.md
+    - Lab 1 - Setup Alerts: labs/11-data-activator.md
+    - Activity - Outage Case Studies: day2/outage-case-studies.md
+    - Activity - Incident Response Practice: day2/incident-response-practice.md
+    - Activity - Workplace Procedures: day2/workplace-procedures.md
+    - Activity - Response Checklist Creation: day2/response-checklist.md
 
   - Day 3 - Quality & Governance:
-    - Introduction: day3/introduction.md
     - Lab 1 - Medallion Architecture: labs/03b-medallion-lakehouse.md
     - Lab 2 - Security Data Access: labs/19-secure-data-access.md
     - Activity - Governance Scenarios: day3/governance-scenarios.md
-    - Wrap-up: day3/wrap-up.md
 
   - Day 4 - Improvement & Value:
-    - Introduction: day4/introduction.md
     - Lab 1 - Operational Deployment: labs/21-implement-cicd.md
     - Activity - Technology Assessment: day4/technology-assessment.md
     - Activity - Value Presentation: day4/value-presentation.md
-    - Wrap-up: day4/wrap-up.md
 
   - Resources: resources.md
 
