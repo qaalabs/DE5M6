@@ -8,6 +8,7 @@ nav:
 
   - Day 1 - Monitoring & Performance:
     - Introduction: day1/introduction.md
+    - Foundation & Purpose: day1/foundation-purpose.md
     - Lab 1 - Ingest Data: labs/04-ingest-pipeline.md
     - Lab 2 - Monitor Activity: labs/18-monitor-hub.md
     - Lab 3 - Monitor Data Warehouse: labs/06c-monitor-data-warehouse.md
