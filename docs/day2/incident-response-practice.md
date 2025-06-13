@@ -3,7 +3,7 @@
 ---
 
 ## Overview
-Building on the morning's simple breaks (file renames, schema changes), this session introduces more complex failure scenarios that mirror real-world production issues. Learners work individually to create and observe performance problems, data corruption, and resource constraint scenarios, developing skills for handling sophisticated operational challenges.
+Building on the previous exercise simple breaks (file renames, schema changes), this session suggests more complex failure scenarios that mirror real-world production issues. Work individually to create and observe performance problems, data corruption, and resource constraint scenarios, developing skills for handling sophisticated operational challenges.
 
 ---
 
