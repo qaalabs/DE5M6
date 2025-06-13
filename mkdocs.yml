@@ -27,6 +27,15 @@ nav:
     - Escalation Scenario: day2/fire-drill-escalation.md
 
   - Day 3 - Quality & Governance:
+    - Data Quality: day3/welcome-quality.md
+    - DMBOK Quality Investigation: day3/dmbok-quality.md
+    - Lab 1 - Medallion Architecture: labs/03b-medallion-lakehouse.md
+    - Quality Tools Research: day3/quality-tools.md
+    - Lab 2 - Secure Data Access: labs/19-secure-data-access.md
+    - Governance Framework Design: day3/governance-framework.md
+    - Wrap-up: day3/wrap-up.md
+    
+    
     - Lab 1 - Medallion Architecture: labs/03b-medallion-lakehouse.md
     - Lab 2 - Security Data Access: labs/19-secure-data-access.md
     - Activity - Governance Scenarios: day3/governance-scenarios.md
