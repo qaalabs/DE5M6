@@ -32,14 +32,15 @@
 
 ### Scenario Distribution (1 minute)
 **Hand out scenario cards:**
-- Each team is getting a different incident scenario.
-- Don't watch the other teams - you're handling separate incidents.
-
-**Read carefully:**
 
 - Read your scenario and understand the situation
 - Then immediately post your first incident update to Slack
 - Remember: stakeholders are waiting to hear from you
+
+**Guidelines:**
+
+- Don't watch the other teams 
+- Focus on what your team needs to do!
 
 ### Success Criteria
 **What we're looking for:**
