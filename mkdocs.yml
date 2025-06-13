@@ -15,13 +15,12 @@ nav:
     - Monitoring Strategy Creation: day1/monitoring-strategy.md
 
  - Day 2 - Incident Response:
-    - Welcome & Context Setting: day2/welcome-context.md
-    - Breaking Things 101: day2/breaking-things.md
+    - Context Setting: day2/welcome-context.md
+    - Breaking Things: day2/breaking-things.md
     - Lab 1 - Setup Alerts: labs/11-data-activator.md
-    - Activity - Outage Case Studies: day2/outage-case-studies.md
-    - Activity - Incident Response Practice: day2/incident-response-practice.md
-    - Activity - Workplace Procedures: day2/workplace-procedures.md
-    - Activity - Response Checklist Creation: day2/response-checklist.md
+    - Lab 2 - Breaking Scenarios: day2/advanced-breaking.md
+    - Activity - Incident Analysis: day2/incident-analysis.md
+    - TRAINER - Incident Firedrill: day2/incident-fire-drill.md
 
   - Day 3 - Quality & Governance:
     - Lab 1 - Medallion Architecture: labs/03b-medallion-lakehouse.md
@@ -34,6 +33,11 @@ nav:
     - Activity - Value Presentation: day4/value-presentation.md
 
   - Resources: resources.md
+
+# Existing files but not in nav
+not_in_nav: |
+  day2/incident-response-practice.md
+  day2/outage-case-studies.md
 
 # Theme
 theme:
