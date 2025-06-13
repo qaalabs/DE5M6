@@ -10,17 +10,21 @@ nav:
     - Foundation & Purpose: day1/foundation-purpose.md
     - Lab 1 - Ingest Data: labs/04-ingest-pipeline.md
     - Lab 2 - Monitor Activity: labs/18-monitor-hub.md
-    - Lab 3 - Monitor Data Warehouse: labs/06c-monitor-data-warehouse.md
-    - Cloud Monitoring Comparison: day1/cloud-monitoring-comparison.md
-    - Monitoring Strategy Creation: day1/monitoring-strategy.md
+    - Lab 3 - Data Warehouse: labs/06c-monitor-data-warehouse.md
+    - Cloud Monitoring: day1/cloud-monitoring-comparison.md
+    - Monitoring Strategy: day1/monitoring-strategy.md
 
  - Day 2 - Incident Response:
     - Context Setting: day2/welcome-context.md
-    - Breaking Things: day2/breaking-things.md
-    - Lab 1 - Setup Alerts: labs/11-data-activator.md
-    - Lab 2 - Breaking Scenarios: day2/advanced-breaking.md
-    - Activity - Incident Analysis: day2/incident-analysis.md
-    - TRAINER - Incident Firedrill: day2/incident-fire-drill.md
+    - Lab 1 - Breaking Things: day2/breaking-things.md
+    - Lab 2 - Setup Alerts: labs/11-data-activator.md
+    - Lab 3 - Breaking Scenarios: day2/complex-breaking.md
+    - Fire Drill Prep: day2/fire-drill-prep.md
+
+  - TRAINER:
+    - Briefing: day2/fire-drill-briefing.md
+    - Intial Scenario: day2/fire-drill-initial.md
+    - Escalation Scenario: day2/fire-drill-escalation.md
 
   - Day 3 - Quality & Governance:
     - Lab 1 - Medallion Architecture: labs/03b-medallion-lakehouse.md
@@ -36,7 +40,6 @@ nav:
 
 # Existing files but not in nav
 not_in_nav: |
-  day2/incident-response-practice.md
   day2/outage-case-studies.md
 
 # Theme
