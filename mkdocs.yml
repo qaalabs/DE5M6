@@ -23,8 +23,8 @@ nav:
 
   - TRAINER:
     - Briefing: day2/fire-drill-briefing.md
-    - Intial Scenario: day2/fire-drill-initial.md
-    - Escalation Scenario: day2/fire-drill-escalation.md
+    - Intial Scenario: day2/fire-drill-scenario1.md
+    - Escalation Scenario: day2/fire-drill-scenario2.md
 
   - Day 3 - Quality & Governance:
     - Data Quality: day3/welcome-quality.md
