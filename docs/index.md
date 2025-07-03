@@ -13,6 +13,6 @@
 - Activities: Implement data quality patterns, manage data access and security
 
 ## Day 4: Operational Improvement & Value
-Focus: Learn to evolve and optimize data operations
-Activities: Deployment pipelines, continuous improvement, demonstrating business value
+- Focus: Learn to evolve and optimize data operations
+- Activities: Deployment pipelines, continuous improvement, demonstrating business value
 

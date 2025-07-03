@@ -1,6 +1,6 @@
 # Day 4
 
-## 9:30-9:50 ~ VM Setup & Welcome (10 mins)
+## 9:30-9:50 ~ Welcome (10 mins)
 - Day overview and learning objectives
 
 ## 9:50-10:40 ~ Session 1 (60 mins)
