@@ -8,7 +8,7 @@ In **20 minutes**, you'll participate in **incident response fire drills** simul
 ## Your Preparation Tasks
 
 ### 1. Form Your Incident Response Team
-**Team Size:** 2-4 people depending on class size
+**Team Size:** 3-4 people depending on class size
 
 **Assign Roles:**
 
