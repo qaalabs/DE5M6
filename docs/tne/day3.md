@@ -4,8 +4,6 @@
 - Discussion: "What does 'good data' mean to you?"
 - Acquisition: Introduction to data quality - why it matters operationally
 
-## 9:50-10:40 ~ Session 1 (60 mins)
-
 ## 9:50-10:40 ~ DMBOK Quality Investigation (50 mins)
 - **Investigation**: DMBOK's 6 data quality dimensions - 35 mins
 - **Discussion**: Report back findings - 15 mins
