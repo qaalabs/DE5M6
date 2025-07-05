@@ -1,4 +1,4 @@
-# Fire Drill Scenario 1: Customer Dashboard Failure
+# Fire Drill Scenario 2: Incident Escalation Update
 
 ---
 
@@ -6,7 +6,7 @@
 
 **View the incident on the Company status page:**
 
-- [INCIDENT: Customer-facing dashboard showing stale data](https://ingwanelabs.github.io/status/tuesday-1340/)
+- [INCIDENT: Customer Dashboard ~ Incident Escalation Update](https://ingwanelabs.github.io/status/tuesday-1440/)
 
 
 ## Your Mission

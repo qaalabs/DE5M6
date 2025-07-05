@@ -14,21 +14,22 @@ nav:
 
   - Day 1 - Monitoring & Performance:
     - Foundation & Purpose: day1/foundation-purpose.md
-    - Lab 1 - Ingest Data: labs/04-ingest-pipeline.md
-    - Lab 2 - Monitor Activity: labs/18-monitor-hub.md
-    - Lab 3 - Data Warehouse: labs/06c-monitor-data-warehouse.md
+
+    - Lab 1 - Create Dataflows: labs/05-dataflows-gen2.md
+    - Lab 2 - Ingest Data: labs/04-ingest-pipeline.md
+    - Lab 3 - Monitor Activity: labs/18-monitor-hub.md
+    - Lab 4 - Data Warehouse: labs/06c-monitor-data-warehouse.md
     - Cloud Monitoring: day1/cloud-monitoring-comparison.md
-    - Monitoring Strategy: day1/monitoring-strategy.md
+    - Monitoring Strategy: day1/monitoring-strategy-creation.md
+    - Sharing Strategies: day1/share-monitoring-strategies.md
 
   - Day 2 - Incident Response:
     - Context Setting: day2/welcome-context.md
     - Lab 1 - Breaking Things: day2/breaking-things.md
     - Lab 2 - Setup Alerts: labs/11-data-activator.md
-    - Lab 3 - Breaking Scenarios: day2/complex-breaking.md
+    - Lab 3 - More Breaking: day2/complex-breaking.md
     - Fire Drill Prep: day2/fire-drill-prep.md
-
-  - TRAINER:
-    - Briefing: day2/fire-drill-briefing.md
+    - Fire Drill Briefing: day2/fire-drill-briefing.md
     - Intial Scenario: day2/fire-drill-scenario1.md
     - Escalation Scenario: day2/fire-drill-scenario2.md
 
@@ -39,7 +40,6 @@ nav:
     - Quality Tools Research: day3/quality-tools.md
     - Lab 2 - Secure Data Access: labs/19-secure-data-access.md
     - Governance Framework Design: day3/governance-framework.md
-    - Wrap-up: day3/wrap-up.md
     
     - Lab 1 - Medallion Architecture: labs/03b-medallion-lakehouse.md
     - Lab 2 - Security Data Access: labs/19-secure-data-access.md
@@ -49,8 +49,6 @@ nav:
     - Lab 1 - Operational Deployment: labs/21-implement-cicd.md
     - Activity - Technology Assessment: day4/technology-assessment.md
     - Activity - Value Presentation: day4/value-presentation.md
-
-  - Resources: resources.md
 
 # Existing files but not in nav
 not_in_nav: |

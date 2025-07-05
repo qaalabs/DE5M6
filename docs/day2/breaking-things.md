@@ -15,7 +15,7 @@ You will practice controlled troubleshooting while observing how MS Fabric respo
 **Technical Setup:**
 
 - Start the QA Platform Lab enviroment
-- Redo [Lab 1 - Ingest Data](../labs/04-ingest-pipline.md) from yesterday
+- Redo [Lab 1 - Ingest Data](../labs/04-ingest-pipeline.md) from yesterday
 - Verify that the data flows through successfully
 
 ---
