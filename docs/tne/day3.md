@@ -24,8 +24,10 @@
 
 ## 14:30-14:50 ~ Break (20 mins)
 
-## 14:50-15:50 ~ Session 4 (60 mins)
-==TBC==
+## 14:50-15:50 ~ Deployment Pipelines & Governance Integration (60 mins)
+- **Practice**: [Lab 21 Deployment Pipelines](../labs/21.md) (20 minutes)
+- **Discussion**: Deployment Governance Discussion (20 minutes)
+- **Investigation**: Governance Integration Workshop (20 minutes)
 
 ## 15:50-16:00 ~ Wrap-up (10 mins)
 - Day reflection and tomorrow's preview
