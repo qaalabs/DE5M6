@@ -1,5 +1,5 @@
 # Site name
-site_name: DE5-M6 ~ Data Operations
+site_name: DE5M6 ~ Data Operations
 dev_addr: '0.0.0.0:8000'
 
 # Navigation menu
@@ -8,54 +8,10 @@ nav:
 
   - Agenda:
     - Day 1: tne/day1.md
-    - Day 2: tne/day2.md
-    - Day 3: tne/day3.md
-    - Day 4: tne/day4.md
 
   - Day 1 - Monitoring & Performance:
-    - Foundation & Purpose: day1/foundation-purpose.md
-
-    - Lab 1 - Create Dataflows: labs/05-dataflows-gen2.md
-    - Lab 2 - Ingest Data: labs/04-ingest-pipeline.md
-    - Lab 3 - Monitor Activity: labs/18-monitor-hub.md
-    - Lab 4 - Data Warehouse: labs/06c-monitor-data-warehouse.md
-    - Cloud Monitoring: day1/cloud-monitoring-comparison.md
-    - Monitoring Strategy: day1/monitoring-strategy-creation.md
-    - Sharing Strategies: day1/share-monitoring-strategies.md
-
-  - Day 2 - Incident Response:
-    - Context Setting: day2/welcome-context.md
-    - Lab 1 - Breaking Things: day2/breaking-things.md
-    - Lab 2 - Setup Alerts: labs/11-data-activator.md
-    - Lab 3 - More Breaking: day2/complex-breaking.md
-    - Fire Drill Prep: day2/fire-drill-prep.md
-    - Fire Drill Briefing: day2/fire-drill-briefing.md
-    - Intial Scenario: day2/fire-drill-scenario1.md
-    - Escalation Scenario: day2/fire-drill-scenario2.md
-
-  - Day 3 - Quality & Governance:
-    - Data Quality: day3/quality-foundation.md
-    - DMBOK Quality Investigation: day3/dmbok-quality.md
-    - Lab 1 - Medallion Architecture: labs/03b-medallion-lakehouse.md
-    - Quality Tools Research: day3/quality-tools.md
-    - Lab 2 - Secure Data Access: labs/19-secure-data-access.md
-    - Governance Framework Design: day3/governance-framework.md
-    
-    - Lab 1 - Medallion Architecture: labs/03b-medallion-lakehouse.md
-    - Lab 2 - Security Data Access: labs/19-secure-data-access.md
-    - Activity - Governance Scenarios: day3/governance-scenarios.md
-
-  - Day 4 - Improvement & Value:
-    - Lab 1 - Operational Deployment: labs/21-implement-cicd.md
-    - Activity - Technology Assessment: day4/technology-assessment.md
-    - Activity - Value Presentation: day4/value-presentation.md
-
-# Existing files but not in nav
-not_in_nav: |
-  day1/introduction.md
-  day3/introduction.md
-  day4/introduction.md
-
+    - Lab 6c ~ Monitor warehouse: labs/06c-monitor-data-warehouse.md
+    - Cloud monitoring comparison (AWS/GCP/Azure): day1/cloud-monitoring-comparison.md
 
 # Theme
 theme:
@@ -103,3 +59,4 @@ markdown_extensions:
 
 plugins:
   - search
+
