@@ -1,0 +1,24 @@
+
+Schedule for DE5M6D1:
+--------------------------------------------------
+09:20  ✔ 
+09:30  VM Setup & Welcome
+09:50  When did a system failure impact you personally? (discussion)
+10:10  Why monitor? From personal pain to business impact (theory)
+10:20  Status page analysis: 'What do companies communicate when things break?' (investigation)
+10:40  ☕
+11:00  Introduction to Microsoft Fabric (theory)
+11:10  Lab 5 ~ Dataflows Gen2 (practice)
+11:40  Lab 4 ~ Pipeline (practice)
+12:10  What could go wrong with what we just built? (discussion)
+12:20  🍽 
+13:20  Lab 18 ~ Monitor hub (practice)
+13:50  Lab 6c ~ Monitor warehouse (practice)
+14:20  What surprised you about monitoring tools? (discussion)
+14:30  ☕
+14:50  Cloud monitoring comparison (AWS/GCP/Azure) (investigation)
+15:20  Pairs create Monitoring Strategy (production)
+15:40  Share monitoring stratgies (gallery walk)
+15:50  Wrap up
+16:00  ❌
+
