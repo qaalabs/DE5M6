@@ -8,6 +8,9 @@ nav:
 
   - Agenda:
     - Day 1: tne/day1.md
+    - Day 2: tne/day2.md
+    - Day 3: tne/day3.md
+    - Day 4: tne/day4.md
 
   - Day 1 - Monitoring & Performance:
     - Lab 6c ~ Monitor warehouse: labs/06c-monitor-data-warehouse.md
