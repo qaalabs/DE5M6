@@ -22,18 +22,22 @@ theme:
       logo: material/database
     static_templates:
       - 404.html
+    features:
+      - toc.integrate 
 
 # Extensions
 markdown_extensions:
-  - markdown.extensions.admonition
-  - markdown.extensions.attr_list
-  - markdown.extensions.codehilite:
+  - admonition
+  - attr_list
+  - codehilite:
       guess_lang: false
-  - markdown.extensions.def_list
-  - markdown.extensions.footnotes
-  - markdown.extensions.meta
-  - markdown.extensions.toc:
+  - def_list
+  - footnotes
+  - meta
+  - toc:
       permalink: true
+      toc_depth: 2
+
   - pymdownx.arithmatex
   - pymdownx.betterem:
       smart_enable: all
