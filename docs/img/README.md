@@ -1,0 +1,1 @@
+# Place MkDocs images here
