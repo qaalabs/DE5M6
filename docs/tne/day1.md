@@ -1,4 +1,3 @@
-Module: DE5M6
 # Day 1: Monitoring & Performance
 
 ## Session 1
