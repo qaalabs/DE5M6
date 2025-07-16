@@ -1,4 +1,4 @@
-# Day 3: Day 3 - Quality & Governance
+# Day 3: Quality & Governance
 
 ## Session 1
 - `09:30` **Discussion**: What does 'good data' mean to you? (10 mins)
@@ -10,17 +10,24 @@
 
 ## Session 2
 
-- `11:00` **Practice**: [Lab 3.1 ~ Medallion Architecture](labs/03b-medallion-lakehouse.md) (40 mins)
-- `12:00` **Practice**: [Monitor Azure Data Factory](https://app.qa.com/lab/monitor-azure-data-factory-using-azure-monitor/) (30 mins)
+- `11:00` **Practice**: [Lab 3.1 ~ Medallion Architecture](../labs/03b-medallion-lakehouse.md) (40 mins)
+- `11:40` **Discussion**: Quality patterns analysis (20 mins)
+- `12:00` **Investigation**: Quality tools (20 mins)
 
 ## 🥪🥤 Lunch break
 
 ## Session 3
 
+- `13:30` **Practice**: [Lab 3.2 ~ Secure Data Access](../labs/19-secure-data-access.md) (40 mins)
+- `14:10` **Discussion**: Security vs Accessibility trade-offs (10 mins)
+- `14:20` **Investigation**: Governance Approaches Investigation (10 mins)
 
 ## ☕ Afternoon Break
 
 ## Session 4
 
+- `14:50` **Practice**: [Lab 3.3 ~ Deployment Pipelines](../labs/21-deployment-pipelines.md) (20 mins)
+- `15:10` **Discussion**: Deployment governance (20 mins)
+- `15:30` **Workshop**: Governance integration (20 mins)
 - `15:50` Wrap up (10 mins)
 

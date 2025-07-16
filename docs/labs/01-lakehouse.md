@@ -144,5 +144,4 @@ If you’ve finished exploring your lakehouse, you can delete the workspace you 
 3. In the **General** section, select *8Remove this workspace**.
 
 --- 
-## Links
-- https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/01-lakehouse.html
+###### https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/01-lakehouse.html

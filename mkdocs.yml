@@ -31,9 +31,9 @@ nav:
 
 # Theme
 theme:
-    feaures:
-      - tabs
+    features:
       - toc.integrate
+      - content.code.copy
     name: material
     icon:
       logo: material/database

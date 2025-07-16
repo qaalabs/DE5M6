@@ -141,6 +141,4 @@ If you’ve finished exploring your data warehouse, you can delete the workspace
 3. Select **Delete** to delete the workspace.
 
 ---
-
-## Links
-- https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/06c-monitor-data-warehouse.html
+###### https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/06c-monitor-data-warehouse.html

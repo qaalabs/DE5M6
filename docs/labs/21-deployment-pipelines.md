@@ -71,6 +71,4 @@ In the General section, select Remove this workspace.
 
 
 ---
-
-## Links
-- https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/21-implement-cicd.html
+###### https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/21-implement-cicd.html

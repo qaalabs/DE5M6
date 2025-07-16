@@ -144,6 +144,4 @@ If you’ve finished exploring dataflows in Microsoft Fabric, you can delete the
 4. Select **Delete** to delete the workspace.
 
 ---
-
-## Links
-- https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/05-dataflows-gen2.html
+###### https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/05-dataflows-gen2.html
