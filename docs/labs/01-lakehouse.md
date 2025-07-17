@@ -11,11 +11,11 @@ This lab takes approximately **30** minutes to complete.
 !!! warning "It is important that you use an incognito/private mode browser tab and not your work or personal Microsoft login"
 
 ## Signing in to Microsoft Fabric
-In this lab step, you will sign in to Microsoft Fabric with the provided lab user account.
+In this lab, you will sign in to Microsoft Fabric using the email and password from the QA Platform.
 
-1. Navigate to the Fabric portal **using an incognito/private mode browser tab** at: https://fabric.microsoft.com
+1. Using an **incognito/private mode browser tab** navigate to the [Fabric portal](https://app.fabric.microsoft.com/) at: https://fabric.microsoft.com
 
-2. Follow the prompts and sign in with your lab user account credentials:
+2. Follow the prompts, and sign in with the user credentials from the QA Platform:
     - Email
     - Password
 
@@ -23,18 +23,18 @@ After signing in, you will be redirected to the Fabric home page:
 
 ![Fabric home page](../img/qa-fabric-home.png)
 
-
 ## Create a workspace
-Before working with data in Fabric, create a workspace with the Fabric trial enabled.
+Before working with data in Fabric, you need to create a workspace with the Fabric trial enabled.
 
 1. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric) in an incognito/private mode browser tab browser, and sign in with the Fabric credentials from the QA Platform.
 
 2. In the menu bar on the left, select Workspaces (the icon looks similar to 🗇).
 
-3. Create a new workspace with a name of your choice, selecting a licensing mode that includes Fabric capacity.
+3. Create a **New workspace**:
 
-    - Give it a unique name of your choice.
-    - For example: `fab_workspace`
+    - Give it a name of your choice. For example: `fab_workspace`
+    - Leave all other options as the default values
+    - Click **Apply**
 
 When your new workspace opens, it should be empty.
 
@@ -44,10 +44,9 @@ When your new workspace opens, it should be empty.
 Now that you have a workspace, it's time to create a data lakehouse into which you'll ingest data.
 
 1. On the menu bar on the left, select **Create**. In the New page, under the *Data Engineering* section, select **Lakehouse**.
-    - Give it a unique name of your choice.
-    - For example: `fab_lakehouse`
+    - Give it a name of your choice. For example: `fab_lakehouse`
 
-    !!! note "If the **Create** option is not pinned to the sidebar, you need to select the ellipsis (…) option first."
+    !!! tip "If the **Create** option is not pinned to the sidebar, you need to select the ellipsis (…) option first."
 
     After a minute or so, a new empty lakehouse will be created.
 
@@ -59,7 +58,7 @@ Now that you have a workspace, it's time to create a data lakehouse into which y
 
     - The **Files** folder contains data files in the OneLake storage for the lakehouse that aren't associated with managed delta tables. You can also create shortcuts in this folder to reference data that is stored externally.
 
-Currently, there are no tables or files in the lakehouse.
+Currently, there are no tables or files in this lakehouse.
 
 ## Upload a file
 Fabric provides multiple ways to load data into the lakehouse, including built-in support for pipelines that copy data from external sources and data flows (Gen 2) that you can define using visual tools based on Power Query. However one of the simplest ways to ingest small amounts of data is to upload files or folders from your local computer (or lab VM if applicable).
@@ -70,12 +69,13 @@ Fabric provides multiple ways to load data into the lakehouse, including built-i
 
     !!! note 
         - To download the file, open a new tab in the browser and paste in the URL.
-        - Right click anywhere on the page containing the data and select Save as to save the page as a CSV file.
+        - Right click anywhere on the page containing the data and select "Save as" to save the data as a CSV file.
 
 2. Return to the web browser tab containing your lakehouse
 
-    - In the `...` menu for the **Files** folder in the **Explorer pane** select **New subfolder**
-    - Create a subfolder named: `data`
+    - Click the `...` menu for the **Files** folder in the **Explorer pane** select **New subfolder**
+    - Name the new subfolder: `data`
+    - Click **Create**
 
 3. In the `...` menu for the new **data** folder, select **Upload** and **Upload files**.
 
@@ -87,6 +87,8 @@ Fabric provides multiple ways to load data into the lakehouse, including built-i
 
 5. Select the **sales.csv** file to see a preview of its contents.
 
+    !!! tip "If the **sales.csv** file does not automatically appear, in the `...` menu for the **data** folder, select **Refresh**."
+
 ## Explore shortcuts
 In many scenarios, the data you need to work with in your lakehouse may be stored in some other location. While there are many ways to ingest data into the OneLake storage for your lakehouse, another option is to instead create a shortcut. Shortcuts enable you to include externally sourced data in your analytics solution without the overhead and risk of data inconsistency associated with copying it.
 
@@ -97,25 +99,27 @@ In many scenarios, the data you need to work with in your lakehouse may be store
     - Then close the **New shortcut** dialog box without creating a shortcut.
 
 ## Load file data into a table
-The sales data you uploaded is in a file, which data analysts and engineers can work with directly by using Apache Spark code. However, in many scenarios you may want to load the data from the file into a table so that you can query it using SQL.
+The sales data you uploaded is in a file, which you can work with directly by using Apache Spark code. However, in many scenarios you may want to load the data from the file into a table so that you can query it using SQL.
 
 1. In the **Explorer** pane, select the **Files/data** folder so you can see the **sales.csv** file it contains.
 
 2. In the `...` menu for the **sales.csv** file, select **Load to Tables > New table**.
 
+    ![Load to tables - New table.](../img/qa-01-load-to-tables.png)
+
 3. In **Load to table** dialog box, set the table name to **sales** and confirm the load operation.
 
     - Then wait for the table to be created and loaded.
 
-!!! tip "If the **sales** table does not automatically appear, in the `...` menu for the **Tables** folder, select **Refresh**."
+    !!! tip "If the **sales** table does not automatically appear, in the `...` menu for the **Tables** folder, select **Refresh**."
 
 4. In the **Explorer** pane, select the **sales** table that has been created to view the data:
 
-    ![Screenshot of a table preview.](../img/01-table-preview.png)
+    ![Screenshot of a table preview.](../img/qa-01-table-preview.png)
 
 5. In the `...` menu for the **sales** table, select **View files** to see the underlying files for this table:
 
-    ![Screenshot of a table preview.](../img/01-delta-table-files.png)
+    ![Screenshot of a table preview.](../img/qa-01-delta-table-files.png)
 
     > Files for a delta table are stored in *Parquet* format, and include a subfolder named `_delta_log` in which details of transactions applied to the table are logged.
 
@@ -137,33 +141,33 @@ ORDER BY Revenue DESC;
 
 3. Use the :material-play: **Run** button to run the query and view the results, which should show the total revenue for each product.
 
-    ![Screenshot of a SQL query with results.](../img/01-sql-query.png)
+    ![Screenshot of a SQL query with results.](../img/qa-01-sql-query.png)
 
 ## Create a visual query
 While many data professionals are familiar with SQL, those with Power BI experience can apply their Power Query skills to create visual queries.
 
 1. On the toolbar, expand the **New SQL query** option and select **New visual query**.
 
-2. Drag the **sales** table to the new visual query editor pane that opens to create a Power Query as shown here:
+2. Drag the **sales** table (under dbo > Tables) to the new visual query editor pane that opens to create a Power Query as shown here:
 
-    ![Screenshot of a Visual query.](../img/01-visual-query.png)
+    ![Screenshot of a Visual query.](../img/qa-01-visual-query.png)
 
 3. In the **Manage columns** menu, select **Choose columns**.
 
-    - Then select only the **SalesOrderNumber** and **SalesOrderLineNumber** columns.
+    - Then select only the **SalesOrderNumber** and **SalesOrderLineNumber** columns. Click **OK**
 
     ![Screenshot of a Choose columns dialog box.](../img/01-choose-columns.png)
 
 4. in the **Transform** menu, select **Group by**. Then group the data by using the following **Basic** settings:
 
     - **Group by**: SalesOrderNumber
-    - **New column name**: LineItems
+    - **New column name**: `LineItems`
     - **Operation**: Count distinct values
-    - **Column**: SalesOrderLineNumber
+    - **Column**: SalesOrderLineNumber (*if not greyed out*)
 
     When you're done, the results pane under the visual query shows the number of line items for each sales order.
 
-    ![Screenshot of a Visual query with results.](../img/01-visual-query-results.png)
+    ![Screenshot of a Visual query with results.](../img/qa-01-visual-query-results.png)
 
 ---
 

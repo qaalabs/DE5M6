@@ -7,12 +7,11 @@ This lab is designed to introduce the different elements of Dataflows (Gen2), an
 
 !!! warning "It is important that you use an incognito/private mode browser tab and not your work or personal Microsoft login"
 
-## Signing in to Microsoft Fabric
-In this lab step, you will sign in to Microsoft Fabric with the provided lab user account.
+In this lab, you will sign in to Microsoft Fabric using the email and password from the QA Platform.
 
-1. Navigate to the Fabric portal **using an incognito/private mode browser tab** at: https://fabric.microsoft.com
+1. Using an **incognito/private mode browser tab** navigate to the [Fabric portal](https://app.fabric.microsoft.com/) at: https://fabric.microsoft.com
 
-2. Follow the prompts and sign in with your lab user account credentials:
+2. Follow the prompts, and sign in with the user credentials from the QA Platform:
     - Email
     - Password
 
@@ -20,18 +19,18 @@ After signing in, you will be redirected to the Fabric home page:
 
 ![Fabric home page](../img/qa-fabric-home.png)
 
-
 ## Create a workspace
-Before working with data in Fabric, create a workspace with the Fabric trial enabled.
+Before working with data in Fabric, you need to create a workspace with the Fabric trial enabled.
 
 1. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric) in an incognito/private mode browser tab browser, and sign in with the Fabric credentials from the QA Platform.
 
 2. In the menu bar on the left, select Workspaces (the icon looks similar to 🗇).
 
-3. Create a new workspace with a name of your choice, selecting a licensing mode that includes Fabric capacity.
+3. Create a **New workspace**:
 
-    - Give it a unique name of your choice.
-    - For example: `fab_workspace`
+    - Give it a name of your choice. For example: `fab_workspace`
+    - Leave all other options as the default values
+    - Click **Apply**
 
 When your new workspace opens, it should be empty.
 
@@ -41,14 +40,13 @@ When your new workspace opens, it should be empty.
 Now that you have a workspace, it's time to create a data lakehouse into which you'll ingest data.
 
 1. On the menu bar on the left, select **Create**. In the New page, under the *Data Engineering* section, select **Lakehouse**.
-    - Give it a unique name of your choice.
-    - For example: `fab_lakehouse`
+    - Give it a name of your choice. For example: `fab_lakehouse`
 
-!!! note "If the **Create** option is not pinned to the sidebar, you need to select the ellipsis (…) option first."
+    !!! tip "If the **Create** option is not pinned to the sidebar, you need to select the ellipsis (…) option first."
 
-After a minute or so, a new empty lakehouse will be created.
+    After a minute or so, a new empty lakehouse will be created.
 
-![New lakehouse.](../img/new-lakehouse.png)
+    ![New lakehouse.](../img/new-lakehouse.png)
 
 ## Create a Dataflow (Gen2) to ingest data
 Now that you have a lakehouse, you need to ingest some data into it. One way to do this is to define a dataflow that encapsulates an *extract, transform, and load* (ETL) process.
