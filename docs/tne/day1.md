@@ -11,16 +11,16 @@
 ## Session 2
 
 - `11:00` Introduction to Microsoft Fabric (10 mins)
-- `11:10` **Practice**: [Lab 1.1 ~ Dataflows Gen2](../labs/05-dataflows-gen2.md) (30 mins)
-- `11:40` **Practice**: [Lab 1.2 ~ Ingest Pipeline](../labs/04-ingest-pipeline.md) (30 mins)
+- `11:10` **Practice**: [Lab 1.1 ~ 05 Dataflows Gen2](../labs/05-dataflows-gen2.md) (30 mins)
+- `11:40` **Practice**: [Lab 1.2 ~ 04 Ingest Pipeline](../labs/04-ingest-pipeline.md) (30 mins)
 - `12:10` **Discussion**: What could go wrong with what we just built? (10 mins)
 
 ## 🥪🥤 Lunch break
 
 ## Session 3
 
-- `13:20` **Practice**: [Lab 1.3 ~ Monitor Hub](../labs/18-monitor-hub.md) (30 mins)
-- `13:50` **Practice**: [Lab 1.4 ~ Monitor Warehouse](../labs/06c-monitor-data-warehouse.md) (30 mins)
+- `13:20` **Practice**: [Lab 1.3 ~ 18 Monitor Hub](../labs/18-monitor-hub.md) (30 mins)
+- `13:50` **Practice**: [Lab 1.4 ~ 06c Monitor Warehouse](../labs/06c-monitor-data-warehouse.md) (30 mins)
 - `14:20` **Discussion**: What surprised you about monitoring tools? (10 mins)
 
 ## ☕ Afternoon break

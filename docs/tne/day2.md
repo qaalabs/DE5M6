@@ -3,7 +3,7 @@
 ## Session 1
 - `09:30` Welcome (10 mins)
 - `09:40` **Discussion**: When a system broke at work (10 mins)
-- `09:50` **Practice**: [Re-run Lab 1.2 ~ working version](../labs/04-ingest-pipeline.md) (10 mins)
+- `09:50` **Practice**: [Re-run Day 1 Lab: 04 Ingest Pipeline](../labs/04-ingest-pipeline.md) (10 mins)
 - `10:00` **Practice**: [Lab 2.1 ~ Break it systematically](../day2/breaking-things.md) (20 mins)
 - `10:20` Incident vs Problem - what's the difference? (10 mins)
 
@@ -11,10 +11,10 @@
 
 ## Session 2
 
-- `10:50` **Practice**: [Lab 2.2 ~ Data Activator](../labs/11-data-activator.md) (30 mins)
+- `10:50` **Practice**: [More complex breaks](../day2/complex-breaking.md) (30 mins)
 - `11:20` **Discussion**: Share findings (10 mins)
-- `11:30` **Practice**: [More complex breaks](../day2/complex-breaking.md) (30 mins)
-- `12:00` **Discussion**: Share findings (10 mins)
+- `11:30` **Demo**: [Lab ~ 11 Data Activator](../labs/11-data-activator.md) (10 mins)
+- `11:40` **Discussion**: AI in Data Engineering (30 mins)
 
 ## 🥪🥤 Lunch break
 
