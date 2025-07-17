@@ -12,22 +12,22 @@ nav:
     - Day 3: tne/day3.md
 
   - Day 1 - Monitoring & Performance:
-    - Lab 1.1 ~ Dataflows Gen2: labs/05-dataflows-gen2.md
-    - Lab 1.2 ~ Ingest Pipeline: labs/04-ingest-pipeline.md
-    - Lab 1.3 ~ Monitor Hub: labs/18-monitor-hub.md
-    - Lab 1.4 ~ Monitor Warehouse: labs/06c-monitor-data-warehouse.md
+    - Lab 1.1 ~ 05 Dataflows Gen2: labs/05-dataflows-gen2.md
+    - Lab 1.2 ~ 04 Ingest Pipeline: labs/04-ingest-pipeline.md
+    - Lab 1.3 ~ 18 Monitor Hub: labs/18-monitor-hub.md
+    - Lab 1.4 ~ 06c Monitor Warehouse: labs/06c-monitor-data-warehouse.md
     - Cloud monitoring comparison: day1/cloud-monitoring-comparison.md
 
   - Day 2 - Incident Response:
-    - Re-run Lab 1.2 ~ working version: labs/04-ingest-pipeline.md
+    - Re-run Day 1 Lab: 04 Ingest Pipeline: labs/04-ingest-pipeline.md
     - Lab 2.1 ~ Break it systematically: day2/breaking-things.md
-    - Lab 2.2 ~ Data Activator: labs/11-data-activator.md
     - More complex breaks: day2/complex-breaking.md
+    - Lab ~ 11 Data Activator: labs/11-data-activator.md
 
   - Day 3 - Quality & Governance:
-    - Lab 3.1 ~ Medallion Architecture: labs/03b-medallion-lakehouse.md
-    - Monitor Azure Data Factory: https://app.qa.com/lab/monitor-azure-data-factory-using-azure-monitor/
-    - Lab 3.2 ~ Secure Data Access: labs/19-secure-data-access.md
+    - Lab 3.1 ~ 03b Medallion Architecture: labs/03b-medallion-lakehouse.md
+    - Lab 3.2 ~ 19 Secure Data Access: labs/19-secure-data-access.md
+    - Lab 3.3 ~ 21 Deployment Pipelines: labs/21-deployment-pipelines.md
 
 # Theme
 theme:
@@ -59,6 +59,9 @@ markdown_extensions:
   - pymdownx.caret
   - pymdownx.critic
   - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.inlinehilite
   - pymdownx.keys
   - pymdownx.magiclink:
