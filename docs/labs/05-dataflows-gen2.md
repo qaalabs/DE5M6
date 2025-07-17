@@ -18,7 +18,7 @@ In this lab step, you will sign in to Microsoft Fabric with the provided lab use
 
 After signing in, you will be redirected to the Fabric home page:
 
-![Fabric home page](../img/qa-05-00-fabric-home.png)
+![Fabric home page](../img/qa-fabric-home.png)
 
 
 ## Create a workspace
@@ -35,7 +35,7 @@ Before working with data in Fabric, create a workspace with the Fabric trial ena
 
 When your new workspace opens, it should be empty.
 
-![Screenshot of an empty workspace in Fabric.](../img/05-01-new-workspace.png)
+![Screenshot of an empty workspace in Fabric.](../img/new-workspace.png)
 
 ## Create a lakehouse
 Now that you have a workspace, it's time to create a data lakehouse into which you'll ingest data.
@@ -48,7 +48,7 @@ Now that you have a workspace, it's time to create a data lakehouse into which y
 
 After a minute or so, a new empty lakehouse will be created.
 
-![New lakehouse.](../img/05-02-new-lakehouse.png)
+![New lakehouse.](../img/new-lakehouse.png)
 
 ## Create a Dataflow (Gen2) to ingest data
 Now that you have a lakehouse, you need to ingest some data into it. One way to do this is to define a dataflow that encapsulates an *extract, transform, and load* (ETL) process.
