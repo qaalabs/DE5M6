@@ -16,6 +16,7 @@
 
 ## Session 4
 
+- `15:00` EVAL (10 mins)
 
 ## Wrap up
 
