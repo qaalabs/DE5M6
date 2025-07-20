@@ -29,7 +29,7 @@ fi
 
 # Commit and push changes to GitHub
 git add .
-git commit -m "Updated content .md files"
+git commit -m "Updated files for MkDocs"
 git push
 
 #EOF
