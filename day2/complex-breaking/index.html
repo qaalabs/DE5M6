@@ -20,7 +20,7 @@
     
     
       
-        <title>More complex breaks - DE5M6 ~ Data Operations</title>
+        <title>Lab 04 ~ More complex breaks - DE5M6 ~ Data Operations</title>
       
     
     
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              More complex breaks
+              Lab 04 ~ More complex breaks
             
           </span>
         </div>
@@ -348,7 +348,7 @@
   
   
   <span class="md-ellipsis">
-    Day 1 - Monitoring & Performance
+    Day 1 - Day 1 - Monitoring & Performance
     
   </span>
   
@@ -359,7 +359,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            Day 1 - Monitoring & Performance
+            Day 1 - Day 1 - Monitoring & Performance
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -370,12 +370,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../labs/05-dataflows-gen2/" class="md-nav__link">
+      <a href="../../labs/01-lakehouse/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Lab 1.1 ~ 05 Dataflows Gen2
+    Lab 1.1 ~ 01 Create MS Fabric Lakehouse
     
   </span>
   
@@ -393,12 +393,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../labs/04-ingest-pipeline/" class="md-nav__link">
+      <a href="../../labs/05-dataflows-gen2/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Lab 1.2 ~ 04 Ingest Pipeline
+    Lab 1.2 ~ 05 Dataflows Gen2
     
   </span>
   
@@ -510,7 +510,7 @@
   
   
   <span class="md-ellipsis">
-    Day 2 - Incident Response
+    Day 2 - Day 2 - Incident Response
     
   </span>
   
@@ -521,7 +521,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
-            Day 2 - Incident Response
+            Day 2 - Day 2 - Incident Response
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -537,7 +537,7 @@
   
   
   <span class="md-ellipsis">
-    Lab 1.2 ~ 04 Ingest Pipeline
+    Lab 2.1 ~ 04 Ingest Pipeline
     
   </span>
   
@@ -560,7 +560,7 @@
   
   
   <span class="md-ellipsis">
-    Lab 2.1 ~ Break it systematically
+    Lab 04 ~ Break it systematically
     
   </span>
   
@@ -592,7 +592,7 @@
   
   
   <span class="md-ellipsis">
-    More complex breaks
+    Lab 04 ~ More complex breaks
     
   </span>
   
@@ -605,7 +605,7 @@
   
   
   <span class="md-ellipsis">
-    More complex breaks
+    Lab 04 ~ More complex breaks
     
   </span>
   
@@ -725,7 +725,7 @@
   
   
   <span class="md-ellipsis">
-    Day 3 - Quality & Governance
+    Day 3 - Day 3 - Quality & Governance
     
   </span>
   
@@ -736,7 +736,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
-            Day 3 - Quality & Governance
+            Day 3 - Day 3 - Quality & Governance
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -833,7 +833,6 @@
 
 
 <h1 id="day-2-advanced-breaking-scenarios">Day 2: Advanced Breaking Scenarios<a class="headerlink" href="#day-2-advanced-breaking-scenarios" title="Permanent link">&para;</a></h1>
-<hr />
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
 <p>This session introduces more complex failure scenarios that mirror real-world production issues.</p>
 <hr />
@@ -841,13 +840,11 @@
 <h3 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h3>
 <p><strong>Context:</strong> "Large files and complex processing can cause timeouts and resource issues"</p>
 <p><strong>Breaking Method:</strong></p>
-<ul>
-<li>Find or create a <strong>much larger dataset</strong> than used in the previos lab</li>
-<li>Options:</li>
-<li>Duplicate your existing file multiple times to create a large CSV</li>
-<li>Use online sample datasets (sales data, sensor data, etc.)</li>
-<li>Create synthetic data with repeated rows</li>
-</ul>
+<p>Find or create a <strong>much larger dataset</strong> than used in the previous lab</p>
+<p>Options:
+  - Duplicate your existing file multiple times to create a large CSV
+  - Use online sample datasets (sales data, sensor data, etc.)
+  - Create synthetic data with repeated rows</p>
 <p><strong>Target:</strong> File should be significantly larger (aim for 10x+ size)</p>
 <h3 id="execution-observation">Execution &amp; Observation<a class="headerlink" href="#execution-observation" title="Permanent link">&para;</a></h3>
 <p><strong>Break Process:</strong></p>
@@ -862,7 +859,7 @@
 <li>How long does processing take compared to small files?</li>
 <li>Does Fabric show any warnings or performance indicators?</li>
 <li>Are there any timeout errors or resource constraint messages?</li>
-<li>How does the monitoring from Lab 11 respond to slower processing?</li>
+<li>How does the monitoring respond to slower processing?</li>
 </ul>
 <h3 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permanent link">&para;</a></h3>
 <p><strong>Quick Notes:</strong> Write down what you observed for later discussion</p>
@@ -897,12 +894,14 @@
 <li><strong>Check output data</strong> - did bad records get processed, skipped, or cause failure?</li>
 <li><strong>Try a second corruption type</strong> if time allows</li>
 </ol>
-<p><strong>Key Observation Points:</strong>
-- Does the pipeline fail completely or continue with warnings?
-- How does Fabric handle the corrupted data?
-- What error messages or warnings appear?
-- Can you identify which specific records caused problems?
-- How would a business user know there was an issue?</p>
+<p><strong>Key Observation Points:</strong></p>
+<ul>
+<li>Does the pipeline fail completely or continue with warnings?</li>
+<li>How does Fabric handle the corrupted data?</li>
+<li>What error messages or warnings appear?</li>
+<li>Can you identify which specific records caused problems?</li>
+<li>How would a business user know there was an issue?</li>
+</ul>
 <h3 id="documentation_1">Documentation<a class="headerlink" href="#documentation_1" title="Permanent link">&para;</a></h3>
 <p><strong>Record findings:</strong> What happened with each corruption type?</p>
 <hr />
