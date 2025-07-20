@@ -32,4 +32,7 @@ git add .
 git commit -m "Updated files for MkDocs"
 git push
 
+# Run git check again
+git-check
+
 #EOF
