@@ -19,9 +19,9 @@ nav:
     - "Cloud monitoring comparison": day1/cloud-monitoring-comparison.md
 
   - "Day 2 - Day 2 - Incident Response":
-    - "Re-run Day 1 Lab: 04 Ingest Pipeline": labs/04-ingest-pipeline.md
-    - "Lab 2.1 ~ Break it systematically": day2/breaking-things.md
-    - "More complex breaks": day2/complex-breaking.md
+    - "Lab 2.1 ~ 04 Ingest Pipeline": labs/04-ingest-pipeline.md
+    - "Lab 04 ~ Break it systematically": day2/breaking-things.md
+    - "Lab 04 ~ More complex breaks": day2/complex-breaking.md
     - "Lab ~ 11 Data Activator": labs/11-data-activator.md
 
   - "Day 3 - Day 3 - Quality & Governance":
