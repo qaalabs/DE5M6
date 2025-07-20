@@ -79,11 +79,15 @@ Now that you have a lakehouse, you need to ingest some data into it. One way to 
 
     ![Power Quesry Add Column.](../img/power-query-add-column.png)
 
-5. Set the *New column name* to `MonthNo`, set the *Data type* to **Whole Number** and then add the following formula: `Date.Month([OrderDate])` - as shown here:
+5. Do the following:
 
+    - Set the *New column name* to: **MonthNo**
+    - Set the *Data type* to: **Whole number**
+    - Add this *Custom column formula*: `Date.Month([OrderDate])`
+    
     ![Custom column in Power Query editor.](../img/05-05-custom-column.png)
 
-6. Select **OK** to create the column. Notice how the step to add the custom column is added to the query.
+6. Click **OK** to create the column. Notice how the step to add the custom column is added to the query.
     
     The resulting column is displayed in the data pane:
 
