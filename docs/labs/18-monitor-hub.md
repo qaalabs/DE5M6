@@ -93,7 +93,7 @@ In Microsoft Fabric, you can use notebooks to run Spark code.
 
 5. Expand the lakehouse item until you reach the **products** table.
 
-6. In the `...` menu for the **products** table, select **Load data > Spark**. This adds a new code cell to the notebook as shown here:
+6. In the **...** menu for the **products** table, select **Load data > Spark**. This adds a new code cell to the notebook as shown here:
 
     ![Screenshot of a notebook with code to query a table.](../img/18-load-spark.png)
 
@@ -105,7 +105,7 @@ In Microsoft Fabric, you can use notebooks to run Spark code.
 
 9. In the navigation bar, select **Monitor** to view the monitoring hub, and note that the notebook activity is listed.
 
-    ![Screenshot of the monitoring hub with a notebook activity.]
+    ![Screenshot of the monitoring hub with a notebook activity.](../img/18-monitor-notebook.png)
 
 ## Monitor history for an item
 Some items in a workspace might be run multiple times. You can use the monitoring hub to view their run history.
@@ -114,11 +114,11 @@ Some items in a workspace might be run multiple times. You can use the monitorin
 
 2. In the navigation pane, select the **Monitor** page to view the monitoring hub and verify that the dataflow is in-progress.
 
-3. In the `...` menu for the **Get Product Data** dataflow, select **Historical runs** to view the run history for the dataflow:
+3. In the **...** menu for the **Get Product Data** dataflow, select **Historical runs** to view the run history for the dataflow:
 
-    ![Screenshot of the monitoring hub historical runs view.]
+    ![Screenshot of the monitoring hub historical runs view.](../img/18-historical-runs.png)
 
-4. In the `...` menu for any of the historical runs select **View detail** to see details of the run.
+4. In the **...** menu for any of the historical runs select **View detail** to see details of the run.
 
 5. Close the **Details** pane and use the **Back to main view** button to return to the main monitoring hub page.
 
@@ -132,7 +132,7 @@ In this exercise you’ve only run a few activities, so it should be fairly easy
 
     With the filter applied, only successful runs of dataflows are listed.
 
-    ![Screenshot of the monitoring hub with a filter applied.]
+    ![Screenshot of the monitoring hub with a filter applied.](../img/18-monitor-filter.png)
 
 2. Use the **Column Options** button to include the following columns in the view (use the **Apply** button to apply the changes):
 
@@ -148,7 +148,7 @@ In this exercise you’ve only run a few activities, so it should be fairly easy
 
     You may need to scroll horizontally to see all of the columns:
 
-    ![Screenshot of the monitoring hub with custom columns.]
+    ![Screenshot of the monitoring hub with custom columns.](../img/18-monitor-columns.png)
 
 ## Clean up resources
 In this exercise, you have created a lakehouse, a dataflow, and a Spark notebook; and you’ve used the monitoring hub to view item activity.
