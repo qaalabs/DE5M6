@@ -1,7 +1,5 @@
 # Day 2: Advanced Breaking Scenarios
 
----
-
 ## Overview
 This session introduces more complex failure scenarios that mirror real-world production issues.
 
@@ -14,8 +12,9 @@ This session introduces more complex failure scenarios that mirror real-world pr
 
 **Breaking Method:**
 
-- Find or create a **much larger dataset** than used in the previos lab
-- Options:
+Find or create a **much larger dataset** than used in the previous lab
+
+Options:
   - Duplicate your existing file multiple times to create a large CSV
   - Use online sample datasets (sales data, sensor data, etc.)
   - Create synthetic data with repeated rows
@@ -35,7 +34,7 @@ This session introduces more complex failure scenarios that mirror real-world pr
 - How long does processing take compared to small files?
 - Does Fabric show any warnings or performance indicators?
 - Are there any timeout errors or resource constraint messages?
-- How does the monitoring from Lab 11 respond to slower processing?
+- How does the monitoring respond to slower processing?
 
 ### Documentation
 **Quick Notes:** Write down what you observed for later discussion
@@ -76,6 +75,7 @@ This session introduces more complex failure scenarios that mirror real-world pr
 4. **Try a second corruption type** if time allows
 
 **Key Observation Points:**
+
 - Does the pipeline fail completely or continue with warnings?
 - How does Fabric handle the corrupted data?
 - What error messages or warnings appear?
