@@ -1,0 +1,1324 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../11-data-activator/">
+      
+      
+        <link rel="next" href="../19-secure-data-access/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Lab 3.1 ~ 03b Medallion Architecture - DE5M6 ~ Data Operations</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#lab-create-medallion-architecture-in-a-fabric-lakehouse" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="DE5M6 ~ Data Operations" class="md-header__button md-logo" aria-label="DE5M6 ~ Data Operations" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4M4 9v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9c0 2.21-3.58 4-8 4s-8-1.79-8-4m0 5v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3c0 2.21-3.58 4-8 4s-8-1.79-8-4"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DE5M6 ~ Data Operations
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Lab 3.1 ~ 03b Medallion Architecture
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="DE5M6 ~ Data Operations" class="md-nav__button md-logo" aria-label="DE5M6 ~ Data Operations" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4M4 9v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9c0 2.21-3.58 4-8 4s-8-1.79-8-4m0 5v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3c0 2.21-3.58 4-8 4s-8-1.79-8-4"/></svg>
+
+    </a>
+    DE5M6 ~ Data Operations
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Agenda
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Agenda
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tne/day1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Day 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tne/day2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Day 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tne/day3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Day 3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Day 1 - Monitoring & Performance
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Day 1 - Monitoring & Performance
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-dataflows-gen2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab 1.1 ~ 05 Dataflows Gen2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-ingest-pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab 1.2 ~ 04 Ingest Pipeline
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../18-monitor-hub/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab 1.3 ~ 18 Monitor Hub
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06c-monitor-data-warehouse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab 1.4 ~ 06c Monitor Warehouse
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../day1/cloud-monitoring-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cloud monitoring comparison
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Day 2 - Incident Response
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Day 2 - Incident Response
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-ingest-pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab 1.2 ~ 04 Ingest Pipeline
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../day2/breaking-things/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab 2.1 ~ Break it systematically
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../day2/complex-breaking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    More complex breaks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-data-activator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab ~ 11 Data Activator
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Day 3 - Quality & Governance
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Day 3 - Quality & Governance
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Lab 3.1 ~ 03b Medallion Architecture
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab 3.1 ~ 03b Medallion Architecture
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-workspace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a workspace
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-lakehouse-and-upload-data-to-bronze-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a lakehouse and upload data to bronze layer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transform-data-and-load-to-silver-delta-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transform data and load to silver Delta table
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../19-secure-data-access/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab 3.2 ~ 19 Secure Data Access
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../21-deployment-pipelines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab 3.3 ~ 21 Deployment Pipelines
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="lab-create-medallion-architecture-in-a-fabric-lakehouse">Lab: Create Medallion Architecture in a Fabric Lakehouse<a class="headerlink" href="#lab-create-medallion-architecture-in-a-fabric-lakehouse" title="Permanent link">&para;</a></h1>
+<p>In this exercise you will build out a medallion architecture in a Fabric lakehouse using notebooks. You will create a workspace, create a lakehouse, upload data to the bronze layer, transform the data and load it to the silver Delta table, transform the data further and load it to the gold Delta tables, and then explore the semantic model and create relationships.</p>
+<p>This exercise should take approximately <strong>45</strong> minutes to complete</p>
+<div class="admonition note">
+<p class="admonition-title">You need access to a Microsoft Fabric tenant to complete this exercise.</p>
+</div>
+<h2 id="create-a-workspace">Create a workspace<a class="headerlink" href="#create-a-workspace" title="Permanent link">&para;</a></h2>
+<p>Before working with data in Fabric, create a workspace with the Fabric trial enabled.</p>
+<ol>
+<li>
+<p>Navigate to the <a href="https://app.fabric.microsoft.com/home?experience=fabric-developer">Microsoft Fabric home page</a> at <a href="https://app.fabric.microsoft.com/home?experience=fabric-developer">https://app.fabric.microsoft.com/home?experience=fabric-developer</a> in a browser and sign in with your Fabric credentials.</p>
+</li>
+<li>
+<p>In the menu bar on the left, select Workspaces (the icon looks similar to 🗇).
+Create a new workspace with a name of your choice, selecting a licensing mode in the Advanced section that includes Fabric capacity (<em>Trial, Premium, or Fabric</em>).</p>
+</li>
+<li>When your new workspace opens, it should be empty.</li>
+</ol>
+<p><img alt="Screenshot of an empty workspace in Fabric." src="../../img/03b-01-new-workspace.png" /></p>
+<ol>
+<li>Navigate to the workspace settings and verify that the <strong>Data model settings</strong> preview feature is enabled. This will enable you to create relationships between tables in your lakehouse using a Power BI semantic model.</li>
+</ol>
+<p><img alt="Screenshot of the workspace settings page in Fabric." src="../../img/03b-02-workspace-settings.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">You may need to refresh the browser tab after enabling the preview feature.</p>
+</div>
+<h2 id="create-a-lakehouse-and-upload-data-to-bronze-layer">Create a lakehouse and upload data to bronze layer<a class="headerlink" href="#create-a-lakehouse-and-upload-data-to-bronze-layer" title="Permanent link">&para;</a></h2>
+<p>Now that you have a workspace, it’s time to create a data lakehouse for the data you’re going to analyze.</p>
+<ol>
+<li>In the workspace you just created, create a new <strong>Lakehouse</strong> named <strong>Sales</strong> by selecting the <strong>+ New item</strong> button.</li>
+</ol>
+<p>After a minute or so, a new empty lakehouse will be created. Next, you’ll ingest some data into the data lakehouse for analysis. There are multiple ways to do this, but in this exercise you’ll simply download a text file to your local computer (or lab VM if applicable) and then upload it to your lakehouse.</p>
+<ol>
+<li>
+<p>Download the data file for this exercise from <code>https://github.com/MicrosoftLearning/dp-data/blob/main/orders.zip</code> Extract the files and save them with their original names on your local computer (or lab VM if applicable). There should be 3 files containing sales data for 3 years: 2019.csv, 2020.csv, and 2021.csv</p>
+</li>
+<li>
+<p>Return to the web browser tab containing your lakehouse, and in the <code>...</code> menu for the <strong>Files</strong> folder in the <strong>Explorer</strong> pane, select <strong>New subfolder</strong> and create a folder named <strong>bronze</strong>.</p>
+</li>
+<li>
+<p>In the <code>...</code> menu for the <strong>bronze</strong> folder, select <strong>Upload</strong> and <strong>Upload files</strong>, and then upload the 3 files (2019.csv, 2020.csv, and 2021.csv) from your local computer (or lab VM if applicable) to the lakehouse. Use the shift key to upload all 3 files at once.</p>
+</li>
+<li>
+<p>After the files have been uploaded, select the <strong>bronze</strong> folder; and verify that the files have been uploaded, as shown here:</p>
+</li>
+</ol>
+<p><a href="../../img/03b-03-bronze-files.png">Screenshot of uploaded products.csv file in a lakehouse.</a></p>
+<h2 id="transform-data-and-load-to-silver-delta-table">Transform data and load to silver Delta table<a class="headerlink" href="#transform-data-and-load-to-silver-delta-table" title="Permanent link">&para;</a></h2>
+<p>Now that you have some data in the bronze layer of your lakehouse, you can use a notebook to transform the data and load it to a delta table in the silver layer.</p>
+<p>On the Home page while viewing the contents of the bronze folder in your data lake, in the Open notebook menu, select New notebook.</p>
+<p>After a few seconds, a new notebook containing a single cell will open. Notebooks are made up of one or more cells that can contain code or markdown (formatted text).</p>
+<p>When the notebook opens, rename it to Transform data for Silver by selecting the Notebook xxxx text at the top left of the notebook and entering the new name.</p>
+<p>Screenshot of a new notebook named Transform data for silver.</p>
+<p>Select the existing cell in the notebook, which contains some simple commented-out code. Highlight and delete these two lines - you will not need this code.</p>
+<p>Note: Notebooks enable you to run code in a variety of languages, including Python, Scala, and SQL. In this exercise, you’ll use PySpark and SQL. You can also add markdown cells to provide formatted text and images to document your code.</p>
+<p>Paste the following code into the cell:</p>
+<p>code
+from pyspark.sql.types import *</p>
+<h1 id="create-the-schema-for-the-table">Create the schema for the table<a class="headerlink" href="#create-the-schema-for-the-table" title="Permanent link">&para;</a></h1>
+<p>orderSchema = StructType([
+    StructField("SalesOrderNumber", StringType()),
+    StructField("SalesOrderLineNumber", IntegerType()),
+    StructField("OrderDate", DateType()),
+    StructField("CustomerName", StringType()),
+    StructField("Email", StringType()),
+    StructField("Item", StringType()),
+    StructField("Quantity", IntegerType()),
+    StructField("UnitPrice", FloatType()),
+    StructField("Tax", FloatType())
+    ])</p>
+<h1 id="import-all-files-from-bronze-folder-of-lakehouse">Import all files from bronze folder of lakehouse<a class="headerlink" href="#import-all-files-from-bronze-folder-of-lakehouse" title="Permanent link">&para;</a></h1>
+<p>df = spark.read.format("csv").option("header", "true").schema(orderSchema).load("Files/bronze/*.csv")</p>
+<h1 id="display-the-first-10-rows-of-the-dataframe-to-preview-your-data">Display the first 10 rows of the dataframe to preview your data<a class="headerlink" href="#display-the-first-10-rows-of-the-dataframe-to-preview-your-data" title="Permanent link">&para;</a></h1>
+<p>display(df.head(10))
+Use the <strong>▷ (Run cell)</strong> button on the left of the cell to run the code.</p>
+<p>Note: Since this is the first time you’ve run any Spark code in this notebook, a Spark session must be started. This means that the first run can take a minute or so to complete. Subsequent runs will be quicker.</p>
+<p>When the cell command has completed, review the output below the cell, which should look similar to this:</p>
+<p>Index   SalesOrderNumber    SalesOrderLineNumber    OrderDate   CustomerName    Email   Item    Quantity    UnitPrice   Tax
+1   SO49172 1   2021-01-01  Brian Howard    <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#98;&#114;&#105;&#97;&#110;&#50;&#51;&#64;&#97;&#100;&#118;&#101;&#110;&#116;&#117;&#114;&#101;&#45;&#119;&#111;&#114;&#107;&#115;&#46;&#99;&#111;&#109;">&#98;&#114;&#105;&#97;&#110;&#50;&#51;&#64;&#97;&#100;&#118;&#101;&#110;&#116;&#117;&#114;&#101;&#45;&#119;&#111;&#114;&#107;&#115;&#46;&#99;&#111;&#109;</a> Road-250 Red, 52    1   2443.35 195.468
+2   SO49173 1   2021-01-01  Linda Alvarez   <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#108;&#105;&#110;&#100;&#97;&#49;&#57;&#64;&#97;&#100;&#118;&#101;&#110;&#116;&#117;&#114;&#101;&#45;&#119;&#111;&#114;&#107;&#115;&#46;&#99;&#111;&#109;">&#108;&#105;&#110;&#100;&#97;&#49;&#57;&#64;&#97;&#100;&#118;&#101;&#110;&#116;&#117;&#114;&#101;&#45;&#119;&#111;&#114;&#107;&#115;&#46;&#99;&#111;&#109;</a> Mountain-200 Silver, 38 1   2071.4197   165.7136
+…   …   …   …   …   …   …   …   …   …
+The code you ran loaded the data from the CSV files in the bronze folder into a Spark dataframe, and then displayed the first few rows of the dataframe.</p>
+<p>Note: You can clear, hide, and auto-resize the contents of the cell output by selecting the … menu at the top left of the output pane.</p>
+<p>Now you’ll add columns for data validation and cleanup, using a PySpark dataframe to add columns and update the values of some of the existing columns. Use the + Code button to add a new code block and add the following code to the cell:</p>
+<p>code
+from pyspark.sql.functions import when, lit, col, current_timestamp, input_file_name</p>
+<h1 id="add-columns-isflagged-createdts-and-modifiedts">Add columns IsFlagged, CreatedTS and ModifiedTS<a class="headerlink" href="#add-columns-isflagged-createdts-and-modifiedts" title="Permanent link">&para;</a></h1>
+<p>df = df.withColumn("FileName", input_file_name()) \
+    .withColumn("IsFlagged", when(col("OrderDate") &lt; '2019-08-01',True).otherwise(False)) \
+    .withColumn("CreatedTS", current_timestamp()).withColumn("ModifiedTS", current_timestamp())</p>
+<h1 id="update-customername-to-unknown-if-customername-null-or-empty">Update CustomerName to "Unknown" if CustomerName null or empty<a class="headerlink" href="#update-customername-to-unknown-if-customername-null-or-empty" title="Permanent link">&para;</a></h1>
+<p>df = df.withColumn("CustomerName", when((col("CustomerName").isNull() | (col("CustomerName")=="")),lit("Unknown")).otherwise(col("CustomerName")))
+The first line of the code imports the necessary functions from PySpark. You’re then adding new columns to the dataframe so you can track the source file name, whether the order was flagged as being a before the fiscal year of interest, and when the row was created and modified.</p>
+<p>Finally, you’re updating the CustomerName column to “Unknown” if it’s null or empty.</p>
+<p>Run the cell to execute the code using the <strong>▷ (Run cell)</strong> button.</p>
+<p>Next, you’ll define the schema for the sales_silver table in the sales database using Delta Lake format. Create a new code block and add the following code to the cell:</p>
+<p>code</p>
+<h1 id="define-the-schema-for-the-sales_silver-table">Define the schema for the sales_silver table<a class="headerlink" href="#define-the-schema-for-the-sales_silver-table" title="Permanent link">&para;</a></h1>
+<p>from pyspark.sql.types import *
+from delta.tables import *</p>
+<p>DeltaTable.createIfNotExists(spark) \
+    .tableName("sales.sales_silver") \
+    .addColumn("SalesOrderNumber", StringType()) \
+    .addColumn("SalesOrderLineNumber", IntegerType()) \
+    .addColumn("OrderDate", DateType()) \
+    .addColumn("CustomerName", StringType()) \
+    .addColumn("Email", StringType()) \
+    .addColumn("Item", StringType()) \
+    .addColumn("Quantity", IntegerType()) \
+    .addColumn("UnitPrice", FloatType()) \
+    .addColumn("Tax", FloatType()) \
+    .addColumn("FileName", StringType()) \
+    .addColumn("IsFlagged", BooleanType()) \
+    .addColumn("CreatedTS", DateType()) \
+    .addColumn("ModifiedTS", DateType()) \
+    .execute()
+Run the cell to execute the code using the <strong>▷ (Run cell)</strong> button.</p>
+<p>Select the … in the Tables section of the Explorer pane and select Refresh. You should now see the new sales_silver table listed. The ▲ (triangle icon) indicates that it’s a Delta table.</p>
+<p>Note: If you don’t see the new table, wait a few seconds and then select Refresh again, or refresh the entire browser tab.</p>
+<p>Now you’re going to perform an upsert operation on a Delta table, updating existing records based on specific conditions and inserting new records when no match is found. Add a new code block and paste the following code:</p>
+<p>code</p>
+<h1 id="update-existing-records-and-insert-new-ones-based-on-a-condition-defined-by-the-columns-salesordernumber-orderdate-customername-and-item">Update existing records and insert new ones based on a condition defined by the columns SalesOrderNumber, OrderDate, CustomerName, and Item.<a class="headerlink" href="#update-existing-records-and-insert-new-ones-based-on-a-condition-defined-by-the-columns-salesordernumber-orderdate-customername-and-item" title="Permanent link">&para;</a></h1>
+<p>from delta.tables import *</p>
+<p>deltaTable = DeltaTable.forPath(spark, 'Tables/sales_silver')</p>
+<p>dfUpdates = df</p>
+<p>deltaTable.alias('silver') \
+  .merge(
+    dfUpdates.alias('updates'),
+    'silver.SalesOrderNumber = updates.SalesOrderNumber and silver.OrderDate = updates.OrderDate and silver.CustomerName = updates.CustomerName and silver.Item = updates.Item'
+  ) \
+   .whenMatchedUpdate(set =
+    {</p>
+<div class="codehilite"><pre><span></span><code>}
+</code></pre></div>
+
+<p>) \
+ .whenNotMatchedInsert(values =
+    {
+      "SalesOrderNumber": "updates.SalesOrderNumber",
+      "SalesOrderLineNumber": "updates.SalesOrderLineNumber",
+      "OrderDate": "updates.OrderDate",
+      "CustomerName": "updates.CustomerName",
+      "Email": "updates.Email",
+      "Item": "updates.Item",
+      "Quantity": "updates.Quantity",
+      "UnitPrice": "updates.UnitPrice",
+      "Tax": "updates.Tax",
+      "FileName": "updates.FileName",
+      "IsFlagged": "updates.IsFlagged",
+      "CreatedTS": "updates.CreatedTS",
+      "ModifiedTS": "updates.ModifiedTS"
+    }
+  ) \
+  .execute()
+Run the cell to execute the code using the <strong>▷ (Run cell)</strong> button.</p>
+<p>This operation is important because it enables you to update existing records in the table based on the values of specific columns, and insert new records when no match is found. This is a common requirement when you’re loading data from a source system that may contain updates to existing and new records.</p>
+<p>You now have data in your silver delta table that is ready for further transformation and modeling.</p>
+<p>Explore data in the silver layer using the SQL endpoint
+Now that you have data in your silver layer, you can use the SQL analytics endpoint to explore the data and perform some basic analysis. This is useful if you’re familiar with SQL and want to do some basic exploration of your data. In this exercise we’re using the SQL endpoint view in Fabric, but you can use other tools like SQL Server Management Studio (SSMS) and Azure Data Explorer.</p>
+<p>Navigate back to your workspace and notice that you now have several items listed. Select the Sales SQL analytics endpoint to open your lakehouse in the SQL analytics endpoint view.</p>
+<p>Screenshot of the SQL endpoint in a lakehouse.</p>
+<p>Select New SQL query from the ribbon, which will open a SQL query editor. Note that you can rename your query using the … menu item next to the existing query name in the Explorer pane.</p>
+<p>Next, you’ll run two sql queries to explore the data.</p>
+<p>Paste the following query into the query editor and select Run:</p>
+<p>sql
+SELECT YEAR(OrderDate) AS Year
+    , CAST (SUM(Quantity * (UnitPrice + Tax)) AS DECIMAL(12, 2)) AS TotalSales
+FROM sales_silver
+GROUP BY YEAR(OrderDate) 
+ORDER BY YEAR(OrderDate)
+This query calculates the total sales for each year in the sales_silver table. Your results should look like this:</p>
+<p>Screenshot of the results of a SQL query in a lakehouse.</p>
+<p>Next you’ll review which customers are purchasing the most (in terms of quantity). Paste the following query into the query editor and select Run:</p>
+<p>sql
+SELECT TOP 10 CustomerName, SUM(Quantity) AS TotalQuantity
+FROM sales_silver
+GROUP BY CustomerName
+ORDER BY TotalQuantity DESC
+This query calculates the total quantity of items purchased by each customer in the sales_silver table, and then returns the top 10 customers in terms of quantity.</p>
+<p>Data exploration at the silver layer is useful for basic analysis, but you’ll need to transform the data further and model it into a star schema to enable more advanced analysis and reporting. You’ll do that in the next section.</p>
+<p>Transform data for gold layer
+You have successfully taken data from your bronze layer, transformed it, and loaded it into a silver Delta table. Now you’ll use a new notebook to transform the data further, model it into a star schema, and load it into gold Delta tables.</p>
+<p>You could have done all of this in a single notebook, but for this exercise you’re using separate notebooks to demonstrate the process of transforming data from bronze to silver and then from silver to gold. This can help with debugging, troubleshooting, and reuse.</p>
+<p>Return to the workspace home page and create a new notebook called Transform data for Gold.</p>
+<p>In the Explorer pane, add your Sales lakehouse by selecting Add data items and then selecting the Sales lakehouse you created earlier. You should see the sales_silver table listed in the Tables section of the explorer pane.</p>
+<p>In the existing code block, remove the commented text and add the following code to load data to your dataframe and start building your star schema, then run it:</p>
+<p>code</p>
+<h1 id="load-data-to-the-dataframe-as-a-starting-point-to-create-the-gold-layer">Load data to the dataframe as a starting point to create the gold layer<a class="headerlink" href="#load-data-to-the-dataframe-as-a-starting-point-to-create-the-gold-layer" title="Permanent link">&para;</a></h1>
+<p>df = spark.read.table("Sales.sales_silver")
+Add a new code block and paste the following code to create your date dimension table and run it:</p>
+<p>code
+from pyspark.sql.types import *
+from delta.tables import*</p>
+<h1 id="define-the-schema-for-the-dimdate_gold-table">Define the schema for the dimdate_gold table<a class="headerlink" href="#define-the-schema-for-the-dimdate_gold-table" title="Permanent link">&para;</a></h1>
+<p>DeltaTable.createIfNotExists(spark) \
+    .tableName("sales.dimdate_gold") \
+    .addColumn("OrderDate", DateType()) \
+    .addColumn("Day", IntegerType()) \
+    .addColumn("Month", IntegerType()) \
+    .addColumn("Year", IntegerType()) \
+    .addColumn("mmmyyyy", StringType()) \
+    .addColumn("yyyymm", StringType()) \
+    .execute()
+Note: You can run the display(df) command at any time to check the progress of your work. In this case, you’d run ‘display(dfdimDate_gold)’ to see the contents of the dimDate_gold dataframe.</p>
+<p>In a new code block, add and run the following code to create a dataframe for your date dimension, dimdate_gold:</p>
+<p>code
+from pyspark.sql.functions import col, dayofmonth, month, year, date_format</p>
+<h1 id="create-dataframe-for-dimdate_gold">Create dataframe for dimDate_gold<a class="headerlink" href="#create-dataframe-for-dimdate_gold" title="Permanent link">&para;</a></h1>
+<p>dfdimDate_gold = df.dropDuplicates(["OrderDate"]).select(col("OrderDate"), \
+        dayofmonth("OrderDate").alias("Day"), \
+        month("OrderDate").alias("Month"), \
+        year("OrderDate").alias("Year"), \
+        date_format(col("OrderDate"), "MMM-yyyy").alias("mmmyyyy"), \
+        date_format(col("OrderDate"), "yyyyMM").alias("yyyymm"), \
+    ).orderBy("OrderDate")</p>
+<h1 id="display-the-first-10-rows-of-the-dataframe-to-preview-your-data_1">Display the first 10 rows of the dataframe to preview your data<a class="headerlink" href="#display-the-first-10-rows-of-the-dataframe-to-preview-your-data_1" title="Permanent link">&para;</a></h1>
+<p>display(dfdimDate_gold.head(10))
+You’re separating the code out into new code blocks so that you can understand and watch what’s happening in the notebook as you transform the data. In another new code block, add and run the following code to update the date dimension as new data comes in:</p>
+<p>code
+from delta.tables import *</p>
+<p>deltaTable = DeltaTable.forPath(spark, 'Tables/dimdate_gold')</p>
+<p>dfUpdates = dfdimDate_gold</p>
+<p>deltaTable.alias('gold') \
+  .merge(
+    dfUpdates.alias('updates'),
+    'gold.OrderDate = updates.OrderDate'
+  ) \
+   .whenMatchedUpdate(set =
+    {</p>
+<div class="codehilite"><pre><span></span><code>}
+</code></pre></div>
+
+<p>) \
+ .whenNotMatchedInsert(values =
+    {
+      "OrderDate": "updates.OrderDate",
+      "Day": "updates.Day",
+      "Month": "updates.Month",
+      "Year": "updates.Year",
+      "mmmyyyy": "updates.mmmyyyy",
+      "yyyymm": "updates.yyyymm"
+    }
+  ) \
+  .execute()
+The date dimension is now set up. Now you’ll create your customer dimension.</p>
+<p>To build out the customer dimension table, add a new code block, paste and run the following code:</p>
+<p>code
+from pyspark.sql.types import *
+from delta.tables import *</p>
+<h1 id="create-customer_gold-dimension-delta-table">Create customer_gold dimension delta table<a class="headerlink" href="#create-customer_gold-dimension-delta-table" title="Permanent link">&para;</a></h1>
+<p>DeltaTable.createIfNotExists(spark) \
+    .tableName("sales.dimcustomer_gold") \
+    .addColumn("CustomerName", StringType()) \
+    .addColumn("Email",  StringType()) \
+    .addColumn("First", StringType()) \
+    .addColumn("Last", StringType()) \
+    .addColumn("CustomerID", LongType()) \
+    .execute()
+In a new code block, add and run the following code to drop duplicate customers, select specific columns, and split the “CustomerName” column to create “First” and “Last” name columns:</p>
+<p>code
+from pyspark.sql.functions import col, split</p>
+<h1 id="create-customer_silver-dataframe">Create customer_silver dataframe<a class="headerlink" href="#create-customer_silver-dataframe" title="Permanent link">&para;</a></h1>
+<p>dfdimCustomer_silver = df.dropDuplicates(["CustomerName","Email"]).select(col("CustomerName"),col("Email")) \
+    .withColumn("First",split(col("CustomerName"), " ").getItem(0)) \
+    .withColumn("Last",split(col("CustomerName"), " ").getItem(1)) </p>
+<h1 id="display-the-first-10-rows-of-the-dataframe-to-preview-your-data_2">Display the first 10 rows of the dataframe to preview your data<a class="headerlink" href="#display-the-first-10-rows-of-the-dataframe-to-preview-your-data_2" title="Permanent link">&para;</a></h1>
+<p>display(dfdimCustomer_silver.head(10))
+Here you have created a new DataFrame dfdimCustomer_silver by performing various transformations such as dropping duplicates, selecting specific columns, and splitting the “CustomerName” column to create “First” and “Last” name columns. The result is a DataFrame with cleaned and structured customer data, including separate “First” and “Last” name columns extracted from the “CustomerName” column.</p>
+<p>Next we’ll create the ID column for our customers. In a new code block, paste and run the following:</p>
+<p>code
+from pyspark.sql.functions import monotonically_increasing_id, col, when, coalesce, max, lit</p>
+<p>dfdimCustomer_temp = spark.read.table("Sales.dimCustomer_gold")</p>
+<p>MAXCustomerID = dfdimCustomer_temp.select(coalesce(max(col("CustomerID")),lit(0)).alias("MAXCustomerID")).first()[0]</p>
+<p>dfdimCustomer_gold = dfdimCustomer_silver.join(dfdimCustomer_temp,(dfdimCustomer_silver.CustomerName == dfdimCustomer_temp.CustomerName) &amp; (dfdimCustomer_silver.Email == dfdimCustomer_temp.Email), "left_anti")</p>
+<p>dfdimCustomer_gold = dfdimCustomer_gold.withColumn("CustomerID",monotonically_increasing_id() + MAXCustomerID + 1)</p>
+<h1 id="display-the-first-10-rows-of-the-dataframe-to-preview-your-data_3">Display the first 10 rows of the dataframe to preview your data<a class="headerlink" href="#display-the-first-10-rows-of-the-dataframe-to-preview-your-data_3" title="Permanent link">&para;</a></h1>
+<p>display(dfdimCustomer_gold.head(10))
+Here you’re cleaning and transforming customer data (dfdimCustomer_silver) by performing a left anti join to exclude duplicates that already exist in the dimCustomer_gold table, and then generating unique CustomerID values using the monotonically_increasing_id() function.</p>
+<p>Now you’ll ensure that your customer table remains up-to-date as new data comes in. In a new code block, paste and run the following:</p>
+<p>code
+from delta.tables import *</p>
+<p>deltaTable = DeltaTable.forPath(spark, 'Tables/dimcustomer_gold')</p>
+<p>dfUpdates = dfdimCustomer_gold</p>
+<p>deltaTable.alias('gold') \
+  .merge(
+    dfUpdates.alias('updates'),
+    'gold.CustomerName = updates.CustomerName AND gold.Email = updates.Email'
+  ) \
+   .whenMatchedUpdate(set =
+    {</p>
+<div class="codehilite"><pre><span></span><code>}
+</code></pre></div>
+
+<p>) \
+ .whenNotMatchedInsert(values =
+    {
+      "CustomerName": "updates.CustomerName",
+      "Email": "updates.Email",
+      "First": "updates.First",
+      "Last": "updates.Last",
+      "CustomerID": "updates.CustomerID"
+    }
+  ) \
+  .execute()
+Now you’ll repeat those steps to create your product dimension. In a new code block, paste and run the following:</p>
+<p>code
+from pyspark.sql.types import *
+from delta.tables import *</p>
+<p>DeltaTable.createIfNotExists(spark) \
+    .tableName("sales.dimproduct_gold") \
+    .addColumn("ItemName", StringType()) \
+    .addColumn("ItemID", LongType()) \
+    .addColumn("ItemInfo", StringType()) \
+    .execute()
+Add another code block to create the product_silver dataframe.</p>
+<p>code
+from pyspark.sql.functions import col, split, lit, when</p>
+<h1 id="create-product_silver-dataframe">Create product_silver dataframe<a class="headerlink" href="#create-product_silver-dataframe" title="Permanent link">&para;</a></h1>
+<p>dfdimProduct_silver = df.dropDuplicates(["Item"]).select(col("Item")) \
+    .withColumn("ItemName",split(col("Item"), ", ").getItem(0)) \
+    .withColumn("ItemInfo",when((split(col("Item"), ", ").getItem(1).isNull() | (split(col("Item"), ", ").getItem(1)=="")),lit("")).otherwise(split(col("Item"), ", ").getItem(1))) </p>
+<h1 id="display-the-first-10-rows-of-the-dataframe-to-preview-your-data_4">Display the first 10 rows of the dataframe to preview your data<a class="headerlink" href="#display-the-first-10-rows-of-the-dataframe-to-preview-your-data_4" title="Permanent link">&para;</a></h1>
+<p>display(dfdimProduct_silver.head(10))
+Now you’ll create IDs for your dimProduct_gold table. Add the following syntax to a new code block and run it:</p>
+<p>code
+from pyspark.sql.functions import monotonically_increasing_id, col, lit, max, coalesce</p>
+<h1 id="dfdimproduct_temp-dfdimproduct_silver">dfdimProduct_temp = dfdimProduct_silver<a class="headerlink" href="#dfdimproduct_temp-dfdimproduct_silver" title="Permanent link">&para;</a></h1>
+<p>dfdimProduct_temp = spark.read.table("Sales.dimProduct_gold")</p>
+<p>MAXProductID = dfdimProduct_temp.select(coalesce(max(col("ItemID")),lit(0)).alias("MAXItemID")).first()[0]</p>
+<p>dfdimProduct_gold = dfdimProduct_silver.join(dfdimProduct_temp,(dfdimProduct_silver.ItemName == dfdimProduct_temp.ItemName) &amp; (dfdimProduct_silver.ItemInfo == dfdimProduct_temp.ItemInfo), "left_anti")</p>
+<p>dfdimProduct_gold = dfdimProduct_gold.withColumn("ItemID",monotonically_increasing_id() + MAXProductID + 1)</p>
+<h1 id="display-the-first-10-rows-of-the-dataframe-to-preview-your-data_5">Display the first 10 rows of the dataframe to preview your data<a class="headerlink" href="#display-the-first-10-rows-of-the-dataframe-to-preview-your-data_5" title="Permanent link">&para;</a></h1>
+<p>display(dfdimProduct_gold.head(10))
+This calculates the next available product ID based on the current data in the table, assigns these new IDs to the products, and then displays the updated product information.</p>
+<p>Similar to what you’ve done with your other dimensions, you need to ensure that your product table remains up-to-date as new data comes in. In a new code block, paste and run the following:</p>
+<p>code
+from delta.tables import *</p>
+<p>deltaTable = DeltaTable.forPath(spark, 'Tables/dimproduct_gold')</p>
+<p>dfUpdates = dfdimProduct_gold</p>
+<p>deltaTable.alias('gold') \
+  .merge(
+        dfUpdates.alias('updates'),
+        'gold.ItemName = updates.ItemName AND gold.ItemInfo = updates.ItemInfo'
+        ) \
+        .whenMatchedUpdate(set =
+        {</p>
+<div class="codehilite"><pre><span></span><code>    }
+    ) \
+    .whenNotMatchedInsert(values =
+     {
+      &quot;ItemName&quot;: &quot;updates.ItemName&quot;,
+      &quot;ItemInfo&quot;: &quot;updates.ItemInfo&quot;,
+      &quot;ItemID&quot;: &quot;updates.ItemID&quot;
+      }
+      ) \
+      .execute()
+</code></pre></div>
+
+<p>Now that you have your dimensions built out, the final step is to create the fact table.</p>
+<p>In a new code block, paste and run the following code to create the fact table:</p>
+<p>code
+from pyspark.sql.types import *
+from delta.tables import *</p>
+<p>DeltaTable.createIfNotExists(spark) \
+    .tableName("sales.factsales_gold") \
+    .addColumn("CustomerID", LongType()) \
+    .addColumn("ItemID", LongType()) \
+    .addColumn("OrderDate", DateType()) \
+    .addColumn("Quantity", IntegerType()) \
+    .addColumn("UnitPrice", FloatType()) \
+    .addColumn("Tax", FloatType()) \
+    .execute()
+In a new code block, paste and run the following code to create a new dataframe to combine sales data with customer and product information include customer ID, item ID, order date, quantity, unit price, and tax:</p>
+<p>code
+from pyspark.sql.functions import col</p>
+<p>dfdimCustomer_temp = spark.read.table("Sales.dimCustomer_gold")
+dfdimProduct_temp = spark.read.table("Sales.dimProduct_gold")</p>
+<p>df = df.withColumn("ItemName",split(col("Item"), ", ").getItem(0)) \
+    .withColumn("ItemInfo",when((split(col("Item"), ", ").getItem(1).isNull() | (split(col("Item"), ", ").getItem(1)=="")),lit("")).otherwise(split(col("Item"), ", ").getItem(1))) \</p>
+<h1 id="create-sales_gold-dataframe">Create Sales_gold dataframe<a class="headerlink" href="#create-sales_gold-dataframe" title="Permanent link">&para;</a></h1>
+<p>dffactSales_gold = df.alias("df1").join(dfdimCustomer_temp.alias("df2"),(df.CustomerName == dfdimCustomer_temp.CustomerName) &amp; (df.Email == dfdimCustomer_temp.Email), "left") \
+        .join(dfdimProduct_temp.alias("df3"),(df.ItemName == dfdimProduct_temp.ItemName) &amp; (df.ItemInfo == dfdimProduct_temp.ItemInfo), "left") \
+    .select(col("df2.CustomerID") \
+        , col("df3.ItemID") \
+        , col("df1.OrderDate") \
+        , col("df1.Quantity") \
+        , col("df1.UnitPrice") \
+        , col("df1.Tax") \
+    ).orderBy(col("df1.OrderDate"), col("df2.CustomerID"), col("df3.ItemID"))</p>
+<h1 id="display-the-first-10-rows-of-the-dataframe-to-preview-your-data_6">Display the first 10 rows of the dataframe to preview your data<a class="headerlink" href="#display-the-first-10-rows-of-the-dataframe-to-preview-your-data_6" title="Permanent link">&para;</a></h1>
+<p>display(dffactSales_gold.head(10))
+Now you’ll ensure that sales data remains up-to-date by running the following code in a new code block:</p>
+<p>code
+from delta.tables import *</p>
+<p>deltaTable = DeltaTable.forPath(spark, 'Tables/factsales_gold')</p>
+<p>dfUpdates = dffactSales_gold</p>
+<p>deltaTable.alias('gold') \
+  .merge(
+    dfUpdates.alias('updates'),
+    'gold.OrderDate = updates.OrderDate AND gold.CustomerID = updates.CustomerID AND gold.ItemID = updates.ItemID'
+  ) \
+   .whenMatchedUpdate(set =
+    {</p>
+<div class="codehilite"><pre><span></span><code>}
+</code></pre></div>
+
+<p>) \
+ .whenNotMatchedInsert(values =
+    {
+      "CustomerID": "updates.CustomerID",
+      "ItemID": "updates.ItemID",
+      "OrderDate": "updates.OrderDate",
+      "Quantity": "updates.Quantity",
+      "UnitPrice": "updates.UnitPrice",
+      "Tax": "updates.Tax"
+    }
+  ) \
+  .execute()
+Here you’re using Delta Lake’s merge operation to synchronize and update the factsales_gold table with new sales data (dffactSales_gold). The operation compares the order date, customer ID, and item ID between the existing data (silver table) and the new data (updates DataFrame), updating matching records and inserting new records as needed.</p>
+<p>You now have a curated, modeled gold layer that can be used for reporting and analysis.</p>
+<p>Create a semantic model
+In your workspace, you can now use the gold layer to create a report and analyze the data. You can access the semantic model directly in your workspace to create relationships and measures for reporting.</p>
+<p>Note that you can’t use the default semantic model that is automatically created when you create a lakehouse. You must create a new semantic model that includes the gold tables you created in this exercise, from the Explorer.</p>
+<p>In your workspace, navigate to your Sales lakehouse.
+Select New semantic model from the ribbon of the Explorer view.
+Assign the name Sales_Gold to your new semantic model.
+Select your transformed gold tables to include in your semantic model and select Confirm.
+dimdate_gold
+dimcustomer_gold
+dimproduct_gold
+factsales_gold
+This will open the semantic model in Fabric where you can create relationships and measures, as shown here:</p>
+<p>Screenshot of a semantic model in Fabric.</p>
+<p>From here, you or other members of your data team can create reports and dashboards based on the data in your lakehouse. These reports will be connected directly to the gold layer of your lakehouse, so they’ll always reflect the latest data.</p>
+<p>Clean up resources
+In this exercise, you’ve learned how to create a medallion architecture in a Microsoft Fabric lakehouse.</p>
+<p>If you’ve finished exploring your lakehouse, you can delete the workspace you created for this exercise.</p>
+<p>In the bar on the left, select the icon for your workspace to view all of the items it contains.
+In the … menu on the toolbar, select Workspace settings.
+In the General section, select Remove this workspace.</p>
+<hr />
+<h6 id="httpsdocsmicrosoftcomlearnmodulescreate-medallion-architecture-fabric-lakehouse"><a href="https://docs.microsoft.com/learn/modules/create-medallion-architecture-fabric-lakehouse/">https://docs.microsoft.com/learn/modules/create-medallion-architecture-fabric-lakehouse/</a><a class="headerlink" href="#httpsdocsmicrosoftcomlearnmodulescreate-medallion-architecture-fabric-lakehouse" title="Permanent link">&para;</a></h6>
+<h6 id="httpsmicrosoftlearninggithubiomslearn-fabricinstructionslabs03b-medallion-lakehousehtml"><a href="https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/03b-medallion-lakehouse.html">https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/03b-medallion-lakehouse.html</a><a class="headerlink" href="#httpsmicrosoftlearninggithubiomslearn-fabricinstructionslabs03b-medallion-lakehousehtml" title="Permanent link">&para;</a></h6>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["toc.integrate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,999 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Day 3: Security & Access Governance - DE5M6 ~ Data Operations</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#day-3-security-access-governance" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="DE5M6 ~ Data Operations" class="md-header__button md-logo" aria-label="DE5M6 ~ Data Operations" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4M4 9v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9c0 2.21-3.58 4-8 4s-8-1.79-8-4m0 5v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3c0 2.21-3.58 4-8 4s-8-1.79-8-4"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DE5M6 ~ Data Operations
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Day 3: Security &amp; Access Governance
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="DE5M6 ~ Data Operations" class="md-nav__button md-logo" aria-label="DE5M6 ~ Data Operations" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4M4 9v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9c0 2.21-3.58 4-8 4s-8-1.79-8-4m0 5v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3c0 2.21-3.58 4-8 4s-8-1.79-8-4"/></svg>
+
+    </a>
+    DE5M6 ~ Data Operations
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Agenda
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Agenda
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tne/day1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Day 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tne/day2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Day 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tne/day3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Day 3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Day 1 - Monitoring & Performance
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Day 1 - Monitoring & Performance
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../labs/05-dataflows-gen2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab 1.1 ~ 05 Dataflows Gen2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../labs/04-ingest-pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab 1.2 ~ 04 Ingest Pipeline
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../labs/18-monitor-hub/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab 1.3 ~ 18 Monitor Hub
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../labs/06c-monitor-data-warehouse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab 1.4 ~ 06c Monitor Warehouse
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../day1/cloud-monitoring-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cloud monitoring comparison
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Day 2 - Incident Response
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Day 2 - Incident Response
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../labs/04-ingest-pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab 1.2 ~ 04 Ingest Pipeline
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../day2/breaking-things/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab 2.1 ~ Break it systematically
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../day2/complex-breaking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    More complex breaks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../labs/11-data-activator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab ~ 11 Data Activator
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Day 3 - Quality & Governance
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Day 3 - Quality & Governance
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../labs/03b-medallion-lakehouse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab 3.1 ~ 03b Medallion Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../labs/19-secure-data-access/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab 3.2 ~ 19 Secure Data Access
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../labs/21-deployment-pipelines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab 3.3 ~ 21 Deployment Pipelines
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="day-3-security-access-governance">Day 3: Security &amp; Access Governance<a class="headerlink" href="#day-3-security-access-governance" title="Permanent link">&para;</a></h1>
+<hr />
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>This afternoon session shifts from data quality to data governance, focusing on security and access control. Through hands-on Lab 19 and structured discussion, learners explore how to balance data accessibility with security requirements, understanding governance as an operational discipline that enables rather than restricts business value.</p>
+<hr />
+<h2 id="session-structure">Session Structure<a class="headerlink" href="#session-structure" title="Permanent link">&para;</a></h2>
+<h3 id="phase-1-secure-data-access-lab-45-minutes">Phase 1: Secure Data Access Lab (45 minutes)<a class="headerlink" href="#phase-1-secure-data-access-lab-45-minutes" title="Permanent link">&para;</a></h3>
+<h4 id="lab-19-secure-data-access-in-microsoft-fabric-45-minutes">Lab 19: Secure Data Access in Microsoft Fabric (45 minutes)<a class="headerlink" href="#lab-19-secure-data-access-in-microsoft-fabric-45-minutes" title="Permanent link">&para;</a></h4>
+<p><strong>Microsoft Learn Lab:</strong> <a href="https://docs.microsoft.com/learn/modules/secure-data-access-fabric/">Secure data access in Microsoft Fabric</a></p>
+<p><strong>Key Learning Focus for Today:</strong>
+While completing the lab, learners should pay attention to:
+- <strong>Workspace permissions:</strong> Who can access what at the workspace level?
+- <strong>Item-level security:</strong> Granular control over individual data assets
+- <strong>OneLake data access roles:</strong> File-level security and data lake permissions
+- <strong>Row-level security:</strong> Controlling access to specific data records</p>
+<p><strong>Governance Mindset During Lab:</strong>
+As learners work through security configurations, encourage them to think:
+- <strong>Business justification:</strong> Why would you restrict this access?
+- <strong>User experience:</strong> How do security controls affect data consumers?
+- <strong>Operational impact:</strong> What happens when security is too restrictive vs. too permissive?</p>
+<p><strong>Facilitator Notes:</strong>
+- <strong>Emphasize business context</strong> over technical configuration
+- <strong>Connect to real scenarios:</strong> "When would you use row-level security?"
+- <strong>Highlight trade-offs:</strong> "How does security affect data accessibility?"
+- <strong>Time management:</strong> Focus on understanding concepts over perfect setup</p>
+<hr />
+<h3 id="phase-2-security-vs-accessibility-analysis-20-minutes">Phase 2: Security vs. Accessibility Analysis (20 minutes)<a class="headerlink" href="#phase-2-security-vs-accessibility-analysis-20-minutes" title="Permanent link">&para;</a></h3>
+<h4 id="governance-trade-offs-discussion-20-minutes">Governance Trade-offs Discussion (20 minutes)<a class="headerlink" href="#governance-trade-offs-discussion-20-minutes" title="Permanent link">&para;</a></h4>
+<p><strong>Setup (2 minutes):</strong>
+<strong>Facilitator Frame:</strong>
+- "You've just implemented multiple layers of data security"
+- "Good governance requires balancing security with business needs"
+- "Let's analyze the trade-offs and decision frameworks you just experienced"</p>
+<h4 id="structured-analysis-15-minutes">Structured Analysis (15 minutes):<a class="headerlink" href="#structured-analysis-15-minutes" title="Permanent link">&para;</a></h4>
+<p><strong>Individual Reflection (5 minutes):</strong>
+Give learners this framework based on their lab experience:</p>
+<div class="highlight"><pre><span></span><code>SECURITY &amp; ACCESSIBILITY TRADE-OFFS
+
+WORKSPACE-LEVEL SECURITY:
+□ What business scenarios require workspace restrictions?
+□ How would this affect collaborative analytics work?
+□ What problems could overly restrictive workspace access cause?
+
+ITEM-LEVEL SECURITY:
+□ When would you restrict access to specific datasets?
+□ How does this impact self-service analytics capabilities?
+□ What governance challenges arise with granular permissions?
+
+ROW-LEVEL SECURITY:
+□ What business cases justify filtering data by user?
+□ How does this affect performance and user experience?
+□ What alternatives exist to row-level restrictions?
+
+GOVERNANCE DECISION FRAMEWORK:
+□ How do you decide what level of security to apply?
+□ Who should make these access control decisions?
+□ How do you balance compliance requirements with business agility?
+</code></pre></div>
+<p><strong>Pair Discussion (5 minutes):</strong>
+- <strong>Form pairs</strong> (mix from different lab experiences if possible)
+- <strong>Share perspectives</strong> on security trade-offs observed
+- <strong>Focus question:</strong> "What's the biggest governance challenge you identified?"</p>
+<p><strong>Group Discussion (5 minutes):</strong>
+<strong>Facilitator-led synthesis:</strong></p>
+<p><strong>Key Questions:</strong>
+- "Where did you see the biggest tension between security and accessibility?"
+- "How would these security controls affect data scientists or analysts in your organization?"
+- "What governance decisions require business stakeholder input vs. technical judgment?"</p>
+<p><strong>Expected Insights to Highlight:</strong>
+- <strong>Over-restriction kills innovation</strong> - too much security prevents valuable analysis
+- <strong>Under-restriction creates compliance risk</strong> - inadequate security exposes sensitive data
+- <strong>User experience matters</strong> - complex security creates workarounds and shadow IT
+- <strong>Governance is about enabling business value</strong> safely, not just preventing access</p>
+<h4 id="bridge-to-governance-principles-3-minutes">Bridge to Governance Principles (3 minutes):<a class="headerlink" href="#bridge-to-governance-principles-3-minutes" title="Permanent link">&para;</a></h4>
+<p><strong>Facilitator:</strong>
+- "Security controls are just one part of data governance"
+- "Good governance creates frameworks for making these trade-off decisions consistently"
+- "Next we'll investigate governance approaches that balance multiple competing priorities"</p>
+<hr />
+<h3 id="phase-3-governance-approaches-investigation-10-minutes">Phase 3: Governance Approaches Investigation (10 minutes)<a class="headerlink" href="#phase-3-governance-approaches-investigation-10-minutes" title="Permanent link">&para;</a></h3>
+<h4 id="governance-framework-research-10-minutes">Governance Framework Research (10 minutes)<a class="headerlink" href="#governance-framework-research-10-minutes" title="Permanent link">&para;</a></h4>
+<p><strong>Setup (1 minute):</strong>
+<strong>Research Focus:</strong>
+"Investigate how organizations structure governance to make consistent, business-aligned decisions about data access, quality, and usage"</p>
+<p><strong>Team Formation:</strong>
+- <strong>Pairs or small groups</strong> (depending on class size)
+- <strong>Each group</strong> investigates a different governance approach</p>
+<h4 id="governance-approaches-to-research">Governance Approaches to Research:<a class="headerlink" href="#governance-approaches-to-research" title="Permanent link">&para;</a></h4>
+<p><strong>Group 1: Data Mesh Governance</strong>
+- <strong>Concept:</strong> Decentralized governance with domain ownership
+- <strong>Research focus:</strong> How do domain teams balance autonomy with consistency?
+- <strong>Key question:</strong> What governance decisions stay centralized vs. distributed?</p>
+<p><strong>Group 2: Centralized Data Governance</strong>
+- <strong>Concept:</strong> Enterprise-wide standards and controls
+- <strong>Research focus:</strong> How do central teams ensure compliance while enabling innovation?
+- <strong>Key question:</strong> What are the benefits and challenges of centralized control?</p>
+<p><strong>Group 3: Federated Data Governance</strong>
+- <strong>Concept:</strong> Shared governance across business units
+- <strong>Research focus:</strong> How do organizations coordinate governance across multiple stakeholders?
+- <strong>Key question:</strong> How do you resolve conflicts between different business needs?</p>
+<p><strong>Group 4: Agile Data Governance</strong>
+- <strong>Concept:</strong> Iterative, flexible governance that evolves with business needs
+- <strong>Research focus:</strong> How do you maintain control while adapting quickly?
+- <strong>Key question:</strong> What governance elements can be lightweight vs. must be rigorous?</p>
+<h4 id="research-questions-8-minutes">Research Questions (8 minutes):<a class="headerlink" href="#research-questions-8-minutes" title="Permanent link">&para;</a></h4>
+<p>For each governance approach, investigate:</p>
+<p><strong>Decision-Making Structure:</strong>
+- Who makes governance decisions (access, quality standards, retention)?
+- How are business priorities balanced with technical constraints?
+- What escalation paths exist for governance conflicts?</p>
+<p><strong>Implementation Practical:</strong>
+- How would this approach handle the security scenarios from Lab 19?
+- What tools and processes support this governance model?
+- How does this approach scale with organizational growth?</p>
+<p><strong>Business Alignment:</strong>
+- How does this governance approach enable vs. restrict business value?
+- What cultural changes are required for successful implementation?
+- How do you measure governance effectiveness?</p>
+<h4 id="quick-sharing-1-minute">Quick Sharing (1 minute):<a class="headerlink" href="#quick-sharing-1-minute" title="Permanent link">&para;</a></h4>
+<p><strong>Rapid insights:</strong> Each group shares one key finding (15 seconds each):
+- "This governance approach works best when..."
+- "The biggest challenge with this model is..."
+- "This would solve the problem of..."</p>
+<hr />
+<h2 id="transition-to-session-4">Transition to Session 4<a class="headerlink" href="#transition-to-session-4" title="Permanent link">&para;</a></h2>
+<h3 id="bridge-to-governance-framework-design-1-minute">Bridge to Governance Framework Design (1 minute):<a class="headerlink" href="#bridge-to-governance-framework-design-1-minute" title="Permanent link">&para;</a></h3>
+<p><strong>Facilitator:</strong>
+- "You've seen different governance philosophies and experienced security trade-offs hands-on"
+- "After the break, we'll design a practical governance framework"
+- "We'll focus on creating decision-making processes that balance competing priorities"</p>
+<hr />
+<h2 id="resources-for-trainers">Resources for Trainers<a class="headerlink" href="#resources-for-trainers" title="Permanent link">&para;</a></h2>
+<h3 id="pre-session-preparation">Pre-Session Preparation:<a class="headerlink" href="#pre-session-preparation" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Complete Lab 19 yourself</strong> to understand security configuration options</li>
+<li><strong>Research governance models</strong> briefly to guide groups if needed</li>
+<li><strong>Prepare real-world examples</strong> of governance trade-offs to reference</li>
+</ul>
+<h3 id="managing-the-lab-phase">Managing the Lab Phase:<a class="headerlink" href="#managing-the-lab-phase" title="Permanent link">&para;</a></h3>
+<p><strong>Emphasize Business Context:</strong>
+- <strong>Connect security to scenarios:</strong> "When would a sales team need row-level security?"
+- <strong>Highlight user impact:</strong> "How would these restrictions affect a data analyst's daily work?"
+- <strong>Discuss implementation costs:</strong> "What's the operational overhead of maintaining these permissions?"</p>
+<p><strong>Common Lab Challenges:</strong>
+- <strong>Technical complexity:</strong> Focus on understanding concepts over perfect configuration
+- <strong>Permission errors:</strong> Use as learning opportunities about governance hierarchy
+- <strong>Time management:</strong> Ensure core security concepts are understood, skip advanced features if needed</p>
+<h3 id="facilitating-trade-offs-discussion">Facilitating Trade-offs Discussion:<a class="headerlink" href="#facilitating-trade-offs-discussion" title="Permanent link">&para;</a></h3>
+<p><strong>Drawing Out Business Thinking:</strong>
+- <strong>Use specific examples:</strong> "In the row-level security setup, what business rule determined the filtering?"
+- <strong>Challenge assumptions:</strong> "Is restricting access always the answer to data security?"
+- <strong>Connect to workplace:</strong> "How do these decisions get made in your organization?"</p>
+<p><strong>Managing Governance Research:</strong>
+- <strong>Keep research practical:</strong> Focus on decision-making processes, not theoretical frameworks
+- <strong>Guide struggling groups:</strong> Suggest looking for case studies or implementation examples
+- <strong>Time box tightly:</strong> 8 minutes is quick research - aim for key insights, not comprehensive analysis</p>
+<h3 id="expected-learning-outcomes">Expected Learning Outcomes:<a class="headerlink" href="#expected-learning-outcomes" title="Permanent link">&para;</a></h3>
+<p><strong>Governance Mindset:</strong>
+- <strong>Security as business enabler</strong> - not just risk prevention
+- <strong>Trade-off thinking</strong> - balancing competing priorities systematically
+- <strong>Stakeholder coordination</strong> - governance involves business and technical perspectives</p>
+<p><strong>Practical Skills:</strong>
+- <strong>Security implementation</strong> - hands-on experience with access controls
+- <strong>Decision frameworks</strong> - understanding different approaches to governance choices
+- <strong>Business communication</strong> - translating technical security to business impact</p>
+<h3 id="common-discussion-themes">Common Discussion Themes:<a class="headerlink" href="#common-discussion-themes" title="Permanent link">&para;</a></h3>
+<p><strong>Security Complexity:</strong>
+- Difficulty determining appropriate security levels
+- User experience degradation with complex permissions
+- Operational overhead of maintaining granular controls</p>
+<p><strong>Governance Challenges:</strong>
+- Balancing centralized control with business agility
+- Coordinating decisions across multiple stakeholders
+- Measuring effectiveness of governance processes</p>
+<p><strong>Business Alignment:</strong>
+- Ensuring governance supports rather than hinders business goals
+- Managing conflicts between security and accessibility
+- Evolving governance as business needs change</p>
+<h3 id="connection-to-ksbs">Connection to KSBs:<a class="headerlink" href="#connection-to-ksbs" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>S13:</strong> Use data systems securely to meet requirements and in line with organizational procedures</li>
+<li><strong>K10:</strong> Concepts of data governance, including regulatory requirements, data privacy, security</li>
+<li><strong>S22:</strong> Develop collaborative relationships with stakeholders (business vs. technical needs)</li>
+<li><strong>K13:</strong> Implications of security, scalability, compliance regarding local, remote or distributed solutions</li>
+<li><strong>B2:</strong> Works collaboratively with stakeholders to achieve common goals</li>
+</ul>
+<h3 id="time-management-tips">Time Management Tips:<a class="headerlink" href="#time-management-tips" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Lab phase:</strong> Monitor progress, assist with conceptual understanding over technical details</li>
+<li><strong>Discussion phase:</strong> Use structured reflection to maximize learning from lab experience</li>
+<li><strong>Research phase:</strong> Encourage rapid insight gathering over comprehensive research</li>
+<li><strong>Keep transitions crisp:</strong> Each phase builds toward practical governance framework design</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["toc.integrate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>
