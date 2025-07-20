@@ -1,14 +1,13 @@
-# Day 4: Improvement & Value
+# Day 4: Day 4 - Improvement & Value
 
 ## Session 1
-- `09:30` Welcome (10 mins)
 
 ## ☕ Morning Break
 
 ## Session 2
 
 
-## 🥪🥤 Lunch break
+## 🥪🥤 Lunch Break
 
 ## Session 3
 
@@ -17,5 +16,7 @@
 
 ## Session 4
 
-- `15:50` Wrap up (10 mins)
+
+## Wrap up
+
 

@@ -1,10 +1,10 @@
-# Day 3: Quality & Governance
+# Day 3: Day 3 - Quality & Governance
 
 ## Session 1
-- `09:30` **Discussion**: What does 'good data' mean to you? (10 mins)
+- `09:30` **Discussion**: What does good data mean to you? (10 mins)
 - `09:40` Data Quality - why it matters operationally (10 mins)
-- `09:50` **Investigation**: DMBOK's 6 data quality dimensions (40 mins)
-- `10:30` DMBOK report back (10 mins)
+- `09:50` **Investigation**: DMBOKs 6 data quality dimensions (40 mins)
+- `10:30` **Report-Back**: DMBOK report back (10 mins)
 
 ## ☕ Morning Break
 
@@ -14,7 +14,7 @@
 - `11:40` **Discussion**: Quality patterns analysis (20 mins)
 - `12:00` **Investigation**: Quality tools (20 mins)
 
-## 🥪🥤 Lunch break
+## 🥪🥤 Lunch Break
 
 ## Session 3
 
@@ -29,5 +29,7 @@
 - `14:50` **Practice**: [Lab 3.3 ~ 21 Deployment Pipelines](../labs/21-deployment-pipelines.md) (20 mins)
 - `15:10` **Discussion**: Deployment governance (20 mins)
 - `15:30` **Workshop**: Governance integration (20 mins)
-- `15:50` Wrap up (10 mins)
+
+## Wrap up
+
 
