@@ -72,11 +72,11 @@ Fabric provides multiple ways to load data into the lakehouse, including built-i
 
 2. Return to the web browser tab containing your lakehouse
 
-    - Click the `...` menu for the **Files** folder in the **Explorer pane** select **New subfolder**
+    - Click the **...** menu for the **Files** folder in the **Explorer pane** select **New subfolder**
     - Name the new subfolder: `data`
     - Click **Create**
 
-3. In the `...` menu for the new **data** folder, select **Upload** and **Upload files**.
+3. In the **...** menu for the new **data** folder, select **Upload** and **Upload files**.
 
     - Then upload the **sales.csv** file from your local computer (or lab VM if applicable).
 
@@ -86,12 +86,12 @@ Fabric provides multiple ways to load data into the lakehouse, including built-i
 
 5. Select the **sales.csv** file to see a preview of its contents.
 
-    !!! tip "If the **sales.csv** file does not automatically appear, in the `...` menu for the **data** folder, select **Refresh**."
+    !!! tip "If the **sales.csv** file does not automatically appear, in the **...** menu for the **data** folder, select **Refresh**."
 
 ## Explore shortcuts
 In many scenarios, the data you need to work with in your lakehouse may be stored in some other location. While there are many ways to ingest data into the OneLake storage for your lakehouse, another option is to instead create a shortcut. Shortcuts enable you to include externally sourced data in your analytics solution without the overhead and risk of data inconsistency associated with copying it.
 
-1. In the `...` menu for the **Files** folder, select **New shortcut**.
+1. In the **...** menu for the **Files** folder, select **New shortcut**.
 
 2. View the available data source types for shortcuts.
 
@@ -102,7 +102,7 @@ The sales data you uploaded is in a file, which you can work with directly by us
 
 1. In the **Explorer** pane, select the **Files/data** folder so you can see the **sales.csv** file it contains.
 
-2. In the `...` menu for the **sales.csv** file, select **Load to Tables > New table**.
+2. In the **...** menu for the **sales.csv** file, select **Load to Tables > New table**.
 
     ![Load to tables - New table.](../img/qa-01-load-to-tables.png)
 
@@ -110,13 +110,13 @@ The sales data you uploaded is in a file, which you can work with directly by us
 
     - Then wait for the table to be created and loaded.
 
-    !!! tip "If the **sales** table does not automatically appear, in the `...` menu for the **Tables** folder, select **Refresh**."
+    !!! tip "If the **sales** table does not automatically appear, in the **...** menu for the **Tables** folder, select **Refresh**."
 
 4. In the **Explorer** pane, select the **sales** table that has been created to view the data:
 
     ![Screenshot of a table preview.](../img/qa-01-table-preview.png)
 
-5. In the `...` menu for the **sales** table, select **View files** to see the underlying files for this table:
+5. In the **...** menu for the **sales** table, select **View files** to see the underlying files for this table:
 
     ![Screenshot of a table preview.](../img/qa-01-delta-table-files.png)
 

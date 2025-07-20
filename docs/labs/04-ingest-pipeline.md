@@ -29,7 +29,7 @@ Now that you have a workspace, it’s time to create a data lakehouse into which
 
 After a minute or so, a new lakehouse with no **Tables** or **Files** will be created.
 
-2. On the **Explorer** pane on the left, in the `...` menu for the **Files** node, select **New subfolder** and create a subfolder named `new_data`
+2. On the **Explorer** pane on the left, in the **...** menu for the **Files** node, select **New subfolder** and create a subfolder named `new_data`
 
 ## Create a pipeline
 A simple way to ingest data is to use a **Copy Data** activity in a pipeline to extract the data from a source and copy it to a file in the lakehouse.
@@ -108,7 +108,7 @@ After a few seconds, a new notebook containing a single cell will open. Notebook
 table_name = "sales"
 ```
 
-3. In the `...` menu for the cell (at its top-right) select **Toggle parameter cell**. This configures the cell so that the variables declared in it are treated as parameters when running the notebook from a pipeline.
+3. In the **...** menu for the cell (at its top-right) select **Toggle parameter cell**. This configures the cell so that the variables declared in it are treated as parameters when running the notebook from a pipeline.
 
 4. Under the parameters cell, use the + Code button to add a new code cell. Then add the following code to it:
 
@@ -141,7 +141,7 @@ This code loads the data from the sales.csv file that was ingested by the **Copy
     - Since this is the first time you’ve run any Spark code in this session, the Spark pool must be started.
     - This means that the first cell can take a minute or so to complete.
 
-6. When the notebook run has completed, in the **Explorer** pane on the left, in the `...` menu for **Tables** select **Refresh** and verify that a **sales** table has been created.
+6. When the notebook run has completed, in the **Explorer** pane on the left, in the **...** menu for **Tables** select **Refresh** and verify that a **sales** table has been created.
 
 7. In the notebook menu bar, use the ⚙️ **Settings** icon to view the notebook settings. Then set the **Name** of the notebook to `Load Sales` and close the settings pane.
 

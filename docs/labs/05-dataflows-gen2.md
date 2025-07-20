@@ -160,7 +160,7 @@ You can include a dataflow as an activity in a pipeline. Pipelines are used to o
 
 6. In the menu bar on the left edge, select your lakehouse.
 
-7. In the `...` menu for **Tables**, select **refresh**. 
+7. In the **...** menu for **Tables**, select **refresh**. 
 
     Then expand **Tables** and select the **orders** table, which has been created by your dataflow.
 

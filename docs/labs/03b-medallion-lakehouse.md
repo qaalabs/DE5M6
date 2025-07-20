@@ -32,9 +32,9 @@ After a minute or so, a new empty lakehouse will be created. Next, you’ll inge
 
 2. Download the data file for this exercise from `https://github.com/MicrosoftLearning/dp-data/blob/main/orders.zip` Extract the files and save them with their original names on your local computer (or lab VM if applicable). There should be 3 files containing sales data for 3 years: 2019.csv, 2020.csv, and 2021.csv
 
-3. Return to the web browser tab containing your lakehouse, and in the `...` menu for the **Files** folder in the **Explorer** pane, select **New subfolder** and create a folder named **bronze**.
+3. Return to the web browser tab containing your lakehouse, and in the **...** menu for the **Files** folder in the **Explorer** pane, select **New subfolder** and create a folder named **bronze**.
 
-4. In the `...` menu for the **bronze** folder, select **Upload** and **Upload files**, and then upload the 3 files (2019.csv, 2020.csv, and 2021.csv) from your local computer (or lab VM if applicable) to the lakehouse. Use the shift key to upload all 3 files at once.
+4. In the **...** menu for the **bronze** folder, select **Upload** and **Upload files**, and then upload the 3 files (2019.csv, 2020.csv, and 2021.csv) from your local computer (or lab VM if applicable) to the lakehouse. Use the shift key to upload all 3 files at once.
 
 5. After the files have been uploaded, select the **bronze** folder; and verify that the files have been uploaded, as shown here:
 
