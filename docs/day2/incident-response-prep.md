@@ -1,21 +1,23 @@
 # Day 2: Fire Drill Preparation
 
 ## What's Coming Next
-In **20 minutes**, you'll participate in **incident response fire drills** simulating real data platform failures. You'll work in teams to coordinate technical responses and stakeholder communication under time pressure.
+In **20 minutes** time, you'll participate in an **incident response "fire drill"** simulating a data platform failure. You'll work in teams to coordinate technical responses and stakeholder communication under time pressure.
 
-## Your Preparation Tasks
+### You will be allocated to a "Incident Response Team"
+**Team Size:** 3-4 people
 
-### 1. Form Your Incident Response Team
-**Team Size:** 3-4 people depending on class size
-
-**Assign Roles:**
+**Suggested Personas:**
 
 - **Incident Commander:** Coordinates overall response, makes key decisions
 - **Technical Lead:** Investigates root cause, determines fix options  
 - **Communications Lead:** Handles stakeholder updates and messaging
 - **Business Impact Analyst:** Assesses downstream effects *(if 4 people)*
 
-### 2. Real Incident Examples
+---
+
+## Your Preparation Task
+
+### Real Incident Examples
 Scan these major incidents to understand what works (and what doesn't) in incident response:
 
 **Cloudflare Global DNS Outage - June 21, 2022**
@@ -42,7 +44,8 @@ Scan these major incidents to understand what works (and what doesn't) in incide
 - **Search:** "Facebook outage October 2021 BGP routing"
 - **Key lesson:** When monitoring systems fail too
 
-### 3. Extract Key Principles
+### Extract Key Principles
+
 *Focus your research on these questions*
 
 **Detection & Assessment:**
@@ -70,8 +73,6 @@ Scan these major incidents to understand what works (and what doesn't) in incide
 - How did they balance speed vs. accuracy?
 - What escalation triggers did they use?
 
----
-
 ## Research Strategy Tips
 
 **Don't try to read everything!** Focus on:
@@ -88,10 +89,9 @@ Scan these major incidents to understand what works (and what doesn't) in incide
 - How do companies handle uncertainty in their communication?
 
 ### Team Coordination
+
 - **Share your findings** with your team members
 - **Agree on communication approach** - who will handle what during the drill
 - **Establish team coordination method** - how will you make quick decisions together?
 
 !!! note "The goal isn't deep expertise - it's rapid preparation for practical application!"
-
----
