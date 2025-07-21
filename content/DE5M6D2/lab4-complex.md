@@ -9,9 +9,3 @@
 1. Performance Issues
 2. Data Corruption Scenarios
 3. Resource Constraints & Timing Issues
-
-### Discussion
-
-- What did you observe?
-- What happened with each corruption type?
-- How does the system behave under load?

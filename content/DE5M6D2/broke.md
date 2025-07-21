@@ -1,3 +1,5 @@
+## Group discussion 
+
 ### Think of a workplace example
 
 - System failure, data pipeline break, application outage
@@ -16,4 +18,4 @@
 **Timing:**
 
 - Reflection ~ 2 mins
-- Sharing ~ 1min each
+- Sharing ~ 1 min each
