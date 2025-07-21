@@ -19,7 +19,7 @@
 
 ## Session 3
 
-- `13:10` **Investigation**: [Fire Drill preparation](../day2/fire-drill-prep.md) (20 mins)
+- `13:10` **Investigation**: [Fire Drill preparation](../day2/incident-response-prep.md) (20 mins)
 - `13:30` Scenario 1 briefing (10 mins)
 - `13:40` Fire Drill Round 1 (30 mins)
 - `14:10` **Discussion**: Fire drill debrief (20 mins)
