@@ -940,11 +940,16 @@
 <p><img alt="Power Quesry Add Column." src="../../img/power-query-add-column.png" /></p>
 </li>
 <li>
-<p>Set the <em>New column name</em> to <code>MonthNo</code>, set the <em>Data type</em> to <strong>Whole Number</strong> and then add the following formula: <code>Date.Month([OrderDate])</code> - as shown here:</p>
+<p>Do the following:</p>
+<ul>
+<li>Set the <em>New column name</em> to: <strong>MonthNo</strong></li>
+<li>Set the <em>Data type</em> to: <strong>Whole number</strong></li>
+<li>Add this <em>Custom column formula</em>: <code>Date.Month([OrderDate])</code></li>
+</ul>
 <p><img alt="Custom column in Power Query editor." src="../../img/05-05-custom-column.png" /></p>
 </li>
 <li>
-<p>Select <strong>OK</strong> to create the column. Notice how the step to add the custom column is added to the query.</p>
+<p>Click <strong>OK</strong> to create the column. Notice how the step to add the custom column is added to the query.</p>
 <p>The resulting column is displayed in the data pane:</p>
 <p><img alt="Query with a custom column step." src="../../img/05-06-custom-column-added.png" /></p>
 <div class="admonition info">
@@ -1032,7 +1037,7 @@
 <p>In the menu bar on the left edge, select your lakehouse.</p>
 </li>
 <li>
-<p>In the <code>...</code> menu for <strong>Tables</strong>, select <strong>refresh</strong>. </p>
+<p>In the <strong>...</strong> menu for <strong>Tables</strong>, select <strong>refresh</strong>. </p>
 <p>Then expand <strong>Tables</strong> and select the <strong>orders</strong> table, which has been created by your dataflow.</p>
 <p><img alt="Table loaded by a dataflow." src="../../img/qa-05-14-loaded-table.png" /></p>
 </li>
