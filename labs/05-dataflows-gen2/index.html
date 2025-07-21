@@ -713,6 +713,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../day2/incident-response-prep/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fire Drill preparation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -850,7 +873,7 @@
 
 
 
-<h1 id="lab-create-and-use-dataflows-gen2-in-microsoft-fabric">Lab: Create and use Dataflows (Gen2) in Microsoft Fabric<a class="headerlink" href="#lab-create-and-use-dataflows-gen2-in-microsoft-fabric" title="Permanent link">&para;</a></h1>
+<h1 id="lab-create-and-use-dataflows-gen2-in-microsoft-fabric">Lab: Create and use Dataflows (Gen2) in Microsoft Fabric</h1>
 <p>In Microsoft Fabric, Dataflows (Gen2) connect to various data sources and perform transformations in Power Query Online. They can then be used in Data Pipelines to ingest data into a lakehouse or other analytical store, or to define a dataset for a Power BI report.</p>
 <p>This lab is designed to introduce the different elements of Dataflows (Gen2), and not create a complex solution that may exist in an enterprise. This lab takes <strong>approximately 30 minutes</strong> to complete.</p>
 <div class="admonition info">
@@ -874,7 +897,7 @@
 </ol>
 <p>After signing in, you will be redirected to the Fabric home page:</p>
 <p><img alt="Fabric home page" src="../../img/qa-fabric-home.png" /></p>
-<h2 id="create-a-workspace">Create a workspace<a class="headerlink" href="#create-a-workspace" title="Permanent link">&para;</a></h2>
+<h2 id="create-a-workspace">Create a workspace</h2>
 <p>Before working with data in Fabric, you need to create a workspace with the Fabric trial enabled.</p>
 <ol>
 <li>
@@ -894,7 +917,7 @@
 </ol>
 <p>When your new workspace opens, it should be empty.</p>
 <p><img alt="Screenshot of an empty workspace in Fabric." src="../../img/new-workspace.png" /></p>
-<h2 id="create-a-lakehouse">Create a lakehouse<a class="headerlink" href="#create-a-lakehouse" title="Permanent link">&para;</a></h2>
+<h2 id="create-a-lakehouse">Create a lakehouse</h2>
 <p>Now that you have a workspace, it's time to create a data lakehouse into which you'll ingest data.</p>
 <ol>
 <li>
@@ -909,14 +932,14 @@
 <p><img alt="New lakehouse." src="../../img/new-lakehouse.png" /></p>
 </li>
 </ol>
-<h2 id="create-a-dataflow-gen2-to-ingest-data">Create a Dataflow (Gen2) to ingest data<a class="headerlink" href="#create-a-dataflow-gen2-to-ingest-data" title="Permanent link">&para;</a></h2>
+<h2 id="create-a-dataflow-gen2-to-ingest-data">Create a Dataflow (Gen2) to ingest data</h2>
 <p>Now that you have a lakehouse, you need to ingest some data into it. One way to do this is to define a dataflow that encapsulates an <em>extract, transform, and load</em> (ETL) process.</p>
 <ol>
 <li>
 <p>In the home page for your lakehouse, select <strong>Get data &gt; New Dataflow Gen2</strong></p>
 <p><img alt="Lakehouse toolbar." src="../../img/lakehouse-toolbar.png" /></p>
 <p>Click <strong>Create</strong>, and after a few seconds, the Power Query editor for your new dataflow opens as shown here:</p>
-<p><img alt="New dataflow." src="../../img/05-03-new-dataflow.png" /></p>
+<p><img alt="New dataflow." src="../../img/05-new-dataflow.png" /></p>
 </li>
 <li>
 <p>Select <strong>Import from a Text/CSV file</strong>, and create a new data source with the following settings:</p>
@@ -933,11 +956,11 @@
 <li>
 <p>Select <strong>Next</strong> to preview the file data, and then <strong>Create</strong> the data source.</p>
 <p>The Power Query editor shows the data source and an initial set of query steps to format the data, as shown here:</p>
-<p><img alt="Query in the Power Query editor." src="../../img/05-04-power-query.png" /></p>
+<p><img alt="Query in the Power Query editor." src="../../img/05-power-query.png" /></p>
 </li>
 <li>
 <p>On the toolbar ribbon, select the <strong>Add column</strong> tab. Then select <strong>Custom column</strong> and create a new column.</p>
-<p><img alt="Power Quesry Add Column." src="../../img/power-query-add-column.png" /></p>
+<p><img alt="Power Quesry Add Column." src="../../img/05-power-query-add-column.png" /></p>
 </li>
 <li>
 <p>Do the following:</p>
@@ -946,12 +969,12 @@
 <li>Set the <em>Data type</em> to: <strong>Whole number</strong></li>
 <li>Add this <em>Custom column formula</em>: <code>Date.Month([OrderDate])</code></li>
 </ul>
-<p><img alt="Custom column in Power Query editor." src="../../img/05-05-custom-column.png" /></p>
+<p><img alt="Custom column in Power Query editor." src="../../img/05-custom-column.png" /></p>
 </li>
 <li>
 <p>Click <strong>OK</strong> to create the column. Notice how the step to add the custom column is added to the query.</p>
 <p>The resulting column is displayed in the data pane:</p>
-<p><img alt="Query with a custom column step." src="../../img/05-06-custom-column-added.png" /></p>
+<p><img alt="Query with a custom column step." src="../../img/05-custom-column-added.png" /></p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <ul>
@@ -969,7 +992,7 @@
 <p><img alt="OrderData column type." src="../../img/05-order-date-column.png" /></p>
 </li>
 </ol>
-<h2 id="add-data-destination-for-dataflow">Add data destination for Dataflow<a class="headerlink" href="#add-data-destination-for-dataflow" title="Permanent link">&para;</a></h2>
+<h2 id="add-data-destination-for-dataflow">Add data destination for Dataflow</h2>
 <ol>
 <li>
 <p>On the toolbar ribbon, select the <strong>Home</strong> tab. Then in the <strong>Add data destination</strong> drop-down menu, select <strong>Lakehouse</strong>.</p>
@@ -984,28 +1007,28 @@
 </li>
 <li>
 <p>In the <strong>Connect to data destination</strong> dialog box, use the existing connection credentials:</p>
-<p><img alt="Data destination configuration page." src="../../img/qa-05-07-dataflow-connection.png" width="700" /></p>
+<p><img alt="Data destination configuration page." src="../../img/qa-05-dataflow-connection.png" width="700" /></p>
 </li>
 <li>
 <p>Select <strong>Next</strong> and in the list of available workspaces, find your workspace and select the lakehouse you created in it at the start of this exercise. Then specify a new table named <strong>orders</strong>:</p>
-<p><img alt="Data destination configuration page." src="../../img/05-08-data-destination-target.png" /></p>
+<p><img alt="Data destination configuration page." src="../../img/05-data-destination-target.png" /></p>
 </li>
 <li>
 <p>Select <strong>Next</strong> and on the <strong>Choose destination settings</strong> page:</p>
 <ul>
 <li>Disable the <strong>Use automatic settings</strong> option, select <strong>Append</strong>, and then <strong>Save settings</strong>.</li>
 </ul>
-<p><img alt="Data destination settings page." src="../../img/qa-05-09-destination-settings.png" /></p>
+<p><img alt="Data destination settings page." src="../../img/qa-05-destination-settings.png" /></p>
 </li>
 <li>
 <p>On the Menu bar, open <strong>View</strong> and select <strong>Diagram view</strong>. Notice the <strong>Lakehouse</strong> destination is indicated as an icon in the query in the Power Query editor.</p>
-<p><img alt="Query with a lakehouse destination." src="../../img/05-10-lakehouse-destination.png" /></p>
+<p><img alt="Query with a lakehouse destination." src="../../img/05-lakehouse-destination.png" /></p>
 </li>
 <li>
 <p>On the toolbar ribbon, select the <strong>Home</strong> tab. Then select <strong>Save &amp; run</strong> and wait for the <strong>Dataflow 1 dataflow</strong> to be created in your workspace.</p>
 </li>
 </ol>
-<h2 id="add-a-dataflow-to-a-pipeline">Add a dataflow to a pipeline<a class="headerlink" href="#add-a-dataflow-to-a-pipeline" title="Permanent link">&para;</a></h2>
+<h2 id="add-a-dataflow-to-a-pipeline">Add a dataflow to a pipeline</h2>
 <p>You can include a dataflow as an activity in a pipeline. Pipelines are used to orchestrate data ingestion and processing activities, enabling you to combine dataflows with other kinds of operation in a single, scheduled process. Pipelines can be created in a few different experiences, including Data Factory experience.</p>
 <ol>
 <li>
@@ -1014,7 +1037,7 @@
 <li>When prompted, create a new pipeline named: <strong>Load data</strong></li>
 </ul>
 <p>Click <strong>Create</strong>, and the pipeline editor will open:</p>
-<p><img alt="Empty data pipeline." src="../../img/05-11-new-pipeline.png" /></p>
+<p><img alt="Empty data pipeline." src="../../img/05-new-pipeline.png" /></p>
 <div class="admonition tip">
 <p class="admonition-title">If the Copy Data wizard opens automatically, you can just close it.</p>
 </div>
@@ -1024,14 +1047,14 @@
 </li>
 <li>
 <p>With the new <strong>Dataflow1</strong> activity selected, on the <strong>Settings</strong> tab, in the <strong>Dataflow</strong> drop-down list, select <strong>Dataflow 1</strong> (the data flow you created previously)</p>
-<p><img alt="Pipeline with a dataflow activity." src="../../img/qa-05-12-dataflow-activity.png" /></p>
+<p><img alt="Pipeline with a dataflow activity." src="../../img/qa-05-dataflow-activity.png" /></p>
 </li>
 <li>
 <p>On the <strong>Home</strong> tab, save the pipeline using the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 9H5V5h10m-3 14a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3m5-16H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7z"/></svg></span> (Save) icon.</p>
 </li>
 <li>
 <p>Use the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7z"/></svg></span> <strong>Run</strong> button to run the pipeline, and wait for it to complete. It may take a few minutes.</p>
-<p><img alt="Pipeline with a dataflow that has completed successfully." src="../../img/qa-05-13-dataflow-pipeline-succeeded.png" /></p>
+<p><img alt="Pipeline with a dataflow that has completed successfully." src="../../img/qa-05-dataflow-pipeline-succeeded.png" /></p>
 </li>
 <li>
 <p>In the menu bar on the left edge, select your lakehouse.</p>
@@ -1039,7 +1062,7 @@
 <li>
 <p>In the <strong>...</strong> menu for <strong>Tables</strong>, select <strong>refresh</strong>. </p>
 <p>Then expand <strong>Tables</strong> and select the <strong>orders</strong> table, which has been created by your dataflow.</p>
-<p><img alt="Table loaded by a dataflow." src="../../img/qa-05-14-loaded-table.png" /></p>
+<p><img alt="Table loaded by a dataflow." src="../../img/qa-05-loaded-table.png" /></p>
 </li>
 </ol>
 <details class="tip">
@@ -1048,10 +1071,10 @@
 <li>In Power BI Desktop, you can connect directly to the data transformations done with your dataflow by using the Power BI dataflows (Legacy) connector.</li>
 <li>You can also make additional transformations, publish as a new dataset, and distribute with intended audience for specialized datasets.</li>
 </ul>
-<p><img alt="Power BI data source connectors" src="../../img/05-15-pbid-dataflow-connectors.png" width="350" /></p>
+<p><img alt="Power BI data source connectors" src="../../img/05-pbid-dataflow-connectors.png" width="350" /></p>
 </details>
 <hr />
-<h2 id="clean-up-resources">Clean up resources<a class="headerlink" href="#clean-up-resources" title="Permanent link">&para;</a></h2>
+<h2 id="clean-up-resources">Clean up resources</h2>
 <p>If you've finished exploring dataflows in Microsoft Fabric, you can delete the workspace you created for this exercise.</p>
 <ol>
 <li>
@@ -1069,7 +1092,7 @@
 </ol>
 <p>You can now close the incognito/private mode browser tab, and click <strong>Submit</strong> on the Microsoft Fabric Playground hands-on lab.</p>
 <hr />
-<h6 id="source-httpsmicrosoftlearninggithubiomslearn-fabricinstructionslabs05-dataflows-gen2html">Source: <a href="https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/05-dataflows-gen2.html">https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/05-dataflows-gen2.html</a><a class="headerlink" href="#source-httpsmicrosoftlearninggithubiomslearn-fabricinstructionslabs05-dataflows-gen2html" title="Permanent link">&para;</a></h6>
+<h6 id="source-httpsmicrosoftlearninggithubiomslearn-fabricinstructionslabs05-dataflows-gen2html">Source: <a href="https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/05-dataflows-gen2.html">https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/05-dataflows-gen2.html</a></h6>
 
 
 

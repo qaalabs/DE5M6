@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../11-data-activator/">
+        <link rel="prev" href="../../day2/incident-response-prep/">
       
       
         <link rel="next" href="../19-secure-data-access/">
@@ -615,6 +615,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../day2/incident-response-prep/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fire Drill preparation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -823,13 +846,13 @@
 
 
 
-<h1 id="lab-create-medallion-architecture-in-a-fabric-lakehouse">Lab: Create Medallion Architecture in a Fabric Lakehouse<a class="headerlink" href="#lab-create-medallion-architecture-in-a-fabric-lakehouse" title="Permanent link">&para;</a></h1>
+<h1 id="lab-create-medallion-architecture-in-a-fabric-lakehouse">Lab: Create Medallion Architecture in a Fabric Lakehouse</h1>
 <p>In this exercise you will build out a medallion architecture in a Fabric lakehouse using notebooks. You will create a workspace, create a lakehouse, upload data to the bronze layer, transform the data and load it to the silver Delta table, transform the data further and load it to the gold Delta tables, and then explore the semantic model and create relationships.</p>
 <p>This exercise should take approximately <strong>45</strong> minutes to complete</p>
 <div class="admonition note">
 <p class="admonition-title">You need access to a Microsoft Fabric tenant to complete this exercise.</p>
 </div>
-<h2 id="create-a-workspace">Create a workspace<a class="headerlink" href="#create-a-workspace" title="Permanent link">&para;</a></h2>
+<h2 id="create-a-workspace">Create a workspace</h2>
 <p>Before working with data in Fabric, create a workspace with the Fabric trial enabled.</p>
 <ol>
 <li>
@@ -841,15 +864,15 @@ Create a new workspace with a name of your choice, selecting a licensing mode in
 </li>
 <li>When your new workspace opens, it should be empty.</li>
 </ol>
-<p><img alt="Screenshot of an empty workspace in Fabric." src="../../img/03b-01-new-workspace.png" /></p>
+<p><img alt="Screenshot of an empty workspace in Fabric." src="../../img/new-workspace.png" /></p>
 <ol>
 <li>Navigate to the workspace settings and verify that the <strong>Data model settings</strong> preview feature is enabled. This will enable you to create relationships between tables in your lakehouse using a Power BI semantic model.</li>
 </ol>
-<p><img alt="Screenshot of the workspace settings page in Fabric." src="../../img/03b-02-workspace-settings.png" /></p>
+<p><img alt="Screenshot of the workspace settings page in Fabric." src="../../img/03b-workspace-settings.png" /></p>
 <div class="admonition note">
 <p class="admonition-title">You may need to refresh the browser tab after enabling the preview feature.</p>
 </div>
-<h2 id="create-a-lakehouse-and-upload-data-to-bronze-layer">Create a lakehouse and upload data to bronze layer<a class="headerlink" href="#create-a-lakehouse-and-upload-data-to-bronze-layer" title="Permanent link">&para;</a></h2>
+<h2 id="create-a-lakehouse-and-upload-data-to-bronze-layer">Create a lakehouse and upload data to bronze layer</h2>
 <p>Now that you have a workspace, it’s time to create a data lakehouse for the data you’re going to analyze.</p>
 <ol>
 <li>In the workspace you just created, create a new <strong>Lakehouse</strong> named <strong>Sales</strong> by selecting the <strong>+ New item</strong> button.</li>
@@ -869,8 +892,8 @@ Create a new workspace with a name of your choice, selecting a licensing mode in
 <p>After the files have been uploaded, select the <strong>bronze</strong> folder; and verify that the files have been uploaded, as shown here:</p>
 </li>
 </ol>
-<p><a href="../../img/03b-03-bronze-files.png">Screenshot of uploaded products.csv file in a lakehouse.</a></p>
-<h2 id="transform-data-and-load-to-silver-delta-table">Transform data and load to silver Delta table<a class="headerlink" href="#transform-data-and-load-to-silver-delta-table" title="Permanent link">&para;</a></h2>
+<p><a href="../../img/03b-bronze-files.png">Screenshot of uploaded products.csv file in a lakehouse.</a></p>
+<h2 id="transform-data-and-load-to-silver-delta-table">Transform data and load to silver Delta table</h2>
 <p>Now that you have some data in the bronze layer of your lakehouse, you can use a notebook to transform the data and load it to a delta table in the silver layer.</p>
 <p>On the Home page while viewing the contents of the bronze folder in your data lake, in the Open notebook menu, select New notebook.</p>
 <p>After a few seconds, a new notebook containing a single cell will open. Notebooks are made up of one or more cells that can contain code or markdown (formatted text).</p>
@@ -881,7 +904,7 @@ Create a new workspace with a name of your choice, selecting a licensing mode in
 <p>Paste the following code into the cell:</p>
 <p>code
 from pyspark.sql.types import *</p>
-<h1 id="create-the-schema-for-the-table">Create the schema for the table<a class="headerlink" href="#create-the-schema-for-the-table" title="Permanent link">&para;</a></h1>
+<h1 id="create-the-schema-for-the-table">Create the schema for the table</h1>
 <p>orderSchema = StructType([
     StructField("SalesOrderNumber", StringType()),
     StructField("SalesOrderLineNumber", IntegerType()),
@@ -893,9 +916,9 @@ from pyspark.sql.types import *</p>
     StructField("UnitPrice", FloatType()),
     StructField("Tax", FloatType())
     ])</p>
-<h1 id="import-all-files-from-bronze-folder-of-lakehouse">Import all files from bronze folder of lakehouse<a class="headerlink" href="#import-all-files-from-bronze-folder-of-lakehouse" title="Permanent link">&para;</a></h1>
+<h1 id="import-all-files-from-bronze-folder-of-lakehouse">Import all files from bronze folder of lakehouse</h1>
 <p>df = spark.read.format("csv").option("header", "true").schema(orderSchema).load("Files/bronze/*.csv")</p>
-<h1 id="display-the-first-10-rows-of-the-dataframe-to-preview-your-data">Display the first 10 rows of the dataframe to preview your data<a class="headerlink" href="#display-the-first-10-rows-of-the-dataframe-to-preview-your-data" title="Permanent link">&para;</a></h1>
+<h1 id="display-the-first-10-rows-of-the-dataframe-to-preview-your-data">Display the first 10 rows of the dataframe to preview your data</h1>
 <p>display(df.head(10))
 Use the <strong>▷ (Run cell)</strong> button on the left of the cell to run the code.</p>
 <p>Note: Since this is the first time you’ve run any Spark code in this notebook, a Spark session must be started. This means that the first run can take a minute or so to complete. Subsequent runs will be quicker.</p>
@@ -909,18 +932,18 @@ The code you ran loaded the data from the CSV files in the bronze folder into a 
 <p>Now you’ll add columns for data validation and cleanup, using a PySpark dataframe to add columns and update the values of some of the existing columns. Use the + Code button to add a new code block and add the following code to the cell:</p>
 <p>code
 from pyspark.sql.functions import when, lit, col, current_timestamp, input_file_name</p>
-<h1 id="add-columns-isflagged-createdts-and-modifiedts">Add columns IsFlagged, CreatedTS and ModifiedTS<a class="headerlink" href="#add-columns-isflagged-createdts-and-modifiedts" title="Permanent link">&para;</a></h1>
+<h1 id="add-columns-isflagged-createdts-and-modifiedts">Add columns IsFlagged, CreatedTS and ModifiedTS</h1>
 <p>df = df.withColumn("FileName", input_file_name()) \
     .withColumn("IsFlagged", when(col("OrderDate") &lt; '2019-08-01',True).otherwise(False)) \
     .withColumn("CreatedTS", current_timestamp()).withColumn("ModifiedTS", current_timestamp())</p>
-<h1 id="update-customername-to-unknown-if-customername-null-or-empty">Update CustomerName to "Unknown" if CustomerName null or empty<a class="headerlink" href="#update-customername-to-unknown-if-customername-null-or-empty" title="Permanent link">&para;</a></h1>
+<h1 id="update-customername-to-unknown-if-customername-null-or-empty">Update CustomerName to "Unknown" if CustomerName null or empty</h1>
 <p>df = df.withColumn("CustomerName", when((col("CustomerName").isNull() | (col("CustomerName")=="")),lit("Unknown")).otherwise(col("CustomerName")))
 The first line of the code imports the necessary functions from PySpark. You’re then adding new columns to the dataframe so you can track the source file name, whether the order was flagged as being a before the fiscal year of interest, and when the row was created and modified.</p>
 <p>Finally, you’re updating the CustomerName column to “Unknown” if it’s null or empty.</p>
 <p>Run the cell to execute the code using the <strong>▷ (Run cell)</strong> button.</p>
 <p>Next, you’ll define the schema for the sales_silver table in the sales database using Delta Lake format. Create a new code block and add the following code to the cell:</p>
 <p>code</p>
-<h1 id="define-the-schema-for-the-sales_silver-table">Define the schema for the sales_silver table<a class="headerlink" href="#define-the-schema-for-the-sales_silver-table" title="Permanent link">&para;</a></h1>
+<h1 id="define-the-schema-for-the-sales_silver-table">Define the schema for the sales_silver table</h1>
 <p>from pyspark.sql.types import *
 from delta.tables import *</p>
 <p>DeltaTable.createIfNotExists(spark) \
@@ -944,7 +967,7 @@ Run the cell to execute the code using the <strong>▷ (Run cell)</strong> butto
 <p>Note: If you don’t see the new table, wait a few seconds and then select Refresh again, or refresh the entire browser tab.</p>
 <p>Now you’re going to perform an upsert operation on a Delta table, updating existing records based on specific conditions and inserting new records when no match is found. Add a new code block and paste the following code:</p>
 <p>code</p>
-<h1 id="update-existing-records-and-insert-new-ones-based-on-a-condition-defined-by-the-columns-salesordernumber-orderdate-customername-and-item">Update existing records and insert new ones based on a condition defined by the columns SalesOrderNumber, OrderDate, CustomerName, and Item.<a class="headerlink" href="#update-existing-records-and-insert-new-ones-based-on-a-condition-defined-by-the-columns-salesordernumber-orderdate-customername-and-item" title="Permanent link">&para;</a></h1>
+<h1 id="update-existing-records-and-insert-new-ones-based-on-a-condition-defined-by-the-columns-salesordernumber-orderdate-customername-and-item">Update existing records and insert new ones based on a condition defined by the columns SalesOrderNumber, OrderDate, CustomerName, and Item.</h1>
 <p>from delta.tables import *</p>
 <p>deltaTable = DeltaTable.forPath(spark, 'Tables/sales_silver')</p>
 <p>dfUpdates = df</p>
@@ -1010,13 +1033,13 @@ You have successfully taken data from your bronze layer, transformed it, and loa
 <p>In the Explorer pane, add your Sales lakehouse by selecting Add data items and then selecting the Sales lakehouse you created earlier. You should see the sales_silver table listed in the Tables section of the explorer pane.</p>
 <p>In the existing code block, remove the commented text and add the following code to load data to your dataframe and start building your star schema, then run it:</p>
 <p>code</p>
-<h1 id="load-data-to-the-dataframe-as-a-starting-point-to-create-the-gold-layer">Load data to the dataframe as a starting point to create the gold layer<a class="headerlink" href="#load-data-to-the-dataframe-as-a-starting-point-to-create-the-gold-layer" title="Permanent link">&para;</a></h1>
+<h1 id="load-data-to-the-dataframe-as-a-starting-point-to-create-the-gold-layer">Load data to the dataframe as a starting point to create the gold layer</h1>
 <p>df = spark.read.table("Sales.sales_silver")
 Add a new code block and paste the following code to create your date dimension table and run it:</p>
 <p>code
 from pyspark.sql.types import *
 from delta.tables import*</p>
-<h1 id="define-the-schema-for-the-dimdate_gold-table">Define the schema for the dimdate_gold table<a class="headerlink" href="#define-the-schema-for-the-dimdate_gold-table" title="Permanent link">&para;</a></h1>
+<h1 id="define-the-schema-for-the-dimdate_gold-table">Define the schema for the dimdate_gold table</h1>
 <p>DeltaTable.createIfNotExists(spark) \
     .tableName("sales.dimdate_gold") \
     .addColumn("OrderDate", DateType()) \
@@ -1030,7 +1053,7 @@ Note: You can run the display(df) command at any time to check the progress of y
 <p>In a new code block, add and run the following code to create a dataframe for your date dimension, dimdate_gold:</p>
 <p>code
 from pyspark.sql.functions import col, dayofmonth, month, year, date_format</p>
-<h1 id="create-dataframe-for-dimdate_gold">Create dataframe for dimDate_gold<a class="headerlink" href="#create-dataframe-for-dimdate_gold" title="Permanent link">&para;</a></h1>
+<h1 id="create-dataframe-for-dimdate_gold">Create dataframe for dimDate_gold</h1>
 <p>dfdimDate_gold = df.dropDuplicates(["OrderDate"]).select(col("OrderDate"), \
         dayofmonth("OrderDate").alias("Day"), \
         month("OrderDate").alias("Month"), \
@@ -1038,7 +1061,7 @@ from pyspark.sql.functions import col, dayofmonth, month, year, date_format</p>
         date_format(col("OrderDate"), "MMM-yyyy").alias("mmmyyyy"), \
         date_format(col("OrderDate"), "yyyyMM").alias("yyyymm"), \
     ).orderBy("OrderDate")</p>
-<h1 id="display-the-first-10-rows-of-the-dataframe-to-preview-your-data_1">Display the first 10 rows of the dataframe to preview your data<a class="headerlink" href="#display-the-first-10-rows-of-the-dataframe-to-preview-your-data_1" title="Permanent link">&para;</a></h1>
+<h1 id="display-the-first-10-rows-of-the-dataframe-to-preview-your-data_1">Display the first 10 rows of the dataframe to preview your data</h1>
 <p>display(dfdimDate_gold.head(10))
 You’re separating the code out into new code blocks so that you can understand and watch what’s happening in the notebook as you transform the data. In another new code block, add and run the following code to update the date dimension as new data comes in:</p>
 <p>code
@@ -1072,7 +1095,7 @@ The date dimension is now set up. Now you’ll create your customer dimension.</
 <p>code
 from pyspark.sql.types import *
 from delta.tables import *</p>
-<h1 id="create-customer_gold-dimension-delta-table">Create customer_gold dimension delta table<a class="headerlink" href="#create-customer_gold-dimension-delta-table" title="Permanent link">&para;</a></h1>
+<h1 id="create-customer_gold-dimension-delta-table">Create customer_gold dimension delta table</h1>
 <p>DeltaTable.createIfNotExists(spark) \
     .tableName("sales.dimcustomer_gold") \
     .addColumn("CustomerName", StringType()) \
@@ -1084,11 +1107,11 @@ from delta.tables import *</p>
 In a new code block, add and run the following code to drop duplicate customers, select specific columns, and split the “CustomerName” column to create “First” and “Last” name columns:</p>
 <p>code
 from pyspark.sql.functions import col, split</p>
-<h1 id="create-customer_silver-dataframe">Create customer_silver dataframe<a class="headerlink" href="#create-customer_silver-dataframe" title="Permanent link">&para;</a></h1>
+<h1 id="create-customer_silver-dataframe">Create customer_silver dataframe</h1>
 <p>dfdimCustomer_silver = df.dropDuplicates(["CustomerName","Email"]).select(col("CustomerName"),col("Email")) \
     .withColumn("First",split(col("CustomerName"), " ").getItem(0)) \
     .withColumn("Last",split(col("CustomerName"), " ").getItem(1)) </p>
-<h1 id="display-the-first-10-rows-of-the-dataframe-to-preview-your-data_2">Display the first 10 rows of the dataframe to preview your data<a class="headerlink" href="#display-the-first-10-rows-of-the-dataframe-to-preview-your-data_2" title="Permanent link">&para;</a></h1>
+<h1 id="display-the-first-10-rows-of-the-dataframe-to-preview-your-data_2">Display the first 10 rows of the dataframe to preview your data</h1>
 <p>display(dfdimCustomer_silver.head(10))
 Here you have created a new DataFrame dfdimCustomer_silver by performing various transformations such as dropping duplicates, selecting specific columns, and splitting the “CustomerName” column to create “First” and “Last” name columns. The result is a DataFrame with cleaned and structured customer data, including separate “First” and “Last” name columns extracted from the “CustomerName” column.</p>
 <p>Next we’ll create the ID column for our customers. In a new code block, paste and run the following:</p>
@@ -1098,7 +1121,7 @@ from pyspark.sql.functions import monotonically_increasing_id, col, when, coales
 <p>MAXCustomerID = dfdimCustomer_temp.select(coalesce(max(col("CustomerID")),lit(0)).alias("MAXCustomerID")).first()[0]</p>
 <p>dfdimCustomer_gold = dfdimCustomer_silver.join(dfdimCustomer_temp,(dfdimCustomer_silver.CustomerName == dfdimCustomer_temp.CustomerName) &amp; (dfdimCustomer_silver.Email == dfdimCustomer_temp.Email), "left_anti")</p>
 <p>dfdimCustomer_gold = dfdimCustomer_gold.withColumn("CustomerID",monotonically_increasing_id() + MAXCustomerID + 1)</p>
-<h1 id="display-the-first-10-rows-of-the-dataframe-to-preview-your-data_3">Display the first 10 rows of the dataframe to preview your data<a class="headerlink" href="#display-the-first-10-rows-of-the-dataframe-to-preview-your-data_3" title="Permanent link">&para;</a></h1>
+<h1 id="display-the-first-10-rows-of-the-dataframe-to-preview-your-data_3">Display the first 10 rows of the dataframe to preview your data</h1>
 <p>display(dfdimCustomer_gold.head(10))
 Here you’re cleaning and transforming customer data (dfdimCustomer_silver) by performing a left anti join to exclude duplicates that already exist in the dimCustomer_gold table, and then generating unique CustomerID values using the monotonically_increasing_id() function.</p>
 <p>Now you’ll ensure that your customer table remains up-to-date as new data comes in. In a new code block, paste and run the following:</p>
@@ -1140,21 +1163,21 @@ from delta.tables import *</p>
 Add another code block to create the product_silver dataframe.</p>
 <p>code
 from pyspark.sql.functions import col, split, lit, when</p>
-<h1 id="create-product_silver-dataframe">Create product_silver dataframe<a class="headerlink" href="#create-product_silver-dataframe" title="Permanent link">&para;</a></h1>
+<h1 id="create-product_silver-dataframe">Create product_silver dataframe</h1>
 <p>dfdimProduct_silver = df.dropDuplicates(["Item"]).select(col("Item")) \
     .withColumn("ItemName",split(col("Item"), ", ").getItem(0)) \
     .withColumn("ItemInfo",when((split(col("Item"), ", ").getItem(1).isNull() | (split(col("Item"), ", ").getItem(1)=="")),lit("")).otherwise(split(col("Item"), ", ").getItem(1))) </p>
-<h1 id="display-the-first-10-rows-of-the-dataframe-to-preview-your-data_4">Display the first 10 rows of the dataframe to preview your data<a class="headerlink" href="#display-the-first-10-rows-of-the-dataframe-to-preview-your-data_4" title="Permanent link">&para;</a></h1>
+<h1 id="display-the-first-10-rows-of-the-dataframe-to-preview-your-data_4">Display the first 10 rows of the dataframe to preview your data</h1>
 <p>display(dfdimProduct_silver.head(10))
 Now you’ll create IDs for your dimProduct_gold table. Add the following syntax to a new code block and run it:</p>
 <p>code
 from pyspark.sql.functions import monotonically_increasing_id, col, lit, max, coalesce</p>
-<h1 id="dfdimproduct_temp-dfdimproduct_silver">dfdimProduct_temp = dfdimProduct_silver<a class="headerlink" href="#dfdimproduct_temp-dfdimproduct_silver" title="Permanent link">&para;</a></h1>
+<h1 id="dfdimproduct_temp-dfdimproduct_silver">dfdimProduct_temp = dfdimProduct_silver</h1>
 <p>dfdimProduct_temp = spark.read.table("Sales.dimProduct_gold")</p>
 <p>MAXProductID = dfdimProduct_temp.select(coalesce(max(col("ItemID")),lit(0)).alias("MAXItemID")).first()[0]</p>
 <p>dfdimProduct_gold = dfdimProduct_silver.join(dfdimProduct_temp,(dfdimProduct_silver.ItemName == dfdimProduct_temp.ItemName) &amp; (dfdimProduct_silver.ItemInfo == dfdimProduct_temp.ItemInfo), "left_anti")</p>
 <p>dfdimProduct_gold = dfdimProduct_gold.withColumn("ItemID",monotonically_increasing_id() + MAXProductID + 1)</p>
-<h1 id="display-the-first-10-rows-of-the-dataframe-to-preview-your-data_5">Display the first 10 rows of the dataframe to preview your data<a class="headerlink" href="#display-the-first-10-rows-of-the-dataframe-to-preview-your-data_5" title="Permanent link">&para;</a></h1>
+<h1 id="display-the-first-10-rows-of-the-dataframe-to-preview-your-data_5">Display the first 10 rows of the dataframe to preview your data</h1>
 <p>display(dfdimProduct_gold.head(10))
 This calculates the next available product ID based on the current data in the table, assigns these new IDs to the products, and then displays the updated product information.</p>
 <p>Similar to what you’ve done with your other dimensions, you need to ensure that your product table remains up-to-date as new data comes in. In a new code block, paste and run the following:</p>
@@ -1202,7 +1225,7 @@ from pyspark.sql.functions import col</p>
 dfdimProduct_temp = spark.read.table("Sales.dimProduct_gold")</p>
 <p>df = df.withColumn("ItemName",split(col("Item"), ", ").getItem(0)) \
     .withColumn("ItemInfo",when((split(col("Item"), ", ").getItem(1).isNull() | (split(col("Item"), ", ").getItem(1)=="")),lit("")).otherwise(split(col("Item"), ", ").getItem(1))) \</p>
-<h1 id="create-sales_gold-dataframe">Create Sales_gold dataframe<a class="headerlink" href="#create-sales_gold-dataframe" title="Permanent link">&para;</a></h1>
+<h1 id="create-sales_gold-dataframe">Create Sales_gold dataframe</h1>
 <p>dffactSales_gold = df.alias("df1").join(dfdimCustomer_temp.alias("df2"),(df.CustomerName == dfdimCustomer_temp.CustomerName) &amp; (df.Email == dfdimCustomer_temp.Email), "left") \
         .join(dfdimProduct_temp.alias("df3"),(df.ItemName == dfdimProduct_temp.ItemName) &amp; (df.ItemInfo == dfdimProduct_temp.ItemInfo), "left") \
     .select(col("df2.CustomerID") \
@@ -1212,7 +1235,7 @@ dfdimProduct_temp = spark.read.table("Sales.dimProduct_gold")</p>
         , col("df1.UnitPrice") \
         , col("df1.Tax") \
     ).orderBy(col("df1.OrderDate"), col("df2.CustomerID"), col("df3.ItemID"))</p>
-<h1 id="display-the-first-10-rows-of-the-dataframe-to-preview-your-data_6">Display the first 10 rows of the dataframe to preview your data<a class="headerlink" href="#display-the-first-10-rows-of-the-dataframe-to-preview-your-data_6" title="Permanent link">&para;</a></h1>
+<h1 id="display-the-first-10-rows-of-the-dataframe-to-preview-your-data_6">Display the first 10 rows of the dataframe to preview your data</h1>
 <p>display(dffactSales_gold.head(10))
 Now you’ll ensure that sales data remains up-to-date by running the following code in a new code block:</p>
 <p>code
@@ -1264,8 +1287,8 @@ In this exercise, you’ve learned how to create a medallion architecture in a M
 In the … menu on the toolbar, select Workspace settings.
 In the General section, select Remove this workspace.</p>
 <hr />
-<h6 id="httpsdocsmicrosoftcomlearnmodulescreate-medallion-architecture-fabric-lakehouse"><a href="https://docs.microsoft.com/learn/modules/create-medallion-architecture-fabric-lakehouse/">https://docs.microsoft.com/learn/modules/create-medallion-architecture-fabric-lakehouse/</a><a class="headerlink" href="#httpsdocsmicrosoftcomlearnmodulescreate-medallion-architecture-fabric-lakehouse" title="Permanent link">&para;</a></h6>
-<h6 id="httpsmicrosoftlearninggithubiomslearn-fabricinstructionslabs03b-medallion-lakehousehtml"><a href="https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/03b-medallion-lakehouse.html">https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/03b-medallion-lakehouse.html</a><a class="headerlink" href="#httpsmicrosoftlearninggithubiomslearn-fabricinstructionslabs03b-medallion-lakehousehtml" title="Permanent link">&para;</a></h6>
+<h6 id="httpsdocsmicrosoftcomlearnmodulescreate-medallion-architecture-fabric-lakehouse"><a href="https://docs.microsoft.com/learn/modules/create-medallion-architecture-fabric-lakehouse/">https://docs.microsoft.com/learn/modules/create-medallion-architecture-fabric-lakehouse/</a></h6>
+<h6 id="httpsmicrosoftlearninggithubiomslearn-fabricinstructionslabs03b-medallion-lakehousehtml"><a href="https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/03b-medallion-lakehouse.html">https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/03b-medallion-lakehouse.html</a></h6>
 
 
 
