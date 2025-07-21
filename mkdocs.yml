@@ -23,6 +23,7 @@ nav:
     - "Lab 04 ~ Break it systematically": day2/breaking-things.md
     - "Lab 04 ~ More complex breaks": day2/complex-breaking.md
     - "Lab ~ 11 Data Activator": labs/11-data-activator.md
+    - "Fire Drill preparation": day2/fire-drill-prep.md
 
   - "Day 3 - Day 3 - Quality & Governance":
     - "Lab 3.1 ~ 03b Medallion Architecture": labs/03b-medallion-lakehouse.md
@@ -50,7 +51,7 @@ markdown_extensions:
   - footnotes
   - meta
   - toc:
-      permalink: true
+      permalink: false
       toc_depth: 2
 
   - pymdownx.arithmatex

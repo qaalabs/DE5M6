@@ -2,9 +2,8 @@
 
 ## Session 1
 - `09:30` Welcome (10 mins)
-- `09:40` **Discussion**: When a system broke at work (10 mins)
-- `09:50` **Practice**: [Lab 2.1 ~ 04 Ingest Pipeline](../labs/04-ingest-pipeline.md) (20 mins)
-- `10:10` Incident vs Problem - what's the difference? (10 mins)
+- `09:40` **Practice**: [Lab 2.1 ~ 04 Ingest Pipeline](../labs/04-ingest-pipeline.md) (30 mins)
+- `10:10` **Discussion**: When a system broke at work (10 mins)
 - `10:20` **Practice**: [Lab 04 ~ Break it systematically](../day2/breaking-things.md) (20 mins)
 
 ## ☕ Morning Break
@@ -20,7 +19,7 @@
 
 ## Session 3
 
-- `13:10` **Investigation**: Fire Drill preparation (20 mins)
+- `13:10` **Investigation**: [Fire Drill preparation](../day2/fire-drill-prep.md) (20 mins)
 - `13:30` Scenario 1 briefing (10 mins)
 - `13:40` Fire Drill Round 1 (30 mins)
 - `14:10` **Discussion**: Fire drill debrief (20 mins)
