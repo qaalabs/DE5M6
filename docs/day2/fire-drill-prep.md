@@ -1,7 +1,5 @@
 # Day 2: Fire Drill Preparation
 
----
-
 ## What's Coming Next
 In **20 minutes**, you'll participate in **incident response fire drills** simulating real data platform failures. You'll work in teams to coordinate technical responses and stakeholder communication under time pressure.
 
