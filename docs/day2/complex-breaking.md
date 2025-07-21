@@ -3,8 +3,6 @@
 ## Overview
 This session introduces more complex failure scenarios that mirror real-world production issues.
 
----
-
 ## Scenario 1: Performance Issues
 
 ### Setup
@@ -15,6 +13,7 @@ This session introduces more complex failure scenarios that mirror real-world pr
 Find or create a **much larger dataset** than used in the previous lab
 
 Options:
+
   - Duplicate your existing file multiple times to create a large CSV
   - Use online sample datasets (sales data, sensor data, etc.)
   - Create synthetic data with repeated rows
