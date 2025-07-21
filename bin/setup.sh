@@ -36,6 +36,6 @@ git push
 git-check
 
 # Note to run mkdocs
-echo -e "\nNOTE: Remember to run 'mkdocs gh-deploy' to push these change!\n"
+echo -e "\nNOTE: Remember to run 'mkdocs gh-deploy' to push these changes!\n"
 
 #EOF
