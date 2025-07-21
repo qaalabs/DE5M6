@@ -15,11 +15,11 @@ Before working with data in Fabric, create a workspace with the Fabric trial ena
 Create a new workspace with a name of your choice, selecting a licensing mode in the Advanced section that includes Fabric capacity (*Trial, Premium, or Fabric*).
 3. When your new workspace opens, it should be empty.
 
-![Screenshot of an empty workspace in Fabric.](../img/03b-01-new-workspace.png)
+![Screenshot of an empty workspace in Fabric.](../img/new-workspace.png)
 
 5. Navigate to the workspace settings and verify that the **Data model settings** preview feature is enabled. This will enable you to create relationships between tables in your lakehouse using a Power BI semantic model.
 
-![Screenshot of the workspace settings page in Fabric.](../img/03b-02-workspace-settings.png)
+![Screenshot of the workspace settings page in Fabric.](../img/03b-workspace-settings.png)
 
 !!! note "You may need to refresh the browser tab after enabling the preview feature."
 
@@ -38,7 +38,7 @@ After a minute or so, a new empty lakehouse will be created. Next, you’ll inge
 
 5. After the files have been uploaded, select the **bronze** folder; and verify that the files have been uploaded, as shown here:
 
-[Screenshot of uploaded products.csv file in a lakehouse.](../img/03b-03-bronze-files.png)
+[Screenshot of uploaded products.csv file in a lakehouse.](../img/03b-bronze-files.png)
 
 ## Transform data and load to silver Delta table
 Now that you have some data in the bronze layer of your lakehouse, you can use a notebook to transform the data and load it to a delta table in the silver layer.
