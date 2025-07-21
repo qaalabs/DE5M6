@@ -43,17 +43,15 @@ When your new workspace opens, it should be empty.
 Now that you have a workspace, it's time to create a data lakehouse into which you'll ingest data.
 
 1. On the menu bar on the left, select **Create**. In the New page, under the *Data Engineering* section, select **Lakehouse**.
-    - Give it a name of your choice. For example: `fab_lakehouse`
+    - Give it a uniquename of your choice. For example: `fab_lakehouse`
 
     !!! tip "If the **Create** option is not pinned to the sidebar, you need to select the ellipsis (…) option first."
 
-    After a minute or so, a new empty lakehouse will be created.
+    After a minute or so, a new lakehouse with no **Tables** or **Files** will be created.
 
     ![New lakehouse.](../img/new-lakehouse.png)
 
-2. After a minute or so, a new lakehouse with no **Tables** or **Files** will be created.
-
-3. On the **Explorer** pane on the left, in the **...** menu for the **Files** node, select **New subfolder** and create a subfolder named **new_data**
+2. On the **Explorer** pane on the left, in the **...** menu for the **Files** node, select **New subfolder** and create a subfolder named **new_data**
 
 
 ## Create a pipeline
@@ -65,7 +63,7 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
 3. In the **Copy Data** wizard, on the **Choose data source page**, type HTTP in the search bar and then select **HTTP** in the **New sources** section.
 
-![Screenshot of the Choose data source page.](../img/04-choose-data-source.png)
+    ![Screenshot of the Choose data source page.](../img/04-choose-data-source.png)
 
 4. In the **Connect to data source** pane, enter the following settings for the connection to your data source:
 
@@ -125,7 +123,7 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
 1. On the **Home** page for your lakehouse, in the **Open notebook** menu, select **New notebook**.
 
-    After a few seconds, a new notebook containing a single cell will open. Notebooks are made up of one or more cells that can contain *code* or *markdown* (formatted text).
+    After a few seconds, a new notebook containing a single *cell* will open. Notebooks are made up of one or more cells that can contain *code* or *markdown* (formatted text).
 
 2. Select the existing cell in the notebook, which contains some simple code, and then replace the default code with the following variable declaration.
 
@@ -181,7 +179,7 @@ Now that you've implemented a notebook to transform data and load it into a tabl
 
 2. On the **Activities** tab, in the **All activities** list, select **Delete data**. Then position the new **Delete data** activity to the left of the **Copy data** activity and connect its **On completion** output to the **Copy data** activity, as shown here:
 
-![Screenshot of a pipeline with Delete data and Copy data activities.](,,/img/04-delete-data-activity.png)
+    ![Screenshot of a pipeline with Delete data and Copy data activities.](../img/04-delete-data-activity.png)
 
 3. Select the **Delete data** activity, and in the pane below the design canvas, set the following properties:
 
