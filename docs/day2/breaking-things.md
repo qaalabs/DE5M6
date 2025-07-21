@@ -1,12 +1,8 @@
 # Day 2: Breaking Things
 
----
-
 ## Overview
 This hands-on session introduces failures into working data pipelines.
 You will practice controlled troubleshooting while observing how MS Fabric responds to different types of failures.
-
----
 
 ## Part 1: Establish Working Baseline
 
@@ -15,7 +11,7 @@ You will practice controlled troubleshooting while observing how MS Fabric respo
 **Technical Setup:**
 
 - Start the QA Platform Lab enviroment
-- Redo [Lab 1 - Ingest Data](../labs/04-ingest-pipeline.md) from yesterday
+- This morning you did [Lab 2.1 - Ingest Pipeline Data](../labs/04-ingest-pipeline.md)
 - Verify that the data flows through successfully
 
 ---
@@ -37,7 +33,7 @@ For each break type, follow this 4-step cycle:
 **Break Instructions:**
 
 - Navigate to your source data file
-- Rename it - add '_broken' to the filename
+- Rename it - add `_broken` to the filename
 - Now try to run your pipeline
 
 **Observation Points:**
@@ -70,7 +66,7 @@ For each break type, follow this 4-step cycle:
 - How long does it take to identify the problem?
 - Is the difference clear between this and the file error?
 
-**Discussion:**
+**Discussion**
 
 **Fix & Verify:**
 
@@ -88,12 +84,14 @@ For each break type, follow this 4-step cycle:
 - Save and run pipeline
 
 **Observation Points:**
+
 - Does Fabric handle data type mismatches gracefully?
 - What happens to the bad data - does it get skipped or cause total failure?
 
-**Discussion:**
+**Discussion**
 
 **Fix & Verify:**
+
 - Fix the data values back to numbers
 - Confirm everything works
 
