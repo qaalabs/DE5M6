@@ -7,8 +7,6 @@ fi
 DAY=$1
 MODULE="$(basename $PWD)"
 
-GH_PAGES="https://barbourians.github.io/${MODULE}/"
-
 directory="/mnt/ssd/Applications/uthisha"
 database="schedule.db"
 
