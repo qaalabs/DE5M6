@@ -1,9 +1,6 @@
 # Day 2: Fire Drill Briefing
-**Trainer Instructions**
 
----
-
-## Briefing Script
+## Trainer Instructions
 
 ### Opening
 **Dramatic tone:**
