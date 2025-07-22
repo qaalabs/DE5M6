@@ -4,16 +4,36 @@ In this exercise you will build out a medallion architecture in a Fabric lakehou
 
 This exercise should take approximately **45** minutes to complete
 
-!!! note "You need access to a Microsoft Fabric tenant to complete this exercise."
+!!! info "For this lab you need to navigate to QA Platform and login using the credentials provided"
+
+!!! warning "It is important that you use an incognito/private mode browser tab and not your work or personal Microsoft login"
+
+In this lab, you will sign in to Microsoft Fabric using the email and password from the QA Platform.
+
+1. Using an **incognito/private mode browser tab** navigate to the [Fabric portal](https://app.fabric.microsoft.com/) at: https://fabric.microsoft.com
+
+2. Follow the prompts, and sign in with the user credentials from the QA Platform:
+    - Email
+    - Password
+
+After signing in, you will be redirected to the Fabric home page:
+
+![Fabric home page](../img/qa-fabric-home.png)
 
 ## Create a workspace
-Before working with data in Fabric, create a workspace with the Fabric trial enabled.
+Before working with data in Fabric, you need to create a workspace with the Fabric trial enabled.
 
-1. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric-developer) at https://app.fabric.microsoft.com/home?experience=fabric-developer in a browser and sign in with your Fabric credentials.
+1. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric) in an incognito/private mode browser tab browser, and sign in with the Fabric credentials from the QA Platform.
 
 2. In the menu bar on the left, select Workspaces (the icon looks similar to 🗇).
-Create a new workspace with a name of your choice, selecting a licensing mode in the Advanced section that includes Fabric capacity (*Trial, Premium, or Fabric*).
-3. When your new workspace opens, it should be empty.
+
+3. Create a **New workspace**:
+
+    - Give it a name of your choice. For example: `fab_workspace`
+    - Leave all other options as the default values
+    - Click **Apply**
+
+4. When your new workspace opens, it should be empty.
 
 ![Screenshot of an empty workspace in Fabric.](../img/new-workspace.png)
 

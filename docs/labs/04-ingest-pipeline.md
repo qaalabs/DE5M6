@@ -34,9 +34,9 @@ Before working with data in Fabric, you need to create a workspace with the Fabr
     - Leave all other options as the default values
     - Click **Apply**
 
-When your new workspace opens, it should be empty.
+4. When your new workspace opens, it should be empty.
 
-![Screenshot of an empty workspace in Fabric.](../img/new-workspace.png)
+    ![Screenshot of an empty workspace in Fabric.](../img/new-workspace.png)
 
 
 ## Create a lakehouse

@@ -16,9 +16,9 @@ In this lab, you will sign in to Microsoft Fabric using the email and password f
     - Email
     - Password
 
-After signing in, you will be redirected to the Fabric home page:
+3. After signing in, you will be redirected to the Fabric home page:
 
-![Fabric home page](../img/qa-fabric-home.png)
+    ![Fabric home page](../img/qa-fabric-home.png)
 
 ## Create a workspace
 Before working with data in Fabric, you need to create a workspace with the Fabric trial enabled.
@@ -33,9 +33,9 @@ Before working with data in Fabric, you need to create a workspace with the Fabr
     - Leave all other options as the default values
     - Click **Apply**
 
-When your new workspace opens, it should be empty.
+4. When your new workspace opens, it should be empty.
 
-![Screenshot of an empty workspace in Fabric.](../img/new-workspace.png)
+    ![Screenshot of an empty workspace in Fabric.](../img/new-workspace.png)
 
 ## Create a sample data warehouse
 Now that you have a workspace, it’s time to create a data warehouse.
