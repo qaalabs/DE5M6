@@ -4,10 +4,10 @@
 
 ---
 
-## 🚀 Quick Wins (1-2 points)
+## Quick Wins (1-2 points)
 
 ### Data Classification Framework (2 points)
-**Story:** As a Data Steward, I want a data classification scheme so that sensitive data is identified and handled appropriately.
+!!! example "As a Data Steward, I want a data classification scheme so that sensitive data is identified and handled appropriately."
 
 **Key Tasks:**
 - Document data classification scheme (PII, sensitive, public, confidential)
@@ -20,7 +20,7 @@
 ---
 
 ### Compliance Checklist (2 points)
-**Story:** As a Compliance Officer, I want a GDPR compliance checklist so that data processing meets regulatory requirements.
+!!! example "As a Compliance Officer, I want a GDPR compliance checklist so that data processing meets regulatory requirements."
 
 **Key Tasks:**
 - Create GDPR compliance checklist for data processing
@@ -33,7 +33,7 @@
 ---
 
 ### Quality Metrics Definition (2 points)
-**Story:** As a Data Quality Manager, I want standardized quality measures so that we can consistently evaluate data across pipeline stages.
+!!! example "As a Data Quality Manager, I want standardized quality measures so that we can consistently evaluate data across pipeline stages."
 
 **Key Tasks:**
 - Define data quality dimensions (accuracy, completeness, consistency)
@@ -46,7 +46,7 @@
 ---
 
 ### Security Assessment (2 points)
-**Story:** As an Information Security Manager, I want a security assessment of our pipeline so that vulnerabilities are identified.
+!!! example "As an Information Security Manager, I want a security assessment of our pipeline so that vulnerabilities are identified."
 
 **Key Tasks:**
 - Review pipeline for security vulnerabilities
@@ -58,10 +58,10 @@
 
 ---
 
-## ⚡ Hands-On Tasks (2-3 points)
+## Hands-On Tasks (2-3 points)
 
 ### PII Data Masking (3 points)
-**Story:** As a Data Protection Engineer, I want PII data masking capabilities so that non-production environments don't expose sensitive information.
+!!! example "As a Data Protection Engineer, I want PII data masking capabilities so that non-production environments don't expose sensitive information."
 
 **Key Tasks:**
 - Identify PII fields in customer data (email, phone, postcode)
@@ -74,7 +74,7 @@
 ---
 
 ### Data Quality Validation Rules (2 points)
-**Story:** As a Data Engineer, I want configurable quality validation rules so that data quality standards are automatically enforced.
+!!! example "As a Data Engineer, I want configurable quality validation rules so that data quality standards are automatically enforced."
 
 **Key Tasks:**
 - Create validation rules for customer data (email format, postcode validity)
@@ -87,7 +87,7 @@
 ---
 
 ### Audit Trail Enhancement (3 points)
-**Story:** As a Compliance Officer, I want comprehensive audit trails so that we can demonstrate data processing compliance.
+!!! example "As a Compliance Officer, I want comprehensive audit trails so that we can demonstrate data processing compliance."
 
 **Key Tasks:**
 - Enhance existing audit table with detailed change tracking
@@ -100,7 +100,7 @@
 ---
 
 ### GDPR Compliance Assessment (3 points)
-**Story:** As a Data Protection Officer, I want to assess GDPR compliance so that our pipeline meets data protection requirements.
+!!! example "As a Data Protection Officer, I want to assess GDPR compliance so that our pipeline meets data protection requirements."
 
 **Key Tasks:**
 - Review pipeline against GDPR requirements
@@ -112,10 +112,10 @@
 
 ---
 
-## 🧠 Strategic Thinking (2-3 points)
+## Strategic Thinking (2-3 points)
 
 ### Data Governance Policy Framework (3 points)
-**Story:** As a Data Protection Officer, I want comprehensive data governance policies so that our ETL pipeline complies with regulations.
+!!! example "As a Data Protection Officer, I want comprehensive data governance policies so that our ETL pipeline complies with regulations."
 
 **Key Tasks:**
 - Document data governance policies for processing activities
@@ -128,7 +128,7 @@
 ---
 
 ### Environmental Impact Assessment (2 points)
-**Story:** As a Sustainability Officer, I want to understand the environmental impact of our data processing so that we contribute to net-zero targets.
+!!! example "As a Sustainability Officer, I want to understand the environmental impact of our data processing so that we contribute to net-zero targets."
 
 **Key Tasks:**
 - Calculate current carbon footprint of ETL operations
@@ -140,10 +140,10 @@
 
 ---
 
-## ☁️ Cloud & Modern Tools (3 points)
+## Cloud & Modern Tools (3 points)
 
 ### Microsoft Purview Integration (3 points)
-**Story:** As a Data Governance Engineer, I want to integrate with Microsoft Purview so that data lineage and governance are automated.
+!!! example "As a Data Governance Engineer, I want to integrate with Microsoft Purview so that data lineage and governance are automated."
 
 **Key Tasks:**
 - Explore Microsoft Purview data governance capabilities
@@ -156,7 +156,7 @@
 ---
 
 ### Fabric Data Governance (3 points)
-**Story:** As a Data Steward, I want to explore Microsoft Fabric governance capabilities so that I understand modern data governance approaches.
+!!! example "As a Data Steward, I want to explore Microsoft Fabric governance capabilities so that I understand modern data governance approaches."
 
 **Key Tasks:**
 - Explore Fabric data governance and lineage features
@@ -168,10 +168,10 @@
 
 ---
 
-## 🔧 Technical Deep Dives (3-4 points)
+## Technical Deep Dives (3-4 points)
 
 ### Automated Data Classification (4 points)
-**Story:** As a Data Governance Engineer, I want automatic data classification so that sensitive data is identified and handled according to policies.
+!!! example "As a Data Governance Engineer, I want automatic data classification so that sensitive data is identified and handled according to policies."
 
 **Key Tasks:**
 - Implement pattern recognition for PII and sensitive data
@@ -184,7 +184,7 @@
 ---
 
 ### Encryption Implementation (4 points)
-**Story:** As a Security Engineer, I want end-to-end encryption for sensitive data so that customer information is protected throughout the pipeline.
+!!! example "As a Security Engineer, I want end-to-end encryption for sensitive data so that customer information is protected throughout the pipeline."
 
 **Key Tasks:**
 - Implement field-level encryption for PII data in database
@@ -197,7 +197,7 @@
 ---
 
 ### Data Lineage Tracking (3 points)
-**Story:** As a Data Steward, I want automated data lineage tracking so that I can understand data flow and transformations for audit purposes.
+!!! example "As a Data Steward, I want automated data lineage tracking so that I can understand data flow and transformations for audit purposes."
 
 **Key Tasks:**
 - Add lineage metadata to each transformation step
@@ -211,36 +211,43 @@
 
 ## Tips for Sprint 3
 
-### If You Want Quick Wins:
+#### If You Want Quick Wins:
+
 - **Data Classification** helps you think about data systematically
 - **Compliance Checklist** is practical for any data role
 - **Quality Metrics** connect to business value
 - **Security Assessment** builds security awareness
 
-### If You Want to Code:
+#### If You Want to Code:
+
 - **PII Masking** is immediately useful and visible
 - **Quality Validation** teaches important data patterns
 - **Audit Trail** demonstrates compliance thinking
 - **Data Lineage** is advanced but very valuable
 
-### If You Like Strategy:
+~### If You Like Strategy:
+
 - **Governance Policy** thinking is valuable for senior roles
 - **Environmental Impact** connects to sustainability goals
 - **GDPR Assessment** demonstrates regulatory awareness
 
-### If You're Cloud-Curious:
+#### If You're Cloud-Curious:
+
 - **Microsoft Purview** shows enterprise governance platforms
 - **Fabric Governance** demonstrates modern approaches
 
-### For the Ambitious:
+#### For the Ambitious:
+
 - **Automated Classification** uses advanced techniques
 - **Encryption** is essential security knowledge
 - **Data Lineage** is a complex but important capability
 
-### Sustainability Focus:
+#### Sustainability Focus:
+
 Consider how your chosen items can contribute to:
+
 - **Reduced energy consumption** through efficient processing
 - **Minimized data movement** to reduce carbon footprint
 - **Optimized resource usage** for environmental responsibility
 
-**Remember: Governance is about enabling good practices, not blocking progress!**
+!!! success "Remember: Governance is about enabling good practices, not blocking progress!"

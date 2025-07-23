@@ -4,12 +4,13 @@
 
 ---
 
-## 🚀 Quick Wins (1-2 points)
+## Quick Wins (1-2 points)
 
 ### Error Classification Matrix (2 points)
-**Story:** As a Data Engineering Team Lead, I want a clear error classification system so that incidents are escalated appropriately.
+!!! tip "As a Data Engineering Team Lead, I want a clear error classification system so that incidents are escalated appropriately."
 
 **Key Tasks:**
+
 - Categorize all possible pipeline errors by severity and type
 - Define escalation paths for different error categories
 - Create communication templates for incident notifications
@@ -20,9 +21,10 @@
 ---
 
 ### Deployment Documentation (2 points)
-**Story:** As a DevOps Engineer, I want deployment procedures documented so that releases can be executed consistently.
+!!! tip "As a DevOps Engineer, I want deployment procedures documented so that releases can be executed consistently."
 
 **Key Tasks:**
+
 - Document current deployment steps
 - Create deployment checklist and validation procedures
 - Design rollback procedures for failed deployments
@@ -33,9 +35,10 @@
 ---
 
 ### Manual Testing Framework (2 points)
-**Story:** As a Quality Engineer, I want a testing checklist so that we can validate pipeline resilience manually.
+!!! tip "As a Quality Engineer, I want a testing checklist so that we can validate pipeline resilience manually."
 
 **Key Tasks:**
+
 - Create test scenarios for different failure types
 - Design validation steps for data quality and completeness
 - Build testing checklist for pre-production validation
@@ -46,9 +49,10 @@
 ---
 
 ### Recovery Procedures Design (2 points)
-**Story:** As a Data Operations Manager, I want documented recovery procedures so that team members can restore service quickly.
+!!! tip "As a Data Operations Manager, I want documented recovery procedures so that team members can restore service quickly."
 
 **Key Tasks:**
+
 - Document step-by-step recovery procedures
 - Create recovery time estimates for different scenarios
 - Design manual override procedures
@@ -58,12 +62,13 @@
 
 ---
 
-## ⚡ Hands-On Tasks (2-3 points)
+## Hands-On Tasks (2-3 points)
 
 ### Basic Retry Logic Implementation (3 points)
-**Story:** As a Data Engineer, I want automatic retry functionality for transient failures so that temporary issues don't cause complete pipeline failures.
+!!! tip "As a Data Engineer, I want automatic retry functionality for transient failures so that temporary issues don't cause complete pipeline failures."
 
 **Key Tasks:**
+
 - Add retry logic to database connection attempts with exponential backoff
 - Implement retry for API calls with configurable retry count
 - Log retry attempts and final success/failure status
@@ -74,9 +79,10 @@
 ---
 
 ### Configuration-Based Error Thresholds (2 points)
-**Story:** As a Data Engineer, I want configurable error thresholds so that the pipeline can adapt to different tolerance levels.
+!!! tip "As a Data Engineer, I want configurable error thresholds so that the pipeline can adapt to different tolerance levels."
 
 **Key Tasks:**
+
 - Create configuration file for error tolerance settings
 - Implement data quality threshold checking
 - Add API failure rate thresholds before circuit breaking
@@ -87,9 +93,10 @@
 ---
 
 ### Database Transaction Management (3 points)
-**Story:** As a Data Engineer, I want robust transaction handling so that database failures don't leave data in an inconsistent state.
+!!! tip "As a Data Engineer, I want robust transaction handling so that database failures don't leave data in an inconsistent state."
 
 **Key Tasks:**
+
 - Implement proper transaction boundaries for batch operations
 - Add automatic rollback on critical errors during data loading
 - Create savepoint management for partial batch recovery
@@ -100,9 +107,10 @@
 ---
 
 ### Failure Simulation & Recovery (3 points)
-**Story:** As a Data Engineer, I want to test failure scenarios so that I can validate our recovery procedures.
+!!! tip "As a Data Engineer, I want to test failure scenarios so that I can validate our recovery procedures."
 
 **Key Tasks:**
+
 - Design chaos engineering test scenarios
 - Simulate network failures, database outages, and API errors
 - Test recovery procedures and measure recovery times
@@ -112,12 +120,13 @@
 
 ---
 
-## 🧠 Strategic Thinking (2-3 points)
+## Strategic Thinking (2-3 points)
 
 ### Disaster Recovery Strategy (3 points)
-**Story:** As a Data Operations Manager, I want a comprehensive disaster recovery plan so that we can restore operations quickly after major failures.
+!!! tip "As a Data Operations Manager, I want a comprehensive disaster recovery plan so that we can restore operations quickly after major failures."
 
 **Key Tasks:**
+
 - Define Recovery Time Objective (RTO) and Recovery Point Objective (RPO)
 - Design backup and recovery procedures for database and configuration
 - Create failover scenarios and manual override procedures
@@ -128,9 +137,10 @@
 ---
 
 ### Business Impact Assessment (2 points)
-**Story:** As a Business Continuity Manager, I want to understand the business impact of ETL pipeline failures so that I can prioritize resilience investments.
+!!! tip "As a Business Continuity Manager, I want to understand the business impact of ETL pipeline failures so that I can prioritize resilience investments."
 
 **Key Tasks:**
+
 - Map pipeline failures to business consequences
 - Calculate downtime costs for different failure scenarios
 - Create failure impact matrix (probability vs business impact)
@@ -140,12 +150,13 @@
 
 ---
 
-## ☁️ Cloud & Modern Tools (3 points)
+## Cloud & Modern Tools (3 points)
 
 ### Azure Pipeline Resilience (3 points)
-**Story:** As a Data Engineer, I want to explore Azure Data Factory resilience features so that I understand cloud-native reliability patterns.
+!!! tip "As a Data Engineer, I want to explore Azure Data Factory resilience features so that I understand cloud-native reliability patterns."
 
 **Key Tasks:**
+
 - Research Azure Data Factory retry and error handling capabilities
 - Explore monitoring and alerting features
 - Design equivalent pipeline with built-in resilience
@@ -156,9 +167,10 @@
 ---
 
 ### Fabric Error Handling (3 points)
-**Story:** As a Data Engineer, I want to implement error handling in Microsoft Fabric so that pipelines gracefully handle failures.
+!!! tip "As a Data Engineer, I want to implement error handling in Microsoft Fabric so that pipelines gracefully handle failures."
 
 **Key Tasks:**
+
 - Explore Fabric pipeline error handling options
 - Design failure scenarios and recovery procedures
 - Implement basic error handling in Fabric environment
@@ -171,9 +183,10 @@
 ## 🔧 Technical Deep Dives (3-4 points)
 
 ### Circuit Breaker Implementation (4 points)
-**Story:** As a Data Engineer, I want circuit breaker protection for external API calls so that API failures don't overwhelm services.
+!!! tip "As a Data Engineer, I want circuit breaker protection for external API calls so that API failures don't overwhelm services."
 
 **Key Tasks:**
+
 - Implement circuit breaker pattern for postcode and company APIs
 - Configure failure thresholds and recovery timeouts
 - Provide fallback data sources when APIs fail
@@ -184,9 +197,10 @@
 ---
 
 ### Automated Health Checks (3 points)
-**Story:** As a Data Engineer, I want automated health validation so that system problems are detected before they impact pipelines.
+!!! tip "As a Data Engineer, I want automated health validation so that system problems are detected before they impact pipelines."
 
 **Key Tasks:**
+
 - Create comprehensive health check function
 - Check database connectivity, file system access, and API availability
 - Return structured health status with component-level details
@@ -197,9 +211,10 @@
 ---
 
 ### State Management & Checkpointing (4 points)
-**Story:** As a Data Engineer, I want pipeline state persistence so that failed pipelines can resume from the last successful checkpoint.
+!!! tip "As a Data Engineer, I want pipeline state persistence so that failed pipelines can resume from the last successful checkpoint."
 
 **Key Tasks:**
+
 - Design checkpoint system for tracking pipeline progress
 - Implement state persistence using database or file system
 - Add resume capability from last successful checkpoint
@@ -211,28 +226,33 @@
 
 ## Tips for Sprint 2
 
-### If You Want Quick Wins:
+#### If You Want Quick Wins:
+
 - **Error Classification** helps you think systematically about failures
 - **Recovery Procedures** are valuable for any data role
 - **Testing Framework** gives you practical QA skills
 
-### If You Want to Code:
+#### If You Want to Code:
+
 - **Retry Logic** is immediately useful and satisfying to implement
 - **Configuration Thresholds** teaches important design patterns
 - **Health Checks** provide visible system validation
 
-### If You Like Strategy:
+#### If You Like Strategy:
+
 - **Disaster Recovery** thinking is valuable for senior roles
 - **Business Impact Assessment** connects technical to business
 - **Failure Simulation** helps you think like a reliability engineer
 
-### If You're Cloud-Curious:
+#### If You're Cloud-Curious:
+
 - **Azure Pipeline Resilience** shows enterprise patterns
 - **Fabric Error Handling** demonstrates modern platform capabilities
 
-### For the Ambitious:
+#### For the Ambitious:
+
 - **Circuit Breaker** is a classic reliability pattern worth learning
 - **State Management** is advanced but very powerful
 - **Automated Health Checks** combine multiple concepts
 
-**Remember: Resilience is about graceful degradation, not perfection!**
+!!! success "Remember: Resilience is about graceful degradation, not perfection!"
