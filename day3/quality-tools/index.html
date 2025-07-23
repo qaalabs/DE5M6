@@ -782,36 +782,50 @@
 - <strong>Pairs or individuals</strong> (depending on class size)
 - <strong>Each pair/person</strong> takes a different tool category</p>
 <h4 id="tool-categories-to-research">Tool Categories to Research:</h4>
-<p><strong>Category 1: Data Quality Frameworks</strong>
-- <strong>Great Expectations:</strong> Python-based data validation framework
-- <strong>dbt tests:</strong> Built-in and custom data quality tests
-- <strong>Focus:</strong> How do these tools implement quality checks similar to your silver layer transformations?</p>
-<p><strong>Category 2: Cloud-Native Quality Tools</strong>
-- <strong>Azure Data Quality (in Fabric/Synapse):</strong> Built-in quality monitoring
-- <strong>AWS Glue DataBrew:</strong> Visual data quality profiling
-- <strong>Focus:</strong> How do cloud platforms handle quality monitoring and alerting?</p>
-<p><strong>Category 3: Quality Monitoring &amp; Observability</strong>
-- <strong>Monte Carlo:</strong> Data observability and quality monitoring
-- <strong>Datadog Data Streams:</strong> Real-time quality monitoring
-- <strong>Focus:</strong> How do these tools detect quality issues automatically?</p>
-<p><strong>Category 4: Open Source Quality Solutions</strong>
-- <strong>Apache Griffin:</strong> Data quality platform
-- <strong>DataHub:</strong> Data discovery with quality insights
-- <strong>Focus:</strong> How do open source tools provide cost-effective quality solutions?</p>
+<p><strong>Group 1: Data Quality Frameworks</strong></p>
+<ul>
+<li><strong>Great Expectations:</strong> Python-based data validation framework</li>
+<li><strong>dbt tests:</strong> Built-in and custom data quality tests</li>
+<li><strong>Focus:</strong> How do these tools implement quality checks similar to your silver layer transformations?</li>
+</ul>
+<p><strong>Group 2: Cloud-Native Quality Tools</strong></p>
+<ul>
+<li><strong>Azure Data Quality (in Fabric/Synapse):</strong> Built-in quality monitoring</li>
+<li><strong>AWS Glue DataBrew:</strong> Visual data quality profiling</li>
+<li><strong>Focus:</strong> How do cloud platforms handle quality monitoring and alerting?</li>
+</ul>
+<p><strong>Group 3: Quality Monitoring &amp; Observability</strong></p>
+<ul>
+<li><strong>Monte Carlo:</strong> Data observability and quality monitoring</li>
+<li><strong>Datadog Data Streams:</strong> Real-time quality monitoring</li>
+<li><strong>Focus:</strong> How do these tools detect quality issues automatically?</li>
+</ul>
+<p><strong>Group 4: Open Source Quality Solutions</strong></p>
+<ul>
+<li><strong>Apache Griffin:</strong> Data quality platform</li>
+<li><strong>DataHub:</strong> Data discovery with quality insights</li>
+<li><strong>Focus:</strong> How do open source tools provide cost-effective quality solutions?</li>
+</ul>
 <h4 id="research-questions-8-minutes">Research Questions (8 minutes):</h4>
 <p>For each tool category, investigate:</p>
-<p><strong>Implementation Approach:</strong>
-- How would this tool integrate with a medallion architecture?
-- What quality checks could be automated?
-- How does it compare to manual validation?</p>
-<p><strong>Quality Dimensions Covered:</strong>
-- Which DMBOK dimensions does this tool address best?
-- What types of quality issues would it catch/miss?
-- How does it handle quality monitoring vs. quality improvement?</p>
-<p><strong>Practical Considerations:</strong>
-- What skills/resources needed for implementation?
-- How does it fit with Microsoft Fabric/Azure ecosystem?
-- What would be the first quality check you'd implement?</p>
+<p><strong>Implementation Approach:</strong></p>
+<ul>
+<li>How would this tool integrate with a medallion architecture?</li>
+<li>What quality checks could be automated?</li>
+<li>How does it compare to manual validation?</li>
+</ul>
+<p><strong>Quality Dimensions Covered:</strong></p>
+<ul>
+<li>Which DMBOK dimensions does this tool address best?</li>
+<li>What types of quality issues would it catch/miss?</li>
+<li>How does it handle quality monitoring vs. quality improvement?</li>
+</ul>
+<p><strong>Practical Considerations:</strong></p>
+<ul>
+<li>What skills/resources needed for implementation?</li>
+<li>How does it fit with Microsoft Fabric/Azure ecosystem?</li>
+<li>What would be the first quality check you'd implement?</li>
+</ul>
 <h4 id="quick-sharing-1-minute">Quick Sharing (1 minute):</h4>
 <p><strong>Rapid insights:</strong> Each pair/person shares one key finding (15 seconds each):
 - "The most interesting capability we found was..."
@@ -820,10 +834,12 @@
 <hr />
 <h2 id="transition-to-afternoon">Transition to Afternoon</h2>
 <h3 id="bridge-to-security-governance-1-minute">Bridge to Security &amp; Governance (1 minute):</h3>
-<p><strong>Facilitator:</strong>
-- "This morning you've focused on data quality - ensuring data meets standards"
-- "This afternoon we'll explore governance - ensuring the right people can access the right data safely"
-- "Quality and governance work together - high-quality data that's not properly secured and governed can't deliver business value"</p>
+<p><strong>Facilitator:</strong></p>
+<ul>
+<li>"This morning you've focused on data quality - ensuring data meets standards"</li>
+<li>"This afternoon we'll explore governance - ensuring the right people can access the right data safely"</li>
+<li>"Quality and governance work together - high-quality data that's not properly secured and governed can't deliver business value"</li>
+</ul>
 <hr />
 <h2 id="resources-for-trainers">Resources for Trainers</h2>
 <h3 id="pre-session-preparation">Pre-Session Preparation:</h3>
@@ -833,32 +849,44 @@
 <li><strong>Prepare quality examples</strong> from the lab to highlight during discussion</li>
 </ul>
 <h3 id="managing-the-lab-phase">Managing the Lab Phase:</h3>
-<p><strong>Keep Quality Focus:</strong>
-- <strong>Point out quality improvements</strong> as they happen: "Notice how this addresses accuracy"
-- <strong>Connect to DMBOK:</strong> Reference morning's framework throughout
-- <strong>Time management:</strong> Ensure lab completion within 45 minutes</p>
-<p><strong>Common Lab Issues:</strong>
-- <strong>If learners struggle with technical steps:</strong> Focus on understanding the quality patterns rather than perfect execution
-- <strong>If lab runs long:</strong> Guide them to complete bronze and silver layers, skip gold if necessary
-- <strong>If learners finish early:</strong> Have them analyze additional quality improvement opportunities</p>
+<p><strong>Keep Quality Focus:</strong></p>
+<ul>
+<li><strong>Point out quality improvements</strong> as they happen: "Notice how this addresses accuracy"</li>
+<li><strong>Connect to DMBOK:</strong> Reference morning's framework throughout</li>
+<li><strong>Time management:</strong> Ensure lab completion within 45 minutes</li>
+</ul>
+<p><strong>Common Lab Issues:</strong></p>
+<ul>
+<li><strong>If learners struggle with technical steps:</strong> Focus on understanding the quality patterns rather than perfect execution</li>
+<li><strong>If lab runs long:</strong> Guide them to complete bronze and silver layers, skip gold if necessary</li>
+<li><strong>If learners finish early:</strong> Have them analyze additional quality improvement opportunities</li>
+</ul>
 <h3 id="facilitating-quality-discussion">Facilitating Quality Discussion:</h3>
-<p><strong>Drawing Out Insights:</strong>
-- <strong>Use specific examples</strong> from the lab: "What happened to the invalid dates in silver layer?"
-- <strong>Connect to workplace:</strong> "How does this compare to quality processes in your organization?"
-- <strong>Highlight trade-offs:</strong> "Why keep raw data in bronze if it has quality issues?"</p>
-<p><strong>Managing Tools Research:</strong>
-- <strong>Keep research focused</strong> on practical implementation rather than deep technical details
-- <strong>Guide struggling researchers:</strong> Suggest looking for case studies or getting-started guides
-- <strong>Connect to medallion:</strong> "How would this tool fit into the architecture you just built?"</p>
+<p><strong>Drawing Out Insights:</strong></p>
+<ul>
+<li><strong>Use specific examples</strong> from the lab: "What happened to the invalid dates in silver layer?"</li>
+<li><strong>Connect to workplace:</strong> "How does this compare to quality processes in your organization?"</li>
+<li><strong>Highlight trade-offs:</strong> "Why keep raw data in bronze if it has quality issues?"</li>
+</ul>
+<p><strong>Managing Tools Research:</strong></p>
+<ul>
+<li><strong>Keep research focused</strong> on practical implementation rather than deep technical details</li>
+<li><strong>Guide struggling researchers:</strong> Suggest looking for case studies or getting-started guides</li>
+<li><strong>Connect to medallion:</strong> "How would this tool fit into the architecture you just built?"</li>
+</ul>
 <h3 id="expected-learning-outcomes">Expected Learning Outcomes:</h3>
-<p><strong>Practical Understanding:</strong>
-- <strong>Quality patterns in action</strong> - seeing DMBOK dimensions addressed through architecture
-- <strong>Tool awareness</strong> - knowing what modern quality solutions exist
-- <strong>Implementation thinking</strong> - connecting theory to practical application</p>
-<p><strong>Quality Mindset:</strong>
-- <strong>Layered quality approach</strong> - different standards for different purposes
-- <strong>Automation possibilities</strong> - tools can implement quality checks at scale
-- <strong>Integration considerations</strong> - quality tools work within broader data architecture</p>
+<p><strong>Practical Understanding:</strong></p>
+<ul>
+<li><strong>Quality patterns in action</strong> - seeing DMBOK dimensions addressed through architecture</li>
+<li><strong>Tool awareness</strong> - knowing what modern quality solutions exist</li>
+<li><strong>Implementation thinking</strong> - connecting theory to practical application</li>
+</ul>
+<p><strong>Quality Mindset:</strong></p>
+<ul>
+<li><strong>Layered quality approach</strong> - different standards for different purposes</li>
+<li><strong>Automation possibilities</strong> - tools can implement quality checks at scale</li>
+<li><strong>Integration considerations</strong> - quality tools work within broader data architecture</li>
+</ul>
 <h3 id="connection-to-ksbs">Connection to KSBs:</h3>
 <ul>
 <li><strong>K4:</strong> Frameworks for data quality (DMBOK applied to architecture)</li>

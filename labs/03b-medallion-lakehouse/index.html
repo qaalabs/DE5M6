@@ -768,6 +768,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#explore-data-in-the-silver-layer-using-the-sql-endpoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explore data in the silver layer using the SQL endpoint
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transform-data-for-gold-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transform data for gold layer
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -849,38 +867,70 @@
 <h1 id="lab-create-medallion-architecture-in-a-fabric-lakehouse">Lab: Create Medallion Architecture in a Fabric Lakehouse</h1>
 <p>In this exercise you will build out a medallion architecture in a Fabric lakehouse using notebooks. You will create a workspace, create a lakehouse, upload data to the bronze layer, transform the data and load it to the silver Delta table, transform the data further and load it to the gold Delta tables, and then explore the semantic model and create relationships.</p>
 <p>This exercise should take approximately <strong>45</strong> minutes to complete</p>
-<div class="admonition note">
-<p class="admonition-title">You need access to a Microsoft Fabric tenant to complete this exercise.</p>
+<div class="admonition info">
+<p class="admonition-title">For this lab you need to navigate to QA Platform and login using the credentials provided</p>
 </div>
+<div class="admonition warning">
+<p class="admonition-title">It is important that you use an incognito/private mode browser tab and not your work or personal Microsoft login</p>
+</div>
+<p>In this lab, you will sign in to Microsoft Fabric using the email and password from the QA Platform.</p>
+<ol>
+<li>
+<p>Using an <strong>incognito/private mode browser tab</strong> navigate to the <a href="https://app.fabric.microsoft.com/">Fabric portal</a> at: <a href="https://fabric.microsoft.com">https://fabric.microsoft.com</a></p>
+</li>
+<li>
+<p>Follow the prompts, and sign in with the user credentials from the QA Platform:</p>
+<ul>
+<li>Email</li>
+<li>Password</li>
+</ul>
+</li>
+<li>
+<p>After signing in, you will be redirected to the Fabric home page:</p>
+<p><img alt="Fabric home page" src="../../img/qa-fabric-home.png" /></p>
+</li>
+</ol>
 <h2 id="create-a-workspace">Create a workspace</h2>
-<p>Before working with data in Fabric, create a workspace with the Fabric trial enabled.</p>
+<p>Before working with data in Fabric, you need to create a workspace with the Fabric trial enabled.</p>
 <ol>
 <li>
-<p>Navigate to the <a href="https://app.fabric.microsoft.com/home?experience=fabric-developer">Microsoft Fabric home page</a> at <a href="https://app.fabric.microsoft.com/home?experience=fabric-developer">https://app.fabric.microsoft.com/home?experience=fabric-developer</a> in a browser and sign in with your Fabric credentials.</p>
+<p>Navigate to the <a href="https://app.fabric.microsoft.com/home?experience=fabric">Microsoft Fabric home page</a> in an incognito/private mode browser tab browser, and sign in with the Fabric credentials from the QA Platform.</p>
 </li>
 <li>
-<p>In the menu bar on the left, select Workspaces (the icon looks similar to 🗇).
-Create a new workspace with a name of your choice, selecting a licensing mode in the Advanced section that includes Fabric capacity (<em>Trial, Premium, or Fabric</em>).</p>
+<p>In the menu bar on the left, select Workspaces (the icon looks similar to 🗇).</p>
 </li>
-<li>When your new workspace opens, it should be empty.</li>
-</ol>
+<li>
+<p>Create a <strong>New workspace</strong>:</p>
+<ul>
+<li>Give it a name of your choice. For example: <code>fab_workspace</code></li>
+<li>Leave all other options as the default values</li>
+<li>Click <strong>Apply</strong></li>
+</ul>
+</li>
+<li>
+<p>When your new workspace opens, it should be empty.</p>
 <p><img alt="Screenshot of an empty workspace in Fabric." src="../../img/new-workspace.png" /></p>
-<ol>
-<li>Navigate to the workspace settings and verify that the <strong>Data model settings</strong> preview feature is enabled. This will enable you to create relationships between tables in your lakehouse using a Power BI semantic model.</li>
-</ol>
+</li>
+<li>
+<p>Navigate to the workspace settings and verify that the <strong>Data model settings</strong> preview feature is enabled. This will enable you to create relationships between tables in your lakehouse using a Power BI semantic model.</p>
 <p><img alt="Screenshot of the workspace settings page in Fabric." src="../../img/03b-workspace-settings.png" /></p>
 <div class="admonition note">
 <p class="admonition-title">You may need to refresh the browser tab after enabling the preview feature.</p>
 </div>
-<h2 id="create-a-lakehouse-and-upload-data-to-bronze-layer">Create a lakehouse and upload data to bronze layer</h2>
-<p>Now that you have a workspace, it’s time to create a data lakehouse for the data you’re going to analyze.</p>
-<ol>
-<li>In the workspace you just created, create a new <strong>Lakehouse</strong> named <strong>Sales</strong> by selecting the <strong>+ New item</strong> button.</li>
+</li>
 </ol>
-<p>After a minute or so, a new empty lakehouse will be created. Next, you’ll ingest some data into the data lakehouse for analysis. There are multiple ways to do this, but in this exercise you’ll simply download a text file to your local computer (or lab VM if applicable) and then upload it to your lakehouse.</p>
+<h2 id="create-a-lakehouse-and-upload-data-to-bronze-layer">Create a lakehouse and upload data to bronze layer</h2>
+<p>Now that you have a workspace, it's time to create a data lakehouse for the data you're going to analyze.</p>
 <ol>
 <li>
-<p>Download the data file for this exercise from <code>https://github.com/MicrosoftLearning/dp-data/blob/main/orders.zip</code> Extract the files and save them with their original names on your local computer (or lab VM if applicable). There should be 3 files containing sales data for 3 years: 2019.csv, 2020.csv, and 2021.csv</p>
+<p>In the workspace you just created, create a new <strong>Lakehouse</strong> named <strong>Sales</strong> by selecting the <strong>+ New item</strong> button.</p>
+<p>After a minute or so, a new empty lakehouse will be created. Next, you'll ingest some data into the data lakehouse for analysis. There are multiple ways to do this, but in this exercise you'll simply download a text file to your local computer (or lab VM if applicable) and then upload it to your lakehouse.</p>
+</li>
+<li>
+<p>Download the data file for this exercise from <code>https://github.com/MicrosoftLearning/dp-data/blob/main/orders.zip</code> Extract the files and save them with their original names on your local computer (or lab VM if applicable).</p>
+<div class="admonition success">
+<p class="admonition-title">There should be 3 files containing sales data for 3 years: 2019.csv, 2020.csv, and 2021.csv</p>
+</div>
 </li>
 <li>
 <p>Return to the web browser tab containing your lakehouse, and in the <strong>...</strong> menu for the <strong>Files</strong> folder in the <strong>Explorer</strong> pane, select <strong>New subfolder</strong> and create a folder named <strong>bronze</strong>.</p>
@@ -890,153 +940,244 @@ Create a new workspace with a name of your choice, selecting a licensing mode in
 </li>
 <li>
 <p>After the files have been uploaded, select the <strong>bronze</strong> folder; and verify that the files have been uploaded, as shown here:</p>
+<p><img alt="Screenshot of uploaded products.csv file in a lakehouse." src="../../img/03b-bronze-files.png" /></p>
 </li>
 </ol>
-<p><a href="../../img/03b-bronze-files.png">Screenshot of uploaded products.csv file in a lakehouse.</a></p>
 <h2 id="transform-data-and-load-to-silver-delta-table">Transform data and load to silver Delta table</h2>
 <p>Now that you have some data in the bronze layer of your lakehouse, you can use a notebook to transform the data and load it to a delta table in the silver layer.</p>
-<p>On the Home page while viewing the contents of the bronze folder in your data lake, in the Open notebook menu, select New notebook.</p>
-<p>After a few seconds, a new notebook containing a single cell will open. Notebooks are made up of one or more cells that can contain code or markdown (formatted text).</p>
-<p>When the notebook opens, rename it to Transform data for Silver by selecting the Notebook xxxx text at the top left of the notebook and entering the new name.</p>
-<p>Screenshot of a new notebook named Transform data for silver.</p>
-<p>Select the existing cell in the notebook, which contains some simple commented-out code. Highlight and delete these two lines - you will not need this code.</p>
-<p>Note: Notebooks enable you to run code in a variety of languages, including Python, Scala, and SQL. In this exercise, you’ll use PySpark and SQL. You can also add markdown cells to provide formatted text and images to document your code.</p>
+<ol>
+<li>
+<p>On the <strong>Home</strong> page while viewing the contents of the <strong>bronze</strong> folder in your data lake, in the <strong>Open notebook</strong> menu, select <strong>New notebook</strong>.</p>
+<p>After a few seconds, a new notebook containing a <em>single cell</em> will open. Notebooks are made up of one or more cells that can contain <em>code</em> or <em>markdown</em> (formatted text).</p>
+</li>
+<li>
+<p>When the notebook opens, rename it to <code>Transform data for Silver</code> by selecting the <code>Notebook xxxx</code> text at the top left of the notebook and entering the new name.</p>
+<p><img alt="Screenshot of a new notebook named Transform data for silver." src="../img/03b-sales-notebook-rename.png" /></p>
+</li>
+<li>
+<p>Select the existing cell in the notebook, which contains some simple commented-out code.</p>
+<p>Highlight and delete the two lines - you will not need this code.</p>
+<div class="admonition note">
+<p class="admonition-title">Note: In this exercise, you'll use PySpark and SQL.</p>
+</div>
+</li>
+<li>
 <p>Paste the following code into the cell:</p>
-<p>code
-from pyspark.sql.types import *</p>
-<h1 id="create-the-schema-for-the-table">Create the schema for the table</h1>
-<p>orderSchema = StructType([
-    StructField("SalesOrderNumber", StringType()),
-    StructField("SalesOrderLineNumber", IntegerType()),
-    StructField("OrderDate", DateType()),
-    StructField("CustomerName", StringType()),
-    StructField("Email", StringType()),
-    StructField("Item", StringType()),
-    StructField("Quantity", IntegerType()),
-    StructField("UnitPrice", FloatType()),
-    StructField("Tax", FloatType())
-    ])</p>
-<h1 id="import-all-files-from-bronze-folder-of-lakehouse">Import all files from bronze folder of lakehouse</h1>
-<p>df = spark.read.format("csv").option("header", "true").schema(orderSchema).load("Files/bronze/*.csv")</p>
-<h1 id="display-the-first-10-rows-of-the-dataframe-to-preview-your-data">Display the first 10 rows of the dataframe to preview your data</h1>
-<p>display(df.head(10))
-Use the <strong>▷ (Run cell)</strong> button on the left of the cell to run the code.</p>
-<p>Note: Since this is the first time you’ve run any Spark code in this notebook, a Spark session must be started. This means that the first run can take a minute or so to complete. Subsequent runs will be quicker.</p>
-<p>When the cell command has completed, review the output below the cell, which should look similar to this:</p>
-<p>Index   SalesOrderNumber    SalesOrderLineNumber    OrderDate   CustomerName    Email   Item    Quantity    UnitPrice   Tax
-1   SO49172 1   2021-01-01  Brian Howard    <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#98;&#114;&#105;&#97;&#110;&#50;&#51;&#64;&#97;&#100;&#118;&#101;&#110;&#116;&#117;&#114;&#101;&#45;&#119;&#111;&#114;&#107;&#115;&#46;&#99;&#111;&#109;">&#98;&#114;&#105;&#97;&#110;&#50;&#51;&#64;&#97;&#100;&#118;&#101;&#110;&#116;&#117;&#114;&#101;&#45;&#119;&#111;&#114;&#107;&#115;&#46;&#99;&#111;&#109;</a> Road-250 Red, 52    1   2443.35 195.468
-2   SO49173 1   2021-01-01  Linda Alvarez   <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#108;&#105;&#110;&#100;&#97;&#49;&#57;&#64;&#97;&#100;&#118;&#101;&#110;&#116;&#117;&#114;&#101;&#45;&#119;&#111;&#114;&#107;&#115;&#46;&#99;&#111;&#109;">&#108;&#105;&#110;&#100;&#97;&#49;&#57;&#64;&#97;&#100;&#118;&#101;&#110;&#116;&#117;&#114;&#101;&#45;&#119;&#111;&#114;&#107;&#115;&#46;&#99;&#111;&#109;</a> Mountain-200 Silver, 38 1   2071.4197   165.7136
-…   …   …   …   …   …   …   …   …   …
-The code you ran loaded the data from the CSV files in the bronze folder into a Spark dataframe, and then displayed the first few rows of the dataframe.</p>
-<p>Note: You can clear, hide, and auto-resize the contents of the cell output by selecting the … menu at the top left of the output pane.</p>
-<p>Now you’ll add columns for data validation and cleanup, using a PySpark dataframe to add columns and update the values of some of the existing columns. Use the + Code button to add a new code block and add the following code to the cell:</p>
-<p>code
-from pyspark.sql.functions import when, lit, col, current_timestamp, input_file_name</p>
-<h1 id="add-columns-isflagged-createdts-and-modifiedts">Add columns IsFlagged, CreatedTS and ModifiedTS</h1>
-<p>df = df.withColumn("FileName", input_file_name()) \
-    .withColumn("IsFlagged", when(col("OrderDate") &lt; '2019-08-01',True).otherwise(False)) \
-    .withColumn("CreatedTS", current_timestamp()).withColumn("ModifiedTS", current_timestamp())</p>
-<h1 id="update-customername-to-unknown-if-customername-null-or-empty">Update CustomerName to "Unknown" if CustomerName null or empty</h1>
-<p>df = df.withColumn("CustomerName", when((col("CustomerName").isNull() | (col("CustomerName")=="")),lit("Unknown")).otherwise(col("CustomerName")))
-The first line of the code imports the necessary functions from PySpark. You’re then adding new columns to the dataframe so you can track the source file name, whether the order was flagged as being a before the fiscal year of interest, and when the row was created and modified.</p>
-<p>Finally, you’re updating the CustomerName column to “Unknown” if it’s null or empty.</p>
-<p>Run the cell to execute the code using the <strong>▷ (Run cell)</strong> button.</p>
-<p>Next, you’ll define the schema for the sales_silver table in the sales database using Delta Lake format. Create a new code block and add the following code to the cell:</p>
-<p>code</p>
-<h1 id="define-the-schema-for-the-sales_silver-table">Define the schema for the sales_silver table</h1>
-<p>from pyspark.sql.types import *
-from delta.tables import *</p>
-<p>DeltaTable.createIfNotExists(spark) \
-    .tableName("sales.sales_silver") \
-    .addColumn("SalesOrderNumber", StringType()) \
-    .addColumn("SalesOrderLineNumber", IntegerType()) \
-    .addColumn("OrderDate", DateType()) \
-    .addColumn("CustomerName", StringType()) \
-    .addColumn("Email", StringType()) \
-    .addColumn("Item", StringType()) \
-    .addColumn("Quantity", IntegerType()) \
-    .addColumn("UnitPrice", FloatType()) \
-    .addColumn("Tax", FloatType()) \
-    .addColumn("FileName", StringType()) \
-    .addColumn("IsFlagged", BooleanType()) \
-    .addColumn("CreatedTS", DateType()) \
-    .addColumn("ModifiedTS", DateType()) \
-    .execute()
-Run the cell to execute the code using the <strong>▷ (Run cell)</strong> button.</p>
-<p>Select the … in the Tables section of the Explorer pane and select Refresh. You should now see the new sales_silver table listed. The ▲ (triangle icon) indicates that it’s a Delta table.</p>
-<p>Note: If you don’t see the new table, wait a few seconds and then select Refresh again, or refresh the entire browser tab.</p>
-<p>Now you’re going to perform an upsert operation on a Delta table, updating existing records based on specific conditions and inserting new records when no match is found. Add a new code block and paste the following code:</p>
-<p>code</p>
-<h1 id="update-existing-records-and-insert-new-ones-based-on-a-condition-defined-by-the-columns-salesordernumber-orderdate-customername-and-item">Update existing records and insert new ones based on a condition defined by the columns SalesOrderNumber, OrderDate, CustomerName, and Item.</h1>
-<p>from delta.tables import *</p>
-<p>deltaTable = DeltaTable.forPath(spark, 'Tables/sales_silver')</p>
-<p>dfUpdates = df</p>
-<p>deltaTable.alias('silver') \
-  .merge(
-    dfUpdates.alias('updates'),
-    'silver.SalesOrderNumber = updates.SalesOrderNumber and silver.OrderDate = updates.OrderDate and silver.CustomerName = updates.CustomerName and silver.Item = updates.Item'
-  ) \
-   .whenMatchedUpdate(set =
-    {</p>
-<div class="codehilite"><pre><span></span><code>}
-</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pyspark.sql.types</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
-<p>) \
- .whenNotMatchedInsert(values =
-    {
-      "SalesOrderNumber": "updates.SalesOrderNumber",
-      "SalesOrderLineNumber": "updates.SalesOrderLineNumber",
-      "OrderDate": "updates.OrderDate",
-      "CustomerName": "updates.CustomerName",
-      "Email": "updates.Email",
-      "Item": "updates.Item",
-      "Quantity": "updates.Quantity",
-      "UnitPrice": "updates.UnitPrice",
-      "Tax": "updates.Tax",
-      "FileName": "updates.FileName",
-      "IsFlagged": "updates.IsFlagged",
-      "CreatedTS": "updates.CreatedTS",
-      "ModifiedTS": "updates.ModifiedTS"
-    }
-  ) \
-  .execute()
-Run the cell to execute the code using the <strong>▷ (Run cell)</strong> button.</p>
-<p>This operation is important because it enables you to update existing records in the table based on the values of specific columns, and insert new records when no match is found. This is a common requirement when you’re loading data from a source system that may contain updates to existing and new records.</p>
-<p>You now have data in your silver delta table that is ready for further transformation and modeling.</p>
-<p>Explore data in the silver layer using the SQL endpoint
-Now that you have data in your silver layer, you can use the SQL analytics endpoint to explore the data and perform some basic analysis. This is useful if you’re familiar with SQL and want to do some basic exploration of your data. In this exercise we’re using the SQL endpoint view in Fabric, but you can use other tools like SQL Server Management Studio (SSMS) and Azure Data Explorer.</p>
-<p>Navigate back to your workspace and notice that you now have several items listed. Select the Sales SQL analytics endpoint to open your lakehouse in the SQL analytics endpoint view.</p>
-<p>Screenshot of the SQL endpoint in a lakehouse.</p>
+<span class="c1"># Create the schema for the table</span>
+<span class="n">orderSchema</span> <span class="o">=</span> <span class="n">StructType</span><span class="p">([</span>
+    <span class="n">StructField</span><span class="p">(</span><span class="s2">&quot;SalesOrderNumber&quot;</span><span class="p">,</span> <span class="n">StringType</span><span class="p">()),</span>
+    <span class="n">StructField</span><span class="p">(</span><span class="s2">&quot;SalesOrderLineNumber&quot;</span><span class="p">,</span> <span class="n">IntegerType</span><span class="p">()),</span>
+    <span class="n">StructField</span><span class="p">(</span><span class="s2">&quot;OrderDate&quot;</span><span class="p">,</span> <span class="n">DateType</span><span class="p">()),</span>
+    <span class="n">StructField</span><span class="p">(</span><span class="s2">&quot;CustomerName&quot;</span><span class="p">,</span> <span class="n">StringType</span><span class="p">()),</span>
+    <span class="n">StructField</span><span class="p">(</span><span class="s2">&quot;Email&quot;</span><span class="p">,</span> <span class="n">StringType</span><span class="p">()),</span>
+    <span class="n">StructField</span><span class="p">(</span><span class="s2">&quot;Item&quot;</span><span class="p">,</span> <span class="n">StringType</span><span class="p">()),</span>
+    <span class="n">StructField</span><span class="p">(</span><span class="s2">&quot;Quantity&quot;</span><span class="p">,</span> <span class="n">IntegerType</span><span class="p">()),</span>
+    <span class="n">StructField</span><span class="p">(</span><span class="s2">&quot;UnitPrice&quot;</span><span class="p">,</span> <span class="n">FloatType</span><span class="p">()),</span>
+    <span class="n">StructField</span><span class="p">(</span><span class="s2">&quot;Tax&quot;</span><span class="p">,</span> <span class="n">FloatType</span><span class="p">())</span>
+    <span class="p">])</span>
+
+<span class="c1"># Import all files from bronze folder of lakehouse</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;csv&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">option</span><span class="p">(</span><span class="s2">&quot;header&quot;</span><span class="p">,</span> <span class="s2">&quot;true&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">schema</span><span class="p">(</span><span class="n">orderSchema</span><span class="p">)</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;Files/bronze/*.csv&quot;</span><span class="p">)</span>
+
+<span class="c1"># Display the first 10 rows of the dataframe to preview your data</span>
+<span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+</code></pre></div>
+</li>
+<li>
+<p>Use the <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7z"/></svg></span> (Run cell)</strong> button on the left of the cell to run the code.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li>Since this is the first time you've run any Spark code in this notebook, a Spark session must be started.</li>
+<li>This means that the first run can take a minute or so to complete. </li>
+<li>Subsequent runs will be quicker.</li>
+</ul>
+</div>
+</li>
+<li>
+<p>When the cell command has completed, review the output below the cell, which should look similar to this:</p>
+<div class="highlight"><pre><span></span><code>Index SalesOrderNumber SalesOrderLineNumber OrderDate  CustomerName Email        Item                Quantity UnitPrice Tax
+1     SO49172          1                    2021-01-01 Brian Howard brian@aw.com Road-250 Red        1        2443.35   195.468
+2     SO49173          1                    2021-01-01 Linda Alvare linda@aw.com Mountain-200 Silver 1        2071.4197 165.7136
+</code></pre></div>
+<p>The code you ran loaded the data from the CSV files in the bronze folder into a Spark dataframe, and then displayed the first few rows of the dataframe.</p>
+<div class="admonition note">
+<p class="admonition-title">Note: You can clear, hide, and auto-resize the contents of the cell output by selecting the <strong>...</strong> menu at the top left of the output pane.</p>
+</div>
+</li>
+<li>
+<p>Now you'll <strong>add columns for data validation and cleanup</strong>, using a PySpark dataframe to add columns and update the values of some of the existing columns. Use the <strong>+ Code</strong> button to <strong>add a new code block</strong> and add the following code to the cell:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pyspark.sql.functions</span><span class="w"> </span><span class="kn">import</span> <span class="n">when</span><span class="p">,</span> <span class="n">lit</span><span class="p">,</span> <span class="n">col</span><span class="p">,</span> <span class="n">current_timestamp</span><span class="p">,</span> <span class="n">input_file_name</span>
+
+<span class="c1"># Add columns IsFlagged, CreatedTS and ModifiedTS</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">&quot;FileName&quot;</span><span class="p">,</span> <span class="n">input_file_name</span><span class="p">())</span> \
+    <span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">&quot;IsFlagged&quot;</span><span class="p">,</span> <span class="n">when</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">&quot;OrderDate&quot;</span><span class="p">)</span> <span class="o">&lt;</span> <span class="s1">&#39;2019-08-01&#39;</span><span class="p">,</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">otherwise</span><span class="p">(</span><span class="kc">False</span><span class="p">))</span> \
+    <span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">&quot;CreatedTS&quot;</span><span class="p">,</span> <span class="n">current_timestamp</span><span class="p">())</span><span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">&quot;ModifiedTS&quot;</span><span class="p">,</span> <span class="n">current_timestamp</span><span class="p">())</span>
+
+<span class="c1"># Update CustomerName to &quot;Unknown&quot; if CustomerName null or empty</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">&quot;CustomerName&quot;</span><span class="p">,</span> <span class="n">when</span><span class="p">((</span><span class="n">col</span><span class="p">(</span><span class="s2">&quot;CustomerName&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">isNull</span><span class="p">()</span> <span class="o">|</span> <span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">&quot;CustomerName&quot;</span><span class="p">)</span><span class="o">==</span><span class="s2">&quot;&quot;</span><span class="p">)),</span><span class="n">lit</span><span class="p">(</span><span class="s2">&quot;Unknown&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">otherwise</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">&quot;CustomerName&quot;</span><span class="p">)))</span>
+</code></pre></div>
+<ul>
+<li>The first line of the code imports the necessary functions from PySpark. </li>
+<li>You're then adding new columns to the dataframe so you can track the source file name, whether the order was flagged as being a before the fiscal year of interest, and when the row was created and modified.</li>
+<li>Finally, you're updating the CustomerName column to "Unknown" if it's null or empty.</li>
+</ul>
+</li>
+<li>
+<p>Run the cell to execute the code using the <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7z"/></svg></span> (Run cell)</strong> button.</p>
+</li>
+<li>
+<p>Next, you'll define the schema for the <strong>sales_silver</strong> table in the sales database using Delta Lake format. Create a new code block and add the following code to the cell:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Define the schema for the sales_silver table</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">pyspark.sql.types</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">delta.tables</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">DeltaTable</span><span class="o">.</span><span class="n">createIfNotExists</span><span class="p">(</span><span class="n">spark</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">tableName</span><span class="p">(</span><span class="s2">&quot;sales.sales_silver&quot;</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">addColumn</span><span class="p">(</span><span class="s2">&quot;SalesOrderNumber&quot;</span><span class="p">,</span> <span class="n">StringType</span><span class="p">())</span> \
+    <span class="o">.</span><span class="n">addColumn</span><span class="p">(</span><span class="s2">&quot;SalesOrderLineNumber&quot;</span><span class="p">,</span> <span class="n">IntegerType</span><span class="p">())</span> \
+    <span class="o">.</span><span class="n">addColumn</span><span class="p">(</span><span class="s2">&quot;OrderDate&quot;</span><span class="p">,</span> <span class="n">DateType</span><span class="p">())</span> \
+    <span class="o">.</span><span class="n">addColumn</span><span class="p">(</span><span class="s2">&quot;CustomerName&quot;</span><span class="p">,</span> <span class="n">StringType</span><span class="p">())</span> \
+    <span class="o">.</span><span class="n">addColumn</span><span class="p">(</span><span class="s2">&quot;Email&quot;</span><span class="p">,</span> <span class="n">StringType</span><span class="p">())</span> \
+    <span class="o">.</span><span class="n">addColumn</span><span class="p">(</span><span class="s2">&quot;Item&quot;</span><span class="p">,</span> <span class="n">StringType</span><span class="p">())</span> \
+    <span class="o">.</span><span class="n">addColumn</span><span class="p">(</span><span class="s2">&quot;Quantity&quot;</span><span class="p">,</span> <span class="n">IntegerType</span><span class="p">())</span> \
+    <span class="o">.</span><span class="n">addColumn</span><span class="p">(</span><span class="s2">&quot;UnitPrice&quot;</span><span class="p">,</span> <span class="n">FloatType</span><span class="p">())</span> \
+    <span class="o">.</span><span class="n">addColumn</span><span class="p">(</span><span class="s2">&quot;Tax&quot;</span><span class="p">,</span> <span class="n">FloatType</span><span class="p">())</span> \
+    <span class="o">.</span><span class="n">addColumn</span><span class="p">(</span><span class="s2">&quot;FileName&quot;</span><span class="p">,</span> <span class="n">StringType</span><span class="p">())</span> \
+    <span class="o">.</span><span class="n">addColumn</span><span class="p">(</span><span class="s2">&quot;IsFlagged&quot;</span><span class="p">,</span> <span class="n">BooleanType</span><span class="p">())</span> \
+    <span class="o">.</span><span class="n">addColumn</span><span class="p">(</span><span class="s2">&quot;CreatedTS&quot;</span><span class="p">,</span> <span class="n">DateType</span><span class="p">())</span> \
+    <span class="o">.</span><span class="n">addColumn</span><span class="p">(</span><span class="s2">&quot;ModifiedTS&quot;</span><span class="p">,</span> <span class="n">DateType</span><span class="p">())</span> \
+    <span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+</code></pre></div>
+</li>
+<li>
+<p>Run the cell to execute the code using the <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7z"/></svg></span> (Run cell)</strong> button.</p>
+</li>
+<li>
+<p>Select the <strong>...</strong> in the Tables section of the Explorer pane and select Refresh. You should now see the new sales_silver table listed. The <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M1 21h22L12 2"/></svg></span> (triangle icon) indicates that it's a Delta table.</p>
+<div class="admonition note">
+<p class="admonition-title">Note: If you don't see the new table, wait a few seconds and then select Refresh again, or refresh the entire browser tab.</p>
+</div>
+</li>
+<li>
+<p>Now you're going to perform an upsert operation on a Delta table, updating existing records based on specific conditions and inserting new records when no match is found. Add a new code block and paste the following code:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Update existing records and insert new ones based on a condition defined by the columns SalesOrderNumber, OrderDate, CustomerName, and Item.</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">delta.tables</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">deltaTable</span> <span class="o">=</span> <span class="n">DeltaTable</span><span class="o">.</span><span class="n">forPath</span><span class="p">(</span><span class="n">spark</span><span class="p">,</span> <span class="s1">&#39;Tables/sales_silver&#39;</span><span class="p">)</span>
+
+<span class="n">dfUpdates</span> <span class="o">=</span> <span class="n">df</span>
+
+<span class="n">deltaTable</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s1">&#39;silver&#39;</span><span class="p">)</span> \
+  <span class="o">.</span><span class="n">merge</span><span class="p">(</span>
+    <span class="n">dfUpdates</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s1">&#39;updates&#39;</span><span class="p">),</span>
+    <span class="s1">&#39;silver.SalesOrderNumber = updates.SalesOrderNumber and silver.OrderDate = updates.OrderDate and silver.CustomerName = updates.CustomerName and silver.Item = updates.Item&#39;</span>
+  <span class="p">)</span> \
+  <span class="o">.</span><span class="n">whenMatchedUpdate</span><span class="p">(</span><span class="nb">set</span> <span class="o">=</span>
+    <span class="p">{</span>
+
+    <span class="p">}</span>
+  <span class="p">)</span> \
+<span class="o">.</span><span class="n">whenNotMatchedInsert</span><span class="p">(</span><span class="n">values</span> <span class="o">=</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;SalesOrderNumber&quot;</span><span class="p">:</span> <span class="s2">&quot;updates.SalesOrderNumber&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;SalesOrderLineNumber&quot;</span><span class="p">:</span> <span class="s2">&quot;updates.SalesOrderLineNumber&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;OrderDate&quot;</span><span class="p">:</span> <span class="s2">&quot;updates.OrderDate&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;CustomerName&quot;</span><span class="p">:</span> <span class="s2">&quot;updates.CustomerName&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Email&quot;</span><span class="p">:</span> <span class="s2">&quot;updates.Email&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Item&quot;</span><span class="p">:</span> <span class="s2">&quot;updates.Item&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Quantity&quot;</span><span class="p">:</span> <span class="s2">&quot;updates.Quantity&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;UnitPrice&quot;</span><span class="p">:</span> <span class="s2">&quot;updates.UnitPrice&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Tax&quot;</span><span class="p">:</span> <span class="s2">&quot;updates.Tax&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;FileName&quot;</span><span class="p">:</span> <span class="s2">&quot;updates.FileName&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;IsFlagged&quot;</span><span class="p">:</span> <span class="s2">&quot;updates.IsFlagged&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;CreatedTS&quot;</span><span class="p">:</span> <span class="s2">&quot;updates.CreatedTS&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;ModifiedTS&quot;</span><span class="p">:</span> <span class="s2">&quot;updates.ModifiedTS&quot;</span>
+    <span class="p">}</span>
+  <span class="p">)</span> \
+  <span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+</code></pre></div>
+</li>
+<li>
+<p>Run the cell to execute the code using the <strong>▷ (Run cell)</strong> button.</p>
+<p>This operation is important because it enables you to update existing records in the table based on the values of specific columns, and insert new records when no match is found. This is a common requirement when you're loading data from a source system that may contain updates to existing and new records.</p>
+<div class="admonition success">
+<p class="admonition-title">You now have data in your silver delta table that is ready for further transformation and modeling.</p>
+</div>
+</li>
+</ol>
+<h2 id="explore-data-in-the-silver-layer-using-the-sql-endpoint">Explore data in the silver layer using the SQL endpoint</h2>
+<p>Now that you have data in your silver layer, you can use the SQL analytics endpoint to explore the data and perform some basic analysis. This is useful if you're familiar with SQL and want to do some basic exploration of your data. In this exercise we're using the SQL endpoint view in Fabric, but you can use other tools like SQL Server Management Studio (SSMS) and Azure Data Explorer.</p>
+<ol>
+<li>
+<p>Navigate back to your workspace and notice that you now have several items listed. Select the <strong>Sales SQL analytics endpoint</strong> to open your lakehouse in the SQL analytics endpoint view.</p>
+<p><img alt="Screenshot of the SQL endpoint in a lakehouse." src="../img/03b-sql-endpoint-item.png" /></p>
+</li>
+<li>
 <p>Select New SQL query from the ribbon, which will open a SQL query editor. Note that you can rename your query using the … menu item next to the existing query name in the Explorer pane.</p>
-<p>Next, you’ll run two sql queries to explore the data.</p>
+<p>Next, you'll run two sql queries to explore the data.</p>
+</li>
+<li>
 <p>Paste the following query into the query editor and select Run:</p>
-<p>sql
-SELECT YEAR(OrderDate) AS Year
-    , CAST (SUM(Quantity * (UnitPrice + Tax)) AS DECIMAL(12, 2)) AS TotalSales
-FROM sales_silver
-GROUP BY YEAR(OrderDate) 
-ORDER BY YEAR(OrderDate)
-This query calculates the total sales for each year in the sales_silver table. Your results should look like this:</p>
-<p>Screenshot of the results of a SQL query in a lakehouse.</p>
-<p>Next you’ll review which customers are purchasing the most (in terms of quantity). Paste the following query into the query editor and select Run:</p>
-<p>sql
-SELECT TOP 10 CustomerName, SUM(Quantity) AS TotalQuantity
-FROM sales_silver
-GROUP BY CustomerName
-ORDER BY TotalQuantity DESC
-This query calculates the total quantity of items purchased by each customer in the sales_silver table, and then returns the top 10 customers in terms of quantity.</p>
-<p>Data exploration at the silver layer is useful for basic analysis, but you’ll need to transform the data further and model it into a star schema to enable more advanced analysis and reporting. You’ll do that in the next section.</p>
-<p>Transform data for gold layer
-You have successfully taken data from your bronze layer, transformed it, and loaded it into a silver Delta table. Now you’ll use a new notebook to transform the data further, model it into a star schema, and load it into gold Delta tables.</p>
-<p>You could have done all of this in a single notebook, but for this exercise you’re using separate notebooks to demonstrate the process of transforming data from bronze to silver and then from silver to gold. This can help with debugging, troubleshooting, and reuse.</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">YEAR</span><span class="p">(</span><span class="n">OrderDate</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="k">Year</span>
+<span class="w">    </span><span class="p">,</span><span class="w"> </span><span class="k">CAST</span><span class="w"> </span><span class="p">(</span><span class="k">SUM</span><span class="p">(</span><span class="n">Quantity</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">UnitPrice</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Tax</span><span class="p">))</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">))</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">TotalSales</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">sales_silver</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="k">YEAR</span><span class="p">(</span><span class="n">OrderDate</span><span class="p">)</span><span class="w"> </span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="k">YEAR</span><span class="p">(</span><span class="n">OrderDate</span><span class="p">)</span>
+</code></pre></div>
+<p>This query calculates the total sales for each year in the sales_silver table. Your results should look like this:</p>
+<p><img alt="Screenshot of the results of a SQL query in a lakehouse." src="../img/03b-total-sales-sql.png" /></p>
+</li>
+<li>
+<p>Next you'll review which customers are purchasing the most (in terms of quantity). Paste the following query into the query editor and select Run:</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">TOP</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="n">CustomerName</span><span class="p">,</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">Quantity</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">TotalQuantity</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">sales_silver</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">CustomerName</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">TotalQuantity</span><span class="w"> </span><span class="k">DESC</span>
+</code></pre></div>
+<p>This query calculates the total quantity of items purchased by each customer in the sales_silver table, and then returns the top 10 customers in terms of quantity.</p>
+<div class="admonition note">
+<p class="admonition-title">Note: Data exploration at the <strong>Silver layer</strong> is useful for basic analysis ...</p>
+<ul>
+<li>But you need to transform the data further and model it into a star schema.</li>
+<li>This will enable you to do more advanced analysis and reporting.</li>
+<li>You'll do that in the next section.</li>
+</ul>
+</div>
+</li>
+</ol>
+<h2 id="transform-data-for-gold-layer">Transform data for gold layer</h2>
+<p>You have successfully taken data from your bronze layer, transformed it, and loaded it into a silver Delta table. Now you'll use a new notebook to transform the data further, model it into a star schema, and load it into gold Delta tables.</p>
+<div class="admonition note">
+<p class="admonition-title">Note: You could have done all of this in a single notebook ...</p>
+<ul>
+<li>But for this exercise you're using separate notebooks</li>
+<li>This will better demonstrate the process of transforming data from bronze to silver and then from silver to gold.</li>
+<li>And it makes it easier to do debugging, troubleshooting, and for reuse.</li>
+</ul>
+</div>
+<ol>
+<li>
 <p>Return to the workspace home page and create a new notebook called Transform data for Gold.</p>
-<p>In the Explorer pane, add your Sales lakehouse by selecting Add data items and then selecting the Sales lakehouse you created earlier. You should see the sales_silver table listed in the Tables section of the explorer pane.</p>
-<p>In the existing code block, remove the commented text and add the following code to load data to your dataframe and start building your star schema, then run it:</p>
-<p>code</p>
-<h1 id="load-data-to-the-dataframe-as-a-starting-point-to-create-the-gold-layer">Load data to the dataframe as a starting point to create the gold layer</h1>
-<p>df = spark.read.table("Sales.sales_silver")
-Add a new code block and paste the following code to create your date dimension table and run it:</p>
-<p>code
+</li>
+<li>
+<p>In the Explorer pane, add your <strong>Sales</strong> lakehouse by selecting <strong>Add data items</strong> and then selecting the <strong>Sales</strong> lakehouse you created earlier. You should see the <strong>sales_silver</strong> table listed in the <strong>Tables</strong> section of the explorer pane.</p>
+</li>
+<li>
+<p>In the existing code block, remove the commented text and <strong>add the following code</strong> to load data to your dataframe and start building your star schema, then run it:</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="c1"># Load data to the dataframe as a starting point to create the gold layer</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;Sales.sales_silver&quot;</span><span class="p">)</span>
+</code></pre></div>
+<ol>
+<li><strong>Add a new code block</strong> and paste the following code to create your date dimension table and run it:</li>
+</ol>
+<p>```python
 from pyspark.sql.types import *
 from delta.tables import*</p>
 <h1 id="define-the-schema-for-the-dimdate_gold-table">Define the schema for the dimdate_gold table</h1>
@@ -1049,7 +1190,7 @@ from delta.tables import*</p>
     .addColumn("mmmyyyy", StringType()) \
     .addColumn("yyyymm", StringType()) \
     .execute()
-Note: You can run the display(df) command at any time to check the progress of your work. In this case, you’d run ‘display(dfdimDate_gold)’ to see the contents of the dimDate_gold dataframe.</p>
+Note: You can run the display(df) command at any time to check the progress of your work. In this case, you'd run ‘display(dfdimDate_gold)' to see the contents of the dimDate_gold dataframe.</p>
 <p>In a new code block, add and run the following code to create a dataframe for your date dimension, dimdate_gold:</p>
 <p>code
 from pyspark.sql.functions import col, dayofmonth, month, year, date_format</p>
@@ -1061,9 +1202,9 @@ from pyspark.sql.functions import col, dayofmonth, month, year, date_format</p>
         date_format(col("OrderDate"), "MMM-yyyy").alias("mmmyyyy"), \
         date_format(col("OrderDate"), "yyyyMM").alias("yyyymm"), \
     ).orderBy("OrderDate")</p>
-<h1 id="display-the-first-10-rows-of-the-dataframe-to-preview-your-data_1">Display the first 10 rows of the dataframe to preview your data</h1>
+<h1 id="display-the-first-10-rows-of-the-dataframe-to-preview-your-data">Display the first 10 rows of the dataframe to preview your data</h1>
 <p>display(dfdimDate_gold.head(10))
-You’re separating the code out into new code blocks so that you can understand and watch what’s happening in the notebook as you transform the data. In another new code block, add and run the following code to update the date dimension as new data comes in:</p>
+You're separating the code out into new code blocks so that you can understand and watch what's happening in the notebook as you transform the data. In another new code block, add and run the following code to update the date dimension as new data comes in:</p>
 <p>code
 from delta.tables import *</p>
 <p>deltaTable = DeltaTable.forPath(spark, 'Tables/dimdate_gold')</p>
@@ -1090,7 +1231,7 @@ from delta.tables import *</p>
     }
   ) \
   .execute()
-The date dimension is now set up. Now you’ll create your customer dimension.</p>
+The date dimension is now set up. Now you'll create your customer dimension.</p>
 <p>To build out the customer dimension table, add a new code block, paste and run the following code:</p>
 <p>code
 from pyspark.sql.types import *
@@ -1111,20 +1252,20 @@ from pyspark.sql.functions import col, split</p>
 <p>dfdimCustomer_silver = df.dropDuplicates(["CustomerName","Email"]).select(col("CustomerName"),col("Email")) \
     .withColumn("First",split(col("CustomerName"), " ").getItem(0)) \
     .withColumn("Last",split(col("CustomerName"), " ").getItem(1)) </p>
-<h1 id="display-the-first-10-rows-of-the-dataframe-to-preview-your-data_2">Display the first 10 rows of the dataframe to preview your data</h1>
+<h1 id="display-the-first-10-rows-of-the-dataframe-to-preview-your-data_1">Display the first 10 rows of the dataframe to preview your data</h1>
 <p>display(dfdimCustomer_silver.head(10))
 Here you have created a new DataFrame dfdimCustomer_silver by performing various transformations such as dropping duplicates, selecting specific columns, and splitting the “CustomerName” column to create “First” and “Last” name columns. The result is a DataFrame with cleaned and structured customer data, including separate “First” and “Last” name columns extracted from the “CustomerName” column.</p>
-<p>Next we’ll create the ID column for our customers. In a new code block, paste and run the following:</p>
+<p>Next we'll create the ID column for our customers. In a new code block, paste and run the following:</p>
 <p>code
 from pyspark.sql.functions import monotonically_increasing_id, col, when, coalesce, max, lit</p>
 <p>dfdimCustomer_temp = spark.read.table("Sales.dimCustomer_gold")</p>
 <p>MAXCustomerID = dfdimCustomer_temp.select(coalesce(max(col("CustomerID")),lit(0)).alias("MAXCustomerID")).first()[0]</p>
 <p>dfdimCustomer_gold = dfdimCustomer_silver.join(dfdimCustomer_temp,(dfdimCustomer_silver.CustomerName == dfdimCustomer_temp.CustomerName) &amp; (dfdimCustomer_silver.Email == dfdimCustomer_temp.Email), "left_anti")</p>
 <p>dfdimCustomer_gold = dfdimCustomer_gold.withColumn("CustomerID",monotonically_increasing_id() + MAXCustomerID + 1)</p>
-<h1 id="display-the-first-10-rows-of-the-dataframe-to-preview-your-data_3">Display the first 10 rows of the dataframe to preview your data</h1>
+<h1 id="display-the-first-10-rows-of-the-dataframe-to-preview-your-data_2">Display the first 10 rows of the dataframe to preview your data</h1>
 <p>display(dfdimCustomer_gold.head(10))
-Here you’re cleaning and transforming customer data (dfdimCustomer_silver) by performing a left anti join to exclude duplicates that already exist in the dimCustomer_gold table, and then generating unique CustomerID values using the monotonically_increasing_id() function.</p>
-<p>Now you’ll ensure that your customer table remains up-to-date as new data comes in. In a new code block, paste and run the following:</p>
+Here you're cleaning and transforming customer data (dfdimCustomer_silver) by performing a left anti join to exclude duplicates that already exist in the dimCustomer_gold table, and then generating unique CustomerID values using the monotonically_increasing_id() function.</p>
+<p>Now you'll ensure that your customer table remains up-to-date as new data comes in. In a new code block, paste and run the following:</p>
 <p>code
 from delta.tables import *</p>
 <p>deltaTable = DeltaTable.forPath(spark, 'Tables/dimcustomer_gold')</p>
@@ -1150,7 +1291,7 @@ from delta.tables import *</p>
     }
   ) \
   .execute()
-Now you’ll repeat those steps to create your product dimension. In a new code block, paste and run the following:</p>
+Now you'll repeat those steps to create your product dimension. In a new code block, paste and run the following:</p>
 <p>code
 from pyspark.sql.types import *
 from delta.tables import *</p>
@@ -1167,9 +1308,9 @@ from pyspark.sql.functions import col, split, lit, when</p>
 <p>dfdimProduct_silver = df.dropDuplicates(["Item"]).select(col("Item")) \
     .withColumn("ItemName",split(col("Item"), ", ").getItem(0)) \
     .withColumn("ItemInfo",when((split(col("Item"), ", ").getItem(1).isNull() | (split(col("Item"), ", ").getItem(1)=="")),lit("")).otherwise(split(col("Item"), ", ").getItem(1))) </p>
-<h1 id="display-the-first-10-rows-of-the-dataframe-to-preview-your-data_4">Display the first 10 rows of the dataframe to preview your data</h1>
+<h1 id="display-the-first-10-rows-of-the-dataframe-to-preview-your-data_3">Display the first 10 rows of the dataframe to preview your data</h1>
 <p>display(dfdimProduct_silver.head(10))
-Now you’ll create IDs for your dimProduct_gold table. Add the following syntax to a new code block and run it:</p>
+Now you'll create IDs for your dimProduct_gold table. Add the following syntax to a new code block and run it:</p>
 <p>code
 from pyspark.sql.functions import monotonically_increasing_id, col, lit, max, coalesce</p>
 <h1 id="dfdimproduct_temp-dfdimproduct_silver">dfdimProduct_temp = dfdimProduct_silver</h1>
@@ -1177,10 +1318,10 @@ from pyspark.sql.functions import monotonically_increasing_id, col, lit, max, co
 <p>MAXProductID = dfdimProduct_temp.select(coalesce(max(col("ItemID")),lit(0)).alias("MAXItemID")).first()[0]</p>
 <p>dfdimProduct_gold = dfdimProduct_silver.join(dfdimProduct_temp,(dfdimProduct_silver.ItemName == dfdimProduct_temp.ItemName) &amp; (dfdimProduct_silver.ItemInfo == dfdimProduct_temp.ItemInfo), "left_anti")</p>
 <p>dfdimProduct_gold = dfdimProduct_gold.withColumn("ItemID",monotonically_increasing_id() + MAXProductID + 1)</p>
-<h1 id="display-the-first-10-rows-of-the-dataframe-to-preview-your-data_5">Display the first 10 rows of the dataframe to preview your data</h1>
+<h1 id="display-the-first-10-rows-of-the-dataframe-to-preview-your-data_4">Display the first 10 rows of the dataframe to preview your data</h1>
 <p>display(dfdimProduct_gold.head(10))
 This calculates the next available product ID based on the current data in the table, assigns these new IDs to the products, and then displays the updated product information.</p>
-<p>Similar to what you’ve done with your other dimensions, you need to ensure that your product table remains up-to-date as new data comes in. In a new code block, paste and run the following:</p>
+<p>Similar to what you've done with your other dimensions, you need to ensure that your product table remains up-to-date as new data comes in. In a new code block, paste and run the following:</p>
 <p>code
 from delta.tables import *</p>
 <p>deltaTable = DeltaTable.forPath(spark, 'Tables/dimproduct_gold')</p>
@@ -1235,9 +1376,9 @@ dfdimProduct_temp = spark.read.table("Sales.dimProduct_gold")</p>
         , col("df1.UnitPrice") \
         , col("df1.Tax") \
     ).orderBy(col("df1.OrderDate"), col("df2.CustomerID"), col("df3.ItemID"))</p>
-<h1 id="display-the-first-10-rows-of-the-dataframe-to-preview-your-data_6">Display the first 10 rows of the dataframe to preview your data</h1>
+<h1 id="display-the-first-10-rows-of-the-dataframe-to-preview-your-data_5">Display the first 10 rows of the dataframe to preview your data</h1>
 <p>display(dffactSales_gold.head(10))
-Now you’ll ensure that sales data remains up-to-date by running the following code in a new code block:</p>
+Now you'll ensure that sales data remains up-to-date by running the following code in a new code block:</p>
 <p>code
 from delta.tables import *</p>
 <p>deltaTable = DeltaTable.forPath(spark, 'Tables/factsales_gold')</p>
@@ -1264,11 +1405,11 @@ from delta.tables import *</p>
     }
   ) \
   .execute()
-Here you’re using Delta Lake’s merge operation to synchronize and update the factsales_gold table with new sales data (dffactSales_gold). The operation compares the order date, customer ID, and item ID between the existing data (silver table) and the new data (updates DataFrame), updating matching records and inserting new records as needed.</p>
+Here you're using Delta Lake's merge operation to synchronize and update the factsales_gold table with new sales data (dffactSales_gold). The operation compares the order date, customer ID, and item ID between the existing data (silver table) and the new data (updates DataFrame), updating matching records and inserting new records as needed.</p>
 <p>You now have a curated, modeled gold layer that can be used for reporting and analysis.</p>
 <p>Create a semantic model
 In your workspace, you can now use the gold layer to create a report and analyze the data. You can access the semantic model directly in your workspace to create relationships and measures for reporting.</p>
-<p>Note that you can’t use the default semantic model that is automatically created when you create a lakehouse. You must create a new semantic model that includes the gold tables you created in this exercise, from the Explorer.</p>
+<p>Note that you can't use the default semantic model that is automatically created when you create a lakehouse. You must create a new semantic model that includes the gold tables you created in this exercise, from the Explorer.</p>
 <p>In your workspace, navigate to your Sales lakehouse.
 Select New semantic model from the ribbon of the Explorer view.
 Assign the name Sales_Gold to your new semantic model.
@@ -1279,10 +1420,10 @@ dimproduct_gold
 factsales_gold
 This will open the semantic model in Fabric where you can create relationships and measures, as shown here:</p>
 <p>Screenshot of a semantic model in Fabric.</p>
-<p>From here, you or other members of your data team can create reports and dashboards based on the data in your lakehouse. These reports will be connected directly to the gold layer of your lakehouse, so they’ll always reflect the latest data.</p>
+<p>From here, you or other members of your data team can create reports and dashboards based on the data in your lakehouse. These reports will be connected directly to the gold layer of your lakehouse, so they'll always reflect the latest data.</p>
 <p>Clean up resources
-In this exercise, you’ve learned how to create a medallion architecture in a Microsoft Fabric lakehouse.</p>
-<p>If you’ve finished exploring your lakehouse, you can delete the workspace you created for this exercise.</p>
+In this exercise, you've learned how to create a medallion architecture in a Microsoft Fabric lakehouse.</p>
+<p>If you've finished exploring your lakehouse, you can delete the workspace you created for this exercise.</p>
 <p>In the bar on the left, select the icon for your workspace to view all of the items it contains.
 In the … menu on the toolbar, select Workspace settings.
 In the General section, select Remove this workspace.</p>

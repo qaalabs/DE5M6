@@ -745,6 +745,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Lab 3.3 ~ 21 Deployment Pipelines
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -756,6 +769,61 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#create-workspaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create workspaces
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-deployment-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a deployment pipeline
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assign-workspaces-to-stages-of-a-deployment-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Assign workspaces to stages of a deployment pipeline
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-content" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create content
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -790,28 +858,85 @@
 Deployment pipelines in Microsoft Fabric let you automate the process of copying changes made to the content in Fabric items between environments like development, test, and production. You can use deployment pipelines to develop and test content before it reaches end users. In this exercise, you create a deployment pipeline, and assign stages to the pipeline. Then you create some content in a development workspace and use deployment pipelines to deploy it between the Development, Test and Production pipeline stages.</p>
 <p>Note: To complete this exercise, you need to be an member of the Fabric workspace admin role. To assign roles see Roles in workspaces in Microsoft Fabric.</p>
 <p>This lab takes approximately 20 minutes to complete.</p>
-<p>Create workspaces
-Create three workspaces with the Fabric trial enabled.</p>
-<p>Navigate to the Microsoft Fabric home page at <a href="https://app.fabric.microsoft.com/home?experience=fabric">https://app.fabric.microsoft.com/home?experience=fabric</a> in a browser and sign in with your Fabric credentials.
-In the menu bar on the left, select Workspaces (the icon looks similar to 🗇).
-Create a new workspace named Development, selecting a licensing mode that includes Fabric capacity (Trial, Premium, or Fabric).
-Repeat steps 1 &amp; 2, creating two more workspaces named Test, and Production. Your workspaces are: Development, Test, and Production.
-Select the Workspaces icon on the menu bar on the left and confirm that there are three workspaces named: Development, Test, and Production
-Note: If you are prompted to enter a unique name for the workspaces, append one or more random numbers to the words: Development, Test, or Production.</p>
-<p>Create a deployment pipeline
-Next, create a deployment pipeline.</p>
-<p>In the menu bar on the left, select Workspaces.
-Select Deployment Pipelines, then New pipeline.
-In the Add a new deployment pipeline window, give the pipeline a unique name and select Next.
-In the new pipeline window, select Create and continue.
-Assign workspaces to stages of a deployment pipeline
-Assign workspaces to the stages of the deployment pipeline.</p>
-<p>On the left menu bar, select the pipeline you created.
-In the window that appears, expand the options under Assign a workspace on each deployment stage and select the name of the workspace that matches the name of the stage.
-Select the check mark Assign for each deployment stage.
-Screenshot of deployment pipeline.</p>
-<p>Create content
-Fabric items haven’t been created in your workspaces yet. Next, create a lakehouse in the development workspace.</p>
+<div class="admonition info">
+<p class="admonition-title">For this lab you need to navigate to QA Platform and login using the credentials provided</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">It is important that you use an incognito/private mode browser tab and not your work or personal Microsoft login</p>
+</div>
+<p>In this lab, you will sign in to Microsoft Fabric using the email and password from the QA Platform.</p>
+<ol>
+<li>
+<p>Using an <strong>incognito/private mode browser tab</strong> navigate to the <a href="https://app.fabric.microsoft.com/">Fabric portal</a> at: <a href="https://fabric.microsoft.com">https://fabric.microsoft.com</a></p>
+</li>
+<li>
+<p>Follow the prompts, and sign in with the user credentials from the QA Platform:</p>
+<ul>
+<li>Email</li>
+<li>Password</li>
+</ul>
+</li>
+</ol>
+<p>After signing in, you will be redirected to the Fabric home page:</p>
+<p><img alt="Fabric home page" src="../../img/qa-fabric-home.png" /></p>
+<h2 id="create-workspaces">Create workspaces</h2>
+<p>Create three workspaces.</p>
+<ol>
+<li>
+<p>Navigate to the <a href="https://app.fabric.microsoft.com/home?experience=fabric">Microsoft Fabric home page</a> in an incognito/private mode browser tab browser, and sign in with the Fabric credentials from the QA Platform.</p>
+</li>
+<li>
+<p>In the menu bar on the left, select Workspaces (the icon looks similar to 🗇).</p>
+</li>
+<li>
+<p>Create a new workspace named: <strong>Development</strong></p>
+</li>
+<li>
+<p>Create a new workspace named: <strong>Test</strong></p>
+</li>
+<li>
+<p>Create a new workspace named: <strong>Production</strong></p>
+</li>
+<li>
+<p>Select the <strong>Workspaces</strong> icon on the menu bar on the left and confirm that there are three workspaces named: Development, Test, and Production</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you are prompted to enter a unique name for the workspaces, append one or more random numbers to the words: Development, Test, or Production.</p>
+</div>
+</li>
+</ol>
+<h2 id="create-a-deployment-pipeline">Create a deployment pipeline</h2>
+<p>Next, create a deployment pipeline.</p>
+<ol>
+<li>
+<p>In the menu bar on the left, select Workspaces.</p>
+</li>
+<li>
+<p>Select Deployment Pipelines, then New pipeline.</p>
+</li>
+<li>
+<p>In the Add a new deployment pipeline window, give the pipeline a unique name and select Next.</p>
+</li>
+<li>
+<p>In the new pipeline window, select Create and continue.</p>
+</li>
+</ol>
+<h2 id="assign-workspaces-to-stages-of-a-deployment-pipeline">Assign workspaces to stages of a deployment pipeline</h2>
+<p>Assign workspaces to the stages of the deployment pipeline.</p>
+<ol>
+<li>
+<p>On the left menu bar, select the pipeline you created.</p>
+</li>
+<li>
+<p>In the window that appears, expand the options under Assign a workspace on each deployment stage and select the name of the workspace that matches the name of the stage.</p>
+</li>
+<li>
+<p>Select the check mark Assign for each deployment stage.</p>
+<p><img alt="Screenshot of deployment pipeline." src="../img/21-deployment-pipeline.png" /></p>
+</li>
+</ol>
+<h2 id="create-content">Create content</h2>
+<p>Fabric items haven’t been created in your workspaces yet. Next, create a lakehouse in the development workspace.</p>
 <p>In the menu bar on the left, select Workspaces.
 Select the Development workspace.
 Select New Item.
