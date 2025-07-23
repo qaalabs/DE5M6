@@ -10,6 +10,7 @@ nav:
     - Day 1: tne/day1.md
     - Day 2: tne/day2.md
     - Day 3: tne/day3.md
+    - Day 4: tne/day4.md
 
   - "Day 1 - Day 1 - Monitoring & Performance":
     - "Lab 1.1 ~ 01 Create MS Fabric Lakehouse": labs/01-lakehouse.md
@@ -29,6 +30,11 @@ nav:
     - "Lab 3.1 ~ 03b Medallion Architecture": labs/03b-medallion-lakehouse.md
     - "Lab 3.2 ~ 19 Secure Data Access": labs/19-secure-data-access.md
     - "Lab 3.3 ~ 21 Deployment Pipelines": labs/21-deployment-pipelines.md
+
+  - "Day 4 - Day 4 - Improvement & Value":
+    - "Planning for Sprint 1": day4/sprint1.md
+    - "Planning for Sprint 2": day4/sprint2.md
+    - "Planning for Sprint 3": day4/sprint3.md
 
 # Theme
 theme:
