@@ -7,32 +7,63 @@ Note: To complete this exercise, you need to be an member of the Fabric workspac
 
 This lab takes approximately 20 minutes to complete.
 
-Create workspaces
-Create three workspaces with the Fabric trial enabled.
+!!! info "For this lab you need to navigate to QA Platform and login using the credentials provided"
 
-Navigate to the Microsoft Fabric home page at https://app.fabric.microsoft.com/home?experience=fabric in a browser and sign in with your Fabric credentials.
-In the menu bar on the left, select Workspaces (the icon looks similar to 🗇).
-Create a new workspace named Development, selecting a licensing mode that includes Fabric capacity (Trial, Premium, or Fabric).
-Repeat steps 1 & 2, creating two more workspaces named Test, and Production. Your workspaces are: Development, Test, and Production.
-Select the Workspaces icon on the menu bar on the left and confirm that there are three workspaces named: Development, Test, and Production
-Note: If you are prompted to enter a unique name for the workspaces, append one or more random numbers to the words: Development, Test, or Production.
+!!! warning "It is important that you use an incognito/private mode browser tab and not your work or personal Microsoft login"
 
-Create a deployment pipeline
+In this lab, you will sign in to Microsoft Fabric using the email and password from the QA Platform.
+
+1. Using an **incognito/private mode browser tab** navigate to the [Fabric portal](https://app.fabric.microsoft.com/) at: https://fabric.microsoft.com
+
+2. Follow the prompts, and sign in with the user credentials from the QA Platform:
+    - Email
+    - Password
+
+After signing in, you will be redirected to the Fabric home page:
+
+![Fabric home page](../img/qa-fabric-home.png)
+
+## Create workspaces
+Create three workspaces.
+
+1. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric) in an incognito/private mode browser tab browser, and sign in with the Fabric credentials from the QA Platform.
+
+2. In the menu bar on the left, select Workspaces (the icon looks similar to 🗇).
+
+3. Create a new workspace named: **Development**
+
+4. Create a new workspace named: **Test**
+
+5. Create a new workspace named: **Production**
+
+6. Select the **Workspaces** icon on the menu bar on the left and confirm that there are three workspaces named: Development, Test, and Production
+
+    !!! note
+        If you are prompted to enter a unique name for the workspaces, append one or more random numbers to the words: Development, Test, or Production.
+
+## Create a deployment pipeline
 Next, create a deployment pipeline.
 
-In the menu bar on the left, select Workspaces.
-Select Deployment Pipelines, then New pipeline.
-In the Add a new deployment pipeline window, give the pipeline a unique name and select Next.
-In the new pipeline window, select Create and continue.
-Assign workspaces to stages of a deployment pipeline
+1. In the menu bar on the left, select Workspaces.
+
+2. Select Deployment Pipelines, then New pipeline.
+
+3. In the Add a new deployment pipeline window, give the pipeline a unique name and select Next.
+
+4. In the new pipeline window, select Create and continue.
+
+## Assign workspaces to stages of a deployment pipeline
 Assign workspaces to the stages of the deployment pipeline.
 
-On the left menu bar, select the pipeline you created.
-In the window that appears, expand the options under Assign a workspace on each deployment stage and select the name of the workspace that matches the name of the stage.
-Select the check mark Assign for each deployment stage.
-Screenshot of deployment pipeline.
+1. On the left menu bar, select the pipeline you created.
 
-Create content
+2. In the window that appears, expand the options under Assign a workspace on each deployment stage and select the name of the workspace that matches the name of the stage.
+
+3. Select the check mark Assign for each deployment stage.
+
+    ![Screenshot of deployment pipeline.](../img/21-deployment-pipeline.png)
+
+## Create content
 Fabric items haven’t been created in your workspaces yet. Next, create a lakehouse in the development workspace.
 
 In the menu bar on the left, select Workspaces.
