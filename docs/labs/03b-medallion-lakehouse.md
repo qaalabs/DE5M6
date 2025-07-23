@@ -16,9 +16,9 @@ In this lab, you will sign in to Microsoft Fabric using the email and password f
     - Email
     - Password
 
-After signing in, you will be redirected to the Fabric home page:
+3. After signing in, you will be redirected to the Fabric home page:
 
-![Fabric home page](../img/qa-fabric-home.png)
+    ![Fabric home page](../img/qa-fabric-home.png)
 
 ## Create a workspace
 Before working with data in Fabric, you need to create a workspace with the Fabric trial enabled.
@@ -121,8 +121,7 @@ Now that you have some data in the bronze layer of your lakehouse, you can use a
 
     The code you ran loaded the data from the CSV files in the bronze folder into a Spark dataframe, and then displayed the first few rows of the dataframe.
 
-    !!! note
-        - You can clear, hide, and auto-resize the contents of the cell output by selecting the **...** menu at the top left of the output pane.
+    !!! note "Note: You can clear, hide, and auto-resize the contents of the cell output by selecting the **...** menu at the top left of the output pane."
 
 7. Now you'll **add columns for data validation and cleanup**, using a PySpark dataframe to add columns and update the values of some of the existing columns. Use the **+ Code** button to **add a new code block** and add the following code to the cell:
 
@@ -146,130 +145,146 @@ Now that you have some data in the bronze layer of your lakehouse, you can use a
 
 9. Next, you'll define the schema for the **sales_silver** table in the sales database using Delta Lake format. Create a new code block and add the following code to the cell:
 
-code
-# Define the schema for the sales_silver table
-    
-from pyspark.sql.types import *
-from delta.tables import *
-    
-DeltaTable.createIfNotExists(spark) \
-    .tableName("sales.sales_silver") \
-    .addColumn("SalesOrderNumber", StringType()) \
-    .addColumn("SalesOrderLineNumber", IntegerType()) \
-    .addColumn("OrderDate", DateType()) \
-    .addColumn("CustomerName", StringType()) \
-    .addColumn("Email", StringType()) \
-    .addColumn("Item", StringType()) \
-    .addColumn("Quantity", IntegerType()) \
-    .addColumn("UnitPrice", FloatType()) \
-    .addColumn("Tax", FloatType()) \
-    .addColumn("FileName", StringType()) \
-    .addColumn("IsFlagged", BooleanType()) \
-    .addColumn("CreatedTS", DateType()) \
-    .addColumn("ModifiedTS", DateType()) \
-    .execute()
-Run the cell to execute the code using the **▷ (Run cell)** button.
+    ```python
+    # Define the schema for the sales_silver table
+        
+    from pyspark.sql.types import *
+    from delta.tables import *
+        
+    DeltaTable.createIfNotExists(spark) \
+        .tableName("sales.sales_silver") \
+        .addColumn("SalesOrderNumber", StringType()) \
+        .addColumn("SalesOrderLineNumber", IntegerType()) \
+        .addColumn("OrderDate", DateType()) \
+        .addColumn("CustomerName", StringType()) \
+        .addColumn("Email", StringType()) \
+        .addColumn("Item", StringType()) \
+        .addColumn("Quantity", IntegerType()) \
+        .addColumn("UnitPrice", FloatType()) \
+        .addColumn("Tax", FloatType()) \
+        .addColumn("FileName", StringType()) \
+        .addColumn("IsFlagged", BooleanType()) \
+        .addColumn("CreatedTS", DateType()) \
+        .addColumn("ModifiedTS", DateType()) \
+        .execute()
+    ```
 
-Select the … in the Tables section of the Explorer pane and select Refresh. You should now see the new sales_silver table listed. The ▲ (triangle icon) indicates that it's a Delta table.
+10. Run the cell to execute the code using the **:material-play: (Run cell)** button.
 
-Note: If you don't see the new table, wait a few seconds and then select Refresh again, or refresh the entire browser tab.
+11. Select the **...** in the Tables section of the Explorer pane and select Refresh. You should now see the new sales_silver table listed. The :material-triangle: (triangle icon) indicates that it's a Delta table.
 
-Now you're going to perform an upsert operation on a Delta table, updating existing records based on specific conditions and inserting new records when no match is found. Add a new code block and paste the following code:
+    !!! note "Note: If you don't see the new table, wait a few seconds and then select Refresh again, or refresh the entire browser tab."
 
-code
-# Update existing records and insert new ones based on a condition defined by the columns SalesOrderNumber, OrderDate, CustomerName, and Item.
+12. Now you're going to perform an upsert operation on a Delta table, updating existing records based on specific conditions and inserting new records when no match is found. Add a new code block and paste the following code:
 
-from delta.tables import *
-    
-deltaTable = DeltaTable.forPath(spark, 'Tables/sales_silver')
-    
-dfUpdates = df
-    
-deltaTable.alias('silver') \
-  .merge(
-    dfUpdates.alias('updates'),
-    'silver.SalesOrderNumber = updates.SalesOrderNumber and silver.OrderDate = updates.OrderDate and silver.CustomerName = updates.CustomerName and silver.Item = updates.Item'
-  ) \
-   .whenMatchedUpdate(set =
-    {
-          
-    }
-  ) \
- .whenNotMatchedInsert(values =
-    {
-      "SalesOrderNumber": "updates.SalesOrderNumber",
-      "SalesOrderLineNumber": "updates.SalesOrderLineNumber",
-      "OrderDate": "updates.OrderDate",
-      "CustomerName": "updates.CustomerName",
-      "Email": "updates.Email",
-      "Item": "updates.Item",
-      "Quantity": "updates.Quantity",
-      "UnitPrice": "updates.UnitPrice",
-      "Tax": "updates.Tax",
-      "FileName": "updates.FileName",
-      "IsFlagged": "updates.IsFlagged",
-      "CreatedTS": "updates.CreatedTS",
-      "ModifiedTS": "updates.ModifiedTS"
-    }
-  ) \
-  .execute()
-Run the cell to execute the code using the **▷ (Run cell)** button.
+    ```python
+    # Update existing records and insert new ones based on a condition defined by the columns SalesOrderNumber, OrderDate, CustomerName, and Item.
 
-This operation is important because it enables you to update existing records in the table based on the values of specific columns, and insert new records when no match is found. This is a common requirement when you're loading data from a source system that may contain updates to existing and new records.
+    from delta.tables import *
+        
+    deltaTable = DeltaTable.forPath(spark, 'Tables/sales_silver')
+        
+    dfUpdates = df
+        
+    deltaTable.alias('silver') \
+      .merge(
+        dfUpdates.alias('updates'),
+        'silver.SalesOrderNumber = updates.SalesOrderNumber and silver.OrderDate = updates.OrderDate and silver.CustomerName = updates.CustomerName and silver.Item = updates.Item'
+      ) \
+      .whenMatchedUpdate(set =
+        {
+              
+        }
+      ) \
+    .whenNotMatchedInsert(values =
+        {
+          "SalesOrderNumber": "updates.SalesOrderNumber",
+          "SalesOrderLineNumber": "updates.SalesOrderLineNumber",
+          "OrderDate": "updates.OrderDate",
+          "CustomerName": "updates.CustomerName",
+          "Email": "updates.Email",
+          "Item": "updates.Item",
+          "Quantity": "updates.Quantity",
+          "UnitPrice": "updates.UnitPrice",
+          "Tax": "updates.Tax",
+          "FileName": "updates.FileName",
+          "IsFlagged": "updates.IsFlagged",
+          "CreatedTS": "updates.CreatedTS",
+          "ModifiedTS": "updates.ModifiedTS"
+        }
+      ) \
+      .execute()
+    ```
 
-You now have data in your silver delta table that is ready for further transformation and modeling.
+13. Run the cell to execute the code using the **▷ (Run cell)** button.
 
-Explore data in the silver layer using the SQL endpoint
+    This operation is important because it enables you to update existing records in the table based on the values of specific columns, and insert new records when no match is found. This is a common requirement when you're loading data from a source system that may contain updates to existing and new records.
+
+    !!! success "You now have data in your silver delta table that is ready for further transformation and modeling."
+
+## Explore data in the silver layer using the SQL endpoint
 Now that you have data in your silver layer, you can use the SQL analytics endpoint to explore the data and perform some basic analysis. This is useful if you're familiar with SQL and want to do some basic exploration of your data. In this exercise we're using the SQL endpoint view in Fabric, but you can use other tools like SQL Server Management Studio (SSMS) and Azure Data Explorer.
 
-Navigate back to your workspace and notice that you now have several items listed. Select the Sales SQL analytics endpoint to open your lakehouse in the SQL analytics endpoint view.
+1. Navigate back to your workspace and notice that you now have several items listed. Select the **Sales SQL analytics endpoint** to open your lakehouse in the SQL analytics endpoint view.
 
-Screenshot of the SQL endpoint in a lakehouse.
+    ![Screenshot of the SQL endpoint in a lakehouse.](../img/03b-sql-endpoint-item.png)
 
-Select New SQL query from the ribbon, which will open a SQL query editor. Note that you can rename your query using the … menu item next to the existing query name in the Explorer pane.
+2. Select New SQL query from the ribbon, which will open a SQL query editor. Note that you can rename your query using the … menu item next to the existing query name in the Explorer pane.
 
-Next, you'll run two sql queries to explore the data.
+    Next, you'll run two sql queries to explore the data.
 
-Paste the following query into the query editor and select Run:
+3. Paste the following query into the query editor and select Run:
 
-sql
-SELECT YEAR(OrderDate) AS Year
-    , CAST (SUM(Quantity * (UnitPrice + Tax)) AS DECIMAL(12, 2)) AS TotalSales
-FROM sales_silver
-GROUP BY YEAR(OrderDate) 
-ORDER BY YEAR(OrderDate)
-This query calculates the total sales for each year in the sales_silver table. Your results should look like this:
+    ```sql
+    SELECT YEAR(OrderDate) AS Year
+        , CAST (SUM(Quantity * (UnitPrice + Tax)) AS DECIMAL(12, 2)) AS TotalSales
+    FROM sales_silver
+    GROUP BY YEAR(OrderDate) 
+    ORDER BY YEAR(OrderDate)
+    ```
 
-Screenshot of the results of a SQL query in a lakehouse.
+    This query calculates the total sales for each year in the sales_silver table. Your results should look like this:
 
-Next you'll review which customers are purchasing the most (in terms of quantity). Paste the following query into the query editor and select Run:
+    ![Screenshot of the results of a SQL query in a lakehouse.](../img/03b-total-sales-sql.png)
 
-sql
-SELECT TOP 10 CustomerName, SUM(Quantity) AS TotalQuantity
-FROM sales_silver
-GROUP BY CustomerName
-ORDER BY TotalQuantity DESC
-This query calculates the total quantity of items purchased by each customer in the sales_silver table, and then returns the top 10 customers in terms of quantity.
+4. Next you'll review which customers are purchasing the most (in terms of quantity). Paste the following query into the query editor and select Run:
 
-Data exploration at the silver layer is useful for basic analysis, but you'll need to transform the data further and model it into a star schema to enable more advanced analysis and reporting. You'll do that in the next section.
+    ```sql
+    SELECT TOP 10 CustomerName, SUM(Quantity) AS TotalQuantity
+    FROM sales_silver
+    GROUP BY CustomerName
+    ORDER BY TotalQuantity DESC
+    ```
 
-Transform data for gold layer
+    This query calculates the total quantity of items purchased by each customer in the sales_silver table, and then returns the top 10 customers in terms of quantity.
+
+    !!! note "Note: Data exploration at the **Silver layer** is useful for basic analysis ..."
+        - But you need to transform the data further and model it into a star schema.
+        - This will enable you to do more advanced analysis and reporting.
+        - You'll do that in the next section.
+
+## Transform data for gold layer
 You have successfully taken data from your bronze layer, transformed it, and loaded it into a silver Delta table. Now you'll use a new notebook to transform the data further, model it into a star schema, and load it into gold Delta tables.
 
-You could have done all of this in a single notebook, but for this exercise you're using separate notebooks to demonstrate the process of transforming data from bronze to silver and then from silver to gold. This can help with debugging, troubleshooting, and reuse.
+!!! note "Note: You could have done all of this in a single notebook ..."
+    - But for this exercise you're using separate notebooks
+    - This will better demonstrate the process of transforming data from bronze to silver and then from silver to gold.
+    - And it makes it easier to do debugging, troubleshooting, and for reuse.
 
-Return to the workspace home page and create a new notebook called Transform data for Gold.
+1. Return to the workspace home page and create a new notebook called Transform data for Gold.
 
-In the Explorer pane, add your Sales lakehouse by selecting Add data items and then selecting the Sales lakehouse you created earlier. You should see the sales_silver table listed in the Tables section of the explorer pane.
+2. In the Explorer pane, add your **Sales** lakehouse by selecting **Add data items** and then selecting the **Sales** lakehouse you created earlier. You should see the **sales_silver** table listed in the **Tables** section of the explorer pane.
 
-In the existing code block, remove the commented text and add the following code to load data to your dataframe and start building your star schema, then run it:
+3. In the existing code block, remove the commented text and **add the following code** to load data to your dataframe and start building your star schema, then run it:
 
-code
+```python
 # Load data to the dataframe as a starting point to create the gold layer
 df = spark.read.table("Sales.sales_silver")
-Add a new code block and paste the following code to create your date dimension table and run it:
+```
 
-code
+4. **Add a new code block** and paste the following code to create your date dimension table and run it:
+
+```python
 from pyspark.sql.types import *
 from delta.tables import*
     
