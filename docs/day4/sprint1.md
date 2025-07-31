@@ -7,6 +7,7 @@
 ## Quick Wins (1-2 points)
 
 ### Dashboard Design (2 points)
+
 !!! abstract "As a Data Engineer, I want to design a monitoring dashboard so that stakeholders can see pipeline health at a glance."
 
 **Key Tasks:**
@@ -21,6 +22,7 @@
 ---
 
 ### Data Flow Visualization (2 points)
+
 !!! abstract "As a Data Engineer, I want to visualize our ETL data flow so that team members understand the pipeline structure."
 
 **Key Tasks:**
@@ -35,6 +37,7 @@
 ---
 
 ### Production Readiness Assessment (2 points)
+
 !!! abstract "As a Data Engineer, I want to assess what's missing for production deployment so that we can prioritize improvements."
 
 **Key Tasks:**
@@ -49,6 +52,7 @@
 ---
 
 ### Change Management Documentation (1 point)
+
 !!! abstract "As a Data Steward, I want to create a change log for all improvements so we can track what's been changed in the pipeline."
 
 **Key Tasks:**
@@ -65,6 +69,7 @@
 ## Hands-On Tasks (2-3 points)
 
 ### Configuration Externalization (3 points)
+
 !!! abstract "As a Developer, I want to parameterize the data source and output file so that others can reuse it."
 
 **Key Tasks:**
@@ -79,6 +84,7 @@
 ---
 
 ### Basic Python Logging Implementation (2 points)
+
 !!! abstract "As a Data Engineer, I want structured logging in our ETL pipeline so that I can track execution progress and identify issues."
 
 **Key Tasks:**
@@ -93,6 +99,7 @@
 ---
 
 ### Database Connection Health Checks (2 points)
+
 !!! abstract "As a Data Engineer, I want to monitor database connectivity so that I can detect connection issues before they cause pipeline failures."
 
 **Key Tasks:**

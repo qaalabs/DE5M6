@@ -7,9 +7,11 @@
 ## Quick Wins (1-2 points)
 
 ### Data Classification Framework (2 points)
+
 !!! example "As a Data Steward, I want a data classification scheme so that sensitive data is identified and handled appropriately."
 
 **Key Tasks:**
+
 - Document data classification scheme (PII, sensitive, public, confidential)
 - Map customer data fields to classification levels
 - Define handling requirements for each classification
@@ -20,9 +22,11 @@
 ---
 
 ### Compliance Checklist (2 points)
+
 !!! example "As a Compliance Officer, I want a GDPR compliance checklist so that data processing meets regulatory requirements."
 
 **Key Tasks:**
+
 - Create GDPR compliance checklist for data processing
 - Map pipeline activities to legal basis for processing
 - Document data subject rights and response procedures

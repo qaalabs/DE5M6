@@ -3,6 +3,7 @@
 ---
 
 ## Overview
+
 This session transitions from Day 1's "when things work" to Day 2's "when things break" by collecting workplace failure experiences and establishing the foundational concepts of incident vs problem management. This creates the context for today's hands-on breaking and responding activities.
 
 ---
@@ -10,6 +11,7 @@ This session transitions from Day 1's "when things work" to Day 2's "when things
 ## Session Structure
 
 ### 1. Discussion: System Failure Stories - Workplace Edition (12 minutes)
+
 **Learning Type:** Discussion  
 **Format:** Structured sharing with experience capture
 
@@ -33,6 +35,7 @@ Each learner shares briefly (45-60 seconds each):
 ---
 
 ### 2. Acquisition: Incident vs Problem Framework (8 minutes)
+
 **Learning Type:** Acquisition  
 **Format:** Interactive presentation with real examples
 

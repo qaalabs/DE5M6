@@ -1,9 +1,11 @@
 # Day 2: Fire Drill Preparation
 
 ## What's Coming Next
+
 In **20 minutes** time, you'll participate in an **incident response "fire drill"** simulating a data platform failure. You'll work in teams to coordinate technical responses and stakeholder communication under time pressure.
 
 ### You will be allocated to a "Incident Response Team"
+
 **Team Size:** 3-4 people
 
 **Suggested Personas:**
@@ -18,6 +20,7 @@ In **20 minutes** time, you'll participate in an **incident response "fire drill
 ## Your Preparation Task
 
 ### Real Incident Examples
+
 Scan these major incidents to understand what works (and what doesn't) in incident response:
 
 **Cloudflare Global DNS Outage - June 21, 2022**

@@ -1,11 +1,13 @@
 # Day 2: Advanced Breaking Scenarios
 
 ## Overview
+
 This session introduces more complex failure scenarios that mirror real-world production issues.
 
 ## Scenario 1: Performance Issues
 
 ### Setup
+
 **Context:** "Large files and complex processing can cause timeouts and resource issues"
 
 **Breaking Method:**
@@ -14,13 +16,14 @@ Find or create a **much larger dataset** than used in the previous lab
 
 Options:
 
-  - Duplicate your existing file multiple times to create a large CSV
-  - Use online sample datasets (sales data, sensor data, etc.)
-  - Create synthetic data with repeated rows
+- Duplicate your existing file multiple times to create a large CSV
+- Use online sample datasets (sales data, sensor data, etc.)
+- Create synthetic data with repeated rows
 
 **Target:** File should be significantly larger (aim for 10x+ size)
 
 ### Execution & Observation
+
 **Break Process:**
 
 1. **Replace your pipeline's source** with the large file
@@ -36,6 +39,7 @@ Options:
 - How does the monitoring respond to slower processing?
 
 ### Documentation
+
 **Quick Notes:** Write down what you observed for later discussion
 
 ---
@@ -43,6 +47,7 @@ Options:
 ## Scenario 2: Data Corruption Scenarios
 
 ### Setup
+
 **Context:** "Real data often contains mixed quality - some good records, some problematic ones"
 
 **Breaking Method Options** (choose 1-2 to try):
@@ -66,6 +71,7 @@ Options:
 - Create inconsistent row lengths
 
 ### Execution & Observation
+
 **Break Process:**
 
 1. **Choose one corruption type** and modify your data file
@@ -82,6 +88,7 @@ Options:
 - How would a business user know there was an issue?
 
 ### Documentation
+
 **Record findings:** What happened with each corruption type?
 
 ---
@@ -89,6 +96,7 @@ Options:
 ## Scenario 3: Resource Constraints & Timing Issues
 
 ### Setup
+
 **Context:** "Production systems often have multiple processes competing for resources"
 
 **Breaking Method Options:**
@@ -112,6 +120,7 @@ Options:
 - Observe queuing, conflicts, or resource competition
 
 ### Execution & Observation
+
 **Break Process:**
 
 1. **Choose one resource constraint scenario**
@@ -127,6 +136,7 @@ Options:
 - How long before the system recovers to normal performance?
 
 ### Documentation
+
 **Note observations:** System behavior under load
 
 ---

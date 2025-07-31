@@ -1,16 +1,20 @@
 # Day 1: Foundation & Purpose
 
 ## Overview
+
 This session establishes the foundational understanding of why monitoring matters in data operations by connecting personal experiences with business impact and examining real-world communication during system failures.
 
 ---
+
 ## Session Structure
 
 ### 1. Discussion: System Failure Stories (15 minutes)
+
 **Learning Type:** Discussion  
 **Format:** Group discussion with individual sharing
 
 #### Facilitator Instructions:
+
 1. **Opening Question (2 minutes):**
    - "Think of a time when a system failure impacted you personally - could be at work, online shopping, banking, social media. What happened?"
 
@@ -31,12 +35,14 @@ This session establishes the foundational understanding of why monitoring matter
    - "What patterns do you notice in these stories?"
 
 #### Key Questions to Guide Discussion:
+
 - How did you first realise something was wrong?
 - Did anyone tell you what was happening?
 - How long did it take to resolve?
 - What would have made the experience better?
 
 #### Expected Outcomes:
+
 - Learners connect personally with system reliability challenges
 - Common themes emerge: detection, communication, resolution
 - Natural lead-in to why monitoring matters
@@ -44,6 +50,7 @@ This session establishes the foundational understanding of why monitoring matter
 ---
 
 ### 2. Acquisition: Why Monitor? (10 minutes)
+
 **Learning Type:** Acquisition  
 **Format:** Trainer presentation with interactive elements
 
@@ -75,21 +82,25 @@ Monitoring Data     (Metrics, logs, alerts)
 5. **When it breaks, what do we tell people?** (Communication)
 
 #### Interactive Elements:
+
 - Ask: "Which level of the pyramid do you think most organisations focus on?"
 - Quick poll: "Hands up if your workplace monitors at each level"
 
 ---
 
 ### 3. Investigation: Status Page Analysis (15 minutes)
+
 **Learning Type:** Investigation  
 **Format:** Pairs research with report back
 
 #### Setup Instructions (2 minutes):
+
 1. **Form pairs** - mix experience levels if possible
 2. **Assign each pair 1-2 status pages** from the list below
 3. **Research task:** 10 minutes investigation + 3 minutes prep for sharing
 
 #### Status Pages to Research:
+
 Choose from these well-known status pages:
 
 - **AWS:** https://health.aws.amazon.com/health/status
@@ -101,6 +112,7 @@ Choose from these well-known status pages:
 - **Zoom:** https://status.zoom.us/
 
 #### Investigation Questions for Pairs:
+
 Provide each pair with these guiding questions:
 
 **Current Status:**
@@ -126,12 +138,14 @@ Provide each pair with these guiding questions:
 - What builds confidence that they're handling it?
 
 #### Report Back Session (3 minutes):
+
 Each pair shares **one key insight** in 30 seconds:
 
 - "The most interesting thing we noticed was..."
 - "If we were designing a status page, we'd make sure to..."
 
 #### Facilitator Notes:
+
 - **If internet issues:** Have screenshots of status pages prepared as backup
 - **Time management:** Keep sharing tight - use a timer
 - **Follow-up questions:** "How does this connect to monitoring?" "What would happen without these status pages?"
@@ -139,6 +153,7 @@ Each pair shares **one key insight** in 30 seconds:
 ---
 
 ## Transition to Next Session
+
 **Bridge to Lab 5 (2 minutes):**
 
 - "We've talked about why monitoring matters and how companies communicate when things go wrong"
@@ -146,6 +161,7 @@ Each pair shares **one key insight** in 30 seconds:
 - "Our first lab will introduce you to Microsoft Fabric and create a simple data process"
 
 ### Key Takeaways:
+
 By the end of this session, learners should understand:
 
 1. System failures have real business and personal impact

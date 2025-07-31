@@ -3,6 +3,7 @@
 ## Trainer Instructions
 
 ### Opening
+
 **Dramatic tone:**
 "Right, preparation time is over. We have a **LIVE INCIDENT** situation developing with our data platform. You are now the incident response teams for our organization."
 
@@ -12,22 +13,26 @@
 ### Rules & Logistics
 
 **Team Coordination:**
+
 - Your team has a **war room** - your breakout room for internal discussion
 - You can plan, debate, and coordinate freely in your team room
 - BUT - all **official communication** must go through Slack
 
 **Slack Communication Rules:**
+
 - Use your Slack channel for incident updates to stakeholders
 - This is how you communicate with customers, executives, and other teams
 - Write professionally - these messages will be reviewed during debrief
 - First action should be incident announcement to the channel
 
 **Timing:**
+
 - You have **25 minutes** to handle this incident
 - I'll be monitoring your Slack communications
 - You *may* recive additional updates or pressure via Slack as the situation develops
 
 ### Scenario Distribution (1 minute)
+
 **Hand out scenario cards:**
 
 - Read your scenario and understand the situation
@@ -40,6 +45,7 @@
 - Focus on what your team needs to do!
 
 ### Success Criteria
+
 **What we're looking for:**
 
 - Clear, professional communication via Slack
@@ -58,18 +64,21 @@
 ## Facilitator Actions During Briefing
 
 ### Before Starting:
+
 - **Ensure breakout rooms are ready** for each team
 - **Confirm Slack channels are set up** and all learners can access
 - **Have scenario cards ready** to distribute
 - **Set 25-minute timer** visible to all
 
 ### During Briefing:
+
 - **Maintain dramatic energy** - this is a real incident simulation
 - **Check for questions** but keep momentum high
 - **Emphasize Slack communication** - this is key learning objective
 - **Watch for any technical issues** with breakout rooms or Slack
 
 ### After Briefing:
+
 - **Send teams to breakout rooms immediately** after scenario distribution
 - **Monitor Slack channels** for their first posts
 - **Prepare to send escalation messages** during the 25-minute period
@@ -143,6 +152,7 @@
 ## Wrap-up at 25 Minutes
 
 ### End the Drill:
+
 **Announcement:**
 "Time! Step back from your incident response. Well done everyone."
 
@@ -153,6 +163,7 @@
 - **Prepare for 10-minute quick debrief**
 
 ### Transition:
+
 "Before we break, let's do a quick review of your Slack communication and initial responses. Then we'll take a break before the next escalation phase."
 
 ---

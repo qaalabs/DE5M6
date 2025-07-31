@@ -1,8 +1,8 @@
 ## GitHub Status Pages
 
 - https://ingwanelabs.github.io/status/
-- https://ingwanelabs.github.io/status/tuesday-1320/
-- https://ingwanelabs.github.io/status/tuesday-1430/
+- https://ingwanelabs.github.io/status/message-202521320/
+- https://ingwanelabs.github.io/status/message-202521430/
 
 ### Tutor drill app pages
 

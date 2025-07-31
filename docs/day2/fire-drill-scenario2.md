@@ -2,7 +2,7 @@
 
 ---
 
-## Scenario 
+## Scenario
 
 **View the incident on the Company status page:**
 
@@ -10,6 +10,7 @@
 
 
 ## Your Mission
+
 - You are the incident response team.
 - Coordinate your response, investigate the root cause, monitor fixes, and manage stakeholder communication.
 

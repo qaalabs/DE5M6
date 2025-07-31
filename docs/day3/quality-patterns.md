@@ -3,15 +3,19 @@
 ---
 
 ## Overview
+
 This session combines hands-on experience with medallion architecture (Lab 3b) and structured analysis of how quality patterns are implemented in data architecture. Learners see how the DMBOK quality dimensions they studied earlier are addressed through bronze, silver, and gold layer design, then investigate modern quality tools and approaches.
 
 **Key Learning Focus for Today:**
+
 While completing the lab, learners should pay attention to:
+
 - **Bronze layer:** Raw data ingestion - what quality issues exist here?
 - **Silver layer:** Data cleaning and validation - what quality improvements happen?
 - **Gold layer:** Business-ready data - what quality standards are enforced?
 
 **Facilitator Notes:**
+
 - **Circulate during lab** to highlight quality aspects as learners work
 - **Point out quality transformations:** "Notice how the silver layer handles missing values"
 - **Connect to DMBOK:** "This validation step addresses which quality dimension?"
@@ -24,7 +28,9 @@ While completing the lab, learners should pay attention to:
 #### Medallion Quality Mapping Discussion (20 minutes)
 
 **Setup (2 minutes):**
+
 **Facilitator Frame:**
+
 - "You've just built a medallion architecture hands-on"
 - "Now let's analyze how this pattern addresses the DMBOK quality dimensions you studied earlier"
 - "We'll map specific quality improvements to each layer"

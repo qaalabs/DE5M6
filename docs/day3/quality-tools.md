@@ -7,6 +7,7 @@
 "Investigate tools that could automate the quality checks you just implemented in the medallion architecture"
 
 **Team Formation:**
+
 - **Pairs or individuals** (depending on class size)
 - **Each pair/person** takes a different tool category
 

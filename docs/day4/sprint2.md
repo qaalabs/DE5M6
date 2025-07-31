@@ -7,6 +7,7 @@
 ## Quick Wins (1-2 points)
 
 ### Error Classification Matrix (2 points)
+
 !!! tip "As a Data Engineering Team Lead, I want a clear error classification system so that incidents are escalated appropriately."
 
 **Key Tasks:**
@@ -21,6 +22,7 @@
 ---
 
 ### Deployment Documentation (2 points)
+
 !!! tip "As a DevOps Engineer, I want deployment procedures documented so that releases can be executed consistently."
 
 **Key Tasks:**

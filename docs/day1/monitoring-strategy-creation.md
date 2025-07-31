@@ -11,6 +11,7 @@ This production activity synthesizes everything learners have experienced today 
 ### Setup Instructions (3 minutes)
 
 #### Scenario Assignment:
+
 Give each pair a realistic scenario to make their strategy concrete:
 
 **Scenario A: E-commerce Data Platform**
@@ -46,9 +47,11 @@ Give each pair a realistic scenario to make their strategy concrete:
 ### Strategy Development Phase (20 minutes)
 
 #### Framework Template:
+
 Provide pairs with this structured template to complete:
 
 ### **1. What We Monitor (5 minutes)**
+
 Define the key monitoring areas:
 
 **Data Pipeline Health:**
@@ -73,6 +76,7 @@ Define the key monitoring areas:
 - [ ] Security events
 
 ### **2. How We Monitor (5 minutes)**
+
 Choose tools and methods:
 
 **Monitoring Tools:**
@@ -90,6 +94,7 @@ Choose tools and methods:
 - [ ] Predictive monitoring
 
 ### **3. When We Alert (5 minutes)**
+
 Define alert thresholds and escalation:
 
 **Critical Alerts (immediate response required):**
@@ -110,6 +115,7 @@ Define alert thresholds and escalation:
 - Notify: __________________________
 
 ### **4. Who Responds (3 minutes)**
+
 Define roles and responsibilities:
 
 **First Response Team:**
@@ -124,6 +130,7 @@ Define roles and responsibilities:
 - Level 3: _________________________
 
 ### **5. Communication Plan (2 minutes)**
+
 How you communicate during incidents:
 
 **Internal Communication:**
@@ -142,16 +149,19 @@ How you communicate during incidents:
 ### Strategy Sharing & Feedback (7 minutes)
 
 #### Rapid Strategy Showcase (5 minutes):
+
 - Each pair screen shares for 60 seconds
 - Focus on "one key decision we made and why"
 - Other pairs post ONE insight in chat
 
 #### Group Reflection (2 minutes):
+
 - Facilitator reads chat highlights
 - "What common themes do you notice?"
 - "What surprised you about different approaches?"---
 
 ### Expected Outputs:
+
 Each pair should produce:
 
 1. **Completed monitoring strategy template**

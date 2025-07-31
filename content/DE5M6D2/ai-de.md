@@ -12,7 +12,6 @@
 
 ### 6. Where do we draw the line between automation and understanding?
 
-🔽
 ---
 
 ### 1. What is the role of AI in modern data pipelines?
@@ -30,7 +29,7 @@
 - *Could AI help maintain data quality, or might it introduce more risks?*
 - Discuss examples like using AI for data deduplication or anomaly detection—and the risk of false positives or bias.
 
-🔽
+🔻
 ---
 
 ### 4. AI-generated code: helper or hazard?

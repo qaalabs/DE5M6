@@ -14,9 +14,11 @@
 - Explore, transform, and visualise data in the lakehouse
 
 ### Exercise: Create and ingest data
+
 **labs/01-lakehouse.md**
 
 ### Use Apache Spark in Microsoft Fabric
+
 - What is Apache Spark?
 - How to use Apache Spark
 - Prepare to use Apache Spark
@@ -27,6 +29,7 @@
 - Transform data in a Spark Dataframe
 
 ## Exercise: Apache Spark in Fabric
+
 **labs/02-analyze-spark.html**
 
 - Create a workspace
@@ -37,6 +40,7 @@
 - Use Spark to transform data files
 
 ## Ingest data with Dataflow Gen2
+
 - Understand Dataflow Gen2
 - Dataflow Gen2 benefits and limitations
 - Explore Dataflow Gen2

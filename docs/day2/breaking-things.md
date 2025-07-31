@@ -1,6 +1,7 @@
 # Day 2: Breaking Things
 
 ## Overview
+
 This hands-on session introduces failures into working data pipelines.
 You will practice controlled troubleshooting while observing how MS Fabric responds to different types of failures.
 
@@ -19,6 +20,7 @@ You will practice controlled troubleshooting while observing how MS Fabric respo
 ## Part 2: Systematic Breaking & Learning
 
 ### Break Cycle Process
+
 For each break type, follow this 4-step cycle:
 
 1. **Break**   - introduce the failure
@@ -87,8 +89,6 @@ For each break type, follow this 4-step cycle:
 
 - Does Fabric handle data type mismatches gracefully?
 - What happens to the bad data - does it get skipped or cause total failure?
-
-**Discussion**
 
 **Fix & Verify:**
 
