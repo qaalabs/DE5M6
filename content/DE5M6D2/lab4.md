@@ -2,7 +2,7 @@
 
 - GitHub Pages: https://barbourians.github.io/DE5M6/labs/04-ingest-pipeline/
 
-### Activities:
+### Activities
 
 - Create a workspace
 - Create a lakehouse
