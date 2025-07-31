@@ -21,6 +21,7 @@ In this lab, you will sign in to Microsoft Fabric using the email and password f
     ![Fabric home page](../img/qa-fabric-home.png)
 
 ## Create a workspace
+
 Before working with data in Fabric, you need to create a workspace with the Fabric trial enabled.
 
 1. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric) in an incognito/private mode browser tab browser, and sign in with the Fabric credentials from the QA Platform.
@@ -38,6 +39,7 @@ Before working with data in Fabric, you need to create a workspace with the Fabr
     ![Screenshot of an empty workspace in Fabric.](../img/new-workspace.png)
 
 ## Create a lakehouse
+
 Now that you have a workspace, it's time to create a data lakehouse into which you'll ingest data.
 
 1. On the menu bar on the left, select **Create**. In the New page, under the *Data Engineering* section, select **Lakehouse**.
@@ -49,7 +51,8 @@ Now that you have a workspace, it's time to create a data lakehouse into which y
 
     ![New lakehouse.](../img/new-lakehouse.png)
 
-# Create and monitor a Dataflow
+## Create and monitor a Dataflow
+
 In Microsoft Fabric, you can use a Dataflow (Gen2) to ingest data from a wide range of sources. In this exercise, you’ll use a dataflow to get data from a CSV file and load it into a table in your lakehouse.
 
 1. On the **Home** page for your lakehouse, in the **Get data** menu, select **New Dataflow Gen2**.
@@ -77,6 +80,7 @@ In Microsoft Fabric, you can use a Dataflow (Gen2) to ingest data from a wide ra
     ![Screenshot of the products table in the lakehouse page.](../img/18-products-table.png)
 
 ## Create and monitor a Spark notebook
+
 In Microsoft Fabric, you can use notebooks to run Spark code.
 
 1. On the menu bar on the left, select **Create**. In the New page, under the Data Engineering section, select **Notebook**.
@@ -108,6 +112,7 @@ In Microsoft Fabric, you can use notebooks to run Spark code.
     ![Screenshot of the monitoring hub with a notebook activity.](../img/18-monitor-notebook.png)
 
 ## Monitor history for an item
+
 Some items in a workspace might be run multiple times. You can use the monitoring hub to view their run history.
 
 1. In the navigation bar, return to the page for your workspace. Then use the :material-refresh: (**Refresh now**) button for your **Get Product Data** dataflow to re-run it.
@@ -123,6 +128,7 @@ Some items in a workspace might be run multiple times. You can use the monitorin
 5. Close the **Details** pane and use the **Back to main view** button to return to the main monitoring hub page.
 
 ## Customize monitoring hub views
+
 In this exercise you’ve only run a few activities, so it should be fairly easy to find events in the monitoring hub. However, in a real environment you may need to search through a large number of events. Using filters and other view customizations can make this easier.
 
 1. In the monitoring hub, use the **Filter** button to apply the following filter:
@@ -151,6 +157,7 @@ In this exercise you’ve only run a few activities, so it should be fairly easy
     ![Screenshot of the monitoring hub with custom columns.](../img/18-monitor-columns.png)
 
 ## Clean up resources
+
 In this exercise, you have created a lakehouse, a dataflow, and a Spark notebook; and you’ve used the monitoring hub to view item activity.
 
 1. Navigate to Microsoft Fabric in your browser.

@@ -1,4 +1,5 @@
 # Lab: Ingest Data with a Pipeline in Microsoft Fabric
+
 A data lakehouse is a common analytical data store for cloud-scale analytics solutions. One of the core tasks of a data engineer is to implement and manage the ingestion of data from multiple operational data sources into the lakehouse. In Microsoft Fabric, you can implement *extract, transform, and load* (ETL) or *extract, load, and transform* (ELT) solutions for data ingestion through the creation of *pipelines*.
 
 Fabric also supports Apache Spark, enabling you to write and run code to process data at scale. By combining the pipeline and Spark capabilities in Fabric, you can implement complex data ingestion logic that copies data from external sources into the OneLake storage on which the lakehouse is based, and then uses Spark code to perform custom data transformations before loading it into tables for analysis.
@@ -22,6 +23,7 @@ After signing in, you will be redirected to the Fabric home page:
 ![Fabric home page](../img/qa-fabric-home.png)
 
 ## Create a workspace
+
 Before working with data in Fabric, you need to create a workspace with the Fabric trial enabled.
 
 1. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric) in an incognito/private mode browser tab browser, and sign in with the Fabric credentials from the QA Platform.
@@ -38,8 +40,8 @@ Before working with data in Fabric, you need to create a workspace with the Fabr
 
     ![Screenshot of an empty workspace in Fabric.](../img/new-workspace.png)
 
-
 ## Create a lakehouse
+
 Now that you have a workspace, it's time to create a data lakehouse into which you'll ingest data.
 
 1. On the menu bar on the left, select **Create**. In the New page, under the *Data Engineering* section, select **Lakehouse**.
@@ -53,8 +55,8 @@ Now that you have a workspace, it's time to create a data lakehouse into which y
 
 2. On the **Explorer** pane on the left, in the **...** menu for the **Files** node, select **New subfolder** and create a subfolder named **new_data**
 
-
 ## Create a pipeline
+
 A simple way to ingest data is to use a **Copy Data** activity in a pipeline to extract the data from a source and copy it to a file in the lakehouse.
 
 1. On the **Home** page for your lakehouse, select **Get data** and then select **New data pipeline**, and create a new data pipeline named `Ingest Sales Data`
@@ -173,6 +175,7 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 9. In the **Explorer** pane, refresh the view. Then expand **Tables**, and select the **sales** table to see a preview of the data it contains.
 
 ## Modify the pipeline
+
 Now that you've implemented a notebook to transform data and load it into a table, you can incorporate the notebook into a pipeline to create a reusable ETL process.
 
 1. In the hub menu bar on the left select the **Ingest Sales Data** pipeline you created previously.
@@ -237,7 +240,8 @@ Now that you've implemented a notebook to transform data and load it into a tabl
 In this exercise, you implemented a data ingestion solution that uses a pipeline to copy data to your lakehouse from an external source, and then uses a Spark notebook to transform the data and load it into a table.
 
 ---
-## Don't delete the workspace!
+
+## Don't delete the workspace
 
 !!! danger "Do not delete the workspace as you will need it in the next acticity."
 

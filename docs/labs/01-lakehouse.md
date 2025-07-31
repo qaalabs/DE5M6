@@ -1,4 +1,5 @@
 # Lab: Create a Microsoft Fabric Lakehouse
+
 Large-scale data analytics solutions have traditionally been built around a *data warehouse*, in which data is stored in relational tables and queried using SQL. The growth in “big data” (characterized by high *volumes*, *variety*, and *velocity* of new data assets) together with the availability of low-cost storage and cloud-scale distributed compute technologies has led to an alternative approach to analytical data storage; the *data lake*. In a data lake, data is stored as files without imposing a fixed schema for storage. Increasingly, data engineers and analysts seek to benefit from the best features of both of these approaches by combining them in a *data lakehouse*; in which data is stored in files in a data lake and a relational schema is applied to them as a metadata layer so that they can be queried using traditional SQL semantics.
 
 In Microsoft Fabric, a lakehouse provides highly scalable file storage in a *OneLake* store (built on Azure Data Lake Store Gen2) with a metastore for relational objects such as tables and views based on the open source *Delta Lake* table format. Delta Lake enables you to define a schema of tables in your lakehouse that you can query using SQL.
@@ -10,6 +11,7 @@ This lab takes approximately **30** minutes to complete.
 !!! warning "It is important that you use an incognito/private mode browser tab and not your work or personal Microsoft login"
 
 ## Signing in to Microsoft Fabric
+
 In this lab, you will sign in to Microsoft Fabric using the email and password from the QA Platform.
 
 1. Using an **incognito/private mode browser tab** navigate to the [Fabric portal](https://app.fabric.microsoft.com/) at: https://fabric.microsoft.com
@@ -23,6 +25,7 @@ In this lab, you will sign in to Microsoft Fabric using the email and password f
     ![Fabric home page](../img/qa-fabric-home.png)
 
 ## Create a workspace
+
 Before working with data in Fabric, you need to create a workspace with the Fabric trial enabled.
 
 1. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric) in an incognito/private mode browser tab browser, and sign in with the Fabric credentials from the QA Platform.
@@ -40,6 +43,7 @@ Before working with data in Fabric, you need to create a workspace with the Fabr
     ![Screenshot of an empty workspace in Fabric.](../img/new-workspace.png)
 
 ## Create a lakehouse
+
 Now that you have a workspace, it's time to create a data lakehouse into which you'll ingest data.
 
 1. On the menu bar on the left, select **Create**. In the New page, under the *Data Engineering* section, select **Lakehouse**.
@@ -60,6 +64,7 @@ Now that you have a workspace, it's time to create a data lakehouse into which y
 Currently, there are no tables or files in this lakehouse.
 
 ## Upload a file
+
 Fabric provides multiple ways to load data into the lakehouse, including built-in support for pipelines that copy data from external sources and data flows (Gen 2) that you can define using visual tools based on Power Query. However one of the simplest ways to ingest small amounts of data is to upload files or folders from your local computer (or lab VM if applicable).
 
 1. Download the [sales.csv](https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/sales.csv) file from https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/sales.csv, 
@@ -89,6 +94,7 @@ Fabric provides multiple ways to load data into the lakehouse, including built-i
     !!! tip "If the **sales.csv** file does not automatically appear, in the **...** menu for the **data** folder, select **Refresh**."
 
 ## Explore shortcuts
+
 In many scenarios, the data you need to work with in your lakehouse may be stored in some other location. While there are many ways to ingest data into the OneLake storage for your lakehouse, another option is to instead create a shortcut. Shortcuts enable you to include externally sourced data in your analytics solution without the overhead and risk of data inconsistency associated with copying it.
 
 1. In the **...** menu for the **Files** folder, select **New shortcut**.
@@ -98,6 +104,7 @@ In many scenarios, the data you need to work with in your lakehouse may be store
     - Then close the **New shortcut** dialog box without creating a shortcut.
 
 ## Load file data into a table
+
 The sales data you uploaded is in a file, which you can work with directly by using Apache Spark code. However, in many scenarios you may want to load the data from the file into a table so that you can query it using SQL.
 
 1. In the **Explorer** pane, select the **Files/data** folder so you can see the **sales.csv** file it contains.
@@ -123,6 +130,7 @@ The sales data you uploaded is in a file, which you can work with directly by us
     > Files for a delta table are stored in *Parquet* format, and include a subfolder named `_delta_log` in which details of transactions applied to the table are logged.
 
 ## Use SQL to query tables
+
 When you create a lakehouse and define tables in it, a SQL endpoint is automatically created through which the tables can be queried using SQL `SELECT` statements.
 
 1. At the top-right of the Lakehouse page, switch from Lakehouse to SQL analytics endpoint.
@@ -143,6 +151,7 @@ ORDER BY Revenue DESC;
     ![Screenshot of a SQL query with results.](../img/qa-01-sql-query.png)
 
 ## Create a visual query
+
 While many data professionals are familiar with SQL, those with Power BI experience can apply their Power Query skills to create visual queries.
 
 1. On the toolbar, expand the **New SQL query** option and select **New visual query**.
@@ -171,6 +180,7 @@ While many data professionals are familiar with SQL, those with Power BI experie
 ---
 
 ## Clean up resources
+
 In this exercise, you have created a lakehouse and imported data into it. You’ve seen how a lakehouse consists of files and tables stored in a OneLake data store. The managed tables can be queried using SQL, and are included in a default semantic model to support data visualizations.
 
 If you've finished exploring your lakehouse, you can delete the workspace you created for this exercise.

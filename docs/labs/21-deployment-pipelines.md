@@ -24,6 +24,7 @@ After signing in, you will be redirected to the Fabric home page:
 ![Fabric home page](../img/qa-fabric-home.png)
 
 ## Create workspaces
+
 Create three workspaces.
 
 1. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric) in an incognito/private mode browser tab browser, and sign in with the Fabric credentials from the QA Platform.
@@ -42,6 +43,7 @@ Create three workspaces.
         If you are prompted to enter a unique name for the workspaces, append one or more random numbers to the words: Development, Test, or Production.
 
 ## Create a deployment pipeline
+
 Next, create a deployment pipeline.
 
 1. In the menu bar on the left, select Workspaces.
@@ -53,6 +55,7 @@ Next, create a deployment pipeline.
 4. In the new pipeline window, select Create and continue.
 
 ## Assign workspaces to stages of a deployment pipeline
+
 Assign workspaces to the stages of the deployment pipeline.
 
 1. On the left menu bar, select the pipeline you created.
@@ -64,6 +67,7 @@ Assign workspaces to the stages of the deployment pipeline.
     ![Screenshot of deployment pipeline.](../img/21-deployment-pipeline.png)
 
 ## Create content
+
 Fabric items haven’t been created in your workspaces yet. Next, create a lakehouse in the development workspace.
 
 In the menu bar on the left, select Workspaces.
@@ -99,7 +103,6 @@ In this exercise, you created a deployment pipeline, and assigned stages to the 
 In the left navigation bar, select the icon for each workspace to view all of the items it contains.
 In the menu on the top toolbar, select Workspace settings.
 In the General section, select Remove this workspace.
-
 
 ---
 ###### https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/21-implement-cicd.html

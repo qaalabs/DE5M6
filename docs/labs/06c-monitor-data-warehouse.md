@@ -1,4 +1,5 @@
 # Lab: Monitor a data warehouse in Microsoft Fabric
+
 In Microsoft Fabric, a data warehouse provides a relational database for large-scale analytics. Data warehouses in Microsoft Fabric include dynamic management views that you can use to monitor activity and queries.
 
 This lab will take approximately **30** minutes to complete.
@@ -8,6 +9,7 @@ This lab will take approximately **30** minutes to complete.
 !!! warning "It is important that you use an incognito/private mode browser tab and not your work or personal Microsoft login"
 
 ## Signing in to Microsoft Fabric
+
 In this lab, you will sign in to Microsoft Fabric using the email and password from the QA Platform.
 
 1. Using an **incognito/private mode browser tab** navigate to the [Fabric portal](https://app.fabric.microsoft.com/) at: https://fabric.microsoft.com
@@ -21,6 +23,7 @@ In this lab, you will sign in to Microsoft Fabric using the email and password f
     ![Fabric home page](../img/qa-fabric-home.png)
 
 ## Create a workspace
+
 Before working with data in Fabric, you need to create a workspace with the Fabric trial enabled.
 
 1. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric) in an incognito/private mode browser tab browser, and sign in with the Fabric credentials from the QA Platform.
@@ -38,6 +41,7 @@ Before working with data in Fabric, you need to create a workspace with the Fabr
     ![Screenshot of an empty workspace in Fabric.](../img/new-workspace.png)
 
 ## Create a sample data warehouse
+
 Now that you have a workspace, it’s time to create a data warehouse.
 
 1. On the menu bar on the left, select **Create**. In the New page, under the *Data Warehouse* section, select **Sample warehouse** and create a new data warehouse named `sample-dw`
@@ -49,6 +53,7 @@ Now that you have a workspace, it’s time to create a data warehouse.
     ![Screenshot of a new warehouse.](../img/sample-data-warehouse.png)
 
 ## Explore dynamic management views
+
 Microsoft Fabric data warehouses include *dynamic management views* (DMVs), which you can use to identify current activity in the data warehouse instance.
 
 1. In the **sample-dw** data warehouse page, in the **New SQL query** drop-down list, select **New SQL query**.
@@ -92,6 +97,7 @@ Microsoft Fabric data warehouses include *dynamic management views* (DMVs), whic
     AND requests.database_id = DB_ID()
     ORDER BY requests.total_elapsed_time DESC;
     ```
+
 9. Run the modified query and view the results, which show details of all running queries in the database (including this one).
 
 10. In the **New SQL query** drop-down list, select **New SQL query** to add a second query tab. Then in the new empty query tab, run the following code:
@@ -117,6 +123,7 @@ Microsoft Fabric data warehouses include *dynamic management views* (DMVs), whic
     See [Monitor connections, sessions, and requests using DMVs](https://learn.microsoft.com/fabric/data-warehouse/monitor-using-dmv) in the Microsoft Fabric documentation for more information about using DMVs.
 
 ## Explore query insights
+
 Microsoft Fabric data warehouses provide *query insights* - a special set of views that provide details about the queries being run in your data warehouse.
 
 1. In the **sample-dw** data warehouse page, in the **New SQL query** drop-down list, select **New SQL query**.
@@ -151,6 +158,7 @@ Microsoft Fabric data warehouses provide *query insights* - a special set of vie
 ---
 
 ## Clean up resources
+
 In this exercise, you have used dynamic management views and query insights to monitor activity in a Microsoft Fabric data warehouse.
 
 If you've finished exploring your data warehouse, you can delete the workspace you created for this exercise.

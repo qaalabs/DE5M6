@@ -1,4 +1,5 @@
 # Lab: Create and use Dataflows (Gen2) in Microsoft Fabric
+
 In Microsoft Fabric, Dataflows (Gen2) connect to various data sources and perform transformations in Power Query Online. They can then be used in Data Pipelines to ingest data into a lakehouse or other analytical store, or to define a dataset for a Power BI report.
 
 This lab is designed to introduce the different elements of Dataflows (Gen2), and not create a complex solution that may exist in an enterprise. This lab takes **approximately 30 minutes** to complete.
@@ -20,6 +21,7 @@ In this lab, you will sign in to Microsoft Fabric using the email and password f
     ![Fabric home page](../img/qa-fabric-home.png)
 
 ## Create a workspace
+
 Before working with data in Fabric, you need to create a workspace with the Fabric trial enabled.
 
 1. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric) in an incognito/private mode browser tab browser, and sign in with the Fabric credentials from the QA Platform.
@@ -37,6 +39,7 @@ Before working with data in Fabric, you need to create a workspace with the Fabr
     ![Screenshot of an empty workspace in Fabric.](../img/new-workspace.png)
 
 ## Create a lakehouse
+
 Now that you have a workspace, it's time to create a data lakehouse into which you'll ingest data.
 
 1. On the menu bar on the left, select **Create**. In the New page, under the *Data Engineering* section, select **Lakehouse**.
@@ -49,6 +52,7 @@ Now that you have a workspace, it's time to create a data lakehouse into which y
     ![New lakehouse.](../img/new-lakehouse.png)
 
 ## Create a Dataflow (Gen2) to ingest data
+
 Now that you have a lakehouse, you need to ingest some data into it. One way to do this is to define a dataflow that encapsulates an *extract, transform, and load* (ETL) process.
 
 1. In the home page for your lakehouse, select **Get data > New Dataflow Gen2**
@@ -84,11 +88,11 @@ Now that you have a lakehouse, you need to ingest some data into it. One way to 
     - Set the *New column name* to: **MonthNo**
     - Set the *Data type* to: **Whole number**
     - Add this *Custom column formula*: `Date.Month([OrderDate])`
-    
+
     ![Custom column in Power Query editor.](../img/05-custom-column.png)
 
 6. Click **OK** to create the column. Notice how the step to add the custom column is added to the query.
-    
+
     The resulting column is displayed in the data pane:
 
     ![Query with a custom column step.](../img/05-custom-column-added.png)
@@ -134,6 +138,7 @@ Now that you have a lakehouse, you need to ingest some data into it. One way to 
 6. On the toolbar ribbon, select the **Home** tab. Then select **Save & run** and wait for the **Dataflow 1 dataflow** to be created in your workspace.
 
 ## Add a dataflow to a pipeline
+
 You can include a dataflow as an activity in a pipeline. Pipelines are used to orchestrate data ingestion and processing activities, enabling you to combine dataflows with other kinds of operation in a single, scheduled process. Pipelines can be created in a few different experiences, including Data Factory experience.
 
 1. From your Fabric-enabled workspace, select **+ New item > Data pipeline**
@@ -175,6 +180,7 @@ You can include a dataflow as an activity in a pipeline. Pipelines are used to o
 ---
 
 ## Clean up resources
+
 If you've finished exploring dataflows in Microsoft Fabric, you can delete the workspace you created for this exercise.
 
 1. Navigate to Microsoft Fabric in your browser.

@@ -1,4 +1,5 @@
 # Lab: Use Data Activator in Fabric
+
 Data Activator in Microsoft Fabric takes action based on what’s happening in your data.
 Data Activator lets you monitor your data and create triggers to react to your data changes.
 
