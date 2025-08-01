@@ -1,0 +1,6 @@
+MD013: false  # Line length
+
+MD033:
+  allowed_elements: [small]  # inline html
+
+MD041: false  # First line in file should be a top level heading h1
