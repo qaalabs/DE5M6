@@ -1,4 +1,4 @@
-# Day 3: Day 3 - Quality & Governance
+# Day 3 - Quality & Governance
 
 ## Session 1
 - `09:30` **Discussion**: What does good data mean to you? (10 mins)

@@ -1,4 +1,4 @@
-# Day 1: Day 1 - Monitoring & Performance
+# Day 1 - Monitoring & Performance
 
 ## Session 1
 - `09:30` VM Setup & Welcome (20 mins)
@@ -11,9 +11,9 @@
 ## Session 2
 
 - `11:00` Introduction to Microsoft Fabric (10 mins)
-- `11:10` **Practice**: [Lab 1.1 ~ 01 Create MS Fabric Lakehouse](../labs/01-lakehouse.md) (30 mins)
+- `11:10` **Practice**: [Lab 1.1 ~ 01 Create Fabric Lakehouse](../labs/01-lakehouse.md) (30 mins)
 - `11:40` **Practice**: [Lab 1.2 ~ 05 Dataflows Gen2](../labs/05-dataflows-gen2.md) (30 mins)
-- `12:10` **Discussion**: What could go wrong with what we just built? (10 mins)
+- `12:10` **Discussion**: What could go wrong? (10 mins)
 
 ## 🥪🥤 Lunch Break
 

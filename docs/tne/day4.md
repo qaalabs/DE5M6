@@ -1,4 +1,4 @@
-# Day 4: Day 4 - Improvement & Value
+# Day 4 - Improvement & Value
 
 ## Session 1
 - `09:30` VM Setup & Welcome (10 mins)

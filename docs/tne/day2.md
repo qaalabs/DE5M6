@@ -1,4 +1,4 @@
-# Day 2: Day 2 - Incident Response
+# Day 2 - Incident Response
 
 ## Session 1
 - `09:30` Welcome (10 mins)
