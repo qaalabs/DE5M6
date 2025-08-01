@@ -111,7 +111,7 @@
 
 ## What to Watch For
 
-### During the Drill:
+### During the Drill
 
 **Slack Communication Quality:**
 

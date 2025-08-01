@@ -13,7 +13,7 @@ This session establishes the foundational understanding of why monitoring matter
 **Learning Type:** Discussion  
 **Format:** Group discussion with individual sharing
 
-#### Facilitator Instructions:
+#### Facilitator Instructions
 
 1. **Opening Question (2 minutes):**
    - "Think of a time when a system failure impacted you personally - could be at work, online shopping, banking, social media. What happened?"
@@ -54,7 +54,7 @@ This session establishes the foundational understanding of why monitoring matter
 **Learning Type:** Acquisition  
 **Format:** Trainer presentation with interactive elements
 
-#### Key Points to Cover:
+#### Key Points to Cover
 
 **From Personal Pain to Business Impact (3 minutes):**
 
@@ -81,7 +81,7 @@ Monitoring Data     (Metrics, logs, alerts)
 4. **When it breaks, how do we know?** (Alerting)
 5. **When it breaks, what do we tell people?** (Communication)
 
-#### Interactive Elements:
+#### Interactive Elements
 
 - Ask: "Which level of the pyramid do you think most organisations focus on?"
 - Quick poll: "Hands up if your workplace monitors at each level"
@@ -111,7 +111,7 @@ Choose from these well-known status pages:
 - **Stripe:** https://status.stripe.com/
 - **Zoom:** https://status.zoom.us/
 
-#### Investigation Questions for Pairs:
+#### Investigation Questions for Pairs
 
 Provide each pair with these guiding questions:
 
@@ -137,14 +137,14 @@ Provide each pair with these guiding questions:
 - What would be helpful if you were a customer?
 - What builds confidence that they're handling it?
 
-#### Report Back Session (3 minutes):
+#### Report Back Session (3 minutes)
 
 Each pair shares **one key insight** in 30 seconds:
 
 - "The most interesting thing we noticed was..."
 - "If we were designing a status page, we'd make sure to..."
 
-#### Facilitator Notes:
+#### Facilitator Notes
 
 - **If internet issues:** Have screenshots of status pages prepared as backup
 - **Time management:** Keep sharing tight - use a timer
@@ -160,7 +160,7 @@ Each pair shares **one key insight** in 30 seconds:
 - "Now let's start building something we can monitor"
 - "Our first lab will introduce you to Microsoft Fabric and create a simple data process"
 
-### Key Takeaways:
+### Key Takeaways
 
 By the end of this session, learners should understand:
 

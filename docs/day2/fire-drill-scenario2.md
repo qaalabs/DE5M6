@@ -8,7 +8,6 @@
 
 - [INCIDENT: Customer Dashboard ~ Incident Escalation Update](https://ingwanelabs.github.io/status/tuesday-1440/)
 
-
 ## Your Mission
 
 - You are the incident response team.

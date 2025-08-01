@@ -68,8 +68,6 @@ For each break type, follow this 4-step cycle:
 - How long does it take to identify the problem?
 - Is the difference clear between this and the file error?
 
-**Discussion**
-
 **Fix & Verify:**
 
 - Add the column header back

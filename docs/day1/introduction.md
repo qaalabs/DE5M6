@@ -3,11 +3,13 @@
 ## Agenda
 
 ### Explore end-to-end analytics with Microsoft Fabric
+
 - Microsoft Fabric
 - Data teams and Fabric
 - Enable and use Microsoft Fabric
 
 ### Get started with lakehouses in Microsoft Fabric
+
 - What is a lakehouse
 - Work with a Fabric lakehouse
 - Load data into a lakehouse
@@ -30,7 +32,7 @@
 
 ## Exercise: Apache Spark in Fabric
 
-**labs/02-analyze-spark.html**
+**labs/02-analyze-spark.md**
 
 - Create a workspace
 - Create a lakehouse and upload files
