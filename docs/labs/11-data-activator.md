@@ -11,4 +11,7 @@ https://learn.microsoft.com/en-us/fabric/real-time-intelligence/data-activator/a
     This exercise is deprecated, and will be removed or updated soon.
     The instructions are no longer accurate, and the exercise is unsupported.
 
+---
+<small><b>Source:
 https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/11-data-activator.html
+</b></small>

@@ -246,4 +246,6 @@ In this exercise, you implemented a data ingestion solution that uses a pipeline
 !!! danger "Do not delete the workspace as you will need it in the next acticity."
 
 ---
-###### Source: https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/04-ingest-pipeline.html
+<small><b>Source:
+https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/04-ingest-pipeline.html
+</b></small>

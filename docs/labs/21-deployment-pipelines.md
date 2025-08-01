@@ -105,4 +105,6 @@ In the menu on the top toolbar, select Workspace settings.
 In the General section, select Remove this workspace.
 
 ---
-###### https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/21-implement-cicd.html
+<small><b>Source:
+https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/21-implement-cicd.html
+</b></small>

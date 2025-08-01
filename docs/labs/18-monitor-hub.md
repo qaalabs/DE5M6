@@ -171,4 +171,6 @@ In this exercise, you have created a lakehouse, a dataflow, and a Spark notebook
 You can now close the incognito/private mode browser tab, and click **Submit** on the Microsoft Fabric Playground hands-on lab.
 
 ---
-###### Source: https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/18-monitor-hub.html
+<small><b>Source:
+https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/18-monitor-hub.html
+</b></small>

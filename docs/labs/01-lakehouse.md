@@ -139,12 +139,12 @@ When you create a lakehouse and define tables in it, a SQL endpoint is automatic
 
 2. Use the **New SQL query** button to open a new query editor, and enter the following SQL query:
 
-```sql
-SELECT Item, SUM(Quantity * UnitPrice) AS Revenue
-FROM sales
-GROUP BY Item
-ORDER BY Revenue DESC;
-```
+    ```sql
+    SELECT Item, SUM(Quantity * UnitPrice) AS Revenue
+    FROM sales
+    GROUP BY Item
+    ORDER BY Revenue DESC;
+    ```
 
 3. Use the :material-play: **Run** button to run the query and view the results, which should show the total revenue for each product.
 
@@ -196,4 +196,6 @@ If you've finished exploring your lakehouse, you can delete the workspace you cr
 You can now close the incognito/private mode browser tab, and click **Submit** on the Microsoft Fabric Playground hands-on lab.
 
 ---
-###### Source: https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/01-lakehouse.html
+<small><b>Source:
+https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/01-lakehouse.html
+</b></small>

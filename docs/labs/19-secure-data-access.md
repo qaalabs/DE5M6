@@ -162,8 +162,10 @@ Select the publicholidays table and wait for the data to load. Only the data in 
 ---
 
 ## Clean up resources
+
 In this exercise, you secured data using workspace access controls, item access controls and, OneLake data access roles.
 
 ---
-###### https://docs.microsoft.com/learn/modules/secure-data-access-fabric/
-###### https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/19-secure-data-access.html
+<small><b>Source:
+https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/19-secure-data-access.html
+</b></small>

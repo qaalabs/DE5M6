@@ -116,7 +116,7 @@ Now that you have some data in the bronze layer of your lakehouse, you can use a
 
 6. When the cell command has completed, review the output below the cell, which should look similar to this:
 
-    ```text
+    ```none
     Index SalesOrderNumber SalesOrderLineNumber OrderDate  CustomerName Email        Item                Quantity UnitPrice Tax
     1     SO49172          1                    2021-01-01 Brian Howard brian@aw.com Road-250 Red        1        2443.35   195.468
     2     SO49173          1                    2021-01-01 Linda Alvare linda@aw.com Mountain-200 Silver 1        2071.4197 165.7136
@@ -658,5 +658,6 @@ From here, you or other members of your data team can create reports and dashboa
 In this exercise, you've learned how to create a medallion architecture in a Microsoft Fabric lakehouse.
 
 ---
-###### https://docs.microsoft.com/learn/modules/create-medallion-architecture-fabric-lakehouse/
-###### https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/03b-medallion-lakehouse.html
+<small><b>Source:
+https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/03b-medallion-lakehouse.html
+</b></small>

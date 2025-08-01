@@ -194,4 +194,6 @@ If you've finished exploring dataflows in Microsoft Fabric, you can delete the w
 You can now close the incognito/private mode browser tab, and click **Submit** on the Microsoft Fabric Playground hands-on lab.
 
 ---
-###### Source: https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/05-dataflows-gen2.html
+<small><b>Source:
+https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/05-dataflows-gen2.html
+</b></small>
