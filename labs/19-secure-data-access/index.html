@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lab-secure-data-access" class="md-skip">
+        <a href="#lab-secure-data-access-in-microsoft-fabric" class="md-skip">
           Skip to content
         </a>
       
@@ -371,7 +371,7 @@
   
   
   <span class="md-ellipsis">
-    Day 1 - Day 1 - Monitoring & Performance
+    Day 1 - Monitoring & Performance
     
   </span>
   
@@ -382,7 +382,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            Day 1 - Day 1 - Monitoring & Performance
+            Day 1 - Monitoring & Performance
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -398,7 +398,7 @@
   
   
   <span class="md-ellipsis">
-    Lab 1.1 ~ 01 Create MS Fabric Lakehouse
+    Lab 1.1 ~ 01 Create Fabric Lakehouse
     
   </span>
   
@@ -531,7 +531,7 @@
   
   
   <span class="md-ellipsis">
-    Day 2 - Day 2 - Incident Response
+    Day 2 - Incident Response
     
   </span>
   
@@ -542,7 +542,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
-            Day 2 - Day 2 - Incident Response
+            Day 2 - Incident Response
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -693,7 +693,7 @@
   
   
   <span class="md-ellipsis">
-    Day 3 - Day 3 - Quality & Governance
+    Day 3 - Quality & Governance
     
   </span>
   
@@ -704,7 +704,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
-            Day 3 - Day 3 - Quality & Governance
+            Day 3 - Quality & Governance
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -747,6 +747,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Lab 3.2 ~ 19 Secure Data Access
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -758,6 +771,70 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-workspace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a workspace
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-data-warehouse" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a data warehouse
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-lakehouse" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a lakehouse
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apply-workspace-access-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apply workspace access controls
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clean-up-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clean up resources
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -817,7 +894,7 @@
   
   
   <span class="md-ellipsis">
-    Day 4 - Day 4 - Improvement & Value
+    Day 4 - Improvement & Value
     
   </span>
   
@@ -828,7 +905,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
-            Day 4 - Day 4 - Improvement & Value
+            Day 4 - Improvement & Value
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -924,47 +1001,94 @@
 
 
 
-<h1 id="lab-secure-data-access">Lab: Secure Data Access</h1>
-<p>Secure data access in Microsoft Fabric
-Microsoft Fabric has a multi-layer security model for managing data access. Security can be set for an entire workspace, for individual items, or through granular permissions in each Fabric engine. In this exercise, you secure data using workspace, and item access controls and OneLake data access roles.</p>
-<p>This lab takes approximately 45 minutes to complete.</p>
-<p>Create a workspace
-Before working with data in Fabric, create a workspace with the Fabric trial enabled.</p>
-<p>Navigate to the Microsoft Fabric home page at <a href="https://app.fabric.microsoft.com/home?experience=fabric">https://app.fabric.microsoft.com/home?experience=fabric</a> in a browser and sign in with your Fabric credentials.
-In the menu bar on the left, select Workspaces (the icon looks similar to 🗇).
-Create a new workspace with a name of your choice, selecting a licensing mode that includes Fabric capacity (Trial, Premium, or Fabric).
-When your new workspace opens, it should be empty.</p>
-<p>Screenshot of an empty workspace in Fabric.</p>
-<p>Note: When you create a workspace, you automatically become a member of the Workspace Admin role.</p>
-<p>Create a data warehouse
-Next, create a data warehouse in the workspace you created:</p>
-<p>Click + New Item. On the New item page, under the Store Data section, select Sample warehouse and create a new data warehouse with a name of your choice.</p>
+<h1 id="lab-secure-data-access-in-microsoft-fabric">Lab: Secure Data Access in Microsoft Fabric</h1>
+<p>Microsoft Fabric has a multi-layer security model for managing data access. Security can be set for an entire workspace, for individual items, or through granular permissions in each Fabric engine. In this exercise, you secure data using workspace, and item access controls and OneLake data access roles.</p>
+<p>This lab takes approximately <strong>45</strong> minutes to complete.</p>
+<h2 id="create-a-workspace">Create a workspace</h2>
+<ol>
+<li>
+<p>Navigate to the <a href="https://app.fabric.microsoft.com/home?experience=fabric">Microsoft Fabric home page</a> in an incognito/private mode browser tab browser, and sign in with the Fabric credentials from the QA Platform.</p>
+</li>
+<li>
+<p>In the menu bar on the left, select Workspaces (the icon looks similar to 🗇).</p>
+</li>
+<li>
+<p>Create a <strong>New workspace</strong>:</p>
+<ul>
+<li>Give it a name of your choice. For example: <code>fab_workspace</code></li>
+<li>Leave all other options as the default values</li>
+<li>Click <strong>Apply</strong></li>
+</ul>
+</li>
+<li>
+<p>When your new workspace opens, it should be empty.</p>
+<p><img alt="Screenshot of an empty workspace in Fabric." src="../../img/new-workspace.png" /></p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">When you create a workspace, you automatically become a member of the Workspace Admin role.</p>
+</div>
+<h2 id="create-a-data-warehouse">Create a data warehouse</h2>
+<p>Next, create a data warehouse in the workspace you created:</p>
+<ol>
+<li>
+<p>Click <strong>+ New Item</strong>. On the <em>New item</em> page, under the <em>Store Data</em> section, select <strong>Sample warehouse</strong> and create a new data warehouse with a name of your choice.</p>
 <p>After a minute or so, a new warehouse will be created:</p>
-<p>Screenshot of a new warehouse.</p>
-<p>Create a lakehouse
-Next, create a lakehouse in the workspace you created.</p>
-<p>In the menu bar on the left, select Workspaces (the icon looks similar to 🗇).
-Select the workspace you created.
-In the workspace, select the + New Item button and then select Lakehouse. Create a new Lakehouse with the name of your choice.</p>
-<p>After a minute or so, a new Lakehouse will be created:</p>
-<p>Screenshot of a new lakehouse in Fabric.</p>
-<p>Select the Start with sample data tile and then select the Public holidays sample. After a minute or so, the lakehouse will be populated with data.
-Apply workspace access controls
-Workspace roles are used to control access to workspaces and the content within them. Workspace roles can be assigned when users need to see all items in a workspace, when they need to manage workspace access, or create new Fabric items, or when they need specific permissions to view, modify or share content in the workspace.</p>
-<p>In this exercise, you add a user to a workspace role, apply permissions and, see what is viewable when each set of permissions is applied. You open two browsers and sign-in as different users. In one browser, you’ll be a Workspace Admin and in the other, you’ll sign-in as a second, less privileged user. In one browser, the Workspace Admin changes permissions for the second user and in the second browser, you’re able to see the effects of changing permissions.</p>
-<p>In the menu bar on the left, select Workspaces (the icon looks similar to 🗇).
-Next select the workspace you created.
-Select on Manage access on the top of the screen.
-Note: You’ll see the user you’re logged, who is a a member of the Workspace Admin role because you created the workspace. No other users are assigned access to the workspace yet.</p>
-<p>Next, you’ll see what a user without permissions on the workspace can view. In your browser, open an InPrivate window. In the Microsoft Edge browser, select the ellipse at the top right corner and select New InPrivate Window.
-Enter <a href="https://app.fabric.microsoft.com">https://app.fabric.microsoft.com</a> and sign-in as the second user you’re using for testing.
-On the bottom left corner of your screen, select Microsoft Fabric and then select Data Warehouse. Next select Workspaces (the icon looks similar to 🗇).
-Note: The second user doesn’t have access to the workspace, so it’s not viewable.</p>
+<p><img alt="Screenshot of a new warehouse." src="../../img/19-new-sample-warehouse.png" /></p>
+</li>
+</ol>
+<h2 id="create-a-lakehouse">Create a lakehouse</h2>
+<p>Next, create a lakehouse in the workspace you created.</p>
+<ol>
+<li>
+<p>On the menu bar on the left, select <strong>Create</strong>. In the New page, under the <em>Data Engineering</em> section, select <strong>Lakehouse</strong>.</p>
+<ul>
+<li>Give it a name of your choice. For example: <code>fab_lakehouse</code></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">If the <strong>Create</strong> option is not pinned to the sidebar, you need to select the ellipsis (…) option first.</p>
+</div>
+<p>After a minute or so, a new empty lakehouse will be created.</p>
+<p><img alt="New lakehouse." src="../../img/new-lakehouse.png" /></p>
+</li>
+<li>
+<p>Select the <strong>Start with sample data</strong> tile and then select the <strong>Public holidays</strong> sample. After a minute or so, the lakehouse will be populated with data.</p>
+</li>
+</ol>
+<h2 id="apply-workspace-access-controls">Apply workspace access controls</h2>
+<p>Workspace roles are used to control access to workspaces and the content within them. Workspace roles can be assigned when users need to see all items in a workspace, when they need to manage workspace access, or create new Fabric items, or when they need specific permissions to view, modify or share content in the workspace.</p>
+<p>In this exercise, you add a user to a workspace role, apply permissions and, see what is viewable when each set of permissions is applied. You will also be added to another users workspace and you will be able to view their workspace items.</p>
+<p>In your workspace you'll be a Workspace Admin and in the other workspaces you'll be a less privileged user.</p>
+<ol>
+<li>
+<p>In the menu bar on the left, select <strong>Workspaces</strong> (the icon looks similar to 🗇).</p>
+</li>
+<li>
+<p>Next select the workspace you created.</p>
+</li>
+<li>
+<p>Select on <strong>Manage access</strong> on the top of the screen.</p>
+<div class="admonition note">
+<p class="admonition-title">You'll see the user you're logged, who is a a member of the Workspace Admin role because you created the workspace.</p>
+<ul>
+<li>No other users are assigned access to the workspace yet.</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Next, you'll see what a user without permissions on the workspace can view. In your browser, open an InPrivate window. In the Microsoft Edge browser, select the ellipse at the top right corner and select New InPrivate Window.</p>
+</li>
+<li>
+<p>Enter <a href="https://app.fabric.microsoft.com">https://app.fabric.microsoft.com</a> and sign-in as the second user you're using for testing.</p>
+</li>
+</ol>
+<p>On the bottom left corner of your screen, select Microsoft Fabric and then select Data Warehouse. Next select Workspaces (the icon looks similar to 🗇).</p>
+<p>Note: The second user doesn't have access to the workspace, so it's not viewable.</p>
 <p>Next, you assign the Workspace Viewer role to the second user and see that the role grants read access to the warehouse in the workspace.
-Return to the browser window where you’re logged in as the Workspace Admin. Ensure you’re still on the page that shows the workspace you created. It should have your new workspace items, and the sample warehouse and lakehouse, listed at the bottom of the page.
+Return to the browser window where you're logged in as the Workspace Admin. Ensure you're still on the page that shows the workspace you created. It should have your new workspace items, and the sample warehouse and lakehouse, listed at the bottom of the page.
 Select Manage access at the top right of the screen.
-Select Add people or groups. Enter the email of the second user you’re testing with. Select Add to assign the user to the workspace Viewer role.
-Return to the InPrivate browser window where you’re logged in as the second user and select refresh button on the browser to refresh session permissions assigned to the second user.
+Select Add people or groups. Enter the email of the second user you're testing with. Select Add to assign the user to the workspace Viewer role.
+Return to the InPrivate browser window where you're logged in as the second user and select refresh button on the browser to refresh session permissions assigned to the second user.
 Select the Workspaces icon on the left menu bar (the icon looks similar to 🗇) and select on the workspace name you created as the Workspace Admin user. The second user can now see all of the items in the workspace because they were assigned the Workspace Viewer role.</p>
 <p>Screenshot of workspace items in Fabric.</p>
 <p>Select the warehouse and open it.
@@ -974,7 +1098,7 @@ When the lakehouse opens, click on the dropdown box at the top right corner of t
 Select the publicholidays table and wait for the data to be displayed. Data in the lakehouse table is readable from the SQL analytics endpoint because the user is a member of the Workspace Viewer role that grants read permissions on the SQL analytics endpoint.
 Apply item access control
 Item permissions control access to individual Fabric items within a workspace, like warehouses, lakehouses and semantic models. In this exercise, you remove the Workspace Viewer permissions applied in the previous exercise and then apply item level permissions on the warehouse so a less privileged user can only view the warehouse data, not the lakehouse data.</p>
-<p>Return to the browser window where you’re logged in as the Workspace Admin. Select Workspaces from the left navigation pane.
+<p>Return to the browser window where you're logged in as the Workspace Admin. Select Workspaces from the left navigation pane.
 Select the workspace that you created to open it.
 Select Manage access from the top of the screen.
 Select the word Viewer under the name of the second user. On the menu that appears, select Remove.</p>
@@ -985,28 +1109,28 @@ In the workspace, hover over the name of your warehouse and an ellipse (…) wil
 In the box that appears, under Additional permissions check Read all data using SQL (ReadData) and uncheck all other boxes.</p>
 <p>Screenshot of warehouse permissions being granted in Fabric.</p>
 <p>Select Grant</p>
-<p>Return to the browser window where you’re logged in as the second user. Refresh the browser view.</p>
+<p>Return to the browser window where you're logged in as the second user. Refresh the browser view.</p>
 <p>The second user no longer has access to the workspace and instead has access to only the warehouse. You can no longer browse workspaces on the left navigation pane to find the warehouse. Select OneLake on the left navigation menu to find the warehouse.</p>
 <p>Select the warehouse. On the screen that appears, select Open from the top menu bar.</p>
 <p>When the warehouse view appears, select the Date table to view table data. The rows are viewable because the user still has read access to the warehouse because ReadData permissions were applied by using item permissions on the warehouse.
 Apply OneLake data access roles in a Lakehouse
 OneLake data access roles let you create custom roles within a Lakehouse and grant read permissions to folders you specify. OneLake data access roles is currently a Preview feature.</p>
 <p>In this exercise, you assign an item permission and create a OneLake data access role and experiment with how they work together to restrict access to data in a Lakehouse.</p>
-<p>Stay in the browser where you’re logged in as the second user.
-Select OneLake on the left navigation bar. The second user doesn’t see the lakehouse.
-Return to the browser where you’re logged in as the Workspace Admin.
+<p>Stay in the browser where you're logged in as the second user.
+Select OneLake on the left navigation bar. The second user doesn't see the lakehouse.
+Return to the browser where you're logged in as the Workspace Admin.
 Select Workspaces on the left menu and select your workspace. Hover over the name of the lakehouse.
 Select on the ellipse (…) to the right of the ellipse and select Manage permissions</p>
 <p>Screenshot of setting permissions on a lakehouse in Fabric.</p>
 <p>On the screen that appears, select Add user.
 Assign the second user to the lakehouse and ensure none of the checkboxes on the Grant People Access window are checked.</p>
 <p>Screenshot of the grant access lakehouse window in Fabric.</p>
-<p>Select Grant. The second user now has read permissions on the lakehouse. Read permission only allows the user to see metadata for the lakehouse but not the underlying data. Next we’ll validate this.
-Return to the browser where you’re logged in as the second user. Refresh the browser.
+<p>Select Grant. The second user now has read permissions on the lakehouse. Read permission only allows the user to see metadata for the lakehouse but not the underlying data. Next we'll validate this.
+Return to the browser where you're logged in as the second user. Refresh the browser.
 Select OneLake in the left navigation pane.
 Select the lakehouse and open it.
-Select Open on the top menu bar. You’re unable to expand the tables or files even though read permission was granted. Next, you grant the second user access to a specific folder using OneLake data access permissions.
-Return to the browser where you’re logged in as the workspace administrator.
+Select Open on the top menu bar. You're unable to expand the tables or files even though read permission was granted. Next, you grant the second user access to a specific folder using OneLake data access permissions.
+Return to the browser where you're logged in as the workspace administrator.
 Select Workspaces from the left navigation bar.
 Select your workspace name.
 Select the lakehouse.
@@ -1018,16 +1142,15 @@ When the lakehouse opens, select Manage OneLake data access on the top menu bar 
 <p>Screenshot of the folder assignment in the manage OneLake data access feature.</p>
 <p>When the role finishes creating, select Assign role and assign the role to your second user, select Add and, select Save.</p>
 <p>Screenshot of the folder assignment in the manage OneLake data access feature.</p>
-<p>Return to the browser where you’re logged in as the second user. Ensure you’re still on the page where the lakehouse is open. Refresh the browser.
-Select the publicholidays table and wait for the data to load. Only the data in the publicholidays table is accessible to the user because the user was assigned to the custom OneLake data access role. The role permits them to see only the data in the publicholidays table, not data in any of the other tables, files, or folders.
-Clean up resources
-In this exercise, you secured data using workspace access controls, item access controls and, OneLake data access roles.</p>
-<p>In the left navigation bar, select the icon for your workspace to view all of the items it contains.
-In the menu on the top toolbar, select Workspace settings.
-In the General section, select Remove this workspace.</p>
+<p>Return to the browser where you're logged in as the second user. Ensure you're still on the page where the lakehouse is open. Refresh the browser.
+Select the publicholidays table and wait for the data to load. Only the data in the publicholidays table is accessible to the user because the user was assigned to the custom OneLake data access role. The role permits them to see only the data in the publicholidays table, not data in any of the other tables, files, or folders.</p>
 <hr />
-<h6 id="httpsdocsmicrosoftcomlearnmodulessecure-data-access-fabric"><a href="https://docs.microsoft.com/learn/modules/secure-data-access-fabric/">https://docs.microsoft.com/learn/modules/secure-data-access-fabric/</a></h6>
-<h6 id="httpsmicrosoftlearninggithubiomslearn-fabricinstructionslabs19-secure-data-accesshtml"><a href="https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/19-secure-data-access.html">https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/19-secure-data-access.html</a></h6>
+<h2 id="clean-up-resources">Clean up resources</h2>
+<p>In this exercise, you secured data using workspace access controls, item access controls and, OneLake data access roles.</p>
+<hr />
+<p><small><b>Source:
+<a href="https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/19-secure-data-access.html">https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/19-secure-data-access.html</a>
+</b></small></p>
 
 
 
