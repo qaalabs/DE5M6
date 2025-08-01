@@ -16,4 +16,4 @@
 
 <hr>
 
-**MS Fabric Playground**: https://app.qa.com/lab/microsoft-fabric-playground/
+**MS Fabric Playground**: https://bud.sso.app.qa.com/lab/microsoft-fabric-playground/

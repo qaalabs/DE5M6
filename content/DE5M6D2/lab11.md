@@ -11,3 +11,7 @@
 - Create an object
 - Create a trigger
 - Update and stop a trigger
+
+<hr>
+
+**MS Fabric Playground**: https://bud.sso.app.qa.com/lab/microsoft-fabric-playground/
