@@ -27,7 +27,7 @@
 
 ## Session 4
 
-- `14:50` **Investigation**: [Cloud monitoring comparison](../day1/cloud-monitoring-comparison.md) (30 mins)
+- `14:50` **Investigation**: Cloud monitoring comparison (30 mins)
 - `15:20` **Activity**: Create monitoring strategy (20 mins)
 - `15:40` **Report-Back**: Share monitoring strategies (10 mins)
 
