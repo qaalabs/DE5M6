@@ -1,9 +1,0 @@
-## 🧪 Lab 1.2 ~ 04 Ingest Pipeline
-
-- https://barbourians.github.io/DE5M6/labs/04-ingest-pipeline/
-
-### Activities
-
-<hr>
-
-**MS Fabric Playground**: https://bud.sso.app.qa.com/lab/microsoft-fabric-playground/

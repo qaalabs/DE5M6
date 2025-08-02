@@ -2,7 +2,6 @@
 
 ### Morning
 
-- Welcome & VM Setup
 - Discussion about system failure
 - Status page analysis
 
@@ -10,7 +9,7 @@
 - Lab 1.1 ~ 01 Create Fabric Lakehouse
 - Lab 1.2 ~ 05 Dataflows (Gen2)
 
-## Afternoon
+### Afternoon
 
 - Lab 1.3 ~ 18 Monitor Hub
 - Lab 1.4 ~ 06c Monitor Warehouse
