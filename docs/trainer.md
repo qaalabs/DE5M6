@@ -1,25 +1,28 @@
 # Trainer Notes
-
 ## Day 1 - Monitoring & Performance
 
 ### Session 1
 
 - **Discussion**: [System failure impact](day1/system-failure.md)
-- **Presentation**: [Why monitor?](day1/why-monitor.md)
-- **Investigation**: [Status page analysis](day1/status-page-analysis.md)
+- Why monitor?
+- **Investigation**: Status page analysis
 
 ### Session 2
 
 - Introduction to Microsoft Fabric
+- **Practice**: [Lab 1.1 ~ 01 Create Fabric Lakehouse](labs/01-lakehouse.md)
+- **Practice**: [Lab 1.2 ~ 05 Dataflows Gen2](labs/05-dataflows-gen2.md)
 - **Discussion**: What could go wrong?
 
 ### Session 3
 
+- **Practice**: [Lab 1.3 ~ 18 Monitor Hub](labs/18-monitor-hub.md)
+- **Practice**: [Lab 1.4 ~ 06c Monitor Warehouse](labs/06c-monitor-data-warehouse.md)
 - **Discussion**: What surprised you about monitoring tools?
 
 ### Session 4
 
-- **Investigation**: [Cloud monitoring comparison](day1/cloud-monitoring-comparison.md)
+- **Investigation**: Cloud monitoring comparison
 - **Activity**: Create monitoring strategy
 - **Report-Back**: Share monitoring strategies
 
@@ -29,18 +32,20 @@
 
 ### Session 1
 
+- **Practice**: [Lab 2.1 ~ 04 Ingest Pipeline](labs/04-ingest-pipeline.md)
 - **Discussion**: When a system broke at work
-- **Practice**: [Lab 04 ~ Break it systematically](../day2/breaking-things.md)
+- **Practice**: [Lab 04 ~ Break it systematically](day2/breaking-things.md)
 
 ### Session 2
 
-- **Practice**: [Lab 04 ~ More complex breaks](../day2/complex-breaking.md)
+- **Practice**: [Lab 04 ~ More complex breaks](day2/complex-breaking.md)
 - **Discussion**: Share findings
+- **Demo**: [Lab ~ 11 Data Activator](labs/11-data-activator.md)
 - **Discussion**: AI in Data Engineering
 
 ### Session 3
 
-- **Investigation**: [Fire Drill preparation](../day2/incident-response-prep.md)
+- **Investigation**: [Fire Drill preparation](day2/incident-response-prep.md)
 - Scenario 1 briefing
 - Fire Drill Round 1
 - **Discussion**: Fire drill debrief
@@ -64,16 +69,19 @@
 
 ### Session 2
 
+- **Practice**: [Lab 3.1 ~ 03b Medallion Architecture](labs/03b-medallion-lakehouse.md)
 - **Discussion**: Quality patterns analysis
 - **Investigation**: Quality tools
 
 ### Session 3
 
+- **Practice**: [Lab 3.2 ~ 19 Secure Data Access](labs/19-secure-data-access.md)
 - **Discussion**: Security vs Accessibility trade-offs
 - **Investigation**: Governance Approaches Investigation
 
 ### Session 4
 
+- **Practice**: [Lab 3.3 ~ 21 Deployment Pipelines](labs/21-deployment-pipelines.md)
 - **Discussion**: Deployment governance
 - **Workshop**: Governance integration
 
@@ -84,22 +92,26 @@
 ### Session 1
 
 - Explore Product Backlog
-- [Planning for Sprint 1](../day4/sprint1.md)
+- [Planning for Sprint 1](day4/sprint1.md)
 - Sprint Block 1
 
 ### Session 2
 
 - Stand-Up 1
-- [Planning for Sprint 2](../day4/sprint2.md)
+- [Planning for Sprint 2](day4/sprint2.md)
 - Sprint Block 2
 
 ### Session 3
 
 - Stand-Up 2
-- [Planning for Sprint 3](../day4/sprint3.md)
+- [Planning for Sprint 3](day4/sprint3.md)
 - Sprint Block 3
 
 ### Session 4
 
 - Team Demos & Sprint Review
 - Sprint Retrospective
+
+---
+
+
