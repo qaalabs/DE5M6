@@ -1,8 +1,10 @@
 # Day 1 - Monitoring & Performance
 
 ## Session 1
-- `09:30` VM Setup & Welcome (20 mins)
-- `09:50` **Discussion**: System failure impact (20 mins)
+
+- `09:30` Welcome to Day 1 of DE5 Module 6 (10 mins)
+- `09:40` VM Setup (20 mins)
+- `10:00` **Discussion**: System failure impact (10 mins)
 - `10:10` Why monitor? (10 mins)
 - `10:20` **Investigation**: Status page analysis (20 mins)
 
@@ -21,7 +23,7 @@
 
 - `13:20` **Practice**: [Lab 1.3 ~ 18 Monitor Hub](../labs/18-monitor-hub.md) (30 mins)
 - `13:50` **Practice**: [Lab 1.4 ~ 06c Monitor Warehouse](../labs/06c-monitor-data-warehouse.md) (30 mins)
-- `14:20` **Discussion**: What surprised you about monitoring tools? (10 mins)
+- `14:20` **Discussion**: Monitoring tools (10 mins)
 
 ## ☕ Afternoon Break
 

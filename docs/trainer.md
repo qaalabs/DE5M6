@@ -1,4 +1,5 @@
 # Trainer Notes
+
 ## Day 1 - Monitoring & Performance
 
 ### Session 1
@@ -18,7 +19,7 @@
 
 - **Practice**: [Lab 1.3 ~ 18 Monitor Hub](labs/18-monitor-hub.md)
 - **Practice**: [Lab 1.4 ~ 06c Monitor Warehouse](labs/06c-monitor-data-warehouse.md)
-- **Discussion**: What surprised you about monitoring tools?
+- **Discussion**: Monitoring tools
 
 ### Session 4
 

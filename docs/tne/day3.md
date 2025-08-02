@@ -1,6 +1,7 @@
 # Day 3 - Quality & Governance
 
 ## Session 1
+
 - `09:30` **Discussion**: What does good data mean to you? (10 mins)
 - `09:40` Quality Data - why it matters (10 mins)
 - `09:50` **Investigation**: DMBOK's 6 data quality dimensions (40 mins)

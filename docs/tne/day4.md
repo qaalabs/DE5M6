@@ -1,6 +1,7 @@
 # Day 4 - Improvement & Value
 
 ## Session 1
+
 - `09:30` VM Setup & Welcome (10 mins)
 - `09:40` Explore Product Backlog (10 mins)
 - `09:50` [Planning for Sprint 1](../day4/sprint1.md) (10 mins)
