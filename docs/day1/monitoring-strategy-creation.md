@@ -1,7 +1,7 @@
 # Day 1: Monitoring Strategy Creation
----
 
 ## Overview
+
 This production activity synthesizes everything learners have experienced today - the labs, status page analysis, and cloud platform research - into a comprehensive monitoring strategy. Working in pairs, they create a tangible monitoring framework that could be applied in real-world scenarios.
 
 ---
@@ -10,7 +10,7 @@ This production activity synthesizes everything learners have experienced today 
 
 ### Setup Instructions (3 minutes)
 
-#### Scenario Assignment:
+#### Scenario Assignment
 
 Give each pair a realistic scenario to make their strategy concrete:
 
