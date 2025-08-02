@@ -16,7 +16,7 @@
     
     
       
-        <title>Day 1: Foundation & Purpose - DE5M6 ~ Data Operations</title>
+        <title>System Failure Stories - DE5M6 ~ Data Operations</title>
       
     
     
@@ -58,7 +58,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#day-1-foundation-purpose" class="md-skip">
+        <a href="#system-failure-stories" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Day 1: Foundation &amp; Purpose
+              System Failure Stories
             
           </span>
         </div>
@@ -464,29 +464,6 @@
   
   <span class="md-ellipsis">
     Lab 1.4 ~ 06c Monitor Warehouse
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cloud-monitoring-comparison/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Cloud monitoring comparison
     
   </span>
   
@@ -908,32 +885,25 @@
 
 
 
-<h1 id="day-1-foundation-purpose">Day 1: Foundation &amp; Purpose</h1>
-<h2 id="overview">Overview</h2>
-<p>This session establishes the foundational understanding of why monitoring matters in data operations by connecting personal experiences with business impact and examining real-world communication during system failures.</p>
-<hr />
-<h2 id="session-structure">Session Structure</h2>
-<h3 id="1-discussion-system-failure-stories-15-minutes">1. Discussion: System Failure Stories (15 minutes)</h3>
-<p><strong>Learning Type:</strong> Discussion<br />
-<strong>Format:</strong> Group discussion with individual sharing</p>
-<h4 id="facilitator-instructions">Facilitator Instructions</h4>
-<ol>
-<li><strong>Opening Question (2 minutes):</strong></li>
-<li>
-<p>"Think of a time when a system failure impacted you personally - could be at work, online shopping, banking, social media. What happened?"</p>
-</li>
-<li>
-<p><strong>Individual Reflection (3 minutes):</strong></p>
-</li>
+<h1 id="system-failure-stories">System Failure Stories</h1>
+<ul>
+<li><strong>Learning Type:</strong> Discussion  </li>
+<li><strong>Format:</strong> Group discussion with individual sharing</li>
+</ul>
+<h2 id="facilitator-instructions">Facilitator Instructions</h2>
+<h3 id="opening-question">Opening Question</h3>
+<ul>
+<li>Think of a time when a system failure impacted you personally</li>
+<li>Could be at work, online shopping, banking, social media.</li>
+<li>What happened?</li>
+</ul>
+<h3 id="individual-reflection">Individual Reflection</h3>
+<ul>
 <li>Give learners time to think of their example</li>
-<li>
-<p>Encourage them to consider: What broke? How did they find out? What was the impact?</p>
-</li>
-<li>
-<p><strong>Sharing Round (8 minutes):</strong></p>
-</li>
-<li>Each learner shares their story (1-2 minutes each)</li>
-<li>
+<li>Encourage them to consider: What broke? How did they find out? What was the impact?</li>
+</ul>
+<h3 id="sharing-round">Sharing Round</h3>
+<p>Each learner shares their story (1-2 minutes each)</p>
 <p>As facilitator, listen for common themes:</p>
 <ul>
 <li>How they discovered the problem</li>
@@ -941,132 +911,25 @@
 <li>Business/personal impact</li>
 <li>Resolution time</li>
 </ul>
-</li>
-<li>
-<p><strong>Pattern Recognition (2 minutes):</strong></p>
-</li>
+<h3 id="pattern-recognition">Pattern Recognition</h3>
+<ul>
 <li>Summarise common themes you heard</li>
-<li>"What patterns do you notice in these stories?"</li>
-</ol>
-<h4 id="key-questions-to-guide-discussion">Key Questions to Guide Discussion:</h4>
+<li>What patterns do you notice in these stories?</li>
+</ul>
+<hr />
+<h2 id="key-questions-to-guide-discussion">Key Questions to Guide Discussion</h2>
 <ul>
 <li>How did you first realise something was wrong?</li>
 <li>Did anyone tell you what was happening?</li>
 <li>How long did it take to resolve?</li>
 <li>What would have made the experience better?</li>
 </ul>
-<h4 id="expected-outcomes">Expected Outcomes:</h4>
+<h3 id="expected-outcomes">Expected Outcomes</h3>
 <ul>
 <li>Learners connect personally with system reliability challenges</li>
 <li>Common themes emerge: detection, communication, resolution</li>
 <li>Natural lead-in to why monitoring matters</li>
 </ul>
-<hr />
-<h3 id="2-acquisition-why-monitor-10-minutes">2. Acquisition: Why Monitor? (10 minutes)</h3>
-<p><strong>Learning Type:</strong> Acquisition<br />
-<strong>Format:</strong> Trainer presentation with interactive elements</p>
-<h4 id="key-points-to-cover">Key Points to Cover</h4>
-<p><strong>From Personal Pain to Business Impact (3 minutes):</strong></p>
-<ul>
-<li>Personal frustration = lost customers/revenue for businesses</li>
-<li>System downtime costs: Amazon loses £2.8M per minute of downtime</li>
-<li>Reputation damage can last longer than the outage</li>
-</ul>
-<p><strong>The Monitoring Pyramid (4 minutes):</strong>
-<div class="highlight"><pre><span></span><code>Business Impact     (Customer complaints, lost revenue)
-        ↑
-Service Impact      (Application slow/down, data unavailable)
-        ↑
-Technical Issues    (CPU high, disk full, network timeout)
-        ↑
-Monitoring Data     (Metrics, logs, alerts)
-</code></pre></div></p>
-<p><strong>Key Monitoring Questions (3 minutes):</strong></p>
-<ol>
-<li><strong>Is it working?</strong> (Availability monitoring)</li>
-<li><strong>Is it working well?</strong> (Performance monitoring)  </li>
-<li><strong>Will it keep working?</strong> (Predictive monitoring)</li>
-<li><strong>When it breaks, how do we know?</strong> (Alerting)</li>
-<li><strong>When it breaks, what do we tell people?</strong> (Communication)</li>
-</ol>
-<h4 id="interactive-elements">Interactive Elements</h4>
-<ul>
-<li>Ask: "Which level of the pyramid do you think most organisations focus on?"</li>
-<li>Quick poll: "Hands up if your workplace monitors at each level"</li>
-</ul>
-<hr />
-<h3 id="3-investigation-status-page-analysis-15-minutes">3. Investigation: Status Page Analysis (15 minutes)</h3>
-<p><strong>Learning Type:</strong> Investigation<br />
-<strong>Format:</strong> Pairs research with report back</p>
-<h4 id="setup-instructions-2-minutes">Setup Instructions (2 minutes):</h4>
-<ol>
-<li><strong>Form pairs</strong> - mix experience levels if possible</li>
-<li><strong>Assign each pair 1-2 status pages</strong> from the list below</li>
-<li><strong>Research task:</strong> 10 minutes investigation + 3 minutes prep for sharing</li>
-</ol>
-<h4 id="status-pages-to-research">Status Pages to Research:</h4>
-<p>Choose from these well-known status pages:</p>
-<ul>
-<li><strong>AWS:</strong> <a href="https://health.aws.amazon.com/health/status">https://health.aws.amazon.com/health/status</a></li>
-<li><strong>Microsoft Azure:</strong> <a href="https://status.azure.com/">https://status.azure.com/</a></li>
-<li><strong>Google Cloud:</strong> <a href="https://status.cloud.google.com/">https://status.cloud.google.com/</a></li>
-<li><strong>GitHub:</strong> <a href="https://www.githubstatus.com/">https://www.githubstatus.com/</a></li>
-<li><strong>Slack:</strong> <a href="https://status.slack.com/">https://status.slack.com/</a></li>
-<li><strong>Stripe:</strong> <a href="https://status.stripe.com/">https://status.stripe.com/</a></li>
-<li><strong>Zoom:</strong> <a href="https://status.zoom.us/">https://status.zoom.us/</a></li>
-</ul>
-<h4 id="investigation-questions-for-pairs">Investigation Questions for Pairs</h4>
-<p>Provide each pair with these guiding questions:</p>
-<p><strong>Current Status:</strong></p>
-<ul>
-<li>What's the overall system health right now?</li>
-<li>How is information organised? (by service, region, etc.)</li>
-</ul>
-<p><strong>Historical Incidents:</strong></p>
-<ul>
-<li>Look at 1-2 recent incidents - what information is provided?</li>
-<li>How detailed are the updates?</li>
-<li>How frequently were updates posted?</li>
-</ul>
-<p><strong>Communication Style:</strong></p>
-<ul>
-<li>How technical is the language?</li>
-<li>What do they tell users about impact?</li>
-<li>Do they explain what they're doing to fix it?</li>
-</ul>
-<p><strong>What Works Well:</strong></p>
-<ul>
-<li>What would be helpful if you were a customer?</li>
-<li>What builds confidence that they're handling it?</li>
-</ul>
-<h4 id="report-back-session-3-minutes">Report Back Session (3 minutes)</h4>
-<p>Each pair shares <strong>one key insight</strong> in 30 seconds:</p>
-<ul>
-<li>"The most interesting thing we noticed was..."</li>
-<li>"If we were designing a status page, we'd make sure to..."</li>
-</ul>
-<h4 id="facilitator-notes">Facilitator Notes</h4>
-<ul>
-<li><strong>If internet issues:</strong> Have screenshots of status pages prepared as backup</li>
-<li><strong>Time management:</strong> Keep sharing tight - use a timer</li>
-<li><strong>Follow-up questions:</strong> "How does this connect to monitoring?" "What would happen without these status pages?"</li>
-</ul>
-<hr />
-<h2 id="transition-to-next-session">Transition to Next Session</h2>
-<p><strong>Bridge to Lab 5 (2 minutes):</strong></p>
-<ul>
-<li>"We've talked about why monitoring matters and how companies communicate when things go wrong"</li>
-<li>"Now let's start building something we can monitor"</li>
-<li>"Our first lab will introduce you to Microsoft Fabric and create a simple data process"</li>
-</ul>
-<h3 id="key-takeaways">Key Takeaways</h3>
-<p>By the end of this session, learners should understand:</p>
-<ol>
-<li>System failures have real business and personal impact</li>
-<li>Monitoring helps detect, communicate, and resolve issues faster</li>
-<li>Good communication during incidents builds trust</li>
-<li>We're going to learn operational skills to handle these challenges</li>
-</ol>
 
 
 

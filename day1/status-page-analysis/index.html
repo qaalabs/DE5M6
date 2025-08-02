@@ -9,10 +9,6 @@
       
       
       
-        <link rel="prev" href="../breaking-things/">
-      
-      
-        <link rel="next" href="../../labs/11-data-activator/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +16,7 @@
     
     
       
-        <title>Lab 04 ~ More complex breaks - DE5M6 ~ Data Operations</title>
+        <title>Status Page Analysis - DE5M6 ~ Data Operations</title>
       
     
     
@@ -62,7 +58,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#day-2-advanced-breaking-scenarios" class="md-skip">
+        <a href="#status-page-analysis" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Lab 04 ~ More complex breaks
+              Status Page Analysis
             
           </span>
         </div>
@@ -489,20 +485,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -518,7 +512,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Day 2 - Incident Response
@@ -555,7 +549,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../breaking-things/" class="md-nav__link">
+      <a href="../../day2/breaking-things/" class="md-nav__link">
         
   
   
@@ -575,32 +569,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Lab 04 ~ More complex breaks
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../day2/complex-breaking/" class="md-nav__link">
         
   
   
@@ -611,62 +583,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#scenario-1-performance-issues" class="md-nav__link">
-    <span class="md-ellipsis">
-      Scenario 1: Performance Issues
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#scenario-2-data-corruption-scenarios" class="md-nav__link">
-    <span class="md-ellipsis">
-      Scenario 2: Data Corruption Scenarios
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#scenario-3-resource-constraints-timing-issues" class="md-nav__link">
-    <span class="md-ellipsis">
-      Scenario 3: Resource Constraints &amp; Timing Issues
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -702,7 +618,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../incident-response-prep/" class="md-nav__link">
+      <a href="../../day2/incident-response-prep/" class="md-nav__link">
         
   
   
@@ -969,120 +885,62 @@
 
 
 
-<h1 id="day-2-advanced-breaking-scenarios">Day 2: Advanced Breaking Scenarios</h1>
-<h2 id="overview">Overview</h2>
-<p>This session introduces more complex failure scenarios that mirror real-world production issues.</p>
-<h2 id="scenario-1-performance-issues">Scenario 1: Performance Issues</h2>
-<h3 id="setup">Setup</h3>
-<p><strong>Context:</strong> "Large files and complex processing can cause timeouts and resource issues"</p>
-<p><strong>Breaking Method:</strong></p>
-<p>Find or create a <strong>much larger dataset</strong> than used in the previous lab</p>
-<p>Options:</p>
-<ul>
-<li>Duplicate your existing file multiple times to create a large CSV</li>
-<li>Use online sample datasets (sales data, sensor data, etc.)</li>
-<li>Create synthetic data with repeated rows</li>
-</ul>
-<p><strong>Target:</strong> File should be significantly larger (aim for 10x+ size)</p>
-<h3 id="execution-observation">Execution &amp; Observation</h3>
-<p><strong>Break Process:</strong></p>
+<h1 id="status-page-analysis">Status Page Analysis</h1>
+<p><strong>Learning Type:</strong> Investigation<br />
+<strong>Format:</strong> Pairs research with report back</p>
+<h2 id="setup-instructions-2-minutes">Setup Instructions (2 minutes)</h2>
 <ol>
-<li><strong>Replace your pipeline's source</strong> with the large file</li>
-<li><strong>Run the pipeline</strong> and monitor performance</li>
-<li><strong>Observe behavior:</strong> Does it slow down? Timeout? Complete successfully?</li>
-<li><strong>Check resource usage</strong> if visible in Fabric interface</li>
+<li><strong>Form pairs</strong> - mix experience levels if possible</li>
+<li><strong>Assign each pair 1-2 status pages</strong> from the list below</li>
+<li><strong>Research task:</strong> 10 minutes investigation + 3 minutes prep for sharing</li>
 </ol>
-<p><strong>Key Observation Points:</strong></p>
+<h2 id="status-pages-to-research">Status Pages to Research</h2>
+<p>Choose from these well-known status pages:</p>
 <ul>
-<li>How long does processing take compared to small files?</li>
-<li>Does Fabric show any warnings or performance indicators?</li>
-<li>Are there any timeout errors or resource constraint messages?</li>
-<li>How does the monitoring respond to slower processing?</li>
+<li><strong>AWS:</strong> <a href="https://health.aws.amazon.com/health/status">https://health.aws.amazon.com/health/status</a></li>
+<li><strong>Microsoft Azure:</strong> <a href="https://status.azure.com/">https://status.azure.com/</a></li>
+<li><strong>Google Cloud:</strong> <a href="https://status.cloud.google.com/">https://status.cloud.google.com/</a></li>
+<li><strong>GitHub:</strong> <a href="https://www.githubstatus.com/">https://www.githubstatus.com/</a></li>
+<li><strong>Slack:</strong> <a href="https://status.slack.com/">https://status.slack.com/</a></li>
+<li><strong>Stripe:</strong> <a href="https://status.stripe.com/">https://status.stripe.com/</a></li>
+<li><strong>Zoom:</strong> <a href="https://status.zoom.us/">https://status.zoom.us/</a></li>
 </ul>
-<h3 id="documentation">Documentation</h3>
-<p><strong>Quick Notes:</strong> Write down what you observed for later discussion</p>
-<hr />
-<h2 id="scenario-2-data-corruption-scenarios">Scenario 2: Data Corruption Scenarios</h2>
-<h3 id="setup_1">Setup</h3>
-<p><strong>Context:</strong> "Real data often contains mixed quality - some good records, some problematic ones"</p>
-<p><strong>Breaking Method Options</strong> (choose 1-2 to try):</p>
-<p><strong>Option A: Mixed Data Types</strong></p>
+<h2 id="investigation-questions-for-pairs">Investigation Questions for Pairs</h2>
+<p>Provide each pair with these guiding questions:</p>
+<p><strong>Current Status:</strong></p>
 <ul>
-<li>In a numeric column, replace some values with text ("ERROR", "NULL", "N/A")</li>
-<li>Leave other values as valid numbers</li>
-<li>See if Fabric processes partially or fails completely</li>
+<li>What's the overall system health right now?</li>
+<li>How is information organised? (by service, region, etc.)</li>
 </ul>
-<p><strong>Option B: Encoding Issues</strong></p>
+<p><strong>Historical Incidents:</strong></p>
 <ul>
-<li>Add special characters or emojis to text fields</li>
-<li>Try different character encodings if possible</li>
-<li>See how Fabric handles non-standard characters</li>
+<li>Look at 1-2 recent incidents - what information is provided?</li>
+<li>How detailed are the updates?</li>
+<li>How frequently were updates posted?</li>
 </ul>
-<p><strong>Option C: Incomplete Records</strong></p>
+<p><strong>Communication Style:</strong></p>
 <ul>
-<li>Delete some values in the middle of rows (creating gaps)</li>
-<li>Remove entire columns from some rows</li>
-<li>Create inconsistent row lengths</li>
+<li>How technical is the language?</li>
+<li>What do they tell users about impact?</li>
+<li>Do they explain what they're doing to fix it?</li>
 </ul>
-<h3 id="execution-observation_1">Execution &amp; Observation</h3>
-<p><strong>Break Process:</strong></p>
-<ol>
-<li><strong>Choose one corruption type</strong> and modify your data file</li>
-<li><strong>Run the pipeline</strong> and carefully observe results</li>
-<li><strong>Check output data</strong> - did bad records get processed, skipped, or cause failure?</li>
-<li><strong>Try a second corruption type</strong> if time allows</li>
-</ol>
-<p><strong>Key Observation Points:</strong></p>
+<p><strong>What Works Well:</strong></p>
 <ul>
-<li>Does the pipeline fail completely or continue with warnings?</li>
-<li>How does Fabric handle the corrupted data?</li>
-<li>What error messages or warnings appear?</li>
-<li>Can you identify which specific records caused problems?</li>
-<li>How would a business user know there was an issue?</li>
+<li>What would be helpful if you were a customer?</li>
+<li>What builds confidence that they're handling it?</li>
 </ul>
-<h3 id="documentation_1">Documentation</h3>
-<p><strong>Record findings:</strong> What happened with each corruption type?</p>
-<hr />
-<h2 id="scenario-3-resource-constraints-timing-issues">Scenario 3: Resource Constraints &amp; Timing Issues</h2>
-<h3 id="setup_2">Setup</h3>
-<p><strong>Context:</strong> "Production systems often have multiple processes competing for resources"</p>
-<p><strong>Breaking Method Options:</strong></p>
-<p><strong>Option A: Multiple Simultaneous Pipelines</strong></p>
+<h2 id="report-back-session-3-minutes">Report Back Session (3 minutes)</h2>
+<p>Each pair shares <strong>one key insight</strong> in 30 seconds:</p>
 <ul>
-<li>Create duplicate copies of your pipeline</li>
-<li>Run multiple instances at the same time</li>
-<li>See how Fabric handles concurrent resource usage</li>
+<li>"The most interesting thing we noticed was..."</li>
+<li>"If we were designing a status page, we'd make sure to..."</li>
 </ul>
-<p><strong>Option B: Complex Transformations</strong></p>
+<h2 id="facilitator-notes">Facilitator Notes</h2>
 <ul>
-<li>Add complex calculations or data transformations to your pipeline</li>
-<li>Create joins between multiple large datasets if possible</li>
-<li>See if processing becomes resource-intensive</li>
+<li><strong>If internet issues:</strong> Have screenshots of status pages prepared as backup</li>
+<li><strong>Time management:</strong> Keep sharing tight - use a timer</li>
+<li><strong>Follow-up questions:</strong> "How does this connect to monitoring?" "What would happen without these status pages?"</li>
 </ul>
-<p><strong>Option C: Rapid Successive Runs</strong></p>
-<ul>
-<li>Run the same pipeline repeatedly in quick succession</li>
-<li>Don't wait for completion before starting the next run</li>
-<li>Observe queuing, conflicts, or resource competition</li>
-</ul>
-<h3 id="execution-observation_2">Execution &amp; Observation</h3>
-<p><strong>Break Process:</strong></p>
-<ol>
-<li><strong>Choose one resource constraint scenario</strong></li>
-<li><strong>Execute your chosen approach</strong></li>
-<li><strong>Monitor system behavior</strong> and any queue/resource indicators</li>
-<li><strong>Try to overwhelm the system</strong> (within reasonable limits)</li>
-</ol>
-<p><strong>Key Observation Points:</strong></p>
-<ul>
-<li>How does Fabric manage multiple concurrent operations?</li>
-<li>Are there visible queue indicators or resource monitors?</li>
-<li>Do operations slow down, queue up, or fail?</li>
-<li>How long before the system recovers to normal performance?</li>
-</ul>
-<h3 id="documentation_2">Documentation</h3>
-<p><strong>Note observations:</strong> System behavior under load</p>
-<hr />
 
 
 

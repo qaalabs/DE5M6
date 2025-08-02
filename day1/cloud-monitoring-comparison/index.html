@@ -9,10 +9,6 @@
       
       
       
-        <link rel="prev" href="../../labs/06c-monitor-data-warehouse/">
-      
-      
-        <link rel="next" href="../../labs/04-ingest-pipeline/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +16,7 @@
     
     
       
-        <title>Cloud monitoring comparison - DE5M6 ~ Data Operations</title>
+        <title>Cloud Monitoring Comparison - DE5M6 ~ Data Operations</title>
       
     
     
@@ -62,7 +58,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#day-1-cloud-monitoring-comparison" class="md-skip">
+        <a href="#cloud-monitoring-comparison" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Cloud monitoring comparison
+              Cloud Monitoring Comparison
             
           </span>
         </div>
@@ -352,20 +348,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -381,7 +375,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Day 1 - Monitoring & Performance
@@ -475,89 +469,6 @@
   
 
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Cloud monitoring comparison
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    Cloud monitoring comparison
-    
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#session-structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      Session Structure
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -974,89 +885,79 @@
 
 
 
-<h1 id="day-1-cloud-monitoring-comparison">Day 1: Cloud Monitoring Comparison</h1>
+<h1 id="cloud-monitoring-comparison">Cloud Monitoring Comparison</h1>
 <h2 id="overview">Overview</h2>
 <p>This investigation activity allows learners to explore how major cloud providers approach data monitoring, comparing different tools and philosophies. This builds on their hands-on Fabric experience and prepares them for creating their own monitoring strategy.</p>
 <hr />
-<h2 id="session-structure">Session Structure</h2>
-<h3 id="setup-instructions-3-minutes">Setup Instructions (3 minutes)</h3>
-<h4 id="platform-assignments">Platform Assignments:</h4>
+<h2 id="platform-assignments">Platform Assignments</h2>
 <p>Assign each group one primary platform to research:</p>
-<p><strong>Group 1: AWS Monitoring</strong>
-- CloudWatch (metrics, logs, dashboards)
-- AWS X-Ray (distributed tracing)
-- AWS Data Pipeline monitoring</p>
-<p><strong>Group 2: Google Cloud Monitoring</strong><br />
-- Cloud Monitoring (formerly Stackdriver)
-- Cloud Logging
-- Data pipeline monitoring in Cloud Composer/Dataflow</p>
-<p><strong>Group 3: Azure Monitoring (beyond Fabric)</strong>
-- Azure Monitor
-- Application Insights<br />
-- Data Factory monitoring vs Fabric monitoring</p>
-<p><strong>Group 4: Fabric Deep Dive</strong> <em>(if enough groups)</em>
-- Advanced Fabric monitoring features
-- Integration with Azure Monitor
-- Comparison with other Azure data services</p>
+<h3 id="group-1-aws-monitoring">Group 1: AWS Monitoring</h3>
+<ul>
+<li>CloudWatch (metrics, logs, dashboards)</li>
+<li>AWS X-Ray (distributed tracing)</li>
+<li>AWS Data Pipeline monitoring</li>
+</ul>
+<h3 id="group-2-google-cloud-monitoring">Group 2: Google Cloud Monitoring</h3>
+<ul>
+<li>Cloud Monitoring (formerly Stackdriver)</li>
+<li>Cloud Logging</li>
+<li>Data pipeline monitoring in Cloud Composer/Dataflow</li>
+</ul>
+<h3 id="group-3-azure-monitoring-beyond-fabric">Group 3: Azure Monitoring (beyond Fabric)</h3>
+<ul>
+<li>Azure Monitor</li>
+<li>Application Insights  </li>
+<li>Data Factory monitoring vs Fabric monitoring</li>
+</ul>
+<h3 id="group-4-fabric-deep-dive-if-enough-groups">Group 4: Fabric Deep Dive <em>(if enough groups)</em></h3>
+<ul>
+<li>Advanced Fabric monitoring features</li>
+<li>Integration with Azure Monitor</li>
+<li>Comparison with other Azure data services</li>
+</ul>
 <hr />
-<h3 id="research-phase-15-minutes">Research Phase (15 minutes)</h3>
-<h4 id="investigation-framework">Investigation Framework:</h4>
-<p>Provide each group with these structured research questions:</p>
-<h4 id="core-monitoring-capabilities"><strong>Core Monitoring Capabilities:</strong></h4>
-<ol>
-<li><strong>What can you monitor?</strong></li>
+<h2 id="core-monitoring-capabilities">Core Monitoring Capabilities</h2>
+<h3 id="1-what-can-you-monitor">1. What can you monitor?</h3>
+<ul>
 <li>Data pipeline performance?</li>
 <li>Data quality metrics?</li>
 <li>Infrastructure metrics?</li>
-<li>
-<p>Cost/resource usage?</p>
-</li>
-<li>
-<p><strong>How do you set up monitoring?</strong></p>
-</li>
+<li>Cost/resource usage?</li>
+</ul>
+<h3 id="2-how-do-you-set-up-monitoring">2. How do you set up monitoring?</h3>
+<ul>
 <li>Automatic vs manual configuration?</li>
 <li>Built-in dashboards vs custom creation?</li>
-<li>
-<p>Ease of setup for data pipelines?</p>
-</li>
-<li>
-<p><strong>Alerting and Notifications:</strong></p>
-</li>
+<li>Ease of setup for data pipelines?</li>
+</ul>
+<h3 id="3-alerting-and-notifications">3. Alerting and Notifications</h3>
+<ul>
 <li>What triggers can you set?</li>
 <li>How are alerts delivered? (email, SMS, Slack, etc.)</li>
 <li>Can you set up automated responses?</li>
-</ol>
-<h4 id="data-specific-questions"><strong>Data-Specific Questions:</strong></h4>
-<ol>
-<li><strong>Data Pipeline Monitoring:</strong></li>
+</ul>
+<h2 id="data-specific-questions">Data-Specific Questions</h2>
+<h3 id="1-data-pipeline-monitoring">1. Data Pipeline Monitoring</h3>
+<ul>
 <li>Can you track data freshness/latency?</li>
 <li>Schema change detection?</li>
 <li>Data volume monitoring?</li>
-<li>
-<p>Failed job notifications?</p>
-</li>
-<li>
-<p><strong>Integration and Ecosystem:</strong></p>
-</li>
+<li>Failed job notifications?</li>
+</ul>
+<h3 id="2-integration-and-ecosystem">2. Integration and Ecosystem</h3>
+<ul>
 <li>How well does it integrate with other tools?</li>
 <li>APIs for custom monitoring?</li>
-<li>
-<p>Third-party tool support?</p>
-</li>
-<li>
-<p><strong>Cost and Complexity:</strong></p>
-</li>
+<li>Third-party tool support?</li>
+</ul>
+<h3 id="3-cost-and-complexity">3. Cost and Complexity</h3>
+<ul>
 <li>What's the pricing model?</li>
 <li>How complex is it to maintain?</li>
 <li>Required expertise level?</li>
-</ol>
-<h4 id="research-resources"><strong>Research Resources:</strong></h4>
-<p>Point groups to these starting points:
-- <strong>AWS:</strong> Search "CloudWatch data pipeline monitoring"
-- <strong>GCP:</strong> Search "Cloud Monitoring dataflow pipeline"<br />
-- <strong>Azure:</strong> Search "Azure Monitor data factory"
-- <strong>Fabric:</strong> Microsoft Learn documentation on monitoring</p>
-<h4 id="research-strategy-tips"><strong>Research Strategy Tips:</strong></h4>
+</ul>
+<hr />
+<h2 id="research-strategy-tips">Research Strategy Tips</h2>
 <ul>
 <li>Look for documentation, tutorials, and real-world examples</li>
 <li>Focus on data/analytics monitoring, not just general infrastructure</li>
@@ -1064,25 +965,33 @@
 <li>Note what seems easy vs complex to implement</li>
 </ul>
 <hr />
-<h3 id="report-back-session-7-minutes">Report Back Session (7 minutes)</h3>
-<h4 id="presentation-format">Presentation Format:</h4>
+<h2 id="report-back-session">Report Back Session</h2>
+<h3 id="presentation-format">Presentation Format</h3>
 <p>Each group has <strong>90 seconds</strong> to share their key findings using this structure:</p>
-<p><strong>30 seconds - Platform Overview:</strong>
-- "The main monitoring tool for platform X is..."
-- "The best feature for data monitoring is..."</p>
-<p><strong>30 seconds - Strengths:</strong>
-- "What this platform does really well is..."
-- "The standout capability is..."</p>
-<p><strong>30 seconds - Challenges/Gaps:</strong>
-- "The biggest limitation we found is..."
-- "You'd struggle with this platform if..."</p>
-<h4 id="key-questions-for-discussion">Key Questions for Discussion:</h4>
-<p>After all groups present, facilitate quick discussion:
-- "Which approach seems most similar to what you've used in your workplace?"
-- "What surprised you about the differences between platforms?"
-- "If you had to choose one for a new project, what would drive your decision?"</p>
+<p><strong>30 seconds - Platform Overview:</strong></p>
+<ul>
+<li>"The main monitoring tool for platform X is..."</li>
+<li>"The best feature for data monitoring is..."</li>
+</ul>
+<p><strong>30 seconds - Strengths:</strong></p>
+<ul>
+<li>"What this platform does really well is..."</li>
+<li>"The standout capability is..."</li>
+</ul>
+<p><strong>30 seconds - Challenges/Gaps:</strong></p>
+<ul>
+<li>"The biggest limitation we found is..."</li>
+<li>"You'd struggle with this platform if..."</li>
+</ul>
+<h3 id="key-questions-for-discussion">Key Questions for Discussion</h3>
+<p>After all groups present, facilitate quick discussion:</p>
+<ul>
+<li>"Which approach seems most similar to what you've used in your workplace?"</li>
+<li>"What surprised you about the differences between platforms?"</li>
+<li>"If you had to choose one for a new project, what would drive your decision?"</li>
+</ul>
 <hr />
-<h3 id="expected-outcomes">Expected Outcomes:</h3>
+<h2 id="expected-outcomes">Expected Outcomes</h2>
 <p>By the end of this activity, learners should:</p>
 <ol>
 <li>Understand that different platforms have different monitoring philosophies</li>
