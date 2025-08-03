@@ -4,7 +4,7 @@
 - https://ingwanelabs.github.io/status/message-202521320/
 - https://ingwanelabs.github.io/status/message-202521430/
 
-### Tutor drill app pages
+### isigameko Tutor Drill App
 
 **Group 1**: https://drill.ingwane.org/blaze/tutor ~ Blaze
 

@@ -1,15 +1,14 @@
 ## VM Setup
 
-### header 3
+### Allocation
 
-- Give them to link to the GoToMyPC forms
+- Give them the link to the GoToMyPC MS Form
 - <mark>Show them the slide with the username and password</mark>
 
-- Ask who needs LOD access
+- Ask who needs LOD access ~ *then give them the LOD link*
 - Ask them to let you know when they are done
 
 ### Links
 
 - MS Forms ~ GoToMyPC: https://forms.office.com/e/sRCSazTfpq
-
 - MS Forms ~ LOD: https://forms.office.com/e/20Gy0s7Ub4
