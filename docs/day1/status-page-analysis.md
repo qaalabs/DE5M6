@@ -5,21 +5,26 @@
 
 ## Setup Instructions (2 minutes)
 
-1. **Form pairs** - mix experience levels if possible
+1. **Form pairs**
 2. **Assign each pair 1-2 status pages** from the list below
 3. **Research task:** 10 minutes investigation + 3 minutes prep for sharing
 
 ## Status Pages to Research
 
-Choose from these well-known status pages:
+### Comprehensive
 
 - **AWS:** https://health.aws.amazon.com/health/status
 - **Microsoft Azure:** https://status.azure.com/
 - **Google Cloud:** https://status.cloud.google.com/
+- **Zoom:** https://status.zoom.us/
+
+### Less detail
+
 - **GitHub:** https://www.githubstatus.com/
 - **Slack:** https://status.slack.com/
 - **Stripe:** https://status.stripe.com/
-- **Zoom:** https://status.zoom.us/
+
+---
 
 ## Investigation Questions for Pairs
 
@@ -46,6 +51,8 @@ Provide each pair with these guiding questions:
 
 - What would be helpful if you were a customer?
 - What builds confidence that they're handling it?
+
+---
 
 ## Report Back Session (3 minutes)
 
