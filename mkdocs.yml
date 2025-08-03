@@ -35,8 +35,11 @@ nav:
     - "Planning for Sprint 2": day4/sprint2.md
     - "Planning for Sprint 3": day4/sprint3.md
 
+  - Resources: resources.md
+
 not_in_nav: |
   trainer.md
+  index.md
   day1/system-failure.md
   day1/why-monitor.md
 
