@@ -7,6 +7,7 @@
 - **Discussion**: [System failure impact](day1/system-failure.md)
 - [Why monitor?](day1/why-monitor.md)
 - **Investigation**: [Status page analysis](day1/status-page-analysis.md)
+- [Status page ~ Report back](day1/status-page-report-back.md)
 
 ### Session 2
 

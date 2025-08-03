@@ -6,7 +6,8 @@
 - `09:40` VM Setup (20 mins)
 - `10:00` **Discussion**: System failure impact (10 mins)
 - `10:10` Why monitor? (10 mins)
-- `10:20` **Investigation**: Status page analysis (20 mins)
+- `10:20` **Investigation**: Status page analysis (10 mins)
+- `10:30` [Status page ~ Report back](../day1/status-page-report-back.md) (10 mins)
 
 ## ☕ Morning Break
 
