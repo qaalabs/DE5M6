@@ -191,8 +191,6 @@ If you've finished exploring dataflows in Microsoft Fabric, you can delete the w
 
 4. Select **Delete** to delete the workspace.
 
-You can now close the incognito/private mode browser tab, and click **Submit** on the Microsoft Fabric Playground hands-on lab.
-
 ---
 <small><b>Source:
 https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/05-dataflows-gen2.html

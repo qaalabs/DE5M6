@@ -171,8 +171,6 @@ If you've finished exploring your data warehouse, you can delete the workspace y
 
 4. Select **Delete** to delete the workspace.
 
-You can now close the incognito/private mode browser tab, and click **Submit** on the Microsoft Fabric Playground hands-on lab.
-
 ---
 <small><b>Source:
 https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/06c-monitor-data-warehouse.html

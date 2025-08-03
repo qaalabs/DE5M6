@@ -193,8 +193,6 @@ If you've finished exploring your lakehouse, you can delete the workspace you cr
 
 4. Select **Delete** to delete the workspace.
 
-You can now close the incognito/private mode browser tab, and click **Submit** on the Microsoft Fabric Playground hands-on lab.
-
 ---
 <small><b>Source:
 https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/01-lakehouse.html

@@ -650,7 +650,6 @@ Note that you can't use the **default semantic model** that is automatically cre
 
 From here, you or other members of your data team can create reports and dashboards based on the data in your lakehouse. These reports will be connected directly to the gold layer of your lakehouse, so they'll always reflect the latest data.
 
-
 ---
 
 ## Clean up resources
