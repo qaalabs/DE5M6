@@ -6,7 +6,7 @@
 
 - **Discussion**: [System failure impact](day1/system-failure.md)
 - [Why monitor?](day1/why-monitor.md)
-- **Investigation**: Status page analysis
+- **Investigation**: [Status page analysis](day1/status-page-analysis.md)
 
 ### Session 2
 
@@ -23,7 +23,7 @@
 
 ### Session 4
 
-- **Investigation**: Cloud monitoring comparison
+- **Investigation**: [Cloud monitoring comparison](day1/cloud-monitoring-comparison.md)
 - **Activity**: Create monitoring strategy
 - **Report-Back**: Share monitoring strategies
 

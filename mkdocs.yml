@@ -42,6 +42,8 @@ not_in_nav: |
   index.md
   day1/system-failure.md
   day1/why-monitor.md
+  day1/status-page-analysis.md
+  day1/cloud-monitoring-comparison.md
 
 
 # Theme
