@@ -38,4 +38,13 @@ Here is the link the communications app for your group:
 
 - You have **25 minutes** to handle this incident
 
-<marK>At the end we will debrief by looking at all the messages you sent!</mark>
+<mark>At the end we will debrief by looking at all the messages you sent!</mark>
+
+---
+
+## Suggested Personas
+
+- **Incident Commander:** Coordinates overall response, makes key decisions
+- **Technical Lead:** Investigates root cause, determines fix options  
+- **Communications Lead:** Handles stakeholder updates and messaging
+- **Business Impact Analyst:** Assesses downstream effects
