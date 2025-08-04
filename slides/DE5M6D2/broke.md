@@ -1,8 +1,8 @@
-## Group discussion 
+## <mark>Group discussion</mark>
 
-### Think of a workplace example
+### Think of a time when a system broke at work
 
-- System failure, data pipeline break, application outage
+- For example: System failure, data pipeline break, application outage
 - Focus on the organizational response, not just the technical issue
 
 ### Each learner shares briefly
@@ -12,10 +12,3 @@
 - **Who got involved?** (response team/escalation)
 - **How long to fix?** (resolution time)
 - **What was learned?** (if anything)
-
-<hr>
-
-**Timing:**
-
-- Reflection ~ 2 mins
-- Sharing ~ 1 min each

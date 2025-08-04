@@ -1,12 +1,19 @@
-## Incident Response Briefing
+## <mark>Incident Response Technical Briefing</mark>
 
-### Trainer instructions
+https://barbourians.github.io/DE5M6/day2/fire-drill-briefing/
 
-- https://barbourians.github.io/DE5M6/day2/fire-drill-briefing/
+### Instructions
 
-### GitHub Status Pages
+- Show the chat app ~ use [room TEST](https://drill.ingwane.org/TEST) as an example
+- Show the status page
+- Show the status mailbox
+
+
+
+<hr>
 
 - https://ingwanelabs.github.io/status/
+- https://ingwanelabs.github.io/status/mailbox/
 - https://ingwanelabs.github.io/status/message-202521320/
 - https://ingwanelabs.github.io/status/message-202521430/
 
@@ -16,16 +23,16 @@
 
 **Group 1 ~ Blaze**
 
-- https://drill.ingwane.org/blaze
+- https://drill.ingwane.org/BLAZE
 
 **Group 2 ~ Ember**
 
-- https://drill.ingwane.org/ember
+- https://drill.ingwane.org/EMBER
 
 **Group 3 ~ Ignis**
 
-- https://drill.ingwane.org/ignis
+- https://drill.ingwane.org/IGNIS
 
 **Group 4 ~ Pyre**
 
-- https://drill.ingwane.org/pyre
+- https://drill.ingwane.org/PYRE

@@ -1,6 +1,6 @@
-## 🧪 Lab 1.3 ~ 18 Monitor Hub
+## 🧪 <mark>Lab 1.3</mark> ~ 18 Monitor Hub
 
-- https://barbourians.github.io/DE5M6/labs/18-monitor-hub/
+<span style="background-color: orange;">Give learners the link:</span> https://barbourians.github.io/DE5M6/labs/18-monitor-hub/
 
 ### Activities
 
@@ -11,7 +11,3 @@
 - Monitor history for an item
 - Customize monitoring hub views
 - Clean up resources
-
-<hr>
-
-**MS Fabric Playground**: https://bud.sso.app.qa.com/lab/microsoft-fabric-playground/

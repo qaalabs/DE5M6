@@ -2,18 +2,9 @@
 
 ## What's Coming Next
 
-In **20 minutes** time, you'll participate in an **incident response "fire drill"** simulating a data platform failure. You'll work in teams to coordinate technical responses and stakeholder communication under time pressure.
+In the next session, you'll participate in an **incident response "fire drill"** simulating a data platform failure. You'll work in teams to coordinate technical responses and stakeholder communication under time pressure.
 
-### You will be allocated to a "Incident Response Team"
-
-**Team Size:** 3-4 people
-
-**Suggested Personas:**
-
-- **Incident Commander:** Coordinates overall response, makes key decisions
-- **Technical Lead:** Investigates root cause, determines fix options  
-- **Communications Lead:** Handles stakeholder updates and messaging
-- **Business Impact Analyst:** Assesses downstream effects *(if 4 people)*
+**But before we do that, it may be useful to read up on some real incidents that happened.**
 
 ---
 
@@ -91,10 +82,4 @@ Scan these major incidents to understand what works (and what doesn't) in incide
 - What approaches consistently work or fail?
 - How do companies handle uncertainty in their communication?
 
-### Team Coordination
-
-- **Share your findings** with your team members
-- **Agree on communication approach** - who will handle what during the drill
-- **Establish team coordination method** - how will you make quick decisions together?
-
-!!! note "The goal isn't deep expertise - it's rapid preparation for practical application!"
+!!! note "The goal isn't deep expertise - it's rather preparation for practical application!"

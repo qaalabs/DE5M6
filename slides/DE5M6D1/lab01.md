@@ -1,6 +1,6 @@
-## 🧪 Lab 1.1 ~ 01 Create MS Fabric Lakehouse
+## 🧪 <mark>Lab 1.1</mark> ~ 01 Create MS Fabric Lakehouse
 
-- https://barbourians.github.io/DE5M6/labs/01-lakehouse/
+<span style="background-color: orange;">Give learners the link:</span> https://barbourians.github.io/DE5M6/labs/01-lakehouse/
 
 ### Activities
 
@@ -13,7 +13,3 @@
 - Use SQL to query tables
 - Create a visual query
 - Clean up resources
-
-<hr>
-
-**MS Fabric Playground**: https://bud.sso.app.qa.com/lab/microsoft-fabric-playground/

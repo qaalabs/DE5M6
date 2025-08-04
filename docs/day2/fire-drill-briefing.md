@@ -16,11 +16,11 @@
 
 - Your team has a **war room** - your breakout room for internal discussion
 - You can plan, debate, and coordinate freely in your team room
-- BUT - all **official communication** must go through Slack
+- BUT - all **official communication** must go through the chat app
 
-**Slack Communication Rules:**
+**Chat Communication Rules:**
 
-- Use your Slack channel for incident updates to stakeholders
+- Use your Chat channel for incident updates to stakeholders
 - This is how you communicate with customers, executives, and other teams
 - Write professionally - these messages will be reviewed during debrief
 - First action should be incident announcement to the channel
@@ -28,27 +28,27 @@
 **Timing:**
 
 - You have **25 minutes** to handle this incident
-- I'll be monitoring your Slack communications
-- You *may* recive additional updates or pressure via Slack as the situation develops
+- I'll be monitoring your communications
+- You *may* recive additional updates or pressure via as the situation develops
 
 ### Scenario Distribution (1 minute)
 
 **Hand out scenario cards:**
 
 - Read your scenario and understand the situation
-- Then immediately post your first incident update to Slack
+- Then immediately post your first incident update to the chat app
 - Remember: stakeholders are waiting to hear from you
 
 **Guidelines:**
 
-- Don't watch the other teams 
+- Don't watch the other teams
 - Focus on what your team needs to do!
 
 ### Success Criteria
 
 **What we're looking for:**
 
-- Clear, professional communication via Slack
+- Clear, professional communication via the chat app
 - Systematic approach to incident response
 - Good coordination within your team
 - Balancing technical fixes with stakeholder communication
@@ -66,7 +66,7 @@
 ### Before Starting:
 
 - **Ensure breakout rooms are ready** for each team
-- **Confirm Slack channels are set up** and all learners can access
+- **Confirm chat app is set up** and all learners can access
 - **Have scenario cards ready** to distribute
 - **Set 25-minute timer** visible to all
 
@@ -74,13 +74,13 @@
 
 - **Maintain dramatic energy** - this is a real incident simulation
 - **Check for questions** but keep momentum high
-- **Emphasize Slack communication** - this is key learning objective
-- **Watch for any technical issues** with breakout rooms or Slack
+- **Emphasize chat communication** - this is key learning objective
+- **Watch for any technical issues** with breakout rooms or the chat app
 
 ### After Briefing:
 
 - **Send teams to breakout rooms immediately** after scenario distribution
-- **Monitor Slack channels** for their first posts
+- **Monitor the chat app** for their first posts
 - **Prepare to send escalation messages** during the 25-minute period
 
 ---
@@ -113,7 +113,7 @@
 
 ### During the Drill
 
-**Slack Communication Quality:**
+**Chat Communication Quality:**
 
 - Are first posts professional and informative?
 - Do they provide regular updates?
@@ -142,7 +142,7 @@
 **Coordination Issues:**
 
 - All talking at once, no clear leadership
-- Forgetting to update Slack while focused on technical discussion
+- Forgetting to update the chat app while focused on technical discussion
 - Paralysis when facing uncertain information
 
 **These become great debrief discussion points!**
@@ -154,17 +154,18 @@
 ### End the Drill:
 
 **Announcement:**
-"Time! Step back from your incident response. Well done everyone."
+
+Time! Step back from your incident response. Well done everyone.
 
 **Immediate Actions:**
 
 - **Bring all teams back to main room**
-- **Keep Slack channels open** for review
+- **Keep chat app channels open** for review
 - **Prepare for 10-minute quick debrief**
 
-### Transition:
+### Transition
 
-"Before we break, let's do a quick review of your Slack communication and initial responses. Then we'll take a break before the next escalation phase."
+Before we break, let's do a quick review of your communication and initial responses. Then we'll take a break before the next escalation phase.
 
 ---
 
@@ -173,13 +174,13 @@
 **Good Simulation if:**
 
 - Teams immediately start coordinating in breakout rooms
-- Slack shows professional incident updates within first 5 minutes
+- Chat shows professional incident updates within first 5 minutes
 - Teams balance technical discussion with communication needs
 - Energy level is high and focused
 
 **Adjust if:**
 
 - Teams seem confused about process (provide clarification)
-- Slack communication is sparse (remind about stakeholder updates)
+- Chat communication is sparse (remind about stakeholder updates)
 - Teams are too stressed (reduce pressure elements)
-- Teams finish too quickly (add complexity via Slack updates)
+- Teams finish too quickly (add complexity via chat app updates)

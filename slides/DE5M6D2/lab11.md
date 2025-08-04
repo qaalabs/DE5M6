@@ -1,8 +1,8 @@
-## Use Data Activator in Fabric
+## 🧪 <mark>Demo</mark> Lab ~ 11 Use Data Activator in Fabric
 
-- GitHub Pages: https://barbourians.github.io/DE5M6/labs/11-data-activator/
+- https://barbourians.github.io/DE5M6/labs/11-data-activator/
 
-### Activities:
+### Activities
 
 - Create a workspace
 - Scenario
@@ -14,4 +14,4 @@
 
 <hr>
 
-**MS Fabric Playground**: https://bud.sso.app.qa.com/lab/microsoft-fabric-playground/
+<span style="background-color: red;">**Note: This lab has been depreciated**</span>

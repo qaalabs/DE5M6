@@ -14,6 +14,6 @@
 - You are the incident response team.
 - Coordinate your response, investigate the root cause, monitor fixes, and manage stakeholder communication.
 
-**NOTE: All official communications must go through the official channel.**
+**NOTE: All communications must go through the official channel.**
 
 ---

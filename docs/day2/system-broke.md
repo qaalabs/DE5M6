@@ -1,4 +1,4 @@
-# Day 2: Welcome & Context Setting
+# When a system broke at work
 
 ## Overview
 
@@ -6,20 +6,20 @@ This session transitions from Day 1's "when things work" to Day 2's "when things
 
 ## Session Structure
 
-### 1. Discussion: System Failure Stories - Workplace Edition (12 minutes)
+### 1. Discussion: System Failure Stories
 
 **Learning Type:** Discussion  
 **Format:** Structured sharing with experience capture
 
-#### Sharing Structure (8 minutes):
+#### Sharing Structure
 
-**Individual Reflection (2 minutes):**
+**Individual Reflection**
 Think of a workplace example:
 
 - System failure, data pipeline break, application outage
 - Focus on the organizational response, not just the technical issue
 
-**Round-Robin Sharing (6 minutes):**
+**Round-Robin Sharing**
 Each learner shares briefly (45-60 seconds each):
 
 - **What broke?** (brief technical context)

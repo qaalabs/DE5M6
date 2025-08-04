@@ -1,6 +1,6 @@
-## 🧪 Lab 1.1 ~ 05 Dataflows Gen2
+## 🧪 <mark>Lab 1.1</mark> ~ 05 Dataflows Gen2
 
-- https://barbourians.github.io/DE5M6/labs/05-dataflows-gen2/
+<span style="background-color: orange;">Give learners the link:</span> https://barbourians.github.io/DE5M6/labs/05-dataflows-gen2/
 
 ### Activities
 
@@ -10,7 +10,3 @@
 - Add data destination for Dataflow
 - Add a dataflow to a pipeline
 - Clean up resources
-
-<hr>
-
-**MS Fabric Playground**: https://bud.sso.app.qa.com/lab/microsoft-fabric-playground/
