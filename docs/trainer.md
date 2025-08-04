@@ -56,7 +56,7 @@
 
 ### Session 4
 
-- 🔥 Fire Drill Round 2
+- [🔥 Fire Drill Round 2](day2/fire-drill-groups.md)
 - **Discussion**: Fire drill debrief
 - **Discussion**: Workplace connections
 

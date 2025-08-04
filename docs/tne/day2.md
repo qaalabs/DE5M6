@@ -29,7 +29,7 @@
 
 ## Session 4
 
-- `14:50` 🔥 Fire Drill Round 2 (30 mins)
+- `14:50` [🔥 Fire Drill Round 2](../day2/fire-drill-groups.md) (30 mins)
 - `15:20` **Discussion**: Fire drill debrief (10 mins)
 - `15:30` **Discussion**: Workplace connections (20 mins)
 
