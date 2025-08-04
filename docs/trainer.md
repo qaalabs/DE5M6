@@ -50,13 +50,13 @@
 ### Session 3
 
 - **Investigation**: [Fire Drill preparation](day2/incident-response-prep.md)
-- Scenario 1 briefing
-- Fire Drill Round 1
+- [Fire drill technical briefing](day2/fire-drill-briefing.md)
+- 🔥 Fire Drill Round 1
 - **Discussion**: Fire drill debrief
 
 ### Session 4
 
-- Fire Drill Round 2
+- 🔥 Fire Drill Round 2
 - **Discussion**: Fire drill debrief
 - **Discussion**: Workplace connections
 
