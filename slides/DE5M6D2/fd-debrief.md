@@ -1,4 +1,11 @@
-## Debrief notes
+## <mark>Debrief each group by showing all their messages</mark>
+
+### Debrief Links
+
+- https://drill.ingwane.org/BLAZE/debrief
+- https://drill.ingwane.org/EMBER/debrief
+
+<hr>
 
 ### Scenario 1
 

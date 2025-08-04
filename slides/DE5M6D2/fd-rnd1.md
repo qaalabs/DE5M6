@@ -1,13 +1,9 @@
-## <mark>Learners create and implement a communications strategy</mark>
+## <mark>Breakout Rooms ~ Learners Respond!</mark>
 
+### Group 1 ~ Blaze
 
+- https://barbourians.github.io/DE5M6/day2/group-blaze/
 
-### Links given to learners
+### Group 2 ~ Ember
 
-- The link to their drill.ingwane.org room
-- The link to the status page
-- The link to the status page mailbox
-- The link to the instructions
-
-- https://ingwanelabs.github.io/status/mailbox/
-- https://ingwanelabs.github.io/status/message-202521320/
+- https://barbourians.github.io/DE5M6/day2/group-ember/

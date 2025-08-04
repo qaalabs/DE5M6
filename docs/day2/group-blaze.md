@@ -16,10 +16,8 @@ Here is the link the communications app for your group:
 
 ## Here are links to the Status Pages
 
-- **Status update**: https://ingwanelabs.github.io/status/message-202521320/
 - **Status mailbox**: https://ingwanelabs.github.io/status/mailbox/
-
----
+- **Status update**: https://ingwanelabs.github.io/status/message-202521320/
 
 ## Rules & Logistics
 
