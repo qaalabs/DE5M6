@@ -16,7 +16,7 @@
     
     
       
-        <title>Day 1: Monitoring Strategy Creation - DE5M6 ~ Data Operations</title>
+        <title>Incident Response Scenario - DE5M6 ~ Data Operations</title>
       
     
     
@@ -58,7 +58,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#day-1-monitoring-strategy-creation" class="md-skip">
+        <a href="#incident-response-scenario" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Day 1: Monitoring Strategy Creation
+              Incident Response Scenario
             
           </span>
         </div>
@@ -389,7 +389,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../status-page-report-back/" class="md-nav__link">
+      <a href="../../day1/status-page-report-back/" class="md-nav__link">
         
   
   
@@ -504,7 +504,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cloud-monitoring-report-back/" class="md-nav__link">
+      <a href="../../day1/cloud-monitoring-report-back/" class="md-nav__link">
         
   
   
@@ -595,7 +595,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day2/breaking-things/" class="md-nav__link">
+      <a href="../breaking-things/" class="md-nav__link">
         
   
   
@@ -618,7 +618,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day2/complex-breaking/" class="md-nav__link">
+      <a href="../complex-breaking/" class="md-nav__link">
         
   
   
@@ -664,7 +664,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day2/incident-response-prep/" class="md-nav__link">
+      <a href="../incident-response-prep/" class="md-nav__link">
         
   
   
@@ -687,7 +687,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day2/fire-drill-groups/" class="md-nav__link">
+      <a href="../fire-drill-groups/" class="md-nav__link">
         
   
   
@@ -976,152 +976,44 @@
 
 
 
-<h1 id="day-1-monitoring-strategy-creation">Day 1: Monitoring Strategy Creation</h1>
-<h2 id="overview">Overview</h2>
-<p>This production activity synthesizes everything learners have experienced today - the labs, status page analysis, and cloud platform research - into a comprehensive monitoring strategy. Working in pairs, they create a tangible monitoring framework that could be applied in real-world scenarios.</p>
-<hr />
-<h2 id="session-structure">Session Structure</h2>
-<h3 id="setup-instructions-3-minutes">Setup Instructions (3 minutes)</h3>
-<h4 id="scenario-assignment">Scenario Assignment</h4>
-<p>Give each pair a realistic scenario to make their strategy concrete:</p>
-<p><strong>Scenario A: E-commerce Data Platform</strong></p>
+<h1 id="incident-response-scenario">Incident Response Scenario</h1>
+<h2 id="group-1-blaze"><mark>Group 1 ~ BLAZE</mark></h2>
+<h2 id="the-communications-app">The Communications App</h2>
+<p>Here is the link the communications app for your group:</p>
 <ul>
-<li>Real-time customer behaviour tracking</li>
-<li>Daily sales reporting pipelines  </li>
-<li>Inventory management data feeds</li>
-<li>Customer impact: Revenue loss if data is stale/incorrect</li>
+<li><a href="https://drill.ingwane.org/BLAZE">https://drill.ingwane.org/BLAZE</a></li>
 </ul>
-<p><strong>Scenario B: Healthcare Analytics</strong></p>
+<h3 id="notes">Notes</h3>
 <ul>
-<li>Patient data processing pipelines</li>
-<li>Clinical reporting systems</li>
-<li>Research data aggregation</li>
-<li>Customer impact: Patient safety and regulatory compliance</li>
+<li>One, or more, or all of you can enter a message in the app</li>
+<li>Make sure you update the <strong>from</strong> with a name and title</li>
+<li>The <strong>To</strong> is optional but is recommended</li>
 </ul>
-<p><strong>Scenario C: Financial Services</strong></p>
+<h2 id="here-are-links-to-the-status-pages">Here are links to the Status Pages</h2>
 <ul>
-<li>Transaction processing monitoring</li>
-<li>Risk calculation pipelines</li>
-<li>Regulatory reporting systems</li>
-<li>Customer impact: Financial losses and regulatory penalties</li>
-</ul>
-<p><strong>Scenario D: Manufacturing IoT</strong></p>
-<ul>
-<li>Sensor data ingestion from factory floor</li>
-<li>Predictive maintenance pipelines</li>
-<li>Quality control data processing</li>
-<li>Customer impact: Production delays and safety risks</li>
+<li><strong>Status update</strong>: <a href="https://ingwanelabs.github.io/status/message-202521320/">https://ingwanelabs.github.io/status/message-202521320/</a></li>
+<li><strong>Status mailbox</strong>: <a href="https://ingwanelabs.github.io/status/mailbox/">https://ingwanelabs.github.io/status/mailbox/</a></li>
 </ul>
 <hr />
-<h3 id="strategy-development-phase-20-minutes">Strategy Development Phase (20 minutes)</h3>
-<h4 id="framework-template">Framework Template:</h4>
-<p>Provide pairs with this structured template to complete:</p>
-<h3 id="1-what-we-monitor-5-minutes"><strong>1. What We Monitor (5 minutes)</strong></h3>
-<p>Define the key monitoring areas:</p>
-<p><strong>Data Pipeline Health:</strong></p>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Pipeline execution status (success/failure)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Processing time/latency</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Data volume trends</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Error rates and types</li>
-</ul>
-<p><strong>Data Quality:</strong></p>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Completeness (missing records)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Accuracy (data validation failures)  </li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Freshness (data age/staleness)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Schema changes/drift</li>
-</ul>
-<p><strong>Infrastructure &amp; Performance:</strong></p>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Resource utilization (CPU, memory, storage)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Cost monitoring</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Scalability metrics</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Security events</li>
-</ul>
-<h3 id="2-how-we-monitor-5-minutes"><strong>2. How We Monitor (5 minutes)</strong></h3>
-<p>Choose tools and methods:</p>
-<p><strong>Monitoring Tools:</strong></p>
+<h2 id="rules-logistics">Rules &amp; Logistics</h2>
+<h3 id="team-coordination">Team Coordination</h3>
 <ul>
-<li>Primary platform: ________________</li>
-<li>Dashboard tools: ________________</li>
-<li>Alerting method: ________________</li>
-<li>Log aggregation: ________________</li>
+<li>Your team has a breakout room for internal discussion</li>
+<li>You can plan, debate, and coordinate freely in your team room</li>
+<li>BUT - all <strong>official communication</strong> must go through the chat app</li>
 </ul>
-<p><strong>Monitoring Approach:</strong></p>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Real-time monitoring</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Batch/scheduled checks</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Trend analysis</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Predictive monitoring</li>
-</ul>
-<h3 id="3-when-we-alert-5-minutes"><strong>3. When We Alert (5 minutes)</strong></h3>
-<p>Define alert thresholds and escalation:</p>
-<p><strong>Critical Alerts (immediate response required):</strong></p>
+<h3 id="chat-communication-rules">Chat Communication Rules</h3>
 <ul>
-<li>Trigger: _________________________</li>
-<li>Notify: __________________________</li>
-<li>Response time: ___________________</li>
+<li>Use your chat app for incident updates to stakeholders</li>
+<li>This is how you communicate with customers, executives, and other teams</li>
+<li>Write professionally - these messages will be reviewed during debrief</li>
+<li>First action should be incident announcement to the channel</li>
 </ul>
-<p><strong>Warning Alerts (monitor closely):</strong></p>
+<h3 id="timing">Timing</h3>
 <ul>
-<li>Trigger: _________________________</li>
-<li>Notify: __________________________</li>
-<li>Response time: ___________________</li>
+<li>You have <strong>25 minutes</strong> to handle this incident</li>
 </ul>
-<p><strong>Information Alerts (awareness only):</strong></p>
-<ul>
-<li>Trigger: _________________________</li>
-<li>Notify: __________________________</li>
-</ul>
-<h3 id="4-who-responds-3-minutes"><strong>4. Who Responds (3 minutes)</strong></h3>
-<p>Define roles and responsibilities:</p>
-<p><strong>First Response Team:</strong></p>
-<ul>
-<li>Role: ____________________________</li>
-<li>Responsibilities: _________________</li>
-</ul>
-<p><strong>Escalation Path:</strong></p>
-<ul>
-<li>Level 1: _________________________</li>
-<li>Level 2: _________________________</li>
-<li>Level 3: _________________________</li>
-</ul>
-<h3 id="5-communication-plan-2-minutes"><strong>5. Communication Plan (2 minutes)</strong></h3>
-<p>How you communicate during incidents:</p>
-<p><strong>Internal Communication:</strong></p>
-<ul>
-<li>Method: __________________________</li>
-<li>Frequency: _______________________</li>
-</ul>
-<p><strong>External Communication:</strong></p>
-<ul>
-<li>Stakeholders: ____________________</li>
-<li>Method: __________________________</li>
-<li>Message template: ________________</li>
-</ul>
-<hr />
-<h3 id="strategy-sharing-feedback-7-minutes">Strategy Sharing &amp; Feedback (7 minutes)</h3>
-<h4 id="rapid-strategy-showcase-5-minutes">Rapid Strategy Showcase (5 minutes):</h4>
-<ul>
-<li>Each pair screen shares for 60 seconds</li>
-<li>Focus on "one key decision we made and why"</li>
-<li>Other pairs post ONE insight in chat</li>
-</ul>
-<h4 id="group-reflection-2-minutes">Group Reflection (2 minutes):</h4>
-<ul>
-<li>Facilitator reads chat highlights</li>
-<li>"What common themes do you notice?"</li>
-<li>"What surprised you about different approaches?"---</li>
-</ul>
-<h3 id="expected-outputs">Expected Outputs:</h3>
-<p>Each pair should produce:</p>
-<ol>
-<li><strong>Completed monitoring strategy template</strong></li>
-<li><strong>Understanding of monitoring complexity</strong></li>
-<li><strong>Appreciation for different monitoring approaches</strong></li>
-<li><strong>Foundation for tomorrow's incident response activities</strong></li>
-</ol>
+<p><marK>At the end we will debrief by looking at all the messages you sent!</mark></p>
 
 
 

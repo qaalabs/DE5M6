@@ -16,7 +16,7 @@
     
     
       
-        <title>Day 1: Monitoring Strategy Creation - DE5M6 ~ Data Operations</title>
+        <title>When a system broke at work - DE5M6 ~ Data Operations</title>
       
     
     
@@ -58,7 +58,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#day-1-monitoring-strategy-creation" class="md-skip">
+        <a href="#when-a-system-broke-at-work" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Day 1: Monitoring Strategy Creation
+              When a system broke at work
             
           </span>
         </div>
@@ -389,7 +389,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../status-page-report-back/" class="md-nav__link">
+      <a href="../../day1/status-page-report-back/" class="md-nav__link">
         
   
   
@@ -504,7 +504,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cloud-monitoring-report-back/" class="md-nav__link">
+      <a href="../../day1/cloud-monitoring-report-back/" class="md-nav__link">
         
   
   
@@ -595,7 +595,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day2/breaking-things/" class="md-nav__link">
+      <a href="../breaking-things/" class="md-nav__link">
         
   
   
@@ -618,7 +618,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day2/complex-breaking/" class="md-nav__link">
+      <a href="../complex-breaking/" class="md-nav__link">
         
   
   
@@ -664,7 +664,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day2/incident-response-prep/" class="md-nav__link">
+      <a href="../incident-response-prep/" class="md-nav__link">
         
   
   
@@ -687,7 +687,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day2/fire-drill-groups/" class="md-nav__link">
+      <a href="../fire-drill-groups/" class="md-nav__link">
         
   
   
@@ -976,152 +976,64 @@
 
 
 
-<h1 id="day-1-monitoring-strategy-creation">Day 1: Monitoring Strategy Creation</h1>
+<h1 id="when-a-system-broke-at-work">When a system broke at work</h1>
 <h2 id="overview">Overview</h2>
-<p>This production activity synthesizes everything learners have experienced today - the labs, status page analysis, and cloud platform research - into a comprehensive monitoring strategy. Working in pairs, they create a tangible monitoring framework that could be applied in real-world scenarios.</p>
-<hr />
+<p>This session transitions from Day 1's "when things work" to Day 2's "when things break" by collecting workplace failure experiences and establishing the foundational concepts of incident vs problem management. This creates the context for today's hands-on breaking and responding activities.</p>
 <h2 id="session-structure">Session Structure</h2>
-<h3 id="setup-instructions-3-minutes">Setup Instructions (3 minutes)</h3>
-<h4 id="scenario-assignment">Scenario Assignment</h4>
-<p>Give each pair a realistic scenario to make their strategy concrete:</p>
-<p><strong>Scenario A: E-commerce Data Platform</strong></p>
+<h3 id="1-discussion-system-failure-stories">1. Discussion: System Failure Stories</h3>
+<p><strong>Learning Type:</strong> Discussion<br />
+<strong>Format:</strong> Structured sharing with experience capture</p>
+<h4 id="sharing-structure">Sharing Structure</h4>
+<p><strong>Individual Reflection</strong>
+Think of a workplace example:</p>
 <ul>
-<li>Real-time customer behaviour tracking</li>
-<li>Daily sales reporting pipelines  </li>
-<li>Inventory management data feeds</li>
-<li>Customer impact: Revenue loss if data is stale/incorrect</li>
+<li>System failure, data pipeline break, application outage</li>
+<li>Focus on the organizational response, not just the technical issue</li>
 </ul>
-<p><strong>Scenario B: Healthcare Analytics</strong></p>
+<p><strong>Round-Robin Sharing</strong>
+Each learner shares briefly (45-60 seconds each):</p>
 <ul>
-<li>Patient data processing pipelines</li>
-<li>Clinical reporting systems</li>
-<li>Research data aggregation</li>
-<li>Customer impact: Patient safety and regulatory compliance</li>
-</ul>
-<p><strong>Scenario C: Financial Services</strong></p>
-<ul>
-<li>Transaction processing monitoring</li>
-<li>Risk calculation pipelines</li>
-<li>Regulatory reporting systems</li>
-<li>Customer impact: Financial losses and regulatory penalties</li>
-</ul>
-<p><strong>Scenario D: Manufacturing IoT</strong></p>
-<ul>
-<li>Sensor data ingestion from factory floor</li>
-<li>Predictive maintenance pipelines</li>
-<li>Quality control data processing</li>
-<li>Customer impact: Production delays and safety risks</li>
+<li><strong>What broke?</strong> (brief technical context)</li>
+<li><strong>How did people find out?</strong> (detection method)</li>
+<li><strong>Who got involved?</strong> (response team/escalation)</li>
+<li><strong>How long to fix?</strong> (resolution time)</li>
+<li><strong>What was learned?</strong> (if anything)</li>
 </ul>
 <hr />
-<h3 id="strategy-development-phase-20-minutes">Strategy Development Phase (20 minutes)</h3>
-<h4 id="framework-template">Framework Template:</h4>
-<p>Provide pairs with this structured template to complete:</p>
-<h3 id="1-what-we-monitor-5-minutes"><strong>1. What We Monitor (5 minutes)</strong></h3>
-<p>Define the key monitoring areas:</p>
-<p><strong>Data Pipeline Health:</strong></p>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Pipeline execution status (success/failure)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Processing time/latency</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Data volume trends</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Error rates and types</li>
-</ul>
-<p><strong>Data Quality:</strong></p>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Completeness (missing records)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Accuracy (data validation failures)  </li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Freshness (data age/staleness)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Schema changes/drift</li>
-</ul>
-<p><strong>Infrastructure &amp; Performance:</strong></p>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Resource utilization (CPU, memory, storage)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Cost monitoring</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Scalability metrics</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Security events</li>
-</ul>
-<h3 id="2-how-we-monitor-5-minutes"><strong>2. How We Monitor (5 minutes)</strong></h3>
-<p>Choose tools and methods:</p>
-<p><strong>Monitoring Tools:</strong></p>
+<h3 id="2-acquisition-incident-vs-problem-framework-8-minutes">2. Acquisition: Incident vs Problem Framework (8 minutes)</h3>
+<p><strong>Learning Type:</strong> Acquisition<br />
+<strong>Format:</strong> Interactive presentation with real examples</p>
+<h4 id="core-definitions-3-minutes">Core Definitions (3 minutes):</h4>
+<p><strong>Incident:</strong></p>
 <ul>
-<li>Primary platform: ________________</li>
-<li>Dashboard tools: ________________</li>
-<li>Alerting method: ________________</li>
-<li>Log aggregation: ________________</li>
+<li><strong>Definition:</strong> Unplanned interruption or reduction in quality of service</li>
+<li><strong>Focus:</strong> Restore service as quickly as possible</li>
+<li><strong>Timeframe:</strong> Minutes to hours</li>
+<li><strong>Example:</strong> "Data pipeline failed at 2am, sales dashboard showing yesterday's data"</li>
 </ul>
-<p><strong>Monitoring Approach:</strong></p>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Real-time monitoring</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Batch/scheduled checks</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Trend analysis</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Predictive monitoring</li>
-</ul>
-<h3 id="3-when-we-alert-5-minutes"><strong>3. When We Alert (5 minutes)</strong></h3>
-<p>Define alert thresholds and escalation:</p>
-<p><strong>Critical Alerts (immediate response required):</strong></p>
+<p><strong>Problem:</strong></p>
 <ul>
-<li>Trigger: _________________________</li>
-<li>Notify: __________________________</li>
-<li>Response time: ___________________</li>
+<li><strong>Definition:</strong> Root cause of one or more incidents</li>
+<li><strong>Focus:</strong> Prevent incidents from recurring</li>
+<li><strong>Timeframe:</strong> Days to weeks</li>
+<li><strong>Example:</strong> "Why do our pipelines keep failing when the source system releases schema changes?"</li>
 </ul>
-<p><strong>Warning Alerts (monitor closely):</strong></p>
+<h4 id="the-response-hierarchy-3-minutes">The Response Hierarchy (3 minutes):</h4>
+<div class="highlight"><pre><span></span><code>INCIDENT MANAGEMENT           PROBLEM MANAGEMENT
+↓                            ↓
+Detect → Respond → Restore   Analyze → Identify → Prevent
+↓                            ↓
+&quot;Make it work now&quot;           &quot;Stop it happening again&quot;
+</code></pre></div>
+<p><strong>Key Insight:</strong> You often need to do both simultaneously</p>
 <ul>
-<li>Trigger: _________________________</li>
-<li>Notify: __________________________</li>
-<li>Response time: ___________________</li>
+<li><strong>Immediate team:</strong> Fix the incident (restore service)</li>
+<li><strong>Analysis team:</strong> Investigate the problem (prevent recurrence)</li>
 </ul>
-<p><strong>Information Alerts (awareness only):</strong></p>
-<ul>
-<li>Trigger: _________________________</li>
-<li>Notify: __________________________</li>
-</ul>
-<h3 id="4-who-responds-3-minutes"><strong>4. Who Responds (3 minutes)</strong></h3>
-<p>Define roles and responsibilities:</p>
-<p><strong>First Response Team:</strong></p>
-<ul>
-<li>Role: ____________________________</li>
-<li>Responsibilities: _________________</li>
-</ul>
-<p><strong>Escalation Path:</strong></p>
-<ul>
-<li>Level 1: _________________________</li>
-<li>Level 2: _________________________</li>
-<li>Level 3: _________________________</li>
-</ul>
-<h3 id="5-communication-plan-2-minutes"><strong>5. Communication Plan (2 minutes)</strong></h3>
-<p>How you communicate during incidents:</p>
-<p><strong>Internal Communication:</strong></p>
-<ul>
-<li>Method: __________________________</li>
-<li>Frequency: _______________________</li>
-</ul>
-<p><strong>External Communication:</strong></p>
-<ul>
-<li>Stakeholders: ____________________</li>
-<li>Method: __________________________</li>
-<li>Message template: ________________</li>
-</ul>
+<h4 id="real-world-application-2-minutes">Real-World Application (2 minutes):</h4>
+<p><strong>Scenario Walkthrough:</strong></p>
+<p>"A data pipeline feeding the customer dashboard fails at 6am. Customers start calling at 8am saying they can't see their orders."</p>
 <hr />
-<h3 id="strategy-sharing-feedback-7-minutes">Strategy Sharing &amp; Feedback (7 minutes)</h3>
-<h4 id="rapid-strategy-showcase-5-minutes">Rapid Strategy Showcase (5 minutes):</h4>
-<ul>
-<li>Each pair screen shares for 60 seconds</li>
-<li>Focus on "one key decision we made and why"</li>
-<li>Other pairs post ONE insight in chat</li>
-</ul>
-<h4 id="group-reflection-2-minutes">Group Reflection (2 minutes):</h4>
-<ul>
-<li>Facilitator reads chat highlights</li>
-<li>"What common themes do you notice?"</li>
-<li>"What surprised you about different approaches?"---</li>
-</ul>
-<h3 id="expected-outputs">Expected Outputs:</h3>
-<p>Each pair should produce:</p>
-<ol>
-<li><strong>Completed monitoring strategy template</strong></li>
-<li><strong>Understanding of monitoring complexity</strong></li>
-<li><strong>Appreciation for different monitoring approaches</strong></li>
-<li><strong>Foundation for tomorrow's incident response activities</strong></li>
-</ol>
 
 
 
