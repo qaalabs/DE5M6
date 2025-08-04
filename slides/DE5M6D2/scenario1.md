@@ -12,6 +12,8 @@
 
 ---
 
+## Groups 
+
 **Group 1 ~ Blaze**
 
 - https://drill.ingwane.org/blaze
@@ -27,7 +29,3 @@
 **Group 4 ~ Pyre**
 
 - https://drill.ingwane.org/pyre
-
-**Group 5 ~ Wisp**
-
-- https://drill.ingwane.org/wisp
