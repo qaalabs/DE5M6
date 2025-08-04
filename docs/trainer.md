@@ -7,18 +7,19 @@
 - **Discussion**: [System failure impact](day1/system-failure.md)
 - [Why monitor?](day1/why-monitor.md)
 - **Investigation**: [Status page analysis](day1/status-page-analysis.md)
-- [Status page ~ Report back](day1/status-page-report-back.md)
+- **Report-Back**: [Status page ~ Report back](day1/status-page-report-back.md)
 
 ### Session 2
 
 - Introduction to Microsoft Fabric
 - **Practice**: [Lab 1.1 ~ 01 Create Fabric Lakehouse](labs/01-lakehouse.md)
+- **Discussion**: Debrief about the lab
 - **Practice**: [Lab 1.2 ~ 05 Dataflows Gen2](labs/05-dataflows-gen2.md)
-- **Discussion**: What could go wrong?
 
 ### Session 3
 
 - **Practice**: [Lab 1.3 ~ 18 Monitor Hub](labs/18-monitor-hub.md)
+- **Discussion**: Debrief about the lab
 - **Practice**: [Lab 1.4 ~ 06c Monitor Warehouse](labs/06c-monitor-data-warehouse.md)
 - **Discussion**: Monitoring tools
 

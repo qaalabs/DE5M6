@@ -7,7 +7,7 @@
 - `10:00` **Discussion**: System failure impact (10 mins)
 - `10:10` Why monitor? (10 mins)
 - `10:20` **Investigation**: Status page analysis (10 mins)
-- `10:30` [Status page ~ Report back](../day1/status-page-report-back.md) (10 mins)
+- `10:30` **Report-Back**: [Status page ~ Report back](../day1/status-page-report-back.md) (10 mins)
 
 ## ☕ Morning Break
 
@@ -15,15 +15,16 @@
 
 - `11:00` Introduction to Microsoft Fabric (10 mins)
 - `11:10` **Practice**: [Lab 1.1 ~ 01 Create Fabric Lakehouse](../labs/01-lakehouse.md) (30 mins)
-- `11:40` **Practice**: [Lab 1.2 ~ 05 Dataflows Gen2](../labs/05-dataflows-gen2.md) (30 mins)
-- `12:10` **Discussion**: What could go wrong? (10 mins)
+- `11:40` **Discussion**: Debrief about the lab (10 mins)
+- `11:50` **Practice**: [Lab 1.2 ~ 05 Dataflows Gen2](../labs/05-dataflows-gen2.md) (30 mins)
 
 ## 🥪🥤 Lunch Break
 
 ## Session 3
 
 - `13:20` **Practice**: [Lab 1.3 ~ 18 Monitor Hub](../labs/18-monitor-hub.md) (30 mins)
-- `13:50` **Practice**: [Lab 1.4 ~ 06c Monitor Warehouse](../labs/06c-monitor-data-warehouse.md) (30 mins)
+- `13:50` **Discussion**: Debrief about the lab (10 mins)
+- `14:00` **Practice**: [Lab 1.4 ~ 06c Monitor Warehouse](../labs/06c-monitor-data-warehouse.md) (20 mins)
 - `14:20` **Discussion**: Monitoring tools (10 mins)
 
 ## ☕ Afternoon Break
