@@ -4,6 +4,12 @@
 
 ### Activities
 
+- Create a workspace
+- Create a sample data warehouse
+- Explore dynamic management views
+- Explore query insights
+- Clean up resources
+
 <hr>
 
 **MS Fabric Playground**: https://bud.sso.app.qa.com/lab/microsoft-fabric-playground/

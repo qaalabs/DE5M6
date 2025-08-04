@@ -1,4 +1,4 @@
-## System Failure Impact
+## <mark>Group discussion</mark>
 
 ### Opening Question
 

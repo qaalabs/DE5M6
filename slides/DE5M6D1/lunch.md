@@ -1,7 +1,7 @@
 ## Lunch break
 
+<mark>Get learners to end the playground before they go on lunch!</mark>
+
 **Remind learners to stretch and get something to eat**
 
-### Put GoToMyPC instructions in the chat
-
-- Give each learner their own details in the WebEx Direct Chat
+## <mark>Put GoToMyPC instructions in the chat</mark>

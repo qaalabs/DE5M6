@@ -1,6 +1,6 @@
-*Use this time if VM Setup went quickly ~ otherwise skip*
+## <mark>Theory with PowerPoint slide</mark>
 
-<mark>Show the PowerPoint slide: The Monitoring Pyramid</mark>
+<span style="background-color: orange;">Show the PowerPoint slide: The Monitoring Pyramid</span>
 
 ### Key Points to Cover
 

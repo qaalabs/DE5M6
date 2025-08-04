@@ -1,4 +1,4 @@
-## Give a grief overwiew of the structure
+## <mark>Give a brief overview of the module structure</mark>
 
 - This module is very hands-on - not much content ~ as there is *so* much in Discover
 - Lots of labs ~ using the QA Platform

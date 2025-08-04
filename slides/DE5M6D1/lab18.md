@@ -4,6 +4,14 @@
 
 ### Activities
 
+- Create a workspace
+- Create a lakehouse
+- Create and monitor a Dataflow
+- Create and monitor a Spark notebook
+- Monitor history for an item
+- Customize monitoring hub views
+- Clean up resources
+
 <hr>
 
 **MS Fabric Playground**: https://bud.sso.app.qa.com/lab/microsoft-fabric-playground/
