@@ -51,7 +51,7 @@
 
 - **Investigation**: [Fire Drill preparation](day2/incident-response-prep.md)
 - [Fire drill technical briefing](day2/fire-drill-briefing.md)
-- 🔥 Fire Drill Round 1
+- [🔥 Fire Drill Round 1](day2/fire-drill-groups.md)
 - **Discussion**: Fire drill debrief
 
 ### Session 4

@@ -22,7 +22,7 @@
 
 - `13:10` **Investigation**: [Fire Drill preparation](../day2/incident-response-prep.md) (20 mins)
 - `13:30` Fire drill technical briefing (10 mins)
-- `13:40` 🔥 Fire Drill Round 1 (30 mins)
+- `13:40` [🔥 Fire Drill Round 1](../day2/fire-drill-groups.md) (30 mins)
 - `14:10` **Discussion**: Fire drill debrief (20 mins)
 
 ## ☕ Afternoon Break

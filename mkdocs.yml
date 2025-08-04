@@ -26,6 +26,7 @@ nav:
     - "Lab 04 ~ More complex breaks": day2/complex-breaking.md
     - "Lab ~ 11 Data Activator": labs/11-data-activator.md
     - "Fire Drill preparation": day2/incident-response-prep.md
+    - "🔥 Fire Drill Round 1": day2/fire-drill-groups.md
 
   - "Day 3 - Quality & Governance":
     - "Lab 3.1 ~ 03b Medallion Architecture": labs/03b-medallion-lakehouse.md
