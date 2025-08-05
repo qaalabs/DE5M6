@@ -9,6 +9,10 @@
       
       
       
+        <link rel="prev" href="../../labs/03b-medallion-lakehouse/">
+      
+      
+        <link rel="next" href="../../labs/19-secure-data-access/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -16,7 +20,7 @@
     
     
       
-        <title>Quality tools - DE5M6 ~ Data Operations</title>
+        <title>Quality tools ~ report back - DE5M6 ~ Data Operations</title>
       
     
     
@@ -58,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#transition-to-afternoon" class="md-skip">
+        <a href="#quality-tools-investigation" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Quality tools
+              Quality tools ~ report back
             
           </span>
         </div>
@@ -737,18 +741,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -764,7 +770,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Day 3 - Quality & Governance
@@ -789,6 +795,98 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Quality tools ~ report back
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quality tools ~ report back
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tool-categories-to-research" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tool Categories to Research
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#research-guidelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Research Guidelines
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teach-back" class="md-nav__link">
+    <span class="md-ellipsis">
+      Teach Back
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -999,138 +1097,57 @@
 
 
 
-  <h1>Quality tools</h1>
-
-<h3 id="phase-3-quality-tools-investigation-10-minutes">Phase 3: Quality Tools Investigation (10 minutes)</h3>
-<h4 id="modern-data-quality-tools-research-10-minutes">Modern Data Quality Tools Research (10 minutes)</h4>
-<p><strong>Setup (1 minute):</strong>
-<strong>Research Focus:</strong>
-"Investigate tools that could automate the quality checks you just implemented in the medallion architecture"</p>
-<p><strong>Team Formation:</strong></p>
-<ul>
-<li><strong>Pairs or individuals</strong> (depending on class size)</li>
-<li><strong>Each pair/person</strong> takes a different tool category</li>
-</ul>
-<h4 id="tool-categories-to-research">Tool Categories to Research:</h4>
-<p><strong>Group 1: Data Quality Frameworks</strong></p>
+<h1 id="quality-tools-investigation">Quality Tools Investigation</h1>
+<h2 id="tool-categories-to-research">Tool Categories to Research</h2>
+<h3 id="group-1-data-quality-frameworks">Group 1: Data Quality Frameworks</h3>
 <ul>
 <li><strong>Great Expectations:</strong> Python-based data validation framework</li>
 <li><strong>dbt tests:</strong> Built-in and custom data quality tests</li>
 <li><strong>Focus:</strong> How do these tools implement quality checks similar to your silver layer transformations?</li>
 </ul>
-<p><strong>Group 2: Cloud-Native Quality Tools</strong></p>
+<h3 id="group-2-cloud-native-quality-tools">Group 2: Cloud-Native Quality Tools</h3>
 <ul>
 <li><strong>Azure Data Quality (in Fabric/Synapse):</strong> Built-in quality monitoring</li>
 <li><strong>AWS Glue DataBrew:</strong> Visual data quality profiling</li>
 <li><strong>Focus:</strong> How do cloud platforms handle quality monitoring and alerting?</li>
 </ul>
-<p><strong>Group 3: Quality Monitoring &amp; Observability</strong></p>
+<h3 id="group-3-quality-monitoring-observability">Group 3: Quality Monitoring &amp; Observability</h3>
 <ul>
 <li><strong>Monte Carlo:</strong> Data observability and quality monitoring</li>
 <li><strong>Datadog Data Streams:</strong> Real-time quality monitoring</li>
 <li><strong>Focus:</strong> How do these tools detect quality issues automatically?</li>
 </ul>
-<p><strong>Group 4: Open Source Quality Solutions</strong></p>
+<h3 id="group-4-open-source-quality-solutions">Group 4: Open Source Quality Solutions</h3>
 <ul>
 <li><strong>Apache Griffin:</strong> Data quality platform</li>
 <li><strong>DataHub:</strong> Data discovery with quality insights</li>
 <li><strong>Focus:</strong> How do open source tools provide cost-effective quality solutions?</li>
 </ul>
-<h4 id="research-questions-8-minutes">Research Questions (8 minutes):</h4>
-<p>For each tool category, investigate:</p>
-<p><strong>Implementation Approach:</strong></p>
+<hr />
+<h2 id="research-guidelines">Research Guidelines</h2>
+<p><strong>For each tool category, investigate:</strong></p>
+<h3 id="implementation-approach">Implementation Approach</h3>
 <ul>
 <li>How would this tool integrate with a medallion architecture?</li>
 <li>What quality checks could be automated?</li>
 <li>How does it compare to manual validation?</li>
 </ul>
-<p><strong>Quality Dimensions Covered:</strong></p>
+<h3 id="quality-dimensions-covered">Quality Dimensions Covered</h3>
 <ul>
 <li>Which DMBOK dimensions does this tool address best?</li>
 <li>What types of quality issues would it catch/miss?</li>
 <li>How does it handle quality monitoring vs. quality improvement?</li>
 </ul>
-<p><strong>Practical Considerations:</strong></p>
+<h3 id="practical-considerations">Practical Considerations</h3>
 <ul>
 <li>What skills/resources needed for implementation?</li>
 <li>How does it fit with Microsoft Fabric/Azure ecosystem?</li>
 <li>What would be the first quality check you'd implement?</li>
 </ul>
-<h4 id="quick-sharing-1-minute">Quick Sharing (1 minute):</h4>
-<p><strong>Rapid insights:</strong> Each pair/person shares one key finding (15 seconds each):
-- "The most interesting capability we found was..."
-- "This tool would solve the problem of..."
-- "The biggest implementation challenge would be..."</p>
 <hr />
-<h2 id="transition-to-afternoon">Transition to Afternoon</h2>
-<h3 id="bridge-to-security-governance-1-minute">Bridge to Security &amp; Governance (1 minute):</h3>
-<p><strong>Facilitator:</strong></p>
+<h2 id="teach-back">Teach Back</h2>
 <ul>
-<li>"This morning you've focused on data quality - ensuring data meets standards"</li>
-<li>"This afternoon we'll explore governance - ensuring the right people can access the right data safely"</li>
-<li>"Quality and governance work together - high-quality data that's not properly secured and governed can't deliver business value"</li>
-</ul>
-<hr />
-<h2 id="resources-for-trainers">Resources for Trainers</h2>
-<h3 id="pre-session-preparation">Pre-Session Preparation:</h3>
-<ul>
-<li><strong>Complete Lab 3b yourself</strong> to understand quality transformation points</li>
-<li><strong>Research quality tools</strong> briefly to guide learners if they struggle</li>
-<li><strong>Prepare quality examples</strong> from the lab to highlight during discussion</li>
-</ul>
-<h3 id="managing-the-lab-phase">Managing the Lab Phase:</h3>
-<p><strong>Keep Quality Focus:</strong></p>
-<ul>
-<li><strong>Point out quality improvements</strong> as they happen: "Notice how this addresses accuracy"</li>
-<li><strong>Connect to DMBOK:</strong> Reference morning's framework throughout</li>
-<li><strong>Time management:</strong> Ensure lab completion within 45 minutes</li>
-</ul>
-<p><strong>Common Lab Issues:</strong></p>
-<ul>
-<li><strong>If learners struggle with technical steps:</strong> Focus on understanding the quality patterns rather than perfect execution</li>
-<li><strong>If lab runs long:</strong> Guide them to complete bronze and silver layers, skip gold if necessary</li>
-<li><strong>If learners finish early:</strong> Have them analyze additional quality improvement opportunities</li>
-</ul>
-<h3 id="facilitating-quality-discussion">Facilitating Quality Discussion:</h3>
-<p><strong>Drawing Out Insights:</strong></p>
-<ul>
-<li><strong>Use specific examples</strong> from the lab: "What happened to the invalid dates in silver layer?"</li>
-<li><strong>Connect to workplace:</strong> "How does this compare to quality processes in your organization?"</li>
-<li><strong>Highlight trade-offs:</strong> "Why keep raw data in bronze if it has quality issues?"</li>
-</ul>
-<p><strong>Managing Tools Research:</strong></p>
-<ul>
-<li><strong>Keep research focused</strong> on practical implementation rather than deep technical details</li>
-<li><strong>Guide struggling researchers:</strong> Suggest looking for case studies or getting-started guides</li>
-<li><strong>Connect to medallion:</strong> "How would this tool fit into the architecture you just built?"</li>
-</ul>
-<h3 id="expected-learning-outcomes">Expected Learning Outcomes:</h3>
-<p><strong>Practical Understanding:</strong></p>
-<ul>
-<li><strong>Quality patterns in action</strong> - seeing DMBOK dimensions addressed through architecture</li>
-<li><strong>Tool awareness</strong> - knowing what modern quality solutions exist</li>
-<li><strong>Implementation thinking</strong> - connecting theory to practical application</li>
-</ul>
-<p><strong>Quality Mindset:</strong></p>
-<ul>
-<li><strong>Layered quality approach</strong> - different standards for different purposes</li>
-<li><strong>Automation possibilities</strong> - tools can implement quality checks at scale</li>
-<li><strong>Integration considerations</strong> - quality tools work within broader data architecture</li>
-</ul>
-<h3 id="connection-to-ksbs">Connection to KSBs:</h3>
-<ul>
-<li><strong>K4:</strong> Frameworks for data quality (DMBOK applied to architecture)</li>
-<li><strong>S26:</strong> Identify data quality metrics and track them (quality tools investigation)</li>
-<li><strong>S6:</strong> Systematically clean, validate, and describe data at ETL stages (medallion lab)</li>
-<li><strong>S25:</strong> Assess gaps in existing tools and technologies (quality tools research)</li>
-<li><strong>B3:</strong> Quality focus that promotes continuous improvement (throughout session)</li>
-</ul>
-<h3 id="time-management-tips">Time Management Tips:</h3>
-<ul>
-<li><strong>Lab phase:</strong> Use timer, keep groups moving together</li>
-<li><strong>Discussion phase:</strong> Limit individual reflection to 5 minutes max</li>
-<li><strong>Research phase:</strong> Encourage "good enough" research over perfect analysis</li>
-<li><strong>Sharing:</strong> Use strict time limits for rapid knowledge sharing</li>
+<li>Each group presents what they have found.</li>
 </ul>
 
 

@@ -16,7 +16,7 @@
     
     
       
-        <title>Lab: Implement Deployment Pipelines - DE5M6 ~ Data Operations</title>
+        <title>Quality Tools Investigation - DE5M6 ~ Data Operations</title>
       
     
     
@@ -58,7 +58,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lab-implement-deployment-pipelines" class="md-skip">
+        <a href="#quality-tools-investigation" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Lab: Implement Deployment Pipelines
+              Quality Tools Investigation
             
           </span>
         </div>
@@ -412,7 +412,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01-lakehouse/" class="md-nav__link">
+      <a href="../../labs/01-lakehouse/" class="md-nav__link">
         
   
   
@@ -435,7 +435,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../05-dataflows-gen2/" class="md-nav__link">
+      <a href="../../labs/05-dataflows-gen2/" class="md-nav__link">
         
   
   
@@ -458,7 +458,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../18-monitor-hub/" class="md-nav__link">
+      <a href="../../labs/18-monitor-hub/" class="md-nav__link">
         
   
   
@@ -481,7 +481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../06c-monitor-data-warehouse/" class="md-nav__link">
+      <a href="../../labs/06c-monitor-data-warehouse/" class="md-nav__link">
         
   
   
@@ -572,7 +572,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../04-ingest-pipeline/" class="md-nav__link">
+      <a href="../../labs/04-ingest-pipeline/" class="md-nav__link">
         
   
   
@@ -641,7 +641,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../11-data-activator/" class="md-nav__link">
+      <a href="../../labs/11-data-activator/" class="md-nav__link">
         
   
   
@@ -778,7 +778,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../03b-medallion-lakehouse/" class="md-nav__link">
+      <a href="../../labs/03b-medallion-lakehouse/" class="md-nav__link">
         
   
   
@@ -801,7 +801,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day3/quality-tools/" class="md-nav__link">
+      <a href="../quality-tools/" class="md-nav__link">
         
   
   
@@ -824,7 +824,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../19-secure-data-access/" class="md-nav__link">
+      <a href="../../labs/19-secure-data-access/" class="md-nav__link">
         
   
   
@@ -847,7 +847,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../21-deployment-pipelines/" class="md-nav__link">
+      <a href="../../labs/21-deployment-pipelines/" class="md-nav__link">
         
   
   
@@ -1022,123 +1022,93 @@
 
 
 
-<h1 id="lab-implement-deployment-pipelines">Lab: Implement Deployment Pipelines</h1>
-<p>Implement deployment pipelines in Microsoft Fabric
-Deployment pipelines in Microsoft Fabric let you automate the process of copying changes made to the content in Fabric items between environments like development, test, and production. You can use deployment pipelines to develop and test content before it reaches end users. In this exercise, you create a deployment pipeline, and assign stages to the pipeline. Then you create some content in a development workspace and use deployment pipelines to deploy it between the Development, Test and Production pipeline stages.</p>
-<p>Note: To complete this exercise, you need to be an member of the Fabric workspace admin role. To assign roles see Roles in workspaces in Microsoft Fabric.</p>
-<p>This lab takes approximately 20 minutes to complete.</p>
-<div class="admonition info">
-<p class="admonition-title">For this lab you need to navigate to QA Platform and login using the credentials provided</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">It is important that you use an incognito/private mode browser tab and not your work or personal Microsoft login</p>
-</div>
-<p>In this lab, you will sign in to Microsoft Fabric using the email and password from the QA Platform.</p>
-<ol>
-<li>
-<p>Using an <strong>incognito/private mode browser tab</strong> navigate to the <a href="https://app.fabric.microsoft.com/">Fabric portal</a> at: <a href="https://fabric.microsoft.com">https://fabric.microsoft.com</a></p>
-</li>
-<li>
-<p>Follow the prompts, and sign in with the user credentials from the QA Platform:</p>
+<h1 id="quality-tools-investigation">Quality Tools Investigation</h1>
+<h2 id="modern-data-quality-tools-research">Modern Data Quality Tools Research</h2>
+<p><strong>Research Focus:</strong></p>
+<p>"Investigate tools that could automate the quality checks you just implemented in the medallion architecture"</p>
+<p><strong>Team Formation:</strong></p>
 <ul>
-<li>Email</li>
-<li>Password</li>
+<li><strong>Pairs or individuals</strong> (depending on class size)</li>
+<li><strong>Each pair/person</strong> takes a different tool category</li>
 </ul>
-</li>
-</ol>
-<p>After signing in, you will be redirected to the Fabric home page:</p>
-<p><img alt="Fabric home page" src="../../img/qa-fabric-home.png" /></p>
-<h2 id="create-workspaces">Create workspaces</h2>
-<p>Create three workspaces.</p>
-<ol>
-<li>
-<p>Navigate to the <a href="https://app.fabric.microsoft.com/home?experience=fabric">Microsoft Fabric home page</a> in an incognito/private mode browser tab browser, and sign in with the Fabric credentials from the QA Platform.</p>
-</li>
-<li>
-<p>In the menu bar on the left, select Workspaces (the icon looks similar to 🗇).</p>
-</li>
-<li>
-<p>Create a new workspace named: <strong>Development</strong></p>
-</li>
-<li>
-<p>Create a new workspace named: <strong>Test</strong></p>
-</li>
-<li>
-<p>Create a new workspace named: <strong>Production</strong></p>
-</li>
-<li>
-<p>Select the <strong>Workspaces</strong> icon on the menu bar on the left and confirm that there are three workspaces named: Development, Test, and Production</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If you are prompted to enter a unique name for the workspaces, append one or more random numbers to the words: Development, Test, or Production.</p>
-</div>
-</li>
-</ol>
-<h2 id="create-a-deployment-pipeline">Create a deployment pipeline</h2>
-<p>Next, create a deployment pipeline.</p>
-<ol>
-<li>
-<p>In the menu bar on the left, select Workspaces.</p>
-</li>
-<li>
-<p>Select Deployment Pipelines, then New pipeline.</p>
-</li>
-<li>
-<p>In the Add a new deployment pipeline window, give the pipeline a unique name and select Next.</p>
-</li>
-<li>
-<p>In the new pipeline window, select Create and continue.</p>
-</li>
-</ol>
-<h2 id="assign-workspaces-to-stages-of-a-deployment-pipeline">Assign workspaces to stages of a deployment pipeline</h2>
-<p>Assign workspaces to the stages of the deployment pipeline.</p>
-<ol>
-<li>
-<p>On the left menu bar, select the pipeline you created.</p>
-</li>
-<li>
-<p>In the window that appears, expand the options under Assign a workspace on each deployment stage and select the name of the workspace that matches the name of the stage.</p>
-</li>
-<li>
-<p>Select the check mark Assign for each deployment stage.</p>
-<p><img alt="Screenshot of deployment pipeline." src="../../img/21-deployment-pipeline.png" /></p>
-</li>
-</ol>
-<h2 id="create-content">Create content</h2>
-<p>Fabric items haven’t been created in your workspaces yet. Next, create a lakehouse in the development workspace.</p>
-<p>In the menu bar on the left, select Workspaces.
-Select the Development workspace.
-Select New Item.
-In the window that appears, select Lakehouse and in the New lakehouse window, name the lakehouse, LabLakehouse.
-Select Create.
-In the Lakehouse Explorer window, select Start with sample data to populate the new lakehouse with data.
-Screenshot of Lakehouse Explorer.</p>
-<p>Select the sample NYCTaxi.
-In the menu bar on the left, select the pipeline you created.
-Select the Development stage, and under the deployment pipeline canvas you can see the lakehouse you created as a stage item. In the left edge of the Test stage, there’s an X within a circle. The X indicates that the Development and Test stages aren’t synchronized.
-Select the Test stage and under the deployment pipeline canvas you can see that the lakehouse you created is only a stage item in the source, which in this case refers to the Development stage.
-Screenshot the deployment pipeline showing content mismatches between stages.</p>
-<p>Deploy content between stages
-Deploy the lakehouse from the Development stage to the Test and Production stages.</p>
-<p>Select the Test stage in the deployment pipeline canvas.
-Under the deployment pipeline canvas, select the checkbox next to the Lakehouse item. Then select the Deploy button to copy the lakehouse in its current state to the Test stage.
-In the Deploy to next stage window that appears, select Deploy. There is now an X in a circle in the Production stage in the deployment pipeline canvas. The lakehouse exists in the Development and Test stages but not yet in the Production stage.
-Select the Production stage in the deployment canvas.
-Under the deployment pipeline canvas, select the checkbox next to the Lakehouse item. Then select the Deploy button to copy the lakehouse in its current state to the Production stage.
-In the Deploy to next stage window that appears, select Deploy. The green check marks between the stages indicates that all stages in sync and contain the same content.
-Using deployment pipelines to deploy between stages also updates the content in the workspaces corresponding to the deployment stage. Let’s confirm.
-In the menu bar on the left, select Workspaces.
-Select the Test workspace. The lakehouse was copied there.
-Open the Production workspace from the Workspaces icon on the left menu. The lakehouse was copied to the Production workspace too.
-Clean up
-In this exercise, you created a deployment pipeline, and assigned stages to the pipeline. Then you created content in a development workspace and deployed it between pipeline stages using deployment pipelines.</p>
-<p>In the left navigation bar, select the icon for each workspace to view all of the items it contains.
-In the menu on the top toolbar, select Workspace settings.
-In the General section, select Remove this workspace.</p>
+<h2 id="tool-categories-to-research">Tool Categories to Research</h2>
+<h3 id="group-1-data-quality-frameworks">Group 1: Data Quality Frameworks</h3>
+<ul>
+<li><strong>Great Expectations:</strong> Python-based data validation framework</li>
+<li><strong>dbt tests:</strong> Built-in and custom data quality tests</li>
+<li><strong>Focus:</strong> How do these tools implement quality checks similar to your silver layer transformations?</li>
+</ul>
+<h3 id="group-2-cloud-native-quality-tools">Group 2: Cloud-Native Quality Tools</h3>
+<ul>
+<li><strong>Azure Data Quality (in Fabric/Synapse):</strong> Built-in quality monitoring</li>
+<li><strong>AWS Glue DataBrew:</strong> Visual data quality profiling</li>
+<li><strong>Focus:</strong> How do cloud platforms handle quality monitoring and alerting?</li>
+</ul>
+<h3 id="group-3-quality-monitoring-observability">Group 3: Quality Monitoring &amp; Observability</h3>
+<ul>
+<li><strong>Monte Carlo:</strong> Data observability and quality monitoring</li>
+<li><strong>Datadog Data Streams:</strong> Real-time quality monitoring</li>
+<li><strong>Focus:</strong> How do these tools detect quality issues automatically?</li>
+</ul>
+<h3 id="group-4-open-source-quality-solutions">Group 4: Open Source Quality Solutions</h3>
+<ul>
+<li><strong>Apache Griffin:</strong> Data quality platform</li>
+<li><strong>DataHub:</strong> Data discovery with quality insights</li>
+<li><strong>Focus:</strong> How do open source tools provide cost-effective quality solutions?</li>
+</ul>
 <hr />
-<p><small><b>Source:
-<a href="https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/21-implement-cicd.html">https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/21-implement-cicd.html</a>
-</b></small></p>
+<h2 id="research-questions">Research Questions</h2>
+<p><strong>For each tool category, investigate:</strong></p>
+<h3 id="implementation-approach">Implementation Approach</h3>
+<ul>
+<li>How would this tool integrate with a medallion architecture?</li>
+<li>What quality checks could be automated?</li>
+<li>How does it compare to manual validation?</li>
+</ul>
+<h3 id="quality-dimensions-covered">Quality Dimensions Covered</h3>
+<ul>
+<li>Which DMBOK dimensions does this tool address best?</li>
+<li>What types of quality issues would it catch/miss?</li>
+<li>How does it handle quality monitoring vs. quality improvement?</li>
+</ul>
+<h3 id="practical-considerations">Practical Considerations</h3>
+<ul>
+<li>What skills/resources needed for implementation?</li>
+<li>How does it fit with Microsoft Fabric/Azure ecosystem?</li>
+<li>What would be the first quality check you'd implement?</li>
+</ul>
+<hr />
+<h2 id="report-back">Report Back</h2>
+<p><strong>Rapid insights:</strong> Each pair/person shares one key finding (15 seconds each):</p>
+<ul>
+<li>"The most interesting capability we found was..."</li>
+<li>"This tool would solve the problem of..."</li>
+<li>"The biggest implementation challenge would be..."</li>
+</ul>
+<hr />
+<h2 id="transition-to-afternoon">Transition to Afternoon</h2>
+<h3 id="bridge-to-security-governance">Bridge to Security &amp; Governance</h3>
+<p><strong>Facilitator:</strong></p>
+<ul>
+<li>"This morning you've focused on data quality - ensuring data meets standards"</li>
+<li>"This afternoon we'll explore governance - ensuring the right people can access the right data safely"</li>
+<li>"Quality and governance work together - high-quality data that's not properly secured and governed can't deliver business value"</li>
+</ul>
+<hr />
+<h2 id="resources-for-trainers">Resources for Trainers</h2>
+<h3 id="expected-learning-outcomes">Expected Learning Outcomes</h3>
+<p><strong>Practical Understanding:</strong></p>
+<ul>
+<li><strong>Quality patterns in action</strong> - seeing DMBOK dimensions addressed through architecture</li>
+<li><strong>Tool awareness</strong> - knowing what modern quality solutions exist</li>
+<li><strong>Implementation thinking</strong> - connecting theory to practical application</li>
+</ul>
+<p><strong>Quality Mindset:</strong></p>
+<ul>
+<li><strong>Layered quality approach</strong> - different standards for different purposes</li>
+<li><strong>Automation possibilities</strong> - tools can implement quality checks at scale</li>
+<li><strong>Integration considerations</strong> - quality tools work within broader data architecture</li>
+</ul>
 
 
 
