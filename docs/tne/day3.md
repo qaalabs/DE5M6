@@ -14,6 +14,7 @@
 - `11:00` **Practice**: [Lab 3.1 ~ 03b Medallion Architecture](../labs/03b-medallion-lakehouse.md) (40 mins)
 - `11:40` **Discussion**: Quality patterns analysis (20 mins)
 - `12:00` **Investigation**: Quality tools (20 mins)
+- `12:20` [Quality tools ~ report back](../day3/quality-tools.md) (10 mins)
 
 ## 🥪🥤 Lunch Break
 

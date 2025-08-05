@@ -31,6 +31,7 @@ nav:
 
   - "Day 3 - Quality & Governance":
     - "Lab 3.1 ~ 03b Medallion Architecture": labs/03b-medallion-lakehouse.md
+    - "Quality tools ~ report back": day3/quality-tools.md
     - "Lab 3.2 ~ 19 Secure Data Access": labs/19-secure-data-access.md
     - "Lab 3.3 ~ 21 Deployment Pipelines": labs/21-deployment-pipelines.md
 
@@ -49,6 +50,7 @@ not_in_nav: |
   day1/status-page-analysis.md
   day1/cloud-monitoring-comparison.md
   day2/fire-drill-briefing.md
+  day3/quality-tools-trainer.md
 
 
 # Theme
