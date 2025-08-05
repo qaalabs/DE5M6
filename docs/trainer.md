@@ -69,7 +69,7 @@
 - **Discussion**: What does good data mean to you?
 - Quality Data - why it matters
 - **Investigation**: DMBOK's 6 data quality dimensions
-- **Report-Back**: DMBOK report back
+- DMBOK report back
 
 ### Session 2
 
