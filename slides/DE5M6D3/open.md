@@ -195,4 +195,3 @@ Looking at what we designed for Day 3, here are the timings:
 Should we redesign the afternoon or keep this structure?
 
 ---
-

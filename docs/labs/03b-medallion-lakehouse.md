@@ -399,7 +399,9 @@ You have successfully taken data from your bronze layer, transformed it, and loa
     display(dfdimCustomer_silver.head(10))
     ```
 
-    Here you have created a new DataFrame dfdimCustomer_silver by performing various transformations such as dropping duplicates, selecting specific columns, and splitting the "CustomerName" column to create "First" and "Last" name columns. The result is a DataFrame with cleaned and structured customer data, including separate "First" and "Last" name columns extracted from the "CustomerName"" column.
+    Here you have created a new DataFrame `dfdimCustomer_silver` by performing various transformations such as dropping duplicates, selecting specific columns, and splitting the "CustomerName" column to create "First" and "Last" name columns.
+
+    The result is a DataFrame with cleaned and structured customer data, including separate "First" and "Last" name columns extracted from the "CustomerName"" column.
 
 9. Next we'll create the ID column for our customers. In a new code block, paste and run the following:
 
@@ -419,9 +421,11 @@ You have successfully taken data from your bronze layer, transformed it, and loa
     display(dfdimCustomer_gold.head(10))
     ```
 
-    Here you're cleaning and transforming customer data (dfdimCustomer_silver) by performing a left anti join to exclude duplicates that already exist in the dimCustomer_gold table, and then generating unique CustomerID values using the monotonically_increasing_id() function.
+    Here you're cleaning and transforming customer data (`dfdimCustomer_silver`) by performing a left anti join to exclude duplicates that already exist in the `dimCustomer_gold` table, and then generating unique CustomerID values using the `monotonically_increasing_id()` function.
 
-10. Now you'll ensure that your customer table remains up-to-date as new data comes in. **In a new code block**, paste and run the following:
+10. Now you'll ensure that your customer table remains up-to-date as new data comes in.
+
+    **In a new code block**, paste and run the following:
 
     ```python
     from delta.tables import *
@@ -452,7 +456,9 @@ You have successfully taken data from your bronze layer, transformed it, and loa
     .execute()
     ```
 
-11. Now you'll **repeat those steps to create your product dimension**. In a new code block, paste and run the following:
+11. Now you'll **repeat those steps to create your product dimension**. 
+
+    In a new code block, paste and run the following:
 
     ```python
     from pyspark.sql.types import *
@@ -482,7 +488,9 @@ You have successfully taken data from your bronze layer, transformed it, and loa
     display(dfdimProduct_silver.head(10))
     ```
 
-13. Now you'll create IDs for your **dimProduct_gold table**. Add the following syntax to a new code block and run it:
+13. Now you'll create IDs for your **dimProduct_gold table**. 
+
+    Add the following syntax to a new code block and run it:
 
     ```python
     from pyspark.sql.functions import monotonically_increasing_id, col, lit, max, coalesce
@@ -503,7 +511,9 @@ You have successfully taken data from your bronze layer, transformed it, and loa
 
     This calculates the next available product ID based on the current data in the table, assigns these new IDs to the products, and then displays the updated product information.
 
-14. Similar to what you've done with your other dimensions, you need to ensure that your product table remains up-to-date as new data comes in. **In a new code block**, paste and run the following:
+14. Similar to what you've done with your other dimensions, you need to ensure that your product table remains up-to-date as new data comes in.
+
+    **In a new code block**, paste and run the following:
 
     ```python
     from delta.tables import *
@@ -611,7 +621,7 @@ You have successfully taken data from your bronze layer, transformed it, and loa
     .execute()
     ```
 
-    Here you're using Delta Lake's merge operation to synchronize and update the factsales_gold table with new sales data (dffactSales_gold). The operation compares the order date, customer ID, and item ID between the existing data (silver table) and the new data (updates DataFrame), updating matching records and inserting new records as needed.
+    Here you're using Delta Lake's merge operation to synchronize and update the factsales_gold table with new sales data (`dffactSales_gold`). The operation compares the order date, customer ID, and item ID between the existing data (silver table) and the new data (updates DataFrame), updating matching records and inserting new records as needed.
 
 !!! success "You now have a curated, modeled **gold** layer that can be used for reporting and analysis."
 
@@ -638,8 +648,7 @@ Note that you can't use the **default semantic model** that is automatically cre
 
     ![Screenshot of a semantic model in Fabric.](../img/03b-dataset-relationships.png)
 
-
-!!! warning "Before you create relationships, you need to have a PowerBI Pro licence"
+!!! note "Before you create relationships, you need to have a PowerBI Pro licence"
 
 ### Get a PowerBi licence
 
