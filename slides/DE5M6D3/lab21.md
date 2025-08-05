@@ -1,8 +1,13 @@
-## Deployment Pipelines
+## 🧪 <mark>Lab 3.3</mark> ~ 21 Implement deployment pipelines in MS Fabric
 
-- https://barbourians.github.io/DE5M6/labs/21-deployment-pipelines/
+<span style="background-color: orange;">Give learners the link:</span> https://barbourians.github.io/DE5M6/labs/21-deployment-pipelines/
 
-- https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/21-implement-cicd.html
+### Activities
+
+- Create a deployment pipeline
+- Assign workspaces to stages of a deployment pipeline
+- Create content
+- Deploy content between stages
 
 ---
 

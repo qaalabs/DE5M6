@@ -1,5 +1,12 @@
-## Medallion Architecture
+## 🧪 <mark>Lab 3.1</mark> ~ 03b Create Medallion Architecture in a Fabric Lakehouse
 
-- https://barbourians.github.io/DE5M6/labs/03b-medallion-lakehouse/
+<span style="background-color: orange;">Give learners the link:</span> https://barbourians.github.io/DE5M6/labs/03b-medallion-lakehouse/
 
-- https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/03b-medallion-lakehouse.html
+### Activities
+
+- Create a workspace
+- Create a lakehouse and upload data to bronze layer
+- Transform data and load to silver Delta table
+- Explore data in the silver layer using the SQL endpoint
+- Transform data for gold layer
+- Create a semantic model
