@@ -1539,7 +1539,8 @@
 
 <span class="n">display</span><span class="p">(</span><span class="n">dfdimCustomer_silver</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
 </code></pre></div>
-<p>Here you have created a new DataFrame dfdimCustomer_silver by performing various transformations such as dropping duplicates, selecting specific columns, and splitting the "CustomerName" column to create "First" and "Last" name columns. The result is a DataFrame with cleaned and structured customer data, including separate "First" and "Last" name columns extracted from the "CustomerName"" column.</p>
+<p>Here you have created a new DataFrame <code>dfdimCustomer_silver</code> by performing various transformations such as dropping duplicates, selecting specific columns, and splitting the "CustomerName" column to create "First" and "Last" name columns.</p>
+<p>The result is a DataFrame with cleaned and structured customer data, including separate "First" and "Last" name columns extracted from the "CustomerName"" column.</p>
 </li>
 <li>
 <p>Next we'll create the ID column for our customers. In a new code block, paste and run the following:</p>
@@ -1557,10 +1558,11 @@
 
 <span class="n">display</span><span class="p">(</span><span class="n">dfdimCustomer_gold</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
 </code></pre></div>
-<p>Here you're cleaning and transforming customer data (dfdimCustomer_silver) by performing a left anti join to exclude duplicates that already exist in the dimCustomer_gold table, and then generating unique CustomerID values using the monotonically_increasing_id() function.</p>
+<p>Here you're cleaning and transforming customer data (<code>dfdimCustomer_silver</code>) by performing a left anti join to exclude duplicates that already exist in the <code>dimCustomer_gold</code> table, and then generating unique CustomerID values using the <code>monotonically_increasing_id()</code> function.</p>
 </li>
 <li>
-<p>Now you'll ensure that your customer table remains up-to-date as new data comes in. <strong>In a new code block</strong>, paste and run the following:</p>
+<p>Now you'll ensure that your customer table remains up-to-date as new data comes in.</p>
+<p><strong>In a new code block</strong>, paste and run the following:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">delta.tables</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">deltaTable</span> <span class="o">=</span> <span class="n">DeltaTable</span><span class="o">.</span><span class="n">forPath</span><span class="p">(</span><span class="n">spark</span><span class="p">,</span> <span class="s1">&#39;Tables/dimcustomer_gold&#39;</span><span class="p">)</span>
@@ -1590,7 +1592,8 @@
 </code></pre></div>
 </li>
 <li>
-<p>Now you'll <strong>repeat those steps to create your product dimension</strong>. In a new code block, paste and run the following:</p>
+<p>Now you'll <strong>repeat those steps to create your product dimension</strong>. </p>
+<p>In a new code block, paste and run the following:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pyspark.sql.types</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">delta.tables</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
@@ -1618,7 +1621,8 @@
 </code></pre></div>
 </li>
 <li>
-<p>Now you'll create IDs for your <strong>dimProduct_gold table</strong>. Add the following syntax to a new code block and run it:</p>
+<p>Now you'll create IDs for your <strong>dimProduct_gold table</strong>. </p>
+<p>Add the following syntax to a new code block and run it:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pyspark.sql.functions</span><span class="w"> </span><span class="kn">import</span> <span class="n">monotonically_increasing_id</span><span class="p">,</span> <span class="n">col</span><span class="p">,</span> <span class="n">lit</span><span class="p">,</span> <span class="nb">max</span><span class="p">,</span> <span class="n">coalesce</span>
 
 <span class="c1">#dfdimProduct_temp = dfdimProduct_silver</span>
@@ -1637,7 +1641,8 @@
 <p>This calculates the next available product ID based on the current data in the table, assigns these new IDs to the products, and then displays the updated product information.</p>
 </li>
 <li>
-<p>Similar to what you've done with your other dimensions, you need to ensure that your product table remains up-to-date as new data comes in. <strong>In a new code block</strong>, paste and run the following:</p>
+<p>Similar to what you've done with your other dimensions, you need to ensure that your product table remains up-to-date as new data comes in.</p>
+<p><strong>In a new code block</strong>, paste and run the following:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">delta.tables</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">deltaTable</span> <span class="o">=</span> <span class="n">DeltaTable</span><span class="o">.</span><span class="n">forPath</span><span class="p">(</span><span class="n">spark</span><span class="p">,</span> <span class="s1">&#39;Tables/dimproduct_gold&#39;</span><span class="p">)</span>
@@ -1738,7 +1743,7 @@
 <span class="p">)</span> \
 <span class="o">.</span><span class="n">execute</span><span class="p">()</span>
 </code></pre></div>
-<p>Here you're using Delta Lake's merge operation to synchronize and update the factsales_gold table with new sales data (dffactSales_gold). The operation compares the order date, customer ID, and item ID between the existing data (silver table) and the new data (updates DataFrame), updating matching records and inserting new records as needed.</p>
+<p>Here you're using Delta Lake's merge operation to synchronize and update the factsales_gold table with new sales data (<code>dffactSales_gold</code>). The operation compares the order date, customer ID, and item ID between the existing data (silver table) and the new data (updates DataFrame), updating matching records and inserting new records as needed.</p>
 </li>
 </ol>
 <div class="admonition success">
@@ -1769,7 +1774,7 @@
 <p><img alt="Screenshot of a semantic model in Fabric." src="../../img/03b-dataset-relationships.png" /></p>
 </li>
 </ol>
-<div class="admonition warning">
+<div class="admonition note">
 <p class="admonition-title">Before you create relationships, you need to have a PowerBI Pro licence</p>
 </div>
 <h3 id="get-a-powerbi-licence">Get a PowerBi licence</h3>
