@@ -619,12 +619,6 @@ You have successfully taken data from your bronze layer, transformed it, and loa
 
 In your workspace, you can now use the gold layer to create a report and analyze the data. You can access the semantic model directly in your workspace to create relationships and measures for reporting.
 
-!!! warning "Before you create a semantic model, you need to have a PowerBI Pro licence"
-
-## `#TODO`
-
-!!! success "You should now be able to create the semantic model as depicted below."
-
 Note that you can't use the **default semantic model** that is automatically created when you create a lakehouse. You must create a new semantic model that includes the gold tables you created in this exercise, from the Explorer.
 
 1. In your workspace, navigate to your **Sales** lakehouse.
@@ -644,9 +638,23 @@ Note that you can't use the **default semantic model** that is automatically cre
 
     ![Screenshot of a semantic model in Fabric.](../img/03b-dataset-relationships.png)
 
+
+!!! warning "Before you create relationships, you need to have a PowerBI Pro licence"
+
+### Get a PowerBi licence
+
+- Open your semantic model
+- Click the 3 dots **...**
+- Click **Show tables**
+
+!!! success "You should now be able to create the semantic model as depicted below."
+
 ## Create a PowerBi report
 
-!!! note "TBC"
+- You can now create new report
+- Or just auto create a report: **Explore > Auto create report**
+
+---
 
 From here, you or other members of your data team can create reports and dashboards based on the data in your lakehouse. These reports will be connected directly to the gold layer of your lakehouse, so they'll always reflect the latest data.
 
@@ -655,6 +663,16 @@ From here, you or other members of your data team can create reports and dashboa
 ## Clean up resources
 
 In this exercise, you've learned how to create a medallion architecture in a Microsoft Fabric lakehouse.
+
+If you've finished exploring the medallion architecture, you can delete the workspace you created for this exercise.
+
+1. Navigate to Microsoft Fabric in your browser.
+
+2. In the bar on the left, select the icon for your workspace to view all of the items it contains.
+
+3. Select **Workspace settings** and in the **General** section, scroll down and select **Remove this workspace**.
+
+4. Select **Delete** to delete the workspace.
 
 ---
 <small><b>Source:

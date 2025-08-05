@@ -4,6 +4,3 @@
 
 - https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/19-secure-data-access.html
 
-<hr>
-
-**MS Fabric Playground**: https://bud.sso.app.qa.com/lab/microsoft-fabric-playground/

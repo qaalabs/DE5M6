@@ -3,6 +3,7 @@
 ---
 
 ## Overview
+
 This afternoon session shifts from data quality to data governance, focusing on security and access control. Through hands-on Lab 19 and structured discussion, learners explore how to balance data accessibility with security requirements, understanding governance as an operational discipline that enables rather than restricts business value.
 
 ---
@@ -58,7 +59,7 @@ As learners work through security configurations, encourage them to think:
 **Individual Reflection (5 minutes):**
 Give learners this framework based on their lab experience:
 
-```
+```none
 SECURITY & ACCESSIBILITY TRADE-OFFS
 
 WORKSPACE-LEVEL SECURITY:
@@ -107,6 +108,7 @@ GOVERNANCE DECISION FRAMEWORK:
 #### Bridge to Governance Principles (3 minutes):
 
 **Facilitator:**
+
 - "Security controls are just one part of data governance"
 - "Good governance creates frameworks for making these trade-off decisions consistently"
 - "Next we'll investigate governance approaches that balance multiple competing priorities"
@@ -177,6 +179,7 @@ For each governance approach, investigate:
 #### Quick Sharing (1 minute):
 
 **Rapid insights:** Each group shares one key finding (15 seconds each):
+
 - "This governance approach works best when..."
 - "The biggest challenge with this model is..."
 - "This would solve the problem of..."
@@ -188,6 +191,7 @@ For each governance approach, investigate:
 ### Bridge to Governance Framework Design (1 minute):
 
 **Facilitator:**
+
 - "You've seen different governance philosophies and experienced security trade-offs hands-on"
 - "After the break, we'll design a practical governance framework"
 - "We'll focus on creating decision-making processes that balance competing priorities"

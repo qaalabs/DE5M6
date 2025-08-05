@@ -117,5 +117,3 @@
 - Sprint Retrospective
 
 ---
-
-

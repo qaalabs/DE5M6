@@ -4,6 +4,16 @@
 
 - https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/21-implement-cicd.html
 
-<hr>
+---
 
-**MS Fabric Playground**: https://bud.sso.app.qa.com/lab/microsoft-fabric-playground/
+## Possible error
+
+- Everyone complete Lab 21
+- Try to delete the workspace
+- Discuss what the error message teaches us
+- "How would you design other operational safeguards?"
+
+### So the proper sequence is
+
+- Unassign the workspace from the deployment pipeline
+- Then delete the workspace
