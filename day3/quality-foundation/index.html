@@ -1000,139 +1000,184 @@
 
 
 <h1 id="day-3-welcome-quality-foundation">Day 3: Welcome &amp; Quality Foundation</h1>
-<hr />
 <h2 id="overview">Overview</h2>
 <p>This opening session transitions from Day 2's "when systems break" to Day 3's "when systems work but data doesn't meet standards." Through discussion and concept introduction, learners explore what quality means in operational contexts and why data quality is a different type of operational challenge requiring similar systematic approaches.</p>
 <hr />
 <h2 id="session-structure">Session Structure</h2>
-<h3 id="discussion-what-does-good-data-mean-12-minutes">Discussion: What Does "Good Data" Mean? (12 minutes)</h3>
-<h4 id="opening-frame-2-minutes">Opening Frame (2 minutes):</h4>
-<p><strong>Facilitator Introduction:</strong>
-- "Yesterday we focused on incident response - when technical systems break"
-- "Today we're exploring a different operational challenge: when systems work fine, but the data doesn't meet our standards"
-- "This is about quality and governance - making sure data is 'good enough' for its intended use"</p>
-<h4 id="individual-reflection-3-minutes">Individual Reflection (3 minutes):</h4>
+<h3 id="discussion-what-does-good-data-mean">Discussion: What Does "Good Data" Mean?</h3>
+<h4 id="opening-frame">Opening Frame</h4>
+<p><strong>Facilitator Introduction:</strong></p>
+<ul>
+<li>"Yesterday we focused on incident response - when technical systems break"</li>
+<li>"Today we're exploring a different operational challenge: when systems work fine, but the data doesn't meet our standards"</li>
+<li>"This is about quality and governance - making sure data is 'good enough' for its intended use"</li>
+</ul>
+<h4 id="individual-reflection">Individual Reflection</h4>
 <p><strong>Question for learners:</strong>
 <em>"Think about data you use in your work - what makes data 'good' versus 'bad'? What frustrates you most about poor quality data?"</em></p>
-<p><strong>Reflection prompts:</strong>
-- Think of a time when you couldn't trust data you were given
-- What made you lose confidence in a report or dashboard?
-- When have you had to spend time cleaning or fixing data before you could use it?</p>
-<h4 id="group-sharing-5-minutes">Group Sharing (5 minutes):</h4>
-<p><strong>Structured sharing:</strong>
-Each learner shares <strong>one example</strong> (30-45 seconds):
-- "Bad data for me is when..."
-- "I lose confidence in data when..."
-- "The most frustrating data quality issue I face is..."</p>
-<p><strong>Facilitator role:</strong>
-- <strong>Listen for patterns</strong> and capture themes on screen/flip chart
-- <strong>Group similar responses:</strong> accuracy issues, completeness problems, timeliness concerns
-- <strong>Note the business impact</strong> - not just technical problems but work impact</p>
-<h4 id="pattern-recognition-2-minutes">Pattern Recognition (2 minutes):</h4>
-<p><strong>Facilitator synthesis:</strong>
-- "I'm hearing themes around accuracy, completeness, timing..."
-- "Notice how quality problems affect your ability to do your job"
-- "These aren't just technical issues - they have real business consequences"</p>
-<p><strong>Expected themes to emerge:</strong>
-- <strong>Accuracy:</strong> Wrong numbers, outdated information
-- <strong>Completeness:</strong> Missing records, partial data
-- <strong>Consistency:</strong> Same thing measured differently across systems
-- <strong>Timeliness:</strong> Data arriving too late to be useful
-- <strong>Relevance:</strong> Right data but not quite what's needed
-- <strong>Trust:</strong> Uncertainty about whether data can be relied upon</p>
+<p><strong>Reflection prompts:</strong></p>
+<ul>
+<li>Think of a time when you couldn't trust data you were given</li>
+<li>What made you lose confidence in a report or dashboard?</li>
+<li>When have you had to spend time cleaning or fixing data before you could use it?</li>
+</ul>
+<h4 id="group-sharing">Group Sharing</h4>
+<p><strong>Structured sharing:</strong></p>
+<p>Each learner shares <strong>one example</strong> (30-45 seconds):</p>
+<ul>
+<li>"Bad data for me is when..."</li>
+<li>"I lose confidence in data when..."</li>
+<li>"The most frustrating data quality issue I face is..."</li>
+</ul>
+<p><strong>Facilitator role:</strong></p>
+<ul>
+<li><strong>Listen for patterns</strong> and capture themes on screen/flip chart</li>
+<li><strong>Group similar responses:</strong> accuracy issues, completeness problems, timeliness concerns</li>
+<li><strong>Note the business impact</strong> - not just technical problems but work impact</li>
+</ul>
+<h4 id="pattern-recognition">Pattern Recognition</h4>
+<p><strong>Facilitator synthesis:</strong></p>
+<ul>
+<li>"I'm hearing themes around accuracy, completeness, timing..."</li>
+<li>"Notice how quality problems affect your ability to do your job"</li>
+<li>"These aren't just technical issues - they have real business consequences"</li>
+</ul>
+<p><strong>Expected themes to emerge:</strong></p>
+<ul>
+<li><strong>Accuracy:</strong> Wrong numbers, outdated information</li>
+<li><strong>Completeness:</strong> Missing records, partial data</li>
+<li><strong>Consistency:</strong> Same thing measured differently across systems</li>
+<li><strong>Timeliness:</strong> Data arriving too late to be useful</li>
+<li><strong>Relevance:</strong> Right data but not quite what's needed</li>
+<li><strong>Trust:</strong> Uncertainty about whether data can be relied upon</li>
+</ul>
 <hr />
 <h3 id="acquisition-data-quality-as-operational-challenge-8-minutes">Acquisition: Data Quality as Operational Challenge (8 minutes)</h3>
 <h4 id="reframe-quality-as-operations-3-minutes">Reframe Quality as Operations (3 minutes):</h4>
-<p><strong>Connect to Yesterday:</strong>
-- "Yesterday you handled incidents - systems failing completely"
-- "Today's challenge is more subtle: systems work, but output isn't meeting standards"
-- "This requires the same systematic thinking, but different detection and response approaches"</p>
-<p><strong>Quality vs. Incidents:</strong>
+<p><strong>Connect to Yesterday:</strong></p>
+<ul>
+<li>"Yesterday you handled incidents - systems failing completely"</li>
+<li>"Today's challenge is more subtle: systems work, but output isn't meeting standards"</li>
+<li>"This requires the same systematic thinking, but different detection and response approaches"</li>
+</ul>
+<p><strong>Quality vs. Incidents:</strong></p>
 <div class="highlight"><pre><span></span><code>SYSTEM INCIDENTS          vs.    DATA QUALITY ISSUES
 ↓                                ↓
 Pipeline stops working           Pipeline produces unreliable data
 Clear failure signal           Subtle degradation signal
 Immediate impact               Gradual impact
 Technical fix needed           Process/standards fix needed
-</code></pre></div></p>
+</code></pre></div>
 <h4 id="why-quality-matters-operationally-3-minutes">Why Quality Matters Operationally (3 minutes):</h4>
-<p><strong>Business Impact Examples:</strong>
-- <strong>Decision-making:</strong> Executives making strategic decisions based on inaccurate data
-- <strong>Customer experience:</strong> Personalization systems using outdated customer preferences
-- <strong>Compliance:</strong> Regulatory reports with incomplete or inconsistent data
-- <strong>Efficiency:</strong> Teams spending time validating data instead of analyzing it</p>
-<p><strong>The Quality Challenge:</strong>
-- <strong>Detection is harder:</strong> Systems appear to be working fine
-- <strong>Standards are subjective:</strong> "Good enough" varies by use case
-- <strong>Prevention requires governance:</strong> Processes, policies, and culture change
-- <strong>Impact is often delayed:</strong> Problems discovered weeks or months later</p>
-<h4 id="operational-quality-dimensions-2-minutes">Operational Quality Dimensions (2 minutes):</h4>
-<p><strong>Quick introduction to key concepts:</strong>
-- <strong>Fitness for purpose:</strong> Data quality depends on how it will be used
-- <strong>Quality standards:</strong> Need clear, measurable criteria
-- <strong>Quality monitoring:</strong> Ongoing measurement, not one-time assessment
-- <strong>Quality improvement:</strong> Systematic processes for addressing issues</p>
-<p><strong>Preview today's approach:</strong>
-- "We'll define quality standards using proven frameworks"
-- "See how to implement quality patterns in data architectures"
-- "Practice balancing quality requirements with practical constraints"</p>
+<p><strong>Business Impact Examples:</strong></p>
+<ul>
+<li><strong>Decision-making:</strong> Executives making strategic decisions based on inaccurate data</li>
+<li><strong>Customer experience:</strong> Personalization systems using outdated customer preferences</li>
+<li><strong>Compliance:</strong> Regulatory reports with incomplete or inconsistent data</li>
+<li><strong>Efficiency:</strong> Teams spending time validating data instead of analyzing it</li>
+</ul>
+<p><strong>The Quality Challenge:</strong></p>
+<ul>
+<li><strong>Detection is harder:</strong> Systems appear to be working fine</li>
+<li><strong>Standards are subjective:</strong> "Good enough" varies by use case</li>
+<li><strong>Prevention requires governance:</strong> Processes, policies, and culture change</li>
+<li><strong>Impact is often delayed:</strong> Problems discovered weeks or months later</li>
+</ul>
+<h4 id="operational-quality-dimensions">Operational Quality Dimensions</h4>
+<p><strong>Quick introduction to key concepts:</strong></p>
+<ul>
+<li><strong>Fitness for purpose:</strong> Data quality depends on how it will be used</li>
+<li><strong>Quality standards:</strong> Need clear, measurable criteria</li>
+<li><strong>Quality monitoring:</strong> Ongoing measurement, not one-time assessment</li>
+<li><strong>Quality improvement:</strong> Systematic processes for addressing issues</li>
+</ul>
+<p><strong>Preview today's approach:</strong></p>
+<ul>
+<li>"We'll define quality standards using proven frameworks"</li>
+<li>"See how to implement quality patterns in data architectures"</li>
+<li>"Practice balancing quality requirements with practical constraints"</li>
+</ul>
 <hr />
 <h2 id="transition-to-next-session">Transition to Next Session</h2>
-<h3 id="bridge-to-dmbok-investigation-1-minute">Bridge to DMBOK Investigation (1 minute):</h3>
-<p><strong>Facilitator:</strong>
-- "You've identified quality challenges from your experience"
-- "Now we'll explore a professional framework for thinking about data quality"
-- "The DMBOK (Data Management Body of Knowledge) provides six specific dimensions for measuring and improving data quality"
-- "This will give you systematic language for the quality issues you've experienced"</p>
+<h3 id="bridge-to-dmbok-investigation">Bridge to DMBOK Investigation</h3>
+<p><strong>Facilitator:</strong></p>
+<ul>
+<li>"You've identified quality challenges from your experience"</li>
+<li>"Now we'll explore a professional framework for thinking about data quality"</li>
+<li>"The DMBOK (Data Management Body of Knowledge) provides six specific dimensions for measuring and improving data quality"</li>
+<li>"This will give you systematic language for the quality issues you've experienced"</li>
+</ul>
 <hr />
 <h2 id="resources-for-trainers">Resources for Trainers</h2>
-<h3 id="managing-the-discussion">Managing the Discussion:</h3>
-<p><strong>If learners struggle to think of examples:</strong>
-- "Think about spreadsheets you've received that had problems"
-- "Consider dashboards or reports where you questioned the numbers"
-- "What about customer data that seemed outdated or wrong?"</p>
-<p><strong>If examples get too technical:</strong>
-- "Focus on the impact on your work, not the technical cause"
-- "How did the quality problem affect your decision-making?"</p>
-<p><strong>If discussion goes long:</strong>
-- <strong>Capture themes quickly</strong> and move to acquisition
-- "I'm hearing great examples - let's put framework around these experiences"</p>
+<h3 id="managing-the-discussion">Managing the Discussion</h3>
+<p><strong>If learners struggle to think of examples:</strong></p>
+<ul>
+<li>"Think about spreadsheets you've received that had problems"</li>
+<li>"Consider dashboards or reports where you questioned the numbers"</li>
+<li>"What about customer data that seemed outdated or wrong?"</li>
+</ul>
+<p><strong>If examples get too technical:</strong></p>
+<ul>
+<li>"Focus on the impact on your work, not the technical cause"</li>
+<li>"How did the quality problem affect your decision-making?"</li>
+</ul>
+<p><strong>If discussion goes long:</strong></p>
+<ul>
+<li><strong>Capture themes quickly</strong> and move to acquisition</li>
+<li>"I'm hearing great examples - let's put framework around these experiences"</li>
+</ul>
 <h3 id="common-quality-issues-to-expect">Common Quality Issues to Expect:</h3>
-<p><strong>Accuracy Problems:</strong>
-- Wrong customer contact information
-- Incorrect financial calculations
-- Outdated product pricing</p>
-<p><strong>Completeness Issues:</strong>
-- Missing customer records
-- Partial transaction data
-- Incomplete survey responses</p>
-<p><strong>Consistency Problems:</strong>
-- Different systems showing different customer names
-- Conflicting sales figures across reports
-- Varying date formats</p>
-<p><strong>Timeliness Issues:</strong>
-- Reports showing yesterday's data for real-time decisions
-- Batch processing delays affecting morning meetings
-- Historical data needed but not available</p>
+<p><strong>Accuracy Problems:</strong></p>
+<ul>
+<li>Wrong customer contact information</li>
+<li>Incorrect financial calculations</li>
+<li>Outdated product pricing</li>
+</ul>
+<p><strong>Completeness Issues:</strong></p>
+<ul>
+<li>Missing customer records</li>
+<li>Partial transaction data</li>
+<li>Incomplete survey responses</li>
+</ul>
+<p><strong>Consistency Problems:</strong></p>
+<ul>
+<li>Different systems showing different customer names</li>
+<li>Conflicting sales figures across reports</li>
+<li>Varying date formats</li>
+</ul>
+<p><strong>Timeliness Issues:</strong></p>
+<ul>
+<li>Reports showing yesterday's data for real-time decisions</li>
+<li>Batch processing delays affecting morning meetings</li>
+<li>Historical data needed but not available</li>
+</ul>
 <h3 id="key-insights-to-highlight">Key Insights to Highlight:</h3>
-<p><strong>Quality is Contextual:</strong>
-- Data that's "good enough" for one purpose may be inadequate for another
-- Quality requirements change based on business criticality
-- Perfect data quality is often neither necessary nor cost-effective</p>
-<p><strong>Quality is Operational:</strong>
-- Requires ongoing monitoring, not just initial assessment
-- Needs clear standards and measurement processes
-- Benefits from the same systematic thinking as incident response</p>
-<p><strong>Quality is Organizational:</strong>
-- Often involves multiple teams and systems
-- Requires governance processes and clear accountability
-- Culture and processes matter as much as technology</p>
+<p><strong>Quality is Contextual:</strong></p>
+<ul>
+<li>Data that's "good enough" for one purpose may be inadequate for another</li>
+<li>Quality requirements change based on business criticality</li>
+<li>Perfect data quality is often neither necessary nor cost-effective</li>
+</ul>
+<p><strong>Quality is Operational:</strong></p>
+<ul>
+<li>Requires ongoing monitoring, not just initial assessment</li>
+<li>Needs clear standards and measurement processes</li>
+<li>Benefits from the same systematic thinking as incident response</li>
+</ul>
+<p><strong>Quality is Organizational:</strong></p>
+<ul>
+<li>Often involves multiple teams and systems</li>
+<li>Requires governance processes and clear accountability</li>
+<li>Culture and processes matter as much as technology</li>
+</ul>
 <h3 id="expected-outcomes">Expected Outcomes:</h3>
-<p>By the end of this session, learners should:
-1. <strong>Connect personal experience</strong> with formal data quality concepts
-2. <strong>Understand quality as operational challenge</strong> requiring systematic approaches
-3. <strong>Appreciate the business impact</strong> of data quality issues
-4. <strong>Be prepared to explore</strong> structured frameworks for defining and measuring quality</p>
+<p>By the end of this session, learners should:</p>
+<ol>
+<li><strong>Connect personal experience</strong> with formal data quality concepts</li>
+<li><strong>Understand quality as operational challenge</strong> requiring systematic approaches</li>
+<li><strong>Appreciate the business impact</strong> of data quality issues</li>
+<li><strong>Be prepared to explore</strong> structured frameworks for defining and measuring quality</li>
+</ol>
 <h3 id="connection-to-ksbs">Connection to KSBs:</h3>
 <ul>
 <li><strong>K4:</strong> Frameworks for data quality covering dimensions such as accuracy, completeness, consistency</li>
