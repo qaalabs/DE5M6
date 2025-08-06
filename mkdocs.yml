@@ -7,10 +7,10 @@ nav:
   - Overview: index.md
 
   - Agenda:
-    - Day 1: tne/day1.md
-    - Day 2: tne/day2.md
-    - Day 3: tne/day3.md
-    - Day 4: tne/day4.md
+    - Day 1: agenda/day1.md
+    - Day 2: agenda/day2.md
+    - Day 3: agenda/day3.md
+    - Day 4: agenda/day4.md
 
   - "Day 1 - Monitoring & Performance":
     - "Status page ~ Report back": day1/status-page-report-back.md
@@ -36,6 +36,7 @@ nav:
     - "Lab 3.3 ~ 21 Deployment Pipelines": labs/21-deployment-pipelines.md
 
   - "Day 4 - Improvement & Value":
+    - "Overview": day4/overview.md
     - "Planning for Sprint 1": day4/sprint1.md
     - "Planning for Sprint 2": day4/sprint2.md
     - "Planning for Sprint 3": day4/sprint3.md

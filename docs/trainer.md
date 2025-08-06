@@ -96,7 +96,7 @@
 
 ### Session 1
 
-- Explore Product Backlog
+- [Overview](day4/overview.md)
 - [Planning for Sprint 1](day4/sprint1.md)
 - Sprint Block 1
 
