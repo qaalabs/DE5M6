@@ -1,4 +1,4 @@
-# Sprint 2: Make it Resilient (50 minutes)
+# Sprint 2 ~ Make it Resilient (50 minutes)
 
 *Choose 1-3 items that interest you*
 
@@ -12,7 +12,7 @@
 
 **Key Tasks:**
 
-- Categorize all possible pipeline errors by severity and type
+- Categorise all possible pipeline errors by severity and type
 - Define escalation paths for different error categories
 - Create communication templates for incident notifications
 - Design on-call rotation and escalation timeline matrix
@@ -37,6 +37,7 @@
 ---
 
 ### Manual Testing Framework (2 points)
+
 !!! tip "As a Quality Engineer, I want a testing checklist so that we can validate pipeline resilience manually."
 
 **Key Tasks:**
@@ -51,6 +52,7 @@
 ---
 
 ### Recovery Procedures Design (2 points)
+
 !!! tip "As a Data Operations Manager, I want documented recovery procedures so that team members can restore service quickly."
 
 **Key Tasks:**
@@ -67,6 +69,7 @@
 ## Hands-On Tasks (2-3 points)
 
 ### Basic Retry Logic Implementation (3 points)
+
 !!! tip "As a Data Engineer, I want automatic retry functionality for transient failures so that temporary issues don't cause complete pipeline failures."
 
 **Key Tasks:**
@@ -81,6 +84,7 @@
 ---
 
 ### Configuration-Based Error Thresholds (2 points)
+
 !!! tip "As a Data Engineer, I want configurable error thresholds so that the pipeline can adapt to different tolerance levels."
 
 **Key Tasks:**
@@ -95,6 +99,7 @@
 ---
 
 ### Database Transaction Management (3 points)
+
 !!! tip "As a Data Engineer, I want robust transaction handling so that database failures don't leave data in an inconsistent state."
 
 **Key Tasks:**
@@ -109,6 +114,7 @@
 ---
 
 ### Failure Simulation & Recovery (3 points)
+
 !!! tip "As a Data Engineer, I want to test failure scenarios so that I can validate our recovery procedures."
 
 **Key Tasks:**
@@ -125,6 +131,7 @@
 ## Strategic Thinking (2-3 points)
 
 ### Disaster Recovery Strategy (3 points)
+
 !!! tip "As a Data Operations Manager, I want a comprehensive disaster recovery plan so that we can restore operations quickly after major failures."
 
 **Key Tasks:**
@@ -139,7 +146,8 @@
 ---
 
 ### Business Impact Assessment (2 points)
-!!! tip "As a Business Continuity Manager, I want to understand the business impact of ETL pipeline failures so that I can prioritize resilience investments."
+
+!!! tip "As a Business Continuity Manager, I want to understand the business impact of ETL pipeline failures so that I can prioritise resilience investments."
 
 **Key Tasks:**
 
@@ -155,6 +163,7 @@
 ## Cloud & Modern Tools (3 points)
 
 ### Azure Pipeline Resilience (3 points)
+
 !!! tip "As a Data Engineer, I want to explore Azure Data Factory resilience features so that I understand cloud-native reliability patterns."
 
 **Key Tasks:**
@@ -169,6 +178,7 @@
 ---
 
 ### Fabric Error Handling (3 points)
+
 !!! tip "As a Data Engineer, I want to implement error handling in Microsoft Fabric so that pipelines gracefully handle failures."
 
 **Key Tasks:**
@@ -182,9 +192,10 @@
 
 ---
 
-## 🔧 Technical Deep Dives (3-4 points)
+## Technical Deep Dives (3-4 points)
 
 ### Circuit Breaker Implementation (4 points)
+
 !!! tip "As a Data Engineer, I want circuit breaker protection for external API calls so that API failures don't overwhelm services."
 
 **Key Tasks:**
@@ -199,6 +210,7 @@
 ---
 
 ### Automated Health Checks (3 points)
+
 !!! tip "As a Data Engineer, I want automated health validation so that system problems are detected before they impact pipelines."
 
 **Key Tasks:**
@@ -213,6 +225,7 @@
 ---
 
 ### State Management & Checkpointing (4 points)
+
 !!! tip "As a Data Engineer, I want pipeline state persistence so that failed pipelines can resume from the last successful checkpoint."
 
 **Key Tasks:**
@@ -228,30 +241,28 @@
 
 ## Tips for Sprint 2
 
-#### If You Want Quick Wins:
-
 - **Error Classification** helps you think systematically about failures
 - **Recovery Procedures** are valuable for any data role
 - **Testing Framework** gives you practical QA skills
 
-#### If You Want to Code:
+### If You Want to Code
 
 - **Retry Logic** is immediately useful and satisfying to implement
 - **Configuration Thresholds** teaches important design patterns
 - **Health Checks** provide visible system validation
 
-#### If You Like Strategy:
+### If You Like Strategy
 
 - **Disaster Recovery** thinking is valuable for senior roles
 - **Business Impact Assessment** connects technical to business
 - **Failure Simulation** helps you think like a reliability engineer
 
-#### If You're Cloud-Curious:
+### If You're Cloud-Curious
 
 - **Azure Pipeline Resilience** shows enterprise patterns
 - **Fabric Error Handling** demonstrates modern platform capabilities
 
-#### For the Ambitious:
+### For the Ambitious
 
 - **Circuit Breaker** is a classic reliability pattern worth learning
 - **State Management** is advanced but very powerful

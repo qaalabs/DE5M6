@@ -1,4 +1,4 @@
-# Sprint 1: Make it Observable (40 minutes)
+# Sprint 1 ~ Make it Observable (40 minutes)
 
 *Choose 1-3 items that interest you*
 
@@ -17,13 +17,13 @@
 - Create wireframes or mockups
 - Plan implementation approach
 
-**Skills:** design, visualization
+**Skills:** design, visualisation
 
 ---
 
-### Data Flow Visualization (2 points)
+### Data Flow Visualisation (2 points)
 
-!!! abstract "As a Data Engineer, I want to visualize our ETL data flow so that team members understand the pipeline structure."
+!!! abstract "As a Data Engineer, I want to visualise our ETL data flow so that team members understand the pipeline structure."
 
 **Key Tasks:**
 
@@ -38,13 +38,13 @@
 
 ### Production Readiness Assessment (2 points)
 
-!!! abstract "As a Data Engineer, I want to assess what's missing for production deployment so that we can prioritize improvements."
+!!! abstract "As a Data Engineer, I want to assess what's missing for production deployment so that we can prioritise improvements."
 
 **Key Tasks:**
 
 - Review current pipeline against production checklist
 - Identify gaps in monitoring, security, and reliability
-- Prioritize missing components
+- Prioritise missing components
 - Create improvement roadmap
 
 **Skills:** planning, analysis
@@ -68,9 +68,9 @@
 
 ## Hands-On Tasks (2-3 points)
 
-### Configuration Externalization (3 points)
+### Configuration Externalisation (3 points)
 
-!!! abstract "As a Developer, I want to parameterize the data source and output file so that others can reuse it."
+!!! abstract "As a Developer, I want to parameterise the data source and output file so that others can reuse it."
 
 **Key Tasks:**
 
@@ -114,6 +114,7 @@
 ---
 
 ### Monitoring Strategy Design (3 points)
+
 !!! abstract "As a Data Operations Manager, I want a comprehensive monitoring strategy so that our team can effectively observe pipeline health."
 
 **Key Tasks:**
@@ -130,7 +131,8 @@
 ## Strategic Thinking (2-3 points)
 
 ### Pipeline Gap Analysis (2 points)
-!!! abstract "As a Data Engineering Team Lead, I want to understand current monitoring gaps so that I can prioritize observability improvements."
+
+!!! abstract "As a Data Engineering Team Lead, I want to understand current monitoring gaps so that I can prioritise observability improvements."
 
 **Key Tasks:**
 
@@ -144,6 +146,7 @@
 ---
 
 ### Incident Response Planning (3 points)
+
 !!! abstract "As a Data Engineer, I want a clear incident response process so that I can quickly resolve pipeline failures."
 
 **Key Tasks:**
@@ -160,6 +163,7 @@
 ## Cloud & Modern Tools (2-3 points)
 
 ### Azure Monitor Integration (3 points)
+
 !!! abstract "As a Data Engineer, I want to integrate with Azure Monitor so that pipeline metrics appear in our enterprise dashboard."
 
 **Key Tasks:**
@@ -174,6 +178,7 @@
 ---
 
 ### Fabric Pipeline Observability (3 points)
+
 !!! abstract "As a Data Engineer, I want to explore Microsoft Fabric monitoring capabilities so that I understand modern data platform observability."
 
 **Key Tasks:**
@@ -190,6 +195,7 @@
 ## Technical Deep Dives (3 points)
 
 ### Logging Strategy Framework (3 points)
+
 !!! abstract "As a Data Operations Manager, I want a comprehensive logging strategy so that our team can effectively troubleshoot pipeline issues."
 
 **Key Tasks:**
@@ -204,7 +210,8 @@
 ---
 
 ### Performance Metrics Collection (3 points)
-!!! abstract "As a Data Engineer, I want detailed pipeline performance metrics so that I can optimize processing time and resource usage."
+
+!!! abstract "As a Data Engineer, I want detailed pipeline performance metrics so that I can optimise processing time and resource usage."
 
 **Key Tasks:**
 
@@ -218,6 +225,7 @@
 ---
 
 ### Email Alerting Setup (3 points)
+
 !!! abstract "As a Data Operations Team, I want email notifications for critical pipeline failures so that we can respond quickly to issues."
 
 **Key Tasks:**
@@ -233,25 +241,23 @@
 
 ## Tips for Sprint 1
 
-#### If You're New to This:
-
 - Start with **Quick Wins** to build confidence
 - Focus on **understanding** rather than perfect implementation
 - **Document your thinking** - that's valuable too!
 
-#### If You Want to Code:
+### If You Want to Code
 
-- **Configuration Externalization** is a great starting point
+- **Configuration Externalisation** is a great starting point
 - **Logging Implementation** gives immediate visible results
 - **Health Checks** are practical and useful
 
-#### If You Like Strategy:
+### If You Like Strategy
 
 - **Gap Analysis** helps you think like a senior engineer
 - **Monitoring Strategy** connects technical and business needs
 - **Incident Response** is valuable for any role
 
-#### If You're Cloud-Curious:
+### If You're Cloud-Curious
 
 - **Azure Monitor** exploration is very relevant
 - **Fabric Observability** shows the future of data platforms
