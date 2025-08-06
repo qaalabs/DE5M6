@@ -2,8 +2,8 @@
 
 ## Session 1
 
-- `09:30` VM Setup & Welcome (10 mins)
-- `09:40` Explore Product Backlog (10 mins)
+- `09:30` Welcome (10 mins)
+- `09:40` [Overview](../day4/overview.md) (10 mins)
 - `09:50` [Planning for Sprint 1](../day4/sprint1.md) (10 mins)
 - `10:00` Sprint Block 1 (40 mins)
 
