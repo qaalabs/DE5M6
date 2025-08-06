@@ -1,8 +1,6 @@
 # Day 4 ~ Instructions & Overview
 
-## Today's Goal
-
-Welcome to Day 4: *Improvement & Value*.
+## Welcome to Day 4: *Improvement & Value*.
 
 Today, you'll work in teams to simulate a real-world DataOps project using agile methods. Your mission is to improve a data pipeline over three focused sprints - each targeting a different operational goal.
 
@@ -15,7 +13,7 @@ By the end of the day, you'll have:
 
 ### A complete pipeline is available in a GitHub repo
 
-- [Instructions](https://github.com/ingwanelabs/etl-pipeline/tree/main/etl)
+- [Instructions](https://github.com/ingwanelabs/etl-pipeline/tree/main/etl#readme)
 - Jupyter Notebook: https://github.com/ingwanelabs/etl-pipeline/blob/main/etl/data-enrichment_load.ipynb
 
 ---
