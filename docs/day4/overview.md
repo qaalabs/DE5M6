@@ -1,8 +1,8 @@
 # Day 4 ~ Instructions & Overview
 
-## Welcome to Day 4: *Improvement & Value*.
+## *Improvement & Value*.
 
-Today, you'll work in teams to simulate a real-world DataOps project using agile methods. Your mission is to improve a data pipeline over three focused sprints - each targeting a different operational goal.
+On day 4, you will work in teams to simulate a real-world DataOps project using agile methods. Your mission is to improve a data pipeline over three focused sprints - each targeting a different operational goal.
 
 By the end of the day, you'll have:
 
@@ -11,10 +11,13 @@ By the end of the day, you'll have:
 - Practiced teamwork, monitoring, and incident response
 - Presented your work and reflected on what you've learned
 
-### A complete pipeline is available in a GitHub repo
+---
 
-- [Instructions](https://github.com/ingwanelabs/etl-pipeline/tree/main/etl#readme)
-- Jupyter Notebook: https://github.com/ingwanelabs/etl-pipeline/blob/main/etl/data-enrichment_load.ipynb
+### <mark>FYI ~ A complete pipeline example is available in a GitHub repo</mark>
+
+- To view the **Jupyter Notebook** in html format - [Click here](../notebooks/data-enrichment_load.html)
+- To view the **Jupyter Notebook** in the GitHub repo - [Click here](https://github.com/ingwanelabs/etl-pipeline/blob/main/etl/data-enrichment_load.ipynb)
+- For instructions on how to run the notebook in your VM - [Click here](https://github.com/ingwanelabs/etl-pipeline/tree/main/etl#readme)
 
 ---
 
@@ -41,7 +44,7 @@ And at the end of the 3 sprints:
 
 ### Working in Teams
 
-- You'll work in groups of 3–5 learners.
+- You'll work in groups of 3-5 learners.
 - Just like in Scrum ~ there are no allocated roles.
 - You can work as a team, or individually.
 - You can build on the work of others, within a sprint, and also across sprints.
@@ -52,13 +55,15 @@ And at the end of the 3 sprints:
 
 > You are a DataOps team responsible for improving a deployed data pipeline to ensure it's observable, resilient, and governed.
 
-You'll be given a complete pipeline (or you can start from scratch) and work in sprints to:
+You will in sprints to:
 
 - Add meaningful logs and visibility
 - Simulate and respond to failures
 - Build quality and governance into your process
 
-### What You’ll Present
+*You can use complete pipeline (see above), or you can create one from scratch.*
+
+### What You'll Present
 
 At the end of the day, your team will:
 
@@ -84,6 +89,6 @@ You can use any tools that you have availalble. Including:
 ## Tips for Success
 
 - Start small — get a working version early, then improve it
-- Work iteratively — you don’t have to perfect everything in Sprint 1
+- Work iteratively — you don't have to perfect everything in Sprint 1
 - Communicate often — check in with your team regularly
 - Be prepared to demo and explain your work clearly
