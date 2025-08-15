@@ -114,7 +114,8 @@
 
 ### Session 4
 
-- Team Demos & Sprint Review
+- Sprint Review in groups
+- Team Demos
 - Sprint Retrospective
 
 ---

@@ -2,7 +2,7 @@
 
 ## Session 1
 
-- `09:30` Welcome to Day 2 of DE5 Module 6 (10 mins)
+- `09:30` **Welcome**: Welcome to Day 2 of DE5 Module 6 (10 mins)
 - `09:40` **Practice**: [Lab 2.1 ~ 04 Ingest Pipeline](../labs/04-ingest-pipeline.md) (30 mins)
 - `10:10` **Discussion**: When a system broke at work (10 mins)
 - `10:20` **Practice**: [Lab 04 ~ Break it systematically](../day2/breaking-things.md) (20 mins)

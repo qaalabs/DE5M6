@@ -1,5 +1,5 @@
 # Site name
-site_name: DE5M6 ~ Data Operations
+site_name: Module 6 - Data Operations
 dev_addr: '0.0.0.0:8000'
 
 # Navigation menu
@@ -45,6 +45,7 @@ nav:
 
 not_in_nav: |
   trainer.md
+  http://192.168.1.227:3000/s/de5m6.md
   index.md
   day1/system-failure.md
   day1/why-monitor.md
@@ -106,3 +107,5 @@ markdown_extensions:
 
 plugins:
   - search
+
+

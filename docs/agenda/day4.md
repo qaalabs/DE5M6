@@ -2,7 +2,7 @@
 
 ## Session 1
 
-- `09:30` Welcome & Introduction to Day 4 (10 mins)
+- `09:30` **Welcome**: Welcome & Introduction to Day 4 (10 mins)
 - `09:40` [Instructions & Overview](../day4/overview.md) (10 mins)
 - `09:50` **Groups**: [Planning for Sprint 1](../day4/sprint1.md) (10 mins)
 - `10:00` **Groups**: Sprint Block 1 (40 mins)
@@ -27,7 +27,8 @@
 
 ## Session 4
 
-- `14:40` Team Demos & Sprint Review (40 mins)
+- `14:40` Sprint Review in groups (10 mins)
+- `14:50` Team Demos (30 mins)
 - `15:20` Sprint Retrospective (20 mins)
 
 ## 👍 Course Evaluation
