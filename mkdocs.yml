@@ -63,8 +63,6 @@ theme:
     name: material
     icon:
       logo: material/database
-    static_templates:
-      - 404.html
 
 # Extensions
 markdown_extensions:
