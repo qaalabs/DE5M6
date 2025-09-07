@@ -44,8 +44,8 @@ nav:
   - Resources: resources.md
 
 not_in_nav: |
+  404.md
   trainer.md
-  http://192.168.1.227:3000/s/de5m6.md
   index.md
   day1/system-failure.md
   day1/why-monitor.md
@@ -63,8 +63,6 @@ theme:
     name: material
     icon:
       logo: material/database
-    static_templates:
-      - 404.html
 
 # Extensions
 markdown_extensions:
