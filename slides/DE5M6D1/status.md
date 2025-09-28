@@ -3,7 +3,7 @@
 **10 minutes investigation + 10 minutes for sharing**
 
 - Put group allocation in chat (see notepad file)
-- Assign each pair 1-2 status pages from the list below
+- Assign each group a status pages from the list below
 
 ### Status Pages to Research
 
@@ -14,4 +14,5 @@
 
 ### Explain report back
 
-- <mark>Tell them what is required when reporting back</mark> ~ [link](https://qaalabs.github.io/DE5M6/day1/status-page-report-back)
+- <mark>Tell them what is required when reporting back</mark>
+- https://qaalabs.github.io/DE5M6/day1/status-page-report-back/

@@ -1,8 +1,8 @@
-## <mark>Learner "report back" session</mark>
+## <mark>Breakout group "report back" session</mark>
 
 **Not much time is allocated to the report back ~ so keep sharing tight**
 
-### Each pair shares one key insight
+### Each group shares one key insight
 
 - "The most interesting thing we noticed was..."
 - "If we were designing a status page, we'd make sure to..."

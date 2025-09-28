@@ -1,6 +1,6 @@
 ## 🧪 <mark>Lab 1.4</mark> ~ 06c Monitor Warehouse
 
-<span style="background-color: orange;">Give learners the link:</span> https://qaalabs.github.io/DE5M6/labs/06c-monitor-data-warehouse/
+<span style="background-color: orange;">Give learners the link:</span> https://qaalabs.github.io/fabric/06c-monitor-data-warehouse/instructions/
 
 ### Activities
 

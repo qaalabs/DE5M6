@@ -1,6 +1,6 @@
 ## 🧪 <mark>Lab 1.1</mark> ~ 05 Dataflows Gen2
 
-<span style="background-color: orange;">Give learners the link:</span> https://qaalabs.github.io/DE5M6/labs/05-dataflows-gen2/
+<span style="background-color: orange;">Give learners the link:</span> https://qaalabs.github.io/fabric/05-dataflows-gen2/
 
 ### Activities
 

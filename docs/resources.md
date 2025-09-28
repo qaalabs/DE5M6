@@ -2,7 +2,7 @@
 
 ## Links
 
-- Learner reactions ~ [Ticks & Crosses](https://tick.qaalabs.com/de5m6)
+- Learner reactions ~ [Ticks & Crosses](https://tick.qaalabs.com/de5/m6)
 
 ### QA Platform Labs
 
