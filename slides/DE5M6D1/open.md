@@ -7,4 +7,5 @@
 - `D1 PM ~ MS-Fabric.pptx`
 
 ### Links
+
 - https://qaalabs.github.io/DE5M6/trainer
