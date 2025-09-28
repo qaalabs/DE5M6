@@ -1,6 +1,6 @@
 ## <mark>Break things systematically</mark>
 
-<span style="background-color: orange;">Give learners the link:</span> https://barbourians.github.io/DE5M6/day2/breaking-things/
+<span style="background-color: orange;">Give learners the link:</span> https://qaalabs.github.io/DE5M6/day2/breaking-things/
 
 ### Part 1: Establish Working Baseline
 

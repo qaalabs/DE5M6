@@ -1,6 +1,6 @@
 ## 🧪 <mark>Lab 3.2</mark> ~ 19 Secure data access in Microsoft Fabric
 
-<span style="background-color: orange;">Give learners the link:</span> https://barbourians.github.io/DE5M6/labs/19-secure-data-access/
+<span style="background-color: orange;">Give learners the link:</span> https://qaalabs.github.io/DE5M6/labs/19-secure-data-access/
 
 ### Activities
 

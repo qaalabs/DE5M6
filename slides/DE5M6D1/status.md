@@ -14,4 +14,4 @@
 
 ### Explain report back
 
-- <mark>Tell them what is required when reporting back</mark> ~ [link](https://barbourians.github.io//DE5M6/day1/status-page-report-back)
+- <mark>Tell them what is required when reporting back</mark> ~ [link](https://qaalabs.github.io/DE5M6/day1/status-page-report-back)

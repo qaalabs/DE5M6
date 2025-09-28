@@ -2,7 +2,7 @@
 
 ### Trainer notes
 
-- https://barbourians.github.io/DE5M6/trainer
+- https://qaalabs.github.io/DE5M6/trainer
 - https://bud.sso.app.qa.com/lab/microsoft-fabric-playground/
 
 ---
@@ -20,25 +20,30 @@
 ## **Day 3: Operational Quality & Governance**
 
 ### **Learning Objective**
+
 Implement data quality standards and governance controls in operations
 
 ### **Key Activities**
+
 - **Morning Lab:** Build medallion architecture for data quality patterns
 - **Quality Assessment:** Define and measure data quality metrics
 - **Governance Workshop:** Implement data access controls and security
 - **Case Study Analysis:** Solve real-world governance scenarios
 
 ### **Key Questions Explored**
+
 - How do you ensure data operations meet quality standards?
 - What governance controls are needed for operational compliance?
 - How do you balance accessibility with security requirements?
 
 ### **Practical Outcomes**
+
 - Data quality measurement framework established
 - Security and access controls implemented
 - Governance decision-making process defined
 
 ### **KSBs Covered**
+
 - **S6:** Systematically clean, validate, and describe data (ETL)
 - **S13:** Use data systems securely per procedures and legislation
 - **S26:** Identify data quality metrics and frameworks
@@ -49,6 +54,7 @@ Implement data quality standards and governance controls in operations
 ---
 
 ## Day 3: Operational Quality & Governance
+
 "Learn to maintain data standards and governance"
 
 Learning Flow:

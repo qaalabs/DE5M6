@@ -1,6 +1,6 @@
 ## 🧪 <mark>Demo</mark> Lab ~ 11 Use Data Activator in Fabric
 
-- https://barbourians.github.io/DE5M6/labs/11-data-activator/
+- https://qaalabs.github.io/DE5M6/labs/11-data-activator/
 
 ### Activities
 

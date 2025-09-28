@@ -4,4 +4,4 @@ This session transitions from Day 1's "when things work" to Day 2's "when things
 
 ### Trainer notes
 
-- https://barbourians.github.io/DE5M6/trainer
+- https://qaalabs.github.io/DE5M6/trainer

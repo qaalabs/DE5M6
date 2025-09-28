@@ -1,6 +1,6 @@
 ## 🧪 <mark>Lab 2.1</mark> ~ 04 Ingest data with a pipeline in MS Fabric
 
-<span style="background-color: orange;">Give learners the link:</span> https://barbourians.github.io/DE5M6/labs/04-ingest-pipeline/
+<span style="background-color: orange;">Give learners the link:</span> https://qaalabs.github.io/DE5M6/labs/04-ingest-pipeline/
 
 ### Activities
 

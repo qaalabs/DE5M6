@@ -7,4 +7,4 @@
 - `D1 PM ~ MS-Fabric.pptx`
 
 ### Links
-- https://barbourians.github.io/DE5M6/trainer
+- https://qaalabs.github.io/DE5M6/trainer

@@ -1,6 +1,6 @@
 ## <mark>Implement more complex breaks</mark>
 
-<span style="background-color: orange;">Give learners the link:</span> https://barbourians.github.io/DE5M6/day2/complex-breaking/
+<span style="background-color: orange;">Give learners the link:</span> https://qaalabs.github.io/DE5M6/day2/complex-breaking/
 
 <hr>
 

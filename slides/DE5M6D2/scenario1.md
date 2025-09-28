@@ -1,6 +1,6 @@
 ## <mark>Incident Response Technical Briefing</mark>
 
-https://barbourians.github.io/DE5M6/day2/fire-drill-briefing/
+https://qaalabs.github.io/DE5M6/day2/fire-drill-briefing/
 
 ### Instructions
 
