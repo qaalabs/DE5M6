@@ -4,14 +4,14 @@
 
 - `09:30` **Discussion**: What does good data mean to you? (10 mins)
 - `09:40` Quality Data - why it matters (10 mins)
-- `09:50` **Investigation**: DMBOK's 6 data quality dimensions (40 mins)
-- `10:30` DMBOK report back (10 mins)
+- `09:50` **Investigation**: [DMBOK's 6 data quality dimensions](../day3/quality-dimensions.md) (20 mins)
+- `10:10` DMBOK report back (20 mins)
 
 ## ☕ Morning Break
 
 ## Session 2
 
-- `11:00` **Practice**: [Lab 3.1 ~ 03b Medallion Architecture](../labs/03b-medallion-lakehouse.md) (40 mins)
+- `10:50` **Practice**: [Lab 3.1 ~ 03b Medallion Architecture](../labs/03b-medallion-lakehouse.md) (40 mins)
 - `11:40` **Discussion**: Quality patterns analysis (20 mins)
 - `12:00` **Investigation**: Quality tools (20 mins)
 - `12:20` [Quality tools ~ report back](../day3/quality-tools.md) (10 mins)

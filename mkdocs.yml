@@ -30,6 +30,7 @@ nav:
     - "🔥 Fire Drill Round 2": day2/fire-drill-groups.md
 
   - "Day 3 - Quality & Governance":
+    - "DMBOK's 6 data quality dimensions": day3/quality-dimensions.md
     - "Lab 3.1 ~ 03b Medallion Architecture": labs/03b-medallion-lakehouse.md
     - "Quality tools ~ report back": day3/quality-tools.md
     - "Lab 3.2 ~ 19 Secure Data Access": labs/19-secure-data-access.md
@@ -52,6 +53,7 @@ not_in_nav: |
   day1/status-page-analysis.md
   day1/cloud-monitoring-comparison.md
   day2/fire-drill-briefing.md
+  day3/quality-foundation.md
   day3/quality-tools-trainer.md
 
 
