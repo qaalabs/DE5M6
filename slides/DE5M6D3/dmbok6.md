@@ -1,15 +1,14 @@
-## </mark>DMBOK investigation in pairs</mark>
+## <mark>Research task in pairs</mark>
 
-## Extended DMBOK Activity (50 mins)
+<a href="http://192.168.1.227:3000/de5m6-quality-dimensions" target="_blank">📒 Click here for text to paste into the chat</a>
 
-- **Investigation: DMBOK's 6 quality dimensions (pairs) - 30 mins** (same)
-- **Discussion: Report back findings - 10 mins** (same)
-- **NEW: Application exercise - 10 mins** (extends the learning)
+### Dimensions of Quality
 
-The **new 10-minute application exercise** could be:
-
-- **"Quality Assessment Practice"** - give them a sample data scenario and have them apply the 6 DMBOK dimensions to assess it
-- **"Workplace Quality Mapping"** - have them identify which DMBOK dimensions are most problematic in their current work
-- **"Quality Metrics Design"** - pairs create specific quality metrics for one dimension
-
-This extension would make the learning more practical and set up the Medallion lab better, since they'll have deeper understanding of the quality framework before seeing it applied to bronze/silver/gold layers.
+1. **Accuracy**     & **Validity**              ~ Data correctness vs conformity to rules
+2. **Completeness** & **Uniqueness**            ~ Missing data vs duplicate data
+3. **Consistency**  & **Referential Integrity** ~ Uniformity vs relational integrity
+4. **Timeliness**   & **Currency**              ~ Availability timing vs data freshness
+5. **Relevance**    & **Accessibility**         ~ Suitability for use vs ability to retrieve
+6. **Precision**    & **Granularity**           ~ Level of detail in values vs level of breakdown
+7. **Traceability** & **Volatility**            ~ Auditability vs rate of change
+8. **Credibility**  & **Punctuality**           ~ Trust in source vs delivery timing

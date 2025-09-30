@@ -1,4 +1,4 @@
-## 🧪 <mark>Lab 3.3</mark> ~ 21 Implement deployment pipelines in MS Fabric
+## 🧪 <mark>Lab 3.3</mark> ~ 21 Deployment pipelines in MS Fabric
 
 <span style="background-color: orange;">Give learners the link:</span> https://qaalabs.github.io/DE5M6/labs/21-deployment-pipelines/
 

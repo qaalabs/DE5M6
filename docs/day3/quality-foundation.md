@@ -70,9 +70,9 @@ Each learner shares **one example** (30-45 seconds):
 
 **Connect to Yesterday:**
 
-- "Yesterday you handled incidents - systems failing completely"
-- "Today's challenge is more subtle: systems work, but output isn't meeting standards"
-- "This requires the same systematic thinking, but different detection and response approaches"
+- Yesterday you handled incidents - systems failing completely
+- Today's challenge is more subtle: systems work, but output isn't meeting standards
+- This requires the same systematic thinking, but different detection and response approaches
 
 **Quality vs. Incidents:**
 
@@ -80,9 +80,9 @@ Each learner shares **one example** (30-45 seconds):
 SYSTEM INCIDENTS          vs.    DATA QUALITY ISSUES
 ↓                                ↓
 Pipeline stops working           Pipeline produces unreliable data
-Clear failure signal           Subtle degradation signal
-Immediate impact               Gradual impact
-Technical fix needed           Process/standards fix needed
+Clear failure signal             Subtle degradation signal
+Immediate impact                 Gradual impact
+Technical fix needed             Process/standards fix needed
 ```
 
 #### Why Quality Matters Operationally (3 minutes):

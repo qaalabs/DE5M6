@@ -2,29 +2,39 @@
 
 ## Tool Categories to Research
 
-### Group 1: Data Quality Frameworks
+### Group A: Data Quality Frameworks
 
 - **Great Expectations:** Python-based data validation framework
 - **dbt tests:** Built-in and custom data quality tests
-- **Focus:** How do these tools implement quality checks similar to your silver layer transformations?
 
-### Group 2: Cloud-Native Quality Tools
+❓ How do these tools implement quality checks?
+
+---
+
+### Group B: Cloud-Native Quality Tools
 
 - **Azure Data Quality (in Fabric/Synapse):** Built-in quality monitoring
 - **AWS Glue DataBrew:** Visual data quality profiling
-- **Focus:** How do cloud platforms handle quality monitoring and alerting?
 
-### Group 3: Quality Monitoring & Observability
+❓ How do cloud platforms handle quality monitoring and alerting?
+
+---
+
+### Group C: Quality Monitoring & Observability
 
 - **Monte Carlo:** Data observability and quality monitoring
 - **Datadog Data Streams:** Real-time quality monitoring
-- **Focus:** How do these tools detect quality issues automatically?
 
-### Group 4: Open Source Quality Solutions
+❓ How do these tools detect quality issues automatically?
+
+---
+
+### Group D: Open Source Quality Solutions
 
 - **Apache Griffin:** Data quality platform
 - **DataHub:** Data discovery with quality insights
-- **Focus:** How do open source tools provide cost-effective quality solutions?
+
+❓ How do open source tools provide cost-effective quality solutions?
 
 ---
 
