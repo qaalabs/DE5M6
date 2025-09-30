@@ -1,12 +1,12 @@
 # Incident Response Scenario
 
-## <mark>Group 2 ~ EMBER</mark>
+## <mark>Group 3 ~ IGNIS</mark>
 
 ## The Communications App
 
 Here is the link the communications app for your group:
 
-- https://drill.qaalabs.com/EMBER
+- https://drill.qaalabs.com/IGNIS
 
 ### Notes
 
@@ -48,4 +48,3 @@ Here is the link the communications app for your group:
 - **Technical Lead:** Investigates root cause, determines fix options  
 - **Communications Lead:** Handles stakeholder updates and messaging
 - **Business Impact Analyst:** Assesses downstream effects
-

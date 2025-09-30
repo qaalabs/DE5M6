@@ -4,10 +4,9 @@ https://qaalabs.github.io/DE5M6/day2/fire-drill-briefing/
 
 ### Instructions
 
-- Show the chat app ~ use [room TEST](https://drill.ingwane.org/TEST) as an example
+- Show the chat app ~ use [room TEST](https://drill.qaalabs.com/TEST) as an example
 - Show the status page
 - Show the status mailbox
-
 
 
 <hr>
@@ -23,16 +22,17 @@ https://qaalabs.github.io/DE5M6/day2/fire-drill-briefing/
 
 **Group 1 ~ Blaze**
 
-- https://drill.ingwane.org/BLAZE
+- https://drill.qaalabs.com/BLAZE
 
 **Group 2 ~ Ember**
 
-- https://drill.ingwane.org/EMBER
+- https://drill.qaalabs.com/EMBER
 
 **Group 3 ~ Ignis**
 
-- https://drill.ingwane.org/IGNIS
+- https://drill.qaalabs.com/IGNIS
 
-**Group 4 ~ Pyre**
+**Group 4 ~ Mistral**
 
-- https://drill.ingwane.org/PYRE
+- https://drill.qaalabs.com/MISTRAL
+

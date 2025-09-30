@@ -6,7 +6,7 @@
 
 Here is the link the communications app for your group:
 
-- https://drill.ingwane.org/BLAZE
+- https://drill.qaalabs.com/BLAZE
 
 ### Notes
 
