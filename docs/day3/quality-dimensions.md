@@ -1,12 +1,20 @@
 # Dimensions of Quality
 
+## Investigation task
+
+- Find a **definition** for your given dimensions
+- Find **examples** for each of your quality dimensions
+- How would you apply these in your organisation?
+
+---
+
 ## Research links
 - [Dimensions of Data Quality (DDQ)](https://www.dama-nl.org/wp-content/uploads/2020/09/DDQ-Dimensions-of-Data-Quality-Research-Paper-version-1.2-d.d.-3-Sept-2020.pdf) ~ pdf
 - [How to Select the Right Dimensions of Data Quality](https://www.dama-nl.org/wp-content/uploads/2020/11/How-to-Select-the-Right-Dimensions-of-Data-Quality-v1.1-d.d.-14-Nov-2020.pdf) ~ pdf
 - [The Many Dimensions of Data Quality](https://www.dataversity.net/articles/the-many-dimensions-of-data-quality/)
 
 ## Other links
-- [Gov UK ~ Meet the data quality dimensions](https://www.gov.uk/government/news/meet-the-data-quality-dimensions)
+- [Gov UK - Meet the data quality dimensions](https://www.gov.uk/government/news/meet-the-data-quality-dimensions)
 - [The Government Data Quality Framework](https://www.gov.uk/government/publications/the-government-data-quality-framework/the-government-data-quality-framework)
 - [Data Quality Dimensions Untangled](https://miosoft.com/resources/articles/data-quality-dimensions-untangled.html)
 

@@ -1,21 +1,14 @@
 ## <mark>Learners work in groups to prepare a teach-back</mark>
 
-Group A: Data Quality Frameworks
 
-- **Great Expectations:** Python-based data validation framework
-- **dbt tests:** Built-in and custom data quality tests
+<a href="http://192.168.1.227:3000/s/de5m6-tools" target="_blank">📒 Click here for text to paste into the chat</a>
 
-Group B: Cloud-Native Quality Tools
+- Put group allocation in chat
+- Assign each group a tool from the list below
 
-- **Azure Data Quality (in Fabric/Synapse):** Built-in quality monitoring
-- **AWS Glue DataBrew:** Visual data quality profiling
+### Quality Tools
 
-Group C: Quality Monitoring & Observability
-
-- **Monte Carlo:** Data observability and quality monitoring
-- **Datadog Data Streams:** Real-time quality monitoring
-
-Group D: Open Source Quality Solutions
-
-- **Apache Griffin:** Data quality platform
-- **DataHub:** Data discovery with quality insights
+- Data Quality Frameworks
+- Cloud-Native Quality Tools
+- Quality Monitoring & Observability
+- Open Source Quality Solutions
