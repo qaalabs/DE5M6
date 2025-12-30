@@ -2,7 +2,7 @@
 
 ## Session 1
 
-- `09:30` **Welcome**: Welcome & Introduction to Day 4 (10 mins)
+- `09:30` 🌅 Welcome to Day 4 of DE5 Module 6 (10 mins)
 - `09:40` [Instructions & Overview](../day4/overview.md) (10 mins)
 - `09:50` **Groups**: [Planning for Sprint 1](../day4/sprint1.md) (10 mins)
 - `10:00` **Groups**: Sprint Block 1 (40 mins)
@@ -33,5 +33,5 @@
 
 ## 👍 Course Evaluation
 
-## Wrap up
+## 🎁 Wrap
 

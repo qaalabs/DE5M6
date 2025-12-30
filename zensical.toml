@@ -1,0 +1,87 @@
+[project]
+site_name = "Module 6 - Data Operations"
+dev_addr = "0.0.0.0:8000"
+
+nav = [
+  {"Overview" = "index.md"},
+  {"Agenda" = [
+    {"Day 1" = "agenda/day1.md"},
+    {"Day 2" = "agenda/day2.md"},
+    {"Day 3" = "agenda/day3.md"},
+    {"Day 4" = "agenda/day4.md"},
+  ]},
+  {"Day 1 - Monitoring & Performance" = [
+    {"Status page ~ Report back" = "day1/status-page-report-back.md"},
+    {"Lab 1.1 ~ 01 Create Fabric Lakehouse" = "labs/01-lakehouse.md"},
+    {"Lab 1.2 ~ 05 Dataflows Gen2" = "labs/05-dataflows-gen2.md"},
+    {"Lab 1.3 ~ 18 Monitor Hub" = "labs/18-monitor-hub.md"},
+    {"Lab 1.4 ~ 06c Monitor Warehouse" = "labs/06c-monitor-data-warehouse.md"},
+    {"Cloud monitoring ~ Report back" = "day1/cloud-monitoring-report-back.md"},
+  ]},
+  {"Day 2 - Incident Response" = [
+    {"Lab 2.1 ~ 04 Ingest Pipeline" = "labs/04-ingest-pipeline.md"},
+    {"Lab 04 ~ Break it systematically" = "day2/breaking-things.md"},
+    {"Lab 04 ~ More complex breaks" = "day2/complex-breaking.md"},
+    {"Lab ~ 11 Data Activator" = "labs/11-data-activator.md"},
+    {"Fire Drill preparation" = "day2/incident-response-prep.md"},
+    {"🔥 Fire Drill Round 1" = "day2/fire-drill-groups.md"},
+    {"🔥 Fire Drill Round 2" = "day2/fire-drill-groups.md"},
+  ]},
+  {"Day 3 - Quality & Governance" = [
+    {"DMBOK's 6 data quality dimensions" = "day3/quality-dimensions.md"},
+    {"Lab 3.1 ~ 03b Medallion Architecture" = "labs/03b-medallion-lakehouse.md"},
+    {"Quality tools ~ report back" = "day3/quality-tools.md"},
+    {"Lab 3.2 ~ 19 Secure Data Access" = "labs/19-secure-data-access.md"},
+    {"Lab 3.3 ~ 21 Deployment Pipelines" = "labs/21-deployment-pipelines.md"},
+  ]},
+  {"Day 4 - Improvement & Value" = [
+    {"Instructions & Overview" = "day4/overview.md"},
+    {"Planning for Sprint 1" = "day4/sprint1.md"},
+    {"Planning for Sprint 2" = "day4/sprint2.md"},
+    {"Planning for Sprint 3" = "day4/sprint3.md"},
+  ]},
+  {"Resources" = "resources.md"},
+]
+
+
+[project.theme]
+variant = "classic"
+
+features = [
+  "announce.dismiss",
+  "content.code.annotate",
+  "content.code.copy",
+  "content.code.select",
+  "toc.integrate",
+
+  #"content.action.edit",
+  #"content.action.view",
+  #"header.autohide",
+  #"navigation.expand",
+  #"navigation.footer",
+  #"navigation.instant",
+  #"navigation.instant.prefetch",
+  #"navigation.instant.progress",
+  #"navigation.path",
+  #"navigation.sections",
+  #"navigation.tabs",
+  #"navigation.tabs.sticky",
+  #"navigation.top",
+  #"navigation.tracking",
+  #"search.highlight",
+  #"toc.follow",
+]
+    
+[[project.theme.palette]]
+scheme = "default"
+toggle.icon = "lucide/sun"
+toggle.name = "Switch to dark mode"
+    
+[[project.theme.palette]]
+scheme = "slate"
+toggle.icon = "lucide/moon"
+toggle.name = "Switch to light mode"
+    
+[project.theme.icon]
+logo = "material/database"
+    

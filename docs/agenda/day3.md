@@ -32,5 +32,5 @@
 - `15:10` **Discussion**: Deployment governance (20 mins)
 - `15:30` **Workshop**: Governance integration (20 mins)
 
-## Wrap up
+## 🎁 Wrap
 
