@@ -28,7 +28,8 @@
 
 ## Report Back Session
 
-Each pair shares a key insight:
+Each group shares a key insight:
 
 - "The most interesting thing we noticed was..."
-- "If we were designing a status page, we'd make sure to..."
+- "If we were designing a status page, we would make sure to..."
+
