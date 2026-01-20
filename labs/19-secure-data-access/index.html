@@ -70,11 +70,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#lab-secure-data-access-in-microsoft-fabric" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -1009,26 +1004,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Lab 3.2 ~ 19 Secure Data Access
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -1046,69 +1021,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#create-a-workspace" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Create a workspace
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#create-a-data-warehouse" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Create a data warehouse
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#create-a-lakehouse" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Create a lakehouse
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#apply-workspace-access-controls" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Apply workspace access controls
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -1360,65 +1272,9 @@
 
 
 
-<h1 id="lab-secure-data-access-in-microsoft-fabric">Lab: Secure Data Access in Microsoft Fabric</h1>
-<p>Microsoft Fabric has a multi-layer security model for managing data access. Security can be set for an entire workspace, for individual items, or through granular permissions in each Fabric engine. In this exercise, you secure data using workspace, and item access controls and OneLake data access roles.</p>
-<p>This lab takes approximately <strong>45</strong> minutes to complete.</p>
-<h2 id="create-a-workspace">Create a workspace</h2>
-<ol>
-<li>
-<p>Navigate to the <a href="https://app.fabric.microsoft.com/home?experience=fabric">Microsoft Fabric home page</a> in an incognito/private mode browser tab browser, and sign in with the Fabric credentials from the QA Platform.</p>
-</li>
-<li>
-<p>In the menu bar on the left, select Workspaces (the icon looks similar to 🗇).</p>
-</li>
-<li>
-<p>Create a <strong>New workspace</strong>:</p>
-<ul>
-<li>Give it a name of your choice. For example: <code>fab_workspace</code></li>
-<li>Leave all other options as the default values</li>
-<li>Click <strong>Apply</strong></li>
-</ul>
-</li>
-<li>
-<p>When your new workspace opens, it should be empty.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/new-workspace.png" data-desc-position="bottom"><img alt="Screenshot of an empty workspace in Fabric." src="../../img/new-workspace.png"></a></p>
-</li>
-</ol>
-<div class="admonition note">
-<p class="admonition-title">When you create a workspace, you automatically become a member of the Workspace Admin role.</p>
-</div>
-<h2 id="create-a-data-warehouse">Create a data warehouse</h2>
-<p>Next, create a data warehouse in the workspace you created:</p>
-<ol>
-<li>
-<p>Click <strong>+ New Item</strong>. On the <em>New item</em> page, under the <em>Store Data</em> section, select <strong>Sample warehouse</strong> and create a new data warehouse with a name of your choice.</p>
-<p>After a minute or so, a new warehouse will be created:</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/19-new-sample-warehouse.png" data-desc-position="bottom"><img alt="Screenshot of a new warehouse." src="../../img/19-new-sample-warehouse.png"></a></p>
-</li>
-</ol>
-<h2 id="create-a-lakehouse">Create a lakehouse</h2>
-<p>Next, create a lakehouse in the workspace you created.</p>
-<ol>
-<li>
-<p>On the menu bar on the left, select <strong>Create</strong>. In the New page, under the <em>Data Engineering</em> section, select <strong>Lakehouse</strong>.</p>
-<ul>
-<li>Give it a name of your choice. For example: <code>fab_lakehouse</code></li>
-</ul>
-<div class="admonition tip">
-<p class="admonition-title">If the <strong>Create</strong> option is not pinned to the sidebar, you need to select the ellipsis (…) option first.</p>
-</div>
-<p>After a minute or so, a new empty lakehouse will be created.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/new-lakehouse.png" data-desc-position="bottom"><img alt="New lakehouse." src="../../img/new-lakehouse.png"></a></p>
-</li>
-<li>
-<p>Select the <strong>Start with sample data</strong> tile and then select the <strong>Public holidays</strong> sample. After a minute or so, the lakehouse will be populated with data.</p>
-</li>
-</ol>
-<h2 id="apply-workspace-access-controls">Apply workspace access controls</h2>
-<div class="admonition note">
-<p class="admonition-title">To continue this lab ... use the MS Learn instructions</p>
-</div>
-<p><mark><a href="https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/19-secure-data-access.html">https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/19-secure-data-access.html</a></mark></p>
+  <h1>Lab 3.2 ~ 19 Secure Data Access</h1>
+
+
 
 
 
