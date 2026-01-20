@@ -1,5 +1,8 @@
 # Status Page Analysis ~ Report Back
 
+!!! success "KSB ~ K30"
+    The methods and techniques used to communicate messages to meet the needs of the audience.
+
 ## Investigation Questions
 
 ### Current Status
