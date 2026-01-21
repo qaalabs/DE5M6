@@ -46,9 +46,11 @@ Scan these major incidents to understand what works (and what doesn't) in incide
 - **Search:** "Facebook outage October 2021 BGP routing"
 - **Key lesson:** When monitoring systems fail too
 
+---
+
 ### Extract Key Principles
 
-*Focus your research on these questions*
+*Focus your research on these questions:*
 
 **Detection & Assessment:**
 

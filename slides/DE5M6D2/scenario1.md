@@ -2,8 +2,6 @@
 
 <a href="http://192.168.1.227:3000/s/de5m6-incident" target="_blank">📒 Click here for text to paste into the chat</a>
 
-https://qaalabs.github.io/DE5M6/day2/fire-drill-briefing/
-
 ### Instructions
 
 - Show the chat app ~ use [room TEST](https://drill.qaalabs.com/TEST) as an example
