@@ -1,5 +1,7 @@
 ## <mark>Incident Response Technical Briefing</mark>
 
+<a href="http://192.168.1.227:3000/s/de5m6-incident" target="_blank">📒 Click here for text to paste into the chat</a>
+
 https://qaalabs.github.io/DE5M6/day2/fire-drill-briefing/
 
 ### Instructions
