@@ -2,7 +2,7 @@
 
 ## What's Coming Next
 
-In the next session, you'll participate in an **incident response "fire drill"** simulating a data platform failure. You'll work in teams to coordinate technical responses and stakeholder communication under time pressure.
+In the next activity, you'll participate in an **incident response "fire drill"** simulating a data platform failure. You'll work in teams to coordinate technical responses and stakeholder communication under time pressure.
 
 **But before we do that, it may be useful to read up on some real incidents that happened.**
 
@@ -20,11 +20,19 @@ Scan these major incidents to understand what works (and what doesn't) in incide
 - **Link:** https://blog.cloudflare.com/cloudflare-outage-on-june-21-2022/
 - **Key lesson:** Speed vs. accuracy in technical communication
 
+**Cloudflare DNS CNAME Change - July 14, 2025**
+
+- *A major 62-minute outage of its 1.1.1.1 resolver*
+- Routine update changed the order of DNS records, causing some devices, like Cisco routers, to crash or fail.
+- Link: https://blog.cloudflare.com/cname-a-record-order-dns-standards/
+- **Key Lesson:** Complex internet infrastructure hides vulnerabilities
+
 **AWS us-east-1 Outage - December 7, 2021**  
 
 - *5+ hour power-related outage affecting thousands of services*
 - **Search:** "AWS us-east-1 outage December 2021 post-mortem"
 - **Key lesson:** Cascading failures and dependency management
+- External analysis: https://www.thousandeyes.com/blog/aws-outage-analysis-dec-7-2021
 
 **GitHub Database Incident - October 21, 2018**
 
@@ -64,7 +72,7 @@ Scan these major incidents to understand what works (and what doesn't) in incide
 **Coordination & Decision-Making:**
 
 - Who made key decisions?
-- How did they balance speed vs. accuracy?
+- How did they balance speed versus accuracy?
 - What escalation triggers did they use?
 
 ## Research Strategy Tips
@@ -83,3 +91,4 @@ Scan these major incidents to understand what works (and what doesn't) in incide
 - How do companies handle uncertainty in their communication?
 
 !!! note "The goal isn't deep expertise - it's rather preparation for practical application!"
+
