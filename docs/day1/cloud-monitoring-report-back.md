@@ -1,5 +1,9 @@
 # Cloud Monitoring ~ Report Back
 
+!!! success "ksb K1: Processes to monitor and optimise the performance of the availability, management and performance of data product."
+
+!!! success "ksb S28: Horizon scanning to identify new technologies that offer increased performance of data products."
+
 This investigation activity allows you to explore how major cloud providers approach data monitoring, comparing different tools and philosophies.
 
 ## Core Monitoring Capabilities

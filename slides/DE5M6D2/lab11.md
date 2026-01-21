@@ -1,17 +1,17 @@
-## 🧪 <mark>Demo</mark> Lab ~ 11 Use Data Activator in Fabric
+## 🧪 <mark>Lab 11 ~ Use Activator in Fabric</mark>
 
-- https://qaalabs.github.io/DE5M6/labs/11-data-activator/
+<span style="background-color: orange;">Give learners the link:</span> https://qaalabs.github.io/fabric/11-data-activator/instructions/
 
 ### Activities
 
 - Create a workspace
-- Scenario
-- Create a reflex
-- Get familiar with the reflex home screen
+- Create an Activator
+- Get familiar with the Activator home screen
 - Create an object
-- Create a trigger
-- Update and stop a trigger
+- Create a rule
+- Clean up resources
 
-<hr>
+### Overview
 
-<span style="background-color: red;">**Note: This lab has been depreciated**</span>
+Activator in Microsoft Fabric takes action based on what’s happening in your data. An Activator lets you monitor your data and create triggers to react to your data changes.
+

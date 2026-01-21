@@ -1,4 +1,4 @@
-## 🧪 <mark>Lab 1.4</mark> ~ 06c Monitor Warehouse
+## 🧪 <mark>Lab 06c ~ Monitor data warehouse in Microsoft Fabric</mark>
 
 <span style="background-color: orange;">Give learners the link:</span> https://qaalabs.github.io/fabric/06c-monitor-data-warehouse/instructions/
 
