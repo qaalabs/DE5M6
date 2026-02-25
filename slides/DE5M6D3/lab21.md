@@ -1,6 +1,6 @@
 ## 🧪 <mark>Lab 3.3</mark> ~ 21 Deployment pipelines in MS Fabric
 
-<span style="background-color: orange;">Give learners the link:</span> https://qaalabs.github.io/fabric/21-deployment-pipelines/instructions/
+<span style="background-color: orange;">Give learners the link:</span> https://qaalabs.github.io/fabric/21-implement-cicd/instructions/
 
 ### Activities
 

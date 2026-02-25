@@ -1,6 +1,6 @@
 ## 🧪 <mark>Lab 3.1</mark> ~ 03b Medallion Architecture in a Lakehouse
 
-<span style="background-color: orange;">Give learners the link:</span> https://qaalabs.github.io/fabric/03b-medallion-lakehouse/
+<span style="background-color: orange;">Give learners the link:</span> https://qaalabs.github.io/fabric/03b-medallion-lakehouse/instructions/
 
 ### Activities
 
@@ -10,3 +10,4 @@
 - Explore data in the silver layer using the SQL endpoint
 - Transform data for gold layer
 - Create a semantic model
+
