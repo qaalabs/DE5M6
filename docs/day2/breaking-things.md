@@ -33,7 +33,7 @@ For each break type, follow this 4-step cycle:
 
 **Break Instructions:**
 
-- Navigate to your source data file
+- Navigate to your source data URL
 - Rename it - add `_broken` to the filename
 - Now try to run your pipeline
 
@@ -57,9 +57,13 @@ For each break type, follow this 4-step cycle:
 
 **Break Instructions:**
 
-- Open your source CSV file
-- Delete one of the column headers (not the data, just the header)
-- Save the file and run your pipeline
+Change your source URL to:
+
+- https://raw.githubusercontent.com/qaalabs/files/main/msfabric/sales-wrong-header.csv
+
+*This file has the wrong number of column headers*
+
+Run your pipeline
 
 **Observation Points:**
 
@@ -69,8 +73,10 @@ For each break type, follow this 4-step cycle:
 
 **Fix & Verify:**
 
-- Add the column header back
+- Change back to the original URL
 - Verify pipeline works again
+
+Run your pipeline and observe the errors.
 
 ---
 
@@ -78,9 +84,13 @@ For each break type, follow this 4-step cycle:
 
 **Break Instructions:**
 
-- In your CSV, find a numeric column
-- Change some numbers to text (like 'ERROR' or 'N/A')
-- Save and run pipeline
+Change your source URL to:
+
+- https://raw.githubusercontent.com/qaalabs/files/main/msfabric/sales-wrong-data.csv
+
+*This file has incorrect data - like text in number columns and missing fields*
+
+Save and run the pipeline.
 
 **Observation Points:**
 
@@ -89,7 +99,6 @@ For each break type, follow this 4-step cycle:
 
 **Fix & Verify:**
 
-- Fix the data values back to numbers
+- Change back to the original URL
 - Confirm everything works
 
----
