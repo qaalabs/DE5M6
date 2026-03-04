@@ -1145,6 +1145,172 @@
   
   
   
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6">
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 4 - Improvement &amp; Value
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Day 4 - Improvement &amp; Value
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../day4/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instructions &amp; Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../day4/sprint1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Planning for Sprint 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../day4/sprint2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Planning for Sprint 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../day4/sprint3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Planning for Sprint 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../resources/" class="md-nav__link">
         
@@ -1208,7 +1374,7 @@ You will practice controlled troubleshooting while observing how MS Fabric respo
 <h3 id="break-1-file-not-found">Break 1: File Not Found</h3>
 <p><strong>Break Instructions:</strong></p>
 <ul>
-<li>Navigate to your source data file</li>
+<li>Navigate to your source data URL</li>
 <li>Rename it - add <code>_broken</code> to the filename</li>
 <li>Now try to run your pipeline</li>
 </ul>
@@ -1228,11 +1394,9 @@ You will practice controlled troubleshooting while observing how MS Fabric respo
 <hr>
 <h3 id="break-2-schema-mismatch">Break 2: Schema Mismatch</h3>
 <p><strong>Break Instructions:</strong></p>
-<ul>
-<li>Open your source CSV file</li>
-<li>Delete one of the column headers (not the data, just the header)</li>
-<li>Save the file and run your pipeline</li>
-</ul>
+<p>Change your source URL to:
+- <a href="https://raw.githubusercontent.com/qaalabs/files/main/msfabric/sales-wrong-header.csv">https://raw.githubusercontent.com/qaalabs/files/main/msfabric/sales-wrong-header.csv</a></p>
+<p>Run your pipeline</p>
 <p><strong>Observation Points:</strong></p>
 <ul>
 <li>Does the error message clearly indicate schema issues?</li>
@@ -1241,9 +1405,13 @@ You will practice controlled troubleshooting while observing how MS Fabric respo
 </ul>
 <p><strong>Fix &amp; Verify:</strong></p>
 <ul>
-<li>Add the column header back</li>
+<li>Add the original file name back</li>
 <li>Verify pipeline works again</li>
 </ul>
+<p><strong>Now repeat:</strong></p>
+<p>Change your source URL to:
+- <a href="https://raw.githubusercontent.com/qaalabs/files/main/msfabric/sales-wrong-data.csv">https://raw.githubusercontent.com/qaalabs/files/main/msfabric/sales-wrong-data.csv</a></p>
+<p>Run your pipeline and observe the error</p>
 <hr>
 <h3 id="break-3-data-quality-issues">Break 3: Data Quality Issues</h3>
 <p><strong>Break Instructions:</strong></p>
