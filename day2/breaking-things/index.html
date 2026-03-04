@@ -1394,8 +1394,11 @@ You will practice controlled troubleshooting while observing how MS Fabric respo
 <hr>
 <h3 id="break-2-schema-mismatch">Break 2: Schema Mismatch</h3>
 <p><strong>Break Instructions:</strong></p>
-<p>Change your source URL to:
-- <a href="https://raw.githubusercontent.com/qaalabs/files/main/msfabric/sales-wrong-header.csv">https://raw.githubusercontent.com/qaalabs/files/main/msfabric/sales-wrong-header.csv</a></p>
+<p>Change your source URL to:</p>
+<ul>
+<li><a href="https://raw.githubusercontent.com/qaalabs/files/main/msfabric/sales-wrong-header.csv">https://raw.githubusercontent.com/qaalabs/files/main/msfabric/sales-wrong-header.csv</a></li>
+</ul>
+<p><em>This file has the wrong number of column headers</em></p>
 <p>Run your pipeline</p>
 <p><strong>Observation Points:</strong></p>
 <ul>
@@ -1405,21 +1408,19 @@ You will practice controlled troubleshooting while observing how MS Fabric respo
 </ul>
 <p><strong>Fix &amp; Verify:</strong></p>
 <ul>
-<li>Add the original file name back</li>
+<li>Change back to the original URL</li>
 <li>Verify pipeline works again</li>
 </ul>
-<p><strong>Now repeat:</strong></p>
-<p>Change your source URL to:
-- <a href="https://raw.githubusercontent.com/qaalabs/files/main/msfabric/sales-wrong-data.csv">https://raw.githubusercontent.com/qaalabs/files/main/msfabric/sales-wrong-data.csv</a></p>
-<p>Run your pipeline and observe the error</p>
+<p>Run your pipeline and observe the errors.</p>
 <hr>
 <h3 id="break-3-data-quality-issues">Break 3: Data Quality Issues</h3>
 <p><strong>Break Instructions:</strong></p>
+<p>Change your source URL to:</p>
 <ul>
-<li>In your CSV, find a numeric column</li>
-<li>Change some numbers to text (like 'ERROR' or 'N/A')</li>
-<li>Save and run pipeline</li>
+<li><a href="https://raw.githubusercontent.com/qaalabs/files/main/msfabric/sales-wrong-data.csv">https://raw.githubusercontent.com/qaalabs/files/main/msfabric/sales-wrong-data.csv</a></li>
 </ul>
+<p><em>This file has incorrect data - like text in number columns and missing fields</em></p>
+<p>Save and run the pipeline.</p>
 <p><strong>Observation Points:</strong></p>
 <ul>
 <li>Does Fabric handle data type mismatches gracefully?</li>
@@ -1427,7 +1428,7 @@ You will practice controlled troubleshooting while observing how MS Fabric respo
 </ul>
 <p><strong>Fix &amp; Verify:</strong></p>
 <ul>
-<li>Fix the data values back to numbers</li>
+<li>Change back to the original URL</li>
 <li>Confirm everything works</li>
 </ul>
 <hr>
