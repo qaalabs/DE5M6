@@ -73,7 +73,7 @@
 
 ### Session 2
 
-- **Practice**: [Lab 3.1 ~ 03b Medallion Architecture](labs/03b-medallion-lakehouse.md)
+- **Demo**: [Lab 3.1 ~ 03b Medallion Architecture](labs/03b-medallion-lakehouse.md)
 - **Discussion**: Quality patterns analysis
 - **Investigation**: [Quality tools](day3/quality-tools-trainer.md)
 - [Quality tools ~ report back](day3/quality-tools.md)
