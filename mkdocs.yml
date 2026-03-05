@@ -36,12 +36,6 @@ nav:
     - "Lab 3.2 ~ 19 Secure Data Access": labs/19-secure-data-access.md
     - "Lab 3.3 ~ 21 Deployment Pipelines": labs/21-deployment-pipelines.md
 
-  - "Day 4 - Improvement & Value":
-    - "Instructions & Overview": day4/overview.md
-    - "Planning for Sprint 1": day4/sprint1.md
-    - "Planning for Sprint 2": day4/sprint2.md
-    - "Planning for Sprint 3": day4/sprint3.md
-
   - Resources: resources.md
 
 not_in_nav: |
