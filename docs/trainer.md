@@ -66,8 +66,8 @@
 
 ### Session 1
 
-- **Discussion**: [What does good data mean to you?](day3/quality-foundation.md)
-- [Quality Data - why it matters](day3/quality-foundation.md)
+- **Discussion**: [What does good data mean to you?](day3/good-data.md)
+- [Quality Data - why it matters](day3/data-quality.md)
 - **Investigation**: [DMBOK's 6 data quality dimensions](day3/quality-dimensions.md)
 - DMBOK report back
 
