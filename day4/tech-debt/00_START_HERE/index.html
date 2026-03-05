@@ -1042,7 +1042,10 @@
 
 
 <h1 id="technical-debt-audit-activity-complete-package">Technical Debt Audit Activity - Complete Package</h1>
-<p>This folder contains everything you need to run a 90-120 minute Technical Debt Audit workshop for Module 4 (S21: Identify and remediate technical debt).</p>
+<p>This folder contains everything you need to run a 90-120 minute Technical Debt Audit workshop for Module 6</p>
+<blockquote>
+<p>S21: Identify and remediate technical debt, assess for updates and obsolescence as part of continuous improvement.</p>
+</blockquote>
 <hr>
 <h2 id="whats-included">What's Included</h2>
 <h3 id="for-your-github-repo">For Your GitHub Repo</h3>
@@ -1063,15 +1066,15 @@
 <li><strong>TECHNICAL_DEBT_REGISTER_TEMPLATE.md</strong> - Template they complete during the activity</li>
 </ol>
 <h3 id="for-you-tutor">For You (Tutor)</h3>
-<ol>
-<li><strong>TUTOR_GUIDE.md</strong> - Complete answer key with:</li>
+<p><strong>TUTOR_GUIDE.md</strong> - Complete answer key with:</p>
+<ul>
 <li>All 44 technical debt items listed by file</li>
 <li>Category, impact, effort, and priority for each</li>
 <li>Expected learner findings</li>
 <li>Facilitation tips</li>
 <li>Discussion questions</li>
 <li>Summary statistics</li>
-</ol>
+</ul>
 <hr>
 <h2 id="setup-instructions">Setup Instructions</h2>
 <h3 id="1-create-github-repository">1. Create GitHub Repository</h3>
@@ -1080,11 +1083,10 @@
 <span class="c1"># Upload all the numbered files 1-6 above</span>
 </code></pre></div>
 <h3 id="2-provide-to-learners">2. Provide to Learners</h3>
-<ul>
-<li>Share the repo link</li>
-<li>Provide them with TECHNICAL_DEBT_CHECKLIST.md</li>
-<li>Provide them with TECHNICAL_DEBT_REGISTER_TEMPLATE.md</li>
-</ul>
+<p>Share the repo link: <code>https://github.com/ingwanelabs/techmart-2026</code></p>
+<p>Show them the:
+- TECHNICAL_DEBT_CHECKLIST.md
+- TECHNICAL_DEBT_REGISTER_TEMPLATE.md</p>
 <hr>
 <h2 id="activity-structure-90-120-mins">Activity Structure (90-120 mins)</h2>
 <h3 id="part-1-introduction-10-mins">Part 1: Introduction (10 mins)</h3>
@@ -1104,7 +1106,7 @@
 <ul>
 <li>Teams use Impact/Effort matrix</li>
 <li>Identify top 3 priorities</li>
-<li>Plan remediation approach for <a class="magiclink magiclink-github magiclink-issue" href="https://github.com/squidfunk/mkdocs-material/issues/1" title="GitHub Issue: squidfunk/mkdocs-material #1">#1</a></li>
+<li>Plan remediation approach </li>
 </ul>
 <h3 id="part-4-share-compare-15-mins">Part 4: Share &amp; Compare (15 mins)</h3>
 <ul>
@@ -1119,36 +1121,46 @@
 <li>Who's responsible?</li>
 </ul>
 <p><strong>Optional Extension (+30 mins):</strong>
-Teams actually remediate their <a class="magiclink magiclink-github magiclink-issue" href="https://github.com/squidfunk/mkdocs-material/issues/1" title="GitHub Issue: squidfunk/mkdocs-material #1">#1</a> priority item and demonstrate before/after.</p>
+Teams actually remediate their number 1 priority item and demonstrate before/after.</p>
 <hr>
 <h2 id="scenario-context">Scenario Context</h2>
-<p><strong>TechMart Sales Pipeline</strong> - A daily data pipeline that:
-- Extracts sales transactions from SQL Server
-- Transforms and aggregates data
-- Loads into reporting database
-- Validates and cleans up old files</p>
+<p><strong>TechMart Sales Pipeline</strong> - A daily data pipeline that:</p>
+<ul>
+<li>Extracts sales transactions from SQL Server</li>
+<li>Transforms and aggregates data</li>
+<li>Loads into reporting database</li>
+<li>Validates and cleans up old files</li>
+</ul>
 <p><strong>The Problem:</strong> This pipeline "works" but has accumulated significant technical debt over time. It needs an audit before being put into production.</p>
 <p><strong>Learner Task:</strong> Audit the codebase, identify technical debt, prioritise issues, and plan remediation.</p>
 <hr>
 <h2 id="learning-outcomes-covered">Learning Outcomes Covered</h2>
 <p><strong>S21:</strong> Identify and remediate technical debt, assess for updates and obsolescence as part of continuous improvement.</p>
-<p><strong>Supporting KSBs:</strong>
-- K28: Continuous improvement including how to capture good practice and lessons learned
-- B3: Quality focus that promotes continuous improvement utilising peer review techniques</p>
+<p><strong>Supporting KSBs:</strong></p>
+<ul>
+<li>K28: Continuous improvement including how to capture good practice and lessons learned</li>
+<li>B3: Quality focus that promotes continuous improvement utilising peer review techniques</li>
+</ul>
 <hr>
 <h2 id="file-mix-rationale">File Mix Rationale</h2>
-<p><strong>60% SQL:</strong>
-- Very readable for learners with limited Python confidence
-- Rich in spottable technical debt
-- Authentic for data engineering work</p>
-<p><strong>30% Python:</strong>
-- Provides variety and challenge
-- Checklist makes it accessible
-- Shows different debt patterns</p>
-<p><strong>10% Config:</strong>
-- Introduces infrastructure dimension
-- Critical security teaching moment
-- Shows debt exists beyond code</p>
+<p><strong>60% SQL:</strong></p>
+<ul>
+<li>Very readable for learners with limited Python confidence</li>
+<li>Rich in spottable technical debt</li>
+<li>Authentic for data engineering work</li>
+</ul>
+<p><strong>30% Python:</strong></p>
+<ul>
+<li>Provides variety and challenge</li>
+<li>Checklist makes it accessible</li>
+<li>Shows different debt patterns</li>
+</ul>
+<p><strong>10% Config:</strong></p>
+<ul>
+<li>Introduces infrastructure dimension</li>
+<li>Critical security teaching moment</li>
+<li>Shows debt exists beyond code</li>
+</ul>
 <hr>
 <h2 id="key-teaching-points">Key Teaching Points</h2>
 <ol>
@@ -1184,31 +1196,41 @@ Teams actually remediate their <a class="magiclink magiclink-github magiclink-is
 - Connect to workplace experiences</p>
 <hr>
 <h2 id="portfolio-application">Portfolio Application</h2>
-<p>This activity produces a portfolio-worthy deliverable:
-- Completed Technical Debt Register
-- Prioritised list with justification
-- Remediation plans
-- Workplace reflection</p>
+<p>This activity produces a portfolio-worthy deliverable:</p>
+<ul>
+<li>Completed Technical Debt Register</li>
+<li>Prioritised list with justification</li>
+<li>Remediation plans</li>
+<li>Workplace reflection</li>
+</ul>
 <p>Learners can adapt this register format for their Module 4 Apply task (Task 4: Root cause analysis).</p>
 <hr>
 <h2 id="troubleshooting">Troubleshooting</h2>
-<p><strong>"I can't see any issues"</strong>
-→ Start with the checklist, work category by category
-→ Look at pipeline.py line 8 - what do you notice?</p>
-<p><strong>"Everything seems critical"</strong>
-→ Use the Impact/Effort matrix
-→ Ask: "What happens if we don't fix this today?"</p>
-<p><strong>"Is this really technical debt or just bad code?"</strong>
-→ Good question! Technical debt often IS bad code
-→ The key: was it deliberate (speed) or accidental (lack of knowledge)?</p>
-<p><strong>"Should we fix it or document it?"</strong>
-→ Depends on impact and effort
-→ Sometimes acknowledging debt is enough</p>
+<p><strong>"I can't see any issues"</strong></p>
+<ul>
+<li>→ Start with the checklist, work category by category</li>
+<li>→ Look at pipeline.py line 8 - what do you notice?</li>
+</ul>
+<p><strong>"Everything seems critical"</strong></p>
+<ul>
+<li>→ Use the Impact/Effort matrix</li>
+<li>→ Ask: "What happens if we don't fix this today?"</li>
+</ul>
+<p><strong>"Is this really technical debt or just bad code?"</strong></p>
+<ul>
+<li>→ Good question! Technical debt often IS bad code</li>
+<li>→ The key: was it deliberate (speed) or accidental (lack of knowledge)?</li>
+</ul>
+<p><strong>"Should we fix it or document it?"</strong></p>
+<ul>
+<li>→ Depends on impact and effort</li>
+<li>→ Sometimes acknowledging debt is enough</li>
+</ul>
 <hr>
 <h2 id="next-steps-after-activity">Next Steps After Activity</h2>
 <ol>
 <li><strong>Debrief in main room</strong> - what surprised you?</li>
-<li><strong>Connect to Apply task</strong> - Module 4 Task 4 (root cause analysis)</li>
+<li><strong>Connect to Apply task</strong> - Module 6 (root cause analysis)</li>
 <li><strong>Workplace application</strong> - audit something in your organisation</li>
 <li><strong>Future modules</strong> - M5/M6 will show prevention strategies</li>
 </ol>
@@ -1224,11 +1246,13 @@ Teams actually remediate their <a class="magiclink magiclink-github magiclink-is
 </ul>
 <hr>
 <h2 id="questions-or-issues">Questions or Issues?</h2>
-<p>If you need to modify files or create variants:
-- Maintain the 60/30/10 split
-- Keep CRITICAL security issues (teaching moment)
-- Ensure variety across categories
-- Test that checklist catches your changes</p>
+<p>If you need to modify files or create variants:</p>
+<ul>
+<li>Maintain the 60/30/10 split</li>
+<li>Keep CRITICAL security issues (teaching moment)</li>
+<li>Ensure variety across categories</li>
+<li>Test that checklist catches your changes</li>
+</ul>
 <p><strong>Recommended:</strong> Keep this version intact and create new scenarios for future cohorts to prevent learners sharing answers.</p>
 
 
