@@ -1,12 +1,15 @@
 # Technical Debt Audit Activity - Complete Package
 
-This folder contains everything you need to run a 90-120 minute Technical Debt Audit workshop for Module 4 (S21: Identify and remediate technical debt).
+This folder contains everything you need to run a 90-120 minute Technical Debt Audit workshop for Module 6
+
+> S21: Identify and remediate technical debt, assess for updates and obsolescence as part of continuous improvement.
 
 ---
 
 ## What's Included
 
 ### For Your GitHub Repo
+
 Upload these files to create the flawed codebase:
 
 1. **extract_data.sql** - SQL extraction script (7 technical debt issues)
@@ -19,26 +22,29 @@ Upload these files to create the flawed codebase:
 **Total: 44 distinct technical debt items** embedded across all files.
 
 ### For Learners
+
 Provide these to guide the activity:
 
-7. **TECHNICAL_DEBT_CHECKLIST.md** - Structured checklist to guide their audit
-8. **TECHNICAL_DEBT_REGISTER_TEMPLATE.md** - Template they complete during the activity
+1. **TECHNICAL_DEBT_CHECKLIST.md** - Structured checklist to guide their audit
+2. **TECHNICAL_DEBT_REGISTER_TEMPLATE.md** - Template they complete during the activity
 
 ### For You (Tutor)
 
-9. **TUTOR_GUIDE.md** - Complete answer key with:
-   - All 44 technical debt items listed by file
-   - Category, impact, effort, and priority for each
-   - Expected learner findings
-   - Facilitation tips
-   - Discussion questions
-   - Summary statistics
+**TUTOR_GUIDE.md** - Complete answer key with:
+
+- All 44 technical debt items listed by file
+- Category, impact, effort, and priority for each
+- Expected learner findings
+- Facilitation tips
+- Discussion questions
+- Summary statistics
 
 ---
 
 ## Setup Instructions
 
 ### 1. Create GitHub Repository
+
 ```bash
 # In your ingwanelabs organisation
 # Create new repo: techmart-technical-debt-audit
@@ -46,48 +52,57 @@ Provide these to guide the activity:
 ```
 
 ### 2. Provide to Learners
-- Share the repo link
-- Provide them with TECHNICAL_DEBT_CHECKLIST.md
-- Provide them with TECHNICAL_DEBT_REGISTER_TEMPLATE.md
+
+Share the repo link: `https://github.com/ingwanelabs/techmart-2026`
+
+Show them the:
+- TECHNICAL_DEBT_CHECKLIST.md
+- TECHNICAL_DEBT_REGISTER_TEMPLATE.md
 
 ---
 
 ## Activity Structure (90-120 mins)
 
 ### Part 1: Introduction (10 mins)
+
 - What is technical debt?
 - Types and impact
 - Show them the repository
 
 ### Part 2: Guided Audit (45 mins)
+
 - Teams work through the checklist
 - Audit the codebase systematically
 - Document findings in their register
 - You circulate through breakout rooms
 
 ### Part 3: Prioritisation (20 mins)
+
 - Teams use Impact/Effort matrix
 - Identify top 3 priorities
-- Plan remediation approach for #1
+- Plan remediation approach 
 
 ### Part 4: Share & Compare (15 mins)
+
 - 2-3 teams screen-share findings
 - Compare priorities
 - Discuss differences
 
 ### Part 5: Workplace Reflection (10 mins)
+
 - How does technical debt happen?
 - What prevents fixing it?
 - Who's responsible?
 
 **Optional Extension (+30 mins):**
-Teams actually remediate their #1 priority item and demonstrate before/after.
+Teams actually remediate their number 1 priority item and demonstrate before/after.
 
 ---
 
 ## Scenario Context
 
 **TechMart Sales Pipeline** - A daily data pipeline that:
+
 - Extracts sales transactions from SQL Server
 - Transforms and aggregates data
 - Loads into reporting database
@@ -104,6 +119,7 @@ Teams actually remediate their #1 priority item and demonstrate before/after.
 **S21:** Identify and remediate technical debt, assess for updates and obsolescence as part of continuous improvement.
 
 **Supporting KSBs:**
+
 - K28: Continuous improvement including how to capture good practice and lessons learned
 - B3: Quality focus that promotes continuous improvement utilising peer review techniques
 
@@ -112,16 +128,19 @@ Teams actually remediate their #1 priority item and demonstrate before/after.
 ## File Mix Rationale
 
 **60% SQL:**
+
 - Very readable for learners with limited Python confidence
 - Rich in spottable technical debt
 - Authentic for data engineering work
 
 **30% Python:**
+
 - Provides variety and challenge
 - Checklist makes it accessible
 - Shows different debt patterns
 
 **10% Config:**
+
 - Introduces infrastructure dimension
 - Critical security teaching moment
 - Shows debt exists beyond code
@@ -165,6 +184,7 @@ Teams actually remediate their #1 priority item and demonstrate before/after.
 ## Portfolio Application
 
 This activity produces a portfolio-worthy deliverable:
+
 - Completed Technical Debt Register
 - Prioritised list with justification
 - Remediation plans
@@ -177,27 +197,31 @@ Learners can adapt this register format for their Module 4 Apply task (Task 4: R
 ## Troubleshooting
 
 **"I can't see any issues"**
-→ Start with the checklist, work category by category
-→ Look at pipeline.py line 8 - what do you notice?
+
+- → Start with the checklist, work category by category
+- → Look at pipeline.py line 8 - what do you notice?
 
 **"Everything seems critical"**
-→ Use the Impact/Effort matrix
-→ Ask: "What happens if we don't fix this today?"
+
+- → Use the Impact/Effort matrix
+- → Ask: "What happens if we don't fix this today?"
 
 **"Is this really technical debt or just bad code?"**
-→ Good question! Technical debt often IS bad code
-→ The key: was it deliberate (speed) or accidental (lack of knowledge)?
+
+- → Good question! Technical debt often IS bad code
+- → The key: was it deliberate (speed) or accidental (lack of knowledge)?
 
 **"Should we fix it or document it?"**
-→ Depends on impact and effort
-→ Sometimes acknowledging debt is enough
+
+- → Depends on impact and effort
+- → Sometimes acknowledging debt is enough
 
 ---
 
 ## Next Steps After Activity
 
 1. **Debrief in main room** - what surprised you?
-2. **Connect to Apply task** - Module 4 Task 4 (root cause analysis)
+2. **Connect to Apply task** - Module 6 (root cause analysis)
 3. **Workplace application** - audit something in your organisation
 4. **Future modules** - M5/M6 will show prevention strategies
 
@@ -217,9 +241,11 @@ Learners can adapt this register format for their Module 4 Apply task (Task 4: R
 ## Questions or Issues?
 
 If you need to modify files or create variants:
+
 - Maintain the 60/30/10 split
 - Keep CRITICAL security issues (teaching moment)
 - Ensure variety across categories
 - Test that checklist catches your changes
 
 **Recommended:** Keep this version intact and create new scenarios for future cohorts to prevent learners sharing answers.
+
