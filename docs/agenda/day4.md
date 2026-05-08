@@ -30,8 +30,7 @@
 - `14:40` Sprint Review in groups (10 mins)
 - `14:50` Team Demos (30 mins)
 - `15:20` Sprint Retrospective (20 mins)
-
-## 👍 Course Evaluation
+- `15:40` **Activity**: 💯 Evaluation (10 mins)
 
 ## 🎁 Wrap
 

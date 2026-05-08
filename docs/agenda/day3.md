@@ -20,6 +20,7 @@
 
 ## Session 3
 
+- `13:20`  (10 mins)
 - `13:30` **Practice**: [Lab 3.2 ~ 19 Secure Data Access](../labs/19-secure-data-access.md) (40 mins)
 - `14:10` **Discussion**: Security vs Accessibility trade-offs (10 mins)
 - `14:20` **Investigation**: Governance Approaches Investigation (10 mins)
