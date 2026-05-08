@@ -69,7 +69,7 @@
 - **Discussion**: [What does good data mean to you?](day3/good-data.md)
 - [Quality Data - why it matters](day3/data-quality.md)
 - **Investigation**: [DMBOK's 6 data quality dimensions](day3/quality-dimensions.md)
-- DMBOK report back
+- **Report-Back**: DMBOK report back
 
 ### Session 2
 
@@ -80,15 +80,14 @@
 
 ### Session 3
 
-- **Practice**: [Lab 3.2 ~ 19 Secure Data Access](labs/19-secure-data-access.md)
-- **Discussion**: Security vs Accessibility trade-offs
-- **Investigation**: Governance Approaches Investigation
+- [Introduction to Technical Debt](day3/technical-debt.md)
+- **Investigation**: [Technical Debt Analysis](day3/technical-debt-activity.md)
 
 ### Session 4
 
-- **Practice**: [Lab 3.3 ~ 21 Deployment Pipelines](labs/21-deployment-pipelines.md)
+- **Report-Back**: [Tech Dept Findings](day3/tech-debt-issues.md)
+- **Practice**: [Lab 3.2 ~ 21 Deployment Pipelines](labs/21-deployment-pipelines.md)
 - **Discussion**: Deployment governance
-- **Workshop**: Governance integration
 
 ---
 

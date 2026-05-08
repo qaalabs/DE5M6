@@ -5,7 +5,7 @@
 - `09:30` **Discussion**: What does good data mean to you? (10 mins)
 - `09:40` Quality Data - why it matters (10 mins)
 - `09:50` **Investigation**: [DMBOK's 6 data quality dimensions](../day3/quality-dimensions.md) (20 mins)
-- `10:10` DMBOK report back (20 mins)
+- `10:10` **Report-Back**: DMBOK report back (20 mins)
 
 ## ☕ Morning Break
 
@@ -20,18 +20,16 @@
 
 ## Session 3
 
-- `13:20`  (10 mins)
-- `13:30` **Practice**: [Lab 3.2 ~ 19 Secure Data Access](../labs/19-secure-data-access.md) (40 mins)
-- `14:10` **Discussion**: Security vs Accessibility trade-offs (10 mins)
-- `14:20` **Investigation**: Governance Approaches Investigation (10 mins)
+- `13:20` Introduction to Technical Debt (20 mins)
+- `13:40` **Investigation**: [Technical Debt Analysis](../day3/technical-debt-activity.md) (50 mins)
 
 ## ☕ Afternoon Break
 
 ## Session 4
 
-- `14:50` **Practice**: [Lab 3.3 ~ 21 Deployment Pipelines](../labs/21-deployment-pipelines.md) (20 mins)
-- `15:10` **Discussion**: Deployment governance (20 mins)
-- `15:30` **Workshop**: Governance integration (20 mins)
+- `14:50` **Report-Back**: Tech Dept Findings (20 mins)
+- `15:10` **Practice**: [Lab 3.2 ~ 21 Deployment Pipelines](../labs/21-deployment-pipelines.md) (20 mins)
+- `15:30` **Discussion**: Deployment governance (20 mins)
 
 ## 🎁 Wrap
 
