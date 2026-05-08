@@ -14,8 +14,7 @@
 - When have you had to spend time cleaning or fixing data before you could use it?
 
 ---
-
-## Structured sharing
+### Structured sharing
 
 Each learner shares **one example** (30-45 seconds):
 
@@ -32,8 +31,7 @@ Each learner shares **one example** (30-45 seconds):
 🔽
 
 ---
-
-## Facilitator synthesis
+### Facilitator synthesis
 
 - I'm hearing themes around accuracy, completeness, timing...
 - Notice how quality problems affect your ability to do your job
