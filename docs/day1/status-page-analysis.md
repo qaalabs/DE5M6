@@ -5,24 +5,18 @@
 
 ## Setup Instructions (2 minutes)
 
-1. **Form pairs**
-2. **Assign each pair 1-2 status pages** from the list below
+1. **Form groups of 3-4**
+2. **Assign each group one status page** from the list below
 3. **Research task:** 10 minutes investigation + 3 minutes prep for sharing
 
 ## Status Pages to Research
 
-### Comprehensive
-
-- **AWS:** https://health.aws.amazon.com/health/status
-- **Microsoft Azure:** https://status.azure.com/
-- **Google Cloud:** https://status.cloud.google.com/
-- **Zoom:** https://status.zoom.us/
-
-### Less detail
-
-- **GitHub:** https://www.githubstatus.com/
-- **Slack:** https://status.slack.com/
-- **Stripe:** https://status.stripe.com/
+| Group | Status Page | Character |
+|-------|-------------|-----------|
+| 1 | **AWS:** https://health.aws.amazon.com/health/status | Dense, complex, region-based |
+| 2 | **Google Cloud:** https://status.cloud.google.com/ | Comprehensive, different style |
+| 3 | **GitHub:** https://www.githubstatus.com/ | Simpler, familiar to developers |
+| 4 | **Zoom:** https://status.zoom.us/ | Clean, good incident history |
 
 ---
 
@@ -56,7 +50,7 @@ Provide each pair with these guiding questions:
 
 ## Report Back Session (3 minutes)
 
-Each pair shares **one key insight** in 30 seconds:
+Each group shares **one key insight** in 30 seconds:
 
 - "The most interesting thing we noticed was..."
 - "If we were designing a status page, we'd make sure to..."
