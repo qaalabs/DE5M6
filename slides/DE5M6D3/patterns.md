@@ -1,4 +1,4 @@
-## <mark>How do DMBOK dimensions map to bronze/silver/gold?</mark>
+## How do DMBOK dimensions map to bronze/silver/gold?
 
 *When we talk about bronze, silver, gold layers, what does ‘quality’ mean at each stage?*
 
