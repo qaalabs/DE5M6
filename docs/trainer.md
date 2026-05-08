@@ -21,7 +21,7 @@
 - **Practice**: [Lab 1.3 ~ 18 Monitor Hub](labs/18-monitor-hub.md)
 - **Discussion**: Debrief about the lab
 - **Practice**: [Lab 1.4 ~ 06c Monitor Warehouse](labs/06c-monitor-data-warehouse.md)
-- **Discussion**: Monitoring tools
+- **Discussion**: [Monitoring tools](day1/monitoring-tools.md)
 
 ### Session 4
 
