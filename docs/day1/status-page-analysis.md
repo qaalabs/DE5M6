@@ -11,12 +11,12 @@
 
 ## Status Pages to Research
 
-| Group | Status Page | Character |
-|-------|-------------|-----------|
-| 1 | **AWS:** https://health.aws.amazon.com/health/status | Dense, complex, region-based |
-| 2 | **Google Cloud:** https://status.cloud.google.com/ | Comprehensive, different style |
-| 3 | **GitHub:** https://www.githubstatus.com/ | Simpler, familiar to developers |
-| 4 | **Zoom:** https://status.zoom.us/ | Clean, good incident history |
+| Group | Status Page URL                                      | Character                      |
+|-------|------------------------------------------------------|--------------------------------|
+|   1   | **AWS:** https://health.aws.amazon.com/health/status | Dense, complex, region-based   |
+|   2   | **Google Cloud:** https://status.cloud.google.com/   | Comprehensive, different style |
+|   3   | **GitHub:** https://www.githubstatus.com/            | Simpler, familiar to developers|
+|   4   | **Zoom:** https://status.zoom.us/                    | Clean, good incident history   |
 
 ---
 

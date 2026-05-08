@@ -88,7 +88,7 @@ You can use any tools that you have availalble. Including:
 
 ## Tips for Success
 
-- Start small — get a working version early, then improve it
-- Work iteratively — you don't have to perfect everything in Sprint 1
-- Communicate often — check in with your team regularly
+- Start small - get a working version early, then improve it
+- Work iteratively - you don't have to perfect everything in Sprint 1
+- Communicate often - check in with your team regularly
 - Be prepared to demo and explain your work clearly

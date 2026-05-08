@@ -10,7 +10,7 @@
 
 - Developed by DAMA International
 - DMBOK stands for **Data Management Body of Knowledge**
-- It’s a comprehensive framework — like ITIL or TOGAF but for data
+- It’s a comprehensive framework - like ITIL or TOGAF but for data
 
 ## Core Areas
 
@@ -28,7 +28,7 @@ Covers 11 core knowledge areas that form the "DAMA Wheel," with Data Governance 
 - Metadata Management
 - Data Quality Management
 
-*Not a tool or product — it’s a reference model for professional practice*
+*Not a tool or product - it’s a reference model for professional practice*
 
 Today, we’ll zoom in on one key area: **Data Quality**
 
