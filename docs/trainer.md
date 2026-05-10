@@ -95,26 +95,14 @@
 
 ### Session 1
 
-- [Instructions & Overview](day4/overview.md)
-- **Groups**: [Planning for Sprint 1](day4/sprint1.md)
-- **Groups**: Sprint Block 1
 
 ### Session 2
 
-- Stand-Up 1
-- **Groups**: [Planning for Sprint 2](day4/sprint2.md)
-- **Groups**: Sprint Block 2
 
 ### Session 3
 
-- Stand-Up 2
-- **Groups**: [Planning for Sprint 3](day4/sprint3.md)
-- **Groups**: Sprint Block 3
 
 ### Session 4
 
-- Sprint Review in groups
-- Team Demos
-- Sprint Retrospective
 
 ---
