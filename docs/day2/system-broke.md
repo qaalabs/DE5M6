@@ -2,29 +2,29 @@
 
 ## Overview
 
-This session transitions from Day 1's "when things work" to Day 2's "when things break" by collecting workplace failure experiences and establishing the foundational concepts of incident vs problem management. This creates the context for today's hands-on breaking and responding activities.
+Yesterday you shared experiences of systems failing — from the outside, as a user. Today we look at the same kind of event from the inside: what happened organisationally when it broke?
+
+This reframes Day 1 stories (or new ones) to focus on the response — who got involved, how it was escalated, and what the process looked like. It sets up the Incident vs Problem framework and the hands-on breaking activities that follow.
 
 ## Session Structure
 
-### 1. Discussion: System Failure Stories
+### 1. Discussion: The organisational response
 
 **Learning Type:** Discussion  
 **Format:** Structured sharing with experience capture
 
 #### Sharing Structure
 
-**Individual Reflection**
-Think of a workplace example:
+**Opening prompt**
 
-- System failure, data pipeline break, application outage
-- Focus on the organizational response, not just the technical issue
+> "Yesterday we looked at system failures from the outside. Today, think about one from the inside — at work, or somewhere you've seen the response up close. You can use the same example as yesterday if it fits."
 
 **Round-Robin Sharing**
 Each learner shares briefly (45-60 seconds each):
 
 - **What broke?** (brief technical context)
-- **How did people find out?** (detection method)
-- **Who got involved?** (response team/escalation)
+- **How did people find out?** (was there monitoring, or did someone notice?)
+- **Who got involved?** (response team, escalation path)
 - **How long to fix?** (resolution time)
 - **What was learned?** (if anything)
 
