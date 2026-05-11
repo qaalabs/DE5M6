@@ -27,8 +27,6 @@
 
 - **Investigation**: [Cloud monitoring comparison](day1/cloud-monitoring-comparison.md)
 - **Report-Back**: [Cloud monitoring ~ Report back](day1/cloud-monitoring-report-back.md)
-- **Activity**: Create monitoring strategy
-- **Report-Back**: Share monitoring strategies
 
 ---
 

@@ -24,17 +24,15 @@
 
 - `13:20` **Practice**: [Lab 1.3 ~ 18 Monitor Hub](../labs/18-monitor-hub.md) (30 mins)
 - `13:50` **Discussion**: Debrief about the lab (10 mins)
-- `14:00` **Practice**: [Lab 1.4 ~ 06c Monitor Warehouse](../labs/06c-monitor-data-warehouse.md) (20 mins)
-- `14:20` **Discussion**: Monitoring tools (10 mins)
+- `14:00` **Practice**: [Lab 1.4 ~ 06c Monitor Warehouse](../labs/06c-monitor-data-warehouse.md) (30 mins)
+- `14:30` **Discussion**: Monitoring tools (10 mins)
 
 ## ☕ Afternoon Break
 
 ## Session 4
 
-- `14:50` **Investigation**: Cloud monitoring comparison (20 mins)
-- `15:10` **Report-Back**: [Cloud monitoring ~ Report back](../day1/cloud-monitoring-report-back.md) (10 mins)
-- `15:20` **Activity**: Create monitoring strategy (20 mins)
-- `15:40` **Report-Back**: Share monitoring strategies (10 mins)
+- `15:00` **Investigation**: [Cloud monitoring comparison](../day1/cloud-monitoring-comparison.md) (30 mins)
+- `15:30` **Report-Back**: [Cloud monitoring ~ Report back](../day1/cloud-monitoring-report-back.md) (20 mins)
 
 ## 🎁 Wrap
 
