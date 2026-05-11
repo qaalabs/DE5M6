@@ -16,7 +16,7 @@
     
     
       
-        <title>Day 3: Medallion Architecture &amp; Quality Patterns - Module 6 - Data Operations</title>
+        <title>Tutor Guide - Technical Debt Audit Activity - Module 6 - Data Operations</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#day-3-medallion-architecture-quality-patterns" class="md-skip">
+        <a href="#tutor-guide-technical-debt-audit-activity" class="md-skip">
           Skip to content
         </a>
       
@@ -103,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Day 3: Medallion Architecture &amp; Quality Patterns
+              Tutor Guide - Technical Debt Audit Activity
             
           </span>
         </div>
@@ -339,34 +339,6 @@
     
   
     Day 3
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../agenda/day4/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Day 4
   
 
     
@@ -997,14 +969,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../labs/19-secure-data-access/" class="md-nav__link">
+      <a href="../technical-debt-activity/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Lab 3.2 ~ 19 Secure Data Access
+    Technical Debt Analysis
   
 
     
@@ -1032,173 +1004,7 @@
   <span class="md-ellipsis">
     
   
-    Lab 3.3 ~ 21 Deployment Pipelines
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6">
-        
-          
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Day 4 - Improvement &amp; Value
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Day 4 - Improvement &amp; Value
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../day4/overview/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Instructions &amp; Overview
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../day4/sprint1/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Planning for Sprint 1
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../day4/sprint2/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Planning for Sprint 2
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../day4/sprint3/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Planning for Sprint 3
+    Lab 3.2 ~ 21 Deployment Pipelines
   
 
     
@@ -1263,226 +1069,434 @@
 
 
 
-<h1 id="day-3-medallion-architecture-quality-patterns">Day 3: Medallion Architecture &amp; Quality Patterns</h1>
-<hr>
+<h1 id="tutor-guide-technical-debt-audit-activity">Tutor Guide - Technical Debt Audit Activity</h1>
 <h2 id="overview">Overview</h2>
-<p>This session combines hands-on experience with medallion architecture (Lab 3b) and structured analysis of how quality patterns are implemented in data architecture. Learners see how the DMBOK quality dimensions they studied earlier are addressed through bronze, silver, and gold layer design, then investigate modern quality tools and approaches.</p>
+<p>This codebase contains <strong>intentional technical debt</strong> for learners to discover during their audit. This document lists all embedded issues to help you facilitate the activity and validate learner findings.</p>
 <hr>
-<h2 id="session-structure">Session Structure</h2>
-<h3 id="phase-1-medallion-architecture-lab-45-minutes">Phase 1: Medallion Architecture Lab (45 minutes)</h3>
-<h4 id="lab-3b-create-a-medallion-architecture-45-minutes">Lab 3b: Create a Medallion Architecture (45 minutes)</h4>
-<p><strong>Microsoft Learn Lab:</strong> <a href="https://docs.microsoft.com/learn/modules/create-medallion-architecture-fabric-lakehouse/">Create a medallion architecture in a Fabric lakehouse</a></p>
-<p><strong>Key Learning Focus for Today:</strong></p>
-<p>While completing the lab, learners should pay attention to:</p>
+<h2 id="extract_datasql-7-issues">Extract_data.sql (7 issues)</h2>
+<h3 id="1-hard-coded-database-name-line-5-12-20-27-35-42-49">1. Hard-coded Database Name (Line 5, 12, 20, 27, 35, 42, 49)</h3>
 <ul>
-<li><strong>Bronze layer:</strong> Raw data ingestion - what quality issues exist here?</li>
-<li><strong>Silver layer:</strong> Data cleaning and validation - what quality improvements happen?</li>
-<li><strong>Gold layer:</strong> Business-ready data - what quality standards are enforced?</li>
+<li><strong>Category:</strong> Configuration Management</li>
+<li><strong>Impact:</strong> High - breaks in different environments</li>
+<li><strong>Effort:</strong> Low - replace with parameters</li>
+<li><strong>Priority:</strong> Critical</li>
+<li>Database name <code>sales.dbo</code> is hard-coded throughout</li>
 </ul>
-<p><strong>Facilitator Notes:</strong></p>
+<h3 id="2-hard-coded-date-range-line-6-13-14-21-22-28-29-36-37-43-44-50-51">2. Hard-coded Date Range (Line 6, 13-14, 21-22, 28-29, 36-37, 43-44, 50-51)</h3>
 <ul>
-<li><strong>Circulate during lab</strong> to highlight quality aspects as learners work</li>
-<li><strong>Point out quality transformations:</strong> "Notice how the silver layer handles missing values"</li>
-<li><strong>Connect to DMBOK:</strong> "This validation step addresses which quality dimension?"</li>
-<li><strong>Time management:</strong> Keep lab moving - focus on completion over perfection</li>
+<li><strong>Category:</strong> Code Quality</li>
+<li><strong>Impact:</strong> High - requires code change for each run</li>
+<li><strong>Effort:</strong> Low - use parameters</li>
+<li><strong>Priority:</strong> Critical</li>
+<li>Date range '2024-01-01' to '2024-02-01' is hard-coded in every query</li>
 </ul>
-<hr>
-<h3 id="phase-2-quality-patterns-analysis-20-minutes">Phase 2: Quality Patterns Analysis (20 minutes)</h3>
-<h4 id="medallion-quality-mapping-discussion-20-minutes">Medallion Quality Mapping Discussion (20 minutes)</h4>
-<p><strong>Setup (2 minutes):</strong></p>
-<p><strong>Facilitator Frame:</strong></p>
+<h3 id="3-select-overuse-lines-5-20-27">3. SELECT * Overuse (Lines 5, 20, 27)</h3>
 <ul>
-<li>"You've just built a medallion architecture hands-on"</li>
-<li>"Now let's analyze how this pattern addresses the DMBOK quality dimensions you studied earlier"</li>
-<li>"We'll map specific quality improvements to each layer"</li>
+<li><strong>Category:</strong> Performance</li>
+<li><strong>Impact:</strong> Medium - unnecessary data transfer</li>
+<li><strong>Effort:</strong> Low - specify columns</li>
+<li><strong>Priority:</strong> High</li>
+<li>Multiple <code>SELECT *</code> statements pulling unnecessary columns</li>
 </ul>
-<h4 id="structured-quality-analysis-15-minutes">Structured Quality Analysis (15 minutes):</h4>
-<p><strong>Individual Reflection (5 minutes):</strong>
-Give learners this framework to complete based on their lab experience:</p>
-<div class="highlight"><pre><span></span><code>MEDALLION QUALITY MAPPING
-
-BRONZE LAYER - Raw Data:
-□ What quality issues did you observe in the raw data?
-□ Which DMBOK dimensions had problems here?
-□ What was preserved "as-is" and why?
-
-SILVER LAYER - Cleaned Data:  
-□ What quality transformations happened in silver?
-□ Which DMBOK dimensions were improved?
-□ What validation rules were applied?
-
-GOLD LAYER - Business-Ready Data:
-□ What additional quality standards were enforced?
-□ Which DMBOK dimensions reached "production quality"?
-□ What business rules ensured fitness for purpose?
-
-QUALITY PATTERNS OBSERVED:
-□ How does this layered approach handle different quality requirements?
-□ What are the trade-offs between layers?
-□ Where would you add additional quality checks?
-</code></pre></div>
-<p><strong>Pair Discussion (5 minutes):</strong></p>
+<h3 id="4-repeated-subquery-pattern-lines-13-14-21-22-28-29-36-37-43-44-50-51">4. Repeated Subquery Pattern (Lines 13-14, 21-22, 28-29, 36-37, 43-44, 50-51)</h3>
 <ul>
-<li><strong>Share findings</strong> with a partner (different from morning DMBOK pairs)</li>
-<li><strong>Compare observations</strong> about quality transformations</li>
-<li><strong>Identify</strong> one quality improvement they found most effective</li>
+<li><strong>Category:</strong> Performance &amp; Code Quality</li>
+<li><strong>Impact:</strong> Medium - inefficient, hard to maintain</li>
+<li><strong>Effort:</strong> Medium - refactor to CTE or temp table</li>
+<li><strong>Priority:</strong> Medium</li>
+<li>Same subquery <code>SELECT customer_id FROM sales.dbo.transactions WHERE...</code> repeated 6 times</li>
 </ul>
-<p><strong>Group Discussion (5 minutes):</strong>
-<strong>Facilitator-led analysis:</strong></p>
-<p><strong>Key Questions:</strong></p>
+<h3 id="5-no-error-handling">5. No Error Handling</h3>
 <ul>
-<li>"Which DMBOK dimensions were most improved by the silver layer transformations?"</li>
-<li>"What quality trade-offs did you notice between preserving raw data and cleaning it?"</li>
-<li>"Where would you add additional quality checks if this was a production system?"</li>
+<li><strong>Category:</strong> Maintainability</li>
+<li><strong>Impact:</strong> Medium - silent failures possible</li>
+<li><strong>Effort:</strong> Medium - add TRY-CATCH blocks</li>
+<li><strong>Priority:</strong> Medium</li>
+<li>No error handling anywhere in the file</li>
 </ul>
-<p><strong>Expected Insights to Highlight:</strong></p>
+<h3 id="6-poor-table-aliases">6. Poor Table Aliases</h3>
 <ul>
-<li><strong>Bronze preserves completeness</strong> but may sacrifice accuracy</li>
-<li><strong>Silver improves accuracy and consistency</strong> through validation and standardization</li>
-<li><strong>Gold ensures fitness for purpose</strong> through business rule application</li>
-<li><strong>Different layers serve different quality needs</strong> - exploration vs. reporting vs. analytics</li>
+<li><strong>Category:</strong> Code Quality</li>
+<li><strong>Impact:</strong> Low - readability issue</li>
+<li><strong>Effort:</strong> Low - use meaningful aliases</li>
+<li><strong>Priority:</strong> Low</li>
+<li>No aliases used, making queries verbose</li>
 </ul>
-<h4 id="bridge-to-quality-tools-3-minutes">Bridge to Quality Tools (3 minutes):</h4>
-<p><strong>Facilitator:</strong></p>
+<h3 id="7-outdated-comment-line-3">7. Outdated Comment (Line 3)</h3>
 <ul>
-<li>"The medallion pattern gives you architecture for quality improvement"</li>
-<li>"But you need tools to implement and monitor these quality standards"</li>
-<li>"Next we'll investigate modern data quality tools that can automate what you just did manually"</li>
+<li><strong>Category:</strong> Maintainability</li>
+<li><strong>Impact:</strong> Low - misleading documentation</li>
+<li><strong>Effort:</strong> Low - update date</li>
+<li><strong>Priority:</strong> Low</li>
+<li>"Last updated: 2023-06-15" is outdated</li>
 </ul>
 <hr>
-<h3 id="phase-3-quality-tools-investigation-10-minutes">Phase 3: Quality Tools Investigation (10 minutes)</h3>
-<h4 id="modern-data-quality-tools-research-10-minutes">Modern Data Quality Tools Research (10 minutes)</h4>
-<p><strong>Setup (1 minute):</strong></p>
-<p><strong>Research Focus:</strong></p>
-<p>"Investigate tools that could automate the quality checks you just implemented in the medallion architecture"</p>
-<p><strong>Team Formation:</strong></p>
+<h2 id="transform_datasql-11-issues">Transform_data.sql (11 issues)</h2>
+<h3 id="1-function-on-column-in-where-line-13">1. Function on Column in WHERE (Line 13)</h3>
 <ul>
-<li><strong>Pairs or individuals</strong> (depending on class size)</li>
-<li><strong>Each pair/person</strong> takes a different tool category</li>
+<li><strong>Category:</strong> Performance</li>
+<li><strong>Impact:</strong> High - prevents index usage</li>
+<li><strong>Effort:</strong> Low - restructure condition</li>
+<li><strong>Priority:</strong> Critical</li>
+<li><code>WHERE YEAR(transaction_date) = 2024 AND MONTH(transaction_date) = 1</code></li>
 </ul>
-<h4 id="tool-categories-to-research">Tool Categories to Research:</h4>
-<p><strong>Category 1: Data Quality Frameworks</strong></p>
+<h3 id="2-old-style-join-syntax-lines-18-19-35-36-57-58-74-75">2. Old-Style JOIN Syntax (Lines 18-19, 35-36, 57-58, 74-75)</h3>
 <ul>
-<li><strong>Great Expectations:</strong> Python-based data validation framework</li>
-<li><strong>dbt tests:</strong> Built-in and custom data quality tests</li>
-<li><strong>Focus:</strong> How do these tools implement quality checks similar to your silver layer transformations?</li>
+<li><strong>Category:</strong> Maintainability</li>
+<li><strong>Impact:</strong> Medium - outdated, deprecated</li>
+<li><strong>Effort:</strong> Low - convert to ANSI JOIN</li>
+<li><strong>Priority:</strong> High</li>
+<li>Using comma-separated FROM clause: <code>FROM table1 t, table2 p WHERE t.id = p.id</code></li>
 </ul>
-<p><strong>Category 2: Cloud-Native Quality Tools</strong></p>
+<h3 id="3-hard-coded-date-range-multiple-lines">3. Hard-coded Date Range (Multiple lines)</h3>
 <ul>
-<li><strong>Azure Data Quality (in Fabric/Synapse):</strong> Built-in quality monitoring</li>
-<li><strong>AWS Glue DataBrew:</strong> Visual data quality profiling</li>
-<li><strong>Focus:</strong> How do cloud platforms handle quality monitoring and alerting?</li>
+<li><strong>Category:</strong> Code Quality</li>
+<li><strong>Impact:</strong> High - same as extract_data.sql</li>
+<li><strong>Effort:</strong> Low</li>
+<li><strong>Priority:</strong> Critical</li>
+<li>'2024-01-01' and similar dates hard-coded</li>
 </ul>
-<p><strong>Category 3: Quality Monitoring &amp; Observability</strong></p>
+<h3 id="4-nested-subqueries-lines-26-28-35-38">4. Nested Subqueries (Lines 26-28, 35-38)</h3>
 <ul>
-<li><strong>Monte Carlo:</strong> Data observability and quality monitoring</li>
-<li><strong>Datadog Data Streams:</strong> Real-time quality monitoring</li>
-<li><strong>Focus:</strong> How do these tools detect quality issues automatically?</li>
+<li><strong>Category:</strong> Performance</li>
+<li><strong>Impact:</strong> Medium - could use CTEs</li>
+<li><strong>Effort:</strong> Medium - refactor to CTE</li>
+<li><strong>Priority:</strong> Medium</li>
+<li>Multiple correlated subqueries in SELECT clause</li>
 </ul>
-<p><strong>Category 4: Open Source Quality Solutions</strong></p>
+<h3 id="5-duplicated-case-logic-lines-43-54">5. Duplicated CASE Logic (Lines 43-54)</h3>
 <ul>
-<li><strong>Apache Griffin:</strong> Data quality platform</li>
-<li><strong>DataHub:</strong> Data discovery with quality insights</li>
-<li><strong>Focus:</strong> How do open source tools provide cost-effective quality solutions?</li>
+<li><strong>Category:</strong> Code Quality</li>
+<li><strong>Impact:</strong> Medium - maintenance burden</li>
+<li><strong>Effort:</strong> Medium - extract to function/view</li>
+<li><strong>Priority:</strong> Medium</li>
+<li>Same CASE statement appears twice (lines 43-48 and 51-54)</li>
 </ul>
-<h4 id="research-questions-8-minutes">Research Questions (8 minutes):</h4>
-<p>For each tool category, investigate:</p>
-<p><strong>Implementation Approach:</strong></p>
+<h3 id="6-hard-coded-business-logic-lines-44-47">6. Hard-coded Business Logic (Lines 44-47)</h3>
 <ul>
-<li>How would this tool integrate with a medallion architecture?</li>
-<li>What quality checks could be automated?</li>
-<li>How does it compare to manual validation?</li>
+<li><strong>Category:</strong> Configuration Management</li>
+<li><strong>Impact:</strong> Medium - thresholds should be configurable</li>
+<li><strong>Effort:</strong> Low - move to parameters</li>
+<li><strong>Priority:</strong> Medium</li>
+<li>Loyalty tier thresholds (100, 500, 1000) hard-coded</li>
 </ul>
-<p><strong>Quality Dimensions Covered:</strong></p>
+<h3 id="7-no-transaction-management-line-63">7. No Transaction Management (Line 63)</h3>
 <ul>
-<li>Which DMBOK dimensions does this tool address best?</li>
-<li>What types of quality issues would it catch/miss?</li>
-<li>How does it handle quality monitoring vs. quality improvement?</li>
+<li><strong>Category:</strong> Maintainability</li>
+<li><strong>Impact:</strong> High - data corruption risk</li>
+<li><strong>Effort:</strong> Medium - wrap in transaction</li>
+<li><strong>Priority:</strong> High</li>
+<li>INSERT with no BEGIN TRANSACTION/COMMIT</li>
 </ul>
-<p><strong>Practical Considerations:</strong></p>
+<h3 id="8-no-null-handling">8. No NULL Handling</h3>
 <ul>
-<li>What skills/resources needed for implementation?</li>
-<li>How does it fit with Microsoft Fabric/Azure ecosystem?</li>
-<li>What would be the first quality check you'd implement?</li>
+<li><strong>Category:</strong> Data Quality</li>
+<li><strong>Impact:</strong> Medium - incorrect aggregations</li>
+<li><strong>Effort:</strong> Low - add COALESCE/ISNULL</li>
+<li><strong>Priority:</strong> Medium</li>
+<li>SUM/AVG operations don't handle NULLs explicitly</li>
 </ul>
-<h4 id="quick-sharing-1-minute">Quick Sharing (1 minute):</h4>
-<p><strong>Rapid insights:</strong> Each pair/person shares one key finding (15 seconds each):</p>
+<h3 id="9-select-in-subquery-implied">9. SELECT * in Subquery (Implied)</h3>
 <ul>
-<li>"The most interesting capability we found was..."</li>
-<li>"This tool would solve the problem of..."</li>
-<li>"The biggest implementation challenge would be..."</li>
+<li><strong>Category:</strong> Performance</li>
+<li><strong>Impact:</strong> Low - minor inefficiency</li>
+<li><strong>Effort:</strong> Low</li>
+<li><strong>Priority:</strong> Low</li>
+</ul>
+<h3 id="10-hard-coded-schema-names">10. Hard-coded Schema Names</h3>
+<ul>
+<li><strong>Category:</strong> Configuration Management</li>
+<li><strong>Impact:</strong> Medium - environment coupling</li>
+<li><strong>Effort:</strong> Low - parameterize</li>
+<li><strong>Priority:</strong> Medium</li>
+<li><code>reporting.dbo</code> hard-coded (line 63)</li>
+</ul>
+<h3 id="11-no-comments">11. No Comments</h3>
+<ul>
+<li><strong>Category:</strong> Maintainability</li>
+<li><strong>Impact:</strong> Low - understandability</li>
+<li><strong>Effort:</strong> Low - add comments</li>
+<li><strong>Priority:</strong> Low</li>
+<li>Complex queries lack explanatory comments</li>
 </ul>
 <hr>
-<h2 id="transition-to-afternoon">Transition to Afternoon</h2>
-<h3 id="bridge-to-security-governance-1-minute">Bridge to Security &amp; Governance (1 minute):</h3>
-<p><strong>Facilitator:</strong></p>
+<h2 id="pipelinepy-15-issues">Pipeline.py (15 issues)</h2>
+<h3 id="1-hard-coded-credentials-line-8">1. Hard-coded Credentials (Line 8)</h3>
 <ul>
-<li>"This morning you've focused on data quality - ensuring data meets standards"</li>
-<li>"This afternoon we'll explore governance - ensuring the right people can access the right data safely"</li>
-<li>"Quality and governance work together - high-quality data that's not properly secured and governed can't deliver business value"</li>
+<li><strong>Category:</strong> Security - CRITICAL</li>
+<li><strong>Impact:</strong> CRITICAL - exposed password</li>
+<li><strong>Effort:</strong> Low - use environment variables</li>
+<li><strong>Priority:</strong> CRITICAL</li>
+<li>Plain text password in connection string</li>
+</ul>
+<h3 id="2-hard-coded-file-paths-lines-21-25-40-44-87-91">2. Hard-coded File Paths (Lines 21, 25, 40, 44, 87, 91)</h3>
+<ul>
+<li><strong>Category:</strong> Configuration Management</li>
+<li><strong>Impact:</strong> High - Windows-specific, breaks portability</li>
+<li><strong>Effort:</strong> Low - use config file or relative paths</li>
+<li><strong>Priority:</strong> Critical</li>
+<li><code>C:\Users\DataTeam\...</code> paths throughout</li>
+</ul>
+<h3 id="3-poor-variable-names-lines-14-16-22-40-52-61">3. Poor Variable Names (Lines 14, 16, 22, 40, 52, 61)</h3>
+<ul>
+<li><strong>Category:</strong> Code Quality</li>
+<li><strong>Impact:</strong> Medium - readability</li>
+<li><strong>Effort:</strong> Low - rename</li>
+<li><strong>Priority:</strong> Medium</li>
+<li><code>c</code>, <code>f</code>, <code>q</code>, <code>r</code> - cryptic names</li>
+</ul>
+<h3 id="4-no-error-handling-entire-file">4. No Error Handling (Entire file)</h3>
+<ul>
+<li><strong>Category:</strong> Maintainability</li>
+<li><strong>Impact:</strong> High - failures go unnoticed</li>
+<li><strong>Effort:</strong> Medium - add try-except blocks</li>
+<li><strong>Priority:</strong> High</li>
+<li>No try-except anywhere; database/file operations can fail silently</li>
+</ul>
+<h3 id="5-file-handling-not-safe-lines-22-24-40-42">5. File Handling Not Safe (Lines 22-24, 40-42)</h3>
+<ul>
+<li><strong>Category:</strong> Maintainability</li>
+<li><strong>Impact:</strong> Medium - resource leak</li>
+<li><strong>Effort:</strong> Low - use context managers</li>
+<li><strong>Priority:</strong> Medium</li>
+<li>Not using <code>with open()</code> - files not guaranteed to close</li>
+</ul>
+<h3 id="6-sql-injection-risk-line-32">6. SQL Injection Risk (Line 32)</h3>
+<ul>
+<li><strong>Category:</strong> Security</li>
+<li><strong>Impact:</strong> High - if queries ever parameterized</li>
+<li><strong>Effort:</strong> Low - use parameterized queries</li>
+<li><strong>Priority:</strong> High</li>
+<li>Direct execution of SQL from file (currently safe but bad practice)</li>
+</ul>
+<h3 id="7-unused-import-line-3">7. Unused Import (Line 3)</h3>
+<ul>
+<li><strong>Category:</strong> Code Quality</li>
+<li><strong>Impact:</strong> Low - minor</li>
+<li><strong>Effort:</strong> Low - remove</li>
+<li><strong>Priority:</strong> Low</li>
+<li><code>import json</code> but never used (config.json isn't actually loaded!)</li>
+</ul>
+<h3 id="8-magic-numbers-line-48-91">8. Magic Numbers (Line 48, 91)</h3>
+<ul>
+<li><strong>Category:</strong> Code Quality</li>
+<li><strong>Impact:</strong> Low - unclear meaning</li>
+<li><strong>Effort:</strong> Low - use named constants</li>
+<li><strong>Priority:</strong> Low</li>
+<li><code>604800</code> (seconds in 7 days) not explained</li>
+</ul>
+<h3 id="9-config-file-not-used">9. Config File Not Used</h3>
+<ul>
+<li><strong>Category:</strong> Configuration Management</li>
+<li><strong>Impact:</strong> High - defeats purpose of config</li>
+<li><strong>Effort:</strong> Low - actually load and use config.json</li>
+<li><strong>Priority:</strong> High</li>
+<li>config.json exists but isn't loaded or used anywhere</li>
+</ul>
+<h3 id="10-no-logging">10. No Logging</h3>
+<ul>
+<li><strong>Category:</strong> Maintainability</li>
+<li><strong>Impact:</strong> Medium - debugging difficulties</li>
+<li><strong>Effort:</strong> Medium - implement proper logging</li>
+<li><strong>Priority:</strong> Medium</li>
+<li>Using print() instead of logging module</li>
+</ul>
+<h3 id="11-no-validation-lines-52-54">11. No Validation (Lines 52-54)</h3>
+<ul>
+<li><strong>Category:</strong> Data Quality</li>
+<li><strong>Impact:</strong> Medium - silent data issues</li>
+<li><strong>Effort:</strong> Low - add assertions/validation</li>
+<li><strong>Priority:</strong> Medium</li>
+<li>Validation checks but doesn't stop pipeline on failure</li>
+</ul>
+<h3 id="12-misleading-function-returns-lines-18-37-55">12. Misleading Function Returns (Lines 18, 37, 55)</h3>
+<ul>
+<li><strong>Category:</strong> Code Quality</li>
+<li><strong>Impact:</strong> Low - unused return values</li>
+<li><strong>Effort:</strong> Low - remove or use returns</li>
+<li><strong>Priority:</strong> Low</li>
+<li>Functions return <code>True</code> but values never checked</li>
+</ul>
+<h3 id="13-incomplete-function-lines-59-61">13. Incomplete Function (Lines 59-61)</h3>
+<ul>
+<li><strong>Category:</strong> Maintainability</li>
+<li><strong>Impact:</strong> Low - TODO not addressed</li>
+<li><strong>Effort:</strong> N/A - depends on requirements</li>
+<li><strong>Priority:</strong> Low</li>
+<li><code>send_notification()</code> is a stub with TODO</li>
+</ul>
+<h3 id="14-unclear-function-purpose-line-82">14. Unclear Function Purpose (Line 82)</h3>
+<ul>
+<li><strong>Category:</strong> Code Quality</li>
+<li><strong>Impact:</strong> Low - documentation</li>
+<li><strong>Effort:</strong> Low - add docstrings</li>
+<li><strong>Priority:</strong> Low</li>
+<li>No docstrings explaining what functions do</li>
+</ul>
+<h3 id="15-fragile-string-concatenation-line-89">15. Fragile String Concatenation (Line 89)</h3>
+<ul>
+<li><strong>Category:</strong> Code Quality</li>
+<li><strong>Impact:</strong> Medium - path handling</li>
+<li><strong>Effort:</strong> Low - use os.path.join()</li>
+<li><strong>Priority:</strong> Medium</li>
+<li>Manual string concatenation for paths instead of os.path.join()</li>
 </ul>
 <hr>
-<h2 id="resources-for-trainers">Resources for Trainers</h2>
-<h3 id="pre-session-preparation">Pre-Session Preparation:</h3>
+<h2 id="configjson-4-issues">Config.json (4 issues)</h2>
+<h3 id="1-exposed-database-credentials-lines-4-5">1. Exposed Database Credentials (Lines 4-5)</h3>
 <ul>
-<li><strong>Complete Lab 3b yourself</strong> to understand quality transformation points</li>
-<li><strong>Research quality tools</strong> briefly to guide learners if they struggle</li>
-<li><strong>Prepare quality examples</strong> from the lab to highlight during discussion</li>
+<li><strong>Category:</strong> Security - CRITICAL</li>
+<li><strong>Impact:</strong> CRITICAL - credentials in version control</li>
+<li><strong>Effort:</strong> Low - use environment variables</li>
+<li><strong>Priority:</strong> CRITICAL</li>
+<li>Plain text username and password</li>
 </ul>
-<h3 id="managing-the-lab-phase">Managing the Lab Phase:</h3>
-<p><strong>Keep Quality Focus:</strong></p>
+<h3 id="2-exposed-smtp-credentials-lines-18-19">2. Exposed SMTP Credentials (Lines 18-19)</h3>
 <ul>
-<li><strong>Point out quality improvements</strong> as they happen: "Notice how this addresses accuracy"</li>
-<li><strong>Connect to DMBOK:</strong> Reference morning's framework throughout</li>
-<li><strong>Time management:</strong> Ensure lab completion within 45 minutes</li>
+<li><strong>Category:</strong> Security - CRITICAL</li>
+<li><strong>Impact:</strong> CRITICAL - credentials exposed</li>
+<li><strong>Effort:</strong> Low - use secrets management</li>
+<li><strong>Priority:</strong> CRITICAL</li>
+<li>SMTP password in plain text</li>
 </ul>
-<p><strong>Common Lab Issues:</strong></p>
+<h3 id="3-environment-specific-paths-lines-7-9">3. Environment-Specific Paths (Lines 7-9)</h3>
 <ul>
-<li><strong>If learners struggle with technical steps:</strong> Focus on understanding the quality patterns rather than perfect execution</li>
-<li><strong>If lab runs long:</strong> Guide them to complete bronze and silver layers, skip gold if necessary</li>
-<li><strong>If learners finish early:</strong> Have them analyze additional quality improvement opportunities</li>
+<li><strong>Category:</strong> Configuration Management</li>
+<li><strong>Impact:</strong> High - not portable</li>
+<li><strong>Effort:</strong> Low - use relative paths</li>
+<li><strong>Priority:</strong> High</li>
+<li>Hard-coded Windows paths</li>
 </ul>
-<h3 id="facilitating-quality-discussion">Facilitating Quality Discussion:</h3>
-<p><strong>Drawing Out Insights:</strong></p>
+<h3 id="4-no-environment-separation">4. No Environment Separation</h3>
 <ul>
-<li><strong>Use specific examples</strong> from the lab: "What happened to the invalid dates in silver layer?"</li>
-<li><strong>Connect to workplace:</strong> "How does this compare to quality processes in your organization?"</li>
-<li><strong>Highlight trade-offs:</strong> "Why keep raw data in bronze if it has quality issues?"</li>
+<li><strong>Category:</strong> Configuration Management</li>
+<li><strong>Impact:</strong> Medium - dev/prod not separated</li>
+<li><strong>Effort:</strong> Medium - create env-specific configs</li>
+<li><strong>Priority:</strong> Medium</li>
+<li>Single config for all environments (note "prod-db" in line 3)</li>
 </ul>
-<p><strong>Managing Tools Research:</strong></p>
+<hr>
+<h2 id="requirementstxt-2-issues">Requirements.txt (2 issues)</h2>
+<h3 id="1-outdated-dependencies-all-lines">1. Outdated Dependencies (All lines)</h3>
 <ul>
-<li><strong>Keep research focused</strong> on practical implementation rather than deep technical details</li>
-<li><strong>Guide struggling researchers:</strong> Suggest looking for case studies or getting-started guides</li>
-<li><strong>Connect to medallion:</strong> "How would this tool fit into the architecture you just built?"</li>
+<li><strong>Category:</strong> Security &amp; Maintainability</li>
+<li><strong>Impact:</strong> High - known vulnerabilities</li>
+<li><strong>Effort:</strong> Medium - test with updated versions</li>
+<li><strong>Priority:</strong> High</li>
+<li>All packages are 2+ years old (from 2021)</li>
+<li>pandas 1.3.0 → current is 2.x</li>
+<li>requests 2.26.0 has known CVEs</li>
 </ul>
-<h3 id="expected-learning-outcomes">Expected Learning Outcomes</h3>
-<p><strong>Practical Understanding:</strong></p>
+<h3 id="2-unused-dependency-lines-4-6">2. Unused Dependency (Lines 4-6)</h3>
 <ul>
-<li><strong>Quality patterns in action</strong> - seeing DMBOK dimensions addressed through architecture</li>
-<li><strong>Tool awareness</strong> - knowing what modern quality solutions exist</li>
-<li><strong>Implementation thinking</strong> - connecting theory to practical application</li>
+<li><strong>Category:</strong> Code Quality</li>
+<li><strong>Impact:</strong> Low - bloat</li>
+<li><strong>Effort:</strong> Low - remove unused</li>
+<li><strong>Priority:</strong> Low</li>
+<li>sqlalchemy, python-dotenv, requests aren't used in pipeline.py</li>
 </ul>
-<p><strong>Quality Mindset:</strong></p>
+<hr>
+<h2 id="readmemd-5-issues">README.md (5 issues)</h2>
+<h3 id="1-outdated-line-18">1. Outdated (Line 18)</h3>
 <ul>
-<li><strong>Layered quality approach</strong> - different standards for different purposes</li>
-<li><strong>Automation possibilities</strong> - tools can implement quality checks at scale</li>
-<li><strong>Integration considerations</strong> - quality tools work within broader data architecture</li>
+<li><strong>Category:</strong> Maintainability</li>
+<li><strong>Impact:</strong> Medium - misleading</li>
+<li><strong>Effort:</strong> Low - update date</li>
+<li><strong>Priority:</strong> Medium</li>
+<li>"Last updated: June 2023"</li>
 </ul>
-<h3 id="connection-to-ksbs">Connection to KSBs:</h3>
+<h3 id="2-incomplete-setup-instructions">2. Incomplete Setup Instructions</h3>
 <ul>
-<li><strong>K4:</strong> Frameworks for data quality (DMBOK applied to architecture)</li>
-<li><strong>S26:</strong> Identify data quality metrics and track them (quality tools investigation)</li>
-<li><strong>S6:</strong> Systematically clean, validate, and describe data at ETL stages (medallion lab)</li>
-<li><strong>S25:</strong> Assess gaps in existing tools and technologies (quality tools research)</li>
-<li><strong>B3:</strong> Quality focus that promotes continuous improvement (throughout session)</li>
+<li><strong>Category:</strong> Maintainability</li>
+<li><strong>Impact:</strong> Medium - hard to onboard</li>
+<li><strong>Effort:</strong> Medium - document properly</li>
+<li><strong>Priority:</strong> Medium</li>
+<li>No database setup, no config instructions, no credentials setup</li>
 </ul>
-<h3 id="time-management-tips">Time Management Tips:</h3>
+<h3 id="3-no-prerequisites-section">3. No Prerequisites Section</h3>
 <ul>
-<li><strong>Lab phase:</strong> Use timer, keep groups moving together</li>
-<li><strong>Discussion phase:</strong> Limit individual reflection to 5 minutes max</li>
-<li><strong>Research phase:</strong> Encourage "good enough" research over perfect analysis</li>
-<li><strong>Sharing:</strong> Use strict time limits for rapid knowledge sharing</li>
+<li><strong>Category:</strong> Maintainability</li>
+<li><strong>Impact:</strong> Medium - unclear requirements</li>
+<li><strong>Effort:</strong> Low - add section</li>
+<li><strong>Priority:</strong> Low</li>
+<li>Missing Python version, SQL Server requirements, etc.</li>
 </ul>
+<h3 id="4-no-configuration-documentation">4. No Configuration Documentation</h3>
+<ul>
+<li><strong>Category:</strong> Maintainability</li>
+<li><strong>Impact:</strong> High - config.json exists but not mentioned</li>
+<li><strong>Effort:</strong> Low - document</li>
+<li><strong>Priority:</strong> High</li>
+<li>No mention of config.json or how to configure</li>
+</ul>
+<h3 id="5-vague-error-guidance">5. Vague Error Guidance</h3>
+<ul>
+<li><strong>Category:</strong> Maintainability</li>
+<li><strong>Impact:</strong> Low - unhelpful</li>
+<li><strong>Effort:</strong> Medium - create troubleshooting guide</li>
+<li><strong>Priority:</strong> Low</li>
+<li>"Check logs if something fails" - but there are no logs!</li>
+</ul>
+<hr>
+<h2 id="summary-statistics">Summary Statistics</h2>
+<p><strong>Total Issues:</strong> 44 distinct technical debt items</p>
+<p><strong>By Category:</strong>
+- Security: 4 CRITICAL issues
+- Configuration Management: 12 issues
+- Performance: 7 issues
+- Code Quality: 12 issues
+- Maintainability: 9 issues</p>
+<p><strong>By Priority:</strong>
+- CRITICAL: 7 issues
+- High: 11 issues
+- Medium: 18 issues
+- Low: 8 issues</p>
+<p><strong>By File:</strong>
+- extract_data.sql: 7 issues
+- transform_data.sql: 11 issues
+- pipeline.py: 15 issues
+- config.json: 4 issues
+- requirements.txt: 2 issues
+- README.md: 5 issues</p>
+<hr>
+<h2 id="facilitation-notes">Facilitation Notes</h2>
+<h3 id="expected-learner-findings">Expected Learner Findings</h3>
+<ul>
+<li><strong>Strong learners</strong> might find 15-20 issues</li>
+<li><strong>Average learners</strong> should find 10-15 issues</li>
+<li><strong>All learners</strong> should spot the CRITICAL security issues (exposed credentials)</li>
+</ul>
+<h3 id="key-teaching-points">Key Teaching Points</h3>
+<ol>
+<li><strong>Security first</strong> - credentials in code/config is always critical</li>
+<li><strong>Impact vs Effort</strong> - not everything needs fixing immediately</li>
+<li><strong>Technical debt is normal</strong> - the key is managing it consciously</li>
+<li><strong>Documentation matters</strong> - outdated docs can be worse than no docs</li>
+</ol>
+<h3 id="good-discussion-questions">Good Discussion Questions</h3>
+<ul>
+<li>"Why do you think these issues accumulated?"</li>
+<li>"What would you fix first and why?"</li>
+<li>"How could this have been prevented?"</li>
+<li>"What processes would help catch these earlier?"</li>
+</ul>
+<h3 id="watch-for">Watch For</h3>
+<ul>
+<li>Learners getting overwhelmed - remind them they don't need to find <em>everything</em></li>
+<li>Focus on security issues - make sure everyone spots the credentials</li>
+<li>Over-prioritisation - everything can't be critical</li>
+<li>Under-prioritisation of security - even "working" code with exposed credentials is critical</li>
+</ul>
+<hr>
+<h2 id="answer-key-top-priority-items">Answer Key - Top Priority Items</h2>
+<p>Most teams should identify these as their top 3-5 priorities:</p>
+<ol>
+<li><strong>Exposed credentials</strong> (pipeline.py line 8, config.json) - CRITICAL security</li>
+<li><strong>Hard-coded database/schema names</strong> - breaks in different environments</li>
+<li><strong>Hard-coded date ranges</strong> - requires code changes for each run</li>
+<li><strong>No error handling</strong> - silent failures</li>
+<li><strong>Function on column in WHERE</strong> - major performance issue</li>
+</ol>
 
 
 
