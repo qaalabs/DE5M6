@@ -16,7 +16,7 @@
     
     
       
-        <title>Bikezelo ~ Live Pipeline Monitor - Module 6 - Data Operations</title>
+        <title>Lab 4.1 ~ Clone, Setup and Run Bikezelo - Module 6 - Data Operations</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#bikezelo-live-pipeline-monitor" class="md-skip">
+        <a href="#lab-41-clone-setup-and-run-bikezelo" class="md-skip">
           Skip to content
         </a>
       
@@ -103,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Bikezelo ~ Live Pipeline Monitor
+              Lab 4.1 ~ Clone, Setup and Run Bikezelo
             
           </span>
         </div>
@@ -1069,41 +1069,26 @@
 
 
 
-<h1 id="bikezelo-live-pipeline-monitor">Bikezelo ~ Live Pipeline Monitor</h1>
+<h1 id="lab-41-clone-setup-and-run-bikezelo">Lab 4.1 ~ Clone, Setup and Run Bikezelo</h1>
 <p>Bikezelo is a lightweight pipeline monitoring dashboard. It simulates a live data feed, validates incoming records against quality rules, and forecasts pipeline behaviour.</p>
 <h2 id="setup">Setup</h2>
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/ingwaneorg/bikezelo.git
 <span class="nb">cd</span><span class="w"> </span>bikezelo
 pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+python<span class="w"> </span>setup_db.py
 </code></pre></div>
 <h2 id="running">Running</h2>
 <p>Open two terminals.</p>
 <p><strong>Terminal 1 — start the simulation:</strong>
-</p><div class="highlight"><pre><span></span><code>bash<span class="w"> </span>bin/simulate.sh
+</p><div class="highlight"><pre><span></span><code>python<span class="w"> </span>simulate.py
 </code></pre></div><p></p>
 <p><strong>Terminal 2 — start the app:</strong>
 </p><div class="highlight"><pre><span></span><code>python<span class="w"> </span>app.py
 </code></pre></div><p></p>
 <p>Open a browser at <code>http://localhost:5000</code></p>
-<hr>
-<h2 id="activity">Activity</h2>
-<p>Open <code>rules.py</code> in VS Code. Work through each level below.</p>
-<h3 id="level-a-catch-missing-customer-ids">Level A ~ Catch missing customer IDs</h3>
-<p>Uncomment the <strong>Step 1</strong> block in <code>rules.py</code>. Save the file.</p>
-<p>Watch the dashboard — rows with a missing <code>customer_id</code> turn red on the next validation sweep.</p>
-<h3 id="level-b-catch-negative-order-amounts">Level B ~ Catch negative order amounts</h3>
-<p>Uncomment the <strong>Step 2</strong> block. Save the file.</p>
-<p>Watch the dashboard — rows with an <code>order_amount</code> outside the valid range turn red.</p>
-<h3 id="level-c-catch-invalid-status-codes">Level C ~ Catch invalid status codes</h3>
-<p>Uncomment the <strong>Step 3</strong> block. Save the file.</p>
-<p>Watch the dashboard — rows with a <code>PROCESSING</code> status (not in the valid set) turn red.</p>
-<hr>
-<h2 id="what-to-notice">What to notice</h2>
-<ul>
-<li>Rules are declarative — you describe what <em>should</em> be true, not how to check it</li>
-<li>The dashboard updates automatically when you save a new rule</li>
-<li>The forecast panel shows projected rows and errors per hour based on current rate</li>
-</ul>
+<h2 id="what-you-should-see">What you should see</h2>
+<p>Rows arrive every 2 seconds in the live feed. Each row starts white (unvalidated), then turns green, amber, or red on the next validation sweep (every 10 seconds).</p>
+<p>Roughly 1 in 8 rows is intentionally bad. Occasionally a spike fires — a burst of 4–8 consecutive bad rows. Watch the error rate and SLA indicator respond.</p>
 
 
 
