@@ -1,0 +1,1373 @@
+Directory structure:
+└── ingwaneorg-bikezelo/
+    ├── README.md
+    ├── app.py
+    ├── requirements.txt
+    ├── rules.py
+    ├── setup_db.py
+    ├── simulate.py
+    ├── templates/
+    │   └── index.html
+    └── tests/
+        ├── test_app.py
+        └── test_simulate.py
+
+================================================
+FILE: README.md
+================================================
+# bikezelo ~ TechMart Pipeline Monitor
+
+A lightweight pipeline monitoring dashboard that simulates a live data feed, validates incoming records against quality rules, and forecasts pipeline behaviour.
+
+---
+
+## Setup
+
+Clone the repo and install dependencies:
+
+```bash
+git clone https://github.com/ingwaneorg/bikezelo.git
+cd bikezelo
+pip install -r requirements.txt
+```
+
+Activate a virtual enviroment
+
+
+Initialise the database:
+
+```bash
+python setup_db.py
+```
+
+---
+
+## Running
+
+Open two terminals.
+
+**Terminal 1 - start the simulation:**
+```bash
+python simulate.py
+```
+
+**Terminal 2 - start the app:**
+```bash
+python app.py
+```
+
+Then open a browser and go to `http://localhost:5000`.
+
+---
+
+## What it does
+
+`simulate.py` writes a new TechMart order record to the database every 2 seconds. Most rows are valid, but roughly 1 in 8 is intentionally bad — missing values, invalid amounts, bad status codes, or malformed timestamps.
+
+Occasionally an **incident spike** fires: a burst of 4–8 consecutive bad rows, printed to the terminal so you can watch the dashboard react in real time.
+
+The dashboard has two panels:
+
+**Live feed** — rows appear as they arrive. Each row starts white (unvalidated), then turns green (passed), amber (warning), or red (failed) when the next validation sweep runs.
+
+**Pipeline stats** — total rows, passed, warnings, errors, error rate, and a forecast of rows and errors per hour based on the current arrival rate.
+
+Validation runs every 10 seconds against the whole dataset using Great Expectations rules defined in `rules.py`. If `rules.py` contains an error, the dashboard will show a message rather than silently passing all rows.
+
+---
+
+## Adding rules
+
+Open `rules.py`. It has numbered steps — uncomment the examples or add your own. Save the file and the next validation sweep picks up the changes automatically, no restart needed.
+
+**FAIL rules** — rows that break these turn red:
+```python
+def get_rules(suite):
+    suite.add_expectation(
+        gx.expectations.ExpectColumnValuesToNotBeNull(column="customer_id")
+    )
+    return suite
+```
+
+**WARNING rules** — rows that break these turn amber:
+```python
+def get_warnings(suite):
+    suite.add_expectation(
+        gx.expectations.ExpectColumnValuesToMatchRegex(
+            column="timestamp",
+            regex=r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}$"
+        )
+    )
+    return suite
+```
+
+---
+
+## Testing rules
+
+To generate a predictable set of edge-case rows instead of random data, use:
+
+```bash
+python test_simulate.py
+```
+
+This cycles through 22 hand-crafted rows covering nulls, boundary values, bad statuses, and malformed timestamps — useful when you want to verify that a new rule catches exactly what you expect.
+
+---
+
+## Project structure
+
+```
+bikezelo/
+├── app.py                # Flask app - serves the dashboard and runs validation
+├── rules.py              # Great Expectations rules - edit this
+├── simulate.py           # Writes a live stream of orders to the database
+├── setup_db.py           # One-time database setup
+├── requirements.txt
+├── bin/
+│   └── select.sh         # Query the database from the terminal
+├── data/
+│   └── orders.db         # SQLite database (created by setup_db.py)
+├── tests/
+│   ├── test_app.py       # Unit tests
+│   └── test_simulate.py  # Writes predictable edge-case rows for testing rules
+└── templates/
+    └── index.html        # Dashboard
+```
+
+
+
+================================================
+FILE: app.py
+================================================
+from flask import Flask, render_template, jsonify, request
+import pandas as pd
+import great_expectations as gx
+import sqlite3
+import os
+import importlib
+import logging
+import math
+import sys
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s %(levelname)s %(name)s: %(message)s",
+)
+logger = logging.getLogger("bikezelo")
+
+app = Flask(__name__)
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DB_PATH = os.path.join(BASE_DIR, "data", "orders.db")
+
+TICKER_ROWS = 50
+
+
+def get_db():
+    conn = sqlite3.connect(DB_PATH)
+    conn.execute("PRAGMA journal_mode=WAL")
+    conn.row_factory = sqlite3.Row
+    return conn
+
+
+def read_db():
+    try:
+        conn = get_db()
+        df = pd.read_sql_query("SELECT * FROM orders ORDER BY row_id ASC", conn)
+        conn.close()
+        return df
+    except Exception as e:
+        logger.error("DB read error: %s", e)
+        return pd.DataFrame(columns=["row_id", "timestamp", "customer_id", "order_amount", "status"])
+
+
+def _run_suite(context, df, batch_definition, suite, definition_name):
+    """
+    Run a single GE suite against df.
+    Returns a set of row_ids that failed.
+    """
+    failed_indices = set()
+
+    if len(suite.expectations) == 0:
+        return failed_indices
+
+    validation_definition = context.validation_definitions.add(
+        gx.ValidationDefinition(
+            name=definition_name,
+            data=batch_definition,
+            suite=suite,
+        )
+    )
+
+    result = validation_definition.run(batch_parameters={"dataframe": df})
+
+    for exp_result in result.results:
+        if not exp_result.success:
+            exp_type = exp_result.expectation_config.type
+            col = exp_result.expectation_config.kwargs.get("column")
+
+            if exp_type == "expect_column_values_to_not_be_null":
+                mask = df[col].isna() | (df[col].astype(str).str.strip() == "")
+                failed_indices.update(df[mask]["row_id"].tolist())
+
+            elif exp_type == "expect_column_values_to_be_between":
+                min_val = exp_result.expectation_config.kwargs.get("min_value")
+                max_val = exp_result.expectation_config.kwargs.get("max_value")
+                col_numeric = pd.to_numeric(df[col], errors="coerce")
+                if min_val is not None:
+                    failed_indices.update(df[col_numeric < min_val]["row_id"].tolist())
+                if max_val is not None:
+                    failed_indices.update(df[col_numeric > max_val]["row_id"].tolist())
+
+            elif exp_type == "expect_column_values_to_be_in_set":
+                value_set = exp_result.expectation_config.kwargs.get("value_set", [])
+                mask = ~df[col].isin(value_set)
+                failed_indices.update(df[mask]["row_id"].tolist())
+
+            elif exp_type == "expect_column_values_to_match_regex":
+                regex = exp_result.expectation_config.kwargs.get("regex")
+                mask = ~df[col].astype(str).str.match(regex, na=False)
+                failed_indices.update(df[mask]["row_id"].tolist())
+
+    return failed_indices
+
+
+def run_validation(df):
+    """
+    Run both GE suites against the whole DataFrame.
+    Returns a dict of row_id -> "pass", "warn", or "fail".
+    Fail takes priority over warn.
+    """
+    if df.empty:
+        return {}
+
+    try:
+        if "rules" in sys.modules:
+            importlib.reload(sys.modules["rules"])
+        else:
+            import rules  # noqa: F401
+
+        import rules as rules_module
+
+        # Fresh ephemeral context each run — no "already exists" issues
+        context = gx.get_context(mode="ephemeral")
+
+        # Set up data source once, shared by both suites
+        data_source = context.data_sources.add_pandas(name="bikezelo")
+        data_asset = data_source.add_dataframe_asset(name="orders")
+        batch_definition = data_asset.add_batch_definition_whole_dataframe("orders_batch")
+
+        # Build and run fail suite
+        fail_suite = context.suites.add(gx.ExpectationSuite(name="bikezelo_fail_suite"))
+        fail_suite = rules_module.get_rules(fail_suite)
+
+        # Build and run warn suite
+        warn_suite = context.suites.add(gx.ExpectationSuite(name="bikezelo_warn_suite"))
+        warn_suite = rules_module.get_warnings(warn_suite)
+
+        failed_ids = _run_suite(context, df, batch_definition, fail_suite, "bikezelo_fail_validation")
+        warned_ids = _run_suite(context, df, batch_definition, warn_suite, "bikezelo_warn_validation")
+
+        # Build result dict - fail takes priority over warn
+        results = {}
+        for row_id in df["row_id"].dropna():
+            rid = int(row_id)
+            if rid in failed_ids:
+                results[rid] = "fail"
+            elif rid in warned_ids:
+                results[rid] = "warn"
+            else:
+                results[rid] = "pass"
+
+        return results, None
+
+    except Exception as e:
+        logger.error("Validation error: %s", e)
+        return {int(row_id): "pass" for row_id in df["row_id"].dropna()}, str(e)
+
+
+def calculate_forecast(df):
+    try:
+        df["timestamp"] = pd.to_datetime(df["timestamp"], format="%Y-%m-%dT%H:%M:%S", errors="coerce")
+        df_valid = df.dropna(subset=["timestamp"])
+        if len(df_valid) < 2:
+            return {"rows_per_min": 0, "forecast_per_hour": 0}
+
+        earliest = df_valid["timestamp"].min()
+        latest = df_valid["timestamp"].max()
+        elapsed_minutes = (latest - earliest).total_seconds() / 60
+
+        if elapsed_minutes < 0.1:
+            return {"rows_per_min": 0, "forecast_per_hour": 0}
+
+        rows_per_min = round(len(df_valid) / elapsed_minutes, 1)
+        forecast_per_hour = round(rows_per_min * 60)
+
+        return {"rows_per_min": rows_per_min, "forecast_per_hour": forecast_per_hour}
+    except Exception:
+        return {"rows_per_min": 0, "forecast_per_hour": 0}
+
+
+@app.route("/")
+def index():
+    return render_template("index.html")
+
+
+@app.route("/data/rows")
+def get_rows():
+    """
+    Fast endpoint - returns new rows since last_row_id.
+    Called every 3 seconds. Rows return as white (unvalidated).
+    """
+    last_row_id = int(request.args.get("after", 0))
+    is_first_load = last_row_id == 0
+
+    df = read_db()
+    if df.empty:
+        return jsonify({"rows": [], "max_row_id": 0})
+
+    new_rows = df[df["row_id"] > last_row_id]
+    limit = 10 if is_first_load else TICKER_ROWS
+    new_rows = new_rows.tail(limit)
+
+    max_row_id = int(df["row_id"].max())
+
+    rows = new_rows.to_dict(orient="records")
+    for row in rows:
+        row["row_id"] = int(row["row_id"])
+        row["status_class"] = "white"
+        # Replace NaN with None so it serialises as null in JSON.
+        # Check float explicitly — pd.isna() raises on non-scalar types.
+        for key, val in row.items():
+            if isinstance(val, float) and math.isnan(val):
+                row[key] = None
+
+    return jsonify({"rows": rows, "max_row_id": max_row_id})
+
+
+@app.route("/data/validate")
+def get_validation():
+    """
+    Slow endpoint - runs both GE suites against whole DB contents.
+    Called every 10 seconds.
+    """
+    df = read_db()
+
+    if df.empty:
+        return jsonify({
+            "results": {},
+            "stats": {"total": 0, "passed": 0, "warnings": 0, "errors": 0, "error_rate": 0.0},
+            "forecast": {"rows_per_min": 0, "forecast_per_hour": 0},
+        })
+
+    results, rules_error = run_validation(df)
+
+    total = len(results)
+    passed = sum(1 for v in results.values() if v == "pass")
+    warnings = sum(1 for v in results.values() if v == "warn")
+    errors = sum(1 for v in results.values() if v == "fail")
+    error_rate = round((errors / total) * 100, 1) if total > 0 else 0.0
+
+    forecast = calculate_forecast(df)
+
+    return jsonify({
+        "results": results,
+        "stats": {
+            "total": total,
+            "passed": passed,
+            "warnings": warnings,
+            "errors": errors,
+            "error_rate": error_rate,
+        },
+        "forecast": forecast,
+        "rules_error": rules_error,
+    })
+
+
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=5000, debug=True)
+
+
+
+================================================
+FILE: requirements.txt
+================================================
+flask
+great_expectations
+pandas
+pytest
+
+
+
+================================================
+FILE: rules.py
+================================================
+"""
+Great Expectations rules
+
+orders schema:
+row_id, timestamp, customer_id, order_amount, status
+
+Timestamp format: 2026-03-05T23:54:31
+"""
+import great_expectations as gx
+
+
+def get_rules(suite):
+    """
+    FAIL rules - rows that break these turn RED on the dashboard.
+
+    Available expectations:
+    -----------------------------------------------------------------------
+    # Not null check:
+    gx.expectations.ExpectColumnValuesToNotBeNull(column="customer_id")
+
+    # Value range check:
+    gx.expectations.ExpectColumnValuesToBeBetween(
+
+    # Valid values check:
+    gx.expectations.ExpectColumnValuesToBeInSet(
+
+    -----------------------------------------------------------------------
+    Add your FAIL rules below this line:
+    """
+
+    # Step 1 - Catch missing customer IDs
+    #      a) uncomment the code below (3 lines)
+    #~~~~~~~~~~~~~~~~~~~~~~~>>>
+    #suite.add_expectation(
+    #    gx.expectations.ExpectColumnValuesToNotBeNull(column="customer_id")
+    #)
+
+    # Step 2 - Catch order amounts outside range
+    #      a) uncomment the code below (7 lines)
+    #      b) change the min & max values if you want to
+    #~~~~~~~~~~~~~~~~~~~~~~~~~~~~>>>
+    #suite.add_expectation(
+    #    gx.expectations.ExpectColumnValuesToBeBetween(
+    #        column="order_amount",
+    #        min_value=0,
+    #        max_value=999.99
+    #    )
+    #)
+
+    # Step 3 - Catch invalid status codes
+    #      a) uncomment the code below (6 lines)
+    #      b) change the value_set if you want to
+    #~~~~~~~~~~~~~~~~~~~~~~~~~~~~>>>
+    #suite.add_expectation(
+    #    gx.expectations.ExpectColumnValuesToBeInSet(
+    #        column="status",
+    #        value_set=["NEW", "PAID", "SHIPPED", "REFUNDED"]
+    #    )
+    #)
+
+    # Step 4 - Your own rules
+    #~~~~~~~~~~~~~~~~~~~~~~~~~~~~>>>
+
+    return suite
+
+
+def get_warnings(suite):
+    """
+    WARNING rules - rows that break these turn AMBER on the dashboard.
+    A warning means the row is suspicious but not necessarily rejected.
+
+    -----------------------------------------------------------------------
+    Add your WARNING rules below this line:
+    """
+
+    # Step 5 - Catch malformed timestamps (warning, not a hard failure)
+    #      a) uncomment the code below (5 lines)
+    #~~~~~~~~~~~~~~~~~~~~~~~~~~~~>>>
+    #suite.add_expectation(
+    #    gx.expectations.ExpectColumnValuesToMatchRegex(
+    #        column="timestamp",
+    #        regex=r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}$"
+    #    )
+    #)
+
+    # Step 6 - Your own warnings
+    #~~~~~~~~~~~~~~~~~~~~~~~~~~~~>>>
+
+    return suite
+
+
+
+================================================
+FILE: setup_db.py
+================================================
+import sqlite3
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DB_PATH = os.path.join(BASE_DIR, "data", "orders.db")
+
+def setup():
+    os.makedirs(os.path.join(BASE_DIR, "data"), exist_ok=True)
+
+    conn = sqlite3.connect(DB_PATH)
+    cursor = conn.cursor()
+
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS orders (
+            row_id       INTEGER PRIMARY KEY AUTOINCREMENT,
+            timestamp    TEXT,
+            customer_id  TEXT,
+            order_amount REAL,
+            status       TEXT
+        )
+    """)
+
+    conn.commit()
+    conn.close()
+    print(f"Database ready: {DB_PATH}")
+
+if __name__ == "__main__":
+    setup()
+
+
+
+================================================
+FILE: simulate.py
+================================================
+import sqlite3
+import os
+import time
+import random
+from datetime import datetime
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DB_PATH = os.path.join(BASE_DIR, "data", "orders.db")
+
+STATUSES = ["NEW", "PAID", "SHIPPED", "REFUNDED"]
+BAD_STATUSES = ["PENDING", "CANCELLED", "UNKNOWN"]
+INTERVAL = 2          # seconds between rows
+SPIKE_CHANCE = 0.02   # probability of an incident spike starting each cycle
+SPIKE_LENGTH = (4, 8) # min/max bad rows in a spike
+
+
+def random_customer_id():
+    return f"CUST{random.randint(1000, 9999)}"
+
+
+def random_amount():
+    return round(random.uniform(5.00, 950.00), 2)
+
+
+def make_bad_row():
+    """One of four bad row types, chosen at random."""
+    bad_type = random.choice(["null_customer", "bad_amount", "bad_status", "bad_timestamp"])
+
+    timestamp = datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
+    customer_id = random_customer_id()
+    order_amount = random_amount()
+    status = random.choice(STATUSES)
+
+    if bad_type == "null_customer":
+        customer_id = None
+    elif bad_type == "bad_amount":
+        order_amount = round(random.uniform(-500.00, -1.00), 2)
+    elif bad_type == "bad_status":
+        status = random.choice(BAD_STATUSES)
+    elif bad_type == "bad_timestamp":
+        timestamp = "NOT-A-TIMESTAMP"
+
+    return (timestamp, customer_id, order_amount, status)
+
+
+def make_good_row():
+    return (
+        datetime.now().strftime("%Y-%m-%dT%H:%M:%S"),
+        random_customer_id(),
+        random_amount(),
+        random.choice(STATUSES),
+    )
+
+
+def insert_row(conn, row):
+    conn.execute("""
+        INSERT INTO orders (timestamp, customer_id, order_amount, status)
+        VALUES (?, ?, ?, ?)
+    """, row)
+
+    # Keep only the most recent 500 rows
+    conn.execute("""
+        DELETE FROM orders
+        WHERE row_id NOT IN (
+            SELECT row_id FROM orders
+            ORDER BY row_id DESC
+            LIMIT 500
+        )
+    """)
+    conn.commit()
+
+
+def simulate():
+    print(f"Simulator started - writing to {DB_PATH}")
+    print("Press Ctrl+C to stop.\n")
+
+    conn = sqlite3.connect(DB_PATH)
+
+    # Start from current max row_id so terminal matches the dashboard
+    cursor = conn.execute("SELECT COALESCE(MAX(row_id), 0) FROM orders")
+    row_count = cursor.fetchone()[0]
+
+    spike_remaining = 0
+
+    try:
+        while True:
+            # Incident spike: a burst of bad rows to simulate a real outage
+            if spike_remaining == 0 and random.random() < SPIKE_CHANCE:
+                spike_remaining = random.randint(*SPIKE_LENGTH)
+                print(f"\n!! Incident spike started — next {spike_remaining} rows will be bad\n")
+
+            if spike_remaining > 0:
+                row = make_bad_row()
+                label = "BAD"
+                spike_remaining -= 1
+            elif random.random() < 0.125:
+                # Roughly 1 in 8 rows is bad outside of a spike
+                row = make_bad_row()
+                label = "BAD"
+            else:
+                row = make_good_row()
+                label = "ok"
+
+            insert_row(conn, row)
+            row_count += 1
+            print(f"[{row_count:>4}] {label:<3}  {row[0]:<19}  {str(row[1]):<8}  {row[2]:>8.2f}  {row[3]}")
+            time.sleep(INTERVAL)
+
+    except KeyboardInterrupt:
+        print("\nSimulator stopped.")
+    finally:
+        conn.close()
+
+
+if __name__ == "__main__":
+    simulate()
+
+
+
+================================================
+FILE: templates/index.html
+================================================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bikezelo ~ TechMart Pipeline Monitor</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Courier New', monospace;
+      background: #0d0d0d;
+      color: #e0e0e0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: #1a1a2e;
+      padding: 12px 20px;
+      border-bottom: 2px solid #00ff88;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 1.2em;
+      color: #00ff88;
+      letter-spacing: 2px;
+    }
+
+    #clock {
+      font-size: 0.9em;
+      color: #ffffff;
+    }
+
+    .main {
+      display: flex;
+      flex: 1;
+      overflow: hidden;
+      gap: 0;
+    }
+
+    /* LEFT - ticker */
+    .ticker-panel {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid #333;
+      overflow: hidden;
+    }
+
+    .panel-header {
+      background: #111;
+      padding: 8px 16px;
+      font-size: 0.75em;
+      color: #ffffff;
+      border-bottom: 1px solid #333;
+      display: flex;
+      gap: 20px;
+    }
+
+    .ticker-table {
+      flex: 1;
+      overflow-y: auto;
+      padding: 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.78em;
+    }
+
+    thead th {
+      background: #111;
+      color: #ffffff;
+      padding: 6px 12px;
+      text-align: left;
+      position: sticky;
+      top: 0;
+      border-bottom: 1px solid #333;
+      font-weight: normal;
+      text-transform: uppercase;
+      font-size: 0.9em;
+      letter-spacing: 1px;
+    }
+
+    tbody tr {
+      border-bottom: 1px solid #1a1a1a;
+      transition: background 0.3s;
+    }
+
+    tbody tr.white { background: #ffffff; color: #000000; }
+    tbody tr.green { background: #0a2a0a; color: #00ff88; }
+    tbody tr.amber { background: #2a1a00; color: #ffaa00; }
+    tbody tr.red   { background: #2a0a0a; color: #ff4444; }
+
+    tbody td {
+      padding: 5px 12px;
+    }
+
+    .status-dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      margin-right: 6px;
+    }
+
+    tr.white .status-dot { background: #555; }
+    tr.green .status-dot { background: #00ff88; }
+    tr.amber .status-dot { background: #ffaa00; }
+    tr.red   .status-dot { background: #ff4444; }
+
+    /* RIGHT - stats */
+    .stats-panel {
+      width: 260px;
+      display: flex;
+      flex-direction: column;
+      background: #111;
+    }
+
+    .stats-section {
+      padding: 16px;
+      border-bottom: 1px solid #333;
+    }
+
+    .stats-section h2 {
+      font-size: 0.7em;
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+
+    .stat-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+      font-size: 0.85em;
+    }
+
+    .stat-label { color: #ffffff; }
+
+    .stat-value {
+      font-size: 1.4em;
+      font-weight: bold;
+    }
+
+    .stat-value.total   { color: #e0e0e0; }
+    .stat-value.passed  { color: #00ff88; }
+    .stat-value.warning { color: #ffaa00; }
+    .stat-value.error   { color: #ff4444; }
+
+    .forecast-value {
+      font-size: 1.1em;
+      color: #00aaff;
+      font-weight: bold;
+    }
+
+    .validation-status {
+      font-size: 0.7em;
+      color: #ffffff;
+      margin-top: 8px;
+    }
+
+    .pulse {
+      animation: pulse 1s ease-in-out;
+    }
+
+    @keyframes pulse {
+      0%   { opacity: 0.3; }
+      50%  { opacity: 1; }
+      100% { opacity: 1; }
+    }
+
+    #incident-banner {
+      display: none;
+      background: #ff4444;
+      color: #fff;
+      padding: 8px 20px;
+      font-size: 0.85em;
+      text-align: center;
+      letter-spacing: 1px;
+      animation: pulse 1s ease-in-out infinite;
+    }
+
+    footer {
+      background: #111;
+      border-top: 1px solid #333;
+      padding: 6px 16px;
+      font-size: 0.65em;
+      color: #ffffff;
+      display: flex;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>⚡ BIKEZELO ~ TechMart Pipeline Monitor</h1>
+  <span id="clock">--:--:--</span>
+</header>
+
+<div id="incident-banner">
+  !! INCIDENT DETECTED — error rate above <span id="incident-threshold"></span> · started <span id="incident-time"></span>
+</div>
+
+<div class="main">
+
+  <!-- LEFT: ticker -->
+  <div class="ticker-panel">
+    <div class="panel-header">
+      <span>LIVE FEED</span>
+      <span id="ticker-count">0 rows displayed</span>
+      <span id="last-row-label">last row: -</span>
+    </div>
+    <div class="ticker-table">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Timestamp</th>
+            <th>Customer</th>
+            <th style="text-align:right">Amount</th>
+            <th>Status</th>
+            <th>Validation</th>
+          </tr>
+        </thead>
+        <tbody id="ticker-body">
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- RIGHT: stats -->
+  <div class="stats-panel">
+
+    <div class="stats-section">
+      <h2>Pipeline Stats</h2>
+      <div class="stat-row">
+        <span class="stat-label">Total rows</span>
+        <span class="stat-value total" id="stat-total">-</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label">Passed</span>
+        <span class="stat-value passed" id="stat-passed">-</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label">Warnings</span>
+        <span class="stat-value warning" id="stat-warnings">-</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label">Errors</span>
+        <span class="stat-value error" id="stat-errors">-</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label">Error rate</span>
+        <span style="display:flex; align-items:center; gap:6px">
+          <span class="stat-value error" id="stat-error-rate">-</span>
+          <span id="trend-arrow" style="font-size:1.1em; color:#e0e0e0">→</span>
+        </span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label" id="sla-label">SLA</span>
+        <span class="stat-value" id="sla-status">-</span>
+      </div>
+      <div class="validation-status" id="validation-status">Waiting for first validation...</div>
+    </div>
+
+    <div class="stats-section">
+      <h2>Forecast</h2>
+      <div class="stat-row">
+        <span class="stat-label">Rate</span>
+        <span class="forecast-value" id="forecast-rate">- / min</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label">Projected</span>
+        <span class="forecast-value" id="forecast-hour">- / hr</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label">Errors / hr</span>
+        <span class="forecast-value" id="forecast-errors">-</span>
+      </div>
+    </div>
+
+    <div class="stats-section">
+      <h2>Rules Active</h2>
+      <div class="stat-row">
+        <span class="stat-label" id="rules-status">No rules loaded</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <span>bikezelo ~ predict ~ DE5 Module 6</span>
+  <span id="footer-status">connecting...</span>
+</footer>
+
+<script>
+  // --- State ----------------------------------------------------------------
+  let lastRowId = 0;
+  let validationResults = {};  // row_id -> "pass", "warn", "fail"
+  const MAX_TICKER_ROWS = 50;
+
+  // --- Monitoring thresholds (adjust to match your pipeline) ---------------
+  const SLA_TARGET = 12;          // % — error rate above this is an SLA breach
+  document.getElementById('sla-label').textContent = `SLA (<${SLA_TARGET}%)`;
+  const INCIDENT_THRESHOLD = 15; // % — error rate above this triggers an incident alert
+  document.getElementById('incident-threshold').textContent = `${INCIDENT_THRESHOLD}%`;
+
+  let prevErrorRate = null;
+  let incidentStartTime = null;
+
+  // --- Clock ----------------------------------------------------------------
+  function updateClock() {
+    document.getElementById('clock').textContent =
+      new Date().toLocaleTimeString();
+  }
+  setInterval(updateClock, 1000);
+  updateClock();
+
+  // --- Row colour -----------------------------------------------------------
+  function rowClass(rowId) {
+    const state = validationResults[rowId];
+    if (state === "fail") return "red";
+    if (state === "warn") return "amber";
+    if (state === "pass") return "green";
+    return "white";
+  }
+
+  function validationLabel(rowId) {
+    const state = validationResults[rowId];
+    if (state === "fail") return "FAIL";
+    if (state === "warn") return "WARN";
+    if (state === "pass") return "PASS";
+    return "pending";
+  }
+
+  // --- Fetch new rows (fast - every 3 seconds) ------------------------------
+  function fetchNewRows() {
+    fetch(`/data/rows?after=${lastRowId}`)
+      .then(r => r.json())
+      .then(data => {
+        if (data.rows && data.rows.length > 0) {
+          appendRows(data.rows);
+        }
+        if (data.max_row_id > lastRowId) {
+          lastRowId = data.max_row_id;
+          document.getElementById('last-row-label').textContent =
+            `last row: ${lastRowId}`;
+        }
+        document.getElementById('footer-status').textContent =
+          `feed OK · ${new Date().toLocaleTimeString()}`;
+      })
+      .catch(() => {
+        document.getElementById('footer-status').textContent = 'feed error';
+      });
+  }
+
+  // --- Append rows to ticker ------------------------------------------------
+  function appendRows(rows) {
+    const tbody = document.getElementById('ticker-body');
+
+    rows.forEach(row => {
+      const tr = document.createElement('tr');
+      tr.id = `row-${row.row_id}`;
+      tr.className = rowClass(row.row_id) + ' pulse';
+
+      tr.innerHTML = `
+        <td>${row.row_id}</td>
+        <td>${row.timestamp}</td>
+        <td>${row.customer_id || '<em>null</em>'}</td>
+        <td style="text-align:right">${parseFloat(row.order_amount).toFixed(2)}</td>
+        <td>${row.status}</td>
+        <td><span class="status-dot"></span>${validationLabel(row.row_id)}</td>
+      `;
+      tbody.insertBefore(tr, tbody.firstChild);
+    });
+
+    while (tbody.rows.length > MAX_TICKER_ROWS) {
+      tbody.deleteRow(tbody.rows.length - 1);
+    }
+
+    document.getElementById('ticker-count').textContent =
+      `${tbody.rows.length} rows displayed`;
+  }
+
+  // --- Run validation (slow - every 10 seconds) ----------------------------
+  function runValidation() {
+    fetch('/data/validate')
+      .then(r => r.json())
+      .then(data => {
+        validationResults = {};
+        for (const [rowId, state] of Object.entries(data.results)) {
+          validationResults[parseInt(rowId)] = state;
+        }
+
+        // Re-colour all visible ticker rows
+        const tbody = document.getElementById('ticker-body');
+        Array.from(tbody.rows).forEach(tr => {
+          const rowId = parseInt(tr.id.replace('row-', ''));
+          if (validationResults.hasOwnProperty(rowId)) {
+            tr.className = rowClass(rowId);
+            const label = tr.querySelector('td:last-child');
+            if (label) {
+              label.innerHTML =
+                `<span class="status-dot"></span>${validationLabel(rowId)}`;
+            }
+          }
+        });
+
+        // Update stats
+        const s = data.stats;
+        document.getElementById('stat-total').textContent    = s.total;
+        document.getElementById('stat-passed').textContent   = s.passed;
+        document.getElementById('stat-warnings').textContent = s.warnings;
+        document.getElementById('stat-errors').textContent   = s.errors;
+        document.getElementById('stat-error-rate').textContent = `${s.error_rate}%`;
+
+        // Trend arrow — compare current error rate to previous validation
+        const trendEl = document.getElementById('trend-arrow');
+        if (prevErrorRate !== null) {
+          if (s.error_rate > prevErrorRate + 1) {
+            trendEl.textContent = '↑'; trendEl.style.color = '#ff4444';
+          } else if (s.error_rate < prevErrorRate - 1) {
+            trendEl.textContent = '↓'; trendEl.style.color = '#00ff88';
+          } else {
+            trendEl.textContent = '→'; trendEl.style.color = '#e0e0e0';
+          }
+        }
+        prevErrorRate = s.error_rate;
+
+        // SLA indicator
+        const slaEl = document.getElementById('sla-status');
+        if (s.total === 0) {
+          slaEl.textContent = '-';
+          slaEl.style.color = '#e0e0e0';
+        } else if (s.error_rate <= SLA_TARGET) {
+          slaEl.textContent = 'OK';
+          slaEl.style.color = '#00ff88';
+        } else {
+          slaEl.textContent = 'BREACH';
+          slaEl.style.color = '#ff4444';
+        }
+
+        // Incident banner
+        const banner = document.getElementById('incident-banner');
+        if (s.error_rate >= INCIDENT_THRESHOLD) {
+          if (!incidentStartTime) {
+            incidentStartTime = new Date().toLocaleTimeString();
+            document.getElementById('incident-time').textContent = incidentStartTime;
+          }
+          banner.style.display = 'block';
+        } else {
+          incidentStartTime = null;
+          banner.style.display = 'none';
+        }
+
+        // Update forecast
+        const f = data.forecast;
+        document.getElementById('forecast-rate').textContent =
+          `${f.rows_per_min} / min`;
+        document.getElementById('forecast-hour').textContent =
+          `${f.forecast_per_hour} / hr`;
+
+        const errorRate = s.total > 0
+          ? (s.errors / s.total) * f.forecast_per_hour
+          : 0;
+        document.getElementById('forecast-errors').textContent =
+          `~${Math.round(errorRate)} / hr`;
+
+        const validationStatusEl = document.getElementById('validation-status');
+        if (data.rules_error) {
+          validationStatusEl.textContent = `Rules error: ${data.rules_error}`;
+          validationStatusEl.style.color = '#ff4444';
+        } else {
+          validationStatusEl.textContent = `Last validated: ${new Date().toLocaleTimeString()}`;
+          validationStatusEl.style.color = '';
+        }
+
+        document.getElementById('rules-status').innerHTML =
+          s.errors === 0 && s.warnings === 0
+            ? 'No rules active'
+            : `Catching:<br><br>* ${s.errors} error(s)<br>* ${s.warnings} warning(s)`;
+      })
+      .catch(() => {
+        document.getElementById('validation-status').textContent =
+          'Validation error - check rules.py';
+      });
+  }
+
+  // --- Start polling --------------------------------------------------------
+  document.addEventListener('DOMContentLoaded', function () {
+    fetchNewRows();
+    runValidation();
+    setInterval(fetchNewRows, 3000);
+    setInterval(runValidation, 10000);
+  });
+</script>
+
+</body>
+</html>
+
+
+
+================================================
+FILE: tests/test_app.py
+================================================
+import numpy as np
+import pandas as pd
+import pytest
+from unittest.mock import patch
+
+import sys
+import os
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from app import app, calculate_forecast
+
+
+class TestCalculateForecast:
+    def test_happy_path(self):
+        df = pd.DataFrame({
+            "row_id": [1, 2, 3],
+            "timestamp": ["2026-01-01T10:00:00", "2026-01-01T10:01:00", "2026-01-01T10:02:00"],
+        })
+        result = calculate_forecast(df)
+        assert result["rows_per_min"] > 0
+        assert result["forecast_per_hour"] > 0
+
+    def test_single_row_returns_zeros(self):
+        df = pd.DataFrame({
+            "row_id": [1],
+            "timestamp": ["2026-01-01T10:00:00"],
+        })
+        result = calculate_forecast(df)
+        assert result == {"rows_per_min": 0, "forecast_per_hour": 0}
+
+    def test_all_null_timestamps_returns_zeros(self):
+        df = pd.DataFrame({
+            "row_id": [1, 2],
+            "timestamp": [None, None],
+        })
+        result = calculate_forecast(df)
+        assert result == {"rows_per_min": 0, "forecast_per_hour": 0}
+
+    def test_timestamps_too_close_returns_zeros(self):
+        # Two rows with identical timestamps — elapsed < 0.1 min
+        df = pd.DataFrame({
+            "row_id": [1, 2],
+            "timestamp": ["2026-01-01T10:00:00", "2026-01-01T10:00:00"],
+        })
+        result = calculate_forecast(df)
+        assert result == {"rows_per_min": 0, "forecast_per_hour": 0}
+
+
+class TestGetRowsNaNSerialization:
+    def setup_method(self):
+        self.client = app.test_client()
+
+    def test_nan_customer_id_serialized_as_null(self):
+        df = pd.DataFrame({
+            "row_id": [1],
+            "timestamp": ["2026-01-01T10:00:00"],
+            "customer_id": [None],
+            "order_amount": [50.0],
+            "status": ["NEW"],
+        })
+        with patch("app.read_db", return_value=df):
+            response = self.client.get("/data/rows?after=0")
+            data = response.get_json()
+            assert data["rows"][0]["customer_id"] is None
+
+    def test_nan_order_amount_serialized_as_null(self):
+        df = pd.DataFrame({
+            "row_id": [1],
+            "timestamp": ["2026-01-01T10:00:00"],
+            "customer_id": ["CUST0001"],
+            "order_amount": [np.nan],
+            "status": ["NEW"],
+        })
+        with patch("app.read_db", return_value=df):
+            response = self.client.get("/data/rows?after=0")
+            data = response.get_json()
+            assert data["rows"][0]["order_amount"] is None
+
+    def test_valid_row_returned_as_white(self):
+        df = pd.DataFrame({
+            "row_id": [1],
+            "timestamp": ["2026-01-01T10:00:00"],
+            "customer_id": ["CUST0001"],
+            "order_amount": [99.99],
+            "status": ["PAID"],
+        })
+        with patch("app.read_db", return_value=df):
+            response = self.client.get("/data/rows?after=0")
+            data = response.get_json()
+            assert data["rows"][0]["status_class"] == "white"
+            assert data["rows"][0]["row_id"] == 1
+
+
+
+================================================
+FILE: tests/test_simulate.py
+================================================
+import sqlite3
+import os
+import time
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DB_PATH = os.path.join(BASE_DIR, "data", "orders.db")
+
+INTERVAL = 1.0  # faster than simulate.py so rows cycle quickly
+
+TEST_ROWS = [
+    # Good rows
+    ("2026-03-06T10:00:00", "CUST1234", 194.31, "PAID"),
+    ("2026-03-06T10:00:01", "CUST9999", 999.99, "SHIPPED"),
+    ("2026-03-06T10:00:02", "CUST0001",   0.01, "NEW"),
+    ("2026-03-06T10:00:03", "CUST5678", 500.00, "REFUNDED"),
+
+    # Null customer_id
+    ("2026-03-06T10:00:04", None, 194.31, "PAID"),
+
+    # Bad order_amount
+    ("2026-03-06T10:00:05", "CUST1234",    -1.00, "PAID"),
+    ("2026-03-06T10:00:06", "CUST1234",  -999.99, "PAID"),
+    ("2026-03-06T10:00:07", "CUST1234", 99999.99, "PAID"),
+
+    # Boundary order_amount
+    ("2026-03-06T10:00:08", "CUST1234", 0.00,    "PAID"),
+    ("2026-03-06T10:00:09", "CUST1234", 999.99,  "PAID"),
+    ("2026-03-06T10:00:10", "CUST1234", 1000.00, "PAID"),
+
+    # Bad status
+    ("2026-03-06T10:00:11", "CUST1234", 194.31, "PENDING"),
+    ("2026-03-06T10:00:12", "CUST1234", 194.31, "CANCELLED"),
+    ("2026-03-06T10:00:13", "CUST1234", 194.31, "UNKNOWN"),
+    ("2026-03-06T10:00:14", "CUST1234", 194.31, ""),
+
+    # Bad timestamp
+    ("NOT-A-TIMESTAMP",     "CUST1234", 194.31, "PAID"),
+    ("2026-13-06T10:00:00", "CUST1234", 194.31, "PAID"),
+    ("06-03-2026",          "CUST1234", 194.31, "PAID"),
+    ("",                    "CUST1234", 194.31, "PAID"),
+
+    # Bad order_amount type
+    ("2026-03-06T10:00:15", "CUST1234", None, "PAID"),
+
+    # Oversized fields
+    ("2026-03-06T10:00:16", "CUST"+"X"*20, 194.31, "PAID"),
+    ("2026-03-06T10:00:17", "CUST1234",    194.31, "PAID"+"X"*20),
+
+    # Completely null row
+    (None, None, None, None),
+
+    # Multiple bad fields in one row
+    (None, None, -999.99, "UNKNOWN"),
+    ("NOT-A-TIMESTAMP", None, -1.00, "CANCELLED"),
+]
+
+
+def insert_row(conn, row):
+    conn.execute("""
+        INSERT INTO orders (timestamp, customer_id, order_amount, status)
+        VALUES (?, ?, ?, ?)
+    """, row)
+    conn.execute("""
+        DELETE FROM orders
+        WHERE row_id NOT IN (
+            SELECT row_id FROM orders
+            ORDER BY row_id DESC
+            LIMIT 500
+        )
+    """)
+    conn.commit()
+
+
+def test_simulate():
+    print(f"Test simulator started - writing to {DB_PATH}")
+    print(f"{len(TEST_ROWS)} test rows in rotation")
+    print("Press Ctrl+C to stop.\n")
+
+    conn = sqlite3.connect(DB_PATH, timeout=10)
+    conn.execute("PRAGMA journal_mode=WAL")
+
+    cursor = conn.execute("SELECT COALESCE(MAX(row_id), 0) FROM orders")
+    row_count = cursor.fetchone()[0]
+
+    loop = 0
+    try:
+        while True:
+            loop += 1
+            print(f"--- loop {loop} ---")
+            for row in TEST_ROWS:
+                insert_row(conn, row)
+                row_count += 1
+                label = str(row)[:80]
+                print(f"[{row_count:>4}]  {label}")
+                time.sleep(INTERVAL)
+
+    except KeyboardInterrupt:
+        print("\nTest simulator stopped.")
+    finally:
+        conn.close()
+
+
+if __name__ == "__main__":
+    test_simulate()
+
