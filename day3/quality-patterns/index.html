@@ -6,10 +6,6 @@
       
       
       
-        <link rel="prev" href="../quality-tools/">
-      
-      
-        <link rel="next" href="../../labs/21-deployment-pipelines/">
       
       
         
@@ -20,7 +16,7 @@
     
     
       
-        <title>Technical Debt Analysis - Module 6 - Data Operations</title>
+        <title>Quality Patterns ~ Medallion Architecture - Module 6 - Data Operations</title>
       
     
     
@@ -71,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#technical-debt-audit" class="md-skip">
+        <a href="#quality-patterns-medallion-architecture" class="md-skip">
           Skip to content
         </a>
       
@@ -107,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Technical Debt Analysis
+              Quality Patterns ~ Medallion Architecture
             
           </span>
         </div>
@@ -839,20 +835,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -873,7 +867,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -972,37 +966,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Technical Debt Analysis
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../technical-debt-activity/" class="md-nav__link">
         
   
   
@@ -1018,70 +985,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#the-scenario" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The Scenario
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#your-task" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Your Task
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#group-lenses" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Group Lenses
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#report-back" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Report Back
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1166,62 +1069,37 @@
 
 
 
-<h1 id="technical-debt-audit">Technical Debt Audit</h1>
-<h2 id="the-scenario">The Scenario</h2>
-<p>You are a data engineer at <strong>TechMart</strong>. The sales pipeline has been running for a while and "works" - but before it goes into production it needs an audit. Your job is to find the technical debt.</p>
-<p>The codebase is at: <a href="https://github.com/ingwanelabs/techmart-2026">https://github.com/ingwanelabs/techmart-2026</a></p>
-<blockquote>
-<p>All credentials in this repo are fake. It is intentionally broken for training purposes.</p>
-</blockquote>
-<hr>
-<h2 id="your-task">Your Task</h2>
-<ol>
-<li>Open the <a href="https://github.com/ingwanelabs/techmart-2026/blob/main/docs/TECHNICAL_DEBT_CHECKLIST.md">Technical Debt Checklist</a></li>
-<li>Work through the codebase systematically using the checklist</li>
-<li>Record your findings in the shared Google Doc</li>
-<li>Prepare to report back through your group's lens (see below)</li>
-</ol>
-<hr>
-<h2 id="group-lenses">Group Lenses</h2>
-<p>All groups audit all files. Each group reports back through a specialist perspective:</p>
-<table>
-<thead>
-<tr>
-<th>Group</th>
-<th>Lens</th>
-<th>Your focus</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Group 1</td>
-<td>Security</td>
-<td>Security issues + configuration management</td>
-</tr>
-<tr>
-<td>Group 2</td>
-<td>Performance</td>
-<td>Database + application performance</td>
-</tr>
-<tr>
-<td>Group 3</td>
-<td>Code Quality</td>
-<td>Hard-coded values, duplication, naming, structure</td>
-</tr>
-<tr>
-<td>Group 4</td>
-<td>Maintainability</td>
-<td>Documentation, error handling, logging</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2 id="report-back">Report Back</h2>
-<p>Each group shares (2-3 minutes):</p>
+<h1 id="quality-patterns-medallion-architecture">Quality Patterns ~ Medallion Architecture</h1>
+<p><strong>Learning Type:</strong> Discussion</p>
+<p><strong>Format:</strong> Group discussion following Lab 3.1</p>
+<h2 id="how-do-dmbok-dimensions-map-to-bronze-silver-gold">How do DMBOK dimensions map to bronze / silver / gold?</h2>
+<p><em>When we talk about bronze, silver, gold layers - what does "quality" mean at each stage?</em></p>
+<h3 id="bronze-raw-ingestion-layer">Bronze (raw / ingestion layer)</h3>
 <ul>
-<li>"The most significant [your lens] issue we found was..."</li>
-<li>"Our priority fix would be... because..."</li>
+<li>What dimensions are realistic here? (e.g. <em>timeliness</em>, <em>integrity</em>, <em>uniqueness</em>)</li>
+<li>Should we enforce <em>accuracy</em> or <em>validity</em> at this stage, or just land the data "as is"?</li>
 </ul>
+<h3 id="silver-curated-cleansed-layer">Silver (curated / cleansed layer)</h3>
+<ul>
+<li>Which dimensions are most relevant here? (e.g. <em>consistency</em>, <em>accuracy</em>, <em>validity</em>)</li>
+<li>How does <em>completeness</em> get handled - are missing values imputed or flagged?</li>
+</ul>
+<h3 id="gold-business-ready-semantic-layer">Gold (business-ready / semantic layer)</h3>
+<ul>
+<li>Which are non-negotiable here? (e.g. <em>accuracy</em>, <em>consistency</em>, <em>timeliness</em>, <em>uniqueness</em>)</li>
+<li>Should <em>fitness for purpose</em> be treated as a quality dimension here?</li>
+</ul>
+<hr>
+<h2 id="stretch-questions">Stretch questions</h2>
+<ul>
+<li>Is there a risk in pushing too much quality work down into bronze - does it slow down ingestion?</li>
+<li>Which dimensions are "absolute" (must always hold) vs "relative" (depend on business context)?</li>
+<li>Where would you handle deduplication - bronze or silver?</li>
+<li>Would you ever expose bronze data to end users? If so, what quality risks arise?</li>
+<li>If gold data has very high quality, does that excuse poor bronze data quality?</li>
+</ul>
+<h2 id="closing-prompt">Closing prompt</h2>
+<p><em>If you had to prioritise just one DMBOK dimension at each layer (bronze/silver/gold), which would you choose and why?</em></p>
 
 
 
