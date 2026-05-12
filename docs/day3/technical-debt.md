@@ -34,4 +34,5 @@ Each group presents through their lens:
 
 ## Answer Key
 
-Full list of all 44 issues: `docs/day4/tech-debt-issues.md`
+- [Full list of all 44 issues](tech-debt-issues.md)
+
