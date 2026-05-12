@@ -1,5 +1,7 @@
 # Incident Response Scenario
 
+!!! success "ksb S23: Present, communicate, and disseminate messages about the data product, tailoring the message and medium to the needs of the audience"
+
 ## <mark>Group 2 ~ EMBER</mark>
 
 ## The Communications App
