@@ -1,7 +1,5 @@
-## <mark>Introduce the day and explain the Scrum project structure</mark>
+## <mark>Welcome to Day 4 ~ From Theory to Enforcement</mark>
 
-### Sprint themes
-
-- Sprint 1 ~ **Make it Observable** (40 minutes)
-- Sprint 2 ~ **Make it Resilient** (50 minutes)
-- Sprint 3 ~ **Make it Governed** (50 minutes)
+- Yesterday you explored the DMBOK data quality dimensions - accuracy, completeness, consistency, timeliness, accessibility
+- Today you are going to see what happens when you enforce those dimensions in a live pipeline
+- And you will see that enforcement is not binary - it is a governance decision about what is a warning and what is a failure

@@ -1,4 +1,4 @@
-# Bikezelo ~ Live Pipeline Monitor
+# Lab 4.1 ~ Clone, Setup and Run Bikezelo
 
 Bikezelo is a lightweight pipeline monitoring dashboard. It simulates a live data feed, validates incoming records against quality rules, and forecasts pipeline behaviour.
 
@@ -8,6 +8,7 @@ Bikezelo is a lightweight pipeline monitoring dashboard. It simulates a live dat
 git clone https://github.com/ingwaneorg/bikezelo.git
 cd bikezelo
 pip install -r requirements.txt
+python setup_db.py
 ```
 
 ## Running
@@ -16,7 +17,7 @@ Open two terminals.
 
 **Terminal 1 — start the simulation:**
 ```bash
-bash bin/simulate.sh
+python simulate.py
 ```
 
 **Terminal 2 — start the app:**
@@ -26,34 +27,8 @@ python app.py
 
 Open a browser at `http://localhost:5000`
 
----
+## What you should see
 
-## Activity
+Rows arrive every 2 seconds in the live feed. Each row starts white (unvalidated), then turns green, amber, or red on the next validation sweep (every 10 seconds).
 
-Open `rules.py` in VS Code. Work through each level below.
-
-### Level A ~ Catch missing customer IDs
-
-Uncomment the **Step 1** block in `rules.py`. Save the file.
-
-Watch the dashboard — rows with a missing `customer_id` turn red on the next validation sweep.
-
-### Level B ~ Catch negative order amounts
-
-Uncomment the **Step 2** block. Save the file.
-
-Watch the dashboard — rows with an `order_amount` outside the valid range turn red.
-
-### Level C ~ Catch invalid status codes
-
-Uncomment the **Step 3** block. Save the file.
-
-Watch the dashboard — rows with a `PROCESSING` status (not in the valid set) turn red.
-
----
-
-## What to notice
-
-- Rules are declarative — you describe what *should* be true, not how to check it
-- The dashboard updates automatically when you save a new rule
-- The forecast panel shows projected rows and errors per hour based on current rate
+Roughly 1 in 8 rows is intentionally bad. Occasionally a spike fires — a burst of 4–8 consecutive bad rows. Watch the error rate and SLA indicator respond.
