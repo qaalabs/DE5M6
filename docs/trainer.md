@@ -91,9 +91,17 @@
 
 ### Session 1
 
+- **Demo**: Bikezelo ~ functional and technical walkthrough
+- **Activity**: Lab 4.1 ~ Clone, setup and run bikezelo
+- **Practice**: Lab 4.2 ~ Uncomment the rules
+- **Discussion**: Warning vs failure ~ a governance decision 
 
 ### Session 2
 
+- **Practice**: Lab 4.3 ~ How does bikezelo forecast?
+- **Discussion**: Who owns the rules at work?
+- EPA Presentation Briefing
+- Presentation Prep
 
 ### Session 3
 
