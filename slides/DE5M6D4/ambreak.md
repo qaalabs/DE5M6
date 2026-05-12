@@ -1,3 +1,3 @@
-## <mark>Short break to reset before Sprint 2</mark>
+## <mark>Morning Break</mark>
 
 **Mark the register on return**
