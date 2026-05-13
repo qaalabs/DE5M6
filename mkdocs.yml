@@ -29,10 +29,10 @@ nav:
     - "🔥 Fire Drill ~ Round 2": day2/fire-drill-groups.md
 
   - "Day 3 - Quality & Governance":
-    - "DMBOK's 6 data quality dimensions": day3/quality-dimensions.md
+    - "Data Quality Dimensions": day3/quality-dimensions.md
     - "Lab 3.1 ~ 03b Medallion Architecture": labs/03b-medallion-lakehouse.md
-    - "Quality tools ~ report back": day3/quality-tools.md
-    - "Technical Debt Analysis": day3/technical-debt-activity.md
+    - "Data Quality Tools": day3/quality-tools.md
+    - "Technical Debt Audit": day3/technical-debt-activity.md
     - "Lab 3.2 ~ 21 Deployment Pipelines": labs/21-deployment-pipelines.md
 
   - Resources: resources.md
