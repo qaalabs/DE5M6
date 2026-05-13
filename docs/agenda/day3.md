@@ -2,34 +2,34 @@
 
 ## Session 1
 
-- `09:30` **Discussion**: What does good data mean to you? (10 mins)
-- `09:40` Quality Data - why it matters (10 mins)
-- `09:50` **Investigation**: [DMBOK's 6 data quality dimensions](../day3/quality-dimensions.md) (20 mins)
-- `10:10` **Report-Back**: DMBOK report back (20 mins)
+- **Discussion**: What does good data mean to you?
+- Quality Data - why it matters
+- **Investigation**: [DMBOK's 6 data quality dimensions](../day3/quality-dimensions.md)
+- **Report-Back**: DMBOK report back
 
 ## ☕ Morning Break
 
 ## Session 2
 
-- `10:50` **Demo**: [Lab 3.1 ~ 03b Medallion Architecture](../labs/03b-medallion-lakehouse.md) (40 mins)
-- `11:30` **Discussion**: Quality patterns analysis (10 mins)
-- `11:40` **Investigation**: Quality tools (20 mins)
-- `12:00` [Quality tools ~ report back](../day3/quality-tools.md) (20 mins)
+- **Demo**: [Lab 3.1 ~ 03b Medallion Architecture](../labs/03b-medallion-lakehouse.md)
+- **Discussion**: Quality patterns analysis
+- **Investigation**: Quality tools
+- [Quality tools ~ report back](../day3/quality-tools.md)
 
 ## 🥪🥤 Lunch Break
 
 ## Session 3
 
-- `13:20` Introduction to Technical Debt (20 mins)
-- `13:40` **Investigation**: [Technical Debt Analysis](../day3/technical-debt-activity.md) (50 mins)
+- Introduction to Technical Debt
+- **Investigation**: [Technical Debt Analysis](../day3/technical-debt-activity.md)
 
 ## ☕ Afternoon Break
 
 ## Session 4
 
-- `14:50` **Report-Back**: Tech Dept Findings (20 mins)
-- `15:10` **Practice**: [Lab 3.2 ~ 21 Deployment Pipelines](../labs/21-deployment-pipelines.md) (20 mins)
-- `15:30` **Discussion**: Deployment governance (20 mins)
+- **Report-Back**: Tech Dept Findings
+- **Practice**: [Lab 3.2 ~ 21 Deployment Pipelines](../labs/21-deployment-pipelines.md)
+- **Discussion**: Deployment governance
 
 ## 🎁 Wrap
 
