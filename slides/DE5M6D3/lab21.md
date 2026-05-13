@@ -11,7 +11,7 @@
 
 ---
 
-## Possible error
+### Possible error
 
 - Everyone complete Lab 21
 - Try to delete the workspace

@@ -1,6 +1,7 @@
 ## <mark>Technical Debt ~ report back</mark>
 
-Each group shares through their lens **(2-3 mins each)**
+### Each group shares through their lens
+*(2-3 mins each)*
 
 - Group 1 **Security** ~ most significant issue + priority fix
 - Group 2 **Performance** ~ most significant issue + priority fix
@@ -9,5 +10,6 @@ Each group shares through their lens **(2-3 mins each)**
 
 ### Follow-up
 
-- "Did any group find something that surprised them?"
-- "What would you fix first if this were your codebase?"
+- Did any group find something that surprised them?
+- What would you fix first if this were your codebase?
+
