@@ -12,6 +12,13 @@ For example:
 
 ❓ How do these tools implement quality checks?
 
+!!! tip "Think about:"
+    - validation rules
+    - null or duplicate checking
+    - schema enforcement
+    - automated testing
+    - integration into ETL pipelines
+
 ---
 
 ### Group B: Cloud-Native Quality Tools
@@ -24,6 +31,14 @@ For example:
 
 ❓ How do cloud platforms handle quality monitoring and alerting?
 
+!!! tip "Think about:"
+    - dashboards and monitoring
+    - profiling and statistics
+    - automated alerts
+    - integration with cloud services
+    - ease of use for teams
+
+
 ---
 
 ### Group C: Quality Monitoring & Observability
@@ -33,8 +48,16 @@ For example:
 - **Monte Carlo:** Data observability and quality monitoring
 - **Datadog Data Streams:** Real-time quality monitoring
 - Soda Cloud: Continuous data quality monitoring and alerts
+- Bigeye: Automated monitoring and alerting
 
 ❓ How do these tools detect quality issues automatically?
+
+!!! tip "Think about:"
+    - freshness issues
+    - schema changes
+    - unexpected spikes/drops
+    - pipeline failures
+    - missing or duplicate data
 
 ---
 
@@ -47,6 +70,14 @@ For example:
 - **OpenMetadata**: Metadata platform with built-in data quality checks
 
 ❓ How do open source tools provide cost-effective quality solutions?
+
+!!! tip "Think about:"
+    - licensing and cost
+    - community support
+    - scalability
+    - customisation
+    - technical skills required
+
 
 ---
 
