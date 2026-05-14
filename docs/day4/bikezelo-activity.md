@@ -1,5 +1,7 @@
 # Lab 4.1 ~ Clone, Setup and Run Bikezelo
 
+!!! success "ksb S18: Develop simple forecasts and monitoring tools to anticipate or respond immediately to outages and incidents."
+
 Bikezelo is a lightweight pipeline monitoring dashboard. It simulates a live data feed, validates incoming records against quality rules, and forecasts pipeline behaviour.
 
 ## Setup
