@@ -6,7 +6,9 @@ You may use slides, notes, or speak freely - the choice is yours.
 
 Draw on whatever experience is most relevant to you - your workplace, a project, or the labs from this module.
 
-This is an opportunity to practise articulating your evidence ahead of your EPA Professional Discussion. For the full KSB definitions refer to the [Skills England standard](https://skillsengland.education.gov.uk/apprenticeship-standards/st1386-v1-0).
+This is an opportunity to practise articulating your evidence ahead of your EPA Professional Discussion.
+
+For the full KSB definitions refer to the [Skills England standard](https://skillsengland.education.gov.uk/apprenticeship-standards/st1386-v1-0).
 
 ## What happens next
 

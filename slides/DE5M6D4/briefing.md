@@ -5,4 +5,3 @@
 - No slides required — speak clearly
 - Be ready for follow-up questions from the group
 
-- https://qaalabs.github.io/DE5M6/day4/presentation/
