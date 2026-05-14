@@ -94,21 +94,31 @@
 ### Session 1
 
 - `09:40` **Demo**: Bikezelo ~ functional and technical walkthrough (10 mins)
-- `09:50` **Activity**: Lab 4.1 ~ Clone, setup and run bikezelo (20 mins)
-- `10:10` **Practice**: Lab 4.2 ~ Uncomment the rules (20 mins)
+- `09:50` **Activity**: [Lab 4.1 ~ Clone, setup and run bikezelo](day4/bikezelo-activity.md) (20 mins)
+- `10:10` **Practice**: [Lab 4.2 ~ Uncomment the rules](day4/bz-rules.md) (20 mins)
 - `10:30` **Discussion**: Warning vs failure ~ a governance decision  (10 mins)
 
 ### Session 2
 
-- `11:00` **Practice**: Lab 4.3 ~ How does bikezelo forecast? (20 mins)
+- `11:00` **Practice**: [Lab 4.3 ~ How does bikezelo forecast?](day4/bz-forecast.md) (20 mins)
 - `11:20` **Discussion**: Who owns the rules at work? (10 mins)
 - `11:30` EPA Presentation Briefing (10 mins)
-- `11:40` Presentation Prep (20 mins)
+- `11:40` [Presentation Prep](day4/presentation.md) (20 mins)
 
 ### Session 3
 
+- `13:00` Presentations ~ Group 1 (30 mins)
 
 ### Session 4
 
+- `13:40` Presentations ~ Group 2 (30 mins)
+
+### Session 5
+
+- `14:20` Presentations ~ Group 3 (30 mins)
+
+### Session 6
+
+- `15:00` Presentations ~ Group 4 (30 mins)
 
 ---

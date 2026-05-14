@@ -10,6 +10,7 @@ nav:
     - Day 1: agenda/day1.md
     - Day 2: agenda/day2.md
     - Day 3: agenda/day3.md
+    - Day 4: agenda/day4.md
 
   - "Day 1 - Monitoring & Performance":
     - "Status Page Analysis": day1/status-page-report-back.md
@@ -34,6 +35,12 @@ nav:
     - "Data Quality Tools": day3/quality-tools.md
     - "Technical Debt Audit": day3/technical-debt-activity.md
     - "Lab 3.2 ~ 21 Deployment Pipelines": labs/21-deployment-pipelines.md
+
+  - "Day 4 - Improvement & Value":
+    - "Lab 4.1 ~ Clone, setup and run bikezelo": day4/bikezelo-activity.md
+    - "Lab 4.2 ~ Uncomment the rules": day4/bz-rules.md
+    - "Lab 4.3 ~ How does bikezelo forecast?": day4/bz-forecast.md
+    - "Presentation Prep": day4/presentation.md
 
   - Resources: resources.md
 
