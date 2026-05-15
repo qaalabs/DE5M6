@@ -95,7 +95,7 @@
 
 - `09:40` **Demo**: Bikezelo ~ functional and technical walkthrough (10 mins)
 - `09:50` **Activity**: [Lab 4.1 ~ Clone, setup and run bikezelo](day4/bikezelo-activity.md) (20 mins)
-- `10:10` **Practice**: [Lab 4.2 ~ Uncomment the rules](day4/bz-rules.md) (20 mins)
+- `10:10` **Practice**: [Lab 4.2 ~ Uncomment the rules](day4/bikezelo-rules.md) (20 mins)
 - `10:30` **Discussion**: Warning vs failure ~ a governance decision  (10 mins)
 
 ### Session 2

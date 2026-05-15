@@ -38,7 +38,7 @@ nav:
 
   - "Day 4 - Improvement & Value":
     - "Lab 4.1 ~ Clone, setup and run bikezelo": day4/bikezelo-activity.md
-    - "Lab 4.2 ~ Uncomment the rules": day4/bz-rules.md
+    - "Lab 4.2 ~ Uncomment the rules": day4/bikezelo-rules.md
     - "Lab 4.3 ~ How does bikezelo forecast?": day4/bz-forecast.md
     - "Presentation Prep": day4/presentation.md
 
@@ -62,7 +62,7 @@ not_in_nav: |
   day3/quality-tools-trainer.md
   day3/technical-debt.md
   day3/tech-debt-issues.md
-  agenda/day4/index.md
+  day4/overview.md
 
 
 # Theme
