@@ -20,7 +20,7 @@ nav = [
   ]},
   {"Day 2 - Incident Response" = [
     {"Lab 2.1 ~ 04 Ingest Pipeline" = "labs/04-ingest-pipeline.md"},
-    {"Lab 04 ~ Break it Systematically" = "day2/breaking-things.md"},
+    {"Lab 2.2 - Break it Systematically" = "day2/breaking-things.md"},
     {"Lab 04 ~ More Complex Breaks" = "day2/complex-breaking.md"},
     {"Lab ~ 11 Data Activator" = "labs/11-data-activator.md"},
     {"Fire Drill Preparation" = "day2/incident-response-prep.md"},

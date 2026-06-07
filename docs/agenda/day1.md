@@ -6,7 +6,7 @@
 - 🖥️ VM Setup
 - **Discussion**: System Failure Impact
 - Why Monitor?
-- **Investigation**: Status Page Analysis
+- **Breakout**: Status Page Analysis
 - **Report-Back**: [Status Page Analysis](../day1/status-page-report-back.md)
 
 ## ☕ Morning Break
@@ -31,7 +31,7 @@
 
 ## Session 4
 
-- **Investigation**: [Cloud Monitoring Comparison](../day1/cloud-monitoring-comparison.md)
+- **Breakout**: [Cloud Monitoring Comparison](../day1/cloud-monitoring-comparison.md)
 - **Report-Back**: [Cloud Monitoring Comparison](../day1/cloud-monitoring-report-back.md)
 
 ## 🎁 Wrap

@@ -22,7 +22,7 @@ nav:
 
   - "Day 2 - Incident Response":
     - "Lab 2.1 ~ 04 Ingest Pipeline": labs/04-ingest-pipeline.md
-    - "Lab 04 ~ Break it Systematically": day2/breaking-things.md
+    - "Lab 2.2 - Break it Systematically": day2/breaking-things.md
     - "Lab 04 ~ More Complex Breaks": day2/complex-breaking.md
     - "Lab ~ 11 Data Activator": labs/11-data-activator.md
     - "Fire Drill Preparation": day2/incident-response-prep.md
@@ -47,6 +47,7 @@ nav:
 not_in_nav: |
   404.md
   trainer.md
+  DAY-setup.md
   agenda/day1/index.md
   day1/system-failure.md
   day1/why-monitor.md
@@ -107,7 +108,11 @@ markdown_extensions:
   - pymdownx.smartsymbols
   - pymdownx.snippets:
       check_paths: true
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed
   - pymdownx.tasklist:
       custom_checkbox: true
@@ -117,5 +122,8 @@ markdown_extensions:
 plugins:
   - search
   - glightbox
+
+extra_javascript:
+  - https://unpkg.com/mermaid/dist/mermaid.min.js
 
 

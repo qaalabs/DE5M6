@@ -5,7 +5,7 @@
 - 🌅 Welcome to Day 2 of DE5 Module 6
 - **Practice**: [Lab 2.1 ~ 04 Ingest Pipeline](../labs/04-ingest-pipeline.md)
 - **Discussion**: When a System Broke at Work
-- **Practice**: [Lab 04 ~ Break it Systematically](../day2/breaking-things.md)
+- **Practice**: [Lab 2.2 - Break it Systematically](../day2/breaking-things.md)
 
 ## ☕ Morning Break
 
@@ -21,7 +21,7 @@
 ## Session 3
 
 - **Investigation**: [Fire Drill Preparation](../day2/incident-response-prep.md)
-- Fire Drill Technical Briefing
+- **Breakout**: Fire Drill Technical Briefing
 - [🔥 Fire Drill ~ Round 1](../day2/fire-drill-groups.md)
 - **Discussion**: Fire Drill Debrief
 

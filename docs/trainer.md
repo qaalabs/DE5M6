@@ -6,7 +6,7 @@
 
 - `10:00` **Discussion**: [System Failure Impact](day1/system-failure.md) (10 mins)
 - `10:10` [Why Monitor?](day1/why-monitor.md) (10 mins)
-- `10:20` **Investigation**: [Status Page Analysis](day1/status-page-analysis.md) (10 mins)
+- `10:20` **Breakout**: [Status Page Analysis](day1/status-page-analysis.md) (10 mins)
 - `10:30` **Report-Back**: [Status Page Analysis](day1/status-page-report-back.md) (10 mins)
 
 ### Session 2
@@ -25,7 +25,7 @@
 
 ### Session 4
 
-- `15:00` **Investigation**: [Cloud Monitoring Comparison](day1/cloud-monitoring-comparison.md) (30 mins)
+- `15:00` **Breakout**: [Cloud Monitoring Comparison](day1/cloud-monitoring-comparison.md) (30 mins)
 - `15:30` **Report-Back**: [Cloud Monitoring Comparison](day1/cloud-monitoring-report-back.md) (20 mins)
 
 ---
@@ -36,7 +36,7 @@
 
 - `09:40` **Practice**: [Lab 2.1 ~ 04 Ingest Pipeline](labs/04-ingest-pipeline.md) (30 mins)
 - `10:10` **Discussion**: [When a System Broke at Work](day2/system-broke.md) (10 mins)
-- `10:20` **Practice**: [Lab 04 ~ Break it Systematically](day2/breaking-things.md) (20 mins)
+- `10:20` **Practice**: [Lab 2.2 - Break it Systematically](day2/breaking-things.md) (20 mins)
 
 ### Session 2
 
@@ -48,7 +48,7 @@
 ### Session 3
 
 - `13:10` **Investigation**: [Fire Drill Preparation](day2/incident-response-prep.md) (20 mins)
-- `13:30` [Fire Drill Technical Briefing](day2/fire-drill-briefing.md) (10 mins)
+- `13:30` **Breakout**: [Fire Drill Technical Briefing](day2/fire-drill-briefing.md) (10 mins)
 - `13:40` [🔥 Fire Drill ~ Round 1](day2/fire-drill-groups.md) (30 mins)
 - `14:10` **Discussion**: Fire Drill Debrief (20 mins)
 
@@ -66,19 +66,19 @@
 
 - `09:30` **Discussion**: [What does good data mean to you?](day3/good-data.md) (10 mins)
 - `09:40` [Quality Data ~ Why It Matters](day3/data-quality.md) (10 mins)
-- `09:50` **Investigation**: [Data Quality Dimensions](day3/quality-dimensions.md) (20 mins)
+- `09:50` **Breakout**: [Data Quality Dimensions](day3/quality-dimensions.md) (20 mins)
 - `10:10` **Report-Back**: Data Quality Dimensions (20 mins)
 
 ### Session 2
 
 - `10:50` **Demo**: [Lab 3.1 ~ 03b Medallion Architecture](labs/03b-medallion-lakehouse.md) (40 mins)
 - `11:30` **Discussion**: [Data Quality ~ Medallion Architecture](day3/quality-patterns.md) (10 mins)
-- `11:40` **Investigation**: [Data Quality Tools](day3/quality-tools-trainer.md) (20 mins)
+- `11:40` **Breakout**: [Data Quality Tools](day3/quality-tools-trainer.md) (20 mins)
 - `12:00` **Report-Back**: [Data Quality Tools](day3/quality-tools.md) (20 mins)
 
 ### Session 3
 
-- `13:20` [Introduction to Technical Debt](day3/technical-debt.md) (20 mins)
+- `13:20` **Breakout**: [Introduction to Technical Debt](day3/technical-debt.md) (20 mins)
 - `13:40` **Investigation**: [Technical Debt Audit](day3/technical-debt-activity.md) (50 mins)
 
 ### Session 4

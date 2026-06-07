@@ -4,7 +4,7 @@
 
 - **Discussion**: What does good data mean to you?
 - Quality Data ~ Why It Matters
-- **Investigation**: [Data Quality Dimensions](../day3/quality-dimensions.md)
+- **Breakout**: [Data Quality Dimensions](../day3/quality-dimensions.md)
 - **Report-Back**: Data Quality Dimensions
 
 ## ☕ Morning Break
@@ -13,14 +13,14 @@
 
 - **Demo**: [Lab 3.1 ~ 03b Medallion Architecture](../labs/03b-medallion-lakehouse.md)
 - **Discussion**: Data Quality ~ Medallion Architecture
-- **Investigation**: Data Quality Tools
+- **Breakout**: Data Quality Tools
 - **Report-Back**: [Data Quality Tools](../day3/quality-tools.md)
 
 ## 🥪🥤 Lunch Break
 
 ## Session 3
 
-- Introduction to Technical Debt
+- **Breakout**: Introduction to Technical Debt
 - **Investigation**: [Technical Debt Audit](../day3/technical-debt-activity.md)
 
 ## ☕ Afternoon Break
