@@ -23,14 +23,14 @@
 - **Investigation**: [Fire Drill Preparation](../day2/incident-response-prep.md)
 - **Breakout**: Fire Drill Technical Briefing
 - [🔥 Fire Drill ~ Round 1](../day2/fire-drill-groups.md)
-- **Discussion**: Fire Drill Debrief
+- **Discussion**: Fire Drill Debrief 1
 
 ## ☕ Afternoon Break
 
 ## Session 4
 
 - [🔥 Fire Drill ~ Round 2](../day2/fire-drill-groups.md)
-- **Discussion**: Fire Drill Debrief
+- **Discussion**: Fire Drill Debrief 2
 - **Discussion**: Workplace Connections
 
 ## 🎁 Wrap

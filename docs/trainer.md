@@ -50,12 +50,12 @@
 - `13:10` **Investigation**: [Fire Drill Preparation](day2/incident-response-prep.md) (20 mins)
 - `13:30` **Breakout**: [Fire Drill Technical Briefing](day2/fire-drill-briefing.md) (10 mins)
 - `13:40` [🔥 Fire Drill ~ Round 1](day2/fire-drill-groups.md) (30 mins)
-- `14:10` **Discussion**: [Fire Drill Debrief](day2/scenario2-debrief.md) (20 mins)
+- `14:10` **Discussion**: [Fire Drill Debrief 1](day2/scenario1-debrief.md) (20 mins)
 
 ### Session 4
 
 - `14:50` [🔥 Fire Drill ~ Round 2](day2/fire-drill-groups.md) (30 mins)
-- `15:20` **Discussion**: [Fire Drill Debrief](day2/scenario2-debrief.md) (10 mins)
+- `15:20` **Discussion**: [Fire Drill Debrief 2](day2/scenario2-debrief.md) (10 mins)
 - `15:30` **Discussion**: Workplace Connections (20 mins)
 
 ---
