@@ -1,1 +1,5 @@
-## DE5M6 Day 1: Pre-Day Setup Tasks
+### Session 1
+- 10:20  Status Page Analysis
+
+## Session 3
+- 15:00  Cloud Monitoring Comparison
