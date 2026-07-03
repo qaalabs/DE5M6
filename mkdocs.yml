@@ -49,12 +49,10 @@ not_in_nav: |
   404.md
   trainer.md
   DAY-setup.md
-  agenda/day1/index.md
   day1/system-failure.md
   day1/why-monitor.md
   day1/status-page-analysis.md
   day1/monitoring-tools.md
-  agenda/day2/index.md
   day2/system-broke.md
   day2/ai-de.md
   day2/fire-drill-briefing.md
@@ -64,7 +62,6 @@ not_in_nav: |
   day3/quality-tools-trainer.md
   day3/technical-debt.md
   day3/tech-debt-issues.md
-  day4/overview.md
 
 
 # Theme
