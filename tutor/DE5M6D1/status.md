@@ -1,7 +1,5 @@
 ## <mark>Research task in groups</mark>
 
-<a href="http://192.168.1.227:3000/s/de5m6-status-pages" target="_blank">📒 Click here for text to paste into the chat</a>
-
 - Put group allocation in chat
 - Assign each group a status pages from the list below
 
