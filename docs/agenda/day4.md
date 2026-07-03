@@ -12,7 +12,7 @@
 
 ## Session 2
 
-- **Practice**: [Lab 4.3 ~ How does bikezelo forecast?](../day4/bz-forecast.md)
+- **Practice**: [Lab 4.3 ~ How does bikezelo forecast?](../day4/bikezelo-forecast.md)
 - **Discussion**: Who owns the rules at work?
 - EPA Presentation Briefing
 - [Presentation Prep](../day4/presentation.md)

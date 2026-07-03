@@ -100,7 +100,7 @@
 
 ### Session 2
 
-- `11:00` **Practice**: [Lab 4.3 ~ How does bikezelo forecast?](day4/bz-forecast.md) (20 mins)
+- `11:00` **Practice**: [Lab 4.3 ~ How does bikezelo forecast?](day4/bikezelo-forecast.md) (20 mins)
 - `11:20` **Discussion**: Who owns the rules at work? (10 mins)
 - `11:30` EPA Presentation Briefing (10 mins)
 - `11:40` [Presentation Prep](day4/presentation.md) (20 mins)
