@@ -1,0 +1,4 @@
+day2/group-blaze.md
+day2/group-ember.md
+day2/group-ignis.md
+day2/group-mistral.md
