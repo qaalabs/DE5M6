@@ -32,7 +32,7 @@
 ## Session 4
 
 - **Breakout**: [Cloud Monitoring Comparison](../day1/cloud-monitoring-comparison.md)
-- **Report-Back**: [Cloud Monitoring Comparison](../day1/cloud-monitoring-report-back.md)
+- **Report-Back**: Cloud Monitoring Comparison
 
 ## 🎁 Wrap
 
