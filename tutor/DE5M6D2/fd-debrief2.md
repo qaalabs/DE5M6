@@ -1,0 +1,19 @@
+## <mark>Debrief each group by showing all their messages</mark>
+
+### Debrief Links
+
+- https://drill.ingwane.org/BLAZE/debrief
+- https://drill.ingwane.org/EMBER/debrief
+- https://drill.ingwane.org/IGNIS/debrief
+- https://drill.ingwane.org/MISTRAL/debrief
+
+<hr>
+
+### Scenario 1
+
+- https://qaalabs.github.io/DE5M6/day2/scenario1-debrief/
+
+### Scenario 2
+
+- https://qaalabs.github.io/DE5M6/day2/scenario2-debrief/
+
