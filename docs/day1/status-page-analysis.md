@@ -1,8 +1,5 @@
 # Status Page Analysis
 
-**Learning Type:** Investigation  
-**Format:** Pairs research with report back
-
 ## Setup Instructions (2 minutes)
 
 1. **Form groups of 3-4**
@@ -11,12 +8,12 @@
 
 ## Status Pages to Research
 
-| Group | Status Page URL                                      | Character                      |
-|-------|------------------------------------------------------|--------------------------------|
-|   1   | **AWS:** https://health.aws.amazon.com/health/status | Dense, complex, region-based   |
-|   2   | **Google Cloud:** https://status.cloud.google.com/   | Comprehensive, different style |
-|   3   | **GitHub:** https://www.githubstatus.com/            | Simpler, familiar to developers|
-|   4   | **Zoom:** https://status.zoom.us/                    | Clean, good incident history   |
+| Group | Status Page URL | Character |
+|-------|-----------------|-----------|
+|   1   | **AWS:** https://health.aws.amazon.com/health/status | Dense, complex, region-based|
+|   2   | **Google Cloud:** https://status.cloud.google.com/ | Comprehensive, different style| 
+|   3   | **GitHub:** https://www.githubstatus.com/ | Simpler, familiar to developers|
+|   4   | **Zoom:** https://status.zoom.us/ | Clean, good incident history|
 
 ---
 
@@ -60,3 +57,4 @@ Each group shares **one key insight** in 30 seconds:
 - **If internet issues:** Have screenshots of status pages prepared as backup
 - **Time management:** Keep sharing tight - use a timer
 - **Follow-up questions:** "How does this connect to monitoring?" "What would happen without these status pages?"
+

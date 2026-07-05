@@ -1,6 +1,6 @@
 # Lab 4.1 ~ Clone, Setup and Run Bikezelo
 
-!!! success "ksb S18: Develop simple forecasts and monitoring tools to anticipate or respond immediately to outages and incidents."
+!!! abstract "S18: Develop simple forecasts and monitoring tools to anticipate or respond immediately to outages and incidents."
 
 Bikezelo is a lightweight pipeline monitoring dashboard. It simulates a live data feed, validates incoming records against quality rules, and forecasts pipeline behaviour.
 
@@ -34,3 +34,4 @@ Open a browser at `http://localhost:5000`
 Rows arrive every 2 seconds in the live feed. Each row starts white (unvalidated), then turns green, amber, or red on the next validation sweep (every 10 seconds).
 
 Roughly 1 in 8 rows is intentionally bad. Occasionally a spike fires — a burst of 4–8 consecutive bad rows. Watch the error rate and SLA indicator respond.
+

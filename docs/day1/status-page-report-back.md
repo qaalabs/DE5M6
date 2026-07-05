@@ -1,6 +1,6 @@
 # Status Page Analysis ~ Report Back
 
-!!! success "ksb K30: The methods and techniques used to communicate messages to meet the needs of the audience."
+!!! abstract "K30: The methods and techniques used to communicate messages to meet the needs of the audience."
 
 ## Investigation Questions
 

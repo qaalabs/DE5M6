@@ -14,9 +14,7 @@
 
 - Each learner shares their story (1-2 minutes each)
 
-**Day 1 ~ outside looking in**
-
-**Day 2 ~ inside looking out**
+**Day 1 ~ outside looking in** ~ **Day 2 ~ inside looking out**
 
 ---
 

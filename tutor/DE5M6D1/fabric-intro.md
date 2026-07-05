@@ -1,6 +1,4 @@
-## 🎥 Brief introduction to MS Fabric
-
-<mark>Get them to start the **MS Fabric Playground**</mark>
+## <mark>Get them to start the **MS Fabric Playground**</mark>
 
 - https://bud.sso.app.qa.com/lab/microsoft-fabric-playground/
 
@@ -9,7 +7,7 @@
 - Ask if anyone has used Microsoft Fabric
 - Ask if anyone has used Azure Data Flow
 
-### Present slides
+## 🎥 Present slides
 
 - Introduction to MS Fabric
 - Get started with lakehouses in Microsoft Fabric
