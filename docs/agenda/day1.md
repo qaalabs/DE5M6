@@ -5,7 +5,7 @@
 - 🌅 Welcome to Day 1 of DE5 Module 6
 - 🖥️ VM Setup
 - **Discussion**: System Failure Impact
-- Why Monitor?
+- **Slides**: Why Monitor?
 - **Breakout**: Status Page Analysis
 - **Report-Back**: [Status Page Analysis](../day1/status-page-report-back.md)
 
@@ -13,7 +13,7 @@
 
 ## Session 2
 
-- Introduction to Microsoft Fabric
+- **Slides**: Introduction to Microsoft Fabric
 - **Practice**: [Lab 1.1 ~ 01 Create Fabric Lakehouse](../labs/01-lakehouse.md)
 - **Discussion**: Debrief about the lab
 - **Practice**: [Lab 1.2 ~ 05 Dataflows Gen2](../labs/05-dataflows-gen2.md)
