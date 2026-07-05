@@ -16,7 +16,7 @@
     
     
       
-        <title>Fire Drill Groups - Module 6 - Data Operations</title>
+        <title>Lab 4.3 ~ How Does Bikezelo Forecast? - Module 6 - Data Operations</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#fire-drill-groups" class="md-skip">
+        <a href="#lab-43-how-does-bikezelo-forecast" class="md-skip">
           Skip to content
         </a>
       
@@ -103,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Fire Drill Groups
+              Lab 4.3 ~ How Does Bikezelo Forecast?
             
           </span>
         </div>
@@ -596,12 +596,27 @@
 
 
 
-<h1 id="fire-drill-groups">Fire Drill Groups</h1>
+<h1 id="lab-43-how-does-bikezelo-forecast">Lab 4.3 ~ How Does Bikezelo Forecast?</h1>
+<p>This lab is an investigation — read the code and answer the questions below.</p>
+<h2 id="part-1-find-the-forecast-logic">Part 1 ~ Find the forecast logic</h2>
+<p>Open <code>app.py</code> and find the <code>calculate_forecast</code> function.</p>
 <ul>
-<li><a href="../group-blaze/">Group 1 ~ Blaze</a> </li>
-<li><a href="../group-ember/">Group 2 ~ Ember</a> </li>
-<li><a href="../group-ignis/">Group 3 ~ Ignis</a> </li>
-<li><a href="../group-mistral/">Group 4 ~ Mistral</a></li>
+<li>What two numbers does it return?</li>
+<li>What data does it use to calculate them?</li>
+<li>What assumptions does it make?</li>
+<li>What would make the forecast wrong?</li>
+</ul>
+<h2 id="part-2-find-the-sla-threshold">Part 2 ~ Find the SLA threshold</h2>
+<p>Open <code>templates/index.html</code> and search for <code>SLA_TARGET</code>.</p>
+<ul>
+<li>What is the default value?</li>
+<li>What happens on the dashboard when the error rate exceeds it?</li>
+<li>Change the value and save — does the dashboard respond?</li>
+</ul>
+<h2 id="part-3-think-about-your-own-systems">Part 3 ~ Think about your own systems</h2>
+<ul>
+<li>How would you set an SLA threshold for a pipeline at your workplace?</li>
+<li>Who would decide the number — and what would it be based on?</li>
 </ul><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
   <!-- mkdocs-quiz progress sidebar (desktop) -->
   <label class="md-nav__title">

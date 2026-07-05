@@ -16,7 +16,7 @@
     
     
       
-        <title>Fire Drill Groups - Module 6 - Data Operations</title>
+        <title>Lab 4.2 ~ Uncomment the Rules - Module 6 - Data Operations</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#fire-drill-groups" class="md-skip">
+        <a href="#lab-42-uncomment-the-rules" class="md-skip">
           Skip to content
         </a>
       
@@ -103,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Fire Drill Groups
+              Lab 4.2 ~ Uncomment the Rules
             
           </span>
         </div>
@@ -596,12 +596,35 @@
 
 
 
-<h1 id="fire-drill-groups">Fire Drill Groups</h1>
+<h1 id="lab-42-uncomment-the-rules">Lab 4.2 ~ Uncomment the Rules</h1>
+<p>Open <code>rules.py</code> in VS Code. The file has numbered steps — uncomment each block and save. The next validation sweep picks up your changes automatically, no restart needed.</p>
+<h2 id="step-1-catch-missing-customer-ids">Step 1 ~ Catch missing customer IDs</h2>
+<p>Uncomment the <code>ExpectColumnValuesToNotBeNull</code> block.</p>
+<p>Rows with a missing <code>customer_id</code> turn <strong>red</strong> on the next sweep.</p>
+<h2 id="step-2-catch-order-amounts-outside-range">Step 2 ~ Catch order amounts outside range</h2>
+<p>Uncomment the <code>ExpectColumnValuesToBeBetween</code> block.</p>
+<p>Rows with a negative <code>order_amount</code> turn <strong>red</strong>. You can adjust the <code>min_value</code> and <code>max_value</code> if you want to experiment.</p>
+<h2 id="step-3-catch-invalid-status-codes">Step 3 ~ Catch invalid status codes</h2>
+<p>Uncomment the <code>ExpectColumnValuesToBeInSet</code> block.</p>
+<p>Rows with a status not in <code>["NEW", "PAID", "SHIPPED", "REFUNDED"]</code> turn <strong>red</strong>. Try adding or removing values from the set.</p>
+<h2 id="step-4-catch-suspiciously-long-customer-ids">Step 4 ~ Catch suspiciously long customer IDs</h2>
+<p>Uncomment the <code>ExpectColumnValueLengthsToBeBetween</code> block.</p>
+<p>A valid ID like <code>CUST1234</code> is 8 characters. Anything much longer suggests corrupted or injected data — those rows turn <strong>red</strong>.</p>
+<h2 id="step-5-write-your-own-rule">Step 5 ~ Write your own rule</h2>
+<p>Look at the available expectations listed in the <code>get_rules()</code> docstring. Pick one and add it yourself — for example, you could check that <code>customer_id</code> values are unique, or that <code>order_amount</code> is never zero.</p>
+<div class="highlight"><pre><span></span><code><span class="n">suite</span><span class="o">.</span><span class="n">add_expectation</span><span class="p">(</span>
+    <span class="n">gx</span><span class="o">.</span><span class="n">expectations</span><span class="o">.</span><span class="n">ExpectColumnValuesToBeUnique</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="s2">"customer_id"</span><span class="p">)</span>
+<span class="p">)</span>
+</code></pre></div>
+<p>Write the <code>suite.add_expectation(...)</code> call directly under the <code># Step 5</code> comment (no uncommenting needed — just type it in).</p>
+<h2 id="step-6-add-a-warning-for-malformed-timestamps">Step 6 ~ Add a warning for malformed timestamps</h2>
+<p>This one is in <code>get_warnings()</code>, not <code>get_rules()</code>. Uncomment the <code>ExpectColumnValuesToMatchRegex</code> block.</p>
+<p>Rows with a timestamp that doesn't match <code>2026-03-05T23:54:31</code> format turn <strong>amber</strong> — suspicious but not rejected.</p>
+<h2 id="what-to-notice">What to notice</h2>
 <ul>
-<li><a href="../group-blaze/">Group 1 ~ Blaze</a> </li>
-<li><a href="../group-ember/">Group 2 ~ Ember</a> </li>
-<li><a href="../group-ignis/">Group 3 ~ Ignis</a> </li>
-<li><a href="../group-mistral/">Group 4 ~ Mistral</a></li>
+<li>Rules are declarative — you describe what <em>should</em> be true, not how to check it</li>
+<li><code>get_failures()</code> → failures turn <strong>red</strong>; <code>get_warnings()</code> → warnings turn <strong>amber</strong></li>
+<li>The same expectation type can be a hard failure or a soft warning depending on which function it lives in</li>
 </ul><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
   <!-- mkdocs-quiz progress sidebar (desktop) -->
   <label class="md-nav__title">
