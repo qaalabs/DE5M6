@@ -1,15 +1,15 @@
-## Brief introduction to MS Fabric ~ PowerPoint
+## 🎥 Brief introduction to MS Fabric
 
-<mark>Get them to start the **MS Fabric Playground** from the VM ~ [link](https://bud.sso.app.qa.com/lab/microsoft-fabric-playground/)</mark>
+<mark>Get them to start the **MS Fabric Playground**</mark>
+
+- https://bud.sso.app.qa.com/lab/microsoft-fabric-playground/
 
 ### Previous experience
 
 - Ask if anyone has used Microsoft Fabric
-- Ask if anyone has used Azure Data Flows
+- Ask if anyone has used Azure Data Flow
 
-### Present PowerPoint slides
-
-<span style="background-color: orange;">Open the PP: **D1 PM ~ MS-Fabric.pptx**</span>
+### Present slides
 
 - Introduction to MS Fabric
 - Get started with lakehouses in Microsoft Fabric
