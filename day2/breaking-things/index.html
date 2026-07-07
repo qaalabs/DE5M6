@@ -355,6 +355,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../agenda/day3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -922,6 +950,200 @@
   
   
   
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6">
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 3 - Quality &amp; Governance
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Day 3 - Quality &amp; Governance
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../day3/quality-dimensions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Quality Dimensions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../labs/03b-medallion-lakehouse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 3.1 ~ 03b Medallion Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../day3/quality-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Quality Tools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../day3/technical-debt-activity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Technical Debt Audit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../labs/21-deployment-pipelines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 3.2 ~ 21 Deployment Pipelines
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../resources/" class="md-nav__link">
         
@@ -962,86 +1184,127 @@
 
 <h1 id="day-2-breaking-things">Day 2: Breaking Things</h1>
 <h2 id="overview">Overview</h2>
-<p>This hands-on session introduces failures into working data pipelines.
+<p>This hands-on session introduces failures into your upgraded pipeline from <strong>Breaking Setup</strong>.
 You will practice controlled troubleshooting while observing how MS Fabric responds to different types of failures.</p>
 <h2 id="part-1-establish-working-baseline">Part 1: Establish Working Baseline</h2>
 <h3 id="setup-instructions">Setup Instructions</h3>
 <p><strong>Technical Setup:</strong></p>
 <ul>
-<li>This morning you did <a href="../../labs/04-ingest-pipeline/">Lab 2.1 - Ingest Pipeline Data</a></li>
-<li>Verify that the data flows through successfully</li>
+<li>This morning you completed <a href="../../labs/04-ingest-pipeline/">Lab 04 - Ingest Pipeline Data</a></li>
+<li>Earlier today you completed <strong>Breaking Setup</strong>, adding three standby Copy data activities and a fallback path to <code>Ingest Sales Data - Breaking</code></li>
+<li>Verify the pipeline still runs successfully end-to-end before you start</li>
 </ul>
+<h3 id="bypass-the-fallback-path">Bypass the fallback path</h3>
+<p>The fallback path you built in Breaking Setup would quietly recover from some of today's breaks - which hides the failure rather than showing it. Today's breaks should be plainly visible, so disconnect the fallback for now:</p>
+<ol>
+<li>Select the connector running from <strong>Copy data</strong>'s red X (<strong>Failure</strong>) to <strong>Copy Data Fallback</strong>, and delete it.</li>
+<li>Confirm <strong>Copy data</strong>'s green check (<strong>Success</strong>) is still connected to <strong>Notebook</strong>.</li>
+<li>Save the pipeline.</li>
+</ol>
+<p><em>You'll reconnect this path in Complex Breaking.</em></p>
 <hr>
 <h2 id="part-2-systematic-breaking-learning">Part 2: Systematic Breaking &amp; Learning</h2>
 <h3 id="break-cycle-process">Break Cycle Process</h3>
 <p>For each break type, follow this 4-step cycle:</p>
 <ol>
 <li><strong>Break</strong>   - introduce the failure</li>
-<li><strong>Observe</strong> - run pipeline, note error messages</li>
+<li><strong>Observe</strong> - run it, note error messages</li>
 <li><strong>Discuss</strong> - what does the error tell us?</li>
 <li><strong>Fix</strong>     - restore to working state</li>
 </ol>
 <hr>
-<h3 id="break-1-file-not-found">Break 1: File Not Found</h3>
+<h3 id="break-1-notebook-error">Break 1: Notebook Error</h3>
+<p>The simplest break - no pipeline run needed, just the notebook itself.</p>
 <p><strong>Break Instructions:</strong></p>
 <ul>
-<li>Navigate to your source data URL</li>
-<li>Rename it - add <code>_broken</code> to the filename</li>
-<li>Now try to run your pipeline</li>
+<li>Open the <strong>Load Sales</strong> notebook</li>
+<li>
+<p>Find the line that reads:</p>
+<div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">"FirstName"</span><span class="p">,</span> <span class="n">split</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">"CustomerName"</span><span class="p">),</span> <span class="s2">" "</span><span class="p">)</span><span class="o">.</span><span class="n">getItem</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span><span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">"LastName"</span><span class="p">,</span> <span class="n">split</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">"CustomerName"</span><span class="p">),</span> <span class="s2">" "</span><span class="p">)</span><span class="o">.</span><span class="n">getItem</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+</code></pre></div>
+</li>
+<li>
+<p>Change <code>CustomerName</code> to <code>CustomerNam</code> (a deliberate typo) in both places on that line</p>
+</li>
+<li>Run just that cell</li>
+</ul>
+<p><strong>Observation Points:</strong></p>
+<ul>
+<li>What kind of error does Spark give you?</li>
+<li>Does the error message tell you exactly which column is missing?</li>
+<li>How is this different from a file-level error?</li>
+</ul>
+<p><strong>Discussion:</strong></p>
+<p><strong>Fix &amp; Verify:</strong></p>
+<ul>
+<li>Change <code>CustomerNam</code> back to <code>CustomerName</code></li>
+<li>Re-run the cell to confirm it works</li>
+<li>Re-run the whole notebook once, to confirm the fix took</li>
+</ul>
+<hr>
+<h3 id="break-2-file-not-found">Break 2: File Not Found</h3>
+<p><strong>Break Instructions:</strong></p>
+<ul>
+<li>On the pipeline canvas, select the connector from <strong>Delete data</strong> to <strong>Copy data</strong>, and delete it</li>
+<li>Drag from <strong>Delete data</strong>'s completion connector to <strong>Copy Data (Not Exists)</strong></li>
+<li>Drag from <strong>Copy Data (Not Exists)</strong>'s green check (<strong>Success</strong>) to <strong>Notebook</strong></li>
+<li>Save and run the pipeline</li>
 </ul>
 <p><strong>Observation Points:</strong></p>
 <ul>
 <li>How quickly can you see the error?</li>
 <li>What does Fabric's error message say?</li>
 <li>Does the error message help you identify the problem?</li>
-<li>Is it clear what needs to be fixed?</li>
+<li>Does the Notebook activity run at all?</li>
 </ul>
 <p><strong>Discussion:</strong></p>
 <p><strong>Fix &amp; Verify:</strong></p>
 <ul>
-<li>Rename the file back to original name</li>
-<li>Run pipeline again to confirm it works</li>
+<li>Delete the two connectors you just added</li>
+<li>Reconnect <strong>Delete data</strong> to <strong>Copy data</strong>, and confirm <strong>Copy data</strong>'s Success connector to <strong>Notebook</strong> is intact</li>
+<li>Save and run the pipeline again to confirm it works</li>
 </ul>
 <hr>
-<h3 id="break-2-schema-mismatch">Break 2: Schema Mismatch</h3>
+<h3 id="break-3-schema-mismatch">Break 3: Schema Mismatch</h3>
 <p><strong>Break Instructions:</strong></p>
-<p>Change your source URL to:</p>
 <ul>
-<li><a href="https://raw.githubusercontent.com/qaalabs/files/main/msfabric/sales-wrong-header.csv">https://raw.githubusercontent.com/qaalabs/files/main/msfabric/sales-wrong-header.csv</a></li>
+<li>Reconnect <strong>Delete data</strong> to <strong>Copy Data (Wrong Header)</strong> instead of <strong>Copy data</strong> (same swap as Break 2)</li>
+<li>Connect <strong>Copy Data (Wrong Header)</strong>'s Success to <strong>Notebook</strong></li>
+<li>Save and run the pipeline</li>
 </ul>
-<p><em>This file has the wrong number of column headers</em></p>
-<p>Run your pipeline</p>
 <p><strong>Observation Points:</strong></p>
 <ul>
-<li>Does the error message clearly indicate schema issues?</li>
-<li>How long does it take to identify the problem?</li>
-<li>Is the difference clear between this and the file error?</li>
+<li>Does the <strong>Copy Data (Wrong Header)</strong> activity fail, or does it succeed and pass the problem downstream to the <strong>Notebook</strong> activity?</li>
+<li>Does the error message clearly indicate a schema issue?</li>
+<li>Is it obvious which activity caused the problem?</li>
 </ul>
+<p><strong>Discussion:</strong></p>
 <p><strong>Fix &amp; Verify:</strong></p>
 <ul>
-<li>Change back to the original URL</li>
-<li>Verify pipeline works again</li>
+<li>Reconnect <strong>Delete data</strong> back to <strong>Copy data</strong>, and <strong>Copy data</strong> to <strong>Notebook</strong></li>
+<li>Save and run the pipeline again to confirm it works</li>
 </ul>
-<p>Run your pipeline and observe the errors.</p>
 <hr>
-<h3 id="break-3-data-quality-issues">Break 3: Data Quality Issues</h3>
+<h3 id="break-4-data-quality-issues">Break 4: Data Quality Issues</h3>
 <p><strong>Break Instructions:</strong></p>
-<p>Change your source URL to:</p>
 <ul>
-<li><a href="https://raw.githubusercontent.com/qaalabs/files/main/msfabric/sales-wrong-data.csv">https://raw.githubusercontent.com/qaalabs/files/main/msfabric/sales-wrong-data.csv</a></li>
+<li>Reconnect <strong>Delete data</strong> to <strong>Copy Data (Wrong Data)</strong> (same swap again)</li>
+<li>Connect <strong>Copy Data (Wrong Data)</strong>'s Success to <strong>Notebook</strong></li>
+<li>Save and run the pipeline</li>
 </ul>
-<p><em>This file has incorrect data - like text in number columns and missing fields</em></p>
-<p>Save and run the pipeline.</p>
 <p><strong>Observation Points:</strong></p>
 <ul>
-<li>Does Fabric handle data type mismatches gracefully?</li>
-<li>What happens to the bad data - does it get skipped or cause total failure?</li>
+<li>Does every activity show green, with no errors at all?</li>
+<li>Open the <strong>new_sales</strong> table in your lakehouse - what does the bad data actually look like once it's landed?</li>
+<li>If nothing failed, how would you notice this in a real production pipeline?</li>
 </ul>
+<p><strong>Discussion:</strong></p>
 <p><strong>Fix &amp; Verify:</strong></p>
 <ul>
-<li>Change back to the original URL</li>
-<li>Confirm everything works</li>
-</ul><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
+<li>Reconnect <strong>Delete data</strong> back to <strong>Copy data</strong>, and <strong>Copy data</strong> to <strong>Notebook</strong></li>
+<li>Save and run the pipeline again to confirm it works</li>
+</ul>
+<hr><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
   <!-- mkdocs-quiz progress sidebar (desktop) -->
   <label class="md-nav__title">
     <span class="md-nav__icon md-icon"></span>
