@@ -1,6 +1,7 @@
 ## 🧪 <mark>Lab 11 ~ Use Activator in Fabric</mark>
 
-<span style="background-color: orange;">Give learners the link:</span> https://qaalabs.github.io/fabric/11-data-activator/instructions/
+<span style="background-color: orange;">Give learners the link:</span> 
+https://qaalabs.github.io/fabric/11-data-activator/
 
 ### Activities
 

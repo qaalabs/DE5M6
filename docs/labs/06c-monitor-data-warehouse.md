@@ -5,4 +5,4 @@ In Microsoft Fabric, a data warehouse provides a relational database for large-s
 
 ## Instructions
 
-To access the instructions click here: https://qaalabs.github.io/fabric/06c-monitor-data-warehouse/instructions/
+To access the instructions click here: https://qaalabs.github.io/fabric/06c-monitor-data-warehouse/

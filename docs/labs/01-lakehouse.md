@@ -6,4 +6,4 @@ In Microsoft Fabric, a lakehouse provides highly scalable file storage in a OneL
 
 ## Instructions
 
-To access the instructions click here: https://qaalabs.github.io/fabric/01-lakehouse/instructions/
+To access the instructions click here: https://qaalabs.github.io/fabric/01-lakehouse/

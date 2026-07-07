@@ -6,4 +6,4 @@ This lab is designed to introduce the different elements of Dataflows (Gen2), an
 
 ## Instructions
 
-To access the instructions click here: https://qaalabs.github.io/fabric/05-dataflows-gen2/instructions/
+To access the instructions click here: https://qaalabs.github.io/fabric/05-dataflows-gen2/

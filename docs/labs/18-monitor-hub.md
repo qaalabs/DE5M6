@@ -4,4 +4,4 @@ The monitoring hub in Microsoft Fabric provides a central place where you can mo
 
 ## Instructions
 
-To access the instructions click here: https://qaalabs.github.io/fabric/18-monitor-hub/instructions/
+To access the instructions click here: https://qaalabs.github.io/fabric/18-monitor-hub/

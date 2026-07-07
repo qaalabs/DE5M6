@@ -1,6 +1,7 @@
 ## 🧪 <mark>Lab 06c ~ Monitor data warehouse in Microsoft Fabric</mark>
 
-<span style="background-color: orange;">Give learners the link:</span> https://qaalabs.github.io/fabric/06c-monitor-data-warehouse/instructions/
+<span style="background-color: orange;">Give learners the link:</span> 
+https://qaalabs.github.io/fabric/06c-monitor-data-warehouse/
 
 ### Activities
 

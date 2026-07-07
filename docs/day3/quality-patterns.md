@@ -1,9 +1,5 @@
 # Quality Patterns ~ Medallion Architecture
 
-**Learning Type:** Discussion
-
-**Format:** Group discussion following Lab 3.1
-
 ## How do DMBOK dimensions map to bronze / silver / gold?
 
 *When we talk about bronze, silver, gold layers - what does "quality" mean at each stage?*

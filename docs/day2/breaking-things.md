@@ -2,7 +2,7 @@
 
 ## Overview
 
-This hands-on session introduces failures into working data pipelines.
+This hands-on session introduces failures into your upgraded pipeline from **Breaking Setup**.
 You will practice controlled troubleshooting while observing how MS Fabric responds to different types of failures.
 
 ## Part 1: Establish Working Baseline
@@ -11,8 +11,19 @@ You will practice controlled troubleshooting while observing how MS Fabric respo
 
 **Technical Setup:**
 
-- This morning you did [Lab 2.1 - Ingest Pipeline Data](../labs/04-ingest-pipeline.md)
-- Verify that the data flows through successfully
+- This morning you completed [Lab 04 - Ingest Pipeline Data](../labs/04-ingest-pipeline.md)
+- Earlier today you completed **Breaking Setup**, adding three standby Copy data activities and a fallback path to `Ingest Sales Data - Breaking`
+- Verify the pipeline still runs successfully end-to-end before you start
+
+### Bypass the fallback path
+
+The fallback path you built in Breaking Setup would quietly recover from some of today's breaks - which hides the failure rather than showing it. Today's breaks should be plainly visible, so disconnect the fallback for now:
+
+1. Select the connector running from **Copy data**'s red X (**Failure**) to **Copy Data Fallback**, and delete it.
+2. Confirm **Copy data**'s green check (**Success**) is still connected to **Notebook**.
+3. Save the pipeline.
+
+*You'll reconnect this path in Complex Breaking.*
 
 ---
 
@@ -23,82 +34,112 @@ You will practice controlled troubleshooting while observing how MS Fabric respo
 For each break type, follow this 4-step cycle:
 
 1. **Break**   - introduce the failure
-2. **Observe** - run pipeline, note error messages
+2. **Observe** - run it, note error messages
 3. **Discuss** - what does the error tell us?
 4. **Fix**     - restore to working state
 
 ---
 
-### Break 1: File Not Found
+### Break 1: Notebook Error
+
+The simplest break - no pipeline run needed, just the notebook itself.
 
 **Break Instructions:**
 
-- Navigate to your source data URL
-- Rename it - add `_broken` to the filename
-- Now try to run your pipeline
+- Open the **Load Sales** notebook
+- Find the line that reads:
+
+    ```python
+    df = df.withColumn("FirstName", split(col("CustomerName"), " ").getItem(0)).withColumn("LastName", split(col("CustomerName"), " ").getItem(1))
+    ```
+
+- Change `CustomerName` to `CustomerNam` (a deliberate typo) in both places on that line
+- Run just that cell
+
+**Observation Points:**
+
+- What kind of error does Spark give you?
+- Does the error message tell you exactly which column is missing?
+- How is this different from a file-level error?
+
+**Discussion:**
+
+**Fix & Verify:**
+
+- Change `CustomerNam` back to `CustomerName`
+- Re-run the cell to confirm it works
+- Re-run the whole notebook once, to confirm the fix took
+
+---
+
+### Break 2: File Not Found
+
+**Break Instructions:**
+
+- On the pipeline canvas, select the connector from **Delete data** to **Copy data**, and delete it
+- Drag from **Delete data**'s completion connector to **Copy Data (Not Exists)**
+- Drag from **Copy Data (Not Exists)**'s green check (**Success**) to **Notebook**
+- Save and run the pipeline
 
 **Observation Points:**
 
 - How quickly can you see the error?
 - What does Fabric's error message say?
 - Does the error message help you identify the problem?
-- Is it clear what needs to be fixed?
+- Does the Notebook activity run at all?
 
 **Discussion:**
 
 **Fix & Verify:**
 
-- Rename the file back to original name
-- Run pipeline again to confirm it works
+- Delete the two connectors you just added
+- Reconnect **Delete data** to **Copy data**, and confirm **Copy data**'s Success connector to **Notebook** is intact
+- Save and run the pipeline again to confirm it works
 
 ---
 
-### Break 2: Schema Mismatch
+### Break 3: Schema Mismatch
 
 **Break Instructions:**
 
-Change your source URL to:
-
-- https://raw.githubusercontent.com/qaalabs/files/main/msfabric/sales-wrong-header.csv
-
-*This file has the wrong number of column headers*
-
-Run your pipeline
+- Reconnect **Delete data** to **Copy Data (Wrong Header)** instead of **Copy data** (same swap as Break 2)
+- Connect **Copy Data (Wrong Header)**'s Success to **Notebook**
+- Save and run the pipeline
 
 **Observation Points:**
 
-- Does the error message clearly indicate schema issues?
-- How long does it take to identify the problem?
-- Is the difference clear between this and the file error?
+- Does the **Copy Data (Wrong Header)** activity fail, or does it succeed and pass the problem downstream to the **Notebook** activity?
+- Does the error message clearly indicate a schema issue?
+- Is it obvious which activity caused the problem?
+
+**Discussion:**
 
 **Fix & Verify:**
 
-- Change back to the original URL
-- Verify pipeline works again
-
-Run your pipeline and observe the errors.
+- Reconnect **Delete data** back to **Copy data**, and **Copy data** to **Notebook**
+- Save and run the pipeline again to confirm it works
 
 ---
 
-### Break 3: Data Quality Issues
+### Break 4: Data Quality Issues
 
 **Break Instructions:**
 
-Change your source URL to:
-
-- https://raw.githubusercontent.com/qaalabs/files/main/msfabric/sales-wrong-data.csv
-
-*This file has incorrect data - like text in number columns and missing fields*
-
-Save and run the pipeline.
+- Reconnect **Delete data** to **Copy Data (Wrong Data)** (same swap again)
+- Connect **Copy Data (Wrong Data)**'s Success to **Notebook**
+- Save and run the pipeline
 
 **Observation Points:**
 
-- Does Fabric handle data type mismatches gracefully?
-- What happens to the bad data - does it get skipped or cause total failure?
+- Does every activity show green, with no errors at all?
+- Open the **new_sales** table in your lakehouse - what does the bad data actually look like once it's landed?
+- If nothing failed, how would you notice this in a real production pipeline?
+
+**Discussion:**
 
 **Fix & Verify:**
 
-- Change back to the original URL
-- Confirm everything works
+- Reconnect **Delete data** back to **Copy data**, and **Copy data** to **Notebook**
+- Save and run the pipeline again to confirm it works
 
+---

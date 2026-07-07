@@ -4,4 +4,4 @@ In this exercise you will build out a medallion architecture in a Fabric lakehou
 
 ## Instructions
 
-To access the instructions click here: https://qaalabs.github.io/fabric/03b-medallion-lakehouse/instructions/
+To access the instructions click here: https://qaalabs.github.io/fabric/03b-medallion-lakehouse/

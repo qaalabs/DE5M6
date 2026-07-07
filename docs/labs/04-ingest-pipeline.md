@@ -6,4 +6,4 @@ Fabric also supports Apache Spark, enabling you to write and run code to process
 
 ## Instructions
 
-To access the instructions click here: https://qaalabs.github.io/fabric/04-ingest-pipeline/instructions/
+To access the instructions click here: https://qaalabs.github.io/fabric/04-ingest-pipeline/

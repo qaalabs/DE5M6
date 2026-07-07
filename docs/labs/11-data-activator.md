@@ -4,4 +4,4 @@ Activator in Microsoft Fabric takes action based on what’s happening in your d
 
 ## Instructions
 
-To access the instructions click here: https://qaalabs.github.io/fabric/11-data-activator/instructions/
+To access the instructions click here: https://qaalabs.github.io/fabric/11-data-activator/

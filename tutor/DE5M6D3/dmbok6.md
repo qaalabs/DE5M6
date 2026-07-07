@@ -1,7 +1,5 @@
 ## <mark>Research task in pairs</mark>
 
-<a href="http://192.168.1.227:3000/de5m6-quality-dimensions" target="_blank">📒 Click here for text to paste into the chat</a>
-
 DMBOK's 6 data quality dimensions are:
 
 - Accuracy
