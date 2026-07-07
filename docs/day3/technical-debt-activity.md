@@ -4,7 +4,7 @@
 
 You are a data engineer at **TechMart**. The sales pipeline has been running for a while and "works" - but before it goes into production it needs an audit. Your job is to find the technical debt.
 
-The codebase is at: https://github.com/ingwanelabs/techmart-2026
+The codebase is at: https://github.com/QAADE5/techmart-2026
 
 > All credentials in this repo are fake. It is intentionally broken for training purposes.
 
@@ -12,7 +12,7 @@ The codebase is at: https://github.com/ingwanelabs/techmart-2026
 
 ## Your Task
 
-1. Open the [Technical Debt Checklist](https://github.com/ingwanelabs/techmart-2026/blob/main/docs/TECHNICAL_DEBT_CHECKLIST.md)
+1. Open the [Technical Debt Checklist](https://github.com/QAADE5/techmart-2026/blob/main/docs/TECHNICAL_DEBT_CHECKLIST.md)
 2. Work through the codebase systematically using the checklist
 3. Record your findings in the shared Google Doc
 4. Prepare to report back through your group's lens (see below)

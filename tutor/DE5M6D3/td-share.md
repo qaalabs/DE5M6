@@ -1,7 +1,6 @@
 ## <mark>Technical Debt ~ report back</mark>
 
 ### Each group shares through their lens
-*(2-3 mins each)*
 
 - Group 1 **Security** ~ most significant issue + priority fix
 - Group 2 **Performance** ~ most significant issue + priority fix

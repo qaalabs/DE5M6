@@ -5,7 +5,7 @@
 
 ## Setup
 
-- Repo: https://github.com/ingwanelabs/techmart-2026
+- Repo: https://github.com/QAADE5/techmart-2026
 - Learners use the checklist and Google Doc to record findings
 - All groups audit all files - but each group has a **reporting lens**
 

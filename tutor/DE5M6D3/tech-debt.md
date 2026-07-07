@@ -7,5 +7,5 @@
 
 ### Links
 
-- Repo: https://github.com/ingwanelabs/techmart-2026
-- Checklist: https://github.com/ingwanelabs/techmart-2026/blob/main/docs/TECHNICAL_DEBT_CHECKLIST.md
+- Repo: https://github.com/QAADE5/techmart-2026
+- Checklist: https://github.com/QAADE5/techmart-2026/blob/main/docs/TECHNICAL_DEBT_CHECKLIST.md

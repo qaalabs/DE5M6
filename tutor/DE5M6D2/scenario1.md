@@ -8,10 +8,10 @@
 
 <hr>
 
-- https://ingwanelabs.github.io/status/
-- https://ingwanelabs.github.io/status/mailbox/
-- https://ingwanelabs.github.io/status/message-202521320/
-- https://ingwanelabs.github.io/status/message-202521430/
+- https://QAADE5.github.io/status/
+- https://QAADE5.github.io/status/mailbox/
+- https://QAADE5.github.io/status/message-202521320/
+- https://QAADE5.github.io/status/message-202521430/
 
 ---
 
