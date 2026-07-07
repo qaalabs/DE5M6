@@ -29,7 +29,7 @@ nav = [
   ]},
   {"Day 3 - Quality & Governance" = [
     {"Data Quality Dimensions" = "day3/quality-dimensions.md"},
-    {"Lab 3.1 ~ 03b Medallion Architecture" = "labs/03b-medallion-lakehouse.md"},
+    {"Lab 3.1 ~ 03b Medallion Architecture" = "labs/31-medallion.md"},
     {"Data Quality Tools" = "day3/quality-tools.md"},
     {"Technical Debt Audit" = "day3/technical-debt-activity.md"},
     {"Lab 3.2 ~ 21 Deployment Pipelines" = "labs/21-deployment-pipelines.md"},

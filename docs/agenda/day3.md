@@ -11,7 +11,7 @@
 
 ## Session 2
 
-- **Demo**: [Lab 3.1 ~ 03b Medallion Architecture](../labs/03b-medallion-lakehouse.md)
+- **Demo**: [Lab 3.1 ~ 03b Medallion Architecture](../labs/31-medallion.md)
 - **Discussion**: Data Quality ~ Medallion Architecture
 - **Breakout**: Data Quality Tools
 - **Report-Back**: [Data Quality Tools](../day3/quality-tools.md)
