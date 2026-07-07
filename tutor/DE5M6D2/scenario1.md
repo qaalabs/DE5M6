@@ -1,13 +1,10 @@
 ## <mark>Incident Response Technical Briefing</mark>
 
-<a href="http://192.168.1.227:3000/s/de5m6-incident" target="_blank">📒 Click here for text to paste into the chat</a>
-
 ### Instructions
 
 - Show the chat app ~ use [room TEST](https://drill.qaalabs.com/TEST) as an example
 - Show the status page
 - Show the status mailbox
-
 
 <hr>
 
