@@ -15,6 +15,7 @@ Quality means something different at each layer - watch for it as you go: bronze
     - Leave all other options as the default values
     - Click **Apply**
 
+
 ## Step 2: Create a lakehouse
 
 1. On the menu bar on the left, select **Create**. In the *New* page, under the *Data Engineering* section, select **Lakehouse**.
@@ -24,25 +25,29 @@ Quality means something different at each layer - watch for it as you go: bronze
 
     !!! tip "If the **Create** option is not pinned to the sidebar, you need to select the ellipsis (…) option first."
 
+
 ## Step 3: Upload data to the bronze layer
 
-1. Download the data file for this exercise from `https://github.com/MicrosoftLearning/dp-data/blob/main/orders.zip`
+1. Download the data file for this exercise from `https://storage.googleapis.com/ingwane-qa-files/orders.zip`
 
     - Extract the files and save them with their original names on your local computer (or lab VM if applicable).
 
-    !!! success "There should be 3 files containing sales data for 3 years: 2019.csv, 2020.csv, and 2021.csv"
+    !!! success "There should be 4 files: 2019.csv, 2020.csv, 2021.csv, and metadata.json"
 
-2. In the **...** menu for the **Files** folder in the **Explorer** pane, select **New subfolder** and name it `bronze`.
+2. Open `metadata.json` in a text editor. It's a manifest for the bundle - it lists which files should be present, not what's inside them. Keep it open, you'll check against it in a moment.
 
-3. In the **...** menu for the **bronze** folder, select **Upload** > **Upload files**, then upload all 3 files (use shift to select them together).
+3. In the **...** menu for the **Files** folder in the **Explorer** pane, select **New subfolder** and name it `bronze`.
 
-4. Confirm you see exactly 3 files - `2019.csv`, `2020.csv`, and `2021.csv`. Don't open them to check the data inside yet.
+4. In the **...** menu for the **bronze** folder, select **Upload** > **Upload files**, then upload the 3 CSV files (use shift to select them together). Leave `metadata.json` out - it's a manifest to check against, not data to process.
+
+5. Confirm the 3 files you see - `2019.csv`, `2020.csv`, and `2021.csv` - match the `files` list in `metadata.json` exactly. Don't open the CSVs to check the data inside yet.
 
     !!! note "Bronze is read-only by convention"
         Never write transformed data back into the bronze folder. If you need to start again, bronze is your guaranteed clean starting point.
 
     !!! tip "Bronze's quality check is at the batch level, not the row level"
-        You're not validating field values here - you're confirming the right files arrived at all (one per year, nothing missing, nothing duplicated). That's as far as quality goes at this layer: land the data as-is, don't touch the contents. Whatever is messy inside these files - nulls, bad types, duplicate rows - is still there untouched. Cleaning that up is silver's job, not bronze's.
+
+    > You're not validating field values here - you're confirming the right files arrived at all, matching what the manifest says should be there. That's as far as quality goes at this layer: **land the data as-is, don't touch the contents**. Whatever is messy inside these files - nulls, bad types, duplicate rows - is still there untouched. Cleaning that up is silver's job, not bronze's.
 
 ## Step 4: Create the Bronze to Silver notebook
 
@@ -88,11 +93,11 @@ This is the cell to slow down on - each check below protects against a different
 
 ```python
 # Cell 3 - Validate
-assert df['SalesOrderNumber'].isnull().sum() == 0, "SalesOrderNumber should have no nulls"          # completeness
-assert pd.api.types.is_datetime64_any_dtype(df['OrderDate']), "OrderDate should be a valid date"     # validity
-assert (df['Quantity'] > 0).all(), "all quantities should be positive"                               # accuracy
-assert (df['UnitPrice'] > 0).all(), "all unit prices should be positive"                              # accuracy
-assert df.duplicated().sum() == 0, "no duplicate rows should remain"                                  # uniqueness
+assert df['SalesOrderNumber'].isnull().sum() == 0, "SalesOrderNumber should have no nulls"       # completeness
+assert pd.api.types.is_datetime64_any_dtype(df['OrderDate']), "OrderDate should be a valid date" # validity
+assert (df['Quantity'] > 0).all(), "all quantities should be positive"                           # accuracy
+assert (df['UnitPrice'] > 0).all(), "all unit prices should be positive"                         # accuracy
+assert df.duplicated().sum() == 0, "no duplicate rows should remain"                             # uniqueness
 
 print('All validation checks passed')
 ```
@@ -103,9 +108,9 @@ print('All validation checks passed')
 
 ```python
 # Cell 4 - Write
-spark.createDataFrame(df).write.mode('overwrite').saveAsTable('sales_silver')
+spark.createDataFrame(df).write.mode('overwrite').saveAsTable('dbo.sales_silver')
 
-print('Saved: sales_silver')
+print('Saved: dbo.sales_silver')
 ```
 
 After running all four cells, select the **Run** tab above the ribbon and then select: **Stop session**
@@ -121,7 +126,7 @@ After running all four cells, select the **Run** tab above the ribbon and then s
     ```sql
     SELECT YEAR(OrderDate) AS Year
         , CAST(SUM(Quantity * (UnitPrice + Tax)) AS DECIMAL(12, 2)) AS TotalSales
-    FROM sales_silver
+    FROM dbo.sales_silver
     GROUP BY YEAR(OrderDate)
     ORDER BY YEAR(OrderDate)
     ```
@@ -130,7 +135,7 @@ After running all four cells, select the **Run** tab above the ribbon and then s
 
     ```sql
     SELECT CustomerName, SUM(Quantity) AS TotalQuantity
-    FROM sales_silver
+    FROM dbo.sales_silver
     GROUP BY CustomerName
     ORDER BY TotalQuantity DESC
     LIMIT 10
@@ -152,7 +157,7 @@ Gold answers a specific business question. It's always built from silver, never 
 # Cell 1 - Summarise
 import pandas as pd
 
-df = spark.read.table('sales_silver').toPandas()
+df = spark.read.table('dbo.sales_silver').toPandas()
 df['Year'] = pd.to_datetime(df['OrderDate']).dt.year
 df['LineValue'] = df['Quantity'] * (df['UnitPrice'] + df['Tax'])
 
@@ -181,25 +186,32 @@ print('Gold total reconciles with source data')
 
 ```python
 # Cell 3 - Write
-spark.createDataFrame(summary).write.mode('overwrite').saveAsTable('sales_gold')
+spark.createDataFrame(summary).write.mode('overwrite').saveAsTable('dbo.sales_gold')
 
-print('Saved: sales_gold')
+print('Saved: dbo.sales_gold')
 ```
 
 !!! success "Refresh the **Tables** pane - `sales_gold` should now be listed."
 
-## Step 7: Answer the business question
+## Step 7: Look at what this number rests on
 
 1. Navigate back to the **Sales SQL analytics endpoint**.
 
 2. Run the following query:
 
     ```sql
-    SELECT * FROM sales_gold ORDER BY Year
+    SELECT * FROM dbo.sales_gold ORDER BY Year
     ```
 
-    !!! note
-        This is the same total-sales figure as the silver layer query in Step 5 - but it now comes from a clearly labelled gold table, built from validated silver data, which in turn came from untouched bronze data.
+    > This figure is only as trustworthy as the checks behind it:
+
+    > 1. The file count you confirmed in bronze;
+
+    > 2. The asserts you wrote in silver;
+
+    > 3. The reconciliation check in gold.
+
+!!! question "Question: If one of those three checks had been skipped, would you expect this number to look wrong - or just quietly be wrong?"
 
 ---
 
