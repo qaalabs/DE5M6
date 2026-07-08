@@ -3,7 +3,7 @@
 ## Session 1
 
 - **Discussion**: What does good data mean to you?
-- Quality Data ~ Why It Matters
+- **Slides**: Quality Data ~ Why It Matters
 - **Breakout**: [Data Quality Dimensions](../day3/quality-dimensions.md)
 - **Report-Back**: Data Quality Dimensions
 

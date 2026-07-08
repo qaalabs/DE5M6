@@ -65,7 +65,7 @@
 ### Session 1
 
 - `09:30` **Discussion**: [What does good data mean to you?](day3/good-data.md) (10 mins)
-- `09:40` [Quality Data ~ Why It Matters](day3/data-quality.md) (10 mins)
+- `09:40` **Slides**: [Quality Data ~ Why It Matters](day3/data-quality.md) (10 mins)
 - `09:50` **Breakout**: [Data Quality Dimensions](day3/quality-dimensions.md) (20 mins)
 - `10:10` **Report-Back**: Data Quality Dimensions (20 mins)
 
