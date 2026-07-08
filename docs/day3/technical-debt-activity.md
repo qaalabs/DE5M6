@@ -1,5 +1,9 @@
 # Technical Debt Audit
 
+!!! abstract "S21: Identify and remediate technical debt, assess for updates and obsolescence as part of continuous improvement"
+
+!!! abstract "K5: The inherent risks of data such as incomplete data, ethical data sources and how to ensure data quality"
+
 ## The Scenario
 
 You are a data engineer at **TechMart**. The sales pipeline has been running for a while and "works" - but before it goes into production it needs an audit. Your job is to find the technical debt.

@@ -1,9 +1,5 @@
 # Technical Debt Audit
 
-!!! abstract "S21: Identify and remediate technical debt, assess for updates and obsolescence as part of continuous improvement"
-
-!!! abstract "K5: The inherent risks of data such as incomplete data, ethical data sources and how to ensure data quality"
-
 ## Setup
 
 - Repo: https://github.com/QAADE5/techmart-2026
