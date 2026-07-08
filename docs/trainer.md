@@ -71,7 +71,7 @@
 
 ### Session 2
 
-- `10:50` **Demo**: [Lab 3.1 ~ 03b Medallion Architecture](labs/31-medallion.md) (40 mins)
+- `10:50` **Activity**: [Lab 3.1 ~ Medallion Architecture](labs/31-medallion.md) (40 mins)
 - `11:30` **Discussion**: [Data Quality ~ Medallion Architecture](day3/quality-patterns.md) (10 mins)
 - `11:40` **Breakout**: [Data Quality Tools](day3/quality-tools-trainer.md) (20 mins)
 - `12:00` **Report-Back**: [Data Quality Tools](day3/quality-tools.md) (20 mins)
