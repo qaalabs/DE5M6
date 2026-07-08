@@ -5,7 +5,7 @@ https://qaalabs.github.io/DE5M6/labs/31-medallion/
 
 ### Data source
 
-- Learner download (used in the lab): https://storage.googleapis.com/ingwane-qa-files/orders.zip
+- Learner download: https://storage.googleapis.com/ingwane-qa-files/orders.zip
 - Canonical source / repo: https://github.com/QAADE5/M6/tree/main/fabric
 
 ### Activities
