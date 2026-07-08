@@ -1,4 +1,4 @@
-## Reframe Quality as Operations
+## 🎥 Reframe Quality as Operations
 
 - Yesterday you handled incidents
 - Today's challenge is more subtle: systems work, but output isn't meeting standards

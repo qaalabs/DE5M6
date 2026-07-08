@@ -13,10 +13,23 @@ DMBOK's 6 data quality dimensions are:
 
 ### Investigation
 
-- Find a definition for your given dimensions
-- Find examples for each of your quality dimensions
-- How would you apply these in your organisation?
+*Share link ~ requirements are at the top*
  
+---
+
+### Dimensions of Quality
+
+| Pair | Name 1  | Name 2   | Information |
+|------|---------|----------|-------------|
+|  1   | Accuracy | Validity | Data correctness vs conformity to rules |
+|  2.  | Completeness|Uniqueness|Missing data vs duplicate data|
+3. **Consistency**  & **Referential Integrity** ~ Uniformity vs relational integrity
+4. **Timeliness**   & **Currency**              ~ Availability timing vs data freshness
+5. **Relevance**    & **Accessibility**         ~ Suitability for use vs ability to retrieve
+6. **Precision**    & **Granularity**           ~ Level of detail in values vs level of breakdown
+7. **Traceability** & **Volatility**            ~ Auditability vs rate of change
+8. **Credibility**  & **Punctuality**           ~ Trust in source vs delivery timing
+
 ---
 
 ### Dimensions of Quality

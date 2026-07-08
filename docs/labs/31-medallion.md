@@ -134,11 +134,10 @@ After running all four cells, select the **Run** tab above the ribbon and then s
 3. Then run:
 
     ```sql
-    SELECT CustomerName, SUM(Quantity) AS TotalQuantity
+    SELECT TOP 10 CustomerName, SUM(Quantity) AS TotalQuantity
     FROM dbo.sales_silver
     GROUP BY CustomerName
     ORDER BY TotalQuantity DESC
-    LIMIT 10
     ```
 
 ## Step 6: Create the Silver to Gold notebook
@@ -167,7 +166,7 @@ summary = summary.rename(columns={'LineValue': 'TotalSales'})
 print(summary)
 ```
 
-### Cell 2 - Check fitness for purpose
+### Cell 2 - Check fit for purpose
 
 Gold's quality question isn't "is this field valid" - silver already answered that. It's "would a business user trust this number end-to-end."
 
