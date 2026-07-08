@@ -20,7 +20,7 @@
 
 ## Session 3
 
-- Introduction to Technical Debt
+- **Slides**: Introduction to Technical Debt
 - **Breakout**: Technical Debt Setup
 - **Investigation**: [Technical Debt Audit](../day3/technical-debt-activity.md)
 
