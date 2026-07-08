@@ -306,6 +306,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../agenda/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Topics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../agenda/day1/" class="md-nav__link">
         
   
@@ -1376,11 +1404,10 @@
 </li>
 <li>
 <p>Then run:</p>
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">CustomerName</span><span class="p">,</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">Quantity</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">TotalQuantity</span>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">TOP</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="n">CustomerName</span><span class="p">,</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">Quantity</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">TotalQuantity</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">dbo</span><span class="p">.</span><span class="n">sales_silver</span>
 <span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">CustomerName</span>
 <span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">TotalQuantity</span><span class="w"> </span><span class="k">DESC</span>
-<span class="k">LIMIT</span><span class="w"> </span><span class="mi">10</span>
 </code></pre></div>
 </li>
 </ol>
@@ -1409,7 +1436,7 @@
 
 <span class="nb">print</span><span class="p">(</span><span class="n">summary</span><span class="p">)</span>
 </code></pre></div>
-<h3 id="cell-2-check-fitness-for-purpose">Cell 2 - Check fitness for purpose</h3>
+<h3 id="cell-2-check-fit-for-purpose">Cell 2 - Check fit for purpose</h3>
 <p>Gold's quality question isn't "is this field valid" - silver already answered that. It's "would a business user trust this number end-to-end."</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Cell 2 - Reconciliation check</span>
 <span class="k">assert</span> <span class="nb">abs</span><span class="p">(</span><span class="n">summary</span><span class="p">[</span><span class="s1">'TotalSales'</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="s1">'LineValue'</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span> <span class="o">&lt;</span> <span class="mf">0.01</span><span class="p">,</span> \
