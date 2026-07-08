@@ -1,7 +1,5 @@
 # 4-Day Agenda
 
-Tick items off as you go.
-
 ## Day 1 - Monitoring & Performance
 
 - [ ] The impact of system failures
