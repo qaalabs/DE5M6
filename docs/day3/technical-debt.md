@@ -1,8 +1,5 @@
 # Technical Debt Audit
 
-**Learning Type:** Investigation  
-**Format:** Groups audit a shared codebase, report back through a specialist lens
-
 ## Setup
 
 - Repo: https://github.com/QAADE5/techmart-2026
