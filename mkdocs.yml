@@ -39,7 +39,7 @@ nav:
     - "Lab 3.2 ~ 21 Deployment Pipelines": labs/21-deployment-pipelines.md
 
   - "Day 4 - Improvement & Value":
-    - "Lab 4.1 ~ Clone, setup and run bikezelo": day4/bikezelo-activity.md
+    - "Lab 4.1 ~ Clone, Setup & Run Bikezelo": day4/bikezelo-activity.md
     - "Lab 4.2 ~ Uncomment the rules": day4/bikezelo-rules.md
     - "Lab 4.3 ~ How does bikezelo forecast?": day4/bikezelo-forecast.md
     - "Presentation Prep": day4/presentation.md

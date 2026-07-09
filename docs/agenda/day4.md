@@ -3,8 +3,8 @@
 ## Session 1
 
 - 🌅 Welcome to Day 4 of DE5 Module 6
-- **Demo**: Bikezelo ~ functional and technical walkthrough
-- **Activity**: [Lab 4.1 ~ Clone, setup and run bikezelo](../day4/bikezelo-activity.md)
+- **Demo**: Bikezelo Walkthrough
+- **Activity**: [Lab 4.1 ~ Clone, Setup & Run Bikezelo](../day4/bikezelo-activity.md)
 - **Practice**: [Lab 4.2 ~ Uncomment the rules](../day4/bikezelo-rules.md)
 - **Discussion**: Warning vs failure ~ a governance decision 
 
