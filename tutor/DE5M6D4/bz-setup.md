@@ -5,4 +5,3 @@
 - Open `http://localhost:5000`
 - Watch rows arrive and turn green
 
-- https://qaalabs.github.io/DE5M6/day4/bikezelo-activity/
