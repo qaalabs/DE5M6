@@ -34,7 +34,7 @@ nav = [
     {"Technical Debt Audit" = "day3/technical-debt-activity.md"},
   ]},
   {"Day 4 - Improvement & Value" = [
-    {"Data Quality Tools" = "day3/quality-tools.md"},
+    {"Data Quality Tools" = "day4/quality-tools.md"},
     {"Bikezelo Walkthrough" = "https://github.com/ingwaneorg/bikezelo"},
     {"Lab 4.1 ~ Clone, Setup & Run Bikezelo" = "day4/bikezelo-activity.md"},
     {"Lab 4.2 ~ Uncomment the rules" = "day4/bikezelo-rules.md"},

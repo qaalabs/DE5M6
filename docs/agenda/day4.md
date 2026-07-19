@@ -4,7 +4,7 @@
 
 - 🌅 Welcome to Day 4 of DE5 Module 6
 - **Breakout**: Data Quality Tools
-- **Report-Back**: [Data Quality Tools](../day3/quality-tools.md)
+- **Report-Back**: [Data Quality Tools](../day4/quality-tools.md)
 - **Demo**: [Bikezelo Walkthrough](https://github.com/ingwaneorg/bikezelo)
 - **Activity**: [Lab 4.1 ~ Clone, Setup & Run Bikezelo](../day4/bikezelo-activity.md)
 

@@ -94,7 +94,7 @@
 ### Session 1
 
 - `09:40` **Breakout**: [Data Quality Tools](day4/quality-tools-trainer.md) (20 mins)
-- `10:00` **Report-Back**: [Data Quality Tools](day3/quality-tools.md) (20 mins)
+- `10:00` **Report-Back**: [Data Quality Tools](day4/quality-tools.md) (20 mins)
 - `10:20` **Demo**: [Bikezelo Walkthrough](https://github.com/ingwaneorg/bikezelo) (10 mins)
 - `10:30` **Activity**: [Lab 4.1 ~ Clone, Setup & Run Bikezelo](day4/bikezelo-activity.md) (10 mins)
 
