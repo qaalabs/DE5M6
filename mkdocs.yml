@@ -1,5 +1,5 @@
 # Site name
-site_name: DE5M6 - Apprenticeship Materials
+site_name: Module 6 - Data Operations
 dev_addr: '0.0.0.0:8000'
 
 # Navigation menu
@@ -9,6 +9,16 @@ nav:
 
   - Agenda:
     - Topics: agenda/index.md
+    - Day 2: agenda/day2.md
+
+  - "Day 2 - Incident Response":
+    - "Lab 2.1 ~ 04 Ingest Pipeline": labs/04-ingest-pipeline.md
+    - "Lab 2.2 - Break it Systematically": day2/breaking-things.md
+    - "Lab 04 ~ More Complex Breaks": day2/complex-breaking.md
+    - "Lab ~ 11 Data Activator": labs/11-data-activator.md
+    - "Fire Drill Preparation": day2/incident-response-prep.md
+    - "🔥 Fire Drill ~ Round 1": day2/fire-drill-groups.md
+    - "🔥 Fire Drill ~ Round 2": day2/fire-drill-groups.md
 
   - Resources: resources.md
 
