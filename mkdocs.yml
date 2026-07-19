@@ -34,11 +34,12 @@ nav:
   - "Day 3 - Quality & Governance":
     - "Data Quality Dimensions": day3/quality-dimensions.md
     - "Lab 3.1 ~ Medallion Architecture": labs/31-medallion.md
-    - "Data Quality Tools": day3/quality-tools.md
-    - "Technical Debt Audit": day3/technical-debt-activity.md
     - "Lab 3.2 ~ 21 Deployment Pipelines": labs/21-deployment-pipelines.md
+    - "Technical Debt Audit": day3/technical-debt-activity.md
 
   - "Day 4 - Improvement & Value":
+    - "Data Quality Tools": day3/quality-tools.md
+    - "Bikezelo Walkthrough": https://github.com/ingwaneorg/bikezelo
     - "Lab 4.1 ~ Clone, Setup & Run Bikezelo": day4/bikezelo-activity.md
     - "Lab 4.2 ~ Uncomment the rules": day4/bikezelo-rules.md
     - "Lab 4.3 ~ How does bikezelo forecast?": day4/bikezelo-forecast.md
@@ -50,6 +51,7 @@ not_in_nav: |
   404.md
   trainer.md
   DAY-setup.md
+  https://qaalabs.github.io/vmsetup/
   day1/system-failure.md
   day1/why-monitor.md
   day1/status-page-analysis.md
@@ -64,9 +66,9 @@ not_in_nav: |
   day3/good-data.md
   day3/data-quality.md
   day3/quality-patterns.md
-  day3/quality-tools-trainer.md
   day3/technical-debt.md
   day3/tech-debt-issues.md
+  day4/quality-tools-trainer.md
   day2/group-blaze.md
   day2/group-ember.md
   day2/group-ignis.md

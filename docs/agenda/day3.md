@@ -11,10 +11,11 @@
 
 ## Session 2
 
+- FABRIC-SETUP
 - **Activity**: [Lab 3.1 ~ Medallion Architecture](../labs/31-medallion.md)
 - **Discussion**: Data Quality ~ Medallion Architecture
-- **Breakout**: Data Quality Tools
-- **Report-Back**: [Data Quality Tools](../day3/quality-tools.md)
+- 
+- **Practice**: [Lab 3.2 ~ 21 Deployment Pipelines](../labs/21-deployment-pipelines.md)
 
 ## 🥪🥤 Lunch Break
 
@@ -29,7 +30,7 @@
 ## Session 4
 
 - **Report-Back**: Technical Debt Audit
-- **Practice**: [Lab 3.2 ~ 21 Deployment Pipelines](../labs/21-deployment-pipelines.md)
+- 
 - **Discussion**: Deployment Governance
 
 ## 🎁 Wrap

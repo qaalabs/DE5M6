@@ -3,7 +3,7 @@
 ## Session 1
 
 - 🌅 Welcome to Day 1 of DE5 Module 6
-- 🖥️ VM Setup
+- **Slides**: 🖥️ VM Setup
 - **Discussion**: System Failure Impact
 - **Slides**: Why Monitor?
 - **Breakout**: Status Page Analysis

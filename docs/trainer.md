@@ -71,10 +71,10 @@
 
 ### Session 2
 
-- `10:50` **Activity**: [Lab 3.1 ~ Medallion Architecture](labs/31-medallion.md) (40 mins)
-- `11:30` **Discussion**: [Data Quality ~ Medallion Architecture](day3/quality-patterns.md) (10 mins)
-- `11:40` **Breakout**: [Data Quality Tools](day3/quality-tools-trainer.md) (20 mins)
-- `12:00` **Report-Back**: [Data Quality Tools](day3/quality-tools.md) (20 mins)
+- `10:50` FABRIC-SETUP (10 mins)
+- `11:00` **Activity**: [Lab 3.1 ~ Medallion Architecture](labs/31-medallion.md) (40 mins)
+- `11:40` **Discussion**: [Data Quality ~ Medallion Architecture](day3/quality-patterns.md) (10 mins)
+- `12:00` **Practice**: [Lab 3.2 ~ 21 Deployment Pipelines](labs/21-deployment-pipelines.md) (20 mins)
 
 ### Session 3
 
@@ -85,7 +85,6 @@
 ### Session 4
 
 - `14:50` **Report-Back**: [Technical Debt Audit](day3/tech-debt-issues.md) (20 mins)
-- `15:10` **Practice**: [Lab 3.2 ~ 21 Deployment Pipelines](labs/21-deployment-pipelines.md) (20 mins)
 - `15:30` **Discussion**: Deployment Governance (20 mins)
 
 ---
@@ -94,32 +93,34 @@
 
 ### Session 1
 
-- `09:40` **Demo**: Bikezelo Walkthrough (10 mins)
-- `09:50` **Activity**: [Lab 4.1 ~ Clone, Setup & Run Bikezelo](day4/bikezelo-activity.md) (20 mins)
-- `10:10` **Practice**: [Lab 4.2 ~ Uncomment the rules](day4/bikezelo-rules.md) (20 mins)
-- `10:30` **Discussion**: Warning vs failure ~ a governance decision  (10 mins)
+- `09:40` **Breakout**: [Data Quality Tools](day4/quality-tools-trainer.md) (20 mins)
+- `10:00` **Report-Back**: [Data Quality Tools](day3/quality-tools.md) (20 mins)
+- `10:20` **Demo**: [Bikezelo Walkthrough](https://github.com/ingwaneorg/bikezelo) (10 mins)
+- `10:30` **Activity**: [Lab 4.1 ~ Clone, Setup & Run Bikezelo](day4/bikezelo-activity.md) (10 mins)
 
 ### Session 2
 
-- `11:00` **Practice**: [Lab 4.3 ~ How does bikezelo forecast?](day4/bikezelo-forecast.md) (20 mins)
-- `11:20` **Discussion**: Who owns the rules at work? (10 mins)
-- `11:30` EPA Presentation Briefing (10 mins)
-- `11:40` [Presentation Prep](day4/presentation.md) (20 mins)
+- `11:00` **Practice**: [Lab 4.2 ~ Uncomment the rules](day4/bikezelo-rules.md) (20 mins)
+- `11:20` **Practice**: [Lab 4.3 ~ How does bikezelo forecast?](day4/bikezelo-forecast.md) (10 mins)
+- `11:30` **Discussion**: Warning vs failure ~ a governance decision  (10 mins)
+- `11:40` **Discussion**: Who owns the rules at work? (10 mins)
+- `11:50` EPA Presentation Briefing (10 mins)
+- `12:00` [Presentation Prep](day4/presentation.md) (30 mins)
 
 ### Session 3
 
-- `13:00` Presentations ~ Group 1 (30 mins)
+- `13:30` Presentations ~ Group 1 (30 mins)
 
 ### Session 4
 
-- `13:40` Presentations ~ Group 2 (30 mins)
+- `14:10` Presentations ~ Group 2 (30 mins)
 
 ### Session 5
 
-- `14:20` Presentations ~ Group 3 (30 mins)
+- `14:50` Presentations ~ Group 3 (30 mins)
 
 ### Session 6
 
-- `15:00` Presentations ~ Group 4 (30 mins)
+- `15:30` Presentations ~ Group 4 (10 mins)
 
 ---
