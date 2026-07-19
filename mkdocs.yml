@@ -1,5 +1,5 @@
 # Site name
-site_name: Module 6 - Data Operations
+site_name: DE5M6 - Apprenticeship Materials
 dev_addr: '0.0.0.0:8000'
 
 # Navigation menu
@@ -9,41 +9,6 @@ nav:
 
   - Agenda:
     - Topics: agenda/index.md
-    - Day 1: agenda/day1.md
-    - Day 2: agenda/day2.md
-    - Day 3: agenda/day3.md
-    - Day 4: agenda/day4.md
-
-  - "Day 1 - Monitoring & Performance":
-    - "Status Page Analysis": day1/status-page-report-back.md
-    - "Lab 1.1 ~ 01 Create Fabric Lakehouse": labs/01-lakehouse.md
-    - "Lab 1.2 ~ 05 Dataflows Gen2": labs/05-dataflows-gen2.md
-    - "Lab 1.3 ~ 18 Monitor Hub": labs/18-monitor-hub.md
-    - "Lab 1.4 ~ 06c Monitor Warehouse": labs/06c-monitor-data-warehouse.md
-    - "Cloud Monitoring Comparison": day1/cloud-monitoring-comparison.md
-
-  - "Day 2 - Incident Response":
-    - "Lab 2.1 ~ 04 Ingest Pipeline": labs/04-ingest-pipeline.md
-    - "Lab 2.2 - Break it Systematically": day2/breaking-things.md
-    - "Lab 04 ~ More Complex Breaks": day2/complex-breaking.md
-    - "Lab ~ 11 Data Activator": labs/11-data-activator.md
-    - "Fire Drill Preparation": day2/incident-response-prep.md
-    - "🔥 Fire Drill ~ Round 1": day2/fire-drill-groups.md
-    - "🔥 Fire Drill ~ Round 2": day2/fire-drill-groups.md
-
-  - "Day 3 - Quality & Governance":
-    - "Data Quality Dimensions": day3/quality-dimensions.md
-    - "Lab 3.1 ~ Medallion Architecture": labs/31-medallion.md
-    - "Lab 3.2 ~ 21 Deployment Pipelines": labs/21-deployment-pipelines.md
-    - "Technical Debt Audit": day3/technical-debt-activity.md
-
-  - "Day 4 - Improvement & Value":
-    - "Data Quality Tools": day3/quality-tools.md
-    - "Bikezelo Walkthrough": https://github.com/ingwaneorg/bikezelo
-    - "Lab 4.1 ~ Clone, Setup & Run Bikezelo": day4/bikezelo-activity.md
-    - "Lab 4.2 ~ Uncomment the rules": day4/bikezelo-rules.md
-    - "Lab 4.3 ~ How does bikezelo forecast?": day4/bikezelo-forecast.md
-    - "Presentation Prep": day4/presentation.md
 
   - Resources: resources.md
 
