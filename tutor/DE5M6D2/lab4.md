@@ -1,17 +1,18 @@
-## 🧪 <mark>Lab 04 ~ Ingest Data with a Pipeline in MS Fabric</mark>
+## 🧪 <mark>Lab 04 ~ Ingest Data with a Rerunnable Pipeline</mark>
 
-<span style="background-color: orange;">Give learners the link:</span> 
-https://qaalabs.github.io/fabric/04-ingest-pipeline/
+<span style="background-color: orange;">Give learners the link:</span>
+https://qaalabs.github.io/DE5M6/labs/04-ingest-pipeline/
 
 ### Activities
 
 - Create a workspace
 - Create a lakehouse
-- Create a pipeline
-- Create a notebook
-- Modify the pipeline
+- Upload `sales.csv` (trainer-provided)
+- Create a notebook - reads `Files/new_data/*.csv`, drops rows with a missing/negative `UnitPrice`, writes with `overwrite` + `overwriteSchema`
+- Build a pipeline wrapping the notebook
+- Run it, check **Monitor**, note the row count
 
 ### Overview
 
-One of the core tasks of a data engineer is to implement and manage the ingestion of data from multiple operational data sources into the lakehouse. In Microsoft Fabric, you can implement **extract, transform, and load** (ETL) or **extract, load, and transform** (ELT) solutions for data ingestion through the creation of *pipelines*.
+This pipeline is deliberately built to be **rerun unchanged** later today, against different versions of the source data (Lab 2.2 and Lab 2.3). The wildcard read and `overwrite`/`overwriteSchema` write are what make that possible - make sure learners understand *why* before moving on, not just that it works.
 
