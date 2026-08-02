@@ -12,7 +12,7 @@
 ### Session 2
 
 - `11:00` **Slides**: [Introduction to Microsoft Fabric](labs/run-inside-vm.md) (10 mins)
-- `11:10` **Practice**: [Lab 1.1 ~ 01 Create Fabric Lakehouse](labs/01-lakehouse.md) (30 mins)
+- `11:10` **Practice**: [Lab 1.1 ~ 01 Create Fabric Lakehouse](labs/00-fabric-warmup.md) (30 mins)
 - `11:40` **Discussion**: Debrief about the lab (10 mins)
 - `11:50` **Practice**: [Lab 1.2 ~ 05 Dataflows Gen2](labs/05-dataflows-gen2.md) (30 mins)
 

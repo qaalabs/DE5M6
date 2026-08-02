@@ -18,7 +18,7 @@ nav:
   - "Day 1 - Monitoring & Performance":
     - "Status Page Analysis": day1/status-page-report-back.md
     - "Introduction to Microsoft Fabric": labs/run-inside-vm.md
-    - "Lab 1.1 ~ 01 Create Fabric Lakehouse": labs/01-lakehouse.md
+    - "Lab 1.1 ~ 01 Create Fabric Lakehouse": labs/00-fabric-warmup.md
     - "Lab 1.2 ~ 05 Dataflows Gen2": labs/05-dataflows-gen2.md
     - "Logon to Azure and MS Fabric": labs/run-inside-vm.md
     - "Lab 1.3 ~ 18 Monitor Hub": labs/18-monitor-hub.md
