@@ -13,7 +13,7 @@
 
 ## Session 2
 
-- **Slides**: Introduction to Microsoft Fabric
+- **Slides**: [Introduction to Microsoft Fabric](../labs/run-inside-vm.md)
 - **Practice**: [Lab 1.1 ~ 01 Create Fabric Lakehouse](../labs/01-lakehouse.md)
 - **Discussion**: Debrief about the lab
 - **Practice**: [Lab 1.2 ~ 05 Dataflows Gen2](../labs/05-dataflows-gen2.md)
@@ -22,8 +22,8 @@
 
 ## Session 3
 
+- [Logon to Azure and MS Fabric](../labs/run-inside-vm.md)
 - **Practice**: [Lab 1.3 ~ 18 Monitor Hub](../labs/18-monitor-hub.md)
-- **Discussion**: Debrief about the lab
 - **Practice**: [Lab 1.4 ~ 06c Monitor Warehouse](../labs/06c-monitor-data-warehouse.md)
 - **Discussion**: Monitoring Tools
 
