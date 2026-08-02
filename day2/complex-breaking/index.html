@@ -5,6 +5,8 @@
       
       
       
+        <link rel="canonical" href="https://qaalabs.github.io/DE5M6/day2/complex-breaking/">
+      
       
         <link rel="prev" href="../breaking-things/">
       
@@ -16,7 +18,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -24,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
       
 
@@ -528,7 +530,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../labs/01-lakehouse/" class="md-nav__link">
+      <a href="../../labs/run-inside-vm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction to Microsoft Fabric
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../labs/00-fabric-warmup/" class="md-nav__link">
         
   
   
@@ -564,6 +594,34 @@
     
   
     Lab 1.2 ~ 05 Dataflows Gen2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../labs/run-inside-vm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction to Microsoft Fabric
   
 
     
@@ -851,10 +909,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#scenario-1-performance-issues" class="md-nav__link">
+  <a href="#scenario-1-schema-evolution-an-added-column" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Scenario 1: Performance Issues
+        Scenario 1: Schema Evolution - an Added Column
       
     </span>
   </a>
@@ -862,21 +920,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#scenario-2-data-corruption-scenarios" class="md-nav__link">
+  <a href="#scenario-2-resource-constraints-timing-issues" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Scenario 2: Data Corruption Scenarios
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#scenario-3-resource-constraints-timing-issues" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Scenario 3: Resource Constraints &amp; Timing Issues
+        Scenario 2: Resource Constraints &amp; Timing Issues
       
     </span>
   </a>
@@ -1121,14 +1168,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day3/quality-tools/" class="md-nav__link">
+      <a href="../../labs/21-deployment-pipelines/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Data Quality Tools
+    Lab 3.2 ~ 21 Deployment Pipelines
   
 
     
@@ -1157,34 +1204,6 @@
     
   
     Technical Debt Audit
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../labs/21-deployment-pipelines/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Lab 3.2 ~ 21 Deployment Pipelines
   
 
     
@@ -1251,6 +1270,62 @@
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../day4/quality-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Quality Tools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/ingwaneorg/bikezelo" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bikezelo Walkthrough
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -1417,116 +1492,59 @@
 
 <h1 id="day-2-advanced-breaking-scenarios">Day 2: Advanced Breaking Scenarios</h1>
 <h2 id="overview">Overview</h2>
-<p>This session introduces more complex failure scenarios that mirror real-world production issues.</p>
-<h2 id="scenario-1-performance-issues">Scenario 1: Performance Issues</h2>
+<p>This session introduces more complex failure scenarios that mirror real-world production issues. Same rig as <strong>Breaking Things</strong>: swap the file in <code>Files/new_data</code>, run <code>Load Sales - Breaking</code> directly, observe what happens to the <code>breaking_sales</code> table.</p>
+<hr>
+<h2 id="scenario-1-schema-evolution-an-added-column">Scenario 1: Schema Evolution - an Added Column</h2>
 <h3 id="setup">Setup</h3>
-<p><strong>Context:</strong> "Large files and complex processing can cause timeouts and resource issues"</p>
-<p><strong>Breaking Method:</strong></p>
-<p>Find or create a <strong>much larger dataset</strong> than used in the previous lab</p>
-<p>Options:</p>
-<ul>
-<li>Duplicate your existing file multiple times to create a large CSV</li>
-<li>Use online sample datasets (sales data, sensor data, etc.)</li>
-<li>Create synthetic data with repeated rows</li>
-</ul>
-<p><strong>Target:</strong> File should be significantly larger (aim for 10x+ size)</p>
+<p><strong>Context:</strong> "A source system upstream starts sending you an extra column you never asked for."</p>
+<p>Your trainer will provide <code>sales-extra-column.csv</code> - the same data as <code>sales.csv</code>, plus one additional column (for example <code>DiscountCode</code>) that didn't exist before.</p>
 <h3 id="execution-observation">Execution &amp; Observation</h3>
 <p><strong>Break Process:</strong></p>
 <ol>
-<li><strong>Replace your pipeline's source</strong> with the large file</li>
-<li><strong>Run the pipeline</strong> and monitor performance</li>
-<li><strong>Observe behavior:</strong> Does it slow down? Timeout? Complete successfully?</li>
-<li><strong>Check resource usage</strong> if visible in Fabric interface</li>
+<li>In <code>Files/new_data</code>, delete <code>sales.csv</code></li>
+<li>Upload <code>sales-extra-column.csv</code> in its place</li>
+<li>Run <strong>Load Sales - Breaking</strong></li>
 </ol>
 <p><strong>Key Observation Points:</strong></p>
 <ul>
-<li>How long does processing take compared to small files?</li>
-<li>Does Fabric show any warnings or performance indicators?</li>
-<li>Are there any timeout errors or resource constraint messages?</li>
-<li>How does the monitoring respond to slower processing?</li>
+<li>Does the run succeed?</li>
+<li>Look at the <code>breaking_sales</code> table - did the new column make it into the table, or is it gone?</li>
+<li>The notebook explicitly lists out the columns it keeps (<code>df["SalesOrderNumber", "SalesOrderLineNumber", ...]</code>) - what does that line do to a column it wasn't told about?</li>
+<li>Compare this to <strong>Break 3</strong> (a <em>missing</em> column) - is a source silently gaining a column more or less dangerous than losing one?</li>
 </ul>
 <h3 id="documentation">Documentation</h3>
 <p><strong>Quick Notes:</strong> Write down what you observed for later discussion</p>
 <hr>
-<h2 id="scenario-2-data-corruption-scenarios">Scenario 2: Data Corruption Scenarios</h2>
+<h2 id="scenario-2-resource-constraints-timing-issues">Scenario 2: Resource Constraints &amp; Timing Issues</h2>
 <h3 id="setup_1">Setup</h3>
-<p><strong>Context:</strong> "Real data often contains mixed quality - some good records, some problematic ones"</p>
-<p><strong>Breaking Method Options</strong> (choose 1-2 to try):</p>
-<p><strong>Option A: Mixed Data Types</strong></p>
+<p><strong>Context:</strong> "Production systems often have multiple processes competing for resources."</p>
+<p><strong>Breaking Method Options:</strong></p>
+<p><strong>Option A: Multiple Simultaneous Runs</strong></p>
 <ul>
-<li>In a numeric column, replace some values with text ("ERROR", "NULL", "N/A")</li>
-<li>Leave other values as valid numbers</li>
-<li>See if Fabric processes partially or fails completely</li>
+<li>Open two copies of <code>Load Sales - Breaking</code> (or run the notebook and the full <strong>Ingest Sales Data</strong> pipeline) at the same time</li>
+<li>See how Fabric handles concurrent writes to the same table</li>
 </ul>
-<p><strong>Option B: Encoding Issues</strong></p>
+<p><strong>Option B: Rapid Successive Runs</strong></p>
 <ul>
-<li>Add special characters or emojis to text fields</li>
-<li>Try different character encodings if possible</li>
-<li>See how Fabric handles non-standard characters</li>
-</ul>
-<p><strong>Option C: Incomplete Records</strong></p>
-<ul>
-<li>Delete some values in the middle of rows (creating gaps)</li>
-<li>Remove entire columns from some rows</li>
-<li>Create inconsistent row lengths</li>
+<li>Run the notebook repeatedly in quick succession, without waiting for one run to finish before starting the next</li>
+<li>Observe queuing, conflicts, or resource competition</li>
 </ul>
 <h3 id="execution-observation_1">Execution &amp; Observation</h3>
 <p><strong>Break Process:</strong></p>
 <ol>
-<li><strong>Choose one corruption type</strong> and modify your data file</li>
-<li><strong>Run the pipeline</strong> and carefully observe results</li>
-<li><strong>Check output data</strong> - did bad records get processed, skipped, or cause failure?</li>
-<li><strong>Try a second corruption type</strong> if time allows</li>
+<li>Choose one resource constraint scenario</li>
+<li>Execute your chosen approach</li>
+<li>Monitor system behavior in the <strong>Monitor</strong> hub</li>
+<li>Try to overwhelm the system (within reasonable limits)</li>
 </ol>
 <p><strong>Key Observation Points:</strong></p>
 <ul>
-<li>Does the pipeline fail completely or continue with warnings?</li>
-<li>How does Fabric handle the corrupted data?</li>
-<li>What error messages or warnings appear?</li>
-<li>Can you identify which specific records caused problems?</li>
-<li>How would a business user know there was an issue?</li>
+<li>How does Fabric manage multiple concurrent operations against the same table?</li>
+<li>Are there visible queue indicators or resource monitors?</li>
+<li>Do operations slow down, queue up, or fail outright?</li>
+<li>Does <code>overwrite</code> behave any differently under concurrency than <code>append</code> would have?</li>
 </ul>
 <h3 id="documentation_1">Documentation</h3>
-<p><strong>Record findings:</strong> What happened with each corruption type?</p>
-<hr>
-<h2 id="scenario-3-resource-constraints-timing-issues">Scenario 3: Resource Constraints &amp; Timing Issues</h2>
-<h3 id="setup_2">Setup</h3>
-<p><strong>Context:</strong> "Production systems often have multiple processes competing for resources"</p>
-<p><strong>Breaking Method Options:</strong></p>
-<p><strong>Option A: Multiple Simultaneous Pipelines</strong></p>
-<ul>
-<li>Create duplicate copies of your pipeline</li>
-<li>Run multiple instances at the same time</li>
-<li>See how Fabric handles concurrent resource usage</li>
-</ul>
-<p><strong>Option B: Complex Transformations</strong></p>
-<ul>
-<li>Add complex calculations or data transformations to your pipeline</li>
-<li>Create joins between multiple large datasets if possible</li>
-<li>See if processing becomes resource-intensive</li>
-</ul>
-<p><strong>Option C: Rapid Successive Runs</strong></p>
-<ul>
-<li>Run the same pipeline repeatedly in quick succession</li>
-<li>Don't wait for completion before starting the next run</li>
-<li>Observe queuing, conflicts, or resource competition</li>
-</ul>
-<h3 id="execution-observation_2">Execution &amp; Observation</h3>
-<p><strong>Break Process:</strong></p>
-<ol>
-<li><strong>Choose one resource constraint scenario</strong></li>
-<li><strong>Execute your chosen approach</strong></li>
-<li><strong>Monitor system behavior</strong> and any queue/resource indicators</li>
-<li><strong>Try to overwhelm the system</strong> (within reasonable limits)</li>
-</ol>
-<p><strong>Key Observation Points:</strong></p>
-<ul>
-<li>How does Fabric manage multiple concurrent operations?</li>
-<li>Are there visible queue indicators or resource monitors?</li>
-<li>Do operations slow down, queue up, or fail?</li>
-<li>How long before the system recovers to normal performance?</li>
-</ul>
-<h3 id="documentation_2">Documentation</h3>
 <p><strong>Note observations:</strong> System behavior under load</p>
 <hr><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
   <!-- mkdocs-quiz progress sidebar (desktop) -->
@@ -3280,7 +3298,7 @@ window.mkdocsQuizConfig = {
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["toc.integrate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
       

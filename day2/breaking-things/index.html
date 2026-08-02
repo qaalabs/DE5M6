@@ -5,6 +5,8 @@
       
       
       
+        <link rel="canonical" href="https://qaalabs.github.io/DE5M6/day2/breaking-things/">
+      
       
         <link rel="prev" href="../../labs/04-ingest-pipeline/">
       
@@ -16,7 +18,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -24,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
       
 
@@ -528,7 +530,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../labs/01-lakehouse/" class="md-nav__link">
+      <a href="../../labs/run-inside-vm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction to Microsoft Fabric
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../labs/00-fabric-warmup/" class="md-nav__link">
         
   
   
@@ -564,6 +594,34 @@
     
   
     Lab 1.2 ~ 05 Dataflows Gen2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../labs/run-inside-vm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction to Microsoft Fabric
   
 
     
@@ -1110,14 +1168,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day3/quality-tools/" class="md-nav__link">
+      <a href="../../labs/21-deployment-pipelines/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Data Quality Tools
+    Lab 3.2 ~ 21 Deployment Pipelines
   
 
     
@@ -1146,34 +1204,6 @@
     
   
     Technical Debt Audit
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../labs/21-deployment-pipelines/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Lab 3.2 ~ 21 Deployment Pipelines
   
 
     
@@ -1240,6 +1270,62 @@
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../day4/quality-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Quality Tools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/ingwaneorg/bikezelo" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bikezelo Walkthrough
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -1406,40 +1492,31 @@
 
 <h1 id="day-2-breaking-things">Day 2: Breaking Things</h1>
 <h2 id="overview">Overview</h2>
-<p>This hands-on session introduces failures into your upgraded pipeline from <strong>Breaking Setup</strong>.
-You will practice controlled troubleshooting while observing how MS Fabric responds to different types of failures.</p>
+<p>This hands-on session introduces failures into the pipeline's source data. You will practice controlled troubleshooting while observing how MS Fabric - and your own notebook - respond to different types of failures.</p>
 <h2 id="part-1-establish-working-baseline">Part 1: Establish Working Baseline</h2>
-<h3 id="setup-instructions">Setup Instructions</h3>
 <p><strong>Technical Setup:</strong></p>
 <ul>
 <li>This morning you completed <a href="../../labs/04-ingest-pipeline/">Lab 04 - Ingest Pipeline Data</a></li>
-<li>Earlier today you completed <strong>Breaking Setup</strong>, adding three standby Copy data activities and a fallback path to <code>Ingest Sales Data - Breaking</code></li>
-<li>Verify the pipeline still runs successfully end-to-end before you start</li>
+<li>Earlier today you completed <strong>Breaking Setup</strong>, creating <code>Load Sales - Breaking</code> (writing to <code>dbo.breaking_sales</code> with <code>overwrite</code> + <code>overwriteSchema</code>)</li>
+<li>Confirm <code>Files/new_data</code> contains only the original <code>sales.csv</code>, and that <code>Load Sales - Breaking</code> runs successfully end-to-end before you start</li>
 </ul>
-<h3 id="bypass-the-fallback-path">Bypass the fallback path</h3>
-<p>The fallback path you built in Breaking Setup would quietly recover from some of today's breaks - which hides the failure rather than showing it. Today's breaks should be plainly visible, so disconnect the fallback for now:</p>
-<ol>
-<li>Select the connector running from <strong>Copy data</strong>'s red X (<strong>Failure</strong>) to <strong>Copy Data Fallback</strong>, and delete it.</li>
-<li>Confirm <strong>Copy data</strong>'s green check (<strong>Success</strong>) is still connected to <strong>Notebook</strong>.</li>
-<li>Save the pipeline.</li>
-</ol>
-<p><em>You'll reconnect this path in Complex Breaking.</em></p>
 <hr>
 <h2 id="part-2-systematic-breaking-learning">Part 2: Systematic Breaking &amp; Learning</h2>
 <h3 id="break-cycle-process">Break Cycle Process</h3>
 <p>For each break type, follow this 4-step cycle:</p>
 <ol>
 <li><strong>Break</strong>   - introduce the failure</li>
-<li><strong>Observe</strong> - run it, note error messages</li>
-<li><strong>Discuss</strong> - what does the error tell us?</li>
+<li><strong>Observe</strong> - run it, note error messages (or the lack of one)</li>
+<li><strong>Discuss</strong> - what does the result tell us?</li>
 <li><strong>Fix</strong>     - restore to working state</li>
 </ol>
+<p>From here on, you're running the <strong><code>Load Sales - Breaking</code> notebook directly</strong> (not the pipeline) after each change to <code>Files/new_data</code>.</p>
 <hr>
 <h3 id="break-1-notebook-error">Break 1: Notebook Error</h3>
-<p>The simplest break - no pipeline run needed, just the notebook itself.</p>
+<p>The simplest break - no file changes needed, just the notebook itself.</p>
 <p><strong>Break Instructions:</strong></p>
 <ul>
-<li>Open the <strong>Load Sales</strong> notebook</li>
+<li>Open <strong>Load Sales - Breaking</strong></li>
 <li>
 <p>Find the line that reads:</p>
 <div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">"FirstName"</span><span class="p">,</span> <span class="n">split</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">"CustomerName"</span><span class="p">),</span> <span class="s2">" "</span><span class="p">)</span><span class="o">.</span><span class="n">getItem</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span><span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">"LastName"</span><span class="p">,</span> <span class="n">split</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">"CustomerName"</span><span class="p">),</span> <span class="s2">" "</span><span class="p">)</span><span class="o">.</span><span class="n">getItem</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
@@ -1467,64 +1544,65 @@ You will practice controlled troubleshooting while observing how MS Fabric respo
 <h3 id="break-2-file-not-found">Break 2: File Not Found</h3>
 <p><strong>Break Instructions:</strong></p>
 <ul>
-<li>On the pipeline canvas, select the connector from <strong>Delete data</strong> to <strong>Copy data</strong>, and delete it</li>
-<li>Drag from <strong>Delete data</strong>'s completion connector to <strong>Copy Data (Not Exists)</strong></li>
-<li>Drag from <strong>Copy Data (Not Exists)</strong>'s green check (<strong>Success</strong>) to <strong>Notebook</strong></li>
-<li>Save and run the pipeline</li>
+<li>In <code>Files/new_data</code>, delete <code>sales.csv</code> so the folder is empty</li>
+<li>Run <strong>Load Sales - Breaking</strong></li>
 </ul>
 <p><strong>Observation Points:</strong></p>
 <ul>
-<li>How quickly can you see the error?</li>
-<li>What does Fabric's error message say?</li>
-<li>Does the error message help you identify the problem?</li>
-<li>Does the Notebook activity run at all?</li>
+<li>Which cell fails - the read, or something later?</li>
+<li>What does the error message say?</li>
+<li>Does it tell you the folder is empty, or just that nothing matched?</li>
 </ul>
 <p><strong>Discussion:</strong></p>
 <p><strong>Fix &amp; Verify:</strong></p>
 <ul>
-<li>Delete the two connectors you just added</li>
-<li>Reconnect <strong>Delete data</strong> to <strong>Copy data</strong>, and confirm <strong>Copy data</strong>'s Success connector to <strong>Notebook</strong> is intact</li>
-<li>Save and run the pipeline again to confirm it works</li>
+<li>Upload the original <code>sales.csv</code> back into <code>Files/new_data</code></li>
+<li>Run the notebook again to confirm it works</li>
 </ul>
 <hr>
 <h3 id="break-3-schema-mismatch">Break 3: Schema Mismatch</h3>
+<p>Your trainer will provide <code>sales-wrong-header.csv</code> - the same data, but with one column missing from the header row.</p>
 <p><strong>Break Instructions:</strong></p>
 <ul>
-<li>Reconnect <strong>Delete data</strong> to <strong>Copy Data (Wrong Header)</strong> instead of <strong>Copy data</strong> (same swap as Break 2)</li>
-<li>Connect <strong>Copy Data (Wrong Header)</strong>'s Success to <strong>Notebook</strong></li>
-<li>Save and run the pipeline</li>
+<li>In <code>Files/new_data</code>, delete <code>sales.csv</code></li>
+<li>Upload <code>sales-wrong-header.csv</code> in its place (leave the filename as-is - the notebook reads whatever <code>.csv</code> file it finds)</li>
+<li>Run <strong>Load Sales - Breaking</strong></li>
 </ul>
 <p><strong>Observation Points:</strong></p>
 <ul>
-<li>Does the <strong>Copy Data (Wrong Header)</strong> activity fail, or does it succeed and pass the problem downstream to the <strong>Notebook</strong> activity?</li>
-<li>Does the error message clearly indicate a schema issue?</li>
-<li>Is it obvious which activity caused the problem?</li>
+<li>Does the run fail, or does it succeed?</li>
+<li>If it succeeds - go and look at the <code>breaking_sales</code> table. Does its schema match what you expected?</li>
+<li>Recall the <code>overwriteSchema</code> question from <strong>Breaking Setup</strong> - was accepting a schema change automatically a good thing here?</li>
+<li>If you'd still been using <code>append</code> from this morning, what would have happened instead?</li>
 </ul>
 <p><strong>Discussion:</strong></p>
 <p><strong>Fix &amp; Verify:</strong></p>
 <ul>
-<li>Reconnect <strong>Delete data</strong> back to <strong>Copy data</strong>, and <strong>Copy data</strong> to <strong>Notebook</strong></li>
-<li>Save and run the pipeline again to confirm it works</li>
+<li>Delete <code>sales-wrong-header.csv</code> from <code>Files/new_data</code></li>
+<li>Upload the original <code>sales.csv</code> back</li>
+<li>Run the notebook again and confirm <code>breaking_sales</code> matches the row count and schema you expect</li>
 </ul>
 <hr>
 <h3 id="break-4-data-quality-issues">Break 4: Data Quality Issues</h3>
+<p>Your trainer will provide <code>sales-wrong-data.csv</code> - the same shape of file, but with some blank, non-numeric, and malformed values mixed in among otherwise valid rows.</p>
 <p><strong>Break Instructions:</strong></p>
 <ul>
-<li>Reconnect <strong>Delete data</strong> to <strong>Copy Data (Wrong Data)</strong> (same swap again)</li>
-<li>Connect <strong>Copy Data (Wrong Data)</strong>'s Success to <strong>Notebook</strong></li>
-<li>Save and run the pipeline</li>
+<li>In <code>Files/new_data</code>, delete <code>sales.csv</code></li>
+<li>Upload <code>sales-wrong-data.csv</code> in its place</li>
+<li>Run <strong>Load Sales - Breaking</strong></li>
 </ul>
 <p><strong>Observation Points:</strong></p>
 <ul>
-<li>Does every activity show green, with no errors at all?</li>
-<li>Open the <strong>new_sales</strong> table in your lakehouse - what does the bad data actually look like once it's landed?</li>
+<li>Does every cell show success, with no errors at all?</li>
+<li>Open the <code>breaking_sales</code> table - what does the bad data actually look like once it's landed?</li>
 <li>If nothing failed, how would you notice this in a real production pipeline?</li>
 </ul>
 <p><strong>Discussion:</strong></p>
 <p><strong>Fix &amp; Verify:</strong></p>
 <ul>
-<li>Reconnect <strong>Delete data</strong> back to <strong>Copy data</strong>, and <strong>Copy data</strong> to <strong>Notebook</strong></li>
-<li>Save and run the pipeline again to confirm it works</li>
+<li>Delete <code>sales-wrong-data.csv</code> from <code>Files/new_data</code></li>
+<li>Upload the original <code>sales.csv</code> back</li>
+<li>Run the notebook again to confirm it works</li>
 </ul>
 <hr><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
   <!-- mkdocs-quiz progress sidebar (desktop) -->
@@ -3278,7 +3356,7 @@ window.mkdocsQuizConfig = {
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["toc.integrate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
       

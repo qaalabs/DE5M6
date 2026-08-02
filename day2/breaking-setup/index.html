@@ -5,6 +5,8 @@
       
       
       
+        <link rel="canonical" href="https://qaalabs.github.io/DE5M6/day2/breaking-setup/">
+      
       
       
       
@@ -12,7 +14,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -20,7 +22,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
       
 
@@ -524,7 +526,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../labs/01-lakehouse/" class="md-nav__link">
+      <a href="../../labs/run-inside-vm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction to Microsoft Fabric
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../labs/00-fabric-warmup/" class="md-nav__link">
         
   
   
@@ -560,6 +590,34 @@
     
   
     Lab 1.2 ~ 05 Dataflows Gen2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../labs/run-inside-vm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction to Microsoft Fabric
   
 
     
@@ -1024,14 +1082,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day3/quality-tools/" class="md-nav__link">
+      <a href="../../labs/21-deployment-pipelines/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Data Quality Tools
+    Lab 3.2 ~ 21 Deployment Pipelines
   
 
     
@@ -1060,34 +1118,6 @@
     
   
     Technical Debt Audit
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../labs/21-deployment-pipelines/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Lab 3.2 ~ 21 Deployment Pipelines
   
 
     
@@ -1154,6 +1184,62 @@
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../day4/quality-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Quality Tools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/ingwaneorg/bikezelo" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bikezelo Walkthrough
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -1320,163 +1406,64 @@
 
 <h1 id="day-2-breaking-setup">Day 2: Breaking Setup</h1>
 <h2 id="overview">Overview</h2>
-<p>Before today's breaking exercises, you'll upgrade this morning's pipeline with two things:</p>
-<ul>
-<li><strong>Three standby Copy data activities</strong> - each pre-built and pointed at a different broken source, sitting ready on the canvas so today's exercises are about wiring them in, not building them live.</li>
-<li><strong>A fallback path</strong> - a fourth Copy data activity, wired in so it only runs if the main one fails.</li>
-</ul>
-<p>Nothing in this session breaks anything yet. By the end you'll have re-run the pipeline and confirmed it still works exactly as it did this morning - just with more pieces in place, ready for <strong>Breaking Things</strong> and <strong>Complex Breaking</strong>.</p>
+<p>Before today's breaking exercises, you'll make a protected copy of this morning's notebook and fix one thing about how it saves data. Nothing in this session breaks anything yet - by the end you'll have re-run the pipeline and confirmed it still works exactly as it did this morning, just with one change in place, ready for <strong>Breaking Things</strong> and <strong>Complex Breaking</strong>.</p>
 <hr>
-<h2 id="part-1-protect-your-working-pipeline">Part 1: Protect your working pipeline</h2>
+<h2 id="part-1-duplicate-the-notebook">Part 1: Duplicate the notebook</h2>
 <ol>
 <li>
-<p>In your workspace, find the <strong>Ingest Sales Data</strong> pipeline from Lab 04.</p>
+<p>In your workspace, find the <strong>Load Sales</strong> notebook from Lab 04.</p>
 </li>
 <li>
-<p>In its <strong>...</strong> menu, select <strong>Duplicate</strong>.</p>
+<p>In its <strong>...</strong> menu, select <strong>Duplicate</strong> (or use <strong>Save As</strong> from inside the notebook).</p>
 </li>
 <li>
-<p>Rename the copy to <code>Ingest Sales Data - Breaking</code>.</p>
+<p>Rename the copy to <code>Load Sales - Breaking</code>.</p>
 </li>
 <li>
-<p>Open the duplicate. All remaining steps happen here - your original pipeline stays untouched as a working reference.</p>
+<p>Open the duplicate. All remaining steps happen here - your original <code>Load Sales</code> notebook and <code>sales</code> table stay untouched as a working reference.</p>
 </li>
 </ol>
 <hr>
-<h2 id="part-2-add-three-standby-copy-data-activities">Part 2: Add three standby Copy data activities</h2>
-<p>A Copy data activity can only point at one connection - so instead of one activity you swap connections on, you need one activity per broken source. Add three more Copy data activities to the canvas, position them off to the side away from the main flow, and leave them disconnected for now.</p>
-<table>
-<thead>
-<tr>
-<th>Activity name</th>
-<th>Connection URL</th>
-<th>Represents</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>Copy Data (Not Exists)</code></td>
-<td><code>https://raw.githubusercontent.com/qaalabs/files/main/msfabric/sales-does-not-exist.csv</code></td>
-<td>File not found</td>
-</tr>
-<tr>
-<td><code>Copy Data (Wrong Header)</code></td>
-<td><code>https://raw.githubusercontent.com/qaalabs/files/main/msfabric/sales-wrong-header.csv</code></td>
-<td>Schema mismatch</td>
-</tr>
-<tr>
-<td><code>Copy Data (Wrong Data)</code></td>
-<td><code>https://raw.githubusercontent.com/qaalabs/files/main/msfabric/sales-wrong-data.csv</code></td>
-<td>Data quality issues</td>
-</tr>
-</tbody>
-</table>
-<p><strong>For each row in the table:</strong></p>
-<ol>
-<li>
-<p>On the <strong>Activities</strong> tab, add a <strong>Copy data</strong> activity to the canvas, positioned away from the existing activities.</p>
-</li>
-<li>
-<p>Select the new activity, then in the pane below the canvas, on the <strong>General</strong> tab, set <strong>Name</strong> to match the table.</p>
-</li>
-<li>
-<p>Configure its <strong>Source</strong> tab:</p>
-<ul>
-<li><strong>Connection</strong>: select <strong>Browse all</strong>, search for <strong>HTTP</strong>, and create a new connection using the <strong>URL</strong> from the table<ul>
-<li><strong>Connection name</strong>: a short name matching the activity, e.g. <code>sales-not-exists</code></li>
-<li><strong>Data gateway</strong>: (none)</li>
-<li><strong>Authentication kind</strong>: Anonymous</li>
-<li><strong>Privacy level</strong>: None</li>
-</ul>
-</li>
-<li><strong>File format</strong>: DelimitedText, with the same file format settings as your original Copy data activity</li>
-</ul>
-</li>
-<li>
-<p>Configure its <strong>Destination</strong> tab - identical to your original Copy data activity:</p>
-<ul>
-<li><strong>Connection</strong>: your lakehouse</li>
-<li><strong>Root folder</strong>: Files</li>
-<li><strong>File path</strong>: <code>new_data</code> / <code>sales.csv</code></li>
-<li><strong>File format</strong>: DelimitedText</li>
-</ul>
-</li>
-<li>
-<p>Don't connect it to anything yet.</p>
-</li>
-</ol>
-<div class="admonition info">
-<p class="admonition-title">Why leave these disconnected?</p>
-<p>These three are standalone, ready-built activities, not switches on the main one. Today's breaking exercises will have you wire one in at a time - in place of the main Copy data activity - then disconnect it again to restore the working pipeline.</p>
+<h2 id="part-2-change-the-parameter-cell">Part 2: Change the parameter cell</h2>
+<p>The parameter cell currently sets:</p>
+<div class="highlight"><pre><span></span><code><span class="n">table_name</span> <span class="o">=</span> <span class="s2">"dbo.sales"</span>
+</code></pre></div>
+<p>Change this to:</p>
+<div class="highlight"><pre><span></span><code><span class="n">table_name</span> <span class="o">=</span> <span class="s2">"dbo.breaking_sales"</span>
+</code></pre></div>
+<p>This keeps today's breaking exercises writing to their own table, so you never overwrite the clean <code>sales</code> table from this morning.</p>
+<hr>
+<h2 id="part-3-fix-the-write-mode">Part 3: Fix the write mode</h2>
+<p>Find the last cell, which currently ends with:</p>
+<div class="highlight"><pre><span></span><code><span class="n">df</span><span class="o">.</span><span class="n">write</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">"delta"</span><span class="p">)</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="s2">"append"</span><span class="p">)</span><span class="o">.</span><span class="n">saveAsTable</span><span class="p">(</span><span class="n">table_name</span><span class="p">)</span>
+</code></pre></div>
+<p><strong>Why this needs to change:</strong> <code>append</code> adds rows every time the notebook runs - rerun it twice and you double-count the same data. It also has no answer for a source file whose columns have changed since the last run; it just fails. Today you're about to rerun this notebook repeatedly against files that are deliberately broken in different ways, so you need a write mode that rebuilds the table cleanly each time and doesn't choke the moment a column changes.</p>
+<p>Change the line to:</p>
+<div class="highlight"><pre><span></span><code><span class="n">df</span><span class="o">.</span><span class="n">write</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">"delta"</span><span class="p">)</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="s2">"overwrite"</span><span class="p">)</span><span class="o">.</span><span class="n">option</span><span class="p">(</span><span class="s2">"overwriteSchema"</span><span class="p">,</span> <span class="s2">"true"</span><span class="p">)</span><span class="o">.</span><span class="n">saveAsTable</span><span class="p">(</span><span class="n">table_name</span><span class="p">)</span>
+</code></pre></div>
+<p><code>overwrite</code> replaces the table with whatever this run produced, instead of adding to it. <code>overwriteSchema</code> tells Fabric to accept whatever columns this run's data has, even if that's different from last time - rather than raising an error.</p>
+<div class="admonition note">
+<p class="admonition-title">Keep this question in mind for later</p>
+<p><code>overwriteSchema</code> means a schema change won't stop the pipeline. Is that a good thing or a bad thing? You'll come back to this in <strong>Break 3</strong>.</p>
 </div>
 <hr>
-<h2 id="part-3-add-a-fallback-copy-data-activity">Part 3: Add a fallback Copy data activity</h2>
+<h2 id="part-4-verify-it-still-works">Part 4: Verify it still works</h2>
 <ol>
 <li>
-<p>On the <strong>Activities</strong> tab, add another <strong>Copy data</strong> activity to the canvas.</p>
-<ul>
-<li>Fabric will name it <code>Copy data1</code> by default - rename it, otherwise you'll end up with <code>Copy data1</code>, <code>Copy data2</code> etc. that are hard to tell apart later.</li>
-</ul>
+<p>Confirm <code>Files/new_data/sales.csv</code> (from this morning) is still there and is the only file in that folder.</p>
 </li>
 <li>
-<p>Select the new activity, then in the pane below the canvas, on the <strong>General</strong> tab, set <strong>Name</strong> to <code>Copy Data Fallback</code>.</p>
+<p>Run the whole <code>Load Sales - Breaking</code> notebook (<strong>Run all</strong>).</p>
 </li>
 <li>
-<p>Configure its <strong>Source</strong> tab:</p>
-<ul>
-<li><strong>Connection</strong>: <code>sales</code> (the original, working connection)</li>
-<li><strong>File format</strong>: DelimitedText, same file format settings as your original Copy data activity</li>
-</ul>
-</li>
-<li>
-<p>Configure its <strong>Destination</strong> tab - identical to your original Copy data activity:</p>
-<ul>
-<li><strong>Connection</strong>: your lakehouse</li>
-<li><strong>Root folder</strong>: Files</li>
-<li><strong>File path</strong>: <code>new_data</code> / <code>sales.csv</code></li>
-<li><strong>File format</strong>: DelimitedText</li>
-</ul>
+<p>Confirm a <code>breaking_sales</code> table is created, with the same row count as this morning's <code>sales</code> table.</p>
 </li>
 </ol>
-<hr>
-<h2 id="part-4-wire-the-fallback-path">Part 4: Wire the fallback path</h2>
-<p>Each activity has small connector icons on its right edge: a green check (<strong>Success</strong>), a red X (<strong>Failure</strong>), and a blue circular arrow (<strong>Completion</strong>).</p>
-<ol>
-<li>
-<p>Select the connector line currently running from <strong>Copy data</strong> to <strong>Notebook</strong> and delete it.</p>
-</li>
-<li>
-<p>Drag from <strong>Copy data</strong>'s green check (<strong>Success</strong>) to <strong>Notebook</strong>.</p>
-</li>
-<li>
-<p>Drag from <strong>Copy data</strong>'s red X (<strong>Failure</strong>) to <strong>Copy Data Fallback</strong>.</p>
-</li>
-<li>
-<p>Drag from <strong>Copy Data Fallback</strong>'s green check (<strong>Success</strong>) to <strong>Notebook</strong>.</p>
-</li>
-</ol>
-<p>Your pipeline shape should now be:</p>
-<div class="highlight"><pre><span></span><code>Delete data --(Completion)--&gt; Copy data --(Success)-----------------&gt; Notebook
-                                  |
-                                  --(Failure)--&gt; Copy Data Fallback --(Success)--&gt; Notebook
-</code></pre></div>
-<hr>
-<h2 id="part-5-verify-it-still-works">Part 5: Verify it still works</h2>
-<ol>
-<li>
-<p>Confirm the main <strong>Copy data</strong> activity's Connection is set to <code>sales</code>.</p>
-</li>
-<li>
-<p>Save the pipeline.</p>
-</li>
-<li>
-<p>Run it, and wait for all activities to complete.</p>
-</li>
-<li>
-<p>Confirm the run succeeds end-to-end, the same as it did this morning - <strong>Copy Data Fallback</strong> should not run, since the main <strong>Copy data</strong> activity succeeds.</p>
-</li>
-</ol>
-<p>You now have a pipeline with pre-built alternate sources and a fallback path, ready for today's breaking exercises.</p><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
+<p>You now have a safe copy to work in, writing with <code>overwrite</code> + <code>overwriteSchema</code>, ready for today's breaking exercises.</p>
+<div class="admonition info">
+<p class="admonition-title">Why you won't be running the full pipeline today</p>
+<p>The <strong>Ingest Sales Data</strong> pipeline's <strong>Delete data</strong> and <strong>Copy data</strong> steps would undo any file you manually swap into <code>Files/new_data</code> - deleting it and re-fetching the original clean <code>sales.csv</code> before your notebook ever sees your change. From here on, <strong>run the <code>Load Sales - Breaking</code> notebook directly</strong>, not the pipeline.</p>
+</div><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
   <!-- mkdocs-quiz progress sidebar (desktop) -->
   <label class="md-nav__title">
     <span class="md-nav__icon md-icon"></span>
@@ -3228,7 +3215,7 @@ window.mkdocsQuizConfig = {
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["toc.integrate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
       
