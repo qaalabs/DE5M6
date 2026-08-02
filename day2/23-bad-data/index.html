@@ -5,7 +5,7 @@
       
       
       
-        <link rel="canonical" href="https://qaalabs.github.io/DE5M6/day3/technical-debt/">
+        <link rel="canonical" href="https://qaalabs.github.io/DE5M6/day2/23-bad-data/">
       
       
       
@@ -18,7 +18,7 @@
     
     
       
-        <title>Technical Debt Audit - Module 6 - Data Operations</title>
+        <title>Lab 2.3 - A File That Doesn't Make It Fail - Module 6 - Data Operations</title>
       
     
     
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#technical-debt-audit" class="md-skip">
+        <a href="#lab-23-a-file-that-doesnt-make-it-fail" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Technical Debt Audit
+              Lab 2.3 - A File That Doesn't Make It Fail
             
           </span>
         </div>
@@ -682,62 +682,58 @@
 
 
 
-<h1 id="technical-debt-audit">Technical Debt Audit</h1>
-<h2 id="setup">Setup</h2>
+<h1 id="lab-23-a-file-that-doesnt-make-it-fail">Lab 2.3 - A File That Doesn't Make It Fail</h1>
+<div class="admonition info">
+<p class="admonition-title">This lab continues from Lab 2.2. Your pipeline and <code>sales.csv</code> should still be in place.</p>
+</div>
+<p>From here on you're rerunning the <strong>exact same pipeline, unchanged</strong> - new files land alongside the ones already there, nothing gets deleted between labs.</p>
+<p><code>sales1.csv</code> - the same shape of file as <code>sales.csv</code>, but most of the rows have a negative <code>UnitPrice</code> - is in the same <code>M6/day2/</code> folder on your Desktop.</p>
+<h2 id="steps">Steps</h2>
+<ol>
+<li>
+<p>Upload <code>sales1.csv</code> into <code>Files/new_data</code>, <strong>alongside</strong> <code>sales.csv</code> - don't delete anything.</p>
+</li>
+<li>
+<p>Run the <strong>Ingest Sales Data</strong> pipeline again. Don't change it.</p>
+</li>
+<li>
+<p>Go to <strong>Monitor</strong> and check the run.</p>
+</li>
+<li>
+<p>Open the <code>sales</code> table and check the row count.</p>
+</li>
+</ol>
+<h2 id="observation-points">Observation Points</h2>
 <ul>
-<li>Repo: <a href="https://github.com/QAADE5/techmart-2026">https://github.com/QAADE5/techmart-2026</a></li>
-<li>Learners use the checklist and Google Doc to record findings</li>
-<li>All groups audit all files - but each group has a <strong>reporting lens</strong></li>
+<li>Did the pipeline run succeed or fail?</li>
+<li>Compare the new row count to the one you noted down in Lab 2.1. Did it go up by roughly the number of rows in <code>sales1.csv</code>?</li>
+<li>If not - where did those rows go? Check the notebook's printed output from this run.</li>
+<li>The pipeline reported success. Does "succeeded" mean "did what we wanted"?</li>
 </ul>
-<h2 id="group-lens-assignment">Group Lens Assignment</h2>
+<h2 id="record-it">Record it</h2>
 <table>
 <thead>
 <tr>
-<th>Group</th>
-<th>Lens</th>
-<th>Focus areas</th>
+<th>Run</th>
+<th>Input</th>
+<th>Row count</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>1</td>
-<td>Security</td>
-<td>Security issues + configuration management</td>
+<td>Lab 2.1</td>
+<td>sales.csv</td>
+<td></td>
 </tr>
 <tr>
-<td>2</td>
-<td>Performance</td>
-<td>Database performance + application performance</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Code Quality</td>
-<td>Hard-coded values + duplication + naming + code structure</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Maintainability</td>
-<td>Documentation + error handling + logging &amp; monitoring</td>
+<td>Lab 2.3</td>
+<td>+ sales1.csv</td>
+<td></td>
 </tr>
 </tbody>
 </table>
-<h2 id="facilitator-notes">Facilitator Notes</h2>
-<ul>
-<li>Explain the disclaimers on the README - all credentials are fake, intentionally broken</li>
-<li>Show the repo briefly before sending to breakouts</li>
-<li>Google Doc is the shared record - everyone contributes findings</li>
-<li>Circulate through breakout rooms, steer groups who get stuck toward the checklist</li>
-</ul>
-<h2 id="report-back">Report Back</h2>
-<p>Each group presents through their lens:</p>
-<ul>
-<li>"The most significant [security/performance/code quality/maintainability] issue we found was..."</li>
-<li>"Our priority fix would be... because..."</li>
-</ul>
-<h2 id="answer-key">Answer Key</h2>
-<ul>
-<li><a href="../tech-debt-issues/">Full list of all 44 issues</a></li>
-</ul><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
+<h2 id="discussion">Discussion</h2>
+<p><em>Nothing to fix here - this file stays, ready for Lab 2.4.</em></p><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
   <!-- mkdocs-quiz progress sidebar (desktop) -->
   <label class="md-nav__title">
     <span class="md-nav__icon md-icon"></span>

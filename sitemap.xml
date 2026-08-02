@@ -69,19 +69,27 @@
          <lastmod>2026-08-02</lastmod>
     </url>
     <url>
+         <loc>https://qaalabs.github.io/DE5M6/day2/21-ingest-pipeline/</loc>
+         <lastmod>2026-08-02</lastmod>
+    </url>
+    <url>
+         <loc>https://qaalabs.github.io/DE5M6/day2/22-notebook-breaks/</loc>
+         <lastmod>2026-08-02</lastmod>
+    </url>
+    <url>
+         <loc>https://qaalabs.github.io/DE5M6/day2/23-bad-data/</loc>
+         <lastmod>2026-08-02</lastmod>
+    </url>
+    <url>
+         <loc>https://qaalabs.github.io/DE5M6/day2/24-broken-schema/</loc>
+         <lastmod>2026-08-02</lastmod>
+    </url>
+    <url>
+         <loc>https://qaalabs.github.io/DE5M6/day2/25-concurrent-runs/</loc>
+         <lastmod>2026-08-02</lastmod>
+    </url>
+    <url>
          <loc>https://qaalabs.github.io/DE5M6/day2/ai-de/</loc>
-         <lastmod>2026-08-02</lastmod>
-    </url>
-    <url>
-         <loc>https://qaalabs.github.io/DE5M6/day2/breaking-setup/</loc>
-         <lastmod>2026-08-02</lastmod>
-    </url>
-    <url>
-         <loc>https://qaalabs.github.io/DE5M6/day2/breaking-things/</loc>
-         <lastmod>2026-08-02</lastmod>
-    </url>
-    <url>
-         <loc>https://qaalabs.github.io/DE5M6/day2/complex-breaking/</loc>
          <lastmod>2026-08-02</lastmod>
     </url>
     <url>
@@ -182,10 +190,6 @@
     </url>
     <url>
          <loc>https://qaalabs.github.io/DE5M6/labs/03b-medallion-lakehouse/</loc>
-         <lastmod>2026-08-02</lastmod>
-    </url>
-    <url>
-         <loc>https://qaalabs.github.io/DE5M6/labs/04-ingest-pipeline/</loc>
          <lastmod>2026-08-02</lastmod>
     </url>
     <url>
