@@ -18,7 +18,7 @@
 
 ### Session 3
 
-- `13:20` [Logon to Azure and MS Fabric](labs/run-inside-vm.md) (10 mins)
+- `13:20` **Activity**: [Logon to Azure and MS Fabric](labs/run-inside-vm.md) (10 mins)
 - `13:30` **Practice**: [Lab 1.3 ~ 18 Monitor Hub](labs/18-monitor-hub.md) (30 mins)
 - `14:00` **Practice**: [Lab 1.4 ~ 06c Monitor Warehouse](labs/06c-monitor-data-warehouse.md) (30 mins)
 - `14:30` **Discussion**: [Monitoring Tools](day1/monitoring-tools.md) (10 mins)
@@ -34,16 +34,18 @@
 
 ### Session 1
 
-- `09:40` **Practice**: [Lab 2.1 ~ 04 Ingest Pipeline](labs/04-ingest-pipeline.md) (30 mins)
+- `09:40` SETUP (10 mins)
+- `09:50` [21-INGEST](docs/21-ingest-pipeline.md) (20 mins)
 - `10:10` **Discussion**: [When a System Broke at Work](day2/system-broke.md) (10 mins)
-- `10:20` **Practice**: [Lab 2.2 - Break it Systematically](day2/breaking-things.md) (20 mins)
+- `10:20` [22-BREAKS](docs/22-notebook-breaks.md) (10 mins)
 
 ### Session 2
 
-- `11:00` **Practice**: [Lab 04 ~ More Complex Breaks](day2/complex-breaking.md) (20 mins)
-- `11:20` **Discussion**: Share Findings from Lab 04 (10 mins)
-- `11:30` **Demo**: [Lab ~ 11 Data Activator](labs/11-data-activator.md) (10 mins)
-- `11:40` **Discussion**: [AI in Data Engineering](day2/ai-de.md) (30 mins)
+- `11:00` [23-BAD-DATA](docs/23-bad-data.md) (10 mins)
+- `11:10` [24-SCHEMA](docs/24-broken-schema.md) (10 mins)
+- `11:20` [25-CONCURRENT](docs/25-concurrent-runs.md) (10 mins)
+- `11:30` **Demo**: [Lab ~ 11 Data Activator](labs/11-data-activator.md) (20 mins)
+- `11:50` **Discussion**: [AI in Data Engineering](day2/ai-de.md) (20 mins)
 
 ### Session 3
 

@@ -3,16 +3,19 @@
 ## Session 1
 
 - 🌅 Welcome to Day 2 of DE5 Module 6
-- **Practice**: [Lab 2.1 ~ 04 Ingest Pipeline](../labs/04-ingest-pipeline.md)
+- SETUP
+- [21-INGEST](../docs/21-ingest-pipeline.md)
 - **Discussion**: When a System Broke at Work
-- **Practice**: [Lab 2.2 - Break it Systematically](../day2/breaking-things.md)
+- [22-BREAKS](../docs/22-notebook-breaks.md)
+- 
 
 ## ☕ Morning Break
 
 ## Session 2
 
-- **Practice**: [Lab 04 ~ More Complex Breaks](../day2/complex-breaking.md)
-- **Discussion**: Share Findings from Lab 04
+- [23-BAD-DATA](../docs/23-bad-data.md)
+- [24-SCHEMA](../docs/24-broken-schema.md)
+- [25-CONCURRENT](../docs/25-concurrent-runs.md)
 - **Demo**: [Lab ~ 11 Data Activator](../labs/11-data-activator.md)
 - **Discussion**: AI in Data Engineering
 

@@ -26,9 +26,11 @@ nav:
     - "Cloud Monitoring Comparison": day1/cloud-monitoring-comparison.md
 
   - "Day 2 - Incident Response":
-    - "Lab 2.1 ~ 04 Ingest Pipeline": labs/04-ingest-pipeline.md
-    - "Lab 2.2 - Break it Systematically": day2/breaking-things.md
-    - "Lab 04 ~ More Complex Breaks": day2/complex-breaking.md
+    - "21-INGEST": docs/21-ingest-pipeline.md
+    - "22-BREAKS": docs/22-notebook-breaks.md
+    - "23-BAD-DATA": docs/23-bad-data.md
+    - "24-SCHEMA": docs/24-broken-schema.md
+    - "25-CONCURRENT": docs/25-concurrent-runs.md
     - "Lab ~ 11 Data Activator": labs/11-data-activator.md
     - "Fire Drill Preparation": day2/incident-response-prep.md
     - "🔥 Fire Drill ~ Round 1": day2/fire-drill-groups.md
