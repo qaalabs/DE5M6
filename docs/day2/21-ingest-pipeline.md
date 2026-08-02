@@ -55,12 +55,7 @@ In this lab you'll build a pipeline that you rerun several times today, against 
     table_name = "sales"
     ```
 
-3. In the **...** menu for the cell, select **Toggle parameter cell**.
-
-    !!! info "Toggle parameter cell"
-        This lets the pipeline you build in Step 5 pass a value in for `table_name` if it ever needs to - for today, the default is all you need.
-
-4. Add a new code cell below it:
+3. Add a new code cell below it:
 
     ```python
     from pyspark.sql.functions import *
@@ -95,12 +90,12 @@ In this lab you'll build a pipeline that you rerun several times today, against 
     print(f"Saved {table_name}: {df.count()} row(s)")
     ```
 
-5. Run all cells (**Run all**).
+4. Run all cells (**Run all**).
 
     !!! note
         Since this is the first time you've run any Spark code in this session, the Spark pool must be started - the first cell can take a minute or so to complete.
 
-6. Once it finishes, use the ⚙️ **Settings** icon to name the notebook `Load Sales`.
+5. Once it finishes, use the ⚙️ **Settings** icon to name the notebook `Load Sales`.
 
 
 ## Step 5: Build the pipeline

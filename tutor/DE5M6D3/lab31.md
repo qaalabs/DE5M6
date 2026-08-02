@@ -5,8 +5,7 @@ https://qaalabs.github.io/DE5M6/labs/31-medallion/
 
 ### Data source
 
-- Learner download: https://storage.googleapis.com/ingwane-qa-files/orders.zip
-- Canonical source / repo: https://github.com/QAADE5/M6/tree/main/fabric
+- Files are in `M6/day3/` in the learner repo clone (`https://github.com/QAADE5/M6`) - same clone used for Day 2's `day2/` files.
 
 ### Activities
 

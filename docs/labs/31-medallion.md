@@ -28,9 +28,9 @@ Quality means something different at each layer - watch for it as you go: bronze
 
 ## Step 3: Upload data to the bronze layer
 
-1. Download the data file for this exercise from `https://storage.googleapis.com/ingwane-qa-files/orders.zip`
+1. Locate the data files for this exercise in the `M6/day3/` folder on your Desktop.
 
-    - Extract the files and save them with their original names on your local computer (or lab VM if applicable).
+    !!! note "If you cannot find the `M6` folder, you may need to re-run the `git clone` command."
 
     !!! success "There should be 4 files: 2019.csv, 2020.csv, 2021.csv, and metadata.json"
 
