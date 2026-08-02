@@ -1,5 +1,6 @@
 # Site name
 site_name: Module 6 - Data Operations
+site_url: https://qaalabs.github.io/DE5M6/
 dev_addr: '0.0.0.0:8000'
 
 # Navigation menu
