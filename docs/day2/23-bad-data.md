@@ -33,3 +33,9 @@ From here on you're rerunning the **exact same pipeline, unchanged** - new files
 ## Discussion
 
 *Nothing to fix here - this file stays, ready for Lab 2.4.*
+
+!!! abstract "S26: Identify data quality metrics and track them to ensure the quality, accuracy and reliability of the data product."
+
+!!! abstract "S6: Systematically clean, validate, and describe data at all stages of extract, transform, load (ETL)."
+
+!!! abstract "K23: How to undertake analysis and root cause investigation."

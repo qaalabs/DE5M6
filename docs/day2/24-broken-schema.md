@@ -22,3 +22,9 @@
 ## Discussion
 
 - If this were a real production pipeline, how would you find out a new source file had the wrong number of columns *before* it broke a scheduled run?
+
+!!! abstract "S8: Identify and troubleshoot issues with data processing pipelines."
+
+!!! abstract "K23: How to undertake analysis and root cause investigation."
+
+!!! abstract "K22: Technology and service management best practice including configuration, change and incident management."

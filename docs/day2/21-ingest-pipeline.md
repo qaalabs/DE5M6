@@ -97,6 +97,13 @@ In this lab you'll build a pipeline that you rerun several times today, against 
 
 5. Once it finishes, use the ⚙️ **Settings** icon to name the notebook `Load Sales`.
 
+6. Find the session indicator in the status bar and select **Stop session**.
+
+    !!! note "Make sure you stop this notebook session before moving on to the next step"
+        - The Fabric capacity we have (F2) only allows one Spark session to run at a time
+        - Leaving the notebook running holds capacity you no longer need
+        - The pipeline you build next needs a Spark session to run
+
 
 ## Step 5: Build the pipeline
 
@@ -126,3 +133,9 @@ In this lab you'll build a pipeline that you rerun several times today, against 
 | Lab 2.1 | sales.csv |           |
 
 You now have a working, rerunnable pipeline: read whatever's in `Files/new_data`, drop anything with a bad price, overwrite the table. You'll rerun this exact pipeline - unchanged - twice more today.
+
+!!! abstract "S4: Automate data pipelines such as batch, real-time, on demand and other processes using programming languages and data integration platforms with graphical user interfaces."
+
+!!! abstract "S6: Systematically clean, validate, and describe data at all stages of extract, transform, load (ETL)."
+
+!!! abstract "K8: Deployment approaches for new data pipelines and automated processes."
