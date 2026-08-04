@@ -34,7 +34,7 @@
 
 ### Session 1
 
-- `09:40` Setup VM and MS Fabric Playground (10 mins)
+- `09:40` **Activity**: [Setup VM and MS Fabric Playground](labs/run-inside-vm.md) (10 mins)
 - `09:50` **Activity**: [Lab 2.1 ~ Ingest Data Pipeline](day2/21-ingest-pipeline.md) (30 mins)
 - `10:20` **Discussion**: [When a System Broke at Work](day2/system-broke.md) (10 mins)
 - `10:30` **Activity**: [Lab 2.2 ~ Notebook Breaks Pipeline](day2/22-notebook-breaks.md) (10 mins)
@@ -73,9 +73,9 @@
 
 ### Session 2
 
-- `10:50` FABRIC-SETUP (10 mins)
+- `10:50` **Activity**: [Setup MS Fabric Playground](labs/run-inside-vm.md) (10 mins)
 - `11:00` **Activity**: [Lab 3.1 ~ Medallion Architecture](labs/31-medallion.md) (40 mins)
-- `11:40` **Discussion**: [Data Quality ~ Medallion Architecture](day3/quality-patterns.md) (10 mins)
+- `11:40` **Discussion**: [Data Quality ~ Medallion Architecture](day3/quality-patterns.md) (20 mins)
 - `12:00` **Practice**: [Lab 3.2 ~ 21 Deployment Pipelines](labs/21-deployment-pipelines.md) (20 mins)
 
 ### Session 3
@@ -87,6 +87,7 @@
 ### Session 4
 
 - `14:50` **Report-Back**: [Technical Debt Audit](day3/tech-debt-issues.md) (20 mins)
+- `15:10` [Debt Controls](day3/debt-controls.md) (20 mins)
 - `15:30` **Discussion**: Deployment Governance (20 mins)
 
 ---

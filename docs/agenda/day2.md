@@ -3,7 +3,7 @@
 ## Session 1
 
 - 🌅 Welcome to Day 2 of DE5 Module 6
-- Setup VM and MS Fabric Playground
+- **Activity**: [Setup VM and MS Fabric Playground](../labs/run-inside-vm.md)
 - **Activity**: [Lab 2.1 ~ Ingest Data Pipeline](../day2/21-ingest-pipeline.md)
 - **Discussion**: When a System Broke at Work
 - **Activity**: [Lab 2.2 ~ Notebook Breaks Pipeline](../day2/22-notebook-breaks.md)

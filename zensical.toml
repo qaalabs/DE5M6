@@ -21,6 +21,7 @@ nav = [
     {"Cloud Monitoring Comparison" = "day1/cloud-monitoring-comparison.md"},
   ]},
   {"Day 2 - Incident Response" = [
+    {"Setup VM and MS Fabric Playground" = "labs/run-inside-vm.md"},
     {"Lab 2.1 ~ Ingest Data Pipeline" = "day2/21-ingest-pipeline.md"},
     {"Lab 2.2 ~ Notebook Breaks Pipeline" = "day2/22-notebook-breaks.md"},
     {"Lab 2.3 ~ Bad Data Received" = "day2/23-bad-data.md"},
@@ -31,7 +32,9 @@ nav = [
   ]},
   {"Day 3 - Quality & Governance" = [
     {"Data Quality Dimensions" = "day3/quality-dimensions.md"},
+    {"Setup MS Fabric Playground" = "labs/run-inside-vm.md"},
     {"Lab 3.1 ~ Medallion Architecture" = "labs/31-medallion.md"},
+    {"Data Quality ~ Medallion Architecture" = "day3/quality-patterns.md"},
     {"Lab 3.2 ~ 21 Deployment Pipelines" = "labs/21-deployment-pipelines.md"},
     {"Technical Debt Audit" = "day3/technical-debt-activity.md"},
   ]},
