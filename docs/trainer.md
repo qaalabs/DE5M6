@@ -34,17 +34,17 @@
 
 ### Session 1
 
-- `09:40` SETUP (10 mins)
-- `09:50` [21-INGEST](day2/21-ingest-pipeline.md) (20 mins)
-- `10:10` **Discussion**: [When a System Broke at Work](day2/system-broke.md) (10 mins)
-- `10:20` [22-BREAKS](day2/22-notebook-breaks.md) (10 mins)
+- `09:40` Setup VM and MS Fabric Playground (10 mins)
+- `09:50` [Lab 2.1 ~ Ingest Data Pipeline](day2/21-ingest-pipeline.md) (30 mins)
+- `10:20` **Discussion**: [When a System Broke at Work](day2/system-broke.md) (10 mins)
+- `10:30` [Lab 2.2 ~ Notebook Breaks the Pipeline](day2/22-notebook-breaks.md) (10 mins)
 
 ### Session 2
 
-- `11:00` [23-BAD-DATA](day2/23-bad-data.md) (10 mins)
-- `11:10` [24-SCHEMA](day2/24-broken-schema.md) (10 mins)
-- `11:20` [25-CONCURRENT](day2/25-concurrent-runs.md) (10 mins)
-- `11:30` **Demo**: [Lab ~ 11 Data Activator](labs/11-data-activator.md) (20 mins)
+- `11:00` [Lab 2.3 ~ Bad Data Received](day2/23-bad-data.md) (10 mins)
+- `11:10` [Lab 2.4 ~ Schema Breaks the Pipeline](day2/24-broken-schema.md) (10 mins)
+- `11:20` [Lab 2.5 ~ Running Concurrent Pipelines](day2/25-concurrent-runs.md) (20 mins)
+- `11:40` **Demo**: [Lab ~ 11 Data Activator](labs/11-data-activator.md) (10 mins)
 - `11:50` **Discussion**: [AI in Data Engineering](day2/ai-de.md) (20 mins)
 
 ### Session 3

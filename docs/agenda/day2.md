@@ -3,19 +3,18 @@
 ## Session 1
 
 - 🌅 Welcome to Day 2 of DE5 Module 6
-- SETUP
-- [21-INGEST](../day2/21-ingest-pipeline.md)
+- Setup VM and MS Fabric Playground
+- [Lab 2.1 ~ Ingest Data Pipeline](../day2/21-ingest-pipeline.md)
 - **Discussion**: When a System Broke at Work
-- [22-BREAKS](../day2/22-notebook-breaks.md)
-- 
+- [Lab 2.2 ~ Notebook Breaks the Pipeline](../day2/22-notebook-breaks.md)
 
 ## ☕ Morning Break
 
 ## Session 2
 
-- [23-BAD-DATA](../day2/23-bad-data.md)
-- [24-SCHEMA](../day2/24-broken-schema.md)
-- [25-CONCURRENT](../day2/25-concurrent-runs.md)
+- [Lab 2.3 ~ Bad Data Received](../day2/23-bad-data.md)
+- [Lab 2.4 ~ Schema Breaks the Pipeline](../day2/24-broken-schema.md)
+- [Lab 2.5 ~ Running Concurrent Pipelines](../day2/25-concurrent-runs.md)
 - **Demo**: [Lab ~ 11 Data Activator](../labs/11-data-activator.md)
 - **Discussion**: AI in Data Engineering
 
