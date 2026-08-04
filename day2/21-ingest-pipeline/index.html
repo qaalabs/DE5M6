@@ -773,7 +773,7 @@
 
 
 
-<h1 id="lab-21-ingest-data-with-a-rerunnable-pipeline">Lab 2.1 - Ingest Data with a Rerunnable Pipeline</h1>
+<h1 id="lab-21-ingest-data-with-a-rerunnable-pipeline">Lab 2.1 ~ Ingest Data with a Rerunnable Pipeline</h1>
 <p>A data lakehouse is a common analytical data store for cloud-scale analytics solutions. One of the core tasks of a data engineer is to implement and manage the ingestion of data from multiple operational data sources into the lakehouse.</p>
 <p>In this lab you'll build a pipeline that you rerun several times today, against different versions of the source data, without ever having to change it. That only works because of two design choices: the notebook reads <em>every</em> file currently in the source folder rather than one specific file, and it writes with <code>overwrite</code> (not <code>append</code>) so a rerun always reflects the current state of that folder rather than piling more rows on top of what's already there.</p>
 <div class="admonition info">
