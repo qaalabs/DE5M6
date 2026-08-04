@@ -1,4 +1,4 @@
-# Lab 2.1 - Ingest Data with a Rerunnable Pipeline
+# Lab 2.1 ~ Ingest Data with a Rerunnable Pipeline
 
 A data lakehouse is a common analytical data store for cloud-scale analytics solutions. One of the core tasks of a data engineer is to implement and manage the ingestion of data from multiple operational data sources into the lakehouse.
 
