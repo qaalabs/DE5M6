@@ -14,7 +14,7 @@
 - **How do we bring our design to life?**
 - *Transforming plans into functional data pipelines, implementing storage solutions, and creating robust processing workflows.*
 
-## Module 6: Data Operations
+## <mark>Module 6: Data Operations</mark>
 
 > Monitor
 

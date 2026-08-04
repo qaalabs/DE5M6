@@ -1,3 +1,5 @@
+day1/10-clone-repo.md
+day2/20-clone-repo.md
 day2/group-blaze.md
 day2/group-ember.md
 day2/group-ignis.md

@@ -2,16 +2,7 @@
 
 - https://bud.sso.app.qa.com/lab/microsoft-fabric-playground/
 
-### Previous experience
+### Ask learners to clone the M6 repo
 
-- Ask if anyone has used Microsoft Fabric
-- Ask if anyone has used Azure Data Flow
+- https://qaalabs.github.io/DE5M6/day1/10-clone-repo/
 
-## 🎥 Present slides
-
-- Introduction to MS Fabric
-- Get started with lakehouses in Microsoft Fabric
-- What is a lakehouse?
-- Work with a Fabric lakehouse
-- Load data into a lakehouse
-- Explore, transform, and visualize data in the lakehouse
