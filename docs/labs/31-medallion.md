@@ -4,6 +4,7 @@ In this exercise you will build a medallion architecture in a Fabric lakehouse: 
 
 Quality means something different at each layer - watch for it as you go: bronze decides whether to land data as-is or enforce anything immediately, silver is where cleaning and validation actually happen, and gold decides what "fit for business use" means. Today's DMBOK quality dimensions discussion straight after this lab will ask you to map dimensions onto **all three** layers, so keep the touchpoints at each step in mind - not just the validate cell in silver.
 
+
 ## Step 1: Create a workspace
 
 1. In the navigation pane on the left, select **Workspaces** (the icon looks similar to &#128455;).
@@ -53,7 +54,7 @@ Quality means something different at each layer - watch for it as you go: bronze
 
 1. At the top-right of the Lakehouse page, select the **Analyze data with** dropdown and choose: **Notebook** > **New notebook**.
 
-2. Rename the notebook to `Transform data for Silver`.
+2. Rename the notebook to: `Transform data for Silver`
 
 Work through the following cells in order, running each one before moving to the next.
 
