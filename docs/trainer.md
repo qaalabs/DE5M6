@@ -42,8 +42,8 @@
 ### Session 2
 
 - `11:00` [Lab 2.3 ~ Bad Data Received](day2/23-bad-data.md) (10 mins)
-- `11:10` [Lab 2.4 ~ Schema Breaks the Pipeline](day2/24-broken-schema.md) (10 mins)
-- `11:20` [Lab 2.5 ~ Running Concurrent Pipelines](day2/25-concurrent-runs.md) (20 mins)
+- `11:10` [Lab 2.2 ~ Break the Pipeline](day2/24-broken-schema.md) (10 mins)
+- `11:20` [Lab 2.5 ~ Run Concurrent Pipelines](day2/25-concurrent-runs.md) (20 mins)
 - `11:40` **Demo**: [Lab ~ 11 Data Activator](labs/11-data-activator.md) (10 mins)
 - `11:50` **Discussion**: [AI in Data Engineering](day2/ai-de.md) (20 mins)
 

@@ -13,8 +13,8 @@
 ## Session 2
 
 - [Lab 2.3 ~ Bad Data Received](../day2/23-bad-data.md)
-- [Lab 2.4 ~ Schema Breaks the Pipeline](../day2/24-broken-schema.md)
-- [Lab 2.5 ~ Running Concurrent Pipelines](../day2/25-concurrent-runs.md)
+- [Lab 2.2 ~ Break the Pipeline](../day2/24-broken-schema.md)
+- [Lab 2.5 ~ Run Concurrent Pipelines](../day2/25-concurrent-runs.md)
 - **Demo**: [Lab ~ 11 Data Activator](../labs/11-data-activator.md)
 - **Discussion**: AI in Data Engineering
 
@@ -24,14 +24,14 @@
 
 - **Investigation**: [Fire Drill Preparation](../day2/incident-response-prep.md)
 - **Breakout**: Fire Drill Technical Briefing
-- [🔥 Fire Drill ~ Round 1](../day2/fire-drill-groups.md)
+- 🔥 Fire Drill ~ Round 1
 - **Discussion**: Fire Drill Debrief 1
 
 ## ☕ Afternoon Break
 
 ## Session 4
 
-- [🔥 Fire Drill ~ Round 2](../day2/fire-drill-groups.md)
+- 🔥 Fire Drill ~ Round 2
 - **Discussion**: Fire Drill Debrief 2
 - **Discussion**: Workplace Connections
 

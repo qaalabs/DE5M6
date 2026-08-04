@@ -10,18 +10,43 @@ nav:
 
   - Agenda:
     - Topics: agenda/index.md
+    - Day 1: agenda/day1.md
     - Day 2: agenda/day2.md
+    - Day 3: agenda/day3.md
+    - Day 4: agenda/day4.md
+
+  - "Day 1 - Monitoring & Performance":
+    - "Status Page Analysis": day1/status-page-report-back.md
+    - "Introduction to Microsoft Fabric": labs/run-inside-vm.md
+    - "Lab 1.1 ~ 01 Create Fabric Lakehouse": labs/00-fabric-warmup.md
+    - "Lab 1.2 ~ 05 Dataflows Gen2": labs/05-dataflows-gen2.md
+    - "Logon to Azure and MS Fabric": labs/run-inside-vm.md
+    - "Lab 1.3 ~ 18 Monitor Hub": labs/18-monitor-hub.md
+    - "Lab 1.4 ~ 06c Monitor Warehouse": labs/06c-monitor-data-warehouse.md
+    - "Cloud Monitoring Comparison": day1/cloud-monitoring-comparison.md
 
   - "Day 2 - Incident Response":
     - "Lab 2.1 ~ Ingest Data Pipeline": day2/21-ingest-pipeline.md
     - "Lab 2.2 ~ Notebook Breaks the Pipeline": day2/22-notebook-breaks.md
     - "Lab 2.3 ~ Bad Data Received": day2/23-bad-data.md
-    - "Lab 2.4 ~ Schema Breaks the Pipeline": day2/24-broken-schema.md
-    - "Lab 2.5 ~ Running Concurrent Pipelines": day2/25-concurrent-runs.md
+    - "Lab 2.2 ~ Break the Pipeline": day2/24-broken-schema.md
+    - "Lab 2.5 ~ Run Concurrent Pipelines": day2/25-concurrent-runs.md
     - "Lab ~ 11 Data Activator": labs/11-data-activator.md
     - "Fire Drill Preparation": day2/incident-response-prep.md
-    - "🔥 Fire Drill ~ Round 1": day2/fire-drill-groups.md
-    - "🔥 Fire Drill ~ Round 2": day2/fire-drill-groups.md
+
+  - "Day 3 - Quality & Governance":
+    - "Data Quality Dimensions": day3/quality-dimensions.md
+    - "Lab 3.1 ~ Medallion Architecture": labs/31-medallion.md
+    - "Lab 3.2 ~ 21 Deployment Pipelines": labs/21-deployment-pipelines.md
+    - "Technical Debt Audit": day3/technical-debt-activity.md
+
+  - "Day 4 - Improvement & Value":
+    - "Data Quality Tools": day4/quality-tools.md
+    - "Bikezelo Walkthrough": https://github.com/ingwaneorg/bikezelo
+    - "Lab 4.1 ~ Clone, Setup & Run Bikezelo": day4/bikezelo-activity.md
+    - "Lab 4.2 ~ Uncomment the rules": day4/bikezelo-rules.md
+    - "Lab 4.3 ~ How does bikezelo forecast?": day4/bikezelo-forecast.md
+    - "Presentation Prep": day4/presentation.md
 
   - Resources: resources.md
 
@@ -37,6 +62,7 @@ not_in_nav: |
   day2/system-broke.md
   day2/ai-de.md
   day2/fire-drill-briefing.md
+  day2/fire-drill-groups.md
   day2/scenario1-debrief.md
   day2/scenario2-debrief.md
   day3/good-data.md
