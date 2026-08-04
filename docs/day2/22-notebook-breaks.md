@@ -1,4 +1,4 @@
-# Lab 2.2 - Break the Notebook
+# Lab 2.2 ~ Break the Notebook
 
 !!! info "This lab continues from Lab 2.1. Your pipeline, notebook, and `sales.csv` should still be in place."
 

@@ -1,4 +1,4 @@
-# Lab 2.3 - A File That Doesn't Make It Fail
+# Lab 2.3 ~ A File That Doesn't Make It Fail
 
 !!! info "This lab continues from Lab 2.2. Your pipeline and `sales.csv` should still be in place."
 
