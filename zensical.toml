@@ -34,7 +34,6 @@ nav = [
     {"Data Quality Dimensions" = "day3/quality-dimensions.md"},
     {"Setup MS Fabric Playground" = "labs/run-inside-vm.md"},
     {"Lab 3.1 ~ Medallion Architecture" = "labs/31-medallion.md"},
-    {"Data Quality ~ Medallion Architecture" = "day3/quality-patterns.md"},
     {"Lab 3.2 ~ 21 Deployment Pipelines" = "labs/21-deployment-pipelines.md"},
     {"Technical Debt Audit" = "day3/technical-debt-activity.md"},
   ]},
