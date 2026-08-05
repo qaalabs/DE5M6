@@ -4,6 +4,52 @@ In this exercise you will build a medallion architecture in a Fabric lakehouse: 
 
 Quality means something different at each layer - watch for it as you go: bronze decides whether to land data as-is or enforce anything immediately, silver is where cleaning and validation actually happen, and gold decides what "fit for business use" means. Today's DMBOK quality dimensions discussion straight after this lab will ask you to map dimensions onto **all three** layers, so keep the touchpoints at each step in mind - not just the validate cell in silver.
 
+```mermaid
+flowchart LR
+    CSV["Files/bronze/<br/>2019.csv, 2020.csv, 2021.csv"] --> CHECK1
+
+    subgraph BRZ["Bronze - land as-is"]
+        CHECK1{"Batch check:<br/>files match metadata.json?"}
+    end
+
+    CHECK1 -->|pass| NB1
+
+    subgraph NB1["Notebook: Transform data for Silver"]
+        direction TB
+        CLEAN["Cell 2 - Clean"]
+        VALID["Cell 3 - Validate<br/>(assert checks)"]
+        CLEAN --> VALID
+    end
+
+    VALID -->|pass| ST
+
+    subgraph SIL["Silver - cleaned & trusted"]
+        ST["dbo.sales_silver"]
+    end
+
+    ST --> NB2
+
+    subgraph NB2["Notebook: Transform data for Gold"]
+        direction TB
+        SUM["Cell 1 - Summarise"]
+        RECON["Cell 2 - Reconciliation check"]
+        SUM --> RECON
+    end
+
+    RECON -->|pass| GT
+
+    subgraph GLD["Gold - business-ready"]
+        GT["dbo.sales_gold"]
+    end
+
+    classDef bronze fill:#cd7f32,stroke:#8a541c,color:#fff
+    classDef silver fill:#c0c0c0,stroke:#767676,color:#000
+    classDef gold fill:#ffd700,stroke:#b8960b,color:#000
+
+    class BRZ bronze
+    class SIL silver
+    class GLD gold
+```
 
 ## Step 1: Create a workspace
 
@@ -39,6 +85,8 @@ Quality means something different at each layer - watch for it as you go: bronze
 
 3. In the **...** menu for the **Files** folder in the **Explorer** pane, select **New subfolder** and name it `bronze`.
 
+    !!! note "Make sure that you upload the 3 files to the sub-folder called `bronze`"
+
 4. In the **...** menu for the **bronze** folder, select **Upload** > **Upload files**, then upload the 3 CSV files (use shift to select them together). Leave `metadata.json` out - it's a manifest to check against, not data to process.
 
 5. Confirm the 3 files you see - `2019.csv`, `2020.csv`, and `2021.csv` - match the `files` list in `metadata.json` exactly. Don't open the CSVs to check the data inside yet.
@@ -56,7 +104,7 @@ Quality means something different at each layer - watch for it as you go: bronze
 
 2. Rename the notebook to: `Transform data for Silver`
 
-Work through the following cells in order, running each one before moving to the next.
+!!! tip "Work through the following cells in order, running each one before moving to the next."
 
 ### Cell 1 - Load the bronze files
 
@@ -118,6 +166,7 @@ After running all four cells, select the **Run** tab above the ribbon and then s
 
 - This stops the compute resource being used by the notebook.
 
+
 ## Step 5: Explore the silver layer
 
 1. Navigate back to your workspace and select the **Sales SQL analytics endpoint**.
@@ -141,6 +190,7 @@ After running all four cells, select the **Run** tab above the ribbon and then s
     ORDER BY TotalQuantity DESC
     ```
 
+
 ## Step 6: Create the Silver to Gold notebook
 
 Gold answers a specific business question. It's always built from silver, never from bronze directly.
@@ -150,6 +200,8 @@ Gold answers a specific business question. It's always built from silver, never 
 
     !!! warning "If you receive a `TooManyRequestsForCapacity` error when running the first cell:"
         Make sure you stopped the session in the Silver notebook before continuing.
+
+!!! tip "Work through the following cells in order, running each one before moving to the next."
 
 ### Cell 1 - Summarise sales by year
 
@@ -205,7 +257,7 @@ print('Saved: dbo.sales_gold')
 
     > This figure is only as trustworthy as the checks behind it:
 
-    > 1. The file count you confirmed in bronze;
+    > 1. The files you confirmed against the manifest in bronze;
 
     > 2. The asserts you wrote in silver;
 
