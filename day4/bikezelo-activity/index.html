@@ -558,10 +558,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-you-should-see" class="md-nav__link">
+  <a href="#things-to-note" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What you should see
+        Things to note:
       
     </span>
   </a>
@@ -719,9 +719,12 @@
 <p>Bikezelo is a lightweight pipeline monitoring dashboard writen for this module. It simulates a live data feed, validates incoming records against quality rules, and forecasts pipeline behaviour.</p>
 <h2 id="setup">Setup</h2>
 <h3 id="step-1-in-the-vm-open-the-terminal-app">Step 1. In the VM Open the Terminal app.</h3>
-<ul>
-<li>This will give you a Windows PowerShell Command prompt</li>
-</ul>
+<p>This will give you a Windows PowerShell Command prompt:</p>
+<div class="highlight"><pre><span></span><code>PS C:\User\Admin
+</code></pre></div>
+<p>Change directory:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>Desktop
+</code></pre></div>
 <h3 id="step-2-clone-the-repository">Step 2. Clone the repository</h3>
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/ingwaneorg/bikezelo.git
 </code></pre></div>
@@ -731,26 +734,48 @@
 <h3 id="step-4-install-python-dependencies">Step 4. Install Python dependencies</h3>
 <div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
 </code></pre></div>
-<h3 id="5-set-up-the-database">5. Set up the database:</h3>
+<h3 id="step-5-set-up-the-database">Step 5. Set up the database:</h3>
 <div class="highlight"><pre><span></span><code>python<span class="w"> </span>setup_db.py
 </code></pre></div>
+<h3 id="step-6-preload-seed-data">Step 6: Preload seed data:</h3>
+<p>Run this setup to pre-load data to the database using the package <code>dlt</code></p>
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>preload.py
+</code></pre></div>
+<hr>
+<h3 id="open-visual-studio-code">Open Visual Studio Code</h3>
+<p>We will use VS Code to edit the code. To start the program run:</p>
+<div class="highlight"><pre><span></span><code>code<span class="w"> </span>.
+</code></pre></div>
+<div class="admonition success">
+<p class="admonition-title">VS Code should open. Close any popups. You should now see the project files on the left.</p>
+</div>
 <hr>
 <h2 id="running-the-program">Running the program</h2>
 <p>You'll need two terminals, both inside the <code>bikezelo</code> directory.</p>
 <h3 id="step-1-in-your-existing-terminal-terminal-1-start-the-simulation">Step 1. In your existing terminal (Terminal 1), start the simulation:</h3>
 <div class="highlight"><pre><span></span><code>python<span class="w"> </span>simulate.py
 </code></pre></div>
-<h3 id="step-2-open-a-second-terminal-move-into-bikezelo-then-start-the-app">Step 2. Open a second terminal, move into <code>bikezelo</code>, then start the app:</h3>
-<p></p><div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>bikezelo
+<h3 id="step-2-open-a-second-terminal-terminal-2-move-into-bikezelo-then-start-the-app">Step 2. Open a second terminal (Terminal 2), move into <code>bikezelo</code>, then start the app:</h3>
+<div class="highlight"><pre><span></span><code>cd Desktop\bikezelo
 </code></pre></div>
+<p>Then run:</p>
 <div class="highlight"><pre><span></span><code>python<span class="w"> </span>app.py
-</code></pre></div><p></p>
+</code></pre></div>
 <h3 id="step-3-open-a-browser-at-httplocalhost5000">Step 3. Open a browser at <code>http://localhost:5000</code></h3>
-<h2 id="what-you-should-see">What you should see</h2>
+<div class="admonition success">
+<p class="admonition-title">You should now see the bikezelo app running in your browser</p>
+</div>
+<hr>
+<h2 id="things-to-note">Things to note:</h2>
 <p>Rows arrive every 2 seconds in the live feed. </p>
 <p>Each row starts white (unvalidated), then turns green, amber, or red on the next validation sweep (every 10 seconds).</p>
-<p>Roughly 1 in 8 rows is intentionally bad. </p>
-<p>Occasionally a spike fires - a burst of 4–8 consecutive bad rows. Watch the error rate and SLA indicator respond.</p><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
+<p>Roughly 1 in 8 rows is intentionally "bad". </p>
+<p>Occasionally a spike fires - a burst of 4–8 consecutive bad rows. Watch the error rate and SLA indicator respond.</p>
+<h3 id="terminal-windows">Terminal windows</h3>
+<ul>
+<li>Terminal 1 will show the data being streamed into the database</li>
+<li>Terminal 2 will show the webserver running the app. Any log messages from within the app will appear here.</li>
+</ul><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
   <!-- mkdocs-quiz progress sidebar (desktop) -->
   <label class="md-nav__title">
     <span class="md-nav__icon md-icon"></span>
