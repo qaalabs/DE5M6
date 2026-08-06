@@ -8,10 +8,6 @@
         <link rel="canonical" href="https://qaalabs.github.io/DE5M6/labs/31-medallion/">
       
       
-        <link rel="prev" href="../run-inside-vm/">
-      
-      
-        <link rel="next" href="../21-deployment-pipelines/">
       
       
         
@@ -336,14 +332,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../agenda/day3/" class="md-nav__link">
+      <a href="../../agenda/day4/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Day 3
+    Day 4
   
 
     
@@ -368,20 +364,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked="">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -391,7 +385,7 @@
   <span class="md-ellipsis">
     
   
-    Day 3 - Quality &amp; Governance
+    Day 4 - Improvement &amp; Value
   
 
     
@@ -402,12 +396,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Day 3 - Quality &amp; Governance
+    Day 4 - Improvement &amp; Value
   
 
           </label>
@@ -420,14 +414,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day3/quality-dimensions/" class="md-nav__link">
+      <a href="../../day4/quality-tools/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Data Quality Dimensions
+    Data Quality Tools
   
 
     
@@ -448,205 +442,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../run-inside-vm/" class="md-nav__link">
+      <a href="https://github.com/ingwaneorg/bikezelo" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Setup MS Fabric Playground
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Lab 3.1 ~ Medallion Architecture
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Lab 3.1 ~ Medallion Architecture
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-      
-        <li class="md-nav__item">
-  <a href="#step-1-create-a-workspace" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 1: Create a workspace
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-2-create-a-lakehouse" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 2: Create a lakehouse
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-3-upload-data-to-the-bronze-layer" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 3: Upload data to the bronze layer
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-4-create-the-bronze-to-silver-notebook" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 4: Create the Bronze to Silver notebook
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-5-explore-the-silver-layer" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 5: Explore the silver layer
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-6-create-the-silver-to-gold-notebook" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 6: Create the Silver to Gold notebook
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-7-look-at-what-this-number-rests-on" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 7: Look at what this number rests on
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#clean-up-resources" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Clean up resources
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../21-deployment-pipelines/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Lab 3.2 ~ 21 Deployment Pipelines
+    Bikezelo Walkthrough
   
 
     
@@ -667,14 +470,98 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day3/technical-debt-activity/" class="md-nav__link">
+      <a href="../../day4/bikezelo-activity/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Technical Debt Audit
+    Lab 4.1 ~ Clone, Setup &amp; Run Bikezelo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../day4/bikezelo-rules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 4.2 ~ Uncomment the rules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../day4/bikezelo-forecast/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 4.3 ~ How does bikezelo forecast?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../day4/presentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentation Prep
   
 
     
@@ -742,6 +629,50 @@
 <h1 id="lab-31-medallion-architecture">Lab 3.1 ~ Medallion Architecture</h1>
 <p>In this exercise you will build a medallion architecture in a Fabric lakehouse: a workspace and lakehouse, raw sales data landed in bronze, cleaned and <strong>validated</strong> data in silver, and a business-ready summary in gold.</p>
 <p>Quality means something different at each layer - watch for it as you go: bronze decides whether to land data as-is or enforce anything immediately, silver is where cleaning and validation actually happen, and gold decides what "fit for business use" means. Today's DMBOK quality dimensions discussion straight after this lab will ask you to map dimensions onto <strong>all three</strong> layers, so keep the touchpoints at each step in mind - not just the validate cell in silver.</p>
+<pre class="mermaid"><code>flowchart LR
+    CSV["Files/bronze/&lt;br/&gt;2019.csv, 2020.csv, 2021.csv"] --&gt; CHECK1
+
+    subgraph BRZ["Bronze - land as-is"]
+        CHECK1{"Batch check:&lt;br/&gt;files match metadata.json?"}
+    end
+
+    CHECK1 --&gt;|pass| NB1
+
+    subgraph NB1["Notebook: Transform data for Silver"]
+        direction TB
+        CLEAN["Cell 2 - Clean"]
+        VALID["Cell 3 - Validate&lt;br/&gt;(assert checks)"]
+        CLEAN --&gt; VALID
+    end
+
+    VALID --&gt;|pass| ST
+
+    subgraph SIL["Silver - cleaned &amp; trusted"]
+        ST["dbo.sales_silver"]
+    end
+
+    ST --&gt; NB2
+
+    subgraph NB2["Notebook: Transform data for Gold"]
+        direction TB
+        SUM["Cell 1 - Summarise"]
+        RECON["Cell 2 - Reconciliation check"]
+        SUM --&gt; RECON
+    end
+
+    RECON --&gt;|pass| GT
+
+    subgraph GLD["Gold - business-ready"]
+        GT["dbo.sales_gold"]
+    end
+
+    classDef bronze fill:#cd7f32,stroke:#8a541c,color:#fff
+    classDef silver fill:#c0c0c0,stroke:#767676,color:#000
+    classDef gold fill:#ffd700,stroke:#b8960b,color:#000
+
+    class BRZ bronze
+    class SIL silver
+    class GLD gold</code></pre>
 <h2 id="step-1-create-a-workspace">Step 1: Create a workspace</h2>
 <ol>
 <li>
@@ -952,7 +883,7 @@
 <p>This figure is only as trustworthy as the checks behind it:</p>
 <ol>
 <li>
-<p>The file count you confirmed in bronze;</p>
+<p>The files you confirmed against the manifest in bronze;</p>
 </li>
 <li>
 <p>The asserts you wrote in silver;</p>
