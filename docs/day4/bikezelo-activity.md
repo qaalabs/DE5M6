@@ -2,13 +2,25 @@
 
 !!! abstract "S18: Develop simple forecasts and monitoring tools to anticipate or respond immediately to outages and incidents."
 
+!!! abstract "K27: The principles of descriptive, predictive and prescriptive analytics."
+
 Bikezelo is a lightweight pipeline monitoring dashboard writen for this module. It simulates a live data feed, validates incoming records against quality rules, and forecasts pipeline behaviour.
 
 ## Setup
 
 ### Step 1. In the VM Open the Terminal app.
 
-- This will give you a Windows PowerShell Command prompt
+This will give you a Windows PowerShell Command prompt:
+
+```
+PS C:\User\Admin
+```
+
+Change directory:
+
+```bash
+cd Desktop
+```
 
 ### Step 2. Clone the repository
 
@@ -28,11 +40,31 @@ cd bikezelo
 pip install -r requirements.txt
 ```
 
-### 5. Set up the database:
+### Step 5. Set up the database:
 
 ```bash
 python setup_db.py
 ```
+
+### Step 6: Preload seed data:
+
+Run this setup to pre-load data to the database using the package `dlt`
+
+```bash
+python preload.py
+```
+
+---
+
+### Open Visual Studio Code
+
+We will use VS Code to edit the code. To start the program run:
+
+```bash
+code .
+```
+
+!!! success "VS Code should open. Close any popups. You should now see the project files on the left."
 
 ---
 
@@ -46,24 +78,35 @@ You'll need two terminals, both inside the `bikezelo` directory.
 python simulate.py
 ```
 
-### Step 2. Open a second terminal, move into `bikezelo`, then start the app:
+### Step 2. Open a second terminal (Terminal 2), move into `bikezelo`, then start the app:
 
-```bash
-cd bikezelo
+```text
+cd Desktop\bikezelo
 ```
+
+Then run:
+
 ```bash
 python app.py
 ```
 
 ### Step 3. Open a browser at `http://localhost:5000`
 
-## What you should see
+!!! success "You should now see the bikezelo app running in your browser"
+
+---
+
+## Things to note:
 
 Rows arrive every 2 seconds in the live feed. 
 
 Each row starts white (unvalidated), then turns green, amber, or red on the next validation sweep (every 10 seconds).
 
-Roughly 1 in 8 rows is intentionally bad. 
+Roughly 1 in 8 rows is intentionally "bad". 
 
 Occasionally a spike fires - a burst of 4–8 consecutive bad rows. Watch the error rate and SLA indicator respond.
 
+### Terminal windows
+
+- Terminal 1 will show the data being streamed into the database
+- Terminal 2 will show the webserver running the app. Any log messages from within the app will appear here.

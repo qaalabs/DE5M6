@@ -12,6 +12,8 @@ K22: Technology and service management best practice including configuration, ch
 
 K23: How to undertake analysis and root cause investigation.
 
+K27: The principles of descriptive, predictive and prescriptive analytics.
+
 K28: Continuous improvement including how to: capture good practice and lessons learned.
 
 K30: The methods and techniques used to communicate messages to meet the needs of the audience.

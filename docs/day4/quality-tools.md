@@ -1,5 +1,9 @@
 # Quality Tools Investigation
 
+!!! abstract "S25: Assess and identify gaps in existing tools and technologies in respect of implementing changes required."
+
+!!! abstract "K28: Continuous improvement including how to: capture good practice and lessons learned."
+
 ## Tool Categories to Research
 
 ### Group A: Data Quality Frameworks
@@ -107,6 +111,6 @@ For example:
 
 ## Teach Back
 
-- Each group presents what they have found.
-- If possible, try and link the tool back to the *Dimensions of Data Quality* covered earlier.
+- Each person presents what they have found.
+- If possible, try and link the tool back to the [*Dimensions of Data Quality*](../day3/quality-dimensions.md) covered earlier.
 

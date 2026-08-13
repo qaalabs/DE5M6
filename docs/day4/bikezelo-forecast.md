@@ -1,5 +1,13 @@
 # Lab 4.3 ~ How Does Bikezelo Forecast?
 
+!!! abstract "K23: How to undertake analysis and root cause investigation."
+
+!!! abstract "S18: Develop simple forecasts and monitoring tools to anticipate or respond immediately to outages and incidents."
+
+!!! abstract "S19: Identify and escalate risks with suggested mitigation/resolutions as appropriate."
+
+!!! abstract "K27: The principles of descriptive, predictive and prescriptive analytics."
+
 This lab is an investigation — read the code and answer the questions below.
 
 ## Part 1 ~ Find the forecast logic

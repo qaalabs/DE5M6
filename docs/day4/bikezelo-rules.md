@@ -1,5 +1,11 @@
 # Lab 4.2 ~ Uncomment the Rules
 
+!!! abstract "S6: Systematically clean, validate, and describe data at all stages of extract, transform, load (ETL)."
+
+!!! abstract "S9: Query and manipulate data using tools and programming such as SQL and Python. Manage database access, and implement automated validation checks."
+
+!!! abstract "K27: The principles of descriptive, predictive and prescriptive analytics."
+
 Open `rules.py` in VS Code. The file has numbered steps — uncomment each block and save. The next validation sweep picks up your changes automatically, no restart needed.
 
 ## Step 1 ~ Catch missing customer IDs
