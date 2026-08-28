@@ -2,7 +2,7 @@
 
 ## Session 1
 
-- 🌅 Welcome to Day 4 of DE5 Module 6
+- **Slides**: 🌅 Welcome to Day 4 of DE5 Module 6
 - **Breakout**: Data Quality Tools
 - **Report-Back**: [Data Quality Tools](../day4/quality-tools.md)
 - **Demo**: [Bikezelo Walkthrough](https://github.com/ingwaneorg/bikezelo)

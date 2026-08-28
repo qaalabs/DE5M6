@@ -4,6 +4,7 @@
 
 ### Session 1
 
+- `09:30` **Slides**: 🌅 Welcome to Day 1 of DE5 Module 6 (10 mins)
 - `10:00` **Discussion**: [System Failure Impact](day1/system-failure.md) (10 mins)
 - `10:10` **Slides**: [Why Monitor?](day1/why-monitor.md) (10 mins)
 - `10:20` **Breakout**: [Status Page Analysis](day1/status-page-analysis.md) (10 mins)
@@ -34,6 +35,7 @@
 
 ### Session 1
 
+- `09:30` **Slides**: 🌅 Welcome to Day 2 of DE5 Module 6 (10 mins)
 - `09:40` **Activity**: [Setup VM and MS Fabric Playground](labs/run-inside-vm.md) (10 mins)
 - `09:50` **Activity**: [Lab 2.1 ~ Ingest Data Pipeline](day2/21-ingest-pipeline.md) (30 mins)
 - `10:20` **Discussion**: [When a System Broke at Work](day2/system-broke.md) (10 mins)
@@ -96,6 +98,7 @@
 
 ### Session 1
 
+- `09:30` **Slides**: 🌅 Welcome to Day 4 of DE5 Module 6 (10 mins)
 - `09:40` **Breakout**: [Data Quality Tools](day4/quality-tools-trainer.md) (20 mins)
 - `10:00` **Report-Back**: [Data Quality Tools](day4/quality-tools.md) (20 mins)
 - `10:20` **Demo**: [Bikezelo Walkthrough](https://github.com/ingwaneorg/bikezelo) (10 mins)
