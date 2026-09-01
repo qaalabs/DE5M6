@@ -1,6 +1,6 @@
 # Clone the GitHub repo for Module 6
 
-!!! info "Before you start today's labs, it may by useful if you already have the data files on your VM."
+!!! info "Before you start today's labs, it will be useful if you already have the data files on your VM."
 
 This is a public, read-only repo of course files - not something you'll commit or push to, just clone it once and work from the local copy.
 
