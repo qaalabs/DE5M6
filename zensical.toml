@@ -11,6 +11,7 @@ nav = [
     {"Day 4" = "agenda/day4.md"},
   ]},
   {"Day 1 - Monitoring & Performance" = [
+    {"🖥️ VM Setup" = "https://qaalabs.github.io/vmsetup/"},
     {"Status Page Analysis" = "day1/status-page-report-back.md"},
     {"Introduction to Microsoft Fabric" = "labs/run-inside-vm.md"},
     {"Lab 1.1 ~ 01 Create Fabric Lakehouse" = "labs/00-fabric-warmup.md"},

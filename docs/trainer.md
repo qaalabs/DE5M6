@@ -4,7 +4,7 @@
 
 ### Session 1
 
-- `09:30` **Slides**: 🌅 Welcome to Day 1 of DE5 Module 6 (10 mins)
+- `09:50` **Slides**: 🌅 Welcome to Day 1 of DE5 Module 6 (10 mins)
 - `10:00` **Discussion**: [System Failure Impact](day1/system-failure.md) (10 mins)
 - `10:10` **Slides**: [Why Monitor?](day1/why-monitor.md) (10 mins)
 - `10:20` **Breakout**: [Status Page Analysis](day1/status-page-analysis.md) (10 mins)
