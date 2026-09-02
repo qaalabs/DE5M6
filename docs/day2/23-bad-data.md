@@ -36,6 +36,8 @@ From here on you're rerunning the **exact same pipeline, unchanged** - new files
 
 ---
 
+## Relevant KSBs for this exercise
+
 !!! abstract "S26: Identify data quality metrics and track them to ensure the quality, accuracy and reliability of the data product."
 
 !!! abstract "S6: Systematically clean, validate, and describe data at all stages of extract, transform, load (ETL)."

@@ -49,8 +49,13 @@ This one isn't about the data, or even about two things writing to the same tabl
 - On a small capacity like this one, is an idle notebook session a hidden cost you'd want to actively manage? How?
 - If a scheduled production pipeline queued (or failed) because someone left a notebook running, how would you find that out - and how would you prevent it happening again?
 
+---
+
+## Relevant KSBs for this exercise
+
 !!! abstract "K1: Processes to monitor and optimise the performance of the availability, management and performance of data product."
 
 !!! abstract "S18: Develop simple forecasts and monitoring tools to anticipate or respond immediately to outages and incidents."
 
 !!! abstract "K22: Technology and service management best practice including configuration, change and incident management."
+

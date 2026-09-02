@@ -69,6 +69,8 @@ The simplest break - no file changes needed, just the notebook itself.
 
 ---
 
+## Relevant KSBs for this exercise
+
 !!! abstract "S8: Identify and troubleshoot issues with data processing pipelines."
 
 !!! abstract "K23: How to undertake analysis and root cause investigation."
