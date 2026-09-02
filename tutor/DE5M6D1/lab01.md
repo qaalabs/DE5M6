@@ -1,6 +1,6 @@
-## 🧪 <mark>Lab 01 ~ Fabric Warmup: Create a Lakehouse</mark>
+## 🧪 <mark>Fabric Warmup: Create a Lakehouse</mark>
 
-<span style="background-color: orange;">Give learners the link:</span> https://qaalabs.github.io/fabric/00-fabric-warmup/
+<span style="background-color: orange;">Give learners the link:</span> https://qaalabs.github.io/fabric/fabric-warmup/
 
 ### Activities
 

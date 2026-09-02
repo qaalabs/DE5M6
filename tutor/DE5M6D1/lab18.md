@@ -1,4 +1,4 @@
-## 🧪 <mark>Lab 18 ~ Monitor Fabric Activity in the Monitoring Hub</mark>
+## 🧪 <mark>Monitor Fabric Activity in the Monitoring Hub</mark>
 
 <span style="background-color: orange;">Give learners the link:</span> 
 https://qaalabs.github.io/DE5M6/day1/12-monitor-hub/

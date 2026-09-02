@@ -1,7 +1,7 @@
-## 🧪 <mark>Lab 3.1</mark> ~ 03b Medallion Architecture in a Lakehouse
+## 🧪 <mark>Lab 3.1</mark> ~ Medallion Architecture in a Lakehouse
 
 <span style="background-color: orange;">Give learners the link:</span> 
-https://qaalabs.github.io/fabric/03b-medallion-lakehouse/
+https://qaalabs.github.io/fabric/medallion-lakehouse/
 
 ### Activities
 
