@@ -5,7 +5,7 @@
       
       
       
-        <link rel="canonical" href="https://qaalabs.github.io/DE5M6/labs/31-medallion-audit/">
+        <link rel="canonical" href="https://qaalabs.github.io/DE5M6/day1/12-monitor-hub/">
       
       
       
@@ -18,7 +18,7 @@
     
     
       
-        <title>Lab 3.1 ~ Medallion Quality Audit - Module 6 - Data Operations</title>
+        <title>Monitor Fabric Activity in the Monitoring Hub - Module 6 - Data Operations</title>
       
     
     
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lab-31-medallion-quality-audit" class="md-skip">
+        <a href="#monitor-fabric-activity-in-the-monitoring-hub" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Lab 3.1 ~ Medallion Quality Audit
+              Monitor Fabric Activity in the Monitoring Hub
             
           </span>
         </div>
@@ -414,7 +414,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../run-inside-vm/" class="md-nav__link">
+      <a href="../../labs/run-inside-vm/" class="md-nav__link">
         
   
   
@@ -582,7 +582,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../11-data-activator/" class="md-nav__link">
+      <a href="../../labs/11-data-activator/" class="md-nav__link">
         
   
   
@@ -682,131 +682,88 @@
 
 
 
-<h1 id="lab-31-medallion-quality-audit">Lab 3.1 ~ Medallion Quality Audit</h1>
-<h2 id="the-scenario">The Scenario</h2>
-<p>You are a data engineer at <strong>TechMart</strong>. Overnight, a colleague's notebook ran the sales pipeline - raw orders in, bronze, silver, and gold layers out. It finished without errors.</p>
-<p>This morning it's your job to check whether "finished without errors" actually means "the data is trustworthy." You are not building anything - you are <strong>auditing a pipeline that already ran</strong>.</p>
-<div class="admonition note">
-<p class="admonition-title">Do not edit or re-run the cells below</p>
-<p>The code and its output are exactly what your colleague's notebook produced. Read them as a monitoring log, not as an exercise to complete.</p>
+<h1 id="monitor-fabric-activity-in-the-monitoring-hub">Monitor Fabric Activity in the Monitoring Hub</h1>
+<div class="admonition info">
+<p class="admonition-title">Reuse your workspace from Lab 05</p>
+<p>You already have a workspace and lakehouse from this morning's <strong>Lab 05 (Dataflows Gen2)</strong> - use those instead of creating new ones. Open the workspace you created earlier and pick up from Step 1 below.</p>
 </div>
-<hr>
-<h2 id="the-pipeline-run">The pipeline run</h2>
-<h3 id="cell-1-load-bronze">Cell 1 - Load bronze</h3>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">glob</span>
-
-<span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'SalesOrderNumber'</span><span class="p">,</span> <span class="s1">'SalesOrderLineNumber'</span><span class="p">,</span> <span class="s1">'OrderDate'</span><span class="p">,</span> <span class="s1">'CustomerName'</span><span class="p">,</span>
-           <span class="s1">'Email'</span><span class="p">,</span> <span class="s1">'Item'</span><span class="p">,</span> <span class="s1">'Quantity'</span><span class="p">,</span> <span class="s1">'UnitPrice'</span><span class="p">,</span> <span class="s1">'Tax'</span><span class="p">]</span>
-
-<span class="n">files</span> <span class="o">=</span> <span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">'/data/bronze/*.csv'</span><span class="p">)</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="n">columns</span><span class="p">)</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">files</span><span class="p">],</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Bronze: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">files</span><span class="p">)</span><span class="si">}</span><span class="s1"> files loaded - </span><span class="si">{</span><span class="n">files</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Bronze: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="si">}</span><span class="s1"> rows'</span><span class="p">)</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>Bronze: 2 files loaded - ['2019.csv', '2020.csv']
-Bronze: 6412 rows
-</code></pre></div>
-<h3 id="cell-2-clean">Cell 2 - Clean</h3>
-<div class="highlight"><pre><span></span><code><span class="n">df</span><span class="p">[</span><span class="s1">'OrderDate'</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'OrderDate'</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">'coerce'</span><span class="p">)</span>
-<span class="n">df</span><span class="p">[</span><span class="s1">'Quantity'</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'Quantity'</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">'coerce'</span><span class="p">)</span>
-<span class="n">df</span><span class="p">[</span><span class="s1">'UnitPrice'</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'UnitPrice'</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">'coerce'</span><span class="p">)</span>
-<span class="n">df</span><span class="p">[</span><span class="s1">'Tax'</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'Tax'</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">'coerce'</span><span class="p">)</span>
-<span class="n">df</span><span class="p">[</span><span class="s1">'CustomerName'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'CustomerName'</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s1">'Unknown'</span><span class="p">)</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Silver: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="si">}</span><span class="s1"> rows'</span><span class="p">)</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>Silver: 6398 rows
-</code></pre></div>
-<h3 id="cell-3-validate-before-saving">Cell 3 - Validate before saving</h3>
-<div class="highlight"><pre><span></span><code><span class="k">assert</span> <span class="n">df</span><span class="p">[</span><span class="s1">'SalesOrderNumber'</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">"SalesOrderNumber should have no nulls"</span>
-<span class="k">assert</span> <span class="n">pd</span><span class="o">.</span><span class="n">api</span><span class="o">.</span><span class="n">types</span><span class="o">.</span><span class="n">is_datetime64_any_dtype</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'OrderDate'</span><span class="p">]),</span> <span class="s2">"OrderDate should be a valid date"</span>
-<span class="k">assert</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'Quantity'</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">(),</span> <span class="s2">"all quantities should be positive"</span>
-<span class="k">assert</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'UnitPrice'</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">(),</span> <span class="s2">"all unit prices should be positive"</span>
-<span class="k">assert</span> <span class="n">df</span><span class="o">.</span><span class="n">duplicated</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">"no duplicate rows should remain"</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s1">'All validation checks passed'</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'UnitPrice'</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">())</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>All validation checks passed
-
-count     6398.00
-mean        84.31
-std        607.02
-min          4.99
-max      50000.00
-Name: UnitPrice, dtype: float64
-</code></pre></div>
-<h3 id="cell-4-write-sales_silver">Cell 4 - Write sales_silver</h3>
-<div class="highlight"><pre><span></span><code><span class="n">df</span><span class="o">.</span><span class="n">to_parquet</span><span class="p">(</span><span class="s1">'/data/silver/sales_silver.parquet'</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s1">'Saved: sales_silver'</span><span class="p">)</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>Saved: sales_silver
-</code></pre></div>
-<h3 id="cell-5-build-gold">Cell 5 - Build gold</h3>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">duckdb</span>
-
-<span class="n">summary</span> <span class="o">=</span> <span class="n">duckdb</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">"""</span>
-<span class="s2">    SELECT YEAR(OrderDate) AS Year,</span>
-<span class="s2">           ROUND(SUM(Quantity * (UnitPrice + Tax)), 2) AS TotalSales</span>
-<span class="s2">    FROM df</span>
-<span class="s2">    GROUP BY YEAR(OrderDate)</span>
-<span class="s2">    ORDER BY YEAR(OrderDate)</span>
-<span class="s2">"""</span><span class="p">)</span><span class="o">.</span><span class="n">to_df</span><span class="p">()</span>
-
-<span class="n">summary</span><span class="o">.</span><span class="n">to_parquet</span><span class="p">(</span><span class="s1">'/data/gold/sales_gold.parquet'</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">summary</span><span class="p">)</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>   Year  TotalSales
-0  2019   412998.55
-1  2020   598104.20
-</code></pre></div>
-<hr>
-<h2 id="your-task">Your task</h2>
+<p>The <em>monitoring hub</em> in Microsoft Fabric provides a central place where you can monitor activity. You can use the monitoring hub to review events related to items you have permission to view.</p>
+<h2 id="step-1-create-and-monitor-a-dataflow">Step 1: Create and monitor a Dataflow</h2>
+<p>In Microsoft Fabric, you can use a Dataflow (Gen2) to ingest data from a wide range of sources. In this exercise, you'll use a dataflow to get data from a CSV file and load it into a table in your existing lakehouse.</p>
 <ol>
-<li>Work through the run above layer by layer - bronze, silver, gold.</li>
-<li>For each layer, find the evidence in the output that something is off, and name the DMBOK dimension it falls under.</li>
-<li>Record your findings in the shared doc using the table below.</li>
-<li>Decide what you'd do about each issue - fix upstream, alert, quarantine, block the gold refresh?</li>
+<li>Open your lakehouse from Lab 05. On the <strong>Home</strong> page, in the <strong>Get data</strong> menu, select <strong>New Dataflow Gen2</strong>.</li>
+<li>Name the new dataflow <code>Get Product Data</code> and select <strong>Create</strong>.</li>
+<li>In the dataflow designer, select <strong>Import from a Text/CSV file</strong>. Then complete the Get Data wizard to create a data connection by linking to <code>https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/products.csv</code> using anonymous authentication.</li>
+<li>Use the <strong>Save and run</strong> option to save and run the dataflow, then close it.</li>
+<li>In the navigation bar on the left, select <strong>Monitor</strong> to view the monitoring hub and observe that your dataflow is in-progress (if not, refresh the view until you see it).</li>
+<li>Wait for a few seconds, and then refresh the page until the status of the dataflow is <strong>Succeeded</strong>.</li>
+<li>In the navigation pane, select your lakehouse. Then expand the <strong>Tables</strong> folder to verify that a table named <strong>products</strong> has been created and loaded by the dataflow (you may need to refresh the <strong>Tables</strong> folder). You should now see both <strong>orders</strong> (from Lab 05) and <strong>products</strong> in your lakehouse.</li>
 </ol>
-<table>
-<thead>
-<tr>
-<th>Layer</th>
-<th>Evidence in the output</th>
-<th>DMBOK dimension</th>
-<th>Recommended action</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Bronze</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Silver</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Gold</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<div class="admonition tip">
-<p class="admonition-title">The validation cell says 'All validation checks passed'</p>
-<p>Passing validation is not the same as being correct. Look at what the checks actually assert - and what they don't.</p>
-</div>
-<p>Bring your findings to the discussion straight after this lab - it picks up exactly where this audit leaves off.</p><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
+<h2 id="step-2-create-and-monitor-a-spark-notebook">Step 2: Create and monitor a Spark notebook</h2>
+<p>In Microsoft Fabric, you can use notebooks to run Spark code.</p>
+<ol>
+<li>
+<p>On the menu bar on the left, select <strong>Create</strong>. In the <em>New</em> page, under the <em>Data Engineering</em> section, select <strong>Notebook</strong>.</p>
+<p>A new notebook named <strong>Notebook_1</strong> is created and opened.</p>
+</li>
+<li>
+<p>At the top left of the notebook, select the gear icon to view the notebook details, and change its name to <code>Query Products</code>.</p>
+</li>
+<li>In the notebook editor, in the <strong>Explorer</strong> pane, select <strong>Add data items</strong> and then select <strong>From OneLake catalog</strong>.</li>
+<li>Add the lakehouse you're using for today's labs.</li>
+<li>Expand the lakehouse item until you reach the <strong>products</strong> table.</li>
+<li>In the <strong>...</strong> menu for the <strong>products</strong> table, select <strong>Load data</strong> &gt; <strong>Spark</strong>. This adds a new code cell to the notebook.</li>
+<li>Use the <strong>▶ Run all</strong> button to run all cells in the notebook. It will take a moment or so to start the Spark session, and then the results of the query will be shown under the code cell.</li>
+<li>On the toolbar, use the <strong>◻</strong> (<em>Stop session</em>) button to stop the Spark session.</li>
+<li>In the navigation bar, select <strong>Monitor</strong> to view the monitoring hub, and note that the notebook activity is listed.</li>
+</ol>
+<h2 id="step-3-monitor-history-for-an-item">Step 3: Monitor history for an item</h2>
+<p>Some items in a workspace might be run multiple times. You can use the monitoring hub to view their run history.</p>
+<ol>
+<li>In the navigation bar, return to the page for your workspace. Then use the <strong>↻</strong> (<em>Refresh now</em>) button for your <strong>Get Product Data</strong> dataflow to re-run it.</li>
+<li>In the navigation pane, select the <strong>Monitor</strong> page to view the monitoring hub and verify that the dataflow is in-progress.</li>
+<li>In the <strong>...</strong> menu for the <strong>Get Product Data</strong> dataflow, select <strong>Historical runs</strong> to view the run history for the dataflow.</li>
+<li>In the <strong>...</strong> menu for any of the historical runs select <strong>View detail</strong> to see details of the run.</li>
+<li>Close the <strong>Details</strong> pane and use the <strong>Back to main view</strong> button to return to the main monitoring hub page.</li>
+</ol>
+<h2 id="step-4-customize-monitoring-hub-views">Step 4: Customize monitoring hub views</h2>
+<p>In this exercise you've only run a few activities, so it should be fairly easy to find events in the monitoring hub. However, in a real environment you may need to search through a large number of events. Using filters and other view customizations can make this easier.</p>
+<ol>
+<li>
+<p>Return to the monitoring hub main view. Use the <strong>Filter</strong> button to apply the following filter:</p>
+<ul>
+<li><strong>Status</strong>: Succeeded</li>
+<li><strong>Item type</strong>: Dataflow Gen2 (CI/CD)</li>
+</ul>
+<p>With the filter applied, only successful runs of dataflows are listed.</p>
+</li>
+<li>
+<p>Use the <strong>Column Options</strong> button to include the following columns in the view (use the <strong>Apply</strong> button to apply the changes):</p>
+<ul>
+<li>Activity name</li>
+<li>Status</li>
+<li>Item type</li>
+<li>Start time</li>
+<li>Submitted by</li>
+<li>Location</li>
+<li>End time</li>
+<li>Duration</li>
+<li>Refresh type</li>
+</ul>
+<p>You may need to scroll horizontally to see all of the columns.</p>
+</li>
+</ol>
+<h2 id="step-5-clean-up-resources">Step 5: Clean up resources</h2>
+<p>In this exercise, you've added a dataflow and a Spark notebook to your workspace, and used the monitoring hub to view item activity.</p>
+<p>If you've finished exploring, you can delete the workspace you've been using since Lab 05.</p>
+<ol>
+<li>In the bar on the left, select the icon for your workspace to view all of the items it contains.</li>
+<li>In the <strong>...</strong> menu on the toolbar, select <strong>Workspace settings</strong>.</li>
+<li>In the <strong>General</strong> section, select <strong>Remove this workspace</strong>.</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Lab 06c (next) creates its own separate workspace for a sample data warehouse, so it's fine to remove this one now.</p>
+</div><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
   <!-- mkdocs-quiz progress sidebar (desktop) -->
   <label class="md-nav__title">
     <span class="md-nav__icon md-icon"></span>
