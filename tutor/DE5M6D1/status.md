@@ -8,7 +8,7 @@
 - AWS: https://health.aws.amazon.com/health/status
 - Microsoft Azure: https://status.azure.com/
 - Google Cloud: https://status.cloud.google.com/
-- Zoom: https://status.zoom.us/
+- Databricks: https://status.databricks.com/
 
 ### Explain report back
 
