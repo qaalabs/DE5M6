@@ -26,7 +26,8 @@
 
 ### Session 4
 
-- `15:00` **Breakout**: [Cloud Monitoring Comparison](day1/cloud-monitoring-comparison.md) (30 mins)
+- `15:00` **Instructions**: Cloud Monitoring Comparison (10 mins)
+- `15:10` **Breakout**: [Cloud Monitoring Comparison](day1/cloud-monitoring-comparison.md) (20 mins)
 - `15:30` **Report-Back**: [Cloud Monitoring Comparison](day1/cloud-monitoring-report-back.md) (20 mins)
 
 ---

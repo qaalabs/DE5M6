@@ -31,6 +31,7 @@
 
 ## Session 4
 
+- **Instructions**: Cloud Monitoring Comparison
 - **Breakout**: [Cloud Monitoring Comparison](../day1/cloud-monitoring-comparison.md)
 - **Report-Back**: Cloud Monitoring Comparison
 
