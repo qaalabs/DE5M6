@@ -110,7 +110,7 @@ In this lab you'll build a pipeline that you rerun several times today, against 
     !!! note
         Since this is the first time you've run any Spark code in this session, the Spark pool must be started - the first cell can take a minute or so to complete.
 
-6. Once it finishes, use the ⚙️ **Settings** icon to name the notebook `Load Sales`.
+6. Once it finishes, use the ⚙️ **Settings** icon to name the notebook: `Load Sales`
 
 7. Find the session indicator in the status bar and select **Stop session**.
 
@@ -149,8 +149,13 @@ In this lab you'll build a pipeline that you rerun several times today, against 
 
 You now have a working, rerunnable pipeline: read whatever's in `Files/new_data`, drop anything with a bad price, overwrite the table. You'll rerun this exact pipeline - unchanged - twice more today.
 
+---
+
+## Relevant KSBs for this exercise
+
 !!! abstract "S4: Automate data pipelines such as batch, real-time, on demand and other processes using programming languages and data integration platforms with graphical user interfaces."
 
 !!! abstract "S6: Systematically clean, validate, and describe data at all stages of extract, transform, load (ETL)."
 
 !!! abstract "K8: Deployment approaches for new data pipelines and automated processes."
+
