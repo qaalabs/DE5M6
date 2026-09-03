@@ -907,7 +907,18 @@
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">'Saved: dbo.sales_silver'</span><span class="p">)</span>
 </code></pre></div>
-<p>After running all four cells, select the <strong>Run</strong> tab above the ribbon and then select: <strong>Stop session</strong></p>
+<h3 id="cell-5-mark-bronze-complete">Cell 5 - Mark bronze complete</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Cell 5 - Mark bronze complete</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<span class="n">ctx</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">notebookutils</span><span class="o">.</span><span class="n">runtime</span><span class="o">.</span><span class="n">context</span><span class="p">)</span>
+<span class="n">ctx</span><span class="p">[</span><span class="s2">"source"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"de5m6-lab31"</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">"https://qapha-249748487450.us-east1.run.app/"</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">ctx</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+    <span class="k">pass</span>  <span class="c1"># a dead endpoint must never fail the notebook run</span>
+</code></pre></div>
+<p>After running all five cells, select the <strong>Run</strong> tab above the ribbon and then select: <strong>Stop session</strong></p>
 <ul>
 <li>This stops the compute resource being used by the notebook.</li>
 </ul>
