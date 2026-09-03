@@ -2,6 +2,12 @@
 
 !!! abstract "S23: Present, communicate, and disseminate messages about the data product, tailoring the message and medium to the needs of the audience"
 
+!!! abstract "K30: The methods and techniques used to communicate messages to meet the needs of the audience."
+
+!!! abstract "S19: Identify and escalate risks with suggested mitigation/resolutions as appropriate."
+
+!!! abstract "S20: Investigate and respond to incidents, identifying the root cause and resolution with internal and external stakeholders."
+
 ## <mark>Group 2 ~ EMBER</mark>
 
 ## The Communications App
@@ -18,8 +24,8 @@ Here is the link the communications app for your group:
 
 ## Here are links to the Status Pages
 
-- **Status mailbox**: https://QAADE5.github.io/status/mailbox/
-- **Status update**: https://QAADE5.github.io/status/message-202521320/
+- **Status mailbox**: https://qaade5.github.io/status/mailbox/
+- **Status update**: https://qaade5.github.io/status/message-01/
 
 ## Rules & Logistics
 
@@ -38,7 +44,7 @@ Here is the link the communications app for your group:
 
 ### Timing
 
-- You have **25 minutes** to handle this incident
+- You have **30 minutes** to handle this first incident
 
 <mark>At the end we will debrief by looking at all the messages you sent!</mark>
 

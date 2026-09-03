@@ -5,15 +5,15 @@
 **From the Escalation Card:**
 
 - **Partial success complexity** - pipeline running but 40% data still missing
-- **CEO involvement** - board meeting happened with incomplete data
+- **Head of Operations involvement** - leadership meeting happened with incomplete data
 - **Multiple new stakeholders** - Legal, Data Protection Officer, Marketing Director
 - **External pressures** - Media inquiry, competitor actions, formal client complaints
 - **Complex decisions** - technical vs. workaround, legal/compliance implications
 
-**CEO Briefing Observations:**
+**Head of Operations Briefing Observations:**
 
 - **Communication effectiveness** - which teams translated technical issues clearly?
-- **Executive presence** - how did teams handle direct CEO questioning?
+- **Executive presence** - how did teams handle direct questioning from the Head of Operations?
 - **Decision confidence** - who gave firm commitments vs. hedged their answers?
 - **Resource requests** - what support did teams ask for?
 
@@ -26,9 +26,9 @@
 
 ## Rich Debrief Questions:
 
-**CEO Briefing Analysis:**
+**Head of Operations Briefing Analysis:**
 
-- "Which team's CEO briefing felt most/least confident?"
+- "Which team's Head of Operations briefing felt most/least confident?"
 - "How did teams balance honesty about problems with leadership expectations?"
 - "What made some technical explanations clearer than others?"
 
@@ -40,5 +40,5 @@
 
 **Stakeholder Juggling:**
 
-- "How did teams prioritize between CEO, Legal, Marketing, and technical needs?"
+- "How did teams prioritize between the Head of Operations, Legal, Marketing, and technical needs?"
 - "Which external pressures (media, competitors) influenced your approach most?"

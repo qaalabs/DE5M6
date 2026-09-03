@@ -2,6 +2,17 @@
 
 !!! info "This lab continues from Lab 2.1. Your pipeline, notebook, and `sales.csv` should still be in place."
 
+## Setup
+
+1. Open the **Load Sales** notebook and change the first cell to:
+
+    ```python
+    lab_name = "de5m6-lab22"
+    ```
+
+    !!! note
+        Fabric notebooks save automatically - you don't need to explicitly save after editing this cell.
+
 Two quick, fully reversible breaks - neither one needs a new file, just the notebook you already built.
 
 ### Break Cycle Process
@@ -22,26 +33,26 @@ The simplest break - no file changes needed, just the notebook itself.
 **Break Instructions:**
 
 - Open the **Load Sales** notebook
-- Find the line that reads:
+- In the last cell, add a new line of invalid code, for example:
 
     ```python
-    df = df.withColumn("FirstName", split(col("CustomerName"), " ").getItem(0)).withColumn("LastName", split(col("CustomerName"), " ").getItem(1))
+    this_is_not_a_real_variable
     ```
 
-- Change `CustomerName` to `CustomerNam` (a deliberate typo) in both places on that line
 - Run just that cell
 
 **Observation Points:**
 
 - What kind of error does Spark give you?
-- Does the error message tell you exactly which column is missing?
+- Does the error message point you to the exact line that's wrong?
 - How is this different from a file-level error?
+- Check **Monitor** - does this failure show up there? Would you have noticed it if you weren't sitting here watching it happen?
 
 **Discussion:**
 
 **Fix & Verify:**
 
-- Change `CustomerNam` back to `CustomerName`
+- Delete the line you added
 - Re-run the cell to confirm it works
 - Re-run the whole notebook once, to confirm the fix took
 
@@ -59,6 +70,7 @@ The simplest break - no file changes needed, just the notebook itself.
 - Which cell fails - the read, or something later?
 - What does the error message say?
 - Does it tell you the folder is empty, or just that nothing matched?
+- Check **Monitor** - does this failure show up there? Would you have noticed it if you weren't sitting here watching it happen?
 
 **Discussion:**
 

@@ -6,6 +6,19 @@ This one isn't about the data, or even about two things writing to the same tabl
 
 ---
 
+## Setup
+
+1. Open the **Load Sales** notebook and change the first cell to:
+
+    ```python
+    lab_name = "de5m6-lab25"
+    ```
+
+    !!! note
+        Fabric notebooks save automatically - you don't need to explicitly save after editing this cell.
+
+---
+
 ## Part 1: Trigger the same pipeline multiple times
 
 1. Run the **Ingest Sales Data** pipeline.

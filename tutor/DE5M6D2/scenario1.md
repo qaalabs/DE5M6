@@ -8,10 +8,10 @@
 
 <hr>
 
-- https://QAADE5.github.io/status/
-- https://QAADE5.github.io/status/mailbox/
-- https://QAADE5.github.io/status/message-202521320/
-- https://QAADE5.github.io/status/message-202521430/
+- https://qaade5.github.io/status/
+- https://qaade5.github.io/status/mailbox/
+- https://qaade5.github.io/status/message-01/
+- https://qaade5.github.io/status/message-02/
 
 ---
 

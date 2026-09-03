@@ -6,7 +6,7 @@
 
 - **Customer Dashboard Failure** - stale data since 6 AM
 - **Multiple stakeholder pressure** - Sales Director, Customer Success, IT Director
-- **Time pressure** - Board meeting at 10 AM (45 minutes)
+- **Time pressure** - Leadership meeting at 10 AM (45 minutes)
 - **Technical context** - Fabric pipeline failed, vendor data source changes
 
 **Observable Team Behaviors:**
@@ -20,7 +20,7 @@
 
 - Customer service call volume doubling
 - Premium client Acme Corp threatening contract review
-- Sales Director urgency about board meeting
+- Sales Director urgency about leadership meeting
 - IT Director asking for technical details
 
 ## Debrief Questions That Work:

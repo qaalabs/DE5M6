@@ -52,10 +52,40 @@ In this lab you'll build a pipeline that you rerun several times today, against 
 2. Select the existing cell, and replace its contents with:
 
     ```python
-    table_name = "sales"
+    lab_name = "de5m6-lab21"
     ```
 
 3. Add a new code cell below it:
+
+    ```python
+    import requests
+    ctx = dict(notebookutils.runtime.context)
+    ctx["source"] = lab_name
+
+    try:
+        requests.post("https://qapha-249748487450.us-east1.run.app/", json=ctx, timeout=5)
+    except Exception:
+        pass  # a dead endpoint must never fail the notebook run
+    ```
+
+4. Add a new code cell below it:
+
+    ```python
+    table_name = "sales"
+    expected_columns = ["SalesOrderNumber", "SalesOrderLineNumber", "OrderDate", "CustomerName", "EmailAddress", "Item", "Quantity", "UnitPrice", "TaxAmount"]
+
+    # Check every file's own header before the wildcard read in the next cell -
+    # a single glob read takes its schema from one file and applies it
+    # positionally to the rest, so a file with the wrong columns would
+    # otherwise get silently realigned instead of caught here
+    for file in notebookutils.fs.ls("Files/new_data"):
+        if file.name.endswith(".csv"):
+            actual_columns = spark.read.format("csv").option("header", "true").load(file.path).columns
+            if actual_columns != expected_columns:
+                raise ValueError(f"{file.name} has unexpected columns: {actual_columns}")
+    ```
+
+5. Add one more code cell at the end:
 
     ```python
     from pyspark.sql.functions import *
@@ -90,29 +120,24 @@ In this lab you'll build a pipeline that you rerun several times today, against 
     print(f"Saved {table_name}: {df.count()} row(s)")
     ```
 
-4. Add one more code cell at the end:
+6. Add a final success code cell:
 
     ```python
-    import requests
-    ctx = dict(notebookutils.runtime.context)  # JavaMap - must convert before JSON-encoding
-    ctx["source"] = "de5m6-lab21"
-
+    ctx["source"] = lab_name + "-SUCCESS"
     try:
         requests.post("https://qapha-249748487450.us-east1.run.app/", json=ctx, timeout=5)
     except Exception:
         pass  # a dead endpoint must never fail the notebook run
     ```
 
-    !!! note "This cell has no visible effect for you - it lets your trainer confirm the notebook ran, since Fabric's own Monitoring hub only shows items in workspaces the trainer has permission to see, and yours is your own."
-
-5. Run all cells (**Run all**).
+7. Run all cells (**Run all**).
 
     !!! note
         Since this is the first time you've run any Spark code in this session, the Spark pool must be started - the first cell can take a minute or so to complete.
 
-6. Once it finishes, use the ⚙️ **Settings** icon to name the notebook: `Load Sales`
+8. Once it finishes, use the ⚙️ **Settings** icon to name the notebook: `Load Sales`
 
-7. Find the session indicator in the status bar and select **Stop session**.
+9. Find the session indicator in the status bar and select **Stop session**.
 
     !!! note "Make sure you stop this notebook session before moving on to the next step"
         - The Fabric capacity we have (F2) only allows one Spark session to run at a time

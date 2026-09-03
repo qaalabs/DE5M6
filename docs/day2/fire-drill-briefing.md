@@ -99,7 +99,7 @@
 
 **15 minutes in:**
 
-*"CEO's office is asking for status update"*
+*"Head of Operations is asking for a status update"*
 
 **20 minutes in:**
 

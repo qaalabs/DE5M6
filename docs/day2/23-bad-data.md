@@ -8,13 +8,22 @@ From here on you're rerunning the **exact same pipeline, unchanged** - new files
 
 ## Steps
 
-1. Upload `sales1.csv` into `Files/new_data`, **alongside** `sales.csv` - don't delete anything.
+1. Open the **Load Sales** notebook and change the first cell to:
 
-2. Run the **Ingest Sales Data** pipeline again. Don't change it.
+    ```python
+    lab_name = "de5m6-lab23"
+    ```
 
-3. Go to **Monitor** and check the run.
+    !!! note
+        Fabric notebooks save automatically - you don't need to explicitly save after editing this cell.
 
-4. Open the `sales` table and check the row count.
+2. Upload `sales1.csv` into `Files/new_data`, **alongside** `sales.csv` - don't delete anything.
+
+3. Run the **Ingest Sales Data** pipeline again. Don't change it.
+
+4. Go to **Monitor** and check the run.
+
+5. Open the `sales` table and check the row count.
 
 ## Observation Points
 

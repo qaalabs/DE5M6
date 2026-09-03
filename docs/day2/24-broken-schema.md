@@ -6,18 +6,27 @@
 
 ## Steps
 
-1. Upload `sales2.csv` into `Files/new_data`, alongside the two files already there.
+1. Open the **Load Sales** notebook and change the first cell to:
 
-2. Run the **Ingest Sales Data** pipeline again. Don't change it.
+    ```python
+    lab_name = "de5m6-lab24"
+    ```
 
-3. Go to **Monitor** and check the run.
+    !!! note
+        Fabric notebooks save automatically - you don't need to explicitly save after editing this cell.
+
+2. Upload `sales2.csv` into `Files/new_data`, alongside the two files already there.
+
+3. Run the **Ingest Sales Data** pipeline again. Don't change it.
+
+4. Go to **Monitor** and check the run.
 
 ## Observation Points
 
 - This time, what happens?
 - Open the failed run's details. Which activity failed, and what does the error say?
-- Why did a *missing column* cause a failure when a *bad value* (Lab 2.3) didn't?
-- The pipeline is reading three files as one wildcard match - what does that tell you about how Spark expects files matched by the same pattern to line up with each other?
+- The error comes from a check in the notebook itself, not from Spark refusing to read the file. Find that check - what is it comparing, and against what?
+- Lab 2.3's bad file loaded and wrote *without* that check catching anything. What would have happened to `sales2.csv` if this check didn't exist? (A wildcard read takes its schema from one file and applies it positionally to every file it matches - it doesn't compare each file's columns to the others.)
 
 ## Discussion
 
