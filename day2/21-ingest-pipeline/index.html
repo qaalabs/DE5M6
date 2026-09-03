@@ -8,10 +8,6 @@
         <link rel="canonical" href="https://qaalabs.github.io/DE5M6/day2/21-ingest-pipeline/">
       
       
-        <link rel="prev" href="../../labs/run-inside-vm/">
-      
-      
-        <link rel="next" href="../22-notebook-breaks/">
       
       
         
@@ -22,7 +18,7 @@
     
     
       
-        <title>Lab 2.1 ~ Ingest Data Pipeline - Module 6 - Data Operations</title>
+        <title>Lab 2.1 ~ Ingest Data with a Rerunnable Pipeline - Module 6 - Data Operations</title>
       
     
     
@@ -109,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Lab 2.1 ~ Ingest Data Pipeline
+              Lab 2.1 ~ Ingest Data with a Rerunnable Pipeline
             
           </span>
         </div>
@@ -336,14 +332,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../agenda/day2/" class="md-nav__link">
+      <a href="../../agenda/day3/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Day 2
+    Day 3
   
 
     
@@ -368,20 +364,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked="">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -391,7 +385,7 @@
   <span class="md-ellipsis">
     
   
-    Day 2 - Incident Response
+    Day 3 - Quality &amp; Governance
   
 
     
@@ -402,16 +396,44 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Day 2 - Incident Response
+    Day 3 - Quality &amp; Governance
   
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../day3/quality-dimensions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Quality Dimensions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -427,187 +449,7 @@
   <span class="md-ellipsis">
     
   
-    Setup VM and MS Fabric Playground
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Lab 2.1 ~ Ingest Data Pipeline
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Lab 2.1 ~ Ingest Data Pipeline
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-      
-        <li class="md-nav__item">
-  <a href="#step-1-create-a-workspace" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 1: Create a workspace
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-2-create-a-lakehouse" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 2: Create a lakehouse
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-3-upload-the-source-file" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 3: Upload the source file
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-4-create-the-notebook" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 4: Create the notebook
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-5-build-the-pipeline" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 5: Build the pipeline
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-6-run-it-and-check-what-happened" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 6: Run it, and check what happened
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#relevant-ksbs-for-this-exercise" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Relevant KSBs for this exercise
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../22-notebook-breaks/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Lab 2.2 ~ Notebook Breaks Pipeline
+    Setup MS Fabric Playground
   
 
     
@@ -628,14 +470,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../23-bad-data/" class="md-nav__link">
+      <a href="../../labs/31-medallion/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Lab 2.3 ~ Bad Data Received
+    Lab 3.1 ~ Medallion Architecture
   
 
     
@@ -656,14 +498,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../24-broken-schema/" class="md-nav__link">
+      <a href="../../labs/21-deployment-pipelines/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Lab 2.4 ~ Schema Breaks the Pipeline
+    Lab 3.2 ~ 21 Deployment Pipelines
   
 
     
@@ -684,70 +526,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../25-concurrent-runs/" class="md-nav__link">
+      <a href="../../day3/technical-debt-activity/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Lab 2.5 ~ Run Concurrent Pipelines
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../labs/11-data-activator/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Lab ~ 11 Data Activator
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../incident-response-prep/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Fire Drill Preparation
+    Technical Debt Audit
   
 
     
@@ -875,11 +661,39 @@
 </li>
 <li>
 <p>Select the existing cell, and replace its contents with:</p>
-<div class="highlight"><pre><span></span><code><span class="n">table_name</span> <span class="o">=</span> <span class="s2">"sales"</span>
+<div class="highlight"><pre><span></span><code><span class="n">lab_name</span> <span class="o">=</span> <span class="s2">"de5m6-lab21"</span>
 </code></pre></div>
 </li>
 <li>
 <p>Add a new code cell below it:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<span class="n">ctx</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">notebookutils</span><span class="o">.</span><span class="n">runtime</span><span class="o">.</span><span class="n">context</span><span class="p">)</span>
+<span class="n">ctx</span><span class="p">[</span><span class="s2">"source"</span><span class="p">]</span> <span class="o">=</span> <span class="n">lab_name</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">"https://qapha-249748487450.us-east1.run.app/"</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">ctx</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+    <span class="k">pass</span>  <span class="c1"># a dead endpoint must never fail the notebook run</span>
+</code></pre></div>
+</li>
+<li>
+<p>Add a new code cell below it:</p>
+<div class="highlight"><pre><span></span><code><span class="n">table_name</span> <span class="o">=</span> <span class="s2">"sales"</span>
+<span class="n">expected_columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"SalesOrderNumber"</span><span class="p">,</span> <span class="s2">"SalesOrderLineNumber"</span><span class="p">,</span> <span class="s2">"OrderDate"</span><span class="p">,</span> <span class="s2">"CustomerName"</span><span class="p">,</span> <span class="s2">"EmailAddress"</span><span class="p">,</span> <span class="s2">"Item"</span><span class="p">,</span> <span class="s2">"Quantity"</span><span class="p">,</span> <span class="s2">"UnitPrice"</span><span class="p">,</span> <span class="s2">"TaxAmount"</span><span class="p">]</span>
+
+<span class="c1"># Check every file's own header before the wildcard read in the next cell -</span>
+<span class="c1"># a single glob read takes its schema from one file and applies it</span>
+<span class="c1"># positionally to the rest, so a file with the wrong columns would</span>
+<span class="c1"># otherwise get silently realigned instead of caught here</span>
+<span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">notebookutils</span><span class="o">.</span><span class="n">fs</span><span class="o">.</span><span class="n">ls</span><span class="p">(</span><span class="s2">"Files/new_data"</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">file</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">".csv"</span><span class="p">):</span>
+        <span class="n">actual_columns</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">"csv"</span><span class="p">)</span><span class="o">.</span><span class="n">option</span><span class="p">(</span><span class="s2">"header"</span><span class="p">,</span> <span class="s2">"true"</span><span class="p">)</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">file</span><span class="o">.</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">columns</span>
+        <span class="k">if</span> <span class="n">actual_columns</span> <span class="o">!=</span> <span class="n">expected_columns</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">file</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> has unexpected columns: </span><span class="si">{</span><span class="n">actual_columns</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</code></pre></div>
+</li>
+<li>
+<p>Add one more code cell at the end:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pyspark.sql.functions</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
 <span class="c1"># Read every CSV currently in the folder. As new files land here on</span>
@@ -913,19 +727,13 @@
 </code></pre></div>
 </li>
 <li>
-<p>Add one more code cell at the end:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
-<span class="n">ctx</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">notebookutils</span><span class="o">.</span><span class="n">runtime</span><span class="o">.</span><span class="n">context</span><span class="p">)</span>  <span class="c1"># JavaMap - must convert before JSON-encoding</span>
-<span class="n">ctx</span><span class="p">[</span><span class="s2">"source"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"de5m6-lab21"</span>
-
+<p>Add a final success code cell:</p>
+<div class="highlight"><pre><span></span><code><span class="n">ctx</span><span class="p">[</span><span class="s2">"source"</span><span class="p">]</span> <span class="o">=</span> <span class="n">lab_name</span> <span class="o">+</span> <span class="s2">"-SUCCESS"</span>
 <span class="k">try</span><span class="p">:</span>
     <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">"https://qapha-249748487450.us-east1.run.app/"</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">ctx</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
     <span class="k">pass</span>  <span class="c1"># a dead endpoint must never fail the notebook run</span>
 </code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">This cell has no visible effect for you - it lets your trainer confirm the notebook ran, since Fabric's own Monitoring hub only shows items in workspaces the trainer has permission to see, and yours is your own.</p>
-</div>
 </li>
 <li>
 <p>Run all cells (<strong>Run all</strong>).</p>

@@ -18,7 +18,7 @@
     
     
       
-        <title>Lab 05 - Create and use Dataflows (Gen2) in Microsoft Fabric - Module 6 - Data Operations</title>
+        <title>Create and use Dataflows (Gen2) in Microsoft Fabric - Module 6 - Data Operations</title>
       
     
     
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lab-05-create-and-use-dataflows-gen2-in-microsoft-fabric" class="md-skip">
+        <a href="#create-and-use-dataflows-gen2-in-microsoft-fabric" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Lab 05 - Create and use Dataflows (Gen2) in Microsoft Fabric
+              Create and use Dataflows (Gen2) in Microsoft Fabric
             
           </span>
         </div>
@@ -332,14 +332,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../agenda/day2/" class="md-nav__link">
+      <a href="../../agenda/day3/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Day 2
+    Day 3
   
 
     
@@ -385,7 +385,7 @@
   <span class="md-ellipsis">
     
   
-    Day 2 - Incident Response
+    Day 3 - Quality &amp; Governance
   
 
     
@@ -401,11 +401,39 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Day 2 - Incident Response
+    Day 3 - Quality &amp; Governance
   
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../day3/quality-dimensions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Quality Dimensions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -421,7 +449,7 @@
   <span class="md-ellipsis">
     
   
-    Setup VM and MS Fabric Playground
+    Setup MS Fabric Playground
   
 
     
@@ -442,14 +470,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day2/21-ingest-pipeline/" class="md-nav__link">
+      <a href="../31-medallion/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Lab 2.1 ~ Ingest Data Pipeline
+    Lab 3.1 ~ Medallion Architecture
   
 
     
@@ -470,14 +498,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day2/22-notebook-breaks/" class="md-nav__link">
+      <a href="../21-deployment-pipelines/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Lab 2.2 ~ Notebook Breaks Pipeline
+    Lab 3.2 ~ 21 Deployment Pipelines
   
 
     
@@ -498,126 +526,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day2/23-bad-data/" class="md-nav__link">
+      <a href="../../day3/technical-debt-activity/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Lab 2.3 ~ Bad Data Received
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../day2/24-broken-schema/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Lab 2.4 ~ Schema Breaks the Pipeline
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../day2/25-concurrent-runs/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Lab 2.5 ~ Run Concurrent Pipelines
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../11-data-activator/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Lab ~ 11 Data Activator
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../day2/incident-response-prep/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Fire Drill Preparation
+    Technical Debt Audit
   
 
     
@@ -682,11 +598,11 @@
 
 
 
-<h1 id="lab-05-create-and-use-dataflows-gen2-in-microsoft-fabric">Lab 05 - Create and use Dataflows (Gen2) in Microsoft Fabric</h1>
+<h1 id="create-and-use-dataflows-gen2-in-microsoft-fabric">Create and use Dataflows (Gen2) in Microsoft Fabric</h1>
 <p>In Microsoft Fabric, Dataflows (Gen2) connect to various data sources and perform transformations in Power Query Online. They can then be used in Data Pipelines to ingest data into a lakehouse or other analytical store, or to define a dataset for a Power BI report.</p>
 <p>This lab is designed to introduce the different elements of Dataflows (Gen2), and not create a complex solution that may exist in an enterprise.</p>
 <h2 id="instructions">Instructions</h2>
-<p>To access the instructions click here: <a href="https://qaalabs.github.io/fabric/05-dataflows-gen2/">https://qaalabs.github.io/fabric/05-dataflows-gen2/</a></p><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
+<p>To access the instructions click here: <a href="https://qaalabs.github.io/fabric/dataflows-gen2/">https://qaalabs.github.io/fabric/dataflows-gen2/</a></p><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
   <!-- mkdocs-quiz progress sidebar (desktop) -->
   <label class="md-nav__title">
     <span class="md-nav__icon md-icon"></span>

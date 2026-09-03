@@ -18,7 +18,7 @@
     
     
       
-        <title>Lab 03b - Create Medallion Architecture in a Fabric Lakehouse - Module 6 - Data Operations</title>
+        <title>Create Medallion Architecture in a Fabric Lakehouse - Module 6 - Data Operations</title>
       
     
     
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lab-03b-create-medallion-architecture-in-a-fabric-lakehouse" class="md-skip">
+        <a href="#create-medallion-architecture-in-a-fabric-lakehouse" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Lab 03b - Create Medallion Architecture in a Fabric Lakehouse
+              Create Medallion Architecture in a Fabric Lakehouse
             
           </span>
         </div>
@@ -332,14 +332,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../agenda/day2/" class="md-nav__link">
+      <a href="../../agenda/day3/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Day 2
+    Day 3
   
 
     
@@ -385,7 +385,7 @@
   <span class="md-ellipsis">
     
   
-    Day 2 - Incident Response
+    Day 3 - Quality &amp; Governance
   
 
     
@@ -401,11 +401,39 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Day 2 - Incident Response
+    Day 3 - Quality &amp; Governance
   
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../day3/quality-dimensions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Quality Dimensions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -421,7 +449,7 @@
   <span class="md-ellipsis">
     
   
-    Setup VM and MS Fabric Playground
+    Setup MS Fabric Playground
   
 
     
@@ -442,14 +470,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day2/21-ingest-pipeline/" class="md-nav__link">
+      <a href="../31-medallion/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Lab 2.1 ~ Ingest Data Pipeline
+    Lab 3.1 ~ Medallion Architecture
   
 
     
@@ -470,14 +498,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day2/22-notebook-breaks/" class="md-nav__link">
+      <a href="../21-deployment-pipelines/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Lab 2.2 ~ Notebook Breaks Pipeline
+    Lab 3.2 ~ 21 Deployment Pipelines
   
 
     
@@ -498,126 +526,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day2/23-bad-data/" class="md-nav__link">
+      <a href="../../day3/technical-debt-activity/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Lab 2.3 ~ Bad Data Received
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../day2/24-broken-schema/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Lab 2.4 ~ Schema Breaks the Pipeline
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../day2/25-concurrent-runs/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Lab 2.5 ~ Run Concurrent Pipelines
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../11-data-activator/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Lab ~ 11 Data Activator
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../day2/incident-response-prep/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Fire Drill Preparation
+    Technical Debt Audit
   
 
     
@@ -682,10 +598,10 @@
 
 
 
-<h1 id="lab-03b-create-medallion-architecture-in-a-fabric-lakehouse">Lab 03b - Create Medallion Architecture in a Fabric Lakehouse</h1>
+<h1 id="create-medallion-architecture-in-a-fabric-lakehouse">Create Medallion Architecture in a Fabric Lakehouse</h1>
 <p>In this exercise you will build out a medallion architecture in a Fabric lakehouse using notebooks. You will create a workspace, create a lakehouse, upload data to the bronze layer, transform the data and load it to the silver Delta table, transform the data further and load it to the gold Delta tables, and then explore the semantic model and create relationships.</p>
 <h2 id="instructions">Instructions</h2>
-<p>To access the instructions click here: <a href="https://qaalabs.github.io/fabric/03b-medallion-lakehouse/">https://qaalabs.github.io/fabric/03b-medallion-lakehouse/</a></p><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
+<p>To access the instructions click here: <a href="https://qaalabs.github.io/fabric/medallion-lakehouse/">https://qaalabs.github.io/fabric/medallion-lakehouse/</a></p><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
   <!-- mkdocs-quiz progress sidebar (desktop) -->
   <label class="md-nav__title">
     <span class="md-nav__icon md-icon"></span>
