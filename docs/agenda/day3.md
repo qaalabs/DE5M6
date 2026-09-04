@@ -21,8 +21,8 @@
 ## Session 3
 
 - **Slides**: Introduction to Technical Debt
-- **Breakout**: Technical Debt Setup
-- **Investigation**: [Technical Debt Audit](../day3/technical-debt-activity.md)
+- **Instructions**: Technical Debt Setup
+- **Breakout**: [Technical Debt Audit](../day3/technical-debt-activity.md)
 
 ## ☕ Afternoon Break
 

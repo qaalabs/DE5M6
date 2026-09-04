@@ -84,8 +84,8 @@
 ### Session 3
 
 - `13:20` **Slides**: Introduction to Technical Debt (10 mins)
-- `13:30` **Breakout**: [Technical Debt Setup](day3/technical-debt.md) (10 mins)
-- `13:40` **Investigation**: [Technical Debt Audit](day3/technical-debt-activity.md) (50 mins)
+- `13:30` **Instructions**: [Technical Debt Setup](day3/technical-debt.md) (10 mins)
+- `13:40` **Breakout**: [Technical Debt Audit](day3/technical-debt-activity.md) (50 mins)
 
 ### Session 4
 
