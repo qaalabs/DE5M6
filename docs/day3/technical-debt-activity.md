@@ -16,10 +16,17 @@ The codebase is at: https://github.com/QAADE5/techmart-2026
 
 ## Your Task
 
+**Part 1: Audit (~30 minutes)**
+
 1. Open the [Technical Debt Checklist](https://github.com/QAADE5/techmart-2026/blob/main/docs/TECHNICAL_DEBT_CHECKLIST.md)
 2. Work through the codebase systematically using the checklist
-3. Record your findings in the shared Google Doc
-4. Prepare to report back through your group's lens (see below)
+3. Record every issue you find in the shared template - one row per issue
+
+**Part 2: Synthesise (~15 minutes)**
+
+4. As a group, go through your register and agree on your single most significant issue through your lens
+5. Agree on your priority fix and your reasoning
+6. Prepare your report back (see below)
 
 ---
 
@@ -38,7 +45,16 @@ All groups audit all files. Each group reports back through a specialist perspec
 
 ## Report Back
 
-Each group shares (2-3 minutes):
+Each group presents their top issue through their lens:
 
-- "The most significant [your lens] issue we found was..."
-- "Our priority fix would be... because..."
+- **Issue** - what it is, and where (file/line)
+- **Evidence** - why this counts as debt through your lens, not just "it's bad practice"
+- **Impact** - what happens if this ships to production as-is
+- **Fix** - what you'd change, and roughly how much work it is
+
+After each group presents, the floor opens for questions from the other groups - could their lens see an angle on this issue that wasn't covered?
+
+**Whole-class discussion once everyone's shared:**
+
+- Did any group find something that surprised them?
+- What would you fix first if this were your codebase?
