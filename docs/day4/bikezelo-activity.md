@@ -37,8 +37,9 @@ cd bikezelo
 ### Step 4. Install Python dependencies
 
 ```bash
-pip install -r requirements.txt
+python -m pip install -r requirements.txt
 ```
+
 
 ### Step 5. Set up the database:
 
@@ -64,6 +65,8 @@ We will use VS Code to edit the code. To start the program run:
 code .
 ```
 
+*Note: Include the `.` as in `code .` as this runs VS Code from your current folder.*
+
 !!! success "VS Code should open. Close any popups. You should now see the project files on the left."
 
 ---
@@ -78,7 +81,7 @@ You'll need two terminals, both inside the `bikezelo` directory.
 python simulate.py
 ```
 
-### Step 2. Open a second terminal (Terminal 2), move into `bikezelo`, then start the app:
+### Step 2. <mark>Open a second terminal tab</mark> (Terminal 2), move into `bikezelo`, then start the app:
 
 ```text
 cd Desktop\bikezelo

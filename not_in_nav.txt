@@ -1,3 +1,4 @@
+labs/run-inside-vm.md
 day1/10-clone-repo.md
 day2/20-clone-repo.md
 day2/group-blaze.md
