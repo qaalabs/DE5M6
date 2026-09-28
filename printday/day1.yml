@@ -1,17 +1,10 @@
 # Site name
 site_name: Module 6 - Data Operations
-site_url: https://qaalabs.github.io/DE5M6/
+use_directory_urls: false
 dev_addr: '0.0.0.0:8000'
 
 # Navigation menu
 nav:
-  - Overview: index.md
-  - Module KSBs: ksb/index.md
-
-  - Agenda:
-    - Topics: agenda/index.md
-    - Day 1: agenda/day1.md
-
   - "Day 1 - Monitoring & Performance":
     - "🖥️ VM Setup": https://qaalabs.github.io/vmsetup/
     - "Status Page Analysis": day1/status-page-report-back.md
@@ -23,47 +16,9 @@ nav:
     - "Lab 1.4 ~ 06c Monitor Warehouse": labs/06c-monitor-data-warehouse.md
     - "Cloud Monitoring Comparison": day1/cloud-monitoring-comparison.md
 
-  - Resources: resources.md
-
-not_in_nav: |
-  404.md
-  trainer.md
-  DAY-setup.md
-  day1/system-failure.md
-  day1/why-monitor.md
-  day1/status-page-analysis.md
-  day1/monitoring-tools.md
-  day1/cloud-monitoring-report-back.md
-  day2/system-broke.md
-  day2/ai-de.md
-  day2/fire-drill-briefing.md
-  day2/fire-drill-groups.md
-  day2/scenario1-debrief.md
-  day2/scenario2-debrief.md
-  day3/good-data.md
-  day3/data-quality.md
-  day3/quality-patterns.md
-  day3/technical-debt.md
-  day3/tech-debt-issues.md
-  day3/debt-controls.md
-  day4/quality-tools-trainer.md
-  labs/run-inside-vm.md
-  day1/10-clone-repo.md
-  day2/20-clone-repo.md
-  day2/group-blaze.md
-  day2/group-ember.md
-  day2/group-ignis.md
-  day2/group-mistral.md
-
-
 # Theme
 theme:
-    features:
-      - toc.integrate
-      - content.code.copy
     name: material
-    icon:
-      logo: material/database
 
 # Extensions
 markdown_extensions:
@@ -110,11 +65,9 @@ markdown_extensions:
   - pymdownx.tilde
 
 plugins:
-  - search
-  - glightbox
-  - mkdocs_quiz
-
-extra_javascript:
-  - https://unpkg.com/mermaid/dist/mermaid.min.js
-
+  - print-site:
+      enumerate_headings: false
+      add_table_of_contents: false
+      add_cover_page: true
+      cover_page_template: printday_cover.tpl
 
