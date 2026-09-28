@@ -19,7 +19,7 @@
 
 ### Session 3
 
-- `13:20` **Activity**: [Logon to Azure and MS Fabric](labs/run-inside-vm.md) (10 mins)
+- `13:20` **Activity**: Logon to Azure and MS Fabric (10 mins)
 - `13:30` **Practice**: [Lab 1.3 ~ 18 Monitor Hub](labs/18-monitor-hub.md) (30 mins)
 - `14:00` **Practice**: [Lab 1.4 ~ 06c Monitor Warehouse](labs/06c-monitor-data-warehouse.md) (30 mins)
 - `14:30` **Discussion**: [Monitoring Tools](day1/monitoring-tools.md) (10 mins)
