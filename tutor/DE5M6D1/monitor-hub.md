@@ -3,7 +3,7 @@
 <span style="background-color: orange;">Give learners the link:</span> 
 https://qaalabs.github.io/DE5M6/day1/12-monitor-hub/
 
-<mark>Trimmed version - reuses the workspace/lakehouse from Lab 05 instead of creating a new one, since the Fabric Playground now runs for 7 hours and they still have it from this morning.</mark>
+<mark>Trimmed version - reuses the workspace/lakehouse from the Dataflows Gen2 lab instead of creating a new one, since the Fabric Playground now runs for 7 hours and they still have it from this morning.</mark>
 
 ### Activities
 

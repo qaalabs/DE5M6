@@ -46,7 +46,7 @@ Monitoring Data     (Metrics, logs, alerts)
 
 ## Transition to Next Session
 
-**Bridge to Lab 5 (2 minutes):**
+**Bridge to the Fabric labs (2 minutes):**
 
 - "We've talked about why monitoring matters and how companies communicate when things go wrong"
 - "Now let's start building something we can monitor"

@@ -14,7 +14,7 @@ https://qaalabs.github.io/fabric/implement-cicd/
 
 ### Possible error
 
-- Everyone complete Lab 21
+- Everyone complete the Deployment Pipelines lab
 - Try to delete the workspace
 - Discuss what the error message teaches us
 - "How would you design other operational safeguards?"

@@ -1,4 +1,4 @@
-## <mark>Facilitated discussion about Lab 04</mark>
+## <mark>Facilitated discussion about the Ingest Pipeline lab</mark>
 
 ### General
 

@@ -7,4 +7,4 @@
 
 - Restart: https://bud.sso.app.qa.com/lab/microsoft-fabric-playground/
 - Then logon to Azure & MS Fabric in the VM
-- Their Lab 05 workspace will be gone ~ *they will need to create a new workspace/lakehouse for Lab 18*
+- Their Dataflows Gen2 workspace will be gone ~ *they will need to create a new workspace/lakehouse for the Monitor Hub lab*
