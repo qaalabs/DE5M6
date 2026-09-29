@@ -13,15 +13,15 @@
 ### Session 2
 
 - `11:00` **Slides**: [Introduction to Microsoft Fabric](labs/run-inside-vm.md) (10 mins)
-- `11:10` **Practice**: [Lab 1.1 ~ 01 Create Fabric Lakehouse](labs/00-fabric-warmup.md) (30 mins)
+- `11:10` **Practice**: [Lab 1.1 ~ Create Fabric Lakehouse](labs/00-fabric-warmup.md) (30 mins)
 - `11:40` **Discussion**: Debrief about the lab (10 mins)
-- `11:50` **Practice**: [Lab 1.2 ~ 05 Dataflows Gen2](labs/05-dataflows-gen2.md) (30 mins)
+- `11:50` **Practice**: [Lab 1.2 ~ Dataflows Gen2](labs/05-dataflows-gen2.md) (30 mins)
 
 ### Session 3
 
 - `13:20` **Activity**: Logon to Azure and MS Fabric (10 mins)
-- `13:30` **Practice**: [Lab 1.3 ~ 18 Monitor Hub](labs/18-monitor-hub.md) (30 mins)
-- `14:00` **Practice**: [Lab 1.4 ~ 06c Monitor Warehouse](labs/06c-monitor-data-warehouse.md) (30 mins)
+- `13:30` **Practice**: [Lab 1.3 ~ Monitor Hub](day1/12-monitor-hub.md) (30 mins)
+- `14:00` **Practice**: [Lab 1.4 ~ Monitor Warehouse](labs/06c-monitor-data-warehouse.md) (30 mins)
 - `14:30` **Discussion**: [Monitoring Tools](day1/monitoring-tools.md) (10 mins)
 
 ### Session 4
@@ -47,7 +47,7 @@
 - `11:00` **Activity**: [Lab 2.3 ~ Bad Data Received](day2/23-bad-data.md) (10 mins)
 - `11:10` **Activity**: [Lab 2.4 ~ Schema Breaks the Pipeline](day2/24-broken-schema.md) (10 mins)
 - `11:20` **Activity**: [Lab 2.5 ~ Run Concurrent Pipelines](day2/25-concurrent-runs.md) (20 mins)
-- `11:40` **Demo**: [Lab ~ 11 Data Activator](labs/11-data-activator.md) (10 mins)
+- `11:40` **Demo**: [Lab ~ Data Activator](labs/11-data-activator.md) (10 mins)
 - `11:50` **Discussion**: [AI in Data Engineering](day2/ai-de.md) (20 mins)
 
 ### Session 3

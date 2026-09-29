@@ -15,7 +15,7 @@
 - **Activity**: [Lab 2.3 ~ Bad Data Received](../day2/23-bad-data.md)
 - **Activity**: [Lab 2.4 ~ Schema Breaks the Pipeline](../day2/24-broken-schema.md)
 - **Activity**: [Lab 2.5 ~ Run Concurrent Pipelines](../day2/25-concurrent-runs.md)
-- **Demo**: [Lab ~ 11 Data Activator](../labs/11-data-activator.md)
+- **Demo**: [Lab ~ Data Activator](../labs/11-data-activator.md)
 - **Discussion**: AI in Data Engineering
 
 ## 🥪🥤 Lunch Break
