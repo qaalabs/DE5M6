@@ -332,14 +332,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../agenda/day1/" class="md-nav__link">
+      <a href="../../agenda/day2/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Day 1
+    Day 2
   
 
     
@@ -385,7 +385,7 @@
   <span class="md-ellipsis">
     
   
-    Day 1 - Monitoring &amp; Performance
+    Day 2 - Incident Response
   
 
     
@@ -401,7 +401,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Day 1 - Monitoring &amp; Performance
+    Day 2 - Incident Response
   
 
           </label>
@@ -414,62 +414,6 @@
   
   
     <li class="md-nav__item">
-      <a href="https://qaalabs.github.io/vmsetup/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    🖥️ VM Setup
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../status-page-report-back/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Status Page Analysis
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../labs/run-inside-vm/" class="md-nav__link">
         
   
@@ -477,7 +421,7 @@
   <span class="md-ellipsis">
     
   
-    Introduction to Microsoft Fabric
+    Setup VM and MS Fabric Playground
   
 
     
@@ -498,14 +442,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../labs/00-fabric-warmup/" class="md-nav__link">
+      <a href="../../day2/21-ingest-pipeline/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Lab 1.1 ~ 01 Create Fabric Lakehouse
+    Lab 2.1 ~ Ingest Data Pipeline
   
 
     
@@ -526,14 +470,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../labs/05-dataflows-gen2/" class="md-nav__link">
+      <a href="../../day2/22-notebook-breaks/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Lab 1.2 ~ 05 Dataflows Gen2
+    Lab 2.2 ~ Notebook Breaks Pipeline
   
 
     
@@ -554,14 +498,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../labs/run-inside-vm/" class="md-nav__link">
+      <a href="../../day2/23-bad-data/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Introduction to Microsoft Fabric
+    Lab 2.3 ~ Bad Data Received
   
 
     
@@ -582,14 +526,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../labs/18-monitor-hub/" class="md-nav__link">
+      <a href="../../day2/24-broken-schema/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Lab 1.3 ~ 18 Monitor Hub
+    Lab 2.4 ~ Schema Breaks the Pipeline
   
 
     
@@ -610,14 +554,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../labs/06c-monitor-data-warehouse/" class="md-nav__link">
+      <a href="../../day2/25-concurrent-runs/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Lab 1.4 ~ 06c Monitor Warehouse
+    Lab 2.5 ~ Run Concurrent Pipelines
   
 
     
@@ -638,14 +582,42 @@
   
   
     <li class="md-nav__item">
-      <a href="../cloud-monitoring-comparison/" class="md-nav__link">
+      <a href="../../labs/11-data-activator/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Cloud Monitoring Comparison
+    Lab ~ Data Activator
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../day2/incident-response-prep/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fire Drill Preparation
   
 
     
@@ -712,20 +684,44 @@
 
 <h1 id="monitor-fabric-activity-in-the-monitoring-hub">Monitor Fabric Activity in the Monitoring Hub</h1>
 <div class="admonition info">
-<p class="admonition-title">Reuse your workspace from Lab 05</p>
-<p>You already have a workspace and lakehouse from this morning's <strong>Lab 05 (Dataflows Gen2)</strong> - use those instead of creating new ones. Open the workspace you created earlier and pick up from Step 1 below.</p>
+<p class="admonition-title">Reuse your workspace from the Dataflows Gen2 lab</p>
+<p>You already have a workspace and lakehouse from this morning's <strong>Dataflows Gen2</strong> lab - use those instead of creating new ones. Open the workspace you created earlier and pick up from Step 1 below.</p>
 </div>
 <p>The <em>monitoring hub</em> in Microsoft Fabric provides a central place where you can monitor activity. You can use the monitoring hub to review events related to items you have permission to view.</p>
 <h2 id="step-1-create-and-monitor-a-dataflow">Step 1: Create and monitor a Dataflow</h2>
 <p>In Microsoft Fabric, you can use a Dataflow (Gen2) to ingest data from a wide range of sources. In this exercise, you'll use a dataflow to get data from a CSV file and load it into a table in your existing lakehouse.</p>
 <ol>
-<li>Open your lakehouse from Lab 05. On the <strong>Home</strong> page, in the <strong>Get data</strong> menu, select <strong>New Dataflow Gen2</strong>.</li>
-<li>Name the new dataflow <code>Get Product Data</code> and select <strong>Create</strong>.</li>
-<li>In the dataflow designer, select <strong>Import from a Text/CSV file</strong>. Then complete the Get Data wizard to create a data connection by linking to <code>https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/products.csv</code> using anonymous authentication.</li>
-<li>Use the <strong>Save and run</strong> option to save and run the dataflow, then close it.</li>
-<li>In the navigation bar on the left, select <strong>Monitor</strong> to view the monitoring hub and observe that your dataflow is in-progress (if not, refresh the view until you see it).</li>
-<li>Wait for a few seconds, and then refresh the page until the status of the dataflow is <strong>Succeeded</strong>.</li>
-<li>In the navigation pane, select your lakehouse. Then expand the <strong>Tables</strong> folder to verify that a table named <strong>products</strong> has been created and loaded by the dataflow (you may need to refresh the <strong>Tables</strong> folder). You should now see both <strong>orders</strong> (from Lab 05) and <strong>products</strong> in your lakehouse.</li>
+<li>Open your lakehouse from the Dataflows Gen2 lab. On the <strong>Home</strong> page, in the <strong>Get data</strong> menu, select <strong>New Dataflow Gen2</strong>.</li>
+<li>
+<p>Name the new dataflow <code>Get Product Data</code> and select <strong>Create</strong>.</p>
+<div class="admonition abstract">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/18-new-data-flow.png" data-desc-position="bottom"><img alt="Screenshot of a new dataflow." src="../img/18-new-data-flow.png"></a></p>
+</div>
+</li>
+<li>
+<p>In the dataflow designer, select <strong>Import from a Text/CSV file</strong>. Then complete the Get Data wizard to create a data connection by linking to <code>https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/products.csv</code> using anonymous authentication.</p>
+<div class="admonition abstract">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/18-data-flow-query.png" data-desc-position="bottom"><img alt="Screenshot of a dataflow query." src="../img/18-data-flow-query.png"></a></p>
+</div>
+</li>
+<li>
+<p>Use the <strong>Save and run</strong> option to save and run the dataflow, then close it.</p>
+</li>
+<li>
+<p>In the navigation bar on the left, select <strong>Monitor</strong> to view the monitoring hub and observe that your dataflow is in-progress (if not, refresh the view until you see it).</p>
+<div class="admonition abstract">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/18-monitor-dataflow.png" data-desc-position="bottom"><img alt="Screenshot of the monitoring hub with a dataflow in-progress." src="../img/18-monitor-dataflow.png"></a></p>
+</div>
+</li>
+<li>
+<p>Wait for a few seconds, and then refresh the page until the status of the dataflow is <strong>Succeeded</strong>.</p>
+</li>
+<li>
+<p>In the navigation pane, select your lakehouse. Then expand the <strong>Tables</strong> folder to verify that a table named <strong>products</strong> has been created and loaded by the dataflow (you may need to refresh the <strong>Tables</strong> folder). You should now see both <strong>orders</strong> (from the Dataflows Gen2 lab) and <strong>products</strong> in your lakehouse.</p>
+<div class="admonition abstract">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/18-products-table.png" data-desc-position="bottom"><img alt="Screenshot of the products table in the lakehouse page." src="../img/18-products-table.png"></a></p>
+</div>
+</li>
 </ol>
 <h2 id="step-2-create-and-monitor-a-spark-notebook">Step 2: Create and monitor a Spark notebook</h2>
 <p>In Microsoft Fabric, you can use notebooks to run Spark code.</p>
@@ -733,6 +729,9 @@
 <li>
 <p>On the menu bar on the left, select <strong>Create</strong>. In the <em>New</em> page, under the <em>Data Engineering</em> section, select <strong>Notebook</strong>.</p>
 <p>A new notebook named <strong>Notebook_1</strong> is created and opened.</p>
+<div class="admonition abstract">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/18-new-notebook.png" data-desc-position="bottom"><img alt="Screenshot of a new notebook." src="../img/18-new-notebook.png"></a></p>
+</div>
 </li>
 <li>
 <p>At the top left of the notebook, select the gear icon to view the notebook details, and change its name to <code>Query Products</code>.</p>
@@ -740,18 +739,42 @@
 <li>In the notebook editor, in the <strong>Explorer</strong> pane, select <strong>Add data items</strong> and then select <strong>From OneLake catalog</strong>.</li>
 <li>Add the lakehouse you're using for today's labs.</li>
 <li>Expand the lakehouse item until you reach the <strong>products</strong> table.</li>
-<li>In the <strong>...</strong> menu for the <strong>products</strong> table, select <strong>Load data</strong> &gt; <strong>Spark</strong>. This adds a new code cell to the notebook.</li>
-<li>Use the <strong>▶ Run all</strong> button to run all cells in the notebook. It will take a moment or so to start the Spark session, and then the results of the query will be shown under the code cell.</li>
-<li>On the toolbar, use the <strong>◻</strong> (<em>Stop session</em>) button to stop the Spark session.</li>
-<li>In the navigation bar, select <strong>Monitor</strong> to view the monitoring hub, and note that the notebook activity is listed.</li>
+<li>
+<p>In the <strong>...</strong> menu for the <strong>products</strong> table, select <strong>Load data</strong> &gt; <strong>Spark</strong>. This adds a new code cell to the notebook.</p>
+<div class="admonition abstract">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/18-load-spark.png" data-desc-position="bottom"><img alt="Screenshot of a notebook with code to query a table." src="../img/18-load-spark.png"></a></p>
+</div>
+</li>
+<li>
+<p>Use the <strong>▶ Run all</strong> button to run all cells in the notebook. It will take a moment or so to start the Spark session, and then the results of the query will be shown under the code cell.</p>
+<div class="admonition abstract">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/18-notebook-output.png" data-desc-position="bottom"><img alt="Screenshot of a notebook with query results." src="../img/18-notebook-output.png"></a></p>
+</div>
+</li>
+<li>
+<p>On the toolbar, use the <strong>◻</strong> (<em>Stop session</em>) button to stop the Spark session.</p>
+</li>
+<li>
+<p>In the navigation bar, select <strong>Monitor</strong> to view the monitoring hub, and note that the notebook activity is listed.</p>
+<div class="admonition abstract">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/18-monitor-notebook.png" data-desc-position="bottom"><img alt="Screenshot of the monitoring hub with a notebook activity." src="../img/18-monitor-notebook.png"></a></p>
+</div>
+</li>
 </ol>
 <h2 id="step-3-monitor-history-for-an-item">Step 3: Monitor history for an item</h2>
 <p>Some items in a workspace might be run multiple times. You can use the monitoring hub to view their run history.</p>
 <ol>
 <li>In the navigation bar, return to the page for your workspace. Then use the <strong>↻</strong> (<em>Refresh now</em>) button for your <strong>Get Product Data</strong> dataflow to re-run it.</li>
 <li>In the navigation pane, select the <strong>Monitor</strong> page to view the monitoring hub and verify that the dataflow is in-progress.</li>
-<li>In the <strong>...</strong> menu for the <strong>Get Product Data</strong> dataflow, select <strong>Historical runs</strong> to view the run history for the dataflow.</li>
-<li>In the <strong>...</strong> menu for any of the historical runs select <strong>View detail</strong> to see details of the run.</li>
+<li>
+<p>In the <strong>...</strong> menu for the <strong>Get Product Data</strong> dataflow, select <strong>Historical runs</strong> to view the run history for the dataflow.</p>
+<div class="admonition abstract">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/18-historical-runs.png" data-desc-position="bottom"><img alt="Screenshot of the monitoring hub historical runs view." src="../img/18-historical-runs.png"></a></p>
+</div>
+</li>
+<li>
+<p>In the <strong>...</strong> menu for any of the historical runs select <strong>View detail</strong> to see details of the run.</p>
+</li>
 <li>Close the <strong>Details</strong> pane and use the <strong>Back to main view</strong> button to return to the main monitoring hub page.</li>
 </ol>
 <h2 id="step-4-customize-monitoring-hub-views">Step 4: Customize monitoring hub views</h2>
@@ -764,6 +787,9 @@
 <li><strong>Item type</strong>: Dataflow Gen2 (CI/CD)</li>
 </ul>
 <p>With the filter applied, only successful runs of dataflows are listed.</p>
+<div class="admonition abstract">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/18-monitor-filter.png" data-desc-position="bottom"><img alt="Screenshot of the monitoring hub with a filter applied." src="../img/18-monitor-filter.png"></a></p>
+</div>
 </li>
 <li>
 <p>Use the <strong>Column Options</strong> button to include the following columns in the view (use the <strong>Apply</strong> button to apply the changes):</p>
@@ -779,18 +805,21 @@
 <li>Refresh type</li>
 </ul>
 <p>You may need to scroll horizontally to see all of the columns.</p>
+<div class="admonition abstract">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/18-monitor-columns.png" data-desc-position="bottom"><img alt="Screenshot of the monitoring hub with the extra columns added." src="../img/18-monitor-columns.png"></a></p>
+</div>
 </li>
 </ol>
 <h2 id="step-5-clean-up-resources">Step 5: Clean up resources</h2>
 <p>In this exercise, you've added a dataflow and a Spark notebook to your workspace, and used the monitoring hub to view item activity.</p>
-<p>If you've finished exploring, you can delete the workspace you've been using since Lab 05.</p>
+<p>If you've finished exploring, you can delete the workspace you've been using since the Dataflows Gen2 lab.</p>
 <ol>
 <li>In the bar on the left, select the icon for your workspace to view all of the items it contains.</li>
 <li>In the <strong>...</strong> menu on the toolbar, select <strong>Workspace settings</strong>.</li>
 <li>In the <strong>General</strong> section, select <strong>Remove this workspace</strong>.</li>
 </ol>
 <div class="admonition note">
-<p class="admonition-title">Lab 06c (next) creates its own separate workspace for a sample data warehouse, so it's fine to remove this one now.</p>
+<p class="admonition-title">The Monitor Data Warehouse lab (next) creates its own separate workspace for a sample data warehouse, so it's fine to remove this one now.</p>
 </div><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
   <!-- mkdocs-quiz progress sidebar (desktop) -->
   <label class="md-nav__title">
