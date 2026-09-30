@@ -10,17 +10,14 @@ nav:
 
   - Agenda:
     - Topics: agenda/index.md
-    - Day 2: agenda/day2.md
+    - Day 3: agenda/day3.md
 
-  - "Day 2 - Incident Response":
-    - "Setup VM and MS Fabric Playground": labs/run-inside-vm.md
-    - "Lab 2.1 ~ Ingest Data Pipeline": day2/21-ingest-pipeline.md
-    - "Lab 2.2 ~ Notebook Breaks Pipeline": day2/22-notebook-breaks.md
-    - "Lab 2.3 ~ Bad Data Received": day2/23-bad-data.md
-    - "Lab 2.4 ~ Schema Breaks the Pipeline": day2/24-broken-schema.md
-    - "Lab 2.5 ~ Run Concurrent Pipelines": day2/25-concurrent-runs.md
-    - "Lab ~ Data Activator": labs/11-data-activator.md
-    - "Fire Drill Preparation": day2/incident-response-prep.md
+  - "Day 3 - Quality & Governance":
+    - "Data Quality Dimensions": day3/quality-dimensions.md
+    - "Setup MS Fabric Playground": labs/run-inside-vm.md
+    - "Lab 3.1 ~ Medallion Architecture": labs/31-medallion.md
+    - "Lab 3.2 ~ 21 Deployment Pipelines": labs/21-deployment-pipelines.md
+    - "Technical Debt Audit": day3/technical-debt-activity.md
 
   - Resources: resources.md
 
