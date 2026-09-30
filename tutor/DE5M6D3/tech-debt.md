@@ -8,4 +8,4 @@
 ### Links
 
 - Repo: https://github.com/QAADE5/techmart-2026
-- Checklist: https://github.com/QAADE5/techmart-2026/blob/main/docs/TECHNICAL_DEBT_CHECKLIST.md
+- Checklist: https://github.com/QAADE5/techmart-2026/blob/695c16a/docs/TECHNICAL_DEBT_CHECKLIST.md

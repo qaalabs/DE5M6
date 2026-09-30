@@ -18,7 +18,7 @@ The codebase is at: https://github.com/QAADE5/techmart-2026
 
 **Part 1: Audit (~30 minutes)**
 
-1. Open the [Technical Debt Checklist](https://github.com/QAADE5/techmart-2026/blob/main/docs/TECHNICAL_DEBT_CHECKLIST.md)
+1. Open the [Technical Debt Checklist](https://github.com/QAADE5/techmart-2026/blob/695c16a/docs/TECHNICAL_DEBT_CHECKLIST.md)
 2. Work through the codebase systematically using the checklist
 3. Record every issue you find in the shared template - one row per issue
 
