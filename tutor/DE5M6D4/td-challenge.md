@@ -1,16 +1,16 @@
 ## <mark>Challenge round ~ whole class</mark>
 
-- Each group: #1 fix-now (file/line + why it beat everything else) and their riskiest Accept
+- Each group: Fix now card (file/line), their fix, why it beat the other two
 - The next group challenges one decision; group 1 is challenged by the last group
-- About 7 min per group
+- About 5 min per group
 - Changing your mind is allowed - not being able to say why isn't
+- Close: "We can only ship 2 of these 4 fixes on Friday - which 2?"
 
 ---
 
 ## Challenges to use if the room is quiet
 
-- "You accepted R07 - what would change your mind?"
-- "R12 and R13 are the same pattern. Why did you treat them differently?"
-- "R04 - who should have been allowed to turn that rule off?" *(sets up Governance)*
-- "You spent points on R05 - more important than R16's missing tests?"
-- Reveal the decoys (R06, R13) at the end if nobody called them
+- Security: "S3 is one line - why not fix that too?"
+- Performance: "P2's comment says 'not sure why'. Did anyone find why?" *(commit 8, line 180)*
+- Code Quality: "The commit was called 'tidy up'. Did it?"
+- Maintainability: "M1 and the export audit line both catch an exception and carry on. Why is one debt and the other fine?" *(the decoy)*

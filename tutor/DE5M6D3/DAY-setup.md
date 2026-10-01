@@ -4,6 +4,6 @@
 
 #### Session 3
 
-- 13:30 Technical Debt
-- <mark>Uses `notes.qaalabs.com`</mark>
-- https://notes.qaalabs.com/de5m6-tech-debt-group-1
+- 13:20 Bikezelo - clone, set up and run
+- https://github.com/ingwaneorg/bikezelo
+- Day 4 reviews Dave's changes to this app - keep the install

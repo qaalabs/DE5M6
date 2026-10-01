@@ -1,6 +1,6 @@
-## <mark>Capture ~ Debt Decision Record ~ individually</mark>
+## <mark>Debt Decision Record ~ individually</mark>
 
-- Each learner writes a Debt Decision Record for one register item - template at the bottom of the activity page
+- Each learner writes a Debt Decision Record for one card - template at the bottom of the activity page
 - This is S21 portfolio evidence - tell them to save it where their portfolio lives
 - Push for the Prevention line - it's the part that shows continuous improvement
-- Tomorrow: the Day 4 walkthrough is the same app with the debt paid off
+- Bridge: K28 / S21 is on this afternoon's presentation list - this record is a ready-made 5-minute talk

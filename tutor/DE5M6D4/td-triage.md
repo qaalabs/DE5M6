@@ -1,7 +1,7 @@
-## <mark>Triage the register ~ in breakout groups</mark>
+## <mark>Review your lens ~ in breakout groups</mark>
 
-- Share each group's own copy of the register (Google Sheet, from `data/tech-debt-register.xlsx`)
-- Every row: open the file at the line, check it's there, fill in Confirmed / Impact / Effort
-- 2 rows aren't debt (R06, R13) - don't tell them
-- Visit each room within the first 10 min. All "Y" in 5 min = they didn't check - ask them to show you R08 line 216
-- Answer key: docs/day4/legacy-bikezelo-key.md
+- 3 cards per lens tab: Impact, Effort, Decision - exactly ONE Fix now
+- Then write the fix on the sheet - the changed lines, no need to run it
+- Visit each room in the first 5 min. Two Fix nows, or none? Push them to choose
+- Stuck on the fix? Point Security at line 314 - Dave used `?` correctly a month after S2
+- Before the challenge round: Fix now ID, the fix, and why it beat the other two - all filled in
