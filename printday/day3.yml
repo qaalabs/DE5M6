@@ -10,7 +10,11 @@ nav:
     - "Setup MS Fabric Playground": labs/run-inside-vm.md
     - "Lab 3.1 ~ Medallion Architecture": labs/31-medallion.md
     - "Lab 3.2 ~ 21 Deployment Pipelines": labs/21-deployment-pipelines.md
-    - "Technical Debt Audit": day3/technical-debt-activity.md
+    - "Bikezelo Walkthrough": https://github.com/ingwaneorg/bikezelo
+    - "Lab 3.3 ~ Clone, Setup & Run Bikezelo": day3/bikezelo-activity.md
+    - "Lab 3.4 ~ Uncomment the rules": day3/bikezelo-rules.md
+    - "Lab 3.5 ~ How does bikezelo forecast?": day3/bikezelo-forecast.md
+    - "Data Quality Tools": day3/quality-tools.md
 
 # Theme
 theme:

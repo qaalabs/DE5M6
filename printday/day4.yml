@@ -6,11 +6,7 @@ dev_addr: '0.0.0.0:8000'
 # Navigation menu
 nav:
   - "Day 4 - Improvement & Value":
-    - "Data Quality Tools": day4/quality-tools.md
-    - "Bikezelo Walkthrough": https://github.com/ingwaneorg/bikezelo
-    - "Lab 4.1 ~ Clone, Setup & Run Bikezelo": day4/bikezelo-activity.md
-    - "Lab 4.2 ~ Uncomment the rules": day4/bikezelo-rules.md
-    - "Lab 4.3 ~ How does bikezelo forecast?": day4/bikezelo-forecast.md
+    - "Read Dave's PR": day4/technical-debt-review.md
     - "Presentation Prep": day4/presentation.md
 
 # Theme

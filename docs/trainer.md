@@ -83,15 +83,17 @@
 
 ### Session 3
 
-- `13:20` **Slides**: Introduction to Technical Debt (10 mins)
-- `13:30` **Instructions**: [Technical Debt Setup](day3/technical-debt.md) (10 mins)
-- `13:40` **Breakout**: [Technical Debt Audit](day3/technical-debt-activity.md) (50 mins)
+- `13:20` **Demo**: [Bikezelo Walkthrough](https://github.com/ingwaneorg/bikezelo) (10 mins)
+- `13:30` **Activity**: [Lab 3.3 ~ Clone, Setup & Run Bikezelo](day3/bikezelo-activity.md) (20 mins)
+- `13:50` **Practice**: [Lab 3.4 ~ Uncomment the rules](day3/bikezelo-rules.md) (20 mins)
+- `14:10` **Practice**: [Lab 3.5 ~ How does bikezelo forecast?](day3/bikezelo-forecast.md) (10 mins)
+- `14:20` **Discussion**: Warning vs failure ~ a governance decision (10 mins)
 
 ### Session 4
 
-- `14:50` **Report-Back**: [Technical Debt Audit](day3/tech-debt-issues.md) (20 mins)
-- `15:10` [Debt Controls](day3/debt-controls.md) (20 mins)
-- `15:30` **Discussion**: Deployment Governance (20 mins)
+- `14:50` **Discussion**: Who owns the rules at work? (10 mins)
+- `15:00` **Breakout**: [Data Quality Tools](day3/quality-tools-trainer.md) (20 mins)
+- `15:20` **Report-Back**: [Data Quality Tools](day3/quality-tools.md) (20 mins)
 
 ---
 
@@ -100,19 +102,17 @@
 ### Session 1
 
 - `09:30` **Slides**: 🌅 Welcome to Day 4 of DE5 Module 6 (10 mins)
-- `09:40` **Breakout**: [Data Quality Tools](day4/quality-tools-trainer.md) (20 mins)
-- `10:00` **Report-Back**: [Data Quality Tools](day4/quality-tools.md) (20 mins)
-- `10:20` **Demo**: [Bikezelo Walkthrough](https://github.com/ingwaneorg/bikezelo) (10 mins)
-- `10:30` **Activity**: [Lab 4.1 ~ Clone, Setup & Run Bikezelo](day4/bikezelo-activity.md) (10 mins)
+- `09:40` **Slides**: Introduction to Technical Debt (10 mins)
+- `09:50` **Investigation**: [Read Dave's PR](day4/technical-debt-review.md) (10 mins)
+- `10:00` **Breakout**: Review your lens (20 mins)
+- `10:20` **Report-Back**: Challenge round (20 mins)
 
 ### Session 2
 
-- `11:00` **Practice**: [Lab 4.2 ~ Uncomment the rules](day4/bikezelo-rules.md) (20 mins)
-- `11:20` **Practice**: [Lab 4.3 ~ How does bikezelo forecast?](day4/bikezelo-forecast.md) (10 mins)
-- `11:30` **Discussion**: Warning vs failure ~ a governance decision  (10 mins)
-- `11:40` **Discussion**: Who owns the rules at work? (10 mins)
-- `11:50` EPA Presentation Briefing (10 mins)
-- `12:00` [Presentation Prep](day4/presentation.md) (30 mins)
+- `11:00` **Discussion**: Would a pipeline have caught it? (10 mins)
+- `11:10` **Practice**: Debt Decision Record (10 mins)
+- `11:20` EPA Presentation Briefing (10 mins)
+- `11:30` [Presentation Prep](day4/presentation.md) (60 mins)
 
 ### Session 3
 

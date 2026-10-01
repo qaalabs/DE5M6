@@ -20,17 +20,19 @@
 
 ## Session 3
 
-- **Slides**: Introduction to Technical Debt
-- **Instructions**: Technical Debt Setup
-- **Breakout**: [Technical Debt Audit](../day3/technical-debt-activity.md)
+- **Demo**: [Bikezelo Walkthrough](https://github.com/ingwaneorg/bikezelo)
+- **Activity**: [Lab 3.3 ~ Clone, Setup & Run Bikezelo](../day3/bikezelo-activity.md)
+- **Practice**: [Lab 3.4 ~ Uncomment the rules](../day3/bikezelo-rules.md)
+- **Practice**: [Lab 3.5 ~ How does bikezelo forecast?](../day3/bikezelo-forecast.md)
+- **Discussion**: Warning vs failure ~ a governance decision
 
 ## ☕ Afternoon Break
 
 ## Session 4
 
-- **Report-Back**: Technical Debt Audit
-- Debt Controls
-- **Discussion**: Deployment Governance
+- **Discussion**: Who owns the rules at work?
+- **Breakout**: Data Quality Tools
+- **Report-Back**: [Data Quality Tools](../day3/quality-tools.md)
 
 ## 🎁 Wrap
 
