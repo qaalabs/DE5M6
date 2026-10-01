@@ -1,4 +1,4 @@
-# Lab 4.1 ~ Clone, Setup and Run Bikezelo
+# Lab 3.3 ~ Clone, Setup and Run Bikezelo
 
 !!! abstract "S18: Develop simple forecasts and monitoring tools to anticipate or respond immediately to outages and incidents."
 

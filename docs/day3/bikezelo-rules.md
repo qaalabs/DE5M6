@@ -1,4 +1,4 @@
-# Lab 4.2 ~ Uncomment the Rules
+# Lab 3.4 ~ Uncomment the Rules
 
 !!! abstract "S6: Systematically clean, validate, and describe data at all stages of extract, transform, load (ETL)."
 

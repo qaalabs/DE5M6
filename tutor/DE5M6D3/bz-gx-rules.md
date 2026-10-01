@@ -1,4 +1,4 @@
-## <mark>Lab 4.2 ~ Uncomment the rules</mark>
+## <mark>Lab 3.4 ~ Uncomment the rules</mark>
 
 - Open `rules.py` in VS Code
 - Uncomment Step 1 - watch `customer_id` nulls turn red

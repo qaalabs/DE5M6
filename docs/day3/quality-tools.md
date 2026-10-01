@@ -112,5 +112,5 @@ For example:
 ## Teach Back
 
 - Each person presents what they have found.
-- If possible, try and link the tool back to the [*Dimensions of Data Quality*](../day3/quality-dimensions.md) covered earlier.
+- If possible, try and link the tool back to the [*Dimensions of Data Quality*](quality-dimensions.md) covered earlier.
 

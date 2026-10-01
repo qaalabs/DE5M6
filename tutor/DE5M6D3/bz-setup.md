@@ -1,4 +1,4 @@
-## <mark>Lab 4.1 ~ Clone, setup and run</mark>
+## <mark>Lab 3.3 ~ Clone, setup and run</mark>
 
 - Clone the repo, install dependencies, initialise the database
 - Open two terminals — one for `simulate.py`, one for `app.py`
