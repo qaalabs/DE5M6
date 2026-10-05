@@ -22,7 +22,7 @@ Everything Dave changed since February is in one release pull request. It goes t
 
 You already know what the app does from yesterday, so you only need to read what Dave changed.
 
-!!! tip "Want to run Dave's version?"
+??? tip "Want to run Dave's version?"
     Optional - reading the PR is the task. Yesterday's install works for this too.
 
     ```bash
@@ -83,7 +83,7 @@ Then the next group challenges your decision. Defend it or change your mind - bo
 
 Write a short record for **one** card - yours or another group's. This is evidence for your portfolio (S21).
 
-If you choose **K28 / S21** for this afternoon's presentation, this is your starting point.
+If you choose **K28 / S21** for this afternoon's presentation, this could be your starting point.
 
 ```text
 Debt Decision Record

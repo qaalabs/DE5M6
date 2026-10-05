@@ -4,7 +4,7 @@
 
 !!! abstract "K27: The principles of descriptive, predictive and prescriptive analytics."
 
-Bikezelo is a lightweight pipeline monitoring dashboard writen for this module. It simulates a live data feed, validates incoming records against quality rules, and forecasts pipeline behaviour.
+Bikezelo is TechMart's pipeline monitor - a lightweight dashboard written for this module. It simulates a live data feed, validates incoming records against quality rules, and forecasts pipeline behaviour.
 
 ## Setup
 
