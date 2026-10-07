@@ -14,33 +14,39 @@
 
 - **Discussion**: Would a pipeline have caught it?
 - **Practice**: Debt Decision Record
-- EPA Presentation Briefing
-- [Presentation Prep](../day4/presentation.md)
+- [EPA Presentation Briefing](../day4/presentation.md)
+- **Activity**: Presentation Prep
 
 ## 🥪🥤 Lunch Break
 
 ## Session 3
 
-- Presentations ~ Group 1
+- **Report-Back**: Presentations ~ Group 1
 
 ## ☕ Afternoon Break
 
 ## Session 4
 
-- Presentations ~ Group 2
+- **Report-Back**: Presentations ~ Group 2
 
 ## ☕ Afternoon Break
 
 ## Session 5
 
-- Presentations ~ Group 3
+- **Report-Back**: Presentations ~ Group 3
 
 ## ☕ Afternoon Break
 
 ## Session 6
 
-- Presentations ~ Group 4
-- **Activity**: 💯 Evaluation
+- **Report-Back**: Presentations ~ Group 4
+
+## ☕ Afternoon Break
+
+## Session 7
+
+- **Report-Back**: Presentations ~ Group 5
+- **Slides**: 💯 Evaluation
 
 ## 🎁 Wrap
 

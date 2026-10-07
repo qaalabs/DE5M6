@@ -43,7 +43,7 @@ nav = [
   ]},
   {"Day 4 - Improvement & Value" = [
     {"Read Dave's PR" = "day4/technical-debt-review.md"},
-    {"Presentation Prep" = "day4/presentation.md"},
+    {"EPA Presentation Briefing" = "day4/presentation.md"},
   ]},
   {"Resources" = "resources.md"},
 ]

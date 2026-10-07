@@ -2,7 +2,7 @@
 
 ## Session 1
 
-- **Slides**: [🖥️ VM Setup](https://qaalabs.github.io/vmsetup/)
+- **Setup**: [🖥️ VM Setup](https://qaalabs.github.io/vmsetup/)
 - **Slides**: 🌅 Welcome to Day 1 of DE5 Module 6
 - **Discussion**: System Failure Impact
 - **Slides**: Why Monitor?

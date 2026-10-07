@@ -110,24 +110,29 @@
 ### Session 2
 
 - `11:00` **Discussion**: Would a pipeline have caught it? (10 mins)
-- `11:10` **Practice**: Debt Decision Record (10 mins)
-- `11:20` EPA Presentation Briefing (10 mins)
-- `11:30` [Presentation Prep](day4/presentation.md) (60 mins)
+- `11:10` **Practice**: Debt Decision Record (20 mins)
+- `11:30` [EPA Presentation Briefing](day4/presentation.md) (10 mins)
+- `11:40` **Activity**: Presentation Prep (40 mins)
 
 ### Session 3
 
-- `13:30` Presentations ~ Group 1 (30 mins)
+- `13:20` **Report-Back**: Presentations ~ Group 1 (20 mins)
 
 ### Session 4
 
-- `14:10` Presentations ~ Group 2 (30 mins)
+- `13:50` **Report-Back**: Presentations ~ Group 2 (20 mins)
 
 ### Session 5
 
-- `14:50` Presentations ~ Group 3 (30 mins)
+- `14:20` **Report-Back**: Presentations ~ Group 3 (20 mins)
 
 ### Session 6
 
-- `15:30` Presentations ~ Group 4 (10 mins)
+- `14:50` **Report-Back**: Presentations ~ Group 4 (20 mins)
+
+### Session 7
+
+- `15:20` **Report-Back**: Presentations ~ Group 5 (20 mins)
+- `15:40` **Slides**: 💯 Evaluation (10 mins)
 
 ---
