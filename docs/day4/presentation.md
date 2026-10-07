@@ -1,14 +1,12 @@
 # DE5 Module 6 ~ End of Day Presentation
 
-Prepare a 5 minute presentation on one KSB or paired set from the EPA Professional Discussion topics listed below.
+Prepare a presentation on one KSB - or a combination of them. At least 5 minutes, maximum of 10 minutes - your trainer will confirm the time per person before lunch.
 
-You may use slides, notes, or speak freely - the choice is yours.
+Read the [ST1386 Data Engineer standard](https://skillsengland.education.gov.uk/apprenticeship-standards/st1386-v1-0) and choose **one Knowledge, Skill, or Behaviour - or a combination of them** - that your experience evidences well. There's no fixed list - pick whatever you feel comfortable with, from anywhere in the standard, not just this module.
 
-Draw on whatever experience is most relevant to you - your workplace, a project, or the labs from this module.
+Draw on whatever experience is most relevant to you - your workplace, a project, or labs from any module so far.
 
 *This is an opportunity to practise articulating your evidence ahead of your EPA Professional Discussion.*
-
-For the full KSB definitions refer to the [Skills England standard](https://skillsengland.education.gov.uk/apprenticeship-standards/st1386-v1-0).
 
 ## What happens next
 
@@ -16,7 +14,9 @@ For the full KSB definitions refer to the [Skills England standard](https://skil
 - Before lunch we will agree the running order
 - Presentations begin after lunch
 
-## Choose from the EPA Professional Discussion topics
+## Some options that tend to fit this module well
+
+If you want a starting point, here are some KSBs from this module - but you're not limited to these.
 
 ### Data Quality and Performance
 
