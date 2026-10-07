@@ -5,16 +5,16 @@ dev_addr: '0.0.0.0:8000'
 
 # Navigation menu
 nav:
-  - "Day 3 - Quality & Governance":
-    - "Data Quality Dimensions": day3/quality-dimensions.md
-    - "Setup MS Fabric Playground": labs/run-inside-vm.md
-    - "Lab 3.1 ~ Medallion Architecture": labs/31-medallion.md
-    - "Lab 3.2 ~ 21 Deployment Pipelines": labs/21-deployment-pipelines.md
-    - "Bikezelo Walkthrough": https://github.com/ingwaneorg/bikezelo
-    - "Lab 3.3 ~ Clone, Setup & Run Bikezelo": day3/bikezelo-activity.md
+  - "Day 3 ~ Quality & Governance":
+    - "👥 Data quality dimensions": day3/quality-dimensions.md
+    - "Setup MS Fabric playground": labs/run-inside-vm.md
+    - "Lab 3.1 - Medallion architecture": labs/31-medallion.md
+    - "Lab 3.2 - 21 Deployment pipelines": labs/21-deployment-pipelines.md
+    - "Bikezelo walkthrough": https://github.com/ingwaneorg/bikezelo
+    - "Lab 3.3 - Clone, setup & run Bikezelo": day3/bikezelo-activity.md
     - "Lab 3.4 ~ Uncomment the rules": day3/bikezelo-rules.md
     - "Lab 3.5 ~ How does bikezelo forecast?": day3/bikezelo-forecast.md
-    - "Data Quality Tools": day3/quality-tools.md
+    - "Data quality tools": day3/quality-tools.md
 
 # Theme
 theme:

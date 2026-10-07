@@ -1,39 +1,39 @@
-# Day 1 - Monitoring & Performance
+# Day 1 ~ Monitoring & Performance
 
 ## Session 1
 
-- **Setup**: [🖥️ VM Setup](https://qaalabs.github.io/vmsetup/)
-- **Slides**: 🌅 Welcome to Day 1 of DE5 Module 6
-- **Discussion**: System Failure Impact
-- **Slides**: Why Monitor?
-- **Breakout**: Status Page Analysis
-- **Report-Back**: [Status Page Analysis](../day1/status-page-report-back.md)
+- **Setup**: [🖥️ VM setup](https://qaalabs.github.io/vmsetup/)
+- **Slides**: 🌅 Welcome to day 1 of module 6
+- **Discussion**: System failure impact
+- **Slides**: Why monitor?
+- **Breakout**: 👥 Status page analysis
+- **Report-Back**: [Status page analysis](../day1/status-page-report-back.md)
 
-## ☕ Morning Break
+## ☕ Morning break
 
 ## Session 2
 
 - **Slides**: [Introduction to Microsoft Fabric](../labs/run-inside-vm.md)
-- **Practice**: [Lab 1.1 ~ Create Fabric Lakehouse](../labs/00-fabric-warmup.md)
+- **Practice**: [Lab 1.1 - Create Fabric lakehouse](../labs/00-fabric-warmup.md)
 - **Discussion**: Debrief about the lab
 - **Practice**: [Lab 1.2 ~ Dataflows Gen2](../labs/05-dataflows-gen2.md)
 
-## 🥪🥤 Lunch Break
+## 🥪🥤 Lunch break
 
 ## Session 3
 
-- **Activity**: Logon to Azure and MS Fabric
-- **Practice**: [Lab 1.3 ~ Monitor Hub](../day1/12-monitor-hub.md)
-- **Practice**: [Lab 1.4 ~ Monitor Warehouse](../labs/06c-monitor-data-warehouse.md)
-- **Discussion**: Monitoring Tools
+- **Setup**: Logon to Azure and MS Fabric
+- **Practice**: [Lab 1.3 - Monitor hub](../day1/12-monitor-hub.md)
+- **Practice**: [Lab 1.4 - Monitor warehouse](../labs/06c-monitor-data-warehouse.md)
+- **Discussion**: Monitoring tools
 
-## ☕ Afternoon Break
+## ☕ Afternoon break
 
 ## Session 4
 
-- **Instructions**: Cloud Monitoring Comparison
-- **Breakout**: [Cloud Monitoring Comparison](../day1/cloud-monitoring-comparison.md)
-- **Report-Back**: Cloud Monitoring Comparison
+- **Instructions**: Cloud monitoring comparison
+- **Breakout**: [👥 Cloud monitoring comparison](../day1/cloud-monitoring-comparison.md)
+- **Report-Back**: Cloud monitoring comparison
 
 ## 🎁 Wrap
 

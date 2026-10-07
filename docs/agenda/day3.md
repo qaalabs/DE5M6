@@ -1,38 +1,38 @@
-# Day 3 - Quality & Governance
+# Day 3 ~ Quality & Governance
 
 ## Session 1
 
 - **Discussion**: What does good data mean to you?
-- **Slides**: Quality Data ~ Why It Matters
-- **Breakout**: [Data Quality Dimensions](../day3/quality-dimensions.md)
-- **Report-Back**: Data Quality Dimensions
+- **Slides**: Quality data - Why it matters
+- **Breakout**: [👥 Data quality dimensions](../day3/quality-dimensions.md)
+- **Report-Back**: Data quality dimensions
 
-## ☕ Morning Break
+## ☕ Morning break
 
 ## Session 2
 
-- **Activity**: [Setup MS Fabric Playground](../labs/run-inside-vm.md)
-- **Activity**: [Lab 3.1 ~ Medallion Architecture](../labs/31-medallion.md)
-- **Discussion**: Data Quality ~ Medallion Architecture
-- **Practice**: [Lab 3.2 ~ 21 Deployment Pipelines](../labs/21-deployment-pipelines.md)
+- **Setup**: [Setup MS Fabric playground](../labs/run-inside-vm.md)
+- **Activity**: [Lab 3.1 - Medallion architecture](../labs/31-medallion.md)
+- **Discussion**: Data quality ~ Medallion architecture
+- **Practice**: [Lab 3.2 - 21 Deployment pipelines](../labs/21-deployment-pipelines.md)
 
-## 🥪🥤 Lunch Break
+## 🥪🥤 Lunch break
 
 ## Session 3
 
-- **Demo**: [Bikezelo Walkthrough](https://github.com/ingwaneorg/bikezelo)
-- **Activity**: [Lab 3.3 ~ Clone, Setup & Run Bikezelo](../day3/bikezelo-activity.md)
+- **Demo**: [Bikezelo walkthrough](https://github.com/ingwaneorg/bikezelo)
+- **Activity**: [Lab 3.3 - Clone, setup & run Bikezelo](../day3/bikezelo-activity.md)
 - **Practice**: [Lab 3.4 ~ Uncomment the rules](../day3/bikezelo-rules.md)
 - **Practice**: [Lab 3.5 ~ How does bikezelo forecast?](../day3/bikezelo-forecast.md)
 - **Discussion**: Warning vs failure ~ a governance decision
 
-## ☕ Afternoon Break
+## ☕ Afternoon break
 
 ## Session 4
 
 - **Discussion**: Who owns the rules at work?
-- **Breakout**: Data Quality Tools
-- **Report-Back**: [Data Quality Tools](../day3/quality-tools.md)
+- **Breakout**: 👥 Data quality tools
+- **Report-Back**: [Data quality tools](../day3/quality-tools.md)
 
 ## 🎁 Wrap
 

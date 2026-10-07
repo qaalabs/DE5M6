@@ -1,47 +1,47 @@
-# Day 4 - Improvement & Value
+# Day 4 ~ Improvement & Value
 
 ## Session 1
 
-- **Slides**: 🌅 Welcome to Day 4 of DE5 Module 6
-- **Slides**: Introduction to Technical Debt
+- **Slides**: 🌅 Welcome to day 4 of module 6
+- **Slides**: Introduction to technical debt
 - **Investigation**: [Read Dave's PR](../day4/technical-debt-review.md)
-- **Breakout**: Review your lens
+- **Breakout**: 👥 Review your lens
 - **Report-Back**: Challenge round
 
-## ☕ Morning Break
+## ☕ Morning break
 
 ## Session 2
 
 - **Discussion**: Would a pipeline have caught it?
-- **Practice**: Debt Decision Record
-- [EPA Presentation Briefing](../day4/presentation.md)
-- **Activity**: Presentation Prep
+- **Practice**: Debt decision record
+- [EPA presentation briefing](../day4/presentation.md)
+- **Activity**: Presentation prep
 
-## 🥪🥤 Lunch Break
+## 🥪🥤 Lunch break
 
 ## Session 3
 
 - **Report-Back**: Presentations ~ Group 1
 
-## ☕ Afternoon Break
+## ☕ Afternoon break
 
 ## Session 4
 
 - **Report-Back**: Presentations ~ Group 2
 
-## ☕ Afternoon Break
+## ☕ Afternoon break
 
 ## Session 5
 
 - **Report-Back**: Presentations ~ Group 3
 
-## ☕ Afternoon Break
+## ☕ Afternoon break
 
 ## Session 6
 
 - **Report-Back**: Presentations ~ Group 4
 
-## ☕ Afternoon Break
+## ☕ Afternoon break
 
 ## Session 7
 
