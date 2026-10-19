@@ -533,7 +533,7 @@
   <span class="md-ellipsis">
     
   
-    Lab 1.2 ~ Dataflows Gen2
+    Lab 1.2 - Dataflows Gen2
   
 
     
@@ -685,11 +685,12 @@
   <h1>Run locally</h1>
 
 <pre class="mermaid"><code>flowchart TD
-    A["QA Platform:&lt;br/&gt;Wait for status Ready"]
+    S["QA Platform:&lt;br/&gt;Click: ▶ Start lab"]
+    A["Wait for status Ready"]
     B["Open a private/incognito&lt;br/&gt;browser window"]
     C["Logon to Microsoft Fabric&lt;br/&gt;app.fabric.microsoft.com"]
 
-    A --&gt; B --&gt; C</code></pre>
+    S --&gt; A --&gt; B --&gt; C</code></pre>
 <h2 id="step-1-access-microsoft-fabric">Step 1: Access Microsoft Fabric</h2>
 <p>In this lab, you will access Microsoft Fabric using a temporary lab account provided by the QA Platform.</p>
 <div class="admonition note">
@@ -698,7 +699,13 @@
 </div>
 <ol>
 <li>
-<p>In the QA Platform, wait until the lab status shows <strong>Ready</strong> with a green tick.</p>
+<p>Navigate to the <a href="https://bud.sso.app.qa.com/lab/microsoft-fabric-playground/">QA Platform</a> to access the <strong>Microsoft Fabric Playground</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Start</strong> to start the lab.</p>
+</li>
+<li>
+<p>Wait until the lab status shows <strong>Ready</strong> with a green tick.</p>
 <ul>
 <li>This can take up to 15 minutes from the time you start the lab. The provisioning assigns a Fabric licence to your lab user account.</li>
 </ul>
