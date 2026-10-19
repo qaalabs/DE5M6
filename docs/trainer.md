@@ -15,7 +15,7 @@
 - `11:00` **Slides**: [Introduction to Microsoft Fabric](labs/run-inside-vm.md) (10 mins)
 - `11:10` **Practice**: [Lab 1.1 - Create Fabric lakehouse](labs/00-fabric-warmup.md) (30 mins)
 - `11:40` **Discussion**: Debrief about the lab (10 mins)
-- `11:50` **Practice**: [Lab 1.2 ~ Dataflows Gen2](labs/05-dataflows-gen2.md) (30 mins)
+- `11:50` **Practice**: [Lab 1.2 - Dataflows Gen2](labs/05-dataflows-gen2.md) (30 mins)
 
 ### Session 3
 
@@ -79,7 +79,7 @@
 - `10:50` **Setup**: [Setup MS Fabric playground](labs/run-inside-vm.md) (10 mins)
 - `11:00` **Activity**: [Lab 3.1 - Medallion architecture](labs/31-medallion.md) (40 mins)
 - `11:40` **Discussion**: [Data quality ~ Medallion architecture](day3/quality-patterns.md) (20 mins)
-- `12:00` **Practice**: [Lab 3.2 - 21 Deployment pipelines](labs/21-deployment-pipelines.md) (20 mins)
+- `12:00` **Practice**: [Lab 3.2 - Deployment pipelines](labs/21-deployment-pipelines.md) (20 mins)
 
 ### Session 3
 

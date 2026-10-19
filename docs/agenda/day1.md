@@ -16,7 +16,7 @@
 - **Slides**: [Introduction to Microsoft Fabric](../labs/run-inside-vm.md)
 - **Practice**: [Lab 1.1 - Create Fabric lakehouse](../labs/00-fabric-warmup.md)
 - **Discussion**: Debrief about the lab
-- **Practice**: [Lab 1.2 ~ Dataflows Gen2](../labs/05-dataflows-gen2.md)
+- **Practice**: [Lab 1.2 - Dataflows Gen2](../labs/05-dataflows-gen2.md)
 
 ## 🥪🥤 Lunch break
 

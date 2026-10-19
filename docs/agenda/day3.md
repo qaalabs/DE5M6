@@ -14,7 +14,7 @@
 - **Setup**: [Setup MS Fabric playground](../labs/run-inside-vm.md)
 - **Activity**: [Lab 3.1 - Medallion architecture](../labs/31-medallion.md)
 - **Discussion**: Data quality ~ Medallion architecture
-- **Practice**: [Lab 3.2 - 21 Deployment pipelines](../labs/21-deployment-pipelines.md)
+- **Practice**: [Lab 3.2 - Deployment pipelines](../labs/21-deployment-pipelines.md)
 
 ## 🥪🥤 Lunch break
 
