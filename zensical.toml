@@ -28,7 +28,7 @@ nav = [
     {"Lab 2.4 - Schema breaks the pipeline" = "day2/24-broken-schema.md"},
     {"Lab 2.5 - Run concurrent pipelines" = "day2/25-concurrent-runs.md"},
     {"Lab ~ Data Activator" = "labs/11-data-activator.md"},
-    {"Fire drill preparation" = "day2/incident-response-prep.md"},
+    {"Incident communication" = "day2/incident-response-prep.md"},
   ]},
   {"Day 3 ~ Quality & Governance" = [
     {"👥 Data quality dimensions" = "day3/quality-dimensions.md"},
