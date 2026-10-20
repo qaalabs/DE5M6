@@ -1,96 +1,133 @@
-# Day 2: Fire Drill Preparation
+# Day 2: Incident Communication
 
-## What's Coming Next
+## Why This Matters
 
-In the next activity, you'll participate in an **incident response "fire drill"** simulating a data platform failure. You'll work in teams to coordinate technical responses and stakeholder communication under time pressure.
+When a data platform fails, fixing it is only half the job. The other half is keeping people informed - managers, colleagues and other teams who depend on your data. Often the communication is harder than the technical fix.
 
-**But before we do that, it may be useful to read up on some real incidents that happened.**
+In this activity you'll look at how real companies worded their updates during and after major outages, and note the language that works.
 
 ---
 
-## Your Preparation Task
+## Your Task
+
+1. Read [What Good Incident Language Looks Like](#what-good-incident-language-looks-like) below
+2. Pick **two** incidents from [Real Incident Examples](#real-incident-examples) and skim how the company communicated
+3. Write down **3-5 phrases** you could reuse yourself, using the [checklist](#phrases-to-collect)
+
+**By the end you should have:** a short list of phrases in your notes that you could use when writing your own incident update.
+
+!!! tip "Don't try to read everything"
+    The post-mortems are long. Skim the summary at the top and the closing section - that's where most of the stakeholder language is.
+
+---
+
+### What Good Incident Language Looks Like
+
+Good incident updates are written for **stakeholders** - people who need to know what's happening but don't need the technical detail. Here are two real examples.
+
+**During an incident - Google Cloud, 20 October 2026**
+
+> "Due to a power event we had suffered an outage within europe-west2-b zone. The power event is mitigated.
+>
+> Partial mitigation to infrastructure services will be observed within the next 30 minutes and the remaining services will be mitigated there after."
+
+*Google Cloud status page, as reported in [BBC News live coverage](https://www.bbc.co.uk/news/live/c58jd2kjp93xt?post=asset%3Aa3c2303f-7197-4e4b-90a0-da596167af0c#post)*
+
+What works:
+
+- **Cause in a few words** - "a power event", with no guessing beyond that
+- **Current status** - the cause "is mitigated"
+- **What happens next, with a time** - partial recovery "within the next 30 minutes"
+- **Honest about stages** - it doesn't promise everything is fixed at once
+
+What wouldn't work for internal stakeholders: "europe-west2-b zone" and "infrastructure services" mean a lot to engineers but nothing to a finance director. They want to know: *are my reports affected, and when will they be back?*
+
+**After an incident - AWS, October 2025**
+
+> "We apologize for the impact this event caused our customers. While we have a strong track record of operating our services with the highest levels of availability, we know how critical our services are to our customers, their applications and end users, and their businesses. We know this event impacted many customers in significant ways. We will do everything we can to learn from this event and use it to improve our availability even further."
+
+*Closing paragraph of the [AWS post-event summary](https://aws.amazon.com/message/101925/), as reported by [BBC News](https://www.bbc.co.uk/news/articles/cvgvnp77dy9o)*
+
+What works:
+
+- **A clear apology** - no excuses, no blaming anyone else
+- **Shows they understand the impact** - not just on customers, but on their customers' users and businesses
+- **Looks forward** - commits to learning and improving
+
+---
 
 ### Real Incident Examples
 
-Scan these major incidents to understand what works (and what doesn't) in incident response:
+Pick **two** of these. For each one, look at how the company explained the problem, not just what went wrong. Notice how many of them started with **data**, not code: a bad DNS record, a file that grew too big, a policy row with blank fields.
 
-**Cloudflare Global DNS Outage - June 21, 2022**
+**AWS us-east-1 Outage - October 20, 2025**
 
-- *27-minute global DNS failure affecting millions of websites*
-- **Link:** https://blog.cloudflare.com/cloudflare-outage-on-june-21-2022/
-- **Key lesson:** Speed vs. accuracy in technical communication
+- *About 15 hours of disruption in AWS's busiest region, taking down apps, banks and games worldwide*
+- A race condition in DynamoDB's automated DNS management left its endpoint with an empty DNS record. Services that depended on DynamoDB (including EC2 launches and load balancers) then failed in turn.
+- **Link:** [AWS post-event summary](https://aws.amazon.com/message/101925/)
+- **Key lesson:** Hidden dependencies and cascading failures - fixing the first problem didn't end the outage
 
-**Cloudflare DNS CNAME Change - July 14, 2025**
+**Cloudflare Global Outage - November 18, 2025**
 
-- *A major 62-minute outage of its 1.1.1.1 resolver*
-- Routine update changed the order of DNS records, causing some devices, like Cisco routers, to crash or fail.
-- Link: https://blog.cloudflare.com/cname-a-record-order-dns-standards/
-- **Key Lesson:** Complex internet infrastructure hides vulnerabilities
+- *Around 3 hours of HTTP 5xx errors across a large share of the web (ChatGPT, X, Spotify and many more)*
+- A database permissions change made a query return duplicate rows. That doubled the size of a configuration file, which crashed the proxy software when it was pushed to every server.
+- **Link:** [Cloudflare post-mortem](https://blog.cloudflare.com/18-november-2025-outage/)
+- **Key lesson:** Bad data spreads as fast as bad code - and the team first suspected an attack
 
-**AWS us-east-1 Outage - December 7, 2021**  
+**Google Cloud Global Outage - June 12, 2025**
 
-- *5+ hour power-related outage affecting thousands of services*
-- **Search:** "AWS us-east-1 outage December 2021 post-mortem"
-- **Key lesson:** Cascading failures and dependency management
-- External analysis: https://www.thousandeyes.com/blog/aws-outage-analysis-dec-7-2021
+- *Several hours of API failures across Google Cloud and Workspace, and many services built on them*
+- A policy update with unexpected blank fields was replicated to every region within seconds. It triggered a crash in new code that had no error handling or feature flag.
+- **Link:** [Google Cloud incident report](https://status.cloud.google.com/incidents/ow5i3PPK96RduMcb1SsW)
+- **Key lesson:** Global changes need staged rollouts, even when they are "just data"
 
-**GitHub Database Incident - October 21, 2018**
+**CrowdStrike Falcon Update - July 19, 2024**
 
-- *24+ hour database cluster failure during maintenance*
-- **Search:** "GitHub October 2018 incident post-mortem database"
-- **Key lesson:** Incident escalation and technical decision-making
+- *About 8.5 million Windows machines crashed, grounding flights and disrupting hospitals and banks*
+- A faulty content update for security software was sent to all customers at once. Many machines needed someone to fix them by hand.
+- **Link:** [CrowdStrike preliminary post-incident report](https://www.crowdstrike.com/en-us/blog/falcon-content-update-preliminary-post-incident-report/)
+- **Key lesson:** Rollout strategy and recovery planning - how do you fix machines that won't boot?
 
 **Meta/Facebook Global Outage - October 4, 2021**
 
 - *6+ hour BGP configuration error taking down all Meta services*
-- **Search:** "Facebook outage October 2021 BGP routing"
-- **Key lesson:** When monitoring systems fail too
+- **Link:** [Meta engineering write-up](https://engineering.fb.com/2021/10/05/networking-traffic/outage-details/)
+- **Key lesson:** When your monitoring and internal tools fail too
+
+**GitHub Database Incident - October 21, 2018**
+
+- *24+ hour degraded service after a brief network fault split the database cluster*
+- **Link:** [GitHub post-incident analysis](https://github.blog/2018-10-30-oct21-post-incident-analysis/)
+- **Key lesson:** Choosing data integrity over speed - and explaining that choice to users
 
 ---
 
-### Extract Key Principles
+### Phrases to Collect
 
-*Focus your research on these questions:*
+Write down 3-5 phrases you could reuse yourself. Look for language that:
 
-**Detection & Assessment:**
+- Says **what's affected** in terms the reader cares about
+- Gives a **time for the next update** or for recovery
+- Admits **what isn't known yet**, without sounding lost
+- **Apologises** without blaming people or suppliers
+- States **what happens next**
 
-- How quickly did they recognize the problem?
-- What information did they gather before acting?
-- How did they assess business impact?
+And watch for things to avoid:
 
-**Technical Response:**
+- Jargon and internal system names
+- Guessing at the cause before it's confirmed
+- Exact fix times that can't be promised
+- Pointing the finger at a team or person
 
-- Did they implement quick fixes or wait for proper solutions?
-- How did they coordinate multiple teams?
-- What tools and processes helped/hindered them?
+---
 
-**Communication Strategy:**
+### If You Finish Early
 
-- When did they first communicate publicly?
-- How detailed were their updates?
-- How did they handle uncertainty in their messaging?
-- What different messages did they send to different audiences?
+Think about these questions for one of your incidents:
 
-**Coordination & Decision-Making:**
+- How long was it before they first said anything publicly?
+- How did they talk about things they didn't know yet?
+- Did they send different messages to different audiences?
+- How did they balance speed (saying something quickly) against accuracy (saying the right thing)?
 
-- Who made key decisions?
-- How did they balance speed versus accuracy?
-- What escalation triggers did they use?
-
-## Research Strategy Tips
-
-**Don't try to read everything!** Focus on:
-
-- **Executive summaries** and key timeline points
-- **Communication examples** - actual status updates they published
-- **Lessons learned** sections in post-mortems
-- **Decision points** - when they chose one approach over another
-
-**Look for patterns:**
-
-- What's common across different incidents?
-- What approaches consistently work or fail?
-- How do companies handle uncertainty in their communication?
-
-!!! note "The goal isn't deep expertise - it's rather preparation for practical application!"
-
+!!! note "The goal isn't deep expertise - it's noticing the wording that works!"

@@ -13,7 +13,7 @@
 
 - **First response approach** - technical investigation vs. immediate communication
 - **Stakeholder prioritization** - who did they contact first?
-- **Communication timing** - how quickly did they update your status site?
+- **Communication timing** - how quickly did they post their first message in the chat app?
 - **Status update quality** - professional vs. technical language
 
 **Optional Pressure Elements You Added:**

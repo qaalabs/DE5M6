@@ -27,9 +27,9 @@
 
 **Timing:**
 
-- You have **25 minutes** to handle this incident
+- You have **30 minutes** to handle this incident
 - I'll be monitoring your communications
-- You *may* recive additional updates or pressure via as the situation develops
+- You *may* receive additional updates or pressure as the situation develops
 
 ### Scenario Distribution (1 minute)
 
@@ -68,7 +68,7 @@
 - **Ensure breakout rooms are ready** for each team
 - **Confirm chat app is set up** and all learners can access
 - **Have scenario cards ready** to distribute
-- **Set 25-minute timer** visible to all
+- **Set 30-minute timer** visible to all
 
 ### During Briefing:
 
@@ -81,13 +81,13 @@
 
 - **Send teams to breakout rooms immediately** after scenario distribution
 - **Monitor the chat app** for their first posts
-- **Prepare to send escalation messages** during the 25-minute period
+- **Prepare to send escalation messages** during the 30-minute period
 
 ---
 
 ## Optional Pressure Elements
 
-### During the 25-minute drill, you can add realism by sending these messages:
+### During the 30-minute drill, you can add realism by sending these messages:
 
 **5 minutes in:**
 
@@ -149,7 +149,7 @@
 
 ---
 
-## Wrap-up at 25 Minutes
+## Wrap-up at 30 Minutes
 
 ### End the Drill:
 

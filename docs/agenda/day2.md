@@ -22,7 +22,7 @@
 
 ## Session 3
 
-- **Investigation**: [Fire drill preparation](../day2/incident-response-prep.md)
+- **Investigation**: [Incident communication](../day2/incident-response-prep.md)
 - **Breakout**: 👥 Fire drill technical briefing
 - 🔥 Fire drill ~ Round 1
 - **Discussion**: Fire drill debrief 1

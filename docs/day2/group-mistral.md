@@ -41,6 +41,7 @@ Here is the link the communications app for your group:
 - This is how you communicate with customers, executives, and other teams
 - Write professionally - these messages will be reviewed during debrief
 - First action should be incident announcement to the channel
+- Use the phrases you collected in [Fire drill preparation](incident-response-prep.md#phrases-to-collect): say what is affected, when the next update will be, and what is not known yet
 
 ### Timing
 
