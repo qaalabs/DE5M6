@@ -1,18 +1,23 @@
 ## <mark>Incident Response Technical Briefing</mark>
 
-### Instructions
-
-- Learners check the chat app isn't blocked: https://drill.qaalabs.com/about
+- Learners check the chat app isn't blocked: https://drill.qaalabs.com/test
 - Show the chat app ~ use [room DEMO](https://drill.qaalabs.com/DEMO) as an example (open the room via its tutor URL first)
-- Show the status page
-- Show the status mailbox
+- Show the status page and the mailbox
 
-<hr>
+**Links:**
 
 - https://qaade5.github.io/status/
 - https://qaade5.github.io/status/mailbox/
 - https://qaade5.github.io/status/message-01/
-- https://qaade5.github.io/status/message-02/
+
+### Text for the Webex chat
+```text
+## This is a test link
+- https://drill.qaalabs.com/test
+
+Make sure that you can access it from your PC.
+If it is blocked then you need to use the VM
+```
 
 ---
 

@@ -2,10 +2,10 @@
 
 ### Debrief Links
 
-- https://drill.ingwane.org/BLAZE/debrief
-- https://drill.ingwane.org/EMBER/debrief
-- https://drill.ingwane.org/IGNIS/debrief
-- https://drill.ingwane.org/MISTRAL/debrief
+- https://drill.qaalabs.com/BLAZE/debrief
+- https://drill.qaalabs.com/EMBER/debrief
+- https://drill.qaalabs.com/IGNIS/debrief
+- https://drill.qaalabs.com/MISTRAL/debrief
 
 <hr>
 

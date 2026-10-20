@@ -4,6 +4,9 @@ A data lakehouse is a common analytical data store for cloud-scale analytics sol
 
 In this lab you'll build a pipeline that you rerun several times today, against different versions of the source data, without ever having to change it. That only works because of two design choices: the notebook reads *every* file currently in the source folder rather than one specific file, and it writes with `overwrite` (not `append`) so a rerun always reflects the current state of that folder rather than piling more rows on top of what's already there.
 
+!!! tip "Missed the setup this morning?"
+    You need the `M6` folder on your VM Desktop for Step 3. If you haven't cloned it yet, follow [Clone the M6 Files](20-clone-repo.md) first.
+
 !!! info "For this lab, you will access the QA Platform and sign in using the credentials provided."
 
 !!! warning "You must use an incognito or private browser window to avoid conflicts with any work or personal Microsoft accounts you may already be signed in to."
@@ -40,7 +43,7 @@ In this lab you'll build a pipeline that you rerun several times today, against 
 
 2. Locate `sales.csv` - a small, clean batch of sales orders - in the `M6/day2/` folder on your Desktop.
 
-    !!! note "If you cannot find the `M6` folder, you may need to re-run the `git clone` command."
+    !!! note "If you cannot find the `M6` folder, follow [Clone the M6 Files](20-clone-repo.md)."
 
 3. In the **...** menu for the `new_data` folder, select **Upload** and **Upload files**, and upload `sales.csv`.
 

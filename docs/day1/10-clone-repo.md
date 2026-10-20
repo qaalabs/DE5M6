@@ -1,6 +1,6 @@
 # Clone the GitHub repo for Module 6
 
-!!! info "Before you start today's labs, it will be useful if you already have the data files on your VM."
+!!! info "Before you start today's labs, you need the data files on your VM - Lab 1.1 uses `M6/day1/sales.csv`."
 
 This is a public, read-only repo of course files - not something you'll commit or push to, just clone it once and work from the local copy.
 

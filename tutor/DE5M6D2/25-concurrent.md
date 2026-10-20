@@ -13,6 +13,14 @@ Continues from Lab 2.4 - pipeline and all three sales files should still be in p
 - While that session is alive, run the **Ingest Sales Data** pipeline
 - Does it start straight away, queue, or fail? Check **Monitor** for both the notebook session and the pipeline run
 
+### Text for the WebEx chat
+```text
+## Lab 2.5 ~  Concurrent Pipeline
+https://qaalabs.github.io/DE5M6/day2/25-concurrent-runs/
+
+Lab 2.5:|https://qaalabs.github.io/DE5M6/day2/25-concurrent-runs/
+```
+
 ---
 
 ### Overview

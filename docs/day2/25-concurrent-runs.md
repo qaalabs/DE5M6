@@ -62,6 +62,9 @@ This one isn't about the data, or even about two things writing to the same tabl
 - On a small capacity like this one, is an idle notebook session a hidden cost you'd want to actively manage? How?
 - If a scheduled production pipeline queued (or failed) because someone left a notebook running, how would you find that out - and how would you prevent it happening again?
 
+!!! tip "Finished early?"
+    Try [Lab 2.6 ~ Stretch: Extend Your Pipeline](26-stretch.md).
+
 ---
 
 ## Relevant KSBs for this exercise

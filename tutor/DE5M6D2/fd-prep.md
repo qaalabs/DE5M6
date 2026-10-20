@@ -8,3 +8,9 @@ In the next session, you'll participate in an **incident response "fire drill"**
 ### Learner handout
 
 <span style="background-color: orange;">Give learners the link:</span> https://qaalabs.github.io/DE5M6/day2/incident-response-prep/
+
+### Text for WebEx chat
+```text
+## Incident Response Prep
+https://qaalabs.github.io/DE5M6/day2/incident-response-prep/
+```

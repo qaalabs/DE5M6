@@ -2,12 +2,20 @@
 
 Continues from Lab 2.3 - `sales.csv` and `sales1.csv` should already be in place.
 
-### Activities
+**Activities**
 
 - Upload `sales2.csv` (missing a column) into `Files/new_data`, alongside the other two
 - Rerun the **Ingest Sales Data** pipeline, unchanged
 - Check **Monitor** - this time it fails
 
-### Overview
+**Overview**
 
-A missing column breaks the multi-file wildcard read itself, before the data quality filter ever runs - contrast with Lab 2.3, where a bad *value* didn't stop the pipeline but a missing *column* does. Discuss: how would you catch a malformed source file before it breaks a scheduled run in production?
+A missing column breaks the multi-file wildcard read itself, before the data quality filter ever runs - contrast with Lab 2.3, where a bad *value* didn't stop the pipeline but a missing *column* does.
+
+### Text for the WebEx chat
+```text
+## Lab 2.4 ~ Broken Schema
+https://qaalabs.github.io/DE5M6/day2/24-broken-schema/
+
+Lab 2.4:|https://qaalabs.github.io/DE5M6/day2/24-broken-schema/
+```

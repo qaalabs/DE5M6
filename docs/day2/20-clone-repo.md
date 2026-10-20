@@ -1,4 +1,4 @@
-# Clone the M6 Files
+# Day 2 Setup ~ Clone the M6 Files
 
 !!! info "Before you start today's labs, you need the data files on your machine."
 
@@ -40,6 +40,10 @@ Check that the `M6` folder on your Desktop contains:
 - `day2/` - the files you'll need today
 - `day3/` - the files you'll need tomorrow
 
-!!! success "You are ready to start"
+## Step 5: Log on to Microsoft Fabric
+
+Follow [Log on to Microsoft Fabric inside the VM](../labs/run-inside-vm.md).
+
+!!! success "You are ready to start Lab 2.1"
 
 !!! note "If your VM resets overnight, you'll need to clone again tomorrow before Day 3's lab."

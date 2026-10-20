@@ -5,11 +5,18 @@
 - Create a workspace
 - Create a lakehouse
 - Upload `sales.csv` (from the `M6` repo they cloned earlier) into `Files/new_data`
-- Create a notebook - reads `Files/new_data/*.csv`, drops rows with a missing/negative `UnitPrice`, writes with `overwrite` + `overwriteSchema`
+- Create a notebook - reads `Files/new_data/*.csv`
 - Stop the notebook's Spark session
 - Build a pipeline wrapping the notebook
 - Run it, check **Monitor**, note the row count
 
+### Text for the WebEx chat
+```text
+## Lab 2.1 ~ Rerunnable Pipeline
+https://qaalabs.github.io/DE5M6/day2/21-ingest-pipeline/
+
+Lab 2.2:|https://qaalabs.github.io/DE5M6/day2/21-ingest-pipeline/
+```
 ---
 
 ### Overview
