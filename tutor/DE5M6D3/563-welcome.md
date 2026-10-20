@@ -1,5 +1,4 @@
-## welcome
+## Welcome to Day 3
 
-### Ask them to start their VM
-
-- Give them the link to clone the repo: https://qaalabs.github.io/DE5M6/day3/30-clone-repo/
+- Share the holding slide from 9:20
+- Repo clone and Fabric Playground come later, in FABRIC-SETUP ~ *nothing else to do before 9:30*

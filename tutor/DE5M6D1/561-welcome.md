@@ -1,33 +1,22 @@
-## <mark>Give a brief overview of the module structure</mark>
+## Welcome to Module 6
 
-- This module is very hands-on - not much content ~ as there is *so* much in Discover
-- Lots of labs ~ using the QA Platform
-- Engagement and interaction are key.
-If you have a question - please ask!
+### Module progression
 
-### Modules 4, 5 & 6
+- M4: plan it
+- M5: build it
+- M6: monitor it ~ *this module*
 
-- Talk about how the structure is: <mark>plan ... build ... monitor</mark>
-- This is module 6 so we will focus on monitoring
-- All of the exercises will be using Microsoft Fabric
+*Very hands-on - not much content, as there is so much in Discover. All the labs use Microsoft Fabric on the QA Platform.*
+
+### Module 6
+
+- Day 1 watch it
+- Day 2 fix it
+- Day 3 trust it
+- Day 4 improve it
 
 ### Check-in
 
 - ❓ Ask who has completed modules 4 & 5
 - ❓ Ask who has any experience with MS Fabric
-
----
-
-## Morning
-
-- Discussion about system failure
-- Status page analysis
-- Introduction to Microsoft Fabric
-- Lab 1.1 ~ Create Fabric Lakehouse
-- Lab 1.2 ~ Dataflows Gen2
-
-## Afternoon
-
-- Lab 1.3 ~ Monitor Hub
-- Lab 1.4 ~ Monitor Warehouse
-- Compare the different Cloud monitoring tools
+- Engagement is key ~ *if you have a question, please ask!*
