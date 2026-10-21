@@ -1,7 +1,6 @@
 ## 🧪 <mark>Lab 3.2</mark> ~ Deployment pipelines in MS Fabric
 
 <span style="background-color: orange;">Give learners the link:</span> 
-https://qaalabs.github.io/fabric/implement-cicd/
 
 ### Activities
 
@@ -9,6 +8,14 @@ https://qaalabs.github.io/fabric/implement-cicd/
 - Assign workspaces to stages of a deployment pipeline
 - Create content
 - Deploy content between stages
+
+### Text for WebEx chat
+```text
+## Lab 3.2 ~ Deployment Fabric
+https://qaalabs.github.io/fabric/implement-cicd/
+
+Lab 3.2:|https://qaalabs.github.io/fabric/implement-cicd/
+```
 
 ---
 

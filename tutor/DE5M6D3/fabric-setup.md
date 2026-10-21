@@ -2,14 +2,20 @@
 
 - https://bud.sso.app.qa.com/lab/microsoft-fabric-playground/
 
-### For those on LOD:
+**For those on LOD:**
 
 - https://qaalabs.github.io/DE5M6/day3/30-clone-repo/
 
-### Logon to Azure & MS Fabric:
+**Logon to MS Fabric:**
 
 - https://qaalabs.github.io/DE5M6/labs/run-inside-vm/
 
-### For those doing it outside the VM:
+**For those doing it outside the VM:**
 
 - https://github.com/QAADE5/M6/tree/main/day3
+
+### Text for WebEx chat
+```text
+Files:|https://qaalabs.github.io/DE5M6/day3/30-clone-repo/
+Logon:|https://qaalabs.github.io/DE5M6/labs/run-inside-vm/
+```

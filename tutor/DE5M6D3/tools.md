@@ -9,3 +9,9 @@
 - Cloud-Native Quality Tools
 - Quality Monitoring & Observability
 - Open Source Quality Solutions
+
+### Text for WebEx chat
+```text
+## Quality Tools Investigation
+https://qaalabs.github.io/DE5M6/day3/quality-tools/
+```
