@@ -24,7 +24,7 @@
 - **Activity**: [Lab 3.3 - Clone, setup & run Bikezelo](../day3/bikezelo-activity.md)
 - **Practice**: [Lab 3.4 ~ Uncomment the rules](../day3/bikezelo-rules.md)
 - **Practice**: [Lab 3.5 ~ How does bikezelo forecast?](../day3/bikezelo-forecast.md)
-- **Discussion**: Warning vs failure ~ a governance decision
+- **Discussion**: Is it a warning or a failure?
 
 ## ☕ Afternoon break
 

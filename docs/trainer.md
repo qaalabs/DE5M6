@@ -87,7 +87,7 @@
 - `13:30` **Activity**: [Lab 3.3 - Clone, setup & run Bikezelo](day3/bikezelo-activity.md) (20 mins)
 - `13:50` **Practice**: [Lab 3.4 ~ Uncomment the rules](day3/bikezelo-rules.md) (20 mins)
 - `14:10` **Practice**: [Lab 3.5 ~ How does bikezelo forecast?](day3/bikezelo-forecast.md) (10 mins)
-- `14:20` **Discussion**: Warning vs failure ~ a governance decision (10 mins)
+- `14:20` **Discussion**: Is it a warning or a failure? (10 mins)
 
 ### Session 4
 
