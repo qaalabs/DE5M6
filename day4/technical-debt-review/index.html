@@ -502,10 +502,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-review-your-lens-in-your-group" class="md-nav__link">
+  <a href="#2-make-the-call-in-your-group" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Review your lens ~ in your group
+        2. Make the call ~ in your group
       
     </span>
   </a>
@@ -653,73 +653,142 @@ python<span class="w"> </span>setup_db.py
 <p>Then <code>python simulate.py</code> in one terminal and <code>python app.py</code> in another, and open <a href="http://localhost:5000">http://localhost:5000</a>.</p>
 </details>
 <hr>
-<h2 id="2-review-your-lens-in-your-group">2. Review your lens ~ in your group</h2>
-<p>Your trainer will share your group's copy of the <strong>Technical Debt Register</strong>. Your group owns one lens - use the tab with your lens name.</p>
+<h2 id="2-make-the-call-in-your-group">2. Make the call ~ in your group</h2>
+<p>You can't fix everything before a release. Your job is to decide what gets fixed, and be able to say why.</p>
+<p>Your group has one lens and three of Dave's changes - use the tab with your lens name. There is time to fix <strong>one</strong> of them before Friday.</p>
+<div class="tabbed-set" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><label for="__tabbed_1_1">Security</label><div class="tabbed-content">
 <table>
 <thead>
 <tr>
-<th>Lens</th>
-<th>Your focus</th>
+<th>Card</th>
+<th>Commit</th>
+<th>What Dave changed</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Security</td>
-<td>Who could misuse this?</td>
+<td><strong>S1</strong></td>
+<td><code>admin reset endpoint for demo day</code></td>
+<td>A new <code>/admin/reset</code> endpoint deletes every order. It checks a token passed in the URL</td>
 </tr>
 <tr>
-<td>Performance</td>
-<td>What gets slower as the data grows?</td>
+<td><strong>S2</strong></td>
+<td><code>customer lookup for support team</code></td>
+<td>A new <code>/data/customer/&lt;id&gt;</code> endpoint builds its SQL with an f-string from the URL</td>
 </tr>
 <tr>
-<td>Code Quality</td>
-<td>What will the next person get wrong?</td>
-</tr>
-<tr>
-<td>Maintainability</td>
-<td>What will go wrong without anyone noticing?</td>
+<td><strong>S3</strong></td>
+<td><code>debug on for remote demo</code></td>
+<td>The app now runs with <code>debug=True</code> on <code>0.0.0.0</code> - every network interface</td>
 </tr>
 </tbody>
 </table>
-<p>Your tab has <strong>3 cards</strong> - three of Dave's changes. For each one:</p>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio"><label for="__tabbed_1_2">Performance</label><div class="tabbed-content">
+<table>
+<thead>
+<tr>
+<th>Card</th>
+<th>Commit</th>
+<th>What Dave changed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>P1</strong></td>
+<td><code>finance want full history - remove 500 row cap</code></td>
+<td>The orders table now keeps every order. The dashboard still reads the whole table every 3 seconds</td>
+</tr>
+<tr>
+<td><strong>P2</strong></td>
+<td><code>fix stats bug (reading df twice for now)</code></td>
+<td>Validation reads the database a second time. Comment: "passing df here broke the stats once, not sure why"</td>
+</tr>
+<tr>
+<td><strong>P3</strong></td>
+<td><code>finance export - needs to be live by Friday</code></td>
+<td>The export runs a separate <code>COUNT</code> query for every order</td>
+</tr>
+</tbody>
+</table>
+</div>
+<input id="__tabbed_1_3" name="__tabbed_1" type="radio"><label for="__tabbed_1_3">Code Quality</label><div class="tabbed-content">
+<table>
+<thead>
+<tr>
+<th>Card</th>
+<th>Commit</th>
+<th>What Dave changed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>C1</strong></td>
+<td><code>tidy up</code></td>
+<td>The stats counting moved into <code>do_stuff(r)</code>, which returns <code>t, p, w, e, x</code></td>
+</tr>
+<tr>
+<td><strong>C2</strong></td>
+<td><code>tidy up</code></td>
+<td>Three unused imports, an old <code>calculate_forecast_v1()</code> "kept for now", and a commented-out function marked FIXME</td>
+</tr>
+<tr>
+<td><strong>C3</strong></td>
+<td><code>add PENDING for finance</code></td>
+<td>The list of valid statuses is typed out separately in each file, with a comment to keep them in sync</td>
+</tr>
+</tbody>
+</table>
+</div>
+<input id="__tabbed_1_4" name="__tabbed_1" type="radio"><label for="__tabbed_1_4">Maintainability</label><div class="tabbed-content">
+<table>
+<thead>
+<tr>
+<th>Card</th>
+<th>Commit</th>
+<th>What Dave changed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>M1</strong></td>
+<td><code>forecast crashing on empty data - return zeros</code></td>
+<td><code>calculate_forecast()</code> now catches every exception and returns zeros</td>
+</tr>
+<tr>
+<td><strong>M2</strong></td>
+<td><code>skip flaky test</code></td>
+<td>One test is skipped ("flaky - fix later"). The three new endpoints have no tests</td>
+</tr>
+<tr>
+<td><strong>M3</strong></td>
+<td><code>add config.yaml support</code></td>
+<td>The README was last updated in March. Check what it says against the code</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Find each card in the PR, then agree three answers as a group:</p>
 <ol>
-<li>Find it in the PR - the <strong>Commit</strong> column tells you where to look</li>
-<li>Fill in <strong>Impact</strong> and <strong>Effort</strong></li>
-<li>Give it a <strong>Decision</strong>:</li>
+<li><strong>Fix now</strong> - which one card gets fixed before Friday?</li>
+<li><strong>If the other two ship</strong> - what goes wrong first, and who notices?</li>
+<li><strong>Why Dave did it</strong> - what pressure was he under? The commit messages are your evidence.</li>
 </ol>
-<table>
-<thead>
-<tr>
-<th>Decision</th>
-<th>Means</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Fix now</strong></td>
-<td>Must be fixed before Friday</td>
-</tr>
-<tr>
-<td><strong>Schedule</strong></td>
-<td>Real debt - it goes on the backlog for a later sprint</td>
-</tr>
-<tr>
-<td><strong>Accept</strong></td>
-<td>We choose to live with it - and write down why</td>
-</tr>
-</tbody>
-</table>
-<p>There's only time to fix <strong>one</strong> card before Friday. Exactly one card is <strong>Fix now</strong>.</p>
-<p>Then <strong>write the fix</strong> - the lines of code you'd change for your Fix now card. You don't need to run it.</p>
-<p>Found something in the PR that isn't on your cards? Add it to the <strong>Found it ourselves</strong> rows.</p>
+<p>Post your answers in the WebEx chat:</p>
+<div class="highlight"><pre><span></span><code>Lens:
+Fix now:
+If the other two ship:
+Why Dave did it:
+</code></pre></div>
 <hr>
 <h2 id="3-challenge-round">3. Challenge round</h2>
-<p>Each group presents:</p>
+<p>Each group has 2 minutes:</p>
 <ul>
-<li>Your <strong>Fix now</strong> card - what it is, where it is (file and line), and your fix</li>
-<li>Why it beat your other two cards</li>
+<li>Your <strong>Fix now</strong> card, and why it beat the other two</li>
+<li>What goes wrong if the other two ship</li>
 </ul>
-<p>Then the next group challenges your decision. Defend it or change your mind - both are fine, as long as you can say why.</p>
+<p>Then the next group challenges your call. Defend it or change your mind - both are fine, as long as you can say why.</p>
 <hr>
 <h2 id="4-debt-decision-record-on-your-own">4. Debt Decision Record ~ on your own</h2>
 <p>Write a short record for <strong>one</strong> card - yours or another group's. This is evidence for your portfolio (S21).</p>
