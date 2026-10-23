@@ -1,6 +1,6 @@
 ## <mark>Challenge round ~ whole class</mark>
 
-- Each group: Fix now card (file/line), their fix, why it beat the other two
+- Each group: their Fix now change, why it beat the other two, what goes wrong if the other two ship
 - The next group challenges one decision; group 1 is challenged by the last group
 - About 5 min per group
 - Changing your mind is allowed - not being able to say why isn't

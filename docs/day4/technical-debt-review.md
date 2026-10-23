@@ -37,58 +37,80 @@ You already know what the app does from yesterday, so you only need to read what
 
 ---
 
-## 2. Review your lens ~ in your group
+## 2. Make the call ~ in your group
 
-Your trainer will share your group's copy of the **Technical Debt Register**. Your group owns one lens - use the tab with your lens name.
+You can't fix everything before a release. Your job is to decide what gets fixed, and be able to say why.
 
-| Lens            | Your focus                                        |
-|-----------------|---------------------------------------------------|
-| Security        | Who could misuse this?                            |
-| Performance     | What gets slower as the data grows?               |
-| Code Quality    | What will the next person get wrong?              |
-| Maintainability | What will go wrong without anyone noticing?       |
+Your group has one category and three of Dave's changes - find yours below. There is time to fix **one** of them before Friday.
 
-Your tab has **3 cards** - three of Dave's changes. For each one:
+=== "Security"
 
-1. Find it in the PR - the **Commit** column tells you where to look
-2. Fill in **Impact** and **Effort**
-3. Give it a **Decision**:
+    | ID | Commit | What Dave changed |
+    |------|--------|-------------------|
+    | **S1** | `admin reset endpoint for demo day` | A new `/admin/reset` endpoint deletes every order. It checks a token passed in the URL |
+    | **S2** | `customer lookup for support team` | A new `/data/customer/<id>` endpoint builds its SQL with an f-string from the URL |
+    | **S3** | `debug on for remote demo` | The app now runs with `debug=True` on `0.0.0.0` - every network interface |
 
-| Decision     | Means                                                  |
-|--------------|--------------------------------------------------------|
-| **Fix now**  | Must be fixed before Friday                            |
-| **Schedule** | Real debt - it goes on the backlog for a later sprint  |
-| **Accept**   | We choose to live with it - and write down why         |
+=== "Performance"
 
-There's only time to fix **one** card before Friday. Exactly one card is **Fix now**.
+    | ID | Commit | What Dave changed |
+    |------|--------|-------------------|
+    | **P1** | `finance want full history - remove 500 row cap` | The orders table now keeps every order. The dashboard still reads the whole table every 3 seconds |
+    | **P2** | `fix stats bug (reading df twice for now)` | Validation reads the database a second time. Comment: "passing df here broke the stats once, not sure why" |
+    | **P3** | `finance export - needs to be live by Friday` | The export runs a separate `COUNT` query for every order |
 
-Then **write the fix** - the lines of code you'd change for your Fix now card. You don't need to run it.
+=== "Code Quality"
 
-Found something in the PR that isn't on your cards? Add it to the **Found it ourselves** rows.
+    | ID | Commit | What Dave changed |
+    |------|--------|-------------------|
+    | **C1** | `tidy up` | The stats counting moved into `do_stuff(r)`, which returns `t, p, w, e, x` |
+    | **C2** | `tidy up` | Three unused imports, an old `calculate_forecast_v1()` "kept for now", and a commented-out function marked FIXME |
+    | **C3** | `add PENDING for finance` | The list of valid statuses is typed out separately in each file, with a comment to keep them in sync |
+
+=== "Maintainability"
+
+    | ID | Commit | What Dave changed |
+    |------|--------|-------------------|
+    | **M1** | `forecast crashing on empty data - return zeros` | `calculate_forecast()` now catches every exception and returns zeros |
+    | **M2** | `skip flaky test` | One test is skipped ("flaky - fix later"). The three new endpoints have no tests |
+    | **M3** | `add config.yaml support` | The README was last updated in March. Check what it says against the code |
+
+Find each change in the PR, then agree three answers as a group:
+
+1. **Fix now** - which one change gets fixed before Friday?
+2. **If the other two ship** - what goes wrong first, and who notices?
+3. **Why Dave did it** - what pressure was he under? The commit messages are your evidence.
+
+Post your answers in the WebEx chat:
+
+```text
+Category:
+Fix now:
+If the other two ship:
+Why Dave did it:
+```
 
 ---
 
 ## 3. Challenge round
 
-Each group presents:
+Each group has 2 minutes:
 
-- Your **Fix now** card - what it is, where it is (file and line), and your fix
-- Why it beat your other two cards
+- Your **Fix now** change, and why it beat the other two
+- What goes wrong if the other two ship
 
-Then the next group challenges your decision. Defend it or change your mind - both are fine, as long as you can say why.
+Then the next group challenges your call. Defend it or change your mind - both are fine, as long as you can say why.
 
 ---
 
 ## 4. Debt Decision Record ~ on your own
 
-Write a short record for **one** card - yours or another group's. This is evidence for your portfolio (S21).
-
-If you choose **K28 / S21** for this afternoon's presentation, this could be your starting point.
+Write a short record for **one** of Dave's changes - your group's or another group's.
 
 ```text
 Debt Decision Record
 
-Item:        (card ID and short title)
+Item:        (ID and short title)
 Where:       (file and line, and the commit)
 What it is:  (one or two sentences)
 Evidence:    (what you saw in the PR - code, comments, commit message)

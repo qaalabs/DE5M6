@@ -5,7 +5,7 @@ Trainer reference. The release PR: [QAADE5/legacy-bikezelo #1](https://github.co
 - `main` is a stripped-down bikezelo (the app learners ran on Day 3) with every rule switched on. This is "production".
 - `develop` is 14 commits by "Dave M", February to September 2026. Each one has a plausible reason, most have a deadline, and nobody reviewed any of them.
 
-Line numbers are for `develop`. IDs match the register (`data/tech-debt-register.xlsx`).
+Line numbers are for `develop`. IDs match the activity page (`docs/day4/technical-debt-review.md`).
 
 ---
 
@@ -36,7 +36,7 @@ Line numbers are for `develop`. IDs match the register (`data/tech-debt-register
 |-------|------|---------------|
 | `rules.py` 29-35 | Status rule commented out: "disabled 14/02 - too many red rows, ops team complained. dave" | PENDING, CANCELLED and UNKNOWN rows now go green. The alarm was silenced instead of the data being fixed. Better fix: make it a warning rule (Day 3's WARN-FAIL). Who approved turning it off? |
 
-Not on any lens tab - every group sees it in the PR. Use it in TD-GOVERN. Commit 12 makes it worse: PENDING became valid in `app.py` and `simulate.py`, but the commented-out rule still doesn't list it, so switching the rule back on would turn every PENDING row red.
+Not given to any category - every group sees it in the PR. Use it in TD-GOVERN. Commit 12 makes it worse: PENDING became valid in `app.py` and `simulate.py`, but the commented-out rule still doesn't list it, so switching the rule back on would turn every PENDING row red.
 
 ---
 
@@ -78,9 +78,9 @@ P1 and P3 compound: the export gets slower every day the cap is off. P2 is the b
 
 ---
 
-## Also in the PR (not on the cards)
+## Also in the PR (not on the activity page)
 
-Groups may add these to "Found it ourselves".
+Groups may spot these while reading the PR.
 
 | Where | What | Why it's debt |
 |-------|------|---------------|

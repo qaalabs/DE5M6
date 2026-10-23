@@ -1,7 +1,17 @@
-## <mark>Review your lens ~ in breakout groups</mark>
+## <mark>Make the call ~ in breakout groups</mark>
 
-- 3 cards per lens tab: Impact, Effort, Decision - exactly ONE Fix now
-- Then write the fix on the sheet - the changed lines, no need to run it
-- Visit each room in the first 5 min. Two Fix nows, or none? Push them to choose
-- Stuck on the fix? Point Security at line 314 - Dave used `?` correctly a month after S2
-- Before the challenge round: Fix now ID, the fix, and why it beat the other two - all filled in
+- Same groups and categories as the morning. Dave's changes are on the activity page - no spreadsheet
+- Three answers: Fix now, what goes wrong if the other two ship, why Dave did it
+- Output is a 4-line post in the WebEx chat - watch the chat, not the rooms
+- No chat post from a group halfway through? Visit that room first
+- Two Fix nows, or none? Push them to choose - the point is giving something up
+- "Why Dave did it" is about pressure, not blame - the commit messages are the evidence
+- No code to write here - fixing simple code happened in the morning
+
+### Text for WebEx chat
+```text
+Category:
+Fix now:
+If the other two ship:
+Why Dave did it:
+```
