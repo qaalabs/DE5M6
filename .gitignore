@@ -180,3 +180,4 @@ cython_debug/
 # Claude Code
 CLAUDE.md
 .claude/
+.agents/
