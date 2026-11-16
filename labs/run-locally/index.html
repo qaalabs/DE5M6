@@ -332,14 +332,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../agenda/day4/" class="md-nav__link">
+      <a href="../../agenda/day1/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Day 4
+    Day 1
   
 
     
@@ -385,7 +385,7 @@
   <span class="md-ellipsis">
     
   
-    Day 4 ~ Improvement &amp; Value
+    Day 1 ~ Monitoring &amp; Performance
   
 
     
@@ -401,7 +401,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Day 4 ~ Improvement &amp; Value
+    Day 1 ~ Monitoring &amp; Performance
   
 
           </label>
@@ -414,14 +414,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day4/technical-debt-review/" class="md-nav__link">
+      <a href="https://qaalabs.github.io/vmsetup/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Read Dave's PR
+    🖥️ VM setup
   
 
     
@@ -442,14 +442,182 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day4/presentation/" class="md-nav__link">
+      <a href="../../day1/status-page-report-back/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    EPA presentation briefing
+    Status page analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../run-inside-vm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction to Microsoft Fabric
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00-fabric-warmup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 1.1 - Create Fabric lakehouse
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-dataflows-gen2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 1.2 - Dataflows Gen2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../day1/12-monitor-hub/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 1.3 - Monitor hub
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06c-monitor-data-warehouse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 1.4 - Monitor warehouse
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../day1/cloud-monitoring-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    👥 Cloud monitoring comparison
   
 
     
@@ -520,14 +688,15 @@
     S["QA Platform:&lt;br/&gt;Click: ▶ Start lab"]
     A["Wait for status Ready"]
     B["Open a private/incognito&lt;br/&gt;browser window"]
-    C["Logon to Microsoft Fabric&lt;br/&gt;app.fabric.microsoft.com"]
+    C["Logon to Microsoft Azure&lt;br/&gt;portal.azure.com"]
+    D["New tab:&lt;br/&gt;Logon to Microsoft Fabric&lt;br/&gt;app.fabric.microsoft.com"]
 
-    S --&gt; A --&gt; B --&gt; C</code></pre>
+    S --&gt; A --&gt; B --&gt; C --&gt; D</code></pre>
 <h2 id="step-1-access-microsoft-fabric">Step 1: Access Microsoft Fabric</h2>
 <p>In this lab, you will access Microsoft Fabric using a temporary lab account provided by the QA Platform.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The <strong>Open</strong> button in the QA Platform opens the Azure portal. You do not need to use it - sign in to Microsoft Fabric directly instead.</p>
+<p>The <strong>Open</strong> button in the QA Platform opens the Azure portal in a normal browser window. Do not use it - sign in from a private browsing window instead, as shown below.</p>
 </div>
 <ol>
 <li>
@@ -549,16 +718,43 @@
 <p>Make a note of your allocated <strong>Username</strong> and <strong>Password</strong>.</p>
 </li>
 </ol>
-<h2 id="step-2-logon-to-microsoft-fabric">Step 2: Logon to Microsoft Fabric</h2>
+<h2 id="step-2-logon-to-microsoft-azure">Step 2: Logon to Microsoft Azure</h2>
 <ol>
 <li>
 <p>Open a <strong>private browsing window</strong> (InPrivate in Edge, Incognito in Chrome).</p>
 </li>
 <li>
+<p>Navigate to the <a href="https://portal.azure.com">Microsoft Azure portal</a> at: <a href="https://portal.azure.com">https://portal.azure.com</a></p>
+</li>
+<li>
+<p>When asked to sign in, paste the <strong>Username</strong> from the QA Platform into the email box and select <strong>Next</strong>.</p>
+<div class="admonition warning">
+<p class="admonition-title">If you see an error saying your username is invalid:</p>
+<ul>
+<li>Check that you copied the <strong>Username</strong> exactly as shown on the QA Platform. If it still fails, please let your trainer know.</li>
+</ul>
+</div>
+</li>
+<li>
+<p>When prompted for a <strong>Temporary Access Pass</strong>, use the <strong>Password</strong> from the QA Platform.</p>
+<ul>
+<li>If prompted to "Stay signed in?", select <strong>No</strong>. This ensures the session ends when the private window is closed.</li>
+</ul>
+<div class="admonition success">
+<p class="admonition-title">You are now signed in to the <strong>Azure portal</strong>. This confirms your lab account is active.</p>
+</div>
+</li>
+</ol>
+<h2 id="step-3-logon-to-microsoft-fabric">Step 3: Logon to Microsoft Fabric</h2>
+<ol>
+<li>
+<p>In the same private browsing window, <strong>open a new tab</strong>.</p>
+</li>
+<li>
 <p>Navigate to the <a href="https://app.fabric.microsoft.com">Microsoft Fabric home page</a> at: <a href="https://app.fabric.microsoft.com">https://app.fabric.microsoft.com</a></p>
 </li>
 <li>
-<p>When asked to enter your email, paste the <strong>Username</strong> from the QA Platform into the <strong>Email</strong> box and select <strong>Submit</strong>.</p>
+<p>If asked to enter your email, paste the <strong>Username</strong> from the QA Platform into the <strong>Email</strong> box and select <strong>Submit</strong>.</p>
 <div class="admonition abstract">
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/ms-fabric-email-check.png" data-desc-position="bottom"><img alt="Fabric email check" src="../img/ms-fabric-email-check.png"></a></p>
 </div>
@@ -568,12 +764,6 @@
 <li>If you are asked to do so, please let your trainer know.</li>
 </ul>
 </div>
-</li>
-<li>
-<p>When prompted for a <strong>Temporary Access Pass</strong>, use the <strong>Password</strong> from the QA Platform.</p>
-<ul>
-<li>If prompted to "Stay signed in?", select <strong>No</strong>. This ensures the session ends when the private window is closed.</li>
-</ul>
 </li>
 <li>
 <p>After signing in, you should be redirected to the <strong>Microsoft Fabric home page</strong>:</p>
