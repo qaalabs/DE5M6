@@ -879,12 +879,14 @@
 </li>
 <li>
 <p>Select the existing cell, and replace its contents with:</p>
-<div class="highlight"><pre><span></span><code><span class="n">lab_name</span> <span class="o">=</span> <span class="s2">"de5m6-lab21"</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Cell 1</span>
+<span class="n">lab_name</span> <span class="o">=</span> <span class="s2">"de5m6-lab21"</span>
 </code></pre></div>
 </li>
 <li>
 <p>Add a new code cell below it:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Cell 2</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
 <span class="n">ctx</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">notebookutils</span><span class="o">.</span><span class="n">runtime</span><span class="o">.</span><span class="n">context</span><span class="p">)</span>
 <span class="n">ctx</span><span class="p">[</span><span class="s2">"source"</span><span class="p">]</span> <span class="o">=</span> <span class="n">lab_name</span>
 
@@ -896,7 +898,8 @@
 </li>
 <li>
 <p>Add a new code cell below it:</p>
-<div class="highlight"><pre><span></span><code><span class="n">table_name</span> <span class="o">=</span> <span class="s2">"sales"</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Cell 3</span>
+<span class="n">table_name</span> <span class="o">=</span> <span class="s2">"sales"</span>
 <span class="n">expected_columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"SalesOrderNumber"</span><span class="p">,</span> <span class="s2">"SalesOrderLineNumber"</span><span class="p">,</span> <span class="s2">"OrderDate"</span><span class="p">,</span> <span class="s2">"CustomerName"</span><span class="p">,</span> <span class="s2">"EmailAddress"</span><span class="p">,</span> <span class="s2">"Item"</span><span class="p">,</span> <span class="s2">"Quantity"</span><span class="p">,</span> <span class="s2">"UnitPrice"</span><span class="p">,</span> <span class="s2">"TaxAmount"</span><span class="p">]</span>
 
 <span class="c1"># Check every file's own header before the wildcard read in the next cell -</span>
@@ -912,7 +915,8 @@
 </li>
 <li>
 <p>Add one more code cell at the end:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pyspark.sql.functions</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Cell 4</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pyspark.sql.functions</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
 <span class="c1"># Read every CSV currently in the folder. As new files land here on</span>
 <span class="c1"># later reruns, this line does not need to change.</span>
@@ -946,7 +950,8 @@
 </li>
 <li>
 <p>Add a final success code cell:</p>
-<div class="highlight"><pre><span></span><code><span class="n">ctx</span><span class="p">[</span><span class="s2">"source"</span><span class="p">]</span> <span class="o">=</span> <span class="n">lab_name</span> <span class="o">+</span> <span class="s2">"-SUCCESS"</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Cell 5</span>
+<span class="n">ctx</span><span class="p">[</span><span class="s2">"source"</span><span class="p">]</span> <span class="o">=</span> <span class="n">lab_name</span> <span class="o">+</span> <span class="s2">"-SUCCESS"</span>
 <span class="k">try</span><span class="p">:</span>
     <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">"https://qapha-249748487450.us-east1.run.app/"</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">ctx</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
