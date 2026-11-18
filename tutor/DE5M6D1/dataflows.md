@@ -12,3 +12,11 @@ https://qaalabs.github.io/fabric/dataflows-gen2/
 - Add a dataflow to a pipeline
 - Clean up resources
 
+## Instructions for the chat
+
+```text
+## Dataflows (Gen2)
+https://qaalabs.github.io/fabric/dataflows-gen2/
+
+Dataflow:|https://qaalabs.github.io/fabric/dataflows-gen2/
+```

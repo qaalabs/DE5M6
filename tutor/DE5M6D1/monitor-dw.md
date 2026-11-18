@@ -10,3 +10,11 @@ https://qaalabs.github.io/fabric/monitor-data-warehouse/
 - Explore dynamic management views
 - Explore query insights
 - Clean up resources
+
+### Instructions for the chat
+```text
+## Monitoring DW
+https://qaalabs.github.io/fabric/monitor-data-warehouse/
+
+DW:|https://qaalabs.github.io/fabric/monitor-data-warehouse/
+```

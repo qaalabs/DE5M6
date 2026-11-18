@@ -7,14 +7,12 @@
 
 <hr>
 
-### Ask learners to clone the M6 repo
+### Instructions for the chat
 
-- https://qaalabs.github.io/DE5M6/day1/10-clone-repo/
+```text
+## Clone the repo
+https://qaalabs.github.io/DE5M6/day1/10-clone-repo/
 
-<hr>
-
-### Get them to start the **MS Fabric Playground** now
-
-- On their own machine, not the VM: https://bud.sso.app.qa.com/lab/microsoft-fabric-playground/
-- It takes a while to provision, so starting now means it is **Ready** by the Fabric intro at 11:00
-- **No need to logon to Fabric yet**
+## Start MS Fabric Pplayground
+https://bud.sso.app.qa.com/lab/microsoft-fabric-playground/
+```

@@ -3,7 +3,7 @@
 <span style="background-color: orange;">Give learners the link:</span> 
 https://qaalabs.github.io/DE5M6/day1/12-monitor-hub/
 
-<mark>Trimmed version - reuses the workspace/lakehouse from the Dataflows Gen2 lab instead of creating a new one, since the Fabric Playground now runs for 7 hours and they still have it from this morning.</mark>
+<mark>Trimmed version - reuses the workspace/lakehouse from the Dataflows Gen2 lab</mark>
 
 ### Activities
 
@@ -11,4 +11,11 @@ https://qaalabs.github.io/DE5M6/day1/12-monitor-hub/
 - Create and monitor a Spark notebook
 - Monitor history for an item
 - Customize monitoring hub views
-- Clean up resources
+
+### Instructions for the chat
+```text
+## Monitoring Hub
+https://qaalabs.github.io/DE5M6/day1/12-monitor-hub/
+
+Monitoring:|https://qaalabs.github.io/DE5M6/day1/12-monitor-hub/
+```

@@ -6,3 +6,12 @@
 ### Then explain how to logon
 
 - https://qaalabs.github.io/DE5M6/labs/run-inside-vm
+
+### Instructions for the chat & vmpaste
+
+```text
+## Instructions to logon
+https://qaalabs.github.io/DE5M6/labs/run-inside-vm
+
+Logon:|https://qaalabs.github.io/DE5M6/labs/run-inside-vm
+```

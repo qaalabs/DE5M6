@@ -21,6 +21,7 @@ In Microsoft Fabric, you can use a Dataflow (Gen2) to ingest data from a wide ra
         ![Screenshot of a dataflow query.](img/18-data-flow-query.png)
 
 4. Use the **Save and run** option to save and run the dataflow, then close it.
+
 5. In the navigation bar on the left, select **Monitor** to view the monitoring hub and observe that your dataflow is in-progress (if not, refresh the view until you see it).
 
     !!! abstract ""
@@ -44,9 +45,13 @@ In Microsoft Fabric, you can use notebooks to run Spark code.
         ![Screenshot of a new notebook.](img/18-new-notebook.png)
 
 2. At the top left of the notebook, select the gear icon to view the notebook details, and change its name to `Query Products`.
+
 3. In the notebook editor, in the **Explorer** pane, select **Add data items** and then select **From OneLake catalog**.
+
 4. Add the lakehouse you're using for today's labs.
+
 5. Expand the lakehouse item until you reach the **products** table.
+
 6. In the **...** menu for the **products** table, select **Load data** > **Spark**. This adds a new code cell to the notebook.
 
     !!! abstract ""
@@ -57,7 +62,10 @@ In Microsoft Fabric, you can use notebooks to run Spark code.
     !!! abstract ""
         ![Screenshot of a notebook with query results.](img/18-notebook-output.png)
 
-8. On the toolbar, use the **◻** (*Stop session*) button to stop the Spark session.
+8. Leave the notebook session running.
+   - Normally you would use the **◻** (*Stop session*) button to stop the Spark session.
+   - But we want to see it running in monitor, even though all the cells have been run.
+
 9. In the navigation bar, select **Monitor** to view the monitoring hub, and note that the notebook activity is listed.
 
     !!! abstract ""
