@@ -863,6 +863,18 @@
 
 
 <h1 id="lab-31-medallion-architecture">Lab 3.1 ~ Medallion Architecture</h1>
+<div class="admonition abstract">
+<p class="admonition-title">S6: Systematically clean, validate, and describe data at all stages of extract, transform, load (ETL).</p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">S9: Query and manipulate data using tools and programming such as SQL and Python. Manage database access, and implement automated validation checks.</p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">S26: Identify data quality metrics and track them to ensure the quality, accuracy and reliability of the data product.</p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">K4: Frameworks for data quality, covering dimensions such as accuracy, completeness, consistency, timeliness, and accessibility.</p>
+</div>
 <p>In this exercise you will build a medallion architecture in a Fabric lakehouse: a workspace and lakehouse, raw sales data landed in bronze, cleaned and <strong>validated</strong> data in silver, and a business-ready summary in gold.</p>
 <p>Quality means something different at each layer - watch for it as you go: bronze decides whether to land data as-is or enforce anything immediately, silver is where cleaning and validation actually happen, and gold decides what "fit for business use" means. Today's DMBOK quality dimensions discussion straight after this lab will ask you to map dimensions onto <strong>all three</strong> layers, so keep the touchpoints at each step in mind - not just the validate cell in silver.</p>
 <div class="admonition info">
