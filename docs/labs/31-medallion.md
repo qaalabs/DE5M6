@@ -4,6 +4,9 @@ In this exercise you will build a medallion architecture in a Fabric lakehouse: 
 
 Quality means something different at each layer - watch for it as you go: bronze decides whether to land data as-is or enforce anything immediately, silver is where cleaning and validation actually happen, and gold decides what "fit for business use" means. Today's DMBOK quality dimensions discussion straight after this lab will ask you to map dimensions onto **all three** layers, so keep the touchpoints at each step in mind - not just the validate cell in silver.
 
+!!! info "Before you start"
+    You need the `M6` course files on your Desktop. If the `M6` folder isn't there (some VMs reset overnight), follow [Clone the M6 Files](../day3/30-clone-repo.md) first.
+
 ```mermaid
 flowchart LR
     CSV["Files/bronze/<br/>2019.csv, 2020.csv, 2021.csv"] --> CHECK1
@@ -77,7 +80,7 @@ flowchart LR
 
 1. Locate the data files for this exercise in the `M6/day3/` folder on your Desktop.
 
-    !!! note "If you cannot find the `M6` folder, you may need to re-run the `git clone` command."
+    !!! note "If you cannot find the `M6` folder, re-run the `git clone` - see [Clone the M6 Files](../day3/30-clone-repo.md)."
 
     !!! success "There should be 4 files: 2019.csv, 2020.csv, 2021.csv, and metadata.json"
 

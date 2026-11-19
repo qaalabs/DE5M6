@@ -34,7 +34,9 @@ A valid ID like `CUST1234` is 8 characters. Anything much longer suggests corrup
 
 ## Step 5 ~ Write your own rule
 
-Look at the available expectations listed in the `get_rules()` docstring. Pick one and add it yourself — for example, you could check that `customer_id` values are unique, or that `order_amount` is never zero.
+Look at the available expectations listed in the `get_failures()` docstring. Pick one and add it yourself - for example, you could check that `customer_id` values are unique, or that `order_amount` is never zero.
+
+For the full list of expectations and their parameters, see the [Great Expectations expectation gallery](https://greatexpectations.io/expectations/).
 
 ```python
 suite.add_expectation(
@@ -46,7 +48,7 @@ Write the `suite.add_expectation(...)` call directly under the `# Step 5` commen
 
 ## Step 6 ~ Add a warning for malformed timestamps
 
-This one is in `get_warnings()`, not `get_rules()`. Uncomment the `ExpectColumnValuesToMatchRegex` block.
+This one is in `get_warnings()`, not `get_failures()`. Uncomment the `ExpectColumnValuesToMatchRegex` block.
 
 Rows with a timestamp that doesn't match `2026-03-05T23:54:31` format turn **amber** — suspicious but not rejected.
 

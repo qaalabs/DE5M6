@@ -14,7 +14,7 @@ For example:
 - **dbt tests:** Built-in and custom data quality tests
 - Soda Core: monitoring and operational data quality (SQL/YAML-based data quality checks)
 
-❓ How do these tools implement quality checks?
+❓ How do these tools implement quality checks similar to your silver layer transformations in Lab 3.1?
 
 !!! tip "Think about:"
     - validation rules

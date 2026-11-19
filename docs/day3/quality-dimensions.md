@@ -1,5 +1,9 @@
 # Dimensions of Quality
 
+!!! abstract "K4: Frameworks for data quality, covering dimensions such as accuracy, completeness, consistency, timeliness, and accessibility."
+
+!!! abstract "S26: Identify data quality metrics and track them to ensure the quality, accuracy and reliability of the data product."
+
 ## Investigation task
 
 - Find a **definition** for your given dimensions
