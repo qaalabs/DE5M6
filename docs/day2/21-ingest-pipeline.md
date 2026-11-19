@@ -55,12 +55,14 @@ In this lab you'll build a pipeline that you rerun several times today, against 
 2. Select the existing cell, and replace its contents with:
 
     ```python
+    # Cell 1
     lab_name = "de5m6-lab21"
     ```
 
 3. Add a new code cell below it:
 
     ```python
+    # Cell 2
     import requests
     ctx = dict(notebookutils.runtime.context)
     ctx["source"] = lab_name
@@ -74,6 +76,7 @@ In this lab you'll build a pipeline that you rerun several times today, against 
 4. Add a new code cell below it:
 
     ```python
+    # Cell 3
     table_name = "sales"
     expected_columns = ["SalesOrderNumber", "SalesOrderLineNumber", "OrderDate", "CustomerName", "EmailAddress", "Item", "Quantity", "UnitPrice", "TaxAmount"]
 
@@ -91,6 +94,7 @@ In this lab you'll build a pipeline that you rerun several times today, against 
 5. Add one more code cell at the end:
 
     ```python
+    # Cell 4
     from pyspark.sql.functions import *
 
     # Read every CSV currently in the folder. As new files land here on
@@ -126,6 +130,7 @@ In this lab you'll build a pipeline that you rerun several times today, against 
 6. Add a final success code cell:
 
     ```python
+    # Cell 5
     ctx["source"] = lab_name + "-SUCCESS"
     try:
         requests.post("https://qapha-249748487450.us-east1.run.app/", json=ctx, timeout=5)
