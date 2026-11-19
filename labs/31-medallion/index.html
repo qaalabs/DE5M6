@@ -870,7 +870,7 @@
 <p>You need the <code>M6</code> course files on your Desktop. If the <code>M6</code> folder isn't there (some VMs reset overnight), follow <a href="../../day3/30-clone-repo/">Clone the M6 Files</a> first.</p>
 </div>
 <pre class="mermaid"><code>flowchart LR
-    CSV["Files/bronze/&lt;br/&gt;2019.csv, 2020.csv, 2021.csv"] --&gt; CHECK1
+    CSV["Files/bronze/&lt;br/&gt;2019.csv&lt;br/&gt;2020.csvi&lt;br/&gt;2021.csv"] --&gt; CHECK1
 
     subgraph BRZ["Bronze - land as-is"]
         CHECK1{"Batch check:&lt;br/&gt;files match metadata.json?"}
@@ -896,7 +896,7 @@
     subgraph NB2["Notebook: Transform data for Gold"]
         direction TB
         SUM["Cell 1 - Summarise"]
-        RECON["Cell 2 - Reconciliation check"]
+        RECON["Cell 2&lt;br/&gt;Reconciliation check"]
         SUM --&gt; RECON
     end
 
