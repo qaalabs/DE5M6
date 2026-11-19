@@ -1171,11 +1171,11 @@
 <li><strong>Completeness</strong> - silver's Cell 3 assert that <code>SalesOrderNumber</code> has no nulls</li>
 <li><strong>Validity</strong> - bronze's manifest check confirms the right <em>files</em> arrived; silver's Cell 3 checks the <em>values</em> inside them (for example, that <code>OrderDate</code> parses as a real date)</li>
 </ul>
-<p>Work through the rest with your group. Not every dimension gets checked at every layer - some layers don't touch a dimension at all.</p>
+<p>Work through the rest. Not every dimension gets checked at every layer - some layers don't touch a dimension at all.</p>
 <hr>
 <h2 id="clean-up-resources">Clean up resources</h2>
 <p>In this exercise, you built a medallion architecture in a Microsoft Fabric lakehouse, with a different quality touchpoint at each layer: bronze confirmed the right files arrived as-is, silver validated completeness, validity, accuracy, and uniqueness before saving, and gold checked that the summary reconciled with its source.</p>
-<p>Once you've finished exploring, you should delete the workspace you created for this exercise.</p>
+<p>When everyone has shared their findings, you should delete the workspace you created for this exercise.</p>
 <ol>
 <li>Navigate to Microsoft Fabric in your browser.</li>
 <li>In the bar on the left, select the icon for your workspace to view all of the items it contains.</li>
