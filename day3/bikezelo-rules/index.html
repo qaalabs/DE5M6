@@ -864,14 +864,15 @@
 <p>Uncomment the <code>ExpectColumnValueLengthsToBeBetween</code> block.</p>
 <p>A valid ID like <code>CUST1234</code> is 8 characters. Anything much longer suggests corrupted or injected data — those rows turn <strong>red</strong>.</p>
 <h2 id="step-5-write-your-own-rule">Step 5 ~ Write your own rule</h2>
-<p>Look at the available expectations listed in the <code>get_rules()</code> docstring. Pick one and add it yourself — for example, you could check that <code>customer_id</code> values are unique, or that <code>order_amount</code> is never zero.</p>
+<p>Look at the available expectations listed in the <code>get_failures()</code> docstring. Pick one and add it yourself - for example, you could check that <code>customer_id</code> values are unique, or that <code>order_amount</code> is never zero.</p>
+<p>For the full list of expectations and their parameters, see the <a href="https://greatexpectations.io/expectations/">Great Expectations expectation gallery</a>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">suite</span><span class="o">.</span><span class="n">add_expectation</span><span class="p">(</span>
     <span class="n">gx</span><span class="o">.</span><span class="n">expectations</span><span class="o">.</span><span class="n">ExpectColumnValuesToBeUnique</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="s2">"customer_id"</span><span class="p">)</span>
 <span class="p">)</span>
 </code></pre></div>
 <p>Write the <code>suite.add_expectation(...)</code> call directly under the <code># Step 5</code> comment (no uncommenting needed — just type it in).</p>
 <h2 id="step-6-add-a-warning-for-malformed-timestamps">Step 6 ~ Add a warning for malformed timestamps</h2>
-<p>This one is in <code>get_warnings()</code>, not <code>get_rules()</code>. Uncomment the <code>ExpectColumnValuesToMatchRegex</code> block.</p>
+<p>This one is in <code>get_warnings()</code>, not <code>get_failures()</code>. Uncomment the <code>ExpectColumnValuesToMatchRegex</code> block.</p>
 <p>Rows with a timestamp that doesn't match <code>2026-03-05T23:54:31</code> format turn <strong>amber</strong> — suspicious but not rejected.</p>
 <h2 id="what-to-notice">What to notice</h2>
 <ul>

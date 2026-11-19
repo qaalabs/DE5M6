@@ -865,6 +865,10 @@
 <h1 id="lab-31-medallion-architecture">Lab 3.1 ~ Medallion Architecture</h1>
 <p>In this exercise you will build a medallion architecture in a Fabric lakehouse: a workspace and lakehouse, raw sales data landed in bronze, cleaned and <strong>validated</strong> data in silver, and a business-ready summary in gold.</p>
 <p>Quality means something different at each layer - watch for it as you go: bronze decides whether to land data as-is or enforce anything immediately, silver is where cleaning and validation actually happen, and gold decides what "fit for business use" means. Today's DMBOK quality dimensions discussion straight after this lab will ask you to map dimensions onto <strong>all three</strong> layers, so keep the touchpoints at each step in mind - not just the validate cell in silver.</p>
+<div class="admonition info">
+<p class="admonition-title">Before you start</p>
+<p>You need the <code>M6</code> course files on your Desktop. If the <code>M6</code> folder isn't there (some VMs reset overnight), follow <a href="../../day3/30-clone-repo/">Clone the M6 Files</a> first.</p>
+</div>
 <pre class="mermaid"><code>flowchart LR
     CSV["Files/bronze/&lt;br/&gt;2019.csv, 2020.csv, 2021.csv"] --&gt; CHECK1
 
@@ -942,7 +946,7 @@
 <li>
 <p>Locate the data files for this exercise in the <code>M6/day3/</code> folder on your Desktop.</p>
 <div class="admonition note">
-<p class="admonition-title">If you cannot find the <code>M6</code> folder, you may need to re-run the <code>git clone</code> command.</p>
+<p class="admonition-title">If you cannot find the <code>M6</code> folder, re-run the <code>git clone</code> - see <a href="../../day3/30-clone-repo/">Clone the M6 Files</a>.</p>
 </div>
 <div class="admonition success">
 <p class="admonition-title">There should be 4 files: 2019.csv, 2020.csv, 2021.csv, and metadata.json</p>
