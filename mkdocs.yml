@@ -10,18 +10,11 @@ nav:
 
   - Agenda:
     - Topics: agenda/index.md
-    - Day 3: agenda/day3.md
+    - Day 4: agenda/day4.md
 
-  - "Day 3 ~ Quality & Governance":
-    - "👥 Data quality dimensions": day3/quality-dimensions.md
-    - "Setup MS Fabric playground": labs/run-inside-vm.md
-    - "Lab 3.1 - Medallion architecture": labs/31-medallion.md
-    - "Lab 3.2 - Deployment pipelines": labs/21-deployment-pipelines.md
-    - "Bikezelo walkthrough": https://github.com/ingwaneorg/bikezelo
-    - "Lab 3.3 - Clone, setup & run Bikezelo": day3/bikezelo-activity.md
-    - "Lab 3.4 ~ Uncomment the rules": day3/bikezelo-rules.md
-    - "Lab 3.5 ~ How does bikezelo forecast?": day3/bikezelo-forecast.md
-    - "Data quality tools": day3/quality-tools.md
+  - "Day 4 ~ Improvement & Value":
+    - "Read Dave's PR": day4/technical-debt-review.md
+    - "EPA presentation briefing": day4/presentation.md
 
   - Resources: resources.md
 
