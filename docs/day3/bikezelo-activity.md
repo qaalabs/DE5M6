@@ -25,7 +25,7 @@ cd Desktop
 ### Step 2. Clone the repository
 
 ```bash
-git clone https://github.com/ingwaneorg/bikezelo.git
+git clone -b qa https://github.com/ingwaneorg/bikezelo.git
 ```
 
 ### Step 3. Move into the project directory
@@ -34,20 +34,26 @@ git clone https://github.com/ingwaneorg/bikezelo.git
 cd bikezelo
 ```
 
-### Step 4. Install Python dependencies
+### Step 4. Make sure you are on the qa branch
 
 ```bash
-python -m pip install -r requirements.txt
+git switch qa
+```
+
+### Step 5. Install Python dependencies
+
+```bash
+pip install -r requirements.txt
 ```
 
 
-### Step 5. Set up the database:
+### Step 6. Set up the database:
 
 ```bash
 python setup_db.py
 ```
 
-### Step 6: Preload seed data:
+### Step 7: Preload seed data:
 
 Run this setup to pre-load data to the database using the package `dlt`
 

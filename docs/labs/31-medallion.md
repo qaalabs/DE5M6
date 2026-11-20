@@ -1,5 +1,13 @@
 # Lab 3.1 ~ Medallion Architecture
 
+!!! abstract "S6: Systematically clean, validate, and describe data at all stages of extract, transform, load (ETL)."
+
+!!! abstract "S9: Query and manipulate data using tools and programming such as SQL and Python. Manage database access, and implement automated validation checks."
+
+!!! abstract "S26: Identify data quality metrics and track them to ensure the quality, accuracy and reliability of the data product."
+
+!!! abstract "K4: Frameworks for data quality, covering dimensions such as accuracy, completeness, consistency, timeliness, and accessibility."
+
 In this exercise you will build a medallion architecture in a Fabric lakehouse: a workspace and lakehouse, raw sales data landed in bronze, cleaned and **validated** data in silver, and a business-ready summary in gold.
 
 Quality means something different at each layer - watch for it as you go: bronze decides whether to land data as-is or enforce anything immediately, silver is where cleaning and validation actually happen, and gold decides what "fit for business use" means. Today's DMBOK quality dimensions discussion straight after this lab will ask you to map dimensions onto **all three** layers, so keep the touchpoints at each step in mind - not just the validate cell in silver.
@@ -9,10 +17,10 @@ Quality means something different at each layer - watch for it as you go: bronze
 
 ```mermaid
 flowchart LR
-    CSV["Files/bronze/<br/>2019.csv, 2020.csv, 2021.csv"] --> CHECK1
+    CSV["Files/bronze/<br/>2019.csv<br/>2020.csv<br/>2021.csv"] --> CHECK1
 
     subgraph BRZ["Bronze - land as-is"]
-        CHECK1{"Batch check:<br/>files match metadata.json?"}
+        CHECK1{"Batch check:<br/>files match metadata"}
     end
 
     CHECK1 -->|pass| NB1
@@ -35,7 +43,7 @@ flowchart LR
     subgraph NB2["Notebook: Transform data for Gold"]
         direction TB
         SUM["Cell 1 - Summarise"]
-        RECON["Cell 2 - Reconciliation check"]
+        RECON["Cell 2<br/>Reconciliation check"]
         SUM --> RECON
     end
 
@@ -309,7 +317,7 @@ Go back through bronze, silver, and gold and map each dimension to the layer (or
 - **Completeness** - silver's Cell 3 assert that `SalesOrderNumber` has no nulls
 - **Validity** - bronze's manifest check confirms the right *files* arrived; silver's Cell 3 checks the *values* inside them (for example, that `OrderDate` parses as a real date)
 
-Work through the rest with your group. Not every dimension gets checked at every layer - some layers don't touch a dimension at all.
+Work through the rest. Not every dimension gets checked at every layer - some layers don't touch a dimension at all.
 
 ---
 
@@ -317,9 +325,10 @@ Work through the rest with your group. Not every dimension gets checked at every
 
 In this exercise, you built a medallion architecture in a Microsoft Fabric lakehouse, with a different quality touchpoint at each layer: bronze confirmed the right files arrived as-is, silver validated completeness, validity, accuracy, and uniqueness before saving, and gold checked that the summary reconciled with its source.
 
-Once you've finished exploring, you should delete the workspace you created for this exercise.
+When everyone has shared their findings, you should delete the workspace you created for this exercise.
 
 1. Navigate to Microsoft Fabric in your browser.
 2. In the bar on the left, select the icon for your workspace to view all of the items it contains.
 3. Select **Workspace settings** and in the **General** section, scroll down and select **Remove this workspace**.
 4. Select **Delete** to delete the workspace.
+

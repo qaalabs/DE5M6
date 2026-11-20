@@ -10,11 +10,15 @@
 
 - https://qaalabs.github.io/DE5M6/labs/run-inside-vm/
 
-**For those doing it outside the VM:**
+## For those logging on outside of the VM:
 
+```text
+## For those logging on outside of the VM:
+- https://qaalabs.github.io/DE5M6/labs/run-locally/
 - https://github.com/QAADE5/M6/tree/main/day3
+```
 
-### Text for WebEx chat
+### Text for pasting into VM Paste
 ```text
 Files:|https://qaalabs.github.io/DE5M6/day3/30-clone-repo/
 Logon:|https://qaalabs.github.io/DE5M6/labs/run-inside-vm/
