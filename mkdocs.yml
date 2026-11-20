@@ -1,5 +1,5 @@
 # Site name
-site_name: Module 6 - Data Operations
+site_name: DE5M6 - Apprenticeship Materials
 site_url: https://qaalabs.github.io/DE5M6/
 dev_addr: '0.0.0.0:8000'
 
@@ -10,11 +10,6 @@ nav:
 
   - Agenda:
     - Topics: agenda/index.md
-    - Day 4: agenda/day4.md
-
-  - "Day 4 ~ Improvement & Value":
-    - "Read Dave's PR": day4/technical-debt-review.md
-    - "EPA presentation briefing": day4/presentation.md
 
   - Resources: resources.md
 
